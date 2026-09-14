@@ -31,6 +31,8 @@ const detailBox = $("grammar-detail");
 const testAllButton = $("grammar-test-all");
 const timerSelect = $("grammar-timer");
 const browseStats = $("grammar-browse-stats");
+const grammarSearch = $("grammar-search");
+const crumb = $("grammar-crumb");
 
 /* --------------------------------------
    DOM — quiz
@@ -71,6 +73,7 @@ const gqrReset = $("gqr-reset");
 let grammar = [];
 let categories = [];
 let activeCategory = "all";
+let searchQuery = "";
 let selectedLessonId = null;
 let activeTab = "summary";
 
@@ -128,16 +131,18 @@ function saveStats(next) {
 
 function renderBrowseStats() {
   const stats = loadStats();
+  const quizCount = getQuizItems().length;
   if (!stats || !stats.total) {
     browseStats.innerHTML =
-      '<span class="pill">لم تُجرَّ أي اختبارات قواعد بعد.</span>';
+      `<span class="pill">${grammar.length} درساً</span>` +
+      `<span class="pill">${quizCount} سؤالاً</span>`;
     return;
   }
   const accuracy = Math.round((stats.correct / stats.total) * 100);
   browseStats.innerHTML =
     `<span class="pill info">المحاولات: ${stats.attempts}</span>` +
-    `<span class="pill ok">الدقة الكلية: ${accuracy}%</span>` +
-    `<span class="pill">أفضل نتيجة: ${stats.best}%</span>`;
+    `<span class="pill ok">الدقة: ${accuracy}%</span>` +
+    `<span class="pill">أفضل: ${stats.best}%</span>`;
 }
 
 gqrReset.addEventListener("click", () => {
@@ -199,6 +204,10 @@ function startTimer(seconds) {
    Browse: categories + lesson list
 -------------------------------------- */
 
+function categoryCount(cat) {
+  return cat === "all" ? grammar.length : grammar.filter((l) => l.category === cat).length;
+}
+
 function renderCategories() {
   catFilter.innerHTML = "";
   const addChip = (label, value) => {
@@ -206,7 +215,10 @@ function renderCategories() {
     chip.type = "button";
     chip.className = "cat-chip";
     chip.dataset.cat = value;
-    chip.textContent = label;
+    chip.title = label;
+    chip.innerHTML =
+      `<span>${label}</span>` +
+      `<span class="cat-count">${categoryCount(value)}</span>`;
     chip.addEventListener("click", () => {
       activeCategory = value;
       catFilter.querySelectorAll(".cat-chip").forEach((c) => {
@@ -221,28 +233,38 @@ function renderCategories() {
   categories.forEach((cat) => addChip(cat, cat));
 }
 
+function matchesQuery(lesson) {
+  if (!searchQuery) return true;
+  const haystack =
+    `${lesson.title} ${lesson.description} ${lesson.category} ${lesson.id}`.toLowerCase();
+  return haystack.includes(searchQuery);
+}
+
 function renderLessonList() {
   lessonList.innerHTML = "";
-  const source =
-    activeCategory === "all"
-      ? grammar
-      : grammar.filter((lesson) => lesson.category === activeCategory);
+  const source = grammar.filter(
+    (lesson) => (activeCategory === "all" || lesson.category === activeCategory) && matchesQuery(lesson)
+  );
 
   if (!source.length) {
-    lessonListNote.textContent = "لا توجد دروس في هذه الفئة.";
+    lessonListNote.textContent = searchQuery
+      ? "لا نتائج مطابقة للبحث."
+      : "لا توجد دروس في هذه الفئة.";
     return;
   }
 
   const stats = loadStats() || { lessons: {} };
-  lessonListNote.textContent = `${source.length} من ${grammar.length} دروس`;
+  lessonListNote.textContent =
+    searchQuery
+      ? `${source.length} ${source.length === 1 ? "درس" : "دروس"} — بحث: “${searchQuery}”`
+      : `${source.length} من ${grammar.length} دروس — ${activeCategory === "all" ? "" : activeCategory}`;
 
-  source.forEach((lesson, index) => {
+  source.forEach((lesson) => {
     const row = document.createElement("button");
     row.type = "button";
     row.className = "lesson-row" + (selectedLessonId === lesson.id ? " on" : "");
     const best = stats.lessons && stats.lessons[lesson.id];
     row.innerHTML =
-      `<span class="lesson-row-index">${String(index + 1).padStart(2, "0")}</span>` +
       `<span class="lesson-row-icon">${lesson.icon}</span>` +
       `<span class="lesson-row-body">` +
       `<span class="lesson-row-title">${escapeHTML(lesson.title)}</span>` +
@@ -254,6 +276,10 @@ function renderLessonList() {
       activeTab = "summary";
       renderLessonList();
       renderDetail(lesson);
+      crumb.innerHTML =
+        `<span>${escapeHTML(lesson.category)}</span>` +
+        `<span class="crumb-sep">/</span>` +
+        `<b>${escapeHTML(lesson.title)}</b>`;
     });
     lessonList.appendChild(row);
   });
@@ -268,6 +294,10 @@ const LESSON_TABS = [
 
 function renderEmpty() {
   const sb = escapeHTML;
+  crumb.innerHTML =
+    `<span>مكتبة القواعد</span>` +
+    `<span class="crumb-sep">/</span>` +
+    `<b>اختر درساً</b>`;
   detailBox.innerHTML =
     `<div class="reader-empty">` +
     `<div class="reader-empty-icon">📘</div>` +
@@ -392,6 +422,11 @@ function renderDetail(lesson) {
 
 testAllButton.addEventListener("click", () => {
   startQuizItems(getQuizItems().map(attach), { mode: "all", lessonId: null });
+});
+
+grammarSearch.addEventListener("input", () => {
+  searchQuery = grammarSearch.value.trim().toLowerCase();
+  renderLessonList();
 });
 
 function attach(item) {
@@ -706,6 +741,10 @@ gqrBrowse.addEventListener("click", () => {
     const lesson = getGrammar().find((l) => l.id === selectedLessonId);
     if (lesson) {
       renderDetail(lesson);
+      crumb.innerHTML =
+        `<span>${escapeHTML(lesson.category)}</span>` +
+        `<span class="crumb-sep">/</span>` +
+        `<b>${escapeHTML(lesson.title)}</b>`;
       return;
     }
   }

@@ -4,20 +4,22 @@
     "title": "الأزمنة المضارعة",
     "category": "الأزمنة",
     "icon": "⏰",
-    "description": "Present Simple وPresent Continuous: كيف نميز بين العادات والحقائق والحالات العامة من جهة، والأحداث الجارية أو المؤقتة والترتيبات المستقبلية من جهة أخرى.",
-    "explanation": "لدينا في هذا الدرس زمنان أساسيان للحاضر: Present Simple وPresent Continuous. نستخدم Present Simple عندما نتحدث عن العادات والروتين والحقائق العامة والأشياء التي نراها ثابتة أو متكررة، مثل I study English every day وWater boils at 100°C. أما Present Continuous فنستخدمه عندما يكون الفعل جارياً الآن، أو يحدث خلال فترة مؤقتة حول وقت الكلام، أو عندما نتحدث عن ترتيب مستقبلي مؤكد، مثل I am studying now وShe is meeting her teacher tomorrow. من أهم النقاط التي يجب الانتباه إليها أن Present Simple مع he/she/it يحتاج إلى s أو es، بينما بعد does أو doesn't يعود الفعل إلى صورته الأساسية. وفي Present Continuous نحتاج دائماً إلى am/is/are + verb-ing. كذلك توجد أفعال تسمى state verbs، مثل know وbelieve وunderstand وwant وneed وown، وهذه تصف حالات وليست أنشطة، لذلك لا نستخدمها عادةً في صيغة continuous. في أسئلة PTE، لا تعتمد على كلمة إشارة واحدة فقط؛ افهم معنى الجملة أولاً ثم حدد هل الحديث عن عادة أو حقيقة، أم عن نشاط جارٍ أو مؤقت.",
+    "description": "Present Simple وPresent Continuous: كيف نميز بين العادات والحقائق والحالات العامة من جهة، والأحداث الجارية أو المؤقتة والترتيبات المستقبلية من جهة أخرى، مع التركيز على الفرق بين النمط المعتاد والنشاط المؤقت.",
+    "explanation": "يجمع هذا الدرس بين Present Simple وPresent Continuous لأن التمييز بينهما من أهم نقاط الحاضر. نستخدم Present Simple للحقائق العامة، والعادات والروتين، والحالات التي نراها مستقرة أو متكررة، مثل I study English every day وWater boils at 100°C. أما Present Continuous فنستخدمه لشيء يحدث الآن أو حول وقت الكلام، أو لوضع مؤقت، أو لترتيب مستقبلي تم الاتفاق عليه، مثل I am studying now وShe is meeting her professor tomorrow. لا تجعل كلمة مثل today أو these days وحدها هي التي تحدد الزمن؛ اسأل أولاً: هل أتحدث عن عادة أو حقيقة، أم عن نشاط جارٍ أو مؤقت؟ ومن المهم أيضاً التمييز بين Present Simple وPresent Continuous مع بعض أفعال الحالة مثل know وbelieve وunderstand وwant وneed وown، فهي لا تستخدم عادةً في continuous عندما تحتفظ بمعناها المعتاد. في Present Simple نضيف s أو es مع he/she/it، لكن بعد does أو doesn’t يعود الفعل إلى صورته الأساسية. وفي Present Continuous نحتاج إلى am/is/are + verb-ing. في أسئلة PTE، ابحث عن العلاقة الزمنية والمعنى العام للجملة، ثم استخدم كلمات الإشارة كقرائن مساعدة لا كقاعدة آلية.",
     "rules": [
-      "Present Simple مع العادات والروتين: I study English every day.",
-      "Present Simple مع الحقائق العامة والقوانين والحقائق العلمية: Water boils at 100°C.",
-      "Present Simple مع الحالات والآراء والمشاعر والملكية: I know the answer. She likes music.",
-      "مع he/she/it نضيف s أو es للفعل: work → works، watch → watches، study → studies.",
-      "في النفي مع Present Simple نستخدم do not/don't أو does not/doesn't + الفعل الأساسي: He doesn't work here.",
-      "في السؤال مع Present Simple نستخدم Do/Does + subject + base verb: Does she study English?",
-      "Present Continuous = am/is/are + verb-ing، ويستخدم لحدث يحدث الآن: They are studying now.",
-      "يستخدم Present Continuous أيضاً لحدث مؤقت خلال فترة حالية: I am living with my uncle this month.",
-      "يمكن استخدام Present Continuous للترتيبات المستقبلية المؤكدة: I am meeting my professor tomorrow.",
+      "Present Simple للعادات والروتين: I study English every day.",
+      "Present Simple للحقائق العامة والقوانين والحقائق العلمية: Water boils at 100°C.",
+      "Present Simple للحالات والآراء والمشاعر والملكية: I know the answer. She likes music.",
+      "مع he/she/it نضيف s أو es: work → works، watch → watches، study → studies.",
+      "في النفي: do not/don’t أو does not/doesn’t + الفعل الأساسي: He doesn’t work here.",
+      "في السؤال: Do/Does + subject + base verb: Does she study English?",
+      "Present Continuous = am/is/are + verb-ing: They are studying now.",
+      "يستخدم Present Continuous لحدث جارٍ الآن أو حول وقت الكلام: I am reading the report now.",
+      "يستخدم Present Continuous لوضع مؤقت حتى لو لم يحدث الفعل في اللحظة نفسها: I am staying with my uncle this month.",
+      "يستخدم Present Continuous للترتيبات المستقبلية المؤكدة: We are meeting the researcher tomorrow.",
       "كلمات شائعة مع Present Simple: always, usually, often, sometimes, rarely, every day, every week.",
       "كلمات شائعة مع Present Continuous: now, right now, at the moment, currently, these days, this week.",
+      "لا تعتمد على كلمة إشارة وحدها؛ today وthis week يمكن أن تظهر مع أكثر من زمن بحسب المعنى.",
       "مع أفعال الحالة مثل know, believe, understand, want, need, own نستخدم غالباً Present Simple وليس Continuous: I understand the question."
     ],
     "examples": [
@@ -26,8 +28,8 @@
         "ar": "تدرس الإنجليزية كل مساء."
       },
       {
-        "en": "My brother works in a bank.",
-        "ar": "يعمل أخي في بنك."
+        "en": "The university offers several research programs.",
+        "ar": "تقدم الجامعة عدة برامج بحثية."
       },
       {
         "en": "Water boils at 100°C.",
@@ -42,54 +44,112 @@
         "ar": "إنهم يدرسون للامتحان الآن."
       },
       {
-        "en": "She is staying with her sister this week.",
-        "ar": "إنها تقيم مع أختها هذا الأسبوع."
+        "en": "The researchers are collecting data this week.",
+        "ar": "يجمع الباحثون البيانات هذا الأسبوع."
       },
       {
-        "en": "We are meeting our teacher tomorrow.",
-        "ar": "سنلتقي بمعلمنا غداً."
+        "en": "She is staying with her sister this month.",
+        "ar": "إنها تقيم مع أختها هذا الشهر."
+      },
+      {
+        "en": "We are meeting our professor tomorrow.",
+        "ar": "سنلتقي بأستاذنا غداً."
       },
       {
         "en": "I understand the instructions.",
-        "ar": "أنا أفهم التعليمات."
+        "ar": "أفهم التعليمات."
+      },
+      {
+        "en": "The company is currently developing a new system.",
+        "ar": "تعمل الشركة حالياً على تطوير نظام جديد."
       }
     ],
     "commonMistakes": [
       "❌ She study English every day. → ✅ She studies English every day.",
-      "❌ He don't like coffee. → ✅ He doesn't like coffee.",
+      "❌ He don’t like coffee. → ✅ He doesn’t like coffee.",
       "❌ Does she studies English? → ✅ Does she study English?",
       "❌ I am know the answer. → ✅ I know the answer.",
       "❌ They are study now. → ✅ They are studying now.",
-      "❌ I am living in Cairo every year. → ✅ I live in Cairo. (إذا كان المعنى عادة أو حالة عامة وليست مؤقتة.)"
+      "❌ I am living in Cairo every year. → ✅ I live in Cairo. (إذا كان المعنى عادة أو حالة عامة.)",
+      "❌ The researchers are collect data this week. → ✅ The researchers are collecting data this week.",
+      "❌ She is knowing the answer. → ✅ She knows the answer. (في المعنى المعتاد لـ know.)"
     ],
     "quiz": [
       {
         "type": "mcq",
-        "prompt": "اختر الجملة الصحيحة للتعبير عن عادة يومية:",
+        "prompt": "The university ______ several research programs every year.",
         "options": [
-          "She studies English every day.",
-          "She study English every day.",
-          "She is study English every day.",
-          "She studying English every day."
+          "offers",
+          "is offering",
+          "offer",
+          "offering"
         ],
         "answer": 0,
-        "why": "الحديث عن عادة يومية، لذلك نستخدم Present Simple، ومع she نضيف s إلى study فتصبح studies."
+        "why": "الجملة تتحدث عن نشاط معتاد ومتكرر every year، لذلك نستخدم Present Simple، ومع الجامعة المفردة نستخدم offers."
       },
       {
         "type": "mcq",
-        "prompt": "اختر الصيغة الصحيحة: He ______ TV at the moment.",
+        "prompt": "The researchers ______ the data at the moment.",
         "options": [
-          "watches",
-          "watch",
-          "is watching",
-          "watching"
+          "analyze",
+          "are analyzing",
+          "analyzed",
+          "have analyze"
+        ],
+        "answer": 1,
+        "why": "At the moment تشير إلى نشاط جارٍ حالياً، لذلك نستخدم Present Continuous: are analyzing."
+      },
+      {
+        "type": "mcq",
+        "prompt": "Which sentence describes a general scientific fact?",
+        "options": [
+          "The students are taking the test now.",
+          "The laboratory is closing today.",
+          "Water boils at 100°C.",
+          "The researchers are collecting samples."
         ],
         "answer": 2,
-        "why": "At the moment يدل على حدث جارٍ الآن، لذلك نستخدم Present Continuous: is watching."
+        "why": "هذه حقيقة علمية عامة، ولذلك نستخدم Present Simple: Water boils at 100°C."
       },
       {
         "type": "mcq",
-        "prompt": "اختر السؤال الصحيح:",
+        "prompt": "She ______ with her aunt this month because her apartment is being renovated.",
+        "options": [
+          "lives",
+          "is living",
+          "live",
+          "has lived"
+        ],
+        "answer": 1,
+        "why": "This month هنا تصف وضعاً مؤقتاً، لذلك Present Continuous هو الأنسب: is living."
+      },
+      {
+        "type": "mcq",
+        "prompt": "Which sentence describes a future arrangement?",
+        "options": [
+          "I meet my professor every week.",
+          "I met my professor yesterday.",
+          "I am meeting my professor tomorrow.",
+          "I have met my professor."
+        ],
+        "answer": 2,
+        "why": "Present Continuous يمكن أن يعبّر عن ترتيب مستقبلي مؤكد، خاصةً مع وقت محدد مثل tomorrow."
+      },
+      {
+        "type": "mcq",
+        "prompt": "I ______ what you mean.",
+        "options": [
+          "am understanding",
+          "understand",
+          "am understand",
+          "understanding"
+        ],
+        "answer": 1,
+        "why": "Understand من أفعال الحالة ويُستخدم عادةً في Present Simple بهذا المعنى: I understand."
+      },
+      {
+        "type": "mcq",
+        "prompt": "Choose the correct question:",
         "options": [
           "Does she work here?",
           "Does she works here?",
@@ -97,63 +157,42 @@
           "Is she work here?"
         ],
         "answer": 0,
-        "why": "مع Does يأتي الفعل في صورته الأساسية: Does she work?"
+        "why": "بعد Does نستخدم الفعل الأساسي: Does she work here?"
       },
       {
         "type": "mcq",
-        "prompt": "أي جملة تعبّر عن حقيقة عامة؟",
+        "prompt": "Every morning, the laboratory ______ at 8 a.m.",
         "options": [
-          "The students are studying now.",
-          "Water boils at 100°C.",
-          "She is talking to her teacher.",
-          "They are traveling this week."
+          "is opening",
+          "opens",
+          "open",
+          "opening"
         ],
         "answer": 1,
-        "why": "حقيقة علمية عامة تستخدم Present Simple: Water boils at 100°C."
-      },
-      {
-        "type": "mcq",
-        "prompt": "اختر الصيغة الصحيحة: I ______ the answer.",
-        "options": [
-          "am knowing",
-          "am know",
-          "knowing",
-          "know"
-        ],
-        "answer": 3,
-        "why": "Know من أفعال الحالة، ويستخدم عادةً مع Present Simple: I know."
-      },
-      {
-        "type": "mcq",
-        "prompt": "أي جملة تشير إلى ترتيب مستقبلي مؤكد؟",
-        "options": [
-          "I meet my teacher every week.",
-          "I met my teacher yesterday.",
-          "I am meeting my teacher tomorrow.",
-          "I have met my teacher."
-        ],
-        "answer": 2,
-        "why": "Present Continuous يمكن استخدامه للترتيبات المستقبلية المؤكدة، خاصةً مع وقت محدد مثل tomorrow."
+        "why": "Every morning يدل على روتين، لذلك نستخدم Present Simple، ومع laboratory المفرد نستخدم opens."
       },
       {
         "type": "tf",
-        "prompt": "الجملة «She doesn't likes coffee.» صحيحة لأن she تحتاج إلى s.",
+        "prompt": "The sentence “She doesn’t likes coffee.” is correct because she normally takes s.",
         "correct": false,
-        "why": "الـ s موجودة بالفعل داخل doesn't، لذلك يعود الفعل إلى صورته الأساسية: She doesn't like coffee."
+        "why": "بعد doesn’t يعود الفعل إلى صورته الأساسية: She doesn’t like coffee."
       },
       {
         "type": "tf",
-        "prompt": "الجملة «They are studying now.» تستخدم Present Continuous بصورة صحيحة.",
+        "prompt": "Present Continuous can describe a temporary situation that is not necessarily happening at the exact moment of speaking.",
         "correct": true,
-        "why": "Are + studying هي صيغة Present Continuous، وnow يشير إلى حدث جارٍ في الوقت الحالي."
+        "why": "نعم. مثل I am staying with my aunt this month؛ الوضع مؤقت حول الفترة الحالية وليس بالضرورة لحظة الكلام نفسها."
       }
     ],
     "markers": [
       "always",
       "usually",
       "often",
+      "sometimes",
+      "rarely",
       "every day",
       "every week",
+      "every year",
       "now",
       "at the moment",
       "currently",
@@ -166,21 +205,23 @@
     "title": "المضارع التام",
     "category": "الأزمنة",
     "icon": "✅",
-    "description": "Present Perfect لربط الماضي بالحاضر: الخبرات، النتائج الحالية، الأحداث في فترة زمنية لم تنتهِ، والأفعال التي بدأت في الماضي وما زالت مرتبطة بالحاضر.",
-    "explanation": "Present Perfect يتكون من have/has + التصريف الثالث للفعل. فكرته الأساسية هي وجود علاقة بين حدث وقع في الماضي والحاضر. نستخدمه عندما لا يكون وقت الحدث المحدد هو النقطة المهمة، بل النتيجة الحالية أو الخبرة أو استمرار الحالة أو وقوع شيء في فترة زمنية لم تنتهِ بعد. لذلك نقول I have lost my keys عندما تكون النتيجة الآن أنني لا أملك مفاتيحي، ونقول Have you ever visited London? للسؤال عن الخبرة دون تحديد وقت. نستخدم since مع نقطة بداية مثل since 2020، وfor مع مدة مثل for five years. كما يظهر كثيراً مع already وjust وyet وever وnever. يجب التفريق بين Present Perfect وPast Simple: إذا تحدثنا عن وقت ماضٍ انتهى ومحدد مثل yesterday أو last year أو in 2020، فنستخدم Past Simple عادةً: I saw him yesterday. أما إذا كان الوقت غير محدد أو الفترة ما زالت مستمرة مثل today أو this week، فقد يكون Present Perfect مناسباً: I have seen him today. كذلك يجب الانتباه إلى الفرق بين been وgone؛ been تعني أن الشخص ذهب إلى مكان ثم عاد، بينما gone تعني أنه ذهب وما زال هناك أو لم يعد بعد.",
+    "description": "Present Perfect لربط الماضي بالحاضر: الخبرات، النتائج الحالية، الأحداث في فترة زمنية لم تنتهِ، والحالات أو الأنشطة التي بدأت في الماضي وما زالت مرتبطة بالحاضر.",
+    "explanation": "يتكون Present Perfect من have/has + التصريف الثالث. فكرته المركزية ليست مجرد أن الحدث وقع في الماضي، بل أن هناك صلة مهمة بالحاضر. نستخدمه للخبرات دون تحديد وقت، وللنتائج الحالية، ولأحداث وقعت في فترة زمنية لم تنتهِ، ولحالات بدأت في الماضي وما زالت مستمرة حتى الآن. نقول I have lost my keys عندما تكون النتيجة الحالية أن المفاتيح غير موجودة، وHave you ever visited Cairo? عندما نسأل عن خبرة دون تحديد متى حدثت. نستخدم since مع نقطة بداية مثل since 2020، وfor مع مدة مثل for five years. ويظهر كثيراً مع already وjust وyet وever وnever. أهم مقارنة هنا هي Present Perfect مقابل Past Simple: إذا كان لدينا وقت ماضٍ محدد ومنتهٍ مثل yesterday أو last year أو in 2020 أو two days ago، نستخدم Past Simple عادةً. أما today وthis week وthis year فهي فترات قد تكون ما زالت مستمرة، لذلك يمكن أن يأتي معها Present Perfect إذا كان الحدث مرتبطاً بالفترة الحالية. كذلك انتبه إلى been وgone: have been to تعني عادةً أن الشخص زار المكان وعاد، بينما has gone to تعني أنه ذهب ولم يعد بعد. في أسئلة PTE، لا تبحث عن كلمة مفتاحية فقط؛ حدد أولاً هل المرجع الزمني منتهٍ أم ما زال مرتبطاً بالحاضر.",
     "rules": [
-      "التكوين: have/has + past participle (التصريف الثالث): I have finished. She has gone.",
-      "نستخدم Present Perfect لحدث ماضٍ له نتيجة أو أثر واضح في الحاضر: I have lost my keys.",
-      "نستخدمه للخبرات في الحياة دون تحديد وقت: Have you ever visited Egypt?",
-      "مع ever للسؤال عن الخبرة وnever لنفي وجود الخبرة: Have you ever tried sushi? I have never tried it.",
-      "مع just لحدث وقع منذ وقت قصير: I have just arrived.",
-      "مع already لحدث تم قبل المتوقع أو قبل وقت الحديث: She has already finished.",
-      "مع yet في نهاية السؤال أو النفي: Have you finished yet? I haven't finished yet.",
+      "التكوين: have/has + past participle: I have finished. She has gone.",
+      "نستخدمه لحدث ماضٍ له نتيجة أو أثر مهم في الحاضر: I have lost my keys.",
+      "نستخدمه للخبرات دون تحديد وقت: Have you ever visited Egypt?",
+      "ever للسؤال عن الخبرة وnever لنفي وجود الخبرة: Have you ever tried sushi? I have never tried it.",
+      "just لحدث وقع منذ وقت قصير: I have just arrived.",
+      "already لحدث اكتمل قبل المتوقع أو قبل وقت الحديث: She has already finished.",
+      "yet في نهاية الأسئلة والنفي غالباً: Have you finished yet? I haven’t finished yet.",
       "since + نقطة بداية: since 2019, since Monday, since January.",
       "for + مدة: for three years, for two hours, for a long time.",
-      "نستخدم Present Perfect مع فترات لم تنتهِ مثل today, this week, this month, this year عندما يكون الحدث مرتبطاً بالفترة الحالية.",
-      "لا نستخدم Present Perfect عادةً مع وقت ماضٍ انتهى مثل yesterday, last week, last year, in 2018, two days ago؛ نستخدم Past Simple.",
-      "been تعني أن الشخص زار المكان وعاد: I have been to London. أما gone فتعني أن الشخص ذهب ولم يعد بعد: She has gone to London."
+      "يمكن استخدام Present Perfect مع فترات لم تنتهِ مثل today, this week, this month, this year عندما يكون الحدث مرتبطاً بالحاضر.",
+      "لا نستخدم Present Perfect عادةً مع وقت ماضٍ محدد ومنتهٍ مثل yesterday, last week, last year, in 2018, two days ago؛ نستخدم Past Simple.",
+      "في معنى الاستمرار، يمكن استخدام Present Perfect مع أفعال مثل live, work, study: We have lived here since 2020.",
+      "been تعني عادةً زيارة المكان والعودة: I have been to London. أما gone فتعني أن الشخص ذهب ولم يعد بعد: She has gone to London.",
+      "Present Perfect يربط الماضي بالحاضر؛ إذا كان التركيز على حدث مكتمل في زمن ماضٍ منتهٍ فـPast Simple هو الاختيار الطبيعي."
     ],
     "examples": [
       {
@@ -188,8 +229,8 @@
         "ar": "لقد أنهيت واجبي."
       },
       {
-        "en": "She has lost her phone.",
-        "ar": "لقد فقدت هاتفها."
+        "en": "She has lost her phone, so she cannot call us.",
+        "ar": "لقد فقدت هاتفها، ولذلك لا تستطيع الاتصال بنا."
       },
       {
         "en": "Have you ever visited Cairo?",
@@ -204,12 +245,16 @@
         "ar": "لقد وصل للتو."
       },
       {
+        "en": "The researchers have already completed the first stage.",
+        "ar": "لقد أكمل الباحثون المرحلة الأولى بالفعل."
+      },
+      {
         "en": "We have lived here since 2020.",
         "ar": "نحن نعيش هنا منذ عام 2020."
       },
       {
         "en": "She has worked here for five years.",
-        "ar": "لقد عملت هنا لمدة خمس سنوات."
+        "ar": "تعمل هنا منذ خمس سنوات."
       },
       {
         "en": "I have studied a lot this week.",
@@ -222,6 +267,10 @@
       {
         "en": "My brother has gone to the supermarket.",
         "ar": "ذهب أخي إلى المتجر وما زال هناك."
+      },
+      {
+        "en": "My sister has been to London twice.",
+        "ar": "زارت أختي لندن مرتين."
       }
     ],
     "commonMistakes": [
@@ -230,32 +279,33 @@
       "❌ Have you ever went to London? → ✅ Have you ever been to London?",
       "❌ I have lived here since five years. → ✅ I have lived here for five years.",
       "❌ He has finished the work last night. → ✅ He finished the work last night.",
-      "❌ I have been to London and I am still there. → ✅ I have gone to London and I am still there."
+      "❌ I have been to London and I am still there. → ✅ I have gone to London and I am still there.",
+      "❌ She has worked here for five years. → ترجمة الاستمرار الأفضل: ✅ تعمل هنا منذ خمس سنوات. (بدلاً من ترجمة قد توحي بانتهاء العمل.)"
     ],
     "quiz": [
       {
         "type": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
+        "prompt": "The researchers ______ the first stage of the project.",
         "options": [
-          "I have seen that film.",
-          "I have saw that film.",
-          "I have see that film.",
-          "I seen that film."
+          "have completed",
+          "completed yesterday",
+          "have complete",
+          "are complete"
         ],
         "answer": 0,
-        "why": "Present Perfect = have/has + التصريف الثالث. التصريف الثالث من see هو seen."
+        "why": "الجملة تتحدث عن إنجاز له صلة بالحاضر دون ذكر وقت ماضٍ منتهٍ، لذلك Present Perfect: have completed."
       },
       {
         "type": "mcq",
-        "prompt": "اختر الجملة الصحيحة مع yesterday:",
+        "prompt": "I ______ him yesterday.",
         "options": [
-          "I visited him yesterday.",
-          "I have visited him yesterday.",
-          "I have visit him yesterday.",
-          "I am visiting him yesterday."
+          "have seen",
+          "saw",
+          "have saw",
+          "see"
         ],
-        "answer": 0,
-        "why": "Yesterday فترة ماضية انتهت ومحددة، لذلك نستخدم Past Simple."
+        "answer": 1,
+        "why": "Yesterday وقت ماضٍ محدد ومنتهٍ، لذلك نستخدم Past Simple: saw."
       },
       {
         "type": "mcq",
@@ -283,19 +333,19 @@
       },
       {
         "type": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
+        "prompt": "Have you ______ visited the British Museum?",
         "options": [
-          "Have you ever been to Paris?",
-          "Have you ever went to Paris?",
-          "Have you ever gone to Paris?",
-          "Did you ever been to Paris?"
+          "ever",
+          "already",
+          "yet",
+          "since"
         ],
         "answer": 0,
-        "why": "للسؤال عن خبرة زيارة مكان نستخدم غالباً Have you ever been to...?"
+        "why": "Ever تُستخدم كثيراً للسؤال عن الخبرات في الحياة دون تحديد وقت."
       },
       {
         "type": "mcq",
-        "prompt": "I haven't finished my homework ______.",
+        "prompt": "I haven’t finished the report ______.",
         "options": [
           "already",
           "ever",
@@ -303,11 +353,11 @@
           "since"
         ],
         "answer": 2,
-        "why": "Yet تستخدم كثيراً في نهاية جمل النفي والأسئلة للإشارة إلى أن الشيء لم يحدث حتى الآن."
+        "why": "Yet تُستخدم كثيراً في نهاية الجمل المنفية والأسئلة بمعنى حتى الآن."
       },
       {
         "type": "mcq",
-        "prompt": "أي جملة تعبر عن نتيجة موجودة في الحاضر؟",
+        "prompt": "Which sentence focuses on a present result?",
         "options": [
           "I lost my keys yesterday.",
           "I lose my keys every week.",
@@ -315,13 +365,55 @@
           "I was losing my keys."
         ],
         "answer": 2,
-        "why": "I have lost my keys تركز على النتيجة الحالية، وهي أن المفاتيح مفقودة الآن."
+        "why": "I have lost my keys تربط الحدث بالمشكلة الحالية: المفاتيح مفقودة الآن."
+      },
+      {
+        "type": "mcq",
+        "prompt": "Which sentence correctly describes a finished past time?",
+        "options": [
+          "I have visited the museum last year.",
+          "I visited the museum last year.",
+          "I have visit the museum last year.",
+          "I am visiting the museum last year."
+        ],
+        "answer": 1,
+        "why": "Last year هنا فترة ماضية منتهية، لذلك Past Simple هو الاختيار الطبيعي."
+      },
+      {
+        "type": "mcq",
+        "prompt": "Which sentence means that the person went to London and has not returned yet?",
+        "options": [
+          "She has been to London.",
+          "She has gone to London.",
+          "She went to London before.",
+          "She has visited London twice."
+        ],
+        "answer": 1,
+        "why": "Has gone to تعني في هذا السياق أن الشخص ذهب إلى المكان ولم يعد بعد."
+      },
+      {
+        "type": "mcq",
+        "prompt": "Which sentence is most natural if the speaker is still employed there?",
+        "options": [
+          "She worked here for five years.",
+          "She has worked here for five years.",
+          "She works here for five years.",
+          "She is worked here for five years."
+        ],
+        "answer": 1,
+        "why": "Present Perfect يعبّر عن حالة بدأت في الماضي وما زالت مرتبطة بالحاضر؛ worked هنا ليست الاختيار المقصود إذا كان العمل مستمراً."
       },
       {
         "type": "tf",
-        "prompt": "يمكن استخدام Present Perfect مع today لأن اليوم لم ينتهِ بعد.",
+        "prompt": "Present Perfect is normally used with yesterday because yesterday is a past-time expression.",
+        "correct": false,
+        "why": "Yesterday فترة ماضية منتهية، ولذلك نستخدم Past Simple عادةً: I saw him yesterday."
+      },
+      {
+        "type": "tf",
+        "prompt": "Today can occur with Present Perfect when the day is still considered an unfinished time period.",
         "correct": true,
-        "why": "Today فترة زمنية لم تنتهِ، لذلك يمكن أن نقول: I have seen him today."
+        "why": "Today قد تكون فترة غير منتهية، لذلك يمكن أن نقول I have seen him today."
       }
     ],
     "markers": [
@@ -334,7 +426,9 @@
       "for",
       "today",
       "this week",
-      "this year"
+      "this month",
+      "this year",
+      "recently"
     ]
   },
   {
@@ -342,8 +436,8 @@
     "title": "المضارع التام المستمر",
     "category": "الأزمنة",
     "icon": "🌱",
-    "description": "Present Perfect Continuous لحدث بدأ في الماضي واستمر إلى الحاضر أو انتهى مؤخراً مع وجود أثر حالي، مع التركيز على النشاط أو المدة.",
-    "explanation": "Present Perfect Continuous يتكون من have/has + been + verb-ing. نستخدمه عندما نريد التركيز على استمرارية نشاط بدأ في الماضي واستمر حتى الحاضر، أو على نشاط استمر لفترة وأدى إلى نتيجة ظاهرة في الحاضر. لذلك نقول I have been studying for three hours عندما يكون التركيز على مدة الدراسة واستمرار النشاط، ونقول She is tired because she has been working all day عندما يكون النشاط قد سبب حالة واضحة الآن. يمكن أن يكون النشاط ما زال مستمراً أو يكون قد توقف قبل لحظات، حسب السياق. أهم فرق بين Present Perfect وPresent Perfect Continuous هو أن الأول يركز غالباً على النتيجة أو الإنجاز أو العدد، بينما يركز الثاني على العملية والمدة والنشاط. نقول I have written five emails عندما تكون النتيجة أو العدد مهماً، لكن I have been writing emails all morning عندما تكون مدة النشاط هي النقطة الأساسية. يمكن استخدام since وfor مع الزمنين، لكن Present Perfect Continuous يكون شائعاً جداً عندما نسأل How long...? مع نشاط مستمر. لا نستخدمه عادةً مع أفعال الحالة مثل know وbelieve وown وunderstand؛ في هذه الحالات نستخدم Present Perfect Simple مثل I have known him for ten years.",
+    "description": "Present Perfect Continuous لحدث بدأ في الماضي واستمر إلى الحاضر أو انتهى مؤخراً مع وجود أثر حالي، مع التركيز على النشاط أو المدة أكثر من النتيجة أو العدد.",
+    "explanation": "يتكون Present Perfect Continuous من have/has + been + verb-ing. نستخدمه عندما يكون التركيز على نشاط بدأ في الماضي واستمر حتى الحاضر، أو على نشاط استمر لفترة وانتهى مؤخراً وترك أثراً واضحاً الآن. لذلك نقول I have been studying for three hours عندما تكون المدة والاستمرارية مهمتين، ونقول She is tired because she has been working all day عندما يكون النشاط السابق سبباً لحالة حالية. يمكن أن يكون النشاط ما زال مستمراً أو يكون قد توقف قبل لحظات؛ السياق هو الذي يحدد ذلك. أهم مقارنة هي Present Perfect Simple مقابل Present Perfect Continuous. الأول يركز غالباً على النتيجة أو الإنجاز أو العدد: I have written five emails. أما الثاني فيركز غالباً على العملية أو المدة: I have been writing emails all morning. كلاهما قد يكون صحيحاً في بعض السياقات، لكن المعنى الذي تريد إبرازَه هو الذي يحدد الاختيار. نستخدم since وfor كثيراً مع هذا الزمن، وخاصةً في أسئلة How long...? ولا نستخدمه عادةً مع أفعال الحالة مثل know وbelieve وown وunderstand عندما تحتفظ بمعناها المعتاد؛ نقول I have known him for ten years. في أسئلة PTE، إذا كان السياق يبرز مدة نشاط أو أثر نشاط مستمر، ففكر في Present Perfect Continuous، أما إذا كان يبرز نتيجة مكتملة أو عدداً ففكر في Present Perfect Simple.",
     "rules": [
       "التكوين: have/has + been + verb-ing: I have been studying. She has been working.",
       "نستخدمه لحدث بدأ في الماضي وما زال مستمراً: I have been studying since morning.",
@@ -354,6 +448,7 @@
       "How long + have/has + subject + been + verb-ing للسؤال عن مدة النشاط: How long have you been studying?",
       "Present Perfect Simple يركز غالباً على النتيجة أو العدد: I have written five emails.",
       "Present Perfect Continuous يركز غالباً على العملية أو المدة: I have been writing emails all morning.",
+      "يمكن أن يكون كلا الزمنين ممكناً مع بعض الأفعال، لكن الاختيار يغيّر التركيز: I have studied English for five years. / I have been studying English for five years.",
       "لا نستخدمه عادةً مع أفعال الحالة مثل know, believe, understand, own, need؛ نستخدم Present Perfect Simple بدلاً منه.",
       "مع أفعال مثل work, study, wait, rain, read يمكن استخدام Present Perfect Continuous بسهولة عندما يكون التركيز على الاستمرار أو المدة."
     ],
@@ -379,16 +474,24 @@
         "ar": "أنا متعب لأنني كنت أدرس طوال الليل."
       },
       {
+        "en": "The researchers have been collecting data since Monday.",
+        "ar": "يجمع الباحثون البيانات منذ يوم الاثنين."
+      },
+      {
         "en": "How long have you been learning English?",
         "ar": "منذ متى وأنت تتعلم الإنجليزية؟"
       },
       {
         "en": "I have written five emails today.",
-        "ar": "لقد كتبت خمسة رسائل إلكترونية اليوم."
+        "ar": "لقد كتبت خمس رسائل إلكترونية اليوم."
       },
       {
         "en": "I have been writing emails all morning.",
-        "ar": "كنت أكتب رسائل إلكترونية طوال الصباح."
+        "ar": "لقد كنت أكتب رسائل إلكترونية طوال الصباح."
+      },
+      {
+        "en": "The students are tired because they have been preparing for the exam all week.",
+        "ar": "الطلاب متعبون لأنهم كانوا يستعدون للامتحان طوال الأسبوع."
       }
     ],
     "commonMistakes": [
@@ -397,7 +500,8 @@
       "❌ He has been work all day. → ✅ He has been working all day.",
       "❌ I have been lived here since 2020. → ✅ I have been living here since 2020.",
       "❌ How long have you been study English? → ✅ How long have you been studying English?",
-      "❌ I have been written five emails. → ✅ I have written five emails. (إذا كان التركيز على النتيجة والعدد.)"
+      "❌ I have been written five emails. → ✅ I have written five emails. (إذا كان التركيز على النتيجة والعدد.)",
+      "❌ I have been knowing the answer. → ✅ I have known the answer. (Know من أفعال الحالة.)"
     ],
     "quiz": [
       {
@@ -422,7 +526,7 @@
           "has been raining"
         ],
         "answer": 3,
-        "why": "الحدث استمر خلال فترة وأدى إلى أثر واضح الآن، لذلك نستخدم has been raining."
+        "why": "النشاط استمر خلال فترة وله أثر واضح الآن، لذلك نستخدم has been raining."
       },
       {
         "type": "mcq",
@@ -434,11 +538,11 @@
           "did you been studying"
         ],
         "answer": 1,
-        "why": "السؤال عن مدة نشاط مستمر يتكون من How long + have + subject + been + verb-ing."
+        "why": "السؤال عن مدة نشاط مستمر: How long + have + subject + been + verb-ing."
       },
       {
         "type": "mcq",
-        "prompt": "I'm exhausted because I ______ all day.",
+        "prompt": "I’m exhausted because I ______ all day.",
         "options": [
           "have been working",
           "has been working",
@@ -446,11 +550,11 @@
           "am been working"
         ],
         "answer": 0,
-        "why": "I تحتاج إلى have، وall day تشير إلى نشاط مستمر: have been working."
+        "why": "I تحتاج إلى have، وall day تبرز استمرار النشاط: have been working."
       },
       {
         "type": "mcq",
-        "prompt": "أي جملة تركز على العدد والنتيجة؟",
+        "prompt": "Which sentence focuses on the number of completed emails?",
         "options": [
           "I have written five emails.",
           "I have been writing emails all morning.",
@@ -458,11 +562,23 @@
           "I am writing emails yesterday."
         ],
         "answer": 0,
-        "why": "العدد five emails يمثل نتيجة أو إنجازاً مكتملًا، لذلك Present Perfect Simple أنسب."
+        "why": "العدد five emails يبرز النتيجة أو الإنجاز، لذلك Present Perfect Simple أنسب."
       },
       {
         "type": "mcq",
-        "prompt": "أي جملة صحيحة؟",
+        "prompt": "Which sentence focuses on the activity and its duration?",
+        "options": [
+          "She has completed the report.",
+          "She has written five pages.",
+          "She has been writing for two hours.",
+          "She writes reports every week."
+        ],
+        "answer": 2,
+        "why": "for two hours تبرز مدة النشاط، لذلك Present Perfect Continuous هو الأنسب."
+      },
+      {
+        "type": "mcq",
+        "prompt": "Which sentence is correct?",
         "options": [
           "I have known her for years.",
           "I have been knowing her for years.",
@@ -473,16 +589,40 @@
         "why": "Know من أفعال الحالة، لذلك نستخدم Present Perfect Simple: have known."
       },
       {
-        "type": "tf",
-        "prompt": "Present Perfect Continuous يستخدم دائماً فقط عندما يكون النشاط ما زال مستمراً لحظة الكلام.",
-        "correct": false,
-        "why": "يمكن أن يستخدم أيضاً لنشاط توقف مؤخراً مع وجود أثر واضح في الحاضر، مثل You are tired because you have been running."
+        "type": "mcq",
+        "prompt": "The researchers ______ data since Monday.",
+        "options": [
+          "have been collecting",
+          "has been collecting",
+          "have collecting",
+          "are been collecting"
+        ],
+        "answer": 0,
+        "why": "The researchers جمع، وsince Monday يوضح نشاطاً بدأ في الماضي وما زال مستمراً: have been collecting."
+      },
+      {
+        "type": "mcq",
+        "prompt": "Which sentence best emphasizes a present result caused by a recent activity?",
+        "options": [
+          "She has written three pages.",
+          "She is tired because she has been working all day.",
+          "She works every day.",
+          "She worked yesterday."
+        ],
+        "answer": 1,
+        "why": "الجملة تربط حالة حالية، وهي التعب، بنشاط استمر خلال اليوم، ولذلك Present Perfect Continuous مناسب."
       },
       {
         "type": "tf",
-        "prompt": "يمكن استخدام since وfor مع Present Perfect Continuous.",
+        "prompt": "Present Perfect Continuous is used only when the activity is still happening at the exact moment of speaking.",
+        "correct": false,
+        "why": "يمكن استخدامه أيضاً لنشاط توقف مؤخراً مع وجود أثر حالي، مثل You are tired because you have been running."
+      },
+      {
+        "type": "tf",
+        "prompt": "Both since and for can be used with Present Perfect Continuous.",
         "correct": true,
-        "why": "كلاهما شائع جداً مع هذا الزمن: since Monday وfor three hours."
+        "why": "كلاهما شائع: since Monday وfor three hours."
       }
     ],
     "markers": [
@@ -501,21 +641,22 @@
     "title": "الماضي البسيط",
     "category": "الأزمنة",
     "icon": "🕰️",
-    "description": "Past Simple للحديث عن أحداث وحالات وعادات انتهت في الماضي، وخاصة عندما يكون وقت الحدث محدداً أو مفهوماً من السياق.",
-    "explanation": "Past Simple هو الزمن الأساسي للأحداث التي انتهت في الماضي. نستخدمه عندما نتحدث عن شيء حدث وانتهى، وخاصة إذا كان وقت حدوثه محدداً مثل yesterday أو last week أو in 2020 أو two days ago. يمكن أن نستخدمه أيضاً لسرد مجموعة من الأحداث المتتابعة في الماضي، وللعادات أو الحالات التي كانت موجودة في الماضي وانتهت. في الأفعال المنتظمة نضيف -ed مثل work → worked وvisit → visited، بينما الأفعال الشاذة لها صور خاصة مثل go → went وsee → saw وtake → took. في النفي والسؤال توجد قاعدة مهمة جداً: بعد did أو didn't نستخدم الفعل الأساسي وليس التصريف الثاني، لذلك نقول Did you go? وHe didn't go. أما فعل be فله قاعدة مختلفة؛ نستخدم was مع I/he/she/it وwere مع you/we/they، ولا نستخدم did معه في النفي والسؤال: Was she tired? They weren't ready. في أسئلة PTE، وجود كلمات مثل yesterday أو last year أو ago أو in 2019 يعطي مؤشراً قوياً على Past Simple، لكن الأهم دائماً هو معنى الجملة وهل الحدث انتهى في الماضي.",
+    "description": "Past Simple للحديث عن أحداث وحالات وعادات انتهت في الماضي، وخاصة عندما يكون وقت الحدث محدداً أو مفهوماً من السياق، وللسرد المتتابع للأحداث.",
+    "explanation": "Past Simple هو الزمن الأساسي للأحداث التي انتهت في الماضي. نستخدمه عندما نتحدث عن حدث وقع وانتهى، وخاصة إذا كان وقت حدوثه محدداً مثل yesterday أو last week أو in 2020 أو two days ago. كما يستخدم لسرد أحداث متتابعة في الماضي، وللعادات أو الحالات التي كانت موجودة في الماضي وانتهت. الأفعال المنتظمة تأخذ -ed مثل work → worked، بينما الأفعال الشاذة لها صور خاصة مثل go → went وsee → saw وtake → took. في النفي والسؤال توجد قاعدة محورية: بعد did أو didn’t نستخدم الفعل الأساسي، لذلك نقول Did you go? وHe didn’t go. أما verb to be فله نظام مختلف: was مع I/he/she/it وwere مع you/we/they، ولا نستخدم did معه في النفي أو السؤال. الفرق مع Present Perfect مهم جداً في PTE: Past Simple يرتبط بوقت ماضٍ منتهٍ أو بحدث ماضٍ مكتمل، بينما Present Perfect يربط الماضي بالحاضر. وفي أسئلة الاختيار، لا تجعل وجود كلمة yesterday وحدها سبباً لحفظ الإجابة؛ استخدمها مع معنى الجملة وبنية الزمن.",
     "rules": [
       "Past Simple يستخدم لحدث انتهى بالكامل في الماضي: I visited London last year.",
       "يستخدم مع أوقات ماضية محددة ومنتهية مثل yesterday, last week, last year, in 2020, two days ago.",
       "الأفعال المنتظمة تأخذ -ed: work → worked، play → played، visit → visited.",
-      "يجب حفظ الأفعال الشاذة الشائعة: go → went، see → saw، take → took، write → wrote، buy → bought.",
-      "النفي: did not/didn't + الفعل الأساسي: She didn't go.",
+      "من الأفعال الشاذة الشائعة: go → went، see → saw، take → took، write → wrote، buy → bought.",
+      "النفي: did not/didn’t + الفعل الأساسي: She didn’t go.",
       "السؤال: Did + subject + base verb: Did you see him?",
-      "بعد did أو didn't لا نستخدم التصريف الثاني: ❌ Did you went? → ✅ Did you go?",
+      "بعد did أو didn’t لا نستخدم التصريف الثاني: ❌ Did you went? → ✅ Did you go?",
       "يمكن استخدام Past Simple لسرد أحداث متتابعة: He arrived, opened the door, and sat down.",
       "يمكن استخدامه للعادات المتكررة في الماضي، ويمكن استخدام used to عندما نريد التأكيد على أن العادة أو الحالة لم تعد موجودة.",
       "مع verb to be نستخدم was مع I/he/she/it وwere مع you/we/they.",
-      "نفي be يكون wasn't/weren't، والسؤال يكون Was/Were دون did: Was he tired? They weren't ready.",
-      "عندما نذكر وقتاً ماضياً انتهى مثل yesterday أو last month، نستخدم Past Simple بدلاً من Present Perfect."
+      "نفي be يكون wasn’t/weren’t، والسؤال يكون Was/Were دون did: Was he tired? They weren’t ready.",
+      "عندما نذكر وقتاً ماضياً منتهياً مثل yesterday أو last month، نستخدم Past Simple بدلاً من Present Perfect عادةً.",
+      "إذا كان الحدثان ماضيين ونحتاج إلى إبراز أن أحدهما حدث قبل الآخر، فقد يكون Past Perfect أنسب من Past Simple."
     ],
     "examples": [
       {
@@ -527,16 +668,20 @@
         "ar": "زارت جدتها الأسبوع الماضي."
       },
       {
+        "en": "The researchers published the results in 2024.",
+        "ar": "نشر الباحثون النتائج في عام 2024."
+      },
+      {
         "en": "We moved to Cairo in 2020.",
         "ar": "انتقلنا إلى القاهرة في عام 2020."
       },
       {
-        "en": "He didn't attend the meeting yesterday.",
+        "en": "He didn’t attend the meeting yesterday.",
         "ar": "لم يحضر الاجتماع أمس."
       },
       {
-        "en": "Did you watch the film last night?",
-        "ar": "هل شاهدت الفيلم الليلة الماضية؟"
+        "en": "Did you watch the lecture last night?",
+        "ar": "هل شاهدت المحاضرة الليلة الماضية؟"
       },
       {
         "en": "She went to the library, studied for two hours, and returned home.",
@@ -551,46 +696,48 @@
         "ar": "كان متعباً بعد الرحلة الطويلة."
       },
       {
-        "en": "They weren't ready for the exam.",
+        "en": "They weren’t ready for the exam.",
         "ar": "لم يكونوا مستعدين للامتحان."
       }
     ],
     "commonMistakes": [
       "❌ I have seen him yesterday. → ✅ I saw him yesterday.",
-      "❌ He didn't finished the report. → ✅ He didn't finish the report.",
+      "❌ He didn’t finished the report. → ✅ He didn’t finish the report.",
       "❌ Did you saw the film? → ✅ Did you see the film?",
       "❌ She goed home. → ✅ She went home.",
       "❌ Did she was tired? → ✅ Was she tired?",
-      "❌ They wasn't ready. → ✅ They weren't ready."
+      "❌ They wasn’t ready. → ✅ They weren’t ready.",
+      "❌ Did you went to the lecture? → ✅ Did you go to the lecture?",
+      "❌ I had seen him yesterday. → ✅ I saw him yesterday. (إذا لم يوجد مرجع ماضٍ آخر نحتاج إلى مقارنته.)"
     ],
     "quiz": [
       {
         "type": "mcq",
-        "prompt": "أي جملة صحيحة؟",
+        "prompt": "The researchers ______ the results in 2024.",
         "options": [
-          "She went home yesterday.",
-          "She goed home yesterday.",
-          "She has went home yesterday.",
-          "She going home yesterday."
+          "publish",
+          "have published",
+          "published",
+          "are publishing"
         ],
-        "answer": 0,
-        "why": "Go فعل شاذ، وتصريفه الثاني هو went، وyesterday يشير إلى Past Simple."
+        "answer": 2,
+        "why": "In 2024 يحدد وقتاً ماضياً منتهياً، لذلك نستخدم Past Simple: published."
       },
       {
         "type": "mcq",
-        "prompt": "اختر النفي الصحيح: He ______ the exam yesterday.",
+        "prompt": "He ______ the exam yesterday.",
         "options": [
-          "didn't took",
-          "didn't take",
-          "wasn't take",
-          "doesn't took"
+          "didn’t took",
+          "didn’t take",
+          "wasn’t take",
+          "doesn’t took"
         ],
         "answer": 1,
-        "why": "بعد didn't نستخدم الفعل الأساسي: didn't take."
+        "why": "بعد didn’t نستخدم الفعل الأساسي: didn’t take."
       },
       {
         "type": "mcq",
-        "prompt": "اختر السؤال الصحيح:",
+        "prompt": "Which question is correct?",
         "options": [
           "Did you went to school?",
           "Do you went to school?",
@@ -602,19 +749,19 @@
       },
       {
         "type": "mcq",
-        "prompt": "أي جملة صحيحة مع yesterday؟",
+        "prompt": "Which sentence correctly uses Past Simple with a finished past time?",
         "options": [
-          "I finished the work yesterday.",
           "I have finished the work yesterday.",
+          "I finished the work yesterday.",
           "I finish the work yesterday.",
           "I am finishing the work yesterday."
         ],
-        "answer": 0,
+        "answer": 1,
         "why": "Yesterday وقت ماضٍ محدد ومنتهٍ، لذلك نستخدم Past Simple."
       },
       {
         "type": "mcq",
-        "prompt": "اختر الصيغة الصحيحة لفعل be: She ______ tired yesterday.",
+        "prompt": "She ______ tired after the long journey.",
         "options": [
           "did",
           "were",
@@ -622,11 +769,11 @@
           "was"
         ],
         "answer": 3,
-        "why": "مع she نستخدم was في الماضي البسيط لفعل be."
+        "why": "مع she نستخدم was في الماضي من verb to be."
       },
       {
         "type": "mcq",
-        "prompt": "اختر السؤال الصحيح عن حالة في الماضي:",
+        "prompt": "Choose the correct question about a past state:",
         "options": [
           "Did he was tired?",
           "Was he tired?",
@@ -638,7 +785,7 @@
       },
       {
         "type": "mcq",
-        "prompt": "أي جملة تستخدم Past Simple لسرد أحداث متتابعة؟",
+        "prompt": "Which sentence shows a sequence of completed past events?",
         "options": [
           "He arrives, opens the door, and sits down.",
           "He has arrived and opened the door.",
@@ -649,10 +796,52 @@
         "why": "الأحداث الثلاثة انتهت بالتتابع في الماضي، لذلك نستخدم Past Simple لكل فعل."
       },
       {
+        "type": "mcq",
+        "prompt": "When I was a child, I ______ football every weekend.",
+        "options": [
+          "play",
+          "have played",
+          "played",
+          "am playing"
+        ],
+        "answer": 2,
+        "why": "الجملة تتحدث عن عادة متكررة في فترة ماضية انتهت، لذلك Past Simple مناسب."
+      },
+      {
+        "type": "mcq",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "She didn’t went home.",
+          "She didn’t go home.",
+          "She wasn’t go home.",
+          "She doesn’t went home."
+        ],
+        "answer": 1,
+        "why": "بعد didn’t نستخدم base verb: go."
+      },
+      {
+        "type": "mcq",
+        "prompt": "Which sentence is more appropriate when no present connection is intended?",
+        "options": [
+          "I have visited the museum last year.",
+          "I visited the museum last year.",
+          "I have visit the museum last year.",
+          "I am visiting the museum last year."
+        ],
+        "answer": 1,
+        "why": "Last year فترة ماضية منتهية، ولذلك Past Simple هو الاختيار الطبيعي."
+      },
+      {
         "type": "tf",
-        "prompt": "الجملة «They didn't went to the meeting.» صحيحة لأن went هو الماضي من go.",
+        "prompt": "After didn’t, the main verb should be in the base form.",
+        "correct": true,
+        "why": "نعم: didn’t + base verb، مثل didn’t go وdidn’t finish."
+      },
+      {
+        "type": "tf",
+        "prompt": "Past Simple should always be used whenever an action happened before now, even if the time period is still connected to the present.",
         "correct": false,
-        "why": "بعد didn't يجب استخدام الفعل الأساسي: They didn't go to the meeting."
+        "why": "ليس دائماً. إذا كانت الفترة الزمنية ما زالت مرتبطة بالحاضر، فقد يكون Present Perfect مناسباً، مثل I have seen him today."
       }
     ],
     "markers": [
@@ -663,7 +852,9 @@
       "two days ago",
       "a year ago",
       "in 2020",
-      "when I was a child"
+      "in 2024",
+      "when I was a child",
+      "then"
     ]
   },
   {

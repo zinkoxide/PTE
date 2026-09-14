@@ -14,7 +14,7 @@ and a **Vocabulary** bank with search, filters, and pronunciation audio.
 - `add-word.html` — on-demand page for adding words (needs Flask only at save time).
 - `js/` — ES modules for audio, speech recognition, comparison, scoring, and data, plus a theme toggle (`theme.js`).
 - `data/` — sentence and vocabulary data (JSON); `data/grammar/` holds one file per grammar topic time/frequency expressions, prepositions, determiners, comparisons, and
-  much more — 29 lessons / 12 categories / 437 questions (`tenses.json`,
+  much more — 29 lessons / 12 categories / 450 questions (`tenses.json`,
   `modals.json`, `conditionals.json`, `relative-clauses.json`, …).
 - `assets/audio/` — generated MP3 files.
 - `tools/` — helper scripts for media generation and JSON validation.
@@ -86,7 +86,7 @@ Works on any static server or fully offline. Browse **29 bilingual lessons**
 الجمل الموصولة/الاسمية، الكلام المنقول، أدوات الربط، محددات الكمية), then
 practice with interactive quizzes:
 
-- **اختبار في كل الدروس** — all **437 questions** (multiple choice + true/false)
+- **اختبار في كل الدروس** — all **450 questions** (multiple choice + true/false)
   shuffled in one session.
 - **اختبار في درس محدد** — the quiz items of a chosen lesson.
 - Every lesson shows its **كلمات دليلية** (common time markers such as

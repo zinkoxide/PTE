@@ -1,5 +1,32 @@
 # Changelog
 
+## v3.12 — Grammar: modern app UI (sidebar + reader)
+
+- **Layout**: the grammar page was redesigned as a modern app: a fixed
+  **sidebar** (كتف مخطّط — logo, live stats, 🔍 search box, category chips
+  with per-category counts, scrollable lesson list, and a "اختبار كل الدروس"
+  button) beside a **main reader panel** with a lesson **hero banner**
+  (gradient card, round icon tile, marker chips, prominent test button),
+  a **breadcrumb**, a **segmented tab control**, and content cards. The
+  `.grammar-app` container is **RTL**: the library sidebar sits on the
+  **right** with the reader to its **left** (nav/rows/tabs mirror in RTL).
+- **كلمات دليلية** marker chips recolored from cyan to **soft violet**
+  (`var(--violet)` / `rgba(139,92,246,...)`) for better contrast next to the
+  cyan→violet hero gradient and improved readability on both themes.
+- **Search**: `grammar-app.js` now filters lessons live by title/category/
+  description (`grammar-search`), with result counts and empty-state messages.
+- **Professional styling**: layer-based gradient hero, glow shadows, refined
+  typography, rounded segmented tabs with gradient active state, hover
+  affordances on list rows and cards, logical-property borders (RTL), and
+  responsive stacking below 980 px. The duplicated/legacy grammar CSS was
+  fully rewritten and cleaned (`css/style.css` grammar section).
+- The whole lesson reader still works fully offline with the same tabs
+  (نظرة عامة / القواعد / أمثلة / أخطاء شائعة), quizzes, timer, streak,
+  review, and per-lesson best scores.
+- Totals updated (user added 13 new questions to `tenses.json` during the
+  redesign): **29 lessons / 450 questions** (429 mcq + 21 tf, 12 true /
+  9 false) across 12 categories and 18 files.
+
 ## v3.11 — Full grammar library (18 files / 29 lessons)
 
 - All per-topic grammar files created by the user are now wired into the app.

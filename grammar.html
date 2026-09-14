@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/theme.js"></script>
 </head>
-<body>
+<body class="page-grammar">
 
   <div class="shell">
 
@@ -63,24 +63,40 @@
         <!-- ===================== Browse ===================== -->
         <div id="grammar-browse">
 
-          <div class="grammar-layout">
+          <div class="grammar-app">
 
-            <!-- Left: lesson list -->
-            <section class="card grammar-panel grammar-panel-nav">
-              <div class="card-title">
-                <span>الدروس</span>
-                <span id="grammar-browse-stats" class="toolbar"></span>
+            <!-- Sidebar: search + categories + lessons -->
+            <aside class="card grammar-side">
+
+              <div class="grammar-side-head">
+                <div class="grammar-side-logo">📘</div>
+                <div class="grammar-side-head-body">
+                  <div class="grammar-side-name">مكتبة القواعد</div>
+                  <div id="grammar-browse-stats" class="grammar-side-sub"></div>
+                </div>
               </div>
+
+              <div class="grammar-search-wrap">
+                <input id="grammar-search" class="grammar-search" type="search"
+                       placeholder="🔍 ابحث عن درس أو قاعدة…" autocomplete="off">
+              </div>
+
               <div id="grammar-cat-filter" class="grammar-cats"></div>
               <p id="grammar-lesson-note" class="lesson-note"></p>
-              <div id="grammar-lesson-list" class="grammar-lesson-list"></div>
-            </section>
 
-            <!-- Right: lesson reader + tests -->
-            <section class="card grammar-panel">
+              <div id="grammar-lesson-list" class="grammar-lesson-list"></div>
+
+              <div class="grammar-side-foot">
+                <button id="grammar-test-all" class="btn btn-block" type="button">📘 اختبار كل الدروس</button>
+              </div>
+
+            </aside>
+
+            <!-- Main: lesson reader + tests -->
+            <main class="card grammar-main">
 
               <div class="lesson-toolbar">
-                <button id="grammar-test-all" class="btn btn-ghost" type="button">📘 اختبار كل الدروس</button>
+                <div id="grammar-crumb" class="lesson-crumb"></div>
                 <div class="lesson-spacer"></div>
                 <span class="lesson-timer-label">مؤقّت لكل سؤال</span>
                 <select id="grammar-timer" class="select">
@@ -92,7 +108,7 @@
 
               <div id="grammar-detail"></div>
 
-            </section>
+            </main>
 
           </div>
 
