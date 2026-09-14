@@ -1,0 +1,2146 @@
+[
+  {
+    "id": "present-tenses",
+    "title": "الأزمنة المضارعة",
+    "category": "الأزمنة",
+    "icon": "⏰",
+    "description": "Present Simple وPresent Continuous: كيف نميز بين العادات والحقائق والحالات العامة من جهة، والأحداث الجارية أو المؤقتة والترتيبات المستقبلية من جهة أخرى.",
+    "explanation": "لدينا في هذا الدرس زمنان أساسيان للحاضر: Present Simple وPresent Continuous. نستخدم Present Simple عندما نتحدث عن العادات والروتين والحقائق العامة والأشياء التي نراها ثابتة أو متكررة، مثل I study English every day وWater boils at 100°C. أما Present Continuous فنستخدمه عندما يكون الفعل جارياً الآن، أو يحدث خلال فترة مؤقتة حول وقت الكلام، أو عندما نتحدث عن ترتيب مستقبلي مؤكد، مثل I am studying now وShe is meeting her teacher tomorrow. من أهم النقاط التي يجب الانتباه إليها أن Present Simple مع he/she/it يحتاج إلى s أو es، بينما بعد does أو doesn't يعود الفعل إلى صورته الأساسية. وفي Present Continuous نحتاج دائماً إلى am/is/are + verb-ing. كذلك توجد أفعال تسمى state verbs، مثل know وbelieve وunderstand وwant وneed وown، وهذه تصف حالات وليست أنشطة، لذلك لا نستخدمها عادةً في صيغة continuous. في أسئلة PTE، لا تعتمد على كلمة إشارة واحدة فقط؛ افهم معنى الجملة أولاً ثم حدد هل الحديث عن عادة أو حقيقة، أم عن نشاط جارٍ أو مؤقت.",
+    "rules": [
+      "Present Simple مع العادات والروتين: I study English every day.",
+      "Present Simple مع الحقائق العامة والقوانين والحقائق العلمية: Water boils at 100°C.",
+      "Present Simple مع الحالات والآراء والمشاعر والملكية: I know the answer. She likes music.",
+      "مع he/she/it نضيف s أو es للفعل: work → works، watch → watches، study → studies.",
+      "في النفي مع Present Simple نستخدم do not/don't أو does not/doesn't + الفعل الأساسي: He doesn't work here.",
+      "في السؤال مع Present Simple نستخدم Do/Does + subject + base verb: Does she study English?",
+      "Present Continuous = am/is/are + verb-ing، ويستخدم لحدث يحدث الآن: They are studying now.",
+      "يستخدم Present Continuous أيضاً لحدث مؤقت خلال فترة حالية: I am living with my uncle this month.",
+      "يمكن استخدام Present Continuous للترتيبات المستقبلية المؤكدة: I am meeting my professor tomorrow.",
+      "كلمات شائعة مع Present Simple: always, usually, often, sometimes, rarely, every day, every week.",
+      "كلمات شائعة مع Present Continuous: now, right now, at the moment, currently, these days, this week.",
+      "مع أفعال الحالة مثل know, believe, understand, want, need, own نستخدم غالباً Present Simple وليس Continuous: I understand the question."
+    ],
+    "examples": [
+      {
+        "en": "She studies English every evening.",
+        "ar": "تدرس الإنجليزية كل مساء."
+      },
+      {
+        "en": "My brother works in a bank.",
+        "ar": "يعمل أخي في بنك."
+      },
+      {
+        "en": "Water boils at 100°C.",
+        "ar": "يغلي الماء عند 100 درجة مئوية."
+      },
+      {
+        "en": "I usually drink coffee in the morning.",
+        "ar": "عادةً ما أشرب القهوة في الصباح."
+      },
+      {
+        "en": "They are studying for the exam now.",
+        "ar": "إنهم يدرسون للامتحان الآن."
+      },
+      {
+        "en": "She is staying with her sister this week.",
+        "ar": "إنها تقيم مع أختها هذا الأسبوع."
+      },
+      {
+        "en": "We are meeting our teacher tomorrow.",
+        "ar": "سنلتقي بمعلمنا غداً."
+      },
+      {
+        "en": "I understand the instructions.",
+        "ar": "أنا أفهم التعليمات."
+      }
+    ],
+    "commonMistakes": [
+      "❌ She study English every day. → ✅ She studies English every day.",
+      "❌ He don't like coffee. → ✅ He doesn't like coffee.",
+      "❌ Does she studies English? → ✅ Does she study English?",
+      "❌ I am know the answer. → ✅ I know the answer.",
+      "❌ They are study now. → ✅ They are studying now.",
+      "❌ I am living in Cairo every year. → ✅ I live in Cairo. (إذا كان المعنى عادة أو حالة عامة وليست مؤقتة.)"
+    ],
+    "quiz": [
+      {
+        "type": "mcq",
+        "prompt": "اختر الجملة الصحيحة للتعبير عن عادة يومية:",
+        "options": [
+          "She studies English every day.",
+          "She study English every day.",
+          "She is study English every day.",
+          "She studying English every day."
+        ],
+        "answer": 0,
+        "why": "الحديث عن عادة يومية، لذلك نستخدم Present Simple، ومع she نضيف s إلى study فتصبح studies."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر الصيغة الصحيحة: He ______ TV at the moment.",
+        "options": [
+          "watches",
+          "watch",
+          "is watching",
+          "watching"
+        ],
+        "answer": 2,
+        "why": "At the moment يدل على حدث جارٍ الآن، لذلك نستخدم Present Continuous: is watching."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر السؤال الصحيح:",
+        "options": [
+          "Does she work here?",
+          "Does she works here?",
+          "Do she work here?",
+          "Is she work here?"
+        ],
+        "answer": 0,
+        "why": "مع Does يأتي الفعل في صورته الأساسية: Does she work?"
+      },
+      {
+        "type": "mcq",
+        "prompt": "أي جملة تعبّر عن حقيقة عامة؟",
+        "options": [
+          "The students are studying now.",
+          "Water boils at 100°C.",
+          "She is talking to her teacher.",
+          "They are traveling this week."
+        ],
+        "answer": 1,
+        "why": "حقيقة علمية عامة تستخدم Present Simple: Water boils at 100°C."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر الصيغة الصحيحة: I ______ the answer.",
+        "options": [
+          "am knowing",
+          "am know",
+          "knowing",
+          "know"
+        ],
+        "answer": 3,
+        "why": "Know من أفعال الحالة، ويستخدم عادةً مع Present Simple: I know."
+      },
+      {
+        "type": "mcq",
+        "prompt": "أي جملة تشير إلى ترتيب مستقبلي مؤكد؟",
+        "options": [
+          "I meet my teacher every week.",
+          "I met my teacher yesterday.",
+          "I am meeting my teacher tomorrow.",
+          "I have met my teacher."
+        ],
+        "answer": 2,
+        "why": "Present Continuous يمكن استخدامه للترتيبات المستقبلية المؤكدة، خاصةً مع وقت محدد مثل tomorrow."
+      },
+      {
+        "type": "tf",
+        "prompt": "الجملة «She doesn't likes coffee.» صحيحة لأن she تحتاج إلى s.",
+        "correct": false,
+        "why": "الـ s موجودة بالفعل داخل doesn't، لذلك يعود الفعل إلى صورته الأساسية: She doesn't like coffee."
+      },
+      {
+        "type": "tf",
+        "prompt": "الجملة «They are studying now.» تستخدم Present Continuous بصورة صحيحة.",
+        "correct": true,
+        "why": "Are + studying هي صيغة Present Continuous، وnow يشير إلى حدث جارٍ في الوقت الحالي."
+      }
+    ],
+    "markers": [
+      "always",
+      "usually",
+      "often",
+      "every day",
+      "every week",
+      "now",
+      "at the moment",
+      "currently",
+      "these days",
+      "this week"
+    ]
+  },
+  {
+    "id": "present-perfect",
+    "title": "المضارع التام",
+    "category": "الأزمنة",
+    "icon": "✅",
+    "description": "Present Perfect لربط الماضي بالحاضر: الخبرات، النتائج الحالية، الأحداث في فترة زمنية لم تنتهِ، والأفعال التي بدأت في الماضي وما زالت مرتبطة بالحاضر.",
+    "explanation": "Present Perfect يتكون من have/has + التصريف الثالث للفعل. فكرته الأساسية هي وجود علاقة بين حدث وقع في الماضي والحاضر. نستخدمه عندما لا يكون وقت الحدث المحدد هو النقطة المهمة، بل النتيجة الحالية أو الخبرة أو استمرار الحالة أو وقوع شيء في فترة زمنية لم تنتهِ بعد. لذلك نقول I have lost my keys عندما تكون النتيجة الآن أنني لا أملك مفاتيحي، ونقول Have you ever visited London? للسؤال عن الخبرة دون تحديد وقت. نستخدم since مع نقطة بداية مثل since 2020، وfor مع مدة مثل for five years. كما يظهر كثيراً مع already وjust وyet وever وnever. يجب التفريق بين Present Perfect وPast Simple: إذا تحدثنا عن وقت ماضٍ انتهى ومحدد مثل yesterday أو last year أو in 2020، فنستخدم Past Simple عادةً: I saw him yesterday. أما إذا كان الوقت غير محدد أو الفترة ما زالت مستمرة مثل today أو this week، فقد يكون Present Perfect مناسباً: I have seen him today. كذلك يجب الانتباه إلى الفرق بين been وgone؛ been تعني أن الشخص ذهب إلى مكان ثم عاد، بينما gone تعني أنه ذهب وما زال هناك أو لم يعد بعد.",
+    "rules": [
+      "التكوين: have/has + past participle (التصريف الثالث): I have finished. She has gone.",
+      "نستخدم Present Perfect لحدث ماضٍ له نتيجة أو أثر واضح في الحاضر: I have lost my keys.",
+      "نستخدمه للخبرات في الحياة دون تحديد وقت: Have you ever visited Egypt?",
+      "مع ever للسؤال عن الخبرة وnever لنفي وجود الخبرة: Have you ever tried sushi? I have never tried it.",
+      "مع just لحدث وقع منذ وقت قصير: I have just arrived.",
+      "مع already لحدث تم قبل المتوقع أو قبل وقت الحديث: She has already finished.",
+      "مع yet في نهاية السؤال أو النفي: Have you finished yet? I haven't finished yet.",
+      "since + نقطة بداية: since 2019, since Monday, since January.",
+      "for + مدة: for three years, for two hours, for a long time.",
+      "نستخدم Present Perfect مع فترات لم تنتهِ مثل today, this week, this month, this year عندما يكون الحدث مرتبطاً بالفترة الحالية.",
+      "لا نستخدم Present Perfect عادةً مع وقت ماضٍ انتهى مثل yesterday, last week, last year, in 2018, two days ago؛ نستخدم Past Simple.",
+      "been تعني أن الشخص زار المكان وعاد: I have been to London. أما gone فتعني أن الشخص ذهب ولم يعد بعد: She has gone to London."
+    ],
+    "examples": [
+      {
+        "en": "I have finished my homework.",
+        "ar": "لقد أنهيت واجبي."
+      },
+      {
+        "en": "She has lost her phone.",
+        "ar": "لقد فقدت هاتفها."
+      },
+      {
+        "en": "Have you ever visited Cairo?",
+        "ar": "هل سبق لك أن زرت القاهرة؟"
+      },
+      {
+        "en": "I have never tried Japanese food.",
+        "ar": "لم أجرب الطعام الياباني من قبل."
+      },
+      {
+        "en": "He has just arrived.",
+        "ar": "لقد وصل للتو."
+      },
+      {
+        "en": "We have lived here since 2020.",
+        "ar": "نحن نعيش هنا منذ عام 2020."
+      },
+      {
+        "en": "She has worked here for five years.",
+        "ar": "لقد عملت هنا لمدة خمس سنوات."
+      },
+      {
+        "en": "I have studied a lot this week.",
+        "ar": "لقد درست كثيراً هذا الأسبوع."
+      },
+      {
+        "en": "I saw him yesterday.",
+        "ar": "رأيته أمس."
+      },
+      {
+        "en": "My brother has gone to the supermarket.",
+        "ar": "ذهب أخي إلى المتجر وما زال هناك."
+      }
+    ],
+    "commonMistakes": [
+      "❌ I have seen him yesterday. → ✅ I saw him yesterday.",
+      "❌ She has go home. → ✅ She has gone home.",
+      "❌ Have you ever went to London? → ✅ Have you ever been to London?",
+      "❌ I have lived here since five years. → ✅ I have lived here for five years.",
+      "❌ He has finished the work last night. → ✅ He finished the work last night.",
+      "❌ I have been to London and I am still there. → ✅ I have gone to London and I am still there."
+    ],
+    "quiz": [
+      {
+        "type": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "I have seen that film.",
+          "I have saw that film.",
+          "I have see that film.",
+          "I seen that film."
+        ],
+        "answer": 0,
+        "why": "Present Perfect = have/has + التصريف الثالث. التصريف الثالث من see هو seen."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر الجملة الصحيحة مع yesterday:",
+        "options": [
+          "I visited him yesterday.",
+          "I have visited him yesterday.",
+          "I have visit him yesterday.",
+          "I am visiting him yesterday."
+        ],
+        "answer": 0,
+        "why": "Yesterday فترة ماضية انتهت ومحددة، لذلك نستخدم Past Simple."
+      },
+      {
+        "type": "mcq",
+        "prompt": "She has lived here ______ 2019.",
+        "options": [
+          "since",
+          "for",
+          "ago",
+          "during"
+        ],
+        "answer": 0,
+        "why": "Since تأتي مع نقطة بداية زمنية، و2019 نقطة بداية."
+      },
+      {
+        "type": "mcq",
+        "prompt": "She has lived here ______ five years.",
+        "options": [
+          "since",
+          "ago",
+          "for",
+          "from"
+        ],
+        "answer": 2,
+        "why": "For تأتي مع مدة زمنية، مثل five years."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "Have you ever been to Paris?",
+          "Have you ever went to Paris?",
+          "Have you ever gone to Paris?",
+          "Did you ever been to Paris?"
+        ],
+        "answer": 0,
+        "why": "للسؤال عن خبرة زيارة مكان نستخدم غالباً Have you ever been to...?"
+      },
+      {
+        "type": "mcq",
+        "prompt": "I haven't finished my homework ______.",
+        "options": [
+          "already",
+          "ever",
+          "yet",
+          "since"
+        ],
+        "answer": 2,
+        "why": "Yet تستخدم كثيراً في نهاية جمل النفي والأسئلة للإشارة إلى أن الشيء لم يحدث حتى الآن."
+      },
+      {
+        "type": "mcq",
+        "prompt": "أي جملة تعبر عن نتيجة موجودة في الحاضر؟",
+        "options": [
+          "I lost my keys yesterday.",
+          "I lose my keys every week.",
+          "I have lost my keys.",
+          "I was losing my keys."
+        ],
+        "answer": 2,
+        "why": "I have lost my keys تركز على النتيجة الحالية، وهي أن المفاتيح مفقودة الآن."
+      },
+      {
+        "type": "tf",
+        "prompt": "يمكن استخدام Present Perfect مع today لأن اليوم لم ينتهِ بعد.",
+        "correct": true,
+        "why": "Today فترة زمنية لم تنتهِ، لذلك يمكن أن نقول: I have seen him today."
+      }
+    ],
+    "markers": [
+      "already",
+      "yet",
+      "just",
+      "ever",
+      "never",
+      "since",
+      "for",
+      "today",
+      "this week",
+      "this year"
+    ]
+  },
+  {
+    "id": "present-perfect-continuous",
+    "title": "المضارع التام المستمر",
+    "category": "الأزمنة",
+    "icon": "🌱",
+    "description": "Present Perfect Continuous لحدث بدأ في الماضي واستمر إلى الحاضر أو انتهى مؤخراً مع وجود أثر حالي، مع التركيز على النشاط أو المدة.",
+    "explanation": "Present Perfect Continuous يتكون من have/has + been + verb-ing. نستخدمه عندما نريد التركيز على استمرارية نشاط بدأ في الماضي واستمر حتى الحاضر، أو على نشاط استمر لفترة وأدى إلى نتيجة ظاهرة في الحاضر. لذلك نقول I have been studying for three hours عندما يكون التركيز على مدة الدراسة واستمرار النشاط، ونقول She is tired because she has been working all day عندما يكون النشاط قد سبب حالة واضحة الآن. يمكن أن يكون النشاط ما زال مستمراً أو يكون قد توقف قبل لحظات، حسب السياق. أهم فرق بين Present Perfect وPresent Perfect Continuous هو أن الأول يركز غالباً على النتيجة أو الإنجاز أو العدد، بينما يركز الثاني على العملية والمدة والنشاط. نقول I have written five emails عندما تكون النتيجة أو العدد مهماً، لكن I have been writing emails all morning عندما تكون مدة النشاط هي النقطة الأساسية. يمكن استخدام since وfor مع الزمنين، لكن Present Perfect Continuous يكون شائعاً جداً عندما نسأل How long...? مع نشاط مستمر. لا نستخدمه عادةً مع أفعال الحالة مثل know وbelieve وown وunderstand؛ في هذه الحالات نستخدم Present Perfect Simple مثل I have known him for ten years.",
+    "rules": [
+      "التكوين: have/has + been + verb-ing: I have been studying. She has been working.",
+      "نستخدمه لحدث بدأ في الماضي وما زال مستمراً: I have been studying since morning.",
+      "نستخدمه للتركيز على مدة النشاط: She has been working for five hours.",
+      "يمكن استخدامه لنشاط انتهى مؤخراً وله أثر واضح في الحاضر: You are tired because you have been running.",
+      "for + مدة: for two hours, for three years, for a long time.",
+      "since + نقطة بداية: since Monday, since 2020, since 8 a.m.",
+      "How long + have/has + subject + been + verb-ing للسؤال عن مدة النشاط: How long have you been studying?",
+      "Present Perfect Simple يركز غالباً على النتيجة أو العدد: I have written five emails.",
+      "Present Perfect Continuous يركز غالباً على العملية أو المدة: I have been writing emails all morning.",
+      "لا نستخدمه عادةً مع أفعال الحالة مثل know, believe, understand, own, need؛ نستخدم Present Perfect Simple بدلاً منه.",
+      "مع أفعال مثل work, study, wait, rain, read يمكن استخدام Present Perfect Continuous بسهولة عندما يكون التركيز على الاستمرار أو المدة."
+    ],
+    "examples": [
+      {
+        "en": "I have been studying English for three hours.",
+        "ar": "أدرس الإنجليزية منذ ثلاث ساعات."
+      },
+      {
+        "en": "She has been working here since 2020.",
+        "ar": "هي تعمل هنا منذ عام 2020."
+      },
+      {
+        "en": "They have been waiting for the bus for twenty minutes.",
+        "ar": "إنهم ينتظرون الحافلة منذ عشرين دقيقة."
+      },
+      {
+        "en": "It has been raining all morning.",
+        "ar": "إنها تمطر طوال الصباح."
+      },
+      {
+        "en": "I am tired because I have been studying all night.",
+        "ar": "أنا متعب لأنني كنت أدرس طوال الليل."
+      },
+      {
+        "en": "How long have you been learning English?",
+        "ar": "منذ متى وأنت تتعلم الإنجليزية؟"
+      },
+      {
+        "en": "I have written five emails today.",
+        "ar": "لقد كتبت خمسة رسائل إلكترونية اليوم."
+      },
+      {
+        "en": "I have been writing emails all morning.",
+        "ar": "كنت أكتب رسائل إلكترونية طوال الصباح."
+      }
+    ],
+    "commonMistakes": [
+      "❌ I have been knowing him for ten years. → ✅ I have known him for ten years.",
+      "❌ She have been working here. → ✅ She has been working here.",
+      "❌ He has been work all day. → ✅ He has been working all day.",
+      "❌ I have been lived here since 2020. → ✅ I have been living here since 2020.",
+      "❌ How long have you been study English? → ✅ How long have you been studying English?",
+      "❌ I have been written five emails. → ✅ I have written five emails. (إذا كان التركيز على النتيجة والعدد.)"
+    ],
+    "quiz": [
+      {
+        "type": "mcq",
+        "prompt": "She ______ English for five years.",
+        "options": [
+          "has been study",
+          "have been studying",
+          "has studying",
+          "has been studying"
+        ],
+        "answer": 3,
+        "why": "She تحتاج إلى has، وبعد been نستخدم verb-ing: has been studying."
+      },
+      {
+        "type": "mcq",
+        "prompt": "It ______ all afternoon, so the streets are wet.",
+        "options": [
+          "has raining",
+          "have been raining",
+          "has been rained",
+          "has been raining"
+        ],
+        "answer": 3,
+        "why": "الحدث استمر خلال فترة وأدى إلى أثر واضح الآن، لذلك نستخدم has been raining."
+      },
+      {
+        "type": "mcq",
+        "prompt": "How long ______ English?",
+        "options": [
+          "have you studying",
+          "have you been studying",
+          "are you been studying",
+          "did you been studying"
+        ],
+        "answer": 1,
+        "why": "السؤال عن مدة نشاط مستمر يتكون من How long + have + subject + been + verb-ing."
+      },
+      {
+        "type": "mcq",
+        "prompt": "I'm exhausted because I ______ all day.",
+        "options": [
+          "have been working",
+          "has been working",
+          "have working",
+          "am been working"
+        ],
+        "answer": 0,
+        "why": "I تحتاج إلى have، وall day تشير إلى نشاط مستمر: have been working."
+      },
+      {
+        "type": "mcq",
+        "prompt": "أي جملة تركز على العدد والنتيجة؟",
+        "options": [
+          "I have written five emails.",
+          "I have been writing emails all morning.",
+          "I have been write emails.",
+          "I am writing emails yesterday."
+        ],
+        "answer": 0,
+        "why": "العدد five emails يمثل نتيجة أو إنجازاً مكتملًا، لذلك Present Perfect Simple أنسب."
+      },
+      {
+        "type": "mcq",
+        "prompt": "أي جملة صحيحة؟",
+        "options": [
+          "I have known her for years.",
+          "I have been knowing her for years.",
+          "I am knowing her for years.",
+          "I have know her for years."
+        ],
+        "answer": 0,
+        "why": "Know من أفعال الحالة، لذلك نستخدم Present Perfect Simple: have known."
+      },
+      {
+        "type": "tf",
+        "prompt": "Present Perfect Continuous يستخدم دائماً فقط عندما يكون النشاط ما زال مستمراً لحظة الكلام.",
+        "correct": false,
+        "why": "يمكن أن يستخدم أيضاً لنشاط توقف مؤخراً مع وجود أثر واضح في الحاضر، مثل You are tired because you have been running."
+      },
+      {
+        "type": "tf",
+        "prompt": "يمكن استخدام since وfor مع Present Perfect Continuous.",
+        "correct": true,
+        "why": "كلاهما شائع جداً مع هذا الزمن: since Monday وfor three hours."
+      }
+    ],
+    "markers": [
+      "since",
+      "for",
+      "all day",
+      "all morning",
+      "all night",
+      "recently",
+      "lately",
+      "how long"
+    ]
+  },
+  {
+    "id": "past-simple",
+    "title": "الماضي البسيط",
+    "category": "الأزمنة",
+    "icon": "🕰️",
+    "description": "Past Simple للحديث عن أحداث وحالات وعادات انتهت في الماضي، وخاصة عندما يكون وقت الحدث محدداً أو مفهوماً من السياق.",
+    "explanation": "Past Simple هو الزمن الأساسي للأحداث التي انتهت في الماضي. نستخدمه عندما نتحدث عن شيء حدث وانتهى، وخاصة إذا كان وقت حدوثه محدداً مثل yesterday أو last week أو in 2020 أو two days ago. يمكن أن نستخدمه أيضاً لسرد مجموعة من الأحداث المتتابعة في الماضي، وللعادات أو الحالات التي كانت موجودة في الماضي وانتهت. في الأفعال المنتظمة نضيف -ed مثل work → worked وvisit → visited، بينما الأفعال الشاذة لها صور خاصة مثل go → went وsee → saw وtake → took. في النفي والسؤال توجد قاعدة مهمة جداً: بعد did أو didn't نستخدم الفعل الأساسي وليس التصريف الثاني، لذلك نقول Did you go? وHe didn't go. أما فعل be فله قاعدة مختلفة؛ نستخدم was مع I/he/she/it وwere مع you/we/they، ولا نستخدم did معه في النفي والسؤال: Was she tired? They weren't ready. في أسئلة PTE، وجود كلمات مثل yesterday أو last year أو ago أو in 2019 يعطي مؤشراً قوياً على Past Simple، لكن الأهم دائماً هو معنى الجملة وهل الحدث انتهى في الماضي.",
+    "rules": [
+      "Past Simple يستخدم لحدث انتهى بالكامل في الماضي: I visited London last year.",
+      "يستخدم مع أوقات ماضية محددة ومنتهية مثل yesterday, last week, last year, in 2020, two days ago.",
+      "الأفعال المنتظمة تأخذ -ed: work → worked، play → played، visit → visited.",
+      "يجب حفظ الأفعال الشاذة الشائعة: go → went، see → saw، take → took، write → wrote، buy → bought.",
+      "النفي: did not/didn't + الفعل الأساسي: She didn't go.",
+      "السؤال: Did + subject + base verb: Did you see him?",
+      "بعد did أو didn't لا نستخدم التصريف الثاني: ❌ Did you went? → ✅ Did you go?",
+      "يمكن استخدام Past Simple لسرد أحداث متتابعة: He arrived, opened the door, and sat down.",
+      "يمكن استخدامه للعادات المتكررة في الماضي، ويمكن استخدام used to عندما نريد التأكيد على أن العادة أو الحالة لم تعد موجودة.",
+      "مع verb to be نستخدم was مع I/he/she/it وwere مع you/we/they.",
+      "نفي be يكون wasn't/weren't، والسؤال يكون Was/Were دون did: Was he tired? They weren't ready.",
+      "عندما نذكر وقتاً ماضياً انتهى مثل yesterday أو last month، نستخدم Past Simple بدلاً من Present Perfect."
+    ],
+    "examples": [
+      {
+        "en": "I finished my homework yesterday.",
+        "ar": "أنهيت واجبي أمس."
+      },
+      {
+        "en": "She visited her grandmother last week.",
+        "ar": "زارت جدتها الأسبوع الماضي."
+      },
+      {
+        "en": "We moved to Cairo in 2020.",
+        "ar": "انتقلنا إلى القاهرة في عام 2020."
+      },
+      {
+        "en": "He didn't attend the meeting yesterday.",
+        "ar": "لم يحضر الاجتماع أمس."
+      },
+      {
+        "en": "Did you watch the film last night?",
+        "ar": "هل شاهدت الفيلم الليلة الماضية؟"
+      },
+      {
+        "en": "She went to the library, studied for two hours, and returned home.",
+        "ar": "ذهبت إلى المكتبة ودرست لمدة ساعتين ثم عادت إلى المنزل."
+      },
+      {
+        "en": "I used to play football when I was a child.",
+        "ar": "كنت ألعب كرة القدم عندما كنت طفلاً."
+      },
+      {
+        "en": "He was tired after the long journey.",
+        "ar": "كان متعباً بعد الرحلة الطويلة."
+      },
+      {
+        "en": "They weren't ready for the exam.",
+        "ar": "لم يكونوا مستعدين للامتحان."
+      }
+    ],
+    "commonMistakes": [
+      "❌ I have seen him yesterday. → ✅ I saw him yesterday.",
+      "❌ He didn't finished the report. → ✅ He didn't finish the report.",
+      "❌ Did you saw the film? → ✅ Did you see the film?",
+      "❌ She goed home. → ✅ She went home.",
+      "❌ Did she was tired? → ✅ Was she tired?",
+      "❌ They wasn't ready. → ✅ They weren't ready."
+    ],
+    "quiz": [
+      {
+        "type": "mcq",
+        "prompt": "أي جملة صحيحة؟",
+        "options": [
+          "She went home yesterday.",
+          "She goed home yesterday.",
+          "She has went home yesterday.",
+          "She going home yesterday."
+        ],
+        "answer": 0,
+        "why": "Go فعل شاذ، وتصريفه الثاني هو went، وyesterday يشير إلى Past Simple."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر النفي الصحيح: He ______ the exam yesterday.",
+        "options": [
+          "didn't took",
+          "didn't take",
+          "wasn't take",
+          "doesn't took"
+        ],
+        "answer": 1,
+        "why": "بعد didn't نستخدم الفعل الأساسي: didn't take."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر السؤال الصحيح:",
+        "options": [
+          "Did you went to school?",
+          "Do you went to school?",
+          "Did you going to school?",
+          "Did you go to school?"
+        ],
+        "answer": 3,
+        "why": "بعد Did يأتي الفعل الأساسي: Did you go?"
+      },
+      {
+        "type": "mcq",
+        "prompt": "أي جملة صحيحة مع yesterday؟",
+        "options": [
+          "I finished the work yesterday.",
+          "I have finished the work yesterday.",
+          "I finish the work yesterday.",
+          "I am finishing the work yesterday."
+        ],
+        "answer": 0,
+        "why": "Yesterday وقت ماضٍ محدد ومنتهٍ، لذلك نستخدم Past Simple."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر الصيغة الصحيحة لفعل be: She ______ tired yesterday.",
+        "options": [
+          "did",
+          "were",
+          "is",
+          "was"
+        ],
+        "answer": 3,
+        "why": "مع she نستخدم was في الماضي البسيط لفعل be."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر السؤال الصحيح عن حالة في الماضي:",
+        "options": [
+          "Did he was tired?",
+          "Was he tired?",
+          "Did he be tired?",
+          "Was he be tired?"
+        ],
+        "answer": 1,
+        "why": "مع was/were لا نستخدم did. السؤال الصحيح هو Was he tired?"
+      },
+      {
+        "type": "mcq",
+        "prompt": "أي جملة تستخدم Past Simple لسرد أحداث متتابعة؟",
+        "options": [
+          "He arrives, opens the door, and sits down.",
+          "He has arrived and opened the door.",
+          "He is arriving and opening the door.",
+          "He arrived, opened the door, and sat down."
+        ],
+        "answer": 3,
+        "why": "الأحداث الثلاثة انتهت بالتتابع في الماضي، لذلك نستخدم Past Simple لكل فعل."
+      },
+      {
+        "type": "tf",
+        "prompt": "الجملة «They didn't went to the meeting.» صحيحة لأن went هو الماضي من go.",
+        "correct": false,
+        "why": "بعد didn't يجب استخدام الفعل الأساسي: They didn't go to the meeting."
+      }
+    ],
+    "markers": [
+      "yesterday",
+      "last night",
+      "last week",
+      "last year",
+      "two days ago",
+      "a year ago",
+      "in 2020",
+      "when I was a child"
+    ]
+  },
+  {
+    "id": "past-continuous",
+    "title": "الماضي المستمر",
+    "category": "الأزمنة",
+    "icon": "🔄",
+    "description": "Past Continuous لوصف حدث كان جارياً في وقت معين في الماضي، أو حدث مستمر قطعه حدث آخر، أو حدثين كانا يحدثان في الوقت نفسه.",
+    "explanation": "يتكون Past Continuous من was/were + verb-ing، ونستخدمه عندما نريد التركيز على أن نشاطاً كان مستمراً خلال لحظة أو فترة معينة في الماضي. أهم استخداماته ثلاثة: أولاً، وصف ما كان يحدث في وقت محدد، مثل At 8 p.m., I was studying. ثانياً، وصف حدث مستمر قطعه حدث أقصر، وغالباً نستخدم Past Continuous للحدث المستمر وPast Simple للحدث الذي قطعه: I was sleeping when the phone rang. ثالثاً، وصف حدثين مستمرين في الوقت نفسه: While I was studying, my brother was watching TV. لذلك يجب ألا نختار Past Continuous لمجرد وجود كلمة في الماضي؛ بل يجب أن نسأل: هل أريد التركيز على أن الحدث كان جارياً؟ الفرق الأساسي بينه وبين Past Simple هو أن Past Simple يعرض الحدث كحدث مكتمل، بينما Past Continuous يركز على سير الحدث في لحظة معينة. ويظهر هذا الفرق بوضوح في جمل مثل I studied at 8 p.m. وI was studying at 8 p.m. كذلك نستخدم while كثيراً مع الأحداث المستمرة، وwhen كثيراً لربط الحدث المستمر بالحدث القصير الذي وقع أثناءه. يجب الانتباه أيضاً إلى أن was تستخدم مع I/he/she/it، بينما were تستخدم مع you/we/they.",
+    "rules": [
+      "التكوين: was/were + verb-ing: I was studying. They were working.",
+      "نستخدم was مع I/he/she/it: She was reading.",
+      "نستخدم were مع you/we/they: They were reading.",
+      "يستخدم لوصف حدث كان مستمراً في وقت محدد في الماضي: At 7 p.m., I was studying.",
+      "يستخدم لوصف حدث مستمر قطعه حدث قصير: I was sleeping when the phone rang.",
+      "غالباً نستخدم Past Continuous مع الحدث المستمر وPast Simple مع الحدث الذي وقع أثناءه.",
+      "while تستخدم كثيراً مع حدث مستمر: While I was studying, my brother was watching TV.",
+      "يمكن استخدام Past Continuous لوصف حدثين كانا مستمرين في الوقت نفسه: She was cooking while he was cleaning.",
+      "النفي: was not/wasn't أو were not/weren't + verb-ing: He wasn't sleeping.",
+      "السؤال: Was/Were + subject + verb-ing?: Were they studying?",
+      "لا نستخدم Past Continuous عادةً مع أفعال الحالة مثل know, believe, understand, want, own.",
+      "الفرق الأساسي: Past Simple يركز على الحدث ككل أو كحدث مكتمل، بينما Past Continuous يركز على أن الحدث كان جارياً في لحظة أو فترة معينة."
+    ],
+    "examples": [
+      {
+        "en": "I was studying at 8 p.m. yesterday.",
+        "ar": "كنت أدرس في الساعة الثامنة مساءً أمس."
+      },
+      {
+        "en": "She was cooking when I arrived.",
+        "ar": "كانت تطهو عندما وصلت."
+      },
+      {
+        "en": "They were playing football when it started to rain.",
+        "ar": "كانوا يلعبون كرة القدم عندما بدأ المطر."
+      },
+      {
+        "en": "While I was studying, my brother was watching TV.",
+        "ar": "بينما كنت أدرس، كان أخي يشاهد التلفاز."
+      },
+      {
+        "en": "At midnight, everyone was sleeping.",
+        "ar": "عند منتصف الليل، كان الجميع نائمين."
+      },
+      {
+        "en": "He wasn't listening to the teacher.",
+        "ar": "لم يكن يستمع إلى المعلم."
+      },
+      {
+        "en": "Were you working at 6 p.m.?",
+        "ar": "هل كنت تعمل في الساعة السادسة مساءً؟"
+      },
+      {
+        "en": "I was walking home when I saw an old friend.",
+        "ar": "كنت أمشي إلى المنزل عندما رأيت صديقاً قديماً."
+      }
+    ],
+    "commonMistakes": [
+      "❌ I was study English. → ✅ I was studying English.",
+      "❌ They was watching TV. → ✅ They were watching TV.",
+      "❌ She were sleeping. → ✅ She was sleeping.",
+      "❌ I was sleeping when the phone was rang. → ✅ I was sleeping when the phone rang.",
+      "❌ While I studied, my brother was watching TV. → ✅ While I was studying, my brother was watching TV. (إذا كان المقصود أن النشاطين كانا مستمرين.)",
+      "❌ I was knowing the answer. → ✅ I knew the answer. (know من أفعال الحالة.)"
+    ],
+    "quiz": [
+      {
+        "type": "mcq",
+        "prompt": "اختر الصيغة الصحيحة: I ______ at 9 p.m. yesterday.",
+        "options": [
+          "were studying",
+          "was study",
+          "studied been",
+          "was studying"
+        ],
+        "answer": 3,
+        "why": "مع I نستخدم was، وبعدها verb-ing: was studying."
+      },
+      {
+        "type": "mcq",
+        "prompt": "They ______ football when it started to rain.",
+        "options": [
+          "was playing",
+          "were playing",
+          "were play",
+          "played were"
+        ],
+        "answer": 1,
+        "why": "They تأخذ were، والحدث المستمر هو were playing."
+      },
+      {
+        "type": "mcq",
+        "prompt": "I was sleeping when the phone ______.",
+        "options": [
+          "was ringing",
+          "rang",
+          "rings",
+          "ringing"
+        ],
+        "answer": 1,
+        "why": "النوم كان حدثاً مستمراً، بينما رنين الهاتف حدث قصير وقع أثناءه، لذلك نستخدم Past Simple: rang."
+      },
+      {
+        "type": "mcq",
+        "prompt": "While she ______, her brother was watching TV.",
+        "options": [
+          "studied",
+          "was studying",
+          "were studying",
+          "is studying"
+        ],
+        "answer": 1,
+        "why": "مع she نستخدم was، وwhile هنا تربط حدثين مستمرين: was studying / was watching."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر النفي الصحيح:",
+        "options": [
+          "He didn't was sleeping.",
+          "He wasn't sleep.",
+          "He weren't sleeping.",
+          "He wasn't sleeping."
+        ],
+        "answer": 3,
+        "why": "النفي في Past Continuous يكون wasn't/weren't + verb-ing."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر السؤال الصحيح:",
+        "options": [
+          "Were you studying?",
+          "Did you were studying?",
+          "Was you studying?",
+          "Did you studying?"
+        ],
+        "answer": 0,
+        "why": "السؤال في Past Continuous يبدأ بـ Was/Were، ومع you نستخدم Were."
+      },
+      {
+        "type": "tf",
+        "prompt": "الجملة «I was studying when my friend called.» تستخدم Past Continuous وPast Simple بصورة صحيحة.",
+        "correct": true,
+        "why": "was studying يصف الحدث المستمر، بينما called يصف الحدث القصير الذي وقع أثناءه."
+      },
+      {
+        "type": "tf",
+        "prompt": "الجملة «They was watching TV.» صحيحة.",
+        "correct": false,
+        "why": "They تأخذ were وليس was: They were watching TV."
+      }
+    ],
+    "markers": [
+      "at 8 p.m.",
+      "at that time",
+      "while",
+      "when",
+      "at midnight",
+      "all evening",
+      "this time yesterday"
+    ]
+  },
+  {
+    "id": "past-perfect",
+    "title": "الماضي التام",
+    "category": "الأزمنة",
+    "icon": "⏮️",
+    "description": "Past Perfect لوصف حدث وقع واكتمل قبل حدث أو نقطة زمنية أخرى في الماضي، مع التركيز على ترتيب الأحداث.",
+    "explanation": "يتكون Past Perfect من had + التصريف الثالث للفعل. نستخدمه عندما نتحدث عن حدثين في الماضي ونريد توضيح أن أحدهما حدث قبل الآخر. الحدث الأقدم يأخذ Past Perfect، والحدث الأحدث يأخذ غالباً Past Simple: When I arrived, the train had left. هنا مغادرة القطار حدثت أولاً، ثم وصلت أنا. أهم وظيفة لهذا الزمن هي إزالة الغموض في ترتيب الأحداث الماضية، وليس مجرد الإشارة إلى أن شيئاً حدث في الماضي. لذلك لا نحتاج إلى استخدام Past Perfect مع كل فعل ماضٍ. إذا كان ترتيب الأحداث واضحاً بالفعل من الكلمات مثل before وafter، فقد يكون Past Simple كافياً في بعض السياقات، لكن Past Perfect مفيد جداً عندما نريد التأكيد على أن حدثاً كان قد اكتمل قبل نقطة ماضية. يظهر كثيراً مع before وafter وby the time وalready وjust وnever. يجب الانتباه إلى أن had لا تتغير مع الفاعل؛ نقول I had gone وshe had gone وthey had gone. وفي النفي نقول had not/hadn't + التصريف الثالث، وفي السؤال Had + subject + التصريف الثالث؟. الفرق بين Past Perfect وPresent Perfect مهم: Present Perfect يربط الماضي بالحاضر، بينما Past Perfect يربط حدثاً ماضياً بحدث ماضٍ آخر.",
+    "rules": [
+      "التكوين: had + past participle: I had finished. She had left.",
+      "had لا تتغير مع الفاعل: I had, he had, she had, they had.",
+      "نستخدم Past Perfect للحدث الذي وقع أولاً عندما نتحدث عن حدثين في الماضي.",
+      "الحدث الأقدم = Past Perfect، والحدث الأحدث = غالباً Past Simple.",
+      "مثال أساسي: When I arrived, the train had left. مغادرة القطار حدثت قبل وصولي.",
+      "يستخدم كثيراً مع by the time: By the time we arrived, the film had started.",
+      "يستخدم مع before لتوضيح أن الحدث اكتمل قبل حدث آخر: She had finished before the teacher arrived.",
+      "يمكن استخدامه مع after: After he had finished his work, he went home.",
+      "already وjust وnever يمكن أن تظهر مع Past Perfect: He had already left.",
+      "النفي: had not/hadn't + التصريف الثالث: They hadn't finished.",
+      "السؤال: Had + subject + past participle?: Had she left before you arrived?",
+      "الفرق الأساسي: Present Perfect يربط الماضي بالحاضر، أما Past Perfect فيربط حدثاً ماضياً بحدث ماضٍ آخر."
+    ],
+    "examples": [
+      {
+        "en": "When I arrived, the train had left.",
+        "ar": "عندما وصلت، كان القطار قد غادر."
+      },
+      {
+        "en": "She had finished her homework before she went out.",
+        "ar": "كانت قد أنهت واجبها قبل أن تخرج."
+      },
+      {
+        "en": "By the time we arrived, the meeting had started.",
+        "ar": "بحلول الوقت الذي وصلنا فيه، كان الاجتماع قد بدأ."
+      },
+      {
+        "en": "He had already eaten when I invited him to dinner.",
+        "ar": "كان قد تناول الطعام بالفعل عندما دعوته إلى العشاء."
+      },
+      {
+        "en": "They hadn't seen the film before.",
+        "ar": "لم يكونوا قد شاهدوا الفيلم من قبل."
+      },
+      {
+        "en": "Had you finished the report before the deadline?",
+        "ar": "هل كنت قد أنهيت التقرير قبل الموعد النهائي؟"
+      },
+      {
+        "en": "After she had completed the course, she applied for a job.",
+        "ar": "بعد أن كانت قد أكملت الدورة، تقدمت لوظيفة."
+      },
+      {
+        "en": "I couldn't enter the house because I had lost my key.",
+        "ar": "لم أستطع دخول المنزل لأنني كنت قد فقدت مفتاحي."
+      }
+    ],
+    "commonMistakes": [
+      "❌ When I arrived, the train has left. → ✅ When I arrived, the train had left.",
+      "❌ She had went home. → ✅ She had gone home.",
+      "❌ They had finished the work yesterday before lunch. → ✅ They had finished the work before lunch. (لا نستخدم Past Perfect لمجرد وجود yesterday؛ يجب أن يكون هناك مرجع ماضٍ آخر.)",
+      "❌ He didn't had finished the work. → ✅ He hadn't finished the work.",
+      "❌ Had she went home? → ✅ Had she gone home?",
+      "❌ I had seen him yesterday. → ✅ I saw him yesterday. (إذا لم يوجد حدث ماضٍ آخر نحتاج إلى مقارنته.)"
+    ],
+    "quiz": [
+      {
+        "type": "mcq",
+        "prompt": "When I arrived, the train ______.",
+        "options": [
+          "has left",
+          "was leave",
+          "had left",
+          "leaves"
+        ],
+        "answer": 2,
+        "why": "مغادرة القطار حدثت قبل وصولي، لذلك نستخدم Past Perfect: had left."
+      },
+      {
+        "type": "mcq",
+        "prompt": "She ______ her homework before she went out.",
+        "options": [
+          "has finished",
+          "was finish",
+          "had finish",
+          "had finished"
+        ],
+        "answer": 3,
+        "why": "إنهاء الواجب حدث قبل خروجها، لذلك نستخدم had + التصريف الثالث: had finished."
+      },
+      {
+        "type": "mcq",
+        "prompt": "By the time we arrived, the meeting ______.",
+        "options": [
+          "has started",
+          "had started",
+          "starts",
+          "was start"
+        ],
+        "answer": 1,
+        "why": "By the time يوضح أن الاجتماع بدأ قبل وصولنا، لذلك نستخدم had started."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر النفي الصحيح:",
+        "options": [
+          "They didn't had finished.",
+          "They hadn't finished.",
+          "They hadn't finish.",
+          "They weren't had finished."
+        ],
+        "answer": 1,
+        "why": "نفي Past Perfect هو hadn't + التصريف الثالث."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر السؤال الصحيح:",
+        "options": [
+          "Did she had left?",
+          "Had she leave?",
+          "Had she left?",
+          "Was she had left?"
+        ],
+        "answer": 2,
+        "why": "السؤال في Past Perfect يبدأ بـ Had ثم الفاعل ثم التصريف الثالث."
+      },
+      {
+        "type": "mcq",
+        "prompt": "أي جملة توضح أن فقدان المفتاح حدث قبل عدم القدرة على دخول المنزل؟",
+        "options": [
+          "I couldn't enter because I had lost my key.",
+          "I couldn't enter because I lost my key.",
+          "I couldn't enter because I have lost my key.",
+          "I couldn't enter because I was lose my key."
+        ],
+        "answer": 0,
+        "why": "فقدان المفتاح حدث قبل لحظة عدم القدرة على الدخول، لذلك Past Perfect يوضح الترتيب: had lost."
+      },
+      {
+        "type": "tf",
+        "prompt": "Past Perfect يستخدم لربط حدث في الماضي بحدث آخر في الماضي.",
+        "correct": true,
+        "why": "وظيفته الأساسية هي توضيح أن حدثاً ماضياً وقع قبل حدث ماضٍ آخر."
+      },
+      {
+        "type": "tf",
+        "prompt": "الجملة «I had seen him yesterday» هي دائماً الاختيار الصحيح لأن yesterday تدل على الماضي.",
+        "correct": false,
+        "why": "وجود وقت ماضٍ محدد لا يعني تلقائياً استخدام Past Perfect. إذا لم يوجد حدث ماضٍ آخر نقارن به، يكون Past Simple هو الاختيار الطبيعي: I saw him yesterday."
+      }
+    ],
+    "markers": [
+      "before",
+      "after",
+      "by the time",
+      "already",
+      "just",
+      "never",
+      "before that",
+      "when"
+    ]
+  },
+  {
+    "id": "past-perfect-continuous",
+    "title": "الماضي التام المستمر",
+    "category": "الأزمنة",
+    "icon": "⏳",
+    "description": "Past Perfect Continuous لوصف نشاط كان مستمراً لمدة من الزمن قبل نقطة أو حدث آخر في الماضي، مع التركيز على المدة أو استمرارية النشاط.",
+    "explanation": "يتكون Past Perfect Continuous من had been + verb-ing. نستخدمه عندما نريد التركيز على أن نشاطاً استمر لفترة من الزمن قبل حدث أو نقطة ماضية أخرى. مثلاً: I had been studying for three hours when my friend called. هنا الدراسة بدأت قبل الاتصال واستمرت لمدة ثلاث ساعات حتى حدث الاتصال، ولذلك نركز على المدة والنشاط. يمكن أن يكون النشاط قد توقف عند الحدث الماضي أو استمر بعده، حسب السياق. كما يمكن استخدام الزمن لوصف سبب أو أثر كان ظاهراً في نقطة ماضية: She was tired because she had been working all day. الفرق بين Past Perfect وPast Perfect Continuous يشبه الفرق بين Present Perfect وPresent Perfect Continuous، لكن المرجع هنا في الماضي. Past Perfect يركز غالباً على النتيجة أو اكتمال الحدث: She had written five pages before lunch. أما Past Perfect Continuous فيركز على النشاط والمدة: She had been writing for two hours before lunch. نستخدم for وsince كثيراً مع هذا الزمن، وكذلك expressions مثل all morning وall day وfor two hours. يجب الانتباه إلى أن Past Perfect Continuous لا يستخدم عادةً مع أفعال الحالة مثل know وbelieve وown؛ نقول I had known him for years وليس I had been knowing him. في أسئلة PTE، وجود مدة قبل حدث ماضٍ آخر يعد من أقوى المؤشرات على هذا الزمن، لكن يجب التأكد من أن التركيز على الاستمرار أو المدة وليس على النتيجة فقط.",
+    "rules": [
+      "التكوين: had been + verb-ing: I had been studying. They had been working.",
+      "had لا تتغير مع الفاعل: I had been, she had been, they had been.",
+      "نستخدمه لنشاط استمر قبل حدث أو نقطة زمنية أخرى في الماضي.",
+      "يستخدم كثيراً مع for + مدة: for two hours, for five years.",
+      "يستخدم مع since + نقطة بداية: since morning, since 2020.",
+      "يمكن استخدامه مع all day, all morning, all night وغيرها للتركيز على مدة النشاط.",
+      "مثال أساسي: I had been studying for three hours when he called.",
+      "يمكن أن يوضح سبب حالة أو نتيجة في الماضي: She was tired because she had been working all day.",
+      "Past Perfect يركز غالباً على النتيجة أو الإنجاز، بينما Past Perfect Continuous يركز على العملية والمدة.",
+      "النفي: had not been + verb-ing: He hadn't been sleeping well.",
+      "السؤال: Had + subject + been + verb-ing?: Had they been waiting long?",
+      "لا نستخدمه عادةً مع أفعال الحالة مثل know, believe, understand, own؛ نستخدم Past Perfect Simple معها."
+    ],
+    "examples": [
+      {
+        "en": "I had been studying for three hours when my friend called.",
+        "ar": "كنت قد درست لمدة ثلاث ساعات عندما اتصل صديقي."
+      },
+      {
+        "en": "She had been working all day, so she was exhausted.",
+        "ar": "كانت تعمل طوال اليوم، لذلك كانت مرهقة."
+      },
+      {
+        "en": "They had been waiting for an hour when the bus finally arrived.",
+        "ar": "كانوا ينتظرون لمدة ساعة عندما وصلت الحافلة أخيراً."
+      },
+      {
+        "en": "He had been living there since 2018 before he moved to Cairo.",
+        "ar": "كان يعيش هناك منذ عام 2018 قبل أن ينتقل إلى القاهرة."
+      },
+      {
+        "en": "It had been raining for several hours before the storm stopped.",
+        "ar": "كانت السماء تمطر لعدة ساعات قبل أن تتوقف العاصفة."
+      },
+      {
+        "en": "Had you been studying before the exam started?",
+        "ar": "هل كنت قد درست قبل أن يبدأ الامتحان؟"
+      },
+      {
+        "en": "She hadn't been sleeping well before the exam.",
+        "ar": "لم تكن تنام جيداً قبل الامتحان."
+      },
+      {
+        "en": "He had written five pages before lunch.",
+        "ar": "كان قد كتب خمس صفحات قبل الغداء."
+      },
+      {
+        "en": "He had been writing for two hours before lunch.",
+        "ar": "كان قد ظل يكتب لمدة ساعتين قبل الغداء."
+      }
+    ],
+    "commonMistakes": [
+      "❌ I had been study for two hours. → ✅ I had been studying for two hours.",
+      "❌ She have been working before I arrived. → ✅ She had been working before I arrived.",
+      "❌ They had been worked all day. → ✅ They had been working all day.",
+      "❌ I had been knowing him for years. → ✅ I had known him for years.",
+      "❌ Had you been studied before the exam? → ✅ Had you been studying before the exam?",
+      "❌ She had been written five pages. → ✅ She had written five pages. (إذا كان التركيز على عدد الصفحات المكتملة.)"
+    ],
+    "quiz": [
+      {
+        "type": "mcq",
+        "prompt": "I ______ for three hours when my friend called.",
+        "options": [
+          "had been study",
+          "had been studying",
+          "have been studying",
+          "was been studying"
+        ],
+        "answer": 1,
+        "why": "النشاط استمر لمدة ثلاث ساعات قبل حدث ماضٍ آخر، لذلك نستخدم had been studying."
+      },
+      {
+        "type": "mcq",
+        "prompt": "She was tired because she ______ all day.",
+        "options": [
+          "has been working",
+          "had been working",
+          "had working",
+          "was been working"
+        ],
+        "answer": 1,
+        "why": "العمل المستمر أدى إلى حالة من التعب في الماضي، لذلك نستخدم had been working."
+      },
+      {
+        "type": "mcq",
+        "prompt": "They had been waiting ______ an hour when the bus arrived.",
+        "options": [
+          "since",
+          "during",
+          "for",
+          "from"
+        ],
+        "answer": 2,
+        "why": "For تستخدم مع مدة زمنية مثل an hour."
+      },
+      {
+        "type": "mcq",
+        "prompt": "He had been living there ______ 2018 before he moved.",
+        "options": [
+          "for",
+          "ago",
+          "since",
+          "during"
+        ],
+        "answer": 2,
+        "why": "Since تستخدم مع نقطة بداية زمنية، و2018 نقطة بداية."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر الجملة التي تركز على المدة:",
+        "options": [
+          "She had written five pages.",
+          "She wrote five pages yesterday.",
+          "She was written for two hours.",
+          "She had been writing for two hours."
+        ],
+        "answer": 3,
+        "why": "Had been writing + for two hours يركز على مدة النشاط، وليس فقط على النتيجة."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر السؤال الصحيح:",
+        "options": [
+          "Did they had been waiting long?",
+          "Had they been wait long?",
+          "Had they been waiting long?",
+          "Were they had been waiting long?"
+        ],
+        "answer": 2,
+        "why": "السؤال في Past Perfect Continuous = Had + subject + been + verb-ing."
+      },
+      {
+        "type": "tf",
+        "prompt": "Past Perfect Continuous يركز غالباً على مدة أو استمرارية نشاط قبل نقطة ماضية.",
+        "correct": true,
+        "why": "هذه هي الوظيفة الأساسية للزمن، مثل I had been studying for three hours when he called."
+      },
+      {
+        "type": "tf",
+        "prompt": "الجملة «I had been knowing him for ten years» هي الصيغة الطبيعية الصحيحة.",
+        "correct": false,
+        "why": "Know من أفعال الحالة، لذلك نستخدم Past Perfect Simple: I had known him for ten years."
+      }
+    ],
+    "markers": [
+      "for",
+      "since",
+      "all day",
+      "all morning",
+      "all night",
+      "before",
+      "when",
+      "by the time",
+      "how long"
+    ]
+  },
+  {
+    "id": "future-forms",
+    "title": "صيغ المستقبل",
+    "category": "الأزمنة",
+    "icon": "🔮",
+    "description": "أهم صيغ المستقبل في الإنجليزية: will وbe going to وPresent Continuous وPresent Simple، وكيف نختار الصيغة المناسبة حسب المعنى والسياق.",
+    "explanation": "المستقبل في الإنجليزية لا يعتمد على زمن واحد فقط، بل توجد عدة صيغ نستخدمها حسب نوع المستقبل الذي نريد التعبير عنه. أهمها will وbe going to وPresent Continuous وPresent Simple. نستخدم will غالباً للقرارات التي نتخذها لحظة الكلام، والوعود والعروض، والتنبؤات أو الآراء المتعلقة بالمستقبل: I will help you. أما be going to فنستخدمها عندما يكون هناك قرار أو نية موجودة مسبقاً، أو عندما توجد أدلة حالية تشير إلى نتيجة مستقبلية: I am going to study tonight وLook at those clouds. It is going to rain. ونستخدم Present Continuous للمواعيد والترتيبات المستقبلية المؤكدة، خاصة عندما يكون هناك اتفاق أو ترتيب مع أشخاص آخرين: I am meeting my teacher tomorrow. أما Present Simple فيستخدم مع الجداول والمواعيد الرسمية والبرامج التي تعتبر ثابتة: The train leaves at 8 a.m. من المهم ألا يعتمد الطالب على كلمات مثل tomorrow وحدها لاختيار الصيغة، لأن tomorrow يمكن أن تأتي مع أكثر من صيغة. يجب أن نفهم معنى الجملة: هل هو قرار لحظي؟ نية أو خطة سابقة؟ ترتيب مؤكد؟ أم جدول رسمي؟ كذلك يمكن استخدام will في التنبؤات، ولكن عندما يكون التنبؤ مبنياً على دليل واضح أمامنا يكون going to أكثر طبيعية. في أسئلة PTE، التركيز على معنى السياق أهم من حفظ كلمة إشارة واحدة.",
+    "rules": [
+      "will + base verb: I will help you.",
+      "نستخدم will للقرار الذي نتخذه لحظة الكلام: The phone is ringing. I will answer it.",
+      "نستخدم will للوعود والعروض والطلبات والتعهدات: I will help you with your homework.",
+      "نستخدم will للتنبؤ أو الرأي عن المستقبل عندما لا يوجد دليل مباشر واضح: I think prices will increase.",
+      "النفي مع will: will not أو won't + base verb: She won't come.",
+      "السؤال مع will: Will + subject + base verb?: Will you join us?",
+      "be going to + base verb تستخدم لخطة أو نية تم اتخاذ القرار بشأنها قبل لحظة الكلام: I am going to study tonight.",
+      "be going to تستخدم أيضاً لتنبؤ مبني على دليل واضح في الحاضر: Look at those clouds. It is going to rain.",
+      "Present Continuous يستخدم للترتيبات المستقبلية المؤكدة، خاصة عندما يوجد موعد أو اتفاق: I am meeting my teacher tomorrow.",
+      "Present Continuous للمستقبل = am/is/are + verb-ing، ولا يعني دائماً أن الحدث يحدث الآن؛ السياق الزمني يحدد ذلك.",
+      "Present Simple يستخدم مع الجداول والمواعيد الرسمية والثابتة مثل مواعيد القطارات والطائرات والامتحانات: The train leaves at 8.",
+      "لا تعتمد على tomorrow أو next week وحدها لتحديد الصيغة؛ الصيغة تعتمد على معنى المتحدث ونوع المستقبل.",
+      "الفرق الأساسي: will = قرار لحظي أو وعد أو توقع/رأي، going to = نية سابقة أو دليل حاضر، Present Continuous = ترتيب مؤكد، Present Simple = جدول أو موعد رسمي.",
+      "يمكن استخدام أكثر من صيغة للمستقبل في مواقف مختلفة، لكن تغيير الصيغة قد يغير المعنى المقصود."
+    ],
+    "examples": [
+      {
+        "en": "The phone is ringing. I will answer it.",
+        "ar": "الهاتف يرن. سأجيب عليه."
+      },
+      {
+        "en": "I will help you with your project.",
+        "ar": "سأساعدك في مشروعك."
+      },
+      {
+        "en": "I think the company will grow next year.",
+        "ar": "أعتقد أن الشركة ستنمو العام القادم."
+      },
+      {
+        "en": "I am going to study tonight.",
+        "ar": "سأدرس الليلة / أنوي الدراسة الليلة."
+      },
+      {
+        "en": "We are going to buy a new computer.",
+        "ar": "نحن نعتزم شراء جهاز كمبيوتر جديد."
+      },
+      {
+        "en": "Look at those dark clouds. It is going to rain.",
+        "ar": "انظر إلى تلك الغيوم الداكنة. ستمطر."
+      },
+      {
+        "en": "I am meeting my teacher tomorrow.",
+        "ar": "سألتقي بمعلمي غداً."
+      },
+      {
+        "en": "She is flying to London next Monday.",
+        "ar": "ستسافر بالطائرة إلى لندن يوم الاثنين القادم."
+      },
+      {
+        "en": "The train leaves at 7:30 tomorrow morning.",
+        "ar": "يغادر القطار الساعة السابعة والنصف صباحاً غداً."
+      },
+      {
+        "en": "The exam starts at 9 a.m. on Monday.",
+        "ar": "يبدأ الامتحان الساعة التاسعة صباحاً يوم الاثنين."
+      }
+    ],
+    "commonMistakes": [
+      "❌ I will going to study tonight. → ✅ I am going to study tonight.",
+      "❌ I am go to study tonight. → ✅ I am going to study tonight.",
+      "❌ The train will leaves at 8. → ✅ The train leaves at 8. (عند الحديث عن جدول رسمي.)",
+      "❌ Look at those clouds. It will rain. → ✅ Look at those clouds. It is going to rain. (عندما يوجد دليل واضح.)",
+      "❌ I am going to help you. (إذا كان القرار اتُخذ للتو كرد فعل على موقف جديد) → ✅ I will help you.",
+      "❌ Will you going to the meeting? → ✅ Are you going to the meeting? / Will you go to the meeting?"
+    ],
+    "quiz": [
+      {
+        "type": "mcq",
+        "prompt": "الهاتف يرن الآن، وقررت أن تجيب عليه لحظة سماعك للرنين. اختر الصيغة الأنسب:",
+        "options": [
+          "I am going to answer it.",
+          "I will answer it.",
+          "I am answering it yesterday.",
+          "I answer it tomorrow."
+        ],
+        "answer": 1,
+        "why": "هذا قرار اتخذ لحظة الكلام، ولذلك نستخدم will: I will answer it."
+      },
+      {
+        "type": "mcq",
+        "prompt": "أي جملة تعبر عن نية أو خطة تم اتخاذها مسبقاً؟",
+        "options": [
+          "I will study tonight. (قرار لحظي)",
+          "I study tonight.",
+          "I am going to study tonight.",
+          "I will studying tonight."
+        ],
+        "answer": 2,
+        "why": "be going to تستخدم للتعبير عن نية أو خطة موجودة مسبقاً."
+      },
+      {
+        "type": "mcq",
+        "prompt": "انظر إلى الغيوم الداكنة. ______ rain.",
+        "options": [
+          "It will",
+          "It is",
+          "It going to",
+          "It is going to"
+        ],
+        "answer": 3,
+        "why": "هناك دليل واضح في الحاضر، لذلك يكون going to مناسباً للتنبؤ: It is going to rain."
+      },
+      {
+        "type": "mcq",
+        "prompt": "لديك موعد مؤكد مع طبيب غداً. اختر الصيغة الأنسب:",
+        "options": [
+          "I will see the doctor tomorrow.",
+          "I see the doctor yesterday.",
+          "I am seeing the doctor tomorrow.",
+          "I am going see the doctor tomorrow."
+        ],
+        "answer": 2,
+        "why": "Present Continuous يستخدم كثيراً للترتيبات والمواعيد المستقبلية المؤكدة: I am seeing the doctor tomorrow."
+      },
+      {
+        "type": "mcq",
+        "prompt": "أي جملة صحيحة عند الحديث عن جدول رسمي؟",
+        "options": [
+          "The train will leaves at 8.",
+          "The train is leave at 8.",
+          "The train leaving at 8.",
+          "The train leaves at 8."
+        ],
+        "answer": 3,
+        "why": "Present Simple يستخدم مع الجداول والمواعيد الرسمية: The train leaves at 8."
+      },
+      {
+        "type": "mcq",
+        "prompt": "I think technology ______ even more important in the future.",
+        "options": [
+          "is going become",
+          "will become",
+          "will becoming",
+          "become"
+        ],
+        "answer": 1,
+        "why": "هذا توقع أو رأي عن المستقبل، ولذلك نستخدم will + base verb: will become."
+      },
+      {
+        "type": "mcq",
+        "prompt": "اختر السؤال الصحيح عن نية مستقبلية:",
+        "options": [
+          "Do you going to study tonight?",
+          "Will you going to study tonight?",
+          "Are you going to study tonight?",
+          "Are you go to study tonight?"
+        ],
+        "answer": 2,
+        "why": "السؤال مع going to يستخدم am/is/are: Are you going to study?"
+      },
+      {
+        "type": "tf",
+        "prompt": "كلمة tomorrow تعني أننا يجب دائماً أن نستخدم will.",
+        "correct": false,
+        "why": "Tomorrow تحدد المستقبل فقط، لكنها لا تحدد الصيغة. يمكن أن نقول I will travel tomorrow أو I am traveling tomorrow أو I am going to travel tomorrow حسب المعنى."
+      }
+    ],
+    "markers": [
+      "tomorrow",
+      "next week",
+      "next month",
+      "next year",
+      "tonight",
+      "soon",
+      "in the future",
+      "at 8 a.m.",
+      "on Monday"
+    ]
+  },
+  {
+    "id": "future-continuous",
+    "title": "المستقبل المستمر",
+    "category": "الأزمنة",
+    "icon": "⏳",
+    "description": "يُستخدم المستقبل المستمر للتعبير عن حدث سيكون مستمرًا في وقت محدد في المستقبل، أو عن نشاط متوقع أن يكون جاريًا بصورة طبيعية في المستقبل.",
+    "explanation": "يتكون المستقبل المستمر من will be + verb-ing. نستخدمه عندما نريد التركيز على أن الفعل سيكون في منتصف حدوثه في لحظة أو فترة معينة في المستقبل. فبدلًا من التركيز على حدوث الفعل نفسه، نركز على كونه مستمرًا في ذلك الوقت. من أشهر استخداماته وصف ما سيكون الشخص يقوم به في وقت محدد، مثل: This time tomorrow, I will be traveling. كما يمكن استخدامه للحديث عن نشاط متوقع أو جزء طبيعي من جدول شخص في المستقبل، خاصة عندما لا يكون هناك قرار لحظي. ويختلف عن will + infinitive؛ فـ I will study tonight تعني أنني سأدرس الليلة، بينما I will be studying at 8 p.m. تعني أنني في الساعة الثامنة سأكون في منتصف عملية الدراسة. ويمكن استخدام المستقبل المستمر أيضًا في الأسئلة بطريقة أكثر لطفًا عندما نسأل عن خطط أو أنشطة متوقعة، مثل: Will you be using the computer tonight? وفي أسئلة PTE من المهم الانتباه إلى وجود وقت محدد في المستقبل أو سياق يشير إلى أن الفعل سيكون جاريًا في تلك اللحظة.",
+    "rules": [
+      "يتكون المستقبل المستمر من: will + be + verb-ing.",
+      "يُستخدم لوصف فعل سيكون مستمرًا في وقت محدد في المستقبل.",
+      "يُستخدم مع تعبيرات مثل this time tomorrow و at 8 p.m. tomorrow.",
+      "يمكن استخدامه لوصف نشاط متوقع أن يكون جاريًا في فترة مستقبلية.",
+      "لا يتغير will مع الفاعل؛ نستخدم will مع جميع الضمائر.",
+      "في النفي نستخدم: will not be + verb-ing أو won't be + verb-ing.",
+      "في السؤال نستخدم: Will + subject + be + verb-ing?",
+      "يختلف Future Continuous عن will + infinitive؛ الأول يركز على استمرار الفعل في وقت معين، والثاني يركز بصورة عامة على حدوث الفعل.",
+      "يمكن استخدامه في الأسئلة المهذبة عن خطط شخص مستقبلية، دون أن يكون السؤال بالضرورة عن قرار جديد.",
+      "لا نستخدم عادة Future Continuous مع أفعال الحالة مثل know و believe و understand و own عندما يكون استخدامها بمعنى الحالة.",
+      "وجود كلمة tomorrow أو next week وحده لا يعني أننا يجب أن نستخدم Future Continuous؛ يجب أن يكون المعنى متعلقًا بحدث سيكون جاريًا.",
+      "في أسئلة PTE، إذا كان هناك وقت محدد في المستقبل والفعل سيكون في منتصف حدوثه عند ذلك الوقت، فغالبًا يكون Future Continuous هو الاختيار المناسب."
+    ],
+    "examples": [
+      {
+        "en": "This time tomorrow, I will be traveling to Cairo.",
+        "ar": "في مثل هذا الوقت غدًا، سأكون مسافرًا إلى القاهرة."
+      },
+      {
+        "en": "At 8 p.m. tonight, she will be studying for her exam.",
+        "ar": "في الساعة الثامنة مساءً الليلة، ستكون تدرس لامتحانها."
+      },
+      {
+        "en": "They will be working on the project next week.",
+        "ar": "سيكونون يعملون على المشروع الأسبوع المقبل."
+      },
+      {
+        "en": "When you arrive, I will be waiting for you.",
+        "ar": "عندما تصل، سأكون في انتظارك."
+      },
+      {
+        "en": "Will you be using the computer tonight?",
+        "ar": "هل ستستخدم الكمبيوتر الليلة؟"
+      },
+      {
+        "en": "Don't call me at 7. I will be having dinner.",
+        "ar": "لا تتصل بي في الساعة السابعة. سأكون أتناول العشاء."
+      },
+      {
+        "en": "This time next year, she will be studying at university.",
+        "ar": "في مثل هذا الوقت من العام القادم، ستكون تدرس في الجامعة."
+      },
+      {
+        "en": "We won't be staying at the hotel next weekend.",
+        "ar": "لن نكون مقيمين في الفندق في عطلة نهاية الأسبوع القادمة."
+      },
+      {
+        "en": "At this time tomorrow, the researchers will be conducting the experiment.",
+        "ar": "في مثل هذا الوقت غدًا، سيكون الباحثون يجرون التجربة."
+      },
+      {
+        "en": "I will be working when you get home.",
+        "ar": "سأكون أعمل عندما تصل إلى المنزل."
+      }
+    ],
+    "commonMistakes": [
+      "❌ I will studying at 8 p.m. → ✅ I will be studying at 8 p.m. (يجب أن تأتي be بعد will).",
+      "❌ She will be study tomorrow. → ✅ She will be studying tomorrow. (بعد be نستخدم V-ing).",
+      "❌ They will being working. → ✅ They will be working. (لا نستخدم being هنا).",
+      "❌ I will be know the answer tomorrow. → ✅ I will know the answer tomorrow. (know فعل حالة ولا نستخدمه عادةً في المستمر).",
+      "❌ This time tomorrow, I will travel. → ✅ This time tomorrow, I will be traveling. (عندما نركز على أن الفعل سيكون جاريًا في ذلك الوقت).",
+      "❌ Will you be use the car tonight? → ✅ Will you be using the car tonight? (بعد be نستخدم V-ing)."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "This time tomorrow, I ___ to London.",
+        "options": [
+          "will travel",
+          "will be traveling",
+          "am travel",
+          "will have travel"
+        ],
+        "correct": "will be traveling",
+        "answer": "will be traveling",
+        "why": "لأن الفعل سيكون مستمرًا في وقت محدد في المستقبل."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "At 9 p.m. tonight, she ___ for her exam.",
+        "options": [
+          "will be studying",
+          "will study",
+          "studies",
+          "will have studied"
+        ],
+        "correct": "will be studying",
+        "answer": "will be studying",
+        "why": "وجود وقت محدد في المستقبل مع التركيز على استمرار الفعل يجعل Future Continuous مناسبًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "When you arrive, we ___ dinner.",
+        "options": [
+          "will have had",
+          "have",
+          "will having",
+          "will be having"
+        ],
+        "correct": "will be having",
+        "answer": "will be having",
+        "why": "عند وصولك سيكون تناول العشاء جاريًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "I will studying tomorrow.",
+          "I will be studying tomorrow.",
+          "I will be study tomorrow.",
+          "I be will studying tomorrow."
+        ],
+        "correct": "I will be studying tomorrow.",
+        "answer": "I will be studying tomorrow.",
+        "why": "الصيغة الصحيحة هي will + be + verb-ing."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Will you ___ using the computer this evening?",
+        "options": [
+          "being",
+          "been",
+          "have",
+          "be"
+        ],
+        "correct": "be",
+        "answer": "be",
+        "why": "السؤال في Future Continuous يكون: Will + subject + be + V-ing."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "This time next year, they ___ at university.",
+        "options": [
+          "will study",
+          "will have study",
+          "are study",
+          "will be studying"
+        ],
+        "correct": "will be studying",
+        "answer": "will be studying",
+        "why": "This time next year تشير إلى نقطة زمنية مستقبلية سيكون الفعل جاريًا خلالها."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct negative form.",
+        "options": [
+          "I won't working tonight.",
+          "I won't be working tonight.",
+          "I don't be working tonight.",
+          "I won't be work tonight."
+        ],
+        "correct": "I won't be working tonight.",
+        "answer": "I won't be working tonight.",
+        "why": "النفي الصحيح هو won't + be + verb-ing."
+      },
+      {
+        "type": "true_false",
+        "prompt": "Future Continuous is formed with will + be + verb-ing.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": "True",
+        "answer": "True",
+        "why": "هذه هي الصيغة الأساسية للمستقبل المستمر."
+      }
+    ],
+    "markers": [
+      "this time tomorrow",
+      "this time next week",
+      "this time next year",
+      "at 8 p.m. tomorrow",
+      "at this time tomorrow",
+      "tomorrow at 10",
+      "next week at this time",
+      "when you arrive"
+    ]
+  },
+  {
+    "id": "future-perfect",
+    "title": "المستقبل التام",
+    "category": "الأزمنة",
+    "icon": "🏁",
+    "description": "يُستخدم المستقبل التام للتعبير عن فعل سيكون قد اكتمل قبل وقت أو حدث محدد في المستقبل.",
+    "explanation": "يتكون المستقبل التام من will have + past participle. نستخدمه عندما نتحدث من منظور الحاضر أو المستقبل عن شيء سيكون قد انتهى قبل نقطة زمنية مستقبلية معينة. الفكرة الأساسية هي أن هناك نقطة مرجعية في المستقبل، والفعل سيكون مكتملًا قبلها. مثل: By next year, I will have graduated. المعنى أن التخرج سيحدث قبل أو بحلول العام القادم. من أهم الكلمات والتعبيرات المرتبطة به by، by the time، before، by next week، by 2030، وغيرها. يجب التمييز بين Future Perfect و Future Simple؛ فإذا قلت I will finish the report tomorrow فأنت تقول إنك ستنهي التقرير غدًا، أما I will have finished the report by tomorrow فتعني أنه بحلول الغد سيكون التقرير قد أصبح منتهيًا. كما يجب التمييز بين Future Perfect و Future Perfect Continuous؛ الأول يركز على اكتمال النتيجة أو عدد الأشياء المنجزة، بينما الثاني يركز على مدة استمرار النشاط حتى نقطة مستقبلية. في PTE، وجود by + وقت مستقبلي مع معنى الاكتمال قبل ذلك الوقت يعد من أقوى المؤشرات على Future Perfect.",
+    "rules": [
+      "يتكون المستقبل التام من: will + have + past participle.",
+      "يُستخدم لفعل سيكون قد اكتمل قبل وقت محدد في المستقبل.",
+      "من أشهر المؤشرات: by tomorrow و by next week و by next year.",
+      "يُستخدم كثيرًا مع by the time عندما نريد التعبير عن شيء سيكون قد اكتمل قبل حدث مستقبلي آخر.",
+      "لا يتغير will أو have حسب الفاعل؛ الصيغة واحدة مع جميع الضمائر.",
+      "في النفي نستخدم: will not have + past participle أو won't have + past participle.",
+      "في السؤال نستخدم: Will + subject + have + past participle?",
+      "بعد have نستخدم التصريف الثالث للفعل، وليس الماضي البسيط.",
+      "Future Perfect يركز على اكتمال الفعل أو النتيجة قبل نقطة مستقبلية.",
+      "وجود كلمة tomorrow وحدها لا يعني استخدام Future Perfect؛ يجب أن يكون هناك معنى للاكتمال قبل نقطة مستقبلية.",
+      "نستخدم by للدلالة على الموعد النهائي الذي سيكون الفعل قد اكتمل قبله أو بحلوله.",
+      "يختلف Future Perfect عن Future Continuous؛ الأول يركز على اكتمال الفعل، والثاني على أن الفعل سيكون جاريًا.",
+      "يختلف Future Perfect عن Future Perfect Continuous؛ الأول يركز على النتيجة أو الإنجاز، والثاني يركز على المدة.",
+      "في أسئلة PTE، إذا كان المعنى هو أن شيئًا سيكون قد حدث أو اكتمل بحلول وقت مستقبلي، فغالبًا يكون Future Perfect هو الاختيار الصحيح."
+    ],
+    "examples": [
+      {
+        "en": "By next year, I will have graduated from university.",
+        "ar": "بحلول العام القادم، سأكون قد تخرجت من الجامعة."
+      },
+      {
+        "en": "She will have finished the project by Friday.",
+        "ar": "ستكون قد أنهت المشروع بحلول يوم الجمعة."
+      },
+      {
+        "en": "By the time you arrive, we will have left.",
+        "ar": "بحلول الوقت الذي تصل فيه، سنكون قد غادرنا."
+      },
+      {
+        "en": "They will have completed the building by 2030.",
+        "ar": "سيكونون قد أكملوا المبنى بحلول عام 2030."
+      },
+      {
+        "en": "By tomorrow morning, I will have written the report.",
+        "ar": "بحلول صباح الغد، سأكون قد كتبت التقرير."
+      },
+      {
+        "en": "He won't have finished the work by noon.",
+        "ar": "لن يكون قد أنهى العمل بحلول الظهر."
+      },
+      {
+        "en": "Will you have completed the assignment by Monday?",
+        "ar": "هل ستكون قد أكملت الواجب بحلول يوم الاثنين؟"
+      },
+      {
+        "en": "By the end of the course, students will have learned several advanced grammar structures.",
+        "ar": "بحلول نهاية الدورة، سيكون الطلاب قد تعلموا عدة تراكيب نحوية متقدمة."
+      },
+      {
+        "en": "By the time the conference begins, the researchers will have prepared their presentation.",
+        "ar": "بحلول وقت بدء المؤتمر، سيكون الباحثون قد أعدوا عرضهم التقديمي."
+      },
+      {
+        "en": "By 2035, scientists will have developed new methods for treating the disease.",
+        "ar": "بحلول عام 2035، سيكون العلماء قد طوروا طرقًا جديدة لعلاج المرض."
+      }
+    ],
+    "commonMistakes": [
+      "❌ By next year, I will have graduate. → ✅ By next year, I will have graduated. (بعد have نستخدم التصريف الثالث).",
+      "❌ She will has finished the work. → ✅ She will have finished the work. (بعد will نستخدم have وليس has).",
+      "❌ By Friday, they will finished the project. → ✅ By Friday, they will have finished the project. (نحتاج have بعد will).",
+      "❌ By the time he arrives, I will have leave. → ✅ By the time he arrives, I will have left. (leave → left في التصريف الثالث).",
+      "❌ Tomorrow I will have finish the report. → ✅ By tomorrow, I will have finished the report. (Future Perfect يحتاج معنى الاكتمال بحلول نقطة مستقبلية).",
+      "❌ By next year, I will be graduated. → ✅ By next year, I will have graduated. (للتعبير عن اكتمال الفعل نستخدم Future Perfect)."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "By next year, she ___ from university.",
+        "options": [
+          "will graduate",
+          "will be graduating",
+          "will have graduated",
+          "has graduated"
+        ],
+        "correct": "will have graduated",
+        "answer": "will have graduated",
+        "why": "By next year تعني أن التخرج سيكون قد اكتمل بحلول وقت مستقبلي."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "By Friday, we ___ the project.",
+        "options": [
+          "will complete",
+          "will be completing",
+          "have completed",
+          "will have completed"
+        ],
+        "correct": "will have completed",
+        "answer": "will have completed",
+        "why": "التركيز هنا على أن المشروع سيكون قد اكتمل بحلول الجمعة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "By the time you arrive, I ___ dinner.",
+        "options": [
+          "will cooking",
+          "will have cook",
+          "will be cook",
+          "will have cooked"
+        ],
+        "correct": "will have cooked",
+        "answer": "will have cooked",
+        "why": "الطبخ سيكون قد اكتمل قبل وصولك."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "She will has finished the work.",
+          "She will have finish the work.",
+          "She will finished the work.",
+          "She will have finished the work."
+        ],
+        "correct": "She will have finished the work.",
+        "answer": "She will have finished the work.",
+        "why": "الصيغة الصحيحة هي will + have + past participle."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "By 2030, scientists ___ new technologies.",
+        "options": [
+          "will have developed",
+          "will be develop",
+          "will developed",
+          "have develop"
+        ],
+        "correct": "will have developed",
+        "answer": "will have developed",
+        "why": "التطوير سيكون قد اكتمل بحلول نقطة زمنية مستقبلية."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct negative form.",
+        "options": [
+          "They won't has finished the work.",
+          "They won't have finish the work.",
+          "They don't have finished the work.",
+          "They won't have finished the work."
+        ],
+        "correct": "They won't have finished the work.",
+        "answer": "They won't have finished the work.",
+        "why": "النفي الصحيح هو won't have + past participle."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which tense focuses on completion before a future point?",
+        "options": [
+          "Future Simple",
+          "Future Continuous",
+          "Present Continuous",
+          "Future Perfect"
+        ],
+        "correct": "Future Perfect",
+        "answer": "Future Perfect",
+        "why": "Future Perfect يركز على أن الفعل سيكون قد اكتمل قبل نقطة مستقبلية."
+      },
+      {
+        "type": "true_false",
+        "prompt": "Future Perfect is formed with will + have + past participle.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": "True",
+        "answer": "True",
+        "why": "هذه هي الصيغة الأساسية للمستقبل التام."
+      }
+    ],
+    "markers": [
+      "by tomorrow",
+      "by next week",
+      "by next month",
+      "by next year",
+      "by 2030",
+      "by the end of",
+      "by the time",
+      "before then",
+      "by Friday"
+    ]
+  },
+  {
+    "id": "future-perfect-continuous",
+    "title": "المستقبل التام المستمر",
+    "category": "الأزمنة",
+    "icon": "⌛",
+    "description": "يُستخدم المستقبل التام المستمر للتعبير عن مدة استمرار نشاط أو حالة حتى نقطة محددة في المستقبل، مع التركيز على المدة أو الاستمرارية.",
+    "explanation": "يتكون المستقبل التام المستمر من will have been + verb-ing. نستخدمه عندما نريد التعبير عن نشاط سيستمر لفترة من الزمن حتى نقطة محددة في المستقبل. الفكرة الأساسية هي وجود مدة زمنية تبدأ قبل نقطة مستقبلية وتستمر حتى تلك النقطة أو تصل إليها. مثل: By next June, I will have been working here for five years. المعنى أنني عند حلول يونيو القادم سأكون قد أمضيت خمس سنوات في العمل هنا. لذلك يرتبط هذا الزمن كثيرًا بـ for و since وبعبارات مثل by next year و by the time و by the end of. الفرق الأساسي بين Future Perfect و Future Perfect Continuous هو أن Future Perfect يركز على الإنجاز أو النتيجة، بينما Future Perfect Continuous يركز على مدة النشاط. قارن: By June, I will have written ten reports. هنا التركيز على عدد التقارير التي اكتملت. أما By June, I will have been writing reports for five years. هنا التركيز على مدة استمرار النشاط. ويمكن أن نستخدمه أيضًا لتفسير نتيجة أو حالة ستكون واضحة عند نقطة مستقبلية، مثل: By the end of the day, she will have been working for ten hours, so she will be tired. في PTE، وجود for + مدة أو since + بداية، مع by + نقطة مستقبلية، يعد مؤشرًا قويًا على Future Perfect Continuous عندما يكون التركيز على استمرار النشاط.",
+    "rules": [
+      "يتكون المستقبل التام المستمر من: will + have + been + verb-ing.",
+      "يُستخدم للتعبير عن مدة استمرار نشاط حتى نقطة مستقبلية محددة.",
+      "يُستخدم كثيرًا مع for للدلالة على مدة زمنية.",
+      "يمكن استخدامه مع since للدلالة على نقطة بداية النشاط.",
+      "يُستخدم كثيرًا مع by + وقت مستقبلي، مثل by next year.",
+      "لا يتغير will أو have أو been حسب الفاعل؛ الصيغة ثابتة مع جميع الضمائر.",
+      "في النفي نستخدم: will not have been + verb-ing أو won't have been + verb-ing.",
+      "في السؤال نستخدم: Will + subject + have been + verb-ing?",
+      "يركز Future Perfect Continuous على المدة والاستمرارية أكثر من النتيجة النهائية.",
+      "يختلف عن Future Perfect؛ Future Perfect يركز على اكتمال شيء، بينما Future Perfect Continuous يركز على المدة التي استمر فيها النشاط.",
+      "لا نستخدم عادة هذا الزمن مع أفعال الحالة مثل know و believe و own و understand عندما يكون معناها حالة وليست نشاطًا مستمرًا.",
+      "وجود for وحده لا يعني دائمًا Future Perfect Continuous؛ يجب أن يكون هناك نقطة مستقبلية نصل إليها مع استمرار النشاط حتىها.",
+      "في PTE، إذا وجدت by + وقت مستقبلي مع for + مدة، وكان المعنى أن نشاطًا سيستمر حتى تلك النقطة، فـ Future Perfect Continuous غالبًا هو الاختيار المناسب.",
+      "يمكن استخدامه لتفسير حالة أو نتيجة متوقعة في المستقبل بسبب استمرار نشاط لفترة طويلة."
+    ],
+    "examples": [
+      {
+        "en": "By next June, I will have been working here for five years.",
+        "ar": "بحلول يونيو القادم، سأكون قد أمضيت خمس سنوات في العمل هنا."
+      },
+      {
+        "en": "By 10 p.m., she will have been studying for six hours.",
+        "ar": "بحلول الساعة العاشرة مساءً، ستكون قد درست لمدة ست ساعات."
+      },
+      {
+        "en": "By next year, they will have been living in Cairo for ten years.",
+        "ar": "بحلول العام القادم، سيكونون قد عاشوا في القاهرة لمدة عشر سنوات."
+      },
+      {
+        "en": "By the time you arrive, I will have been waiting for an hour.",
+        "ar": "بحلول الوقت الذي تصل فيه، سأكون قد انتظرت لمدة ساعة."
+      },
+      {
+        "en": "By the end of the day, he will have been working for twelve hours.",
+        "ar": "بحلول نهاية اليوم، سيكون قد عمل لمدة اثنتي عشرة ساعة."
+      },
+      {
+        "en": "By 2030, scientists will have been studying the problem for decades.",
+        "ar": "بحلول عام 2030، سيكون العلماء قد درسوا المشكلة لعقود."
+      },
+      {
+        "en": "She will be tired because she will have been working all day.",
+        "ar": "ستكون متعبة لأنها ستكون قد عملت طوال اليوم."
+      },
+      {
+        "en": "By next month, we will have been developing the application for a year.",
+        "ar": "بحلول الشهر القادم، سنكون قد أمضينا عامًا في تطوير التطبيق."
+      },
+      {
+        "en": "Will you have been studying English for three years by then?",
+        "ar": "هل ستكون قد درست الإنجليزية لمدة ثلاث سنوات بحلول ذلك الوقت؟"
+      },
+      {
+        "en": "By the end of the project, the team will have been working together for eighteen months.",
+        "ar": "بحلول نهاية المشروع، سيكون الفريق قد عمل معًا لمدة ثمانية عشر شهرًا."
+      }
+    ],
+    "commonMistakes": [
+      "❌ By next year, I will have been work here for five years. → ✅ By next year, I will have been working here for five years. (بعد been نستخدم V-ing).",
+      "❌ She will has been studying for six hours. → ✅ She will have been studying for six hours. (بعد will نستخدم have).",
+      "❌ They will have been studied for five years. → ✅ They will have been studying for five years. (نحتاج V-ing لأن الزمن مستمر).",
+      "❌ By June, I will have worked here for five years. → ✅ By June, I will have been working here for five years. (إذا كان التركيز على استمرار النشاط ومدته).",
+      "❌ By the time you arrive, I will have been wait for an hour. → ✅ By the time you arrive, I will have been waiting for an hour.",
+      "❌ I will have been knowing him for ten years. → ✅ I will have known him for ten years. (know من أفعال الحالة ولا يُستخدم عادةً في المستمر)."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "By next June, I ___ here for five years.",
+        "options": [
+          "will work",
+          "will have worked",
+          "will be work",
+          "will have been working"
+        ],
+        "correct": "will have been working",
+        "answer": "will have been working",
+        "why": "وجود by + وقت مستقبلي مع for + مدة والتركيز على استمرار النشاط يجعل Future Perfect Continuous مناسبًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "By 10 p.m., she ___ for six hours.",
+        "options": [
+          "will study",
+          "will be study",
+          "will have been studying",
+          "has been studying"
+        ],
+        "correct": "will have been studying",
+        "answer": "will have been studying",
+        "why": "نتحدث عن مدة نشاط مستمر حتى نقطة مستقبلية محددة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "By next year, they ___ in Cairo for ten years.",
+        "options": [
+          "will live",
+          "will have been living",
+          "will be live",
+          "have lived"
+        ],
+        "correct": "will have been living",
+        "answer": "will have been living",
+        "why": "for ten years تشير إلى مدة استمرار الفعل حتى نقطة مستقبلية."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "I will have been work here for five years.",
+          "I will have working here for five years.",
+          "I will been working here for five years.",
+          "I will have been working here for five years."
+        ],
+        "correct": "I will have been working here for five years.",
+        "answer": "I will have been working here for five years.",
+        "why": "الصيغة الصحيحة هي will + have + been + V-ing."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "By the time you arrive, I ___ for an hour.",
+        "options": [
+          "will have waiting",
+          "will be waited",
+          "will wait",
+          "will have been waiting"
+        ],
+        "correct": "will have been waiting",
+        "answer": "will have been waiting",
+        "why": "الانتظار بدأ قبل وصول الشخص وسيكون مستمرًا لمدة ساعة حتى تلك النقطة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which tense focuses mainly on duration up to a future point?",
+        "options": [
+          "Future Simple",
+          "Future Continuous",
+          "Future Perfect Continuous",
+          "Future Perfect"
+        ],
+        "correct": "Future Perfect Continuous",
+        "answer": "Future Perfect Continuous",
+        "why": "هذا الزمن يركز على مدة استمرار النشاط حتى نقطة مستقبلية."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "By the end of the day, he ___ for twelve hours.",
+        "options": [
+          "will have been working",
+          "will work",
+          "will have work",
+          "will be worked"
+        ],
+        "correct": "will have been working",
+        "answer": "will have been working",
+        "why": "هناك مدة محددة لنشاط مستمر حتى نهاية اليوم."
+      },
+      {
+        "type": "true_false",
+        "prompt": "Future Perfect Continuous is formed with will + have + been + verb-ing.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": "True",
+        "answer": "True",
+        "why": "هذه هي الصيغة الأساسية للمستقبل التام المستمر."
+      }
+    ],
+    "markers": [
+      "by tomorrow",
+      "by next week",
+      "by next month",
+      "by next year",
+      "by 2030",
+      "by the end of the day",
+      "by the end of the year",
+      "by the time",
+      "for five years",
+      "for two hours",
+      "since 2020"
+    ]
+  },
+  {
+    "id": "subject-verb-agreement",
+    "title": "توافق الفاعل والفعل",
+    "category": "القواعد الأساسية",
+    "icon": "🎯",
+    "description": "توافق الفاعل والفعل يعني أن صيغة الفعل يجب أن تتوافق مع الفاعل من حيث المفرد والجمع. وتظهر أهمية هذه القاعدة بشكل خاص في المضارع البسيط، كما تصبح أكثر تحديًا عندما يفصل بين الفاعل والفعل كلمات أو عبارات إضافية.",
+    "explanation": "Subject–Verb Agreement تعني أن الفعل يجب أن يتوافق مع الفاعل من حيث المفرد والجمع. في المضارع البسيط، يأخذ الفعل غالبًا s أو es مع الفاعل المفرد في الغائب، مثل: The student works، بينما لا نضيف s مع الفاعل الجمع: The students work. أما الفعلان be و have فلهما أشكال خاصة: I am، he is، they are، وكذلك I have، he has، they have. تكمن الصعوبة في أن الفاعل الحقيقي قد يكون بعيدًا عن الفعل بسبب وجود عبارات مثل of the students أو in the classroom أو with his friends، ولذلك يجب ألا نختار الفعل بناءً على أقرب اسم إليه. مثلًا: The list of items is on the desk. كلمة items جمع، لكنها ليست الفاعل؛ الفاعل الحقيقي هو list وهي مفردة، لذلك نستخدم is. كذلك هناك كلمات تبدو جمعًا أو تنتهي بـ s لكنها تعامل كمفرد، مثل information و research و news و mathematics في بعض الاستخدامات. وهناك تراكيب مثل each و every و everyone و someone و nobody تأخذ فعلًا مفردًا، بينما both و many و several تأخذ فعلًا جمعًا. وفي تراكيب either...or و neither...nor و not only...but also، يعتمد الفعل عادةً على الفاعل الأقرب إليه. وفي PTE، من أهم المهارات أن تحدد الفاعل الحقيقي أولًا، ثم تحدد هل هو مفرد أم جمع، وبعد ذلك تختار صيغة الفعل المناسبة بدلًا من الاعتماد على الاسم الأقرب للفعل.",
+    "rules": [
+      "الفاعل المفرد في المضارع البسيط يأخذ فعلًا مفردًا، وغالبًا نضيف s أو es للفعل: The student studies.",
+      "الفاعل الجمع يأخذ الفعل في صورته الأساسية في المضارع البسيط: The students study.",
+      "I و you لهما قواعد خاصة في المضارع البسيط؛ نستخدم I work و you work وليس I works أو you works.",
+      "مع he و she و it نستخدم الفعل المفرد في المضارع البسيط: He works, She studies, It works.",
+      "مع I نستخدم am، ومع he/she/it نستخدم is، ومع you/we/they نستخدم are.",
+      "مع have نستخدم has مع he/she/it، ونستخدم have مع I/you/we/they.",
+      "لا تجعل الاسم الموجود داخل عبارة مثل of + noun يحدد صيغة الفعل؛ الفاعل الأساسي هو الذي يحددها.",
+      "إذا كان الفاعل مفردًا ويتبعه تعبير مثل together with أو along with أو as well as، يظل الفعل مفردًا.",
+      "Each و every و everyone و everybody و someone و somebody و anyone و nobody تأخذ عادةً فعلًا مفردًا.",
+      "Both و many و several و few تأخذ فعلًا جمعًا.",
+      "A number of + plural noun تأخذ فعلًا جمعًا: A number of students are absent.",
+      "The number of + plural noun تأخذ فعلًا مفردًا: The number of students is increasing.",
+      "في تراكيب either...or و neither...nor و not only...but also، يكون الفعل عادةً متوافقًا مع الفاعل الأقرب إليه.",
+      "بعض الأسماء غير المعدودة مثل information و advice و research تأخذ فعلًا مفردًا لأنها تعامل كمادة أو مفهوم غير معدود.",
+      "كلمة news تأخذ فعلًا مفردًا رغم انتهائها بحرف s: The news is surprising.",
+      "الأسماء الجماعية مثل team و family و government قد تأخذ فعلًا مفردًا عندما ننظر إلى المجموعة كوحدة واحدة، وقد يختلف الاستخدام حسب نوع الإنجليزية والسياق.",
+      "وجود اسم جمع قريب من الفعل لا يعني بالضرورة أن الفعل يجب أن يكون جمعًا؛ يجب تحديد الفاعل الرئيسي في الجملة.",
+      "في الجمل التي تحتوي على relative clause، يجب الانتباه إلى الفاعل داخل الجملة الأساسية والفاعل داخل جملة الوصل كلٌ على حدة.",
+      "في PTE، أفضل طريقة هي تحديد الفاعل أولًا، ثم تجاهل العبارات الواقعة بين الفاعل والفعل مؤقتًا، ثم اختيار صيغة الفعل.",
+      "وجود كلمات مثل every أو each أو everyone قد يكون مؤشرًا قويًا على استخدام الفعل المفرد.",
+      "وجود by + plural noun أو of + plural noun لا يحول الفاعل المفرد إلى جمع.",
+      "في المضارع البسيط، الخطأ الأكثر شيوعًا هو إضافة s إلى الفعل مع I/you/they أو نسيان s مع he/she/it."
+    ],
+    "examples": [
+      {
+        "en": "The student works hard every day.",
+        "ar": "يعمل الطالب بجد كل يوم."
+      },
+      {
+        "en": "The students work hard every day.",
+        "ar": "يعمل الطلاب بجد كل يوم."
+      },
+      {
+        "en": "The list of items is on the desk.",
+        "ar": "قائمة العناصر موجودة على المكتب."
+      },
+      {
+        "en": "The quality of these products is excellent.",
+        "ar": "جودة هذه المنتجات ممتازة."
+      },
+      {
+        "en": "Each student has a computer.",
+        "ar": "كل طالب لديه جهاز كمبيوتر."
+      },
+      {
+        "en": "Everyone needs to understand the instructions.",
+        "ar": "يحتاج الجميع إلى فهم التعليمات."
+      },
+      {
+        "en": "A number of students are absent today.",
+        "ar": "عدد من الطلاب غائبون اليوم."
+      },
+      {
+        "en": "The number of students is increasing.",
+        "ar": "عدد الطلاب في ازدياد."
+      },
+      {
+        "en": "The teacher, along with her students, is attending the conference.",
+        "ar": "المعلمة، إلى جانب طلابها، تحضر المؤتمر."
+      },
+      {
+        "en": "Neither the manager nor the employees are available.",
+        "ar": "لا المدير ولا الموظفون متاحون."
+      },
+      {
+        "en": "Neither the employees nor the manager is available.",
+        "ar": "لا الموظفون ولا المدير متاحون."
+      },
+      {
+        "en": "The research on this topic is very important.",
+        "ar": "البحث حول هذا الموضوع مهم جدًا."
+      },
+      {
+        "en": "The information provided by the researchers is useful.",
+        "ar": "المعلومات التي قدمها الباحثون مفيدة."
+      },
+      {
+        "en": "Both the teacher and the students are ready.",
+        "ar": "كل من المعلم والطلاب مستعدون."
+      }
+    ],
+    "commonMistakes": [
+      "❌ He work every day. → ✅ He works every day. (مع he في المضارع البسيط نضيف s أو es للفعل).",
+      "❌ They works every day. → ✅ They work every day. (مع الفاعل الجمع نستخدم الفعل الأساسي).",
+      "❌ The list of students are long. → ✅ The list of students is long. (الفاعل هو list وليس students).",
+      "❌ Each student have a book. → ✅ Each student has a book. (Each تأخذ فعلًا مفردًا).",
+      "❌ The number of students are increasing. → ✅ The number of students is increasing. (The number مفرد).",
+      "❌ A number of students is absent. → ✅ A number of students are absent. (A number of + plural noun تأخذ فعلًا جمعًا).",
+      "❌ The research are important. → ✅ The research is important. (research اسم غير معدود ويأخذ فعلًا مفردًا في هذا الاستخدام).",
+      "❌ The teacher, along with her students, are attending the conference. → ✅ The teacher, along with her students, is attending the conference. (الفاعل الأساسي teacher مفرد)."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "The student ___ English every day.",
+        "options": [
+          "studies",
+          "study",
+          "studying",
+          "are study"
+        ],
+        "correct": "studies",
+        "answer": "studies",
+        "why": "The student فاعل مفرد، ولذلك نضيف s إلى الفعل في المضارع البسيط."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The students ___ English every day.",
+        "options": [
+          "studies",
+          "studying",
+          "is study",
+          "study"
+        ],
+        "correct": "study",
+        "answer": "study",
+        "why": "The students فاعل جمع، لذلك نستخدم الفعل الأساسي دون s."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The list of items ___ on the desk.",
+        "options": [
+          "are",
+          "be",
+          "is",
+          "were"
+        ],
+        "correct": "is",
+        "answer": "is",
+        "why": "الفاعل الحقيقي هو list وهو مفرد، أما items فهو داخل عبارة of وليس الفاعل."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Each student ___ a computer.",
+        "options": [
+          "have",
+          "has",
+          "having",
+          "are having"
+        ],
+        "correct": "has",
+        "answer": "has",
+        "why": "Each تعامل معاملة المفرد، لذلك نستخدم has."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "A number of students ___ absent today.",
+        "options": [
+          "are",
+          "is",
+          "has",
+          "was"
+        ],
+        "correct": "are",
+        "answer": "are",
+        "why": "A number of + plural noun تأخذ فعلًا جمعًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The number of students ___ increasing.",
+        "options": [
+          "are",
+          "is",
+          "have",
+          "were"
+        ],
+        "correct": "is",
+        "answer": "is",
+        "why": "الفاعل هو The number وهو مفرد."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The research on this topic ___ important.",
+        "options": [
+          "are",
+          "is",
+          "have",
+          "were"
+        ],
+        "correct": "is",
+        "answer": "is",
+        "why": "Research في هذا الاستخدام اسم غير معدود ويعامل معاملة المفرد."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The teacher, along with her students, ___ attending the conference.",
+        "options": [
+          "are",
+          "were",
+          "have",
+          "is"
+        ],
+        "correct": "is",
+        "answer": "is",
+        "why": "الفاعل الأساسي هو teacher، أما along with her students فهي عبارة إضافية لا تغير توافق الفعل."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Neither the manager nor the employees ___ available.",
+        "options": [
+          "are",
+          "is",
+          "has",
+          "was"
+        ],
+        "correct": "are",
+        "answer": "are",
+        "why": "في neither...nor يتوافق الفعل عادةً مع الفاعل الأقرب، وهنا employees جمع."
+      },
+      {
+        "type": "true_false",
+        "prompt": "The number of students are increasing is grammatically correct.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": "False",
+        "answer": "False",
+        "why": "الصحيح هو The number of students is increasing لأن الفاعل The number مفرد."
+      }
+    ],
+    "markers": [
+      "each",
+      "every",
+      "everyone",
+      "everybody",
+      "someone",
+      "somebody",
+      "anyone",
+      "nobody",
+      "both",
+      "many",
+      "several",
+      "a number of",
+      "the number of",
+      "along with",
+      "together with",
+      "as well as",
+      "either...or",
+      "neither...nor"
+    ]
+  }
+]

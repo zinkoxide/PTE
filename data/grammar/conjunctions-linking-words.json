@@ -1,0 +1,565 @@
+[
+  {
+    "id": "conjunctions-linking-words",
+    "title": "أدوات الربط والكلمات الانتقالية",
+    "category": "أدوات الربط",
+    "icon": "🔗",
+    "description": "شرح أدوات الربط والكلمات الانتقالية المستخدمة لربط الأفكار والجمل، مع التمييز بين conjunctions وlinking adverbs وprepositions، واستخدام أدوات الإضافة والتناقض والسبب والنتيجة والشرط والمقارنة، مع التركيز على أخطاء PTE.",
+    "explanation": "تُستخدم أدوات الربط (Conjunctions) والكلمات الانتقالية (Linking Words أو Linking Adverbs) لربط الأفكار وإظهار العلاقة المنطقية بينها. من أهم العلاقات: الإضافة، والتناقض، والسبب، والنتيجة، والمثال، والمقارنة، والشرط، والتسلسل. من أهم النقاط في PTE أن الكلمات المتشابهة في المعنى لا تكون متطابقة في التركيب. فـ although وbecause وwhereas يمكن أن تربط جملة كاملة، بينما despite وbecause of تحتاجان عادةً إلى noun أو gerund. أما however وtherefore وmoreover فهي linking adverbs، ولها علامات ترقيم وتركيب مختلفان. لذلك عند وجود فراغ في سؤال PTE، يجب أولًا تحديد نوع العنصر المطلوب، ثم تحديد العلاقة المنطقية، ثم فحص التركيب الذي يأتي بعده.",
+    "rules": [
+      "Conjunction هي كلمة تربط عناصر نحوية، وقد تربط كلمتين أو عبارتين أو جملتين.",
+      "من أشهر coordinating conjunctions: and, but, or, so, yet, for, nor.",
+      "نستخدم and لإضافة معلومة أو فكرة إلى فكرة أخرى.",
+      "نستخدم but وyet للتعبير عن التناقض أو المفاجأة.",
+      "نستخدم or لتقديم بديل أو اختيار.",
+      "نستخدم so للتعبير عن النتيجة، خاصة في التراكيب البسيطة.",
+      "يمكن استخدام so + adjective/adverb للدلالة على درجة عالية، مثل so difficult، لكن هذا استخدام مختلف عن so الذي يربط النتيجة.",
+      "نستخدم because لتقديم سبب، وبعدها تأتي جملة كاملة تحتوي على subject + verb.",
+      "نستخدم since وas أحيانًا لتقديم سبب، ويعتمد الاختيار على السياق.",
+      "نستخدم although وthough وeven though لتقديم فكرة متناقضة مع الفكرة الرئيسية.",
+      "بعد although وthough وeven though تأتي جملة كاملة.",
+      "لا نستخدم although وbut معًا لربط الجملتين بالطريقة نفسها: Although he was tired, he continued. وليس Although he was tired, but he continued.",
+      "نستخدم whereas لإظهار اختلاف أو مقارنة متناقضة بين فكرتين.",
+      "نستخدم while لإظهار التزامن الزمني أو التناقض حسب السياق.",
+      "نستخدم if لتقديم شرط.",
+      "نستخدم unless بمعنى if not في كثير من السياقات.",
+      "نستخدم as long as وprovided that وproviding that للتعبير عن شرط أو قيد.",
+      "نستخدم whether ... or ... عندما نقدم احتمالين أو خيارين.",
+      "نستخدم both ... and لربط عنصرين معًا.",
+      "نستخدم either ... or لتقديم اختيار بين عنصرين أو أكثر.",
+      "نستخدم neither ... nor لنفي عنصرين أو خيارين.",
+      "نستخدم not only ... but also لإضافة فكرتين مع التأكيد على الثانية.",
+      "عند بدء الجملة بـ Not only، غالبًا يحدث inversion في الإنجليزية الرسمية: Not only did he improve, but he also succeeded.",
+      "يجب الحفاظ على parallel structure بعد both...and وeither...or وneither...nor وnot only...but also.",
+      "إذا ربطت الأداة عنصرين من النوع نفسه، يفضل أن يكون التركيب متوازيًا نحويًا.",
+      "نستخدم therefore للتعبير عن النتيجة، وهي linking adverb وليست coordinating conjunction.",
+      "يمكن وضع therefore بين فاصلتين داخل الجملة عندما تكون جزءًا من الجملة: The results were therefore significant.",
+      "عند ربط جملتين مستقلتين باستخدام therefore، يمكن استخدام semicolon قبلها ثم comma بعدها: The results were significant; therefore, the hypothesis was supported.",
+      "لا نعامل therefore مثل and أو but؛ لذلك لا نربط عادةً جملتين مستقلتين بفاصلة واحدة فقط قبل therefore.",
+      "نستخدم however للتعبير عن التناقض، وهي linking adverb.",
+      "يمكن استخدام however في بداية الجملة أو بين أجزاء الجملة مع علامات الترقيم المناسبة.",
+      "عند ربط جملتين مستقلتين، يمكن استخدام: Sentence; however, sentence.",
+      "لا نستخدم however بالطريقة نفسها التي نستخدم بها although؛ however لا يتبعها مباشرة subject + verb كأداة subordinate conjunction.",
+      "نستخدم moreover وfurthermore وin addition لإضافة معلومات أو حجة جديدة.",
+      "moreover وfurthermore أكثر رسمية وشائعة في الكتابة الأكاديمية.",
+      "in addition يمكن أن تأتي في بداية الجملة متبوعة بفاصلة.",
+      "نستخدم also لإضافة معلومة، وغالبًا تأتي قبل الفعل الرئيسي أو بعد verb to be.",
+      "نستخدم too وas well غالبًا في نهاية الجملة في الاستخدام العادي.",
+      "نستخدم consequently وas a result وthus وhence للدلالة على النتيجة.",
+      "consequently وas a result يمكن أن تأتي كـ linking expressions وتحتاج إلى علامات ترقيم مناسبة عند ربط جمل مستقلة.",
+      "thus وhence أكثر رسمية، ويمكن أن تظهر كثيرًا في الكتابة الأكاديمية.",
+      "نستخدم in contrast وon the other hand لإظهار الاختلاف أو تقديم فكرة مقابلة.",
+      "نستخدم similarly وlikewise لإظهار التشابه أو إضافة فكرة مشابهة.",
+      "نستخدم for example وfor instance لتقديم مثال.",
+      "نستخدم such as قبل أمثلة أو أسماء، وليس عادةً قبل جملة كاملة مستقلة.",
+      "نستخدم namely لتحديد أو توضيح شيء سبق ذكره.",
+      "نستخدم that is أو in other words لإعادة صياغة أو توضيح فكرة.",
+      "نستخدم first, second, finally أو firstly, secondly, finally لتنظيم الأفكار أو الخطوات.",
+      "في الكتابة الأكاديمية، يمكن استخدام initially وsubsequently وfinally لتنظيم تسلسل الأحداث أو الحجج.",
+      "نستخدم despite وin spite of قبل noun أو gerund، بينما although وeven though تحتاجان إلى clause.",
+      "نقول Despite the difficulty, the team succeeded.",
+      "نقول Despite being tired, she continued working.",
+      "نقول Although the task was difficult, the team succeeded.",
+      "لا نقول Despite the task was difficult؛ الصحيح Despite the fact that the task was difficult أو Although the task was difficult.",
+      "نستخدم because of وdue to وowing to قبل noun أو noun phrase.",
+      "نستخدم because قبل clause.",
+      "نستخدم due to في الأسلوب الرسمي، وغالبًا قبل noun phrase.",
+      "نستخدم so ... that للدلالة على النتيجة: so difficult that... أو so quickly that...",
+      "نستخدم such ... that أيضًا للدلالة على النتيجة، لكن such يأتي عادةً قبل noun phrase: such a difficult task that...",
+      "نستخدم too ... to للدلالة على درجة زائدة تمنع حدوث الفعل: too difficult to complete.",
+      "نستخدم enough ... to للدلالة على الكفاية: easy enough to understand.",
+      "نستخدم as ... as للمقارنة المتساوية.",
+      "نستخدم than بعد comparative adjectives/adverbs: more effective than.",
+      "نستخدم the more..., the more... لإظهار علاقة تدريجية بين عاملين.",
+      "نستخدم as soon as للدلالة على حدوث شيء مباشرة بعد شيء آخر.",
+      "نستخدم as long as بمعنى بشرط أن في بعض السياقات، وبمعنى طوال الفترة التي في سياقات أخرى.",
+      "نستخدم once عندما يكون معنى الجملة أن شيئًا سيحدث بعد تحقق شيء آخر.",
+      "نستخدم before وafter وwhen وwhile وuntil لربط الأحداث زمنيًا.",
+      "في الجملة الزمنية التي تشير إلى المستقبل، نستخدم Present Simple بعد when/as soon as/before/after/until بدل will في clause الزمنية.",
+      "مثال: When the experiment finishes, we will analyze the results.",
+      "لا نقول When the experiment will finish في هذا التركيب الزمني.",
+      "يمكن استخدام if وunless في الجمل الشرطية، لكن يجب الانتباه إلى أن unless تحمل معنى النفي بالفعل.",
+      "لا نستخدم عادةً not بعد unless إذا كان المقصود شرطًا عاديًا من نوع if not.",
+      "نستخدم otherwise للدلالة على النتيجة السلبية إذا لم يحدث شيء معين.",
+      "otherwise ليست conjunction عادية، لذلك تحتاج إلى تركيب وترقيم مناسبين.",
+      "نستخدم as a result وtherefore وconsequently للدلالة على النتيجة، لكن يجب عدم وضع أكثر من رابط نتيجة دون حاجة.",
+      "الربط الجيد في الكتابة الأكاديمية لا يعني استخدام أكبر عدد ممكن من linking words؛ يجب أن تكون العلاقة المنطقية واضحة.",
+      "يمكن أن يكون الرابط في بداية الجملة أو وسطها حسب نوع الكلمة وقواعد الترقيم.",
+      "في PTE، يجب التمييز بين رابط يتبعه clause ورابط يتبعه noun phrase.",
+      "إذا كان بعد الفراغ subject + verb، فقد يكون المطلوب conjunction مثل although أو because أو whereas.",
+      "إذا كان بعد الفراغ noun أو gerund، فقد يكون المطلوب preposition مثل despite أو because of.",
+      "إذا كانت هناك جملة مستقلة قبل وبعد الفراغ، فقد يكون المطلوب linking adverb مثل however أو therefore مع الترقيم المناسب.",
+      "يجب الانتباه إلى الفرق بين however وalthough: However, he continued. بينما Although he was tired, he continued.",
+      "يجب الانتباه إلى الفرق بين therefore وso: The data were incomplete, so the researchers repeated the experiment. أما The data were incomplete; therefore, the researchers repeated the experiment.",
+      "يجب الانتباه إلى الفرق بين despite وalthough لأنهما متقاربان في المعنى لكن مختلفان في التركيب.",
+      "في PTE، فحص ما يأتي بعد الرابط قد يكون أسرع من محاولة ترجمة الرابط.",
+      "من المهم تعلم linking words ضمن مجموعات معنوية: addition، contrast، cause، result، condition، comparison، example، sequence."
+    ],
+    "examples": [
+      {
+        "en": "The researchers collected the data and analyzed the results.",
+        "ar": "جمع الباحثون البيانات وحللوا النتائج."
+      },
+      {
+        "en": "The method is simple but highly effective.",
+        "ar": "الطريقة بسيطة لكنها فعالة جدًا."
+      },
+      {
+        "en": "The sample was small, yet the results were significant.",
+        "ar": "كانت العينة صغيرة، ومع ذلك كانت النتائج مهمة."
+      },
+      {
+        "en": "The equipment was expensive, so the university searched for alternative funding.",
+        "ar": "كانت المعدات باهظة الثمن، لذلك بحثت الجامعة عن تمويل بديل."
+      },
+      {
+        "en": "The experiment was repeated because the first results were unreliable.",
+        "ar": "أُعيدت التجربة لأن النتائج الأولى لم تكن موثوقة."
+      },
+      {
+        "en": "Although the experiment was difficult, the researchers completed it successfully.",
+        "ar": "على الرغم من أن التجربة كانت صعبة، أكملها الباحثون بنجاح."
+      },
+      {
+        "en": "Even though the sample was small, the findings were useful.",
+        "ar": "على الرغم من أن العينة كانت صغيرة، كانت النتائج مفيدة."
+      },
+      {
+        "en": "The two methods produce similar results, whereas their costs are very different.",
+        "ar": "تنتج الطريقتان نتائج متشابهة، بينما تختلف تكلفتاهما كثيرًا."
+      },
+      {
+        "en": "The researchers wanted to repeat the experiment, but the equipment was unavailable.",
+        "ar": "أراد الباحثون تكرار التجربة، لكن المعدات لم تكن متاحة."
+      },
+      {
+        "en": "Both accuracy and reliability are important in scientific research.",
+        "ar": "كل من الدقة والموثوقية مهمتان في البحث العلمي."
+      },
+      {
+        "en": "The method is not only efficient but also cost-effective.",
+        "ar": "الطريقة ليست فعالة فقط، بل اقتصادية من حيث التكلفة أيضًا."
+      },
+      {
+        "en": "The results were unexpected; however, they were consistent with previous research.",
+        "ar": "كانت النتائج غير متوقعة؛ ومع ذلك، كانت متوافقة مع الأبحاث السابقة."
+      },
+      {
+        "en": "The sample was too small; therefore, the researchers repeated the study.",
+        "ar": "كانت العينة صغيرة جدًا؛ ولذلك كرر الباحثون الدراسة."
+      },
+      {
+        "en": "The study had several limitations. Moreover, the sample was relatively small.",
+        "ar": "كانت للدراسة عدة قيود. علاوة على ذلك، كانت العينة صغيرة نسبيًا."
+      },
+      {
+        "en": "The method is inexpensive. In addition, it is easy to implement.",
+        "ar": "الطريقة غير مكلفة. بالإضافة إلى ذلك، من السهل تطبيقها."
+      },
+      {
+        "en": "The results were statistically significant; as a result, the hypothesis was supported.",
+        "ar": "كانت النتائج ذات دلالة إحصائية؛ ونتيجة لذلك، تم دعم الفرضية."
+      },
+      {
+        "en": "The two studies reached similar conclusions. Similarly, both emphasized the importance of further research.",
+        "ar": "توصلت الدراستان إلى استنتاجات متشابهة. وبالمثل، أكدت كلتاهما أهمية إجراء مزيد من البحث."
+      },
+      {
+        "en": "The method is more reliable than the previous one.",
+        "ar": "الطريقة أكثر موثوقية من الطريقة السابقة."
+      },
+      {
+        "en": "Despite the limited resources, the research team achieved excellent results.",
+        "ar": "على الرغم من محدودية الموارد، حقق فريق البحث نتائج ممتازة."
+      },
+      {
+        "en": "Despite having little time, the researchers completed the experiment.",
+        "ar": "على الرغم من امتلاك وقت قليل، أكمل الباحثون التجربة."
+      },
+      {
+        "en": "Because the equipment was damaged, the experiment was postponed.",
+        "ar": "لأن المعدات كانت تالفة، تم تأجيل التجربة."
+      },
+      {
+        "en": "The experiment was postponed because of damaged equipment.",
+        "ar": "تم تأجيل التجربة بسبب المعدات التالفة."
+      },
+      {
+        "en": "The task was so difficult that many students needed additional support.",
+        "ar": "كانت المهمة صعبة جدًا لدرجة أن كثيرًا من الطلاب احتاجوا إلى دعم إضافي."
+      },
+      {
+        "en": "It was such a difficult task that many students needed additional support.",
+        "ar": "كانت مهمة صعبة جدًا لدرجة أن كثيرًا من الطلاب احتاجوا إلى دعم إضافي."
+      },
+      {
+        "en": "When the experiment finishes, the researchers will analyze the results.",
+        "ar": "عندما تنتهي التجربة، سيحلل الباحثون النتائج."
+      },
+      {
+        "en": "If the results improve, the researchers will continue the study.",
+        "ar": "إذا تحسنت النتائج، فسيواصل الباحثون الدراسة."
+      },
+      {
+        "en": "Unless the results improve, the researchers will not continue the study.",
+        "ar": "ما لم تتحسن النتائج، فلن يواصل الباحثون الدراسة."
+      },
+      {
+        "en": "Submit the application today; otherwise, you may miss the deadline.",
+        "ar": "قدم الطلب اليوم؛ وإلا فقد تفوتك الموعد النهائي."
+      },
+      {
+        "en": "For example, regular exercise can improve concentration and memory.",
+        "ar": "على سبيل المثال، يمكن أن تحسن ممارسة الرياضة بانتظام التركيز والذاكرة."
+      },
+      {
+        "en": "The study examined several factors, such as age, education, and income.",
+        "ar": "فحصت الدراسة عدة عوامل، مثل العمر والتعليم والدخل."
+      }
+    ],
+    "commonMistakes": [
+      "استخدام although وbut معًا: Although the method was expensive, but it was effective خطأ. الصحيح: Although the method was expensive, it was effective.",
+      "استخدام despite مع جملة كاملة: Despite the method was expensive خطأ. الصحيح: Despite the high cost أو Despite being expensive.",
+      "استخدام because of مع جملة كاملة: because of the method was expensive خطأ. الصحيح: because the method was expensive أو because of the high cost.",
+      "الخلط بين however وalthough: However لا تتبعها جملة فرعية بالطريقة نفسها التي تتبع بها although.",
+      "استخدام however بين جملتين مستقلتين بفاصلة فقط: The method was expensive, however, it was effective. في الكتابة الرسمية الأفضل: The method was expensive; however, it was effective.",
+      "استخدام therefore مثل and: The results were poor, therefore the study was repeated. الأفضل في الكتابة الرسمية: The results were poor; therefore, the study was repeated.",
+      "استخدام despite of. الصحيح despite أو in spite of، وليس despite of.",
+      "استخدام unless مع not دون حاجة: Unless you do not study... غالبًا خطأ إذا كان المقصود If you do not study.",
+      "الخلط بين during وwhile: during + noun، بينما while + clause.",
+      "الخلط بين such وso: so + adjective/adverb، بينما such + noun phrase.",
+      "الخلط بين because وbecause of: because + clause، بينما because of + noun phrase.",
+      "استخدام will بعد when في الجملة الزمنية المستقبلية: When the study will finish خطأ في هذا التركيب. الصحيح: When the study finishes.",
+      "الخلط بين result وresulting expressions: therefore وconsequently وas a result تعبر عن النتيجة، لكنها تختلف في التركيب والترقيم.",
+      "استخدام too وvery كأنهما متساويان: too difficult غالبًا تعني صعب بدرجة تمنع أو تعيق، بينما very difficult تعني صعب جدًا فقط.",
+      "عدم الحفاظ على parallel structure: The study aims to improve accuracy and reducing costs خطأ. الأفضل: to improve accuracy and reduce costs.",
+      "الخلط بين either...or وneither...nor: either...or تقدم بديلين، بينما neither...nor تنفي الاثنين.",
+      "الخلط بين both...and وeither...or: both تشير إلى الاثنين معًا، بينما either تشير إلى أحد الخيارين.",
+      "الإفراط في استخدام linking words في الكتابة الأكاديمية؛ كثرة الروابط لا تجعل النص أفضل إذا لم تكن العلاقة المنطقية واضحة.",
+      "اختيار الرابط بناءً على ترجمته العربية فقط، دون فحص نوع التركيب الذي يأتي بعده.",
+      "استخدام such as قبل جملة مستقلة كاملة؛ such as تستخدم عادةً لتقديم أمثلة اسمية.",
+      "الخلط بين on the other hand وhowever؛ كلاهما يدل على التناقض، لكن on the other hand غالبًا يقدم جانبًا أو فكرة مقابلة، بينما however أداة انتقالية للتناقض.",
+      "استخدام moreover وfurthermore وin addition كأنها conjunctions عادية لربط جملتين بفاصلة فقط؛ يجب التعامل معها كـ linking expressions وترقيمها بصورة صحيحة."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "___ the experiment was difficult, the researchers completed it.",
+        "options": [
+          "Despite",
+          "Although",
+          "Because of",
+          "In spite"
+        ],
+        "correct": 1,
+        "answer": "Although",
+        "why": "بعد although تأتي جملة كاملة: the experiment was difficult."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ the difficulty of the experiment, the researchers completed it.",
+        "options": [
+          "Although",
+          "Because",
+          "Despite",
+          "While"
+        ],
+        "correct": 2,
+        "answer": "Despite",
+        "why": "بعد despite يأتي noun phrase: the difficulty of the experiment."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The experiment was delayed ___ technical problems.",
+        "options": [
+          "because",
+          "because of",
+          "although",
+          "however"
+        ],
+        "correct": 1,
+        "answer": "because of",
+        "why": "بعد because of نستخدم noun phrase: technical problems."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The experiment was delayed ___ the equipment was damaged.",
+        "options": [
+          "because",
+          "because of",
+          "despite",
+          "however"
+        ],
+        "correct": 0,
+        "answer": "because",
+        "why": "بعد because تأتي جملة كاملة: the equipment was damaged."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The results were unexpected; ___, they were consistent with previous research.",
+        "options": [
+          "although",
+          "however",
+          "because",
+          "despite"
+        ],
+        "correct": 1,
+        "answer": "however",
+        "why": "However linking adverb ويستخدم هنا لإظهار التناقض بين جملتين مستقلتين."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The sample was too small; ___, the researchers repeated the study.",
+        "options": [
+          "therefore",
+          "although",
+          "despite",
+          "because of"
+        ],
+        "correct": 0,
+        "answer": "therefore",
+        "why": "Therefore تستخدم للتعبير عن النتيجة، وهنا جاءت بعد semicolon وقبل comma."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "Although the method was expensive, but it was effective.",
+          "Although the method was expensive, it was effective.",
+          "Despite the method was expensive, it was effective.",
+          "Because of the method was expensive, it was effective."
+        ],
+        "correct": 1,
+        "answer": "Although the method was expensive, it was effective.",
+        "why": "Although تكفي لربط الجملة المتناقضة، ولا نستخدم but معها في هذا التركيب."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers continued the experiment despite ___ tired.",
+        "options": [
+          "they were",
+          "being",
+          "to be",
+          "were"
+        ],
+        "correct": 1,
+        "answer": "being",
+        "why": "بعد despite يمكن استخدام gerund: despite being tired."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The study was ___ difficult that many students needed help.",
+        "options": [
+          "such",
+          "so",
+          "too",
+          "enough"
+        ],
+        "correct": 1,
+        "answer": "so",
+        "why": "التركيب هو so + adjective + that: so difficult that."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "It was ___ difficult task that many students needed help.",
+        "options": [
+          "so",
+          "such a",
+          "too a",
+          "very a"
+        ],
+        "correct": 1,
+        "answer": "such a",
+        "why": "التركيب هو such + a/an + adjective + singular countable noun + that."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "When the experiment will finish, we will analyze the results.",
+          "When the experiment finishes, we will analyze the results.",
+          "When the experiment finished, we will analyze the results.",
+          "When the experiment finishing, we will analyze the results."
+        ],
+        "correct": 1,
+        "answer": "When the experiment finishes, we will analyze the results.",
+        "why": "في الزمن المستقبل، نستخدم Present Simple بعد when في الجملة الزمنية."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "The method was expensive, however it was effective.",
+          "The method was expensive; however, it was effective.",
+          "The method was expensive although, it was effective.",
+          "The method was expensive despite it was effective."
+        ],
+        "correct": 1,
+        "answer": "The method was expensive; however, it was effective.",
+        "why": "however linking adverb، وعند ربط جملتين مستقلتين يمكن استخدام semicolon قبله وcomma بعده."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers used both accurate ___ reliable measurements.",
+        "options": [
+          "or",
+          "but",
+          "and",
+          "nor"
+        ],
+        "correct": 2,
+        "answer": "and",
+        "why": "التركيب الثابت هو both ... and."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The method is not only efficient ___ also inexpensive.",
+        "options": [
+          "and",
+          "but",
+          "or",
+          "nor"
+        ],
+        "correct": 1,
+        "answer": "but",
+        "why": "التركيب هو not only ... but also."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers can either repeat the experiment ___ change the method.",
+        "options": [
+          "and",
+          "but",
+          "or",
+          "nor"
+        ],
+        "correct": 2,
+        "answer": "or",
+        "why": "التركيب هو either ... or لتقديم خيارين."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers focused on improving accuracy ___ reducing costs.",
+        "options": [
+          "and",
+          "but",
+          "or",
+          "because"
+        ],
+        "correct": 0,
+        "answer": "and",
+        "why": "and تربط عنصرين متوازيين: improving accuracy وreducing costs."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ you study regularly, you are unlikely to improve.",
+        "options": [
+          "Unless",
+          "Although",
+          "Despite",
+          "Because of"
+        ],
+        "correct": 0,
+        "answer": "Unless",
+        "why": "Unless تعني if not: إذا لم تدرس بانتظام، فمن غير المرجح أن تتحسن."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence correctly uses otherwise?",
+        "options": [
+          "Submit the form today; otherwise, you may miss the deadline.",
+          "Submit the form today although, otherwise you may miss the deadline.",
+          "Otherwise because you submit the form today, you may miss the deadline.",
+          "Submit otherwise the form today, you may miss the deadline."
+        ],
+        "correct": 0,
+        "answer": "Submit the form today; otherwise, you may miss the deadline.",
+        "why": "otherwise تقدم نتيجة بديلة إذا لم يتحقق الفعل الأول، ويمكن استخدامها هنا بعد semicolon."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "Despite the results were positive, the study was repeated.",
+          "Despite of the positive results, the study was repeated.",
+          "Despite the positive results, the study was repeated.",
+          "Despite because the results were positive, the study was repeated."
+        ],
+        "correct": 2,
+        "answer": "Despite the positive results, the study was repeated.",
+        "why": "despite يتبعها noun phrase، ولا نستخدم despite of."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The two studies produced similar results. ___, both recommended further research.",
+        "options": [
+          "Similarly",
+          "Although",
+          "Because of",
+          "Despite"
+        ],
+        "correct": 0,
+        "answer": "Similarly",
+        "why": "Similarly تستخدم لإضافة فكرة مشابهة أو متوافقة مع الفكرة السابقة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The study had several limitations. ___, the sample was relatively small.",
+        "options": [
+          "Moreover",
+          "Although",
+          "Despite",
+          "Because"
+        ],
+        "correct": 0,
+        "answer": "Moreover",
+        "why": "Moreover linking adverb يستخدم لإضافة معلومة أو حجة جديدة، خاصة في الأسلوب الأكاديمي."
+      }
+    ],
+    "markers": [
+      "and",
+      "but",
+      "or",
+      "so",
+      "yet",
+      "because",
+      "since",
+      "as",
+      "although",
+      "though",
+      "even though",
+      "whereas",
+      "while",
+      "if",
+      "unless",
+      "as long as",
+      "provided that",
+      "both ... and",
+      "either ... or",
+      "neither ... nor",
+      "not only ... but also",
+      "however",
+      "therefore",
+      "moreover",
+      "furthermore",
+      "in addition",
+      "consequently",
+      "as a result",
+      "thus",
+      "hence",
+      "in contrast",
+      "on the other hand",
+      "similarly",
+      "likewise",
+      "for example",
+      "for instance",
+      "such as",
+      "in other words",
+      "as soon as",
+      "once",
+      "before",
+      "after",
+      "otherwise"
+    ]
+  }
+]

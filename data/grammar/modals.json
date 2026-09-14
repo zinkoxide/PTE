@@ -1,0 +1,360 @@
+[
+  {
+    "id": "modal-verbs",
+    "title": "الأفعال الناقصة",
+    "category": "الأفعال الناقصة",
+    "icon": "⚡",
+    "description": "تُستخدم الأفعال الناقصة مثل can و could و may و might و must و should و will و would للتعبير عن القدرة، الاحتمال، الضرورة، النصيحة، الإذن، التوقع، الالتزام، والافتراض. وتتميز بأنها تتبعها صيغة الفعل الأساسية دون to في معظم الحالات.",
+    "explanation": "Modal Verbs هي أفعال مساعدة لها استخدامات متعددة، وتساعدنا على التعبير عن معنى المتحدث تجاه الفعل، مثل القدرة أو الاحتمال أو الضرورة أو النصيحة أو الإذن. من أشهرها can, could, may, might, must, should, will, would, shall. القاعدة الأساسية هي أن الـmodal verb يتبعه الفعل في صورته الأساسية: She can speak English، وليس She can speaks English. كما أن الـmodal نفسه لا يأخذ s مع he أو she أو it، فنقول He can وليس He cans. لا نستخدم do أو does أو did في السؤال والنفي مع الـmodal؛ فنقول Can you swim? و You cannot swim?، ونستخدم can’t في النفي. تختلف معاني الـmodals حسب السياق. يمكن أن تعبر can عن القدرة أو الإذن أو الإمكانية العامة، بينما could يمكن أن تعبر عن قدرة في الماضي أو طلب مهذب أو احتمال. May و might يستخدمان غالبًا للاحتمال، مع كون might عادةً أقل تأكيدًا من may. Must تعبر عن ضرورة قوية أو استنتاج منطقي، بينما have to تعبر عن ضرورة أو التزام، وغالبًا يكون مصدرها قاعدة أو ظرف خارجي. ومن أهم الفروق التي يجب إتقانها أن mustn't تعني أن الفعل ممنوع، بينما don't have to تعني أن الفعل غير ضروري، أي يمكنك فعله أو عدم فعله. Should و ought to يستخدمان للنصيحة والتوقع والواجب الأخلاقي، ويمكن استخدام should have + past participle للنصيحة أو النقد بشأن الماضي. كما يمكن استخدام modal + have + past participle للاستنتاج أو الاحتمال أو الندم حول أحداث ماضية، مثل must have forgotten و might have missed و should have studied. في أسئلة PTE، لا يكفي حفظ معنى كل modal منفردًا؛ يجب فهم العلاقة بين modal والسياق، والتمييز بين درجات الاحتمال والضرورة، والانتباه إلى الصيغة التي تأتي بعده.",
+    "rules": [
+      "بعد معظم Modal Verbs نستخدم الفعل في صورته الأساسية دون to: She can swim.",
+      "لا نضيف s إلى الفعل بعد modal حتى مع he أو she أو it: He can drive وليس He can drives.",
+      "لا نستخدم do أو does أو did لتكوين السؤال مع modal: Can you help me?",
+      "في النفي نضع not بعد modal: cannot, can't, could not, couldn't, should not, shouldn't.",
+      "can تُستخدم للتعبير عن القدرة في الحاضر أو الإمكانية العامة: She can speak three languages.",
+      "could تُستخدم للتعبير عن القدرة في الماضي، وكذلك للطلبات المهذبة والاحتمال: Could you help me?",
+      "may تُستخدم للتعبير عن الاحتمال أو الإذن الرسمي: It may rain later.",
+      "might تُستخدم غالبًا للتعبير عن احتمال، وغالبًا يكون الاحتمال أقل تأكيدًا من may: It might rain later.",
+      "must تُستخدم للتعبير عن ضرورة قوية أو التزام قوي، ويمكن استخدامها للاستنتاج المنطقي: You must wear a seat belt.",
+      "have to تُستخدم للتعبير عن الضرورة أو الالتزام، وغالبًا يكون السبب خارجيًا مثل قانون أو نظام أو ظرف.",
+      "mustn't تعني المنع أو عدم السماح: You mustn't smoke here.",
+      "don't have to تعني عدم وجود ضرورة: You don't have to come early.",
+      "should تُستخدم للنصيحة أو الواجب أو التوقع: You should study more.",
+      "ought to تحمل معنى قريبًا من should، لكنها أقل شيوعًا في بعض السياقات: You ought to apologize.",
+      "will تُستخدم للتعبير عن المستقبل، والقرارات، والوعود، والتوقعات، والاستعداد أو الرغبة في بعض السياقات.",
+      "would تُستخدم في الطلبات المهذبة، والحالات الافتراضية، والعادات المتكررة في الماضي وبعض التراكيب الشرطية.",
+      "shall تُستخدم بشكل محدود، خاصة في الاقتراحات والأسئلة مع I وwe: Shall we start?",
+      "needn't تعني أن الشيء غير ضروري، وهي قريبة في المعنى من don't have to.",
+      "dare يمكن أن تعمل كفعل عادي أو كـmodal في بعض الاستخدامات، لكنها أقل شيوعًا في الإنجليزية الحديثة الرسمية.",
+      "في النفي مع must نستخدم mustn't عندما يكون المعنى ممنوعًا، وليس don't must.",
+      "بعد have to يمكن أن يأتي to + infinitive: I have to study.",
+      "في الماضي نستخدم had to للتعبير عن ضرورة حدثت في الماضي: I had to leave early.",
+      "لا نستخدم must عادةً للتعبير عن ضرورة ماضية بالطريقة نفسها؛ غالبًا نستخدم had to: I had to work yesterday.",
+      "للتعبير عن ضرورة مستقبلية يمكن استخدام will have to: You will have to submit the form tomorrow.",
+      "يمكن استخدام must have + past participle للاستنتاج القوي حول الماضي: She must have forgotten.",
+      "يمكن استخدام may have + past participle و might have + past participle للتعبير عن احتمال حدوث شيء في الماضي.",
+      "could have + past participle يمكن أن تشير إلى إمكانية لم تتحقق أو احتمال في الماضي حسب السياق.",
+      "should have + past participle تستخدم للنصيحة أو الانتقاد أو التوقع الذي لم يتحقق في الماضي.",
+      "can't have + past participle تُستخدم للاستنتاج بأن شيئًا ما لم يحدث في الماضي: He can't have forgotten.",
+      "modal + be + adjective أو noun يُستخدم لوصف حالة أو احتمال: He might be tired.",
+      "modal + be + verb-ing يمكن أن يصف فعلًا مستمرًا: She may be studying now.",
+      "في PTE، يجب تحديد معنى الجملة أولًا: قدرة، احتمال، ضرورة، منع، نصيحة، استنتاج، ثم اختيار الـmodal المناسب.",
+      "إذا جاء modal verb قبل فراغ، فغالبًا يجب أن نبحث عن الفعل الأساسي وليس صيغة فعل تحتوي على s أو ed.",
+      "درجة الاحتمال مهمة: must قد تدل على استنتاج قوي، بينما may وmight تدلان على احتمال، وcan't تدل على استحالة أو استنتاج قوي بالنفي."
+    ],
+    "examples": [
+      {
+        "en": "She can speak English fluently.",
+        "ar": "يمكنها التحدث بالإنجليزية بطلاقة."
+      },
+      {
+        "en": "When I was young, I could swim very well.",
+        "ar": "عندما كنت صغيرًا، كنت أستطيع السباحة جيدًا جدًا."
+      },
+      {
+        "en": "Could you help me with this report?",
+        "ar": "هل يمكنك مساعدتي في هذا التقرير؟"
+      },
+      {
+        "en": "The results may change after further research.",
+        "ar": "قد تتغير النتائج بعد إجراء مزيد من البحث."
+      },
+      {
+        "en": "The results might change if new evidence appears.",
+        "ar": "قد تتغير النتائج إذا ظهرت أدلة جديدة."
+      },
+      {
+        "en": "All students must submit their assignments on time.",
+        "ar": "يجب على جميع الطلاب تسليم واجباتهم في الموعد."
+      },
+      {
+        "en": "You have to wear protective equipment in the laboratory.",
+        "ar": "يجب عليك ارتداء معدات الحماية في المختبر."
+      },
+      {
+        "en": "You mustn't use your phone during the exam.",
+        "ar": "يُمنع استخدام هاتفك أثناء الامتحان."
+      },
+      {
+        "en": "You don't have to attend the meeting.",
+        "ar": "لا يتعين عليك حضور الاجتماع."
+      },
+      {
+        "en": "You should check the data before publishing the results.",
+        "ar": "ينبغي أن تتحقق من البيانات قبل نشر النتائج."
+      },
+      {
+        "en": "We ought to consider all the available evidence.",
+        "ar": "ينبغي أن نأخذ جميع الأدلة المتاحة في الاعتبار."
+      },
+      {
+        "en": "I will help you with the project.",
+        "ar": "سأساعدك في المشروع."
+      },
+      {
+        "en": "Would you like some coffee?",
+        "ar": "هل ترغب في بعض القهوة؟"
+      },
+      {
+        "en": "You must be tired after such a long journey.",
+        "ar": "لا بد أنك متعب بعد رحلة طويلة كهذه."
+      },
+      {
+        "en": "She must have forgotten the appointment.",
+        "ar": "لا بد أنها نسيت الموعد."
+      },
+      {
+        "en": "He might have missed the train.",
+        "ar": "ربما يكون قد فاتته القطار."
+      },
+      {
+        "en": "They should have informed us earlier.",
+        "ar": "كان ينبغي أن يخبرونا في وقت أبكر."
+      },
+      {
+        "en": "He can't have understood the instructions.",
+        "ar": "من المستحيل أنه فهم التعليمات."
+      },
+      {
+        "en": "We had to cancel the experiment because of the weather.",
+        "ar": "اضطررنا إلى إلغاء التجربة بسبب الطقس."
+      },
+      {
+        "en": "You will have to complete the form before registration.",
+        "ar": "سيتعين عليك إكمال النموذج قبل التسجيل."
+      }
+    ],
+    "commonMistakes": [
+      "❌ She can speaks English. → ✅ She can speak English. (بعد modal نستخدم الفعل الأساسي دون s).",
+      "❌ He must to study harder. → ✅ He must study harder. (لا نستخدم to بعد must).",
+      "❌ You don't must leave now. → ✅ You mustn't leave now. (إذا كان المعنى ممنوعًا نستخدم mustn't).",
+      "❌ You mustn't come if you don't want to. → إذا كان المقصود عدم وجود ضرورة، فالأفضل: ✅ You don't have to come. (mustn't = ممنوع، don't have to = غير ضروري).",
+      "❌ She may goes tomorrow. → ✅ She may go tomorrow. (بعد may نستخدم الفعل الأساسي).",
+      "❌ He cans swim. → ✅ He can swim. (Modal Verbs لا تأخذ s مع he/she/it).",
+      "❌ I musted leave early. → ✅ I had to leave early. (للتعبير عن الضرورة في الماضي نستخدم had to).",
+      "❌ She must have forgot the meeting. → ✅ She must have forgotten the meeting. (بعد have نستخدم التصريف الثالث).",
+      "❌ They should have went earlier. → ✅ They should have gone earlier. (بعد modal + have نستخدم past participle).",
+      "❌ He might to be late. → ✅ He might be late. (لا نستخدم to بعد might)."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "She ___ speak three languages.",
+        "options": [
+          "can",
+          "cans",
+          "can to",
+          "is can"
+        ],
+        "correct": "can",
+        "answer": "can",
+        "why": "can تتبعها صيغة الفعل الأساسية، ولا تأخذ s مع she."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "You ___ smoke in this area. It is prohibited.",
+        "options": [
+          "don't have to",
+          "mustn't",
+          "might not",
+          "shouldn't have"
+        ],
+        "correct": "mustn't",
+        "answer": "mustn't",
+        "why": "mustn't تعني المنع وعدم السماح، بينما don't have to تعني عدم وجود ضرورة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "You ___ bring your own laptop. We have enough computers.",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "can't",
+          "shouldn't"
+        ],
+        "correct": "don't have to",
+        "answer": "don't have to",
+        "why": "المعنى هو أن إحضار الحاسوب غير ضروري، وليس ممنوعًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "You look exhausted. You ___ be tired.",
+        "options": [
+          "must",
+          "can",
+          "shouldn't",
+          "wouldn't"
+        ],
+        "correct": "must",
+        "answer": "must",
+        "why": "must هنا تستخدم للاستنتاج المنطقي القوي بناءً على دليل."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The train is late. It ___ have been delayed by the storm.",
+        "options": [
+          "must",
+          "must have",
+          "should",
+          "can"
+        ],
+        "correct": "must have",
+        "answer": "must have",
+        "why": "must have + past participle تستخدم للاستنتاج القوي عن حدث في الماضي."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She ___ have missed the bus. I'm not sure.",
+        "options": [
+          "must",
+          "might",
+          "should",
+          "has to"
+        ],
+        "correct": "might",
+        "answer": "might",
+        "why": "might have + past participle تعبر عن احتمال حدوث شيء في الماضي."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "You ___ have told me about the problem earlier.",
+        "options": [
+          "should",
+          "can",
+          "may",
+          "mustn't"
+        ],
+        "correct": "should",
+        "answer": "should",
+        "why": "should have + past participle تستخدم للتعبير عن شيء كان من الأفضل أو الواجب فعله في الماضي."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is grammatically correct?",
+        "options": [
+          "He must to study harder.",
+          "He must studies harder.",
+          "He must study harder.",
+          "He must studying harder."
+        ],
+        "correct": "He must study harder.",
+        "answer": "He must study harder.",
+        "why": "بعد must نستخدم الفعل الأساسي دون to أو s أو ing."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "When I was a child, I ___ swim very well.",
+        "options": [
+          "can",
+          "could",
+          "may",
+          "must"
+        ],
+        "correct": "could",
+        "answer": "could",
+        "why": "could تستخدم للتعبير عن القدرة في الماضي."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Students ___ submit their assignments by Friday. It is a university requirement.",
+        "options": [
+          "have to",
+          "might",
+          "could",
+          "would"
+        ],
+        "correct": "have to",
+        "answer": "have to",
+        "why": "have to تستخدم هنا للتعبير عن التزام أو ضرورة ناتجة عن قاعدة خارجية."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence expresses possibility?",
+        "options": [
+          "She must leave now.",
+          "She might arrive late.",
+          "She has to leave now.",
+          "She should leave now."
+        ],
+        "correct": "She might arrive late.",
+        "answer": "She might arrive late.",
+        "why": "might تستخدم للتعبير عن الاحتمال."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence means that something was not necessary?",
+        "options": [
+          "You mustn't attend.",
+          "You don't have to attend.",
+          "You can't attend.",
+          "You shouldn't attend."
+        ],
+        "correct": "You don't have to attend.",
+        "answer": "You don't have to attend.",
+        "why": "don't have to تعني أن الفعل غير ضروري، وليس ممنوعًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "He ___ have forgotten the meeting; he wrote it in his calendar.",
+        "options": [
+          "can't",
+          "must",
+          "might",
+          "should"
+        ],
+        "correct": "can't",
+        "answer": "can't",
+        "why": "can't have + past participle تستخدم للاستنتاج بأن شيئًا ما من غير المحتمل أو المستحيل أنه حدث، والدليل هنا يجعل النسيان غير مرجح."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "We ___ cancel the experiment yesterday because the equipment was damaged.",
+        "options": [
+          "must",
+          "had to",
+          "have to",
+          "should"
+        ],
+        "correct": "had to",
+        "answer": "had to",
+        "why": "للتعبير عن ضرورة حدثت في الماضي نستخدم had to."
+      },
+      {
+        "type": "true_false",
+        "prompt": "After a modal verb such as can, must, or should, we normally use the base form of the verb.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": "True",
+        "answer": "True",
+        "why": "مثل: can go, must study, should work."
+      }
+    ],
+    "markers": [
+      "can",
+      "could",
+      "may",
+      "might",
+      "must",
+      "have to",
+      "has to",
+      "had to",
+      "will have to",
+      "should",
+      "ought to",
+      "will",
+      "would",
+      "shall",
+      "needn't",
+      "mustn't",
+      "don't have to",
+      "must have",
+      "may have",
+      "might have",
+      "could have",
+      "should have",
+      "can't have"
+    ]
+  }
+]

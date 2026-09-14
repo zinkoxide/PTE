@@ -1,0 +1,336 @@
+[
+  {
+    "id": "passive-voice",
+    "title": "المبني للمجهول",
+    "category": "تراكيب الجمل",
+    "icon": "🔄",
+    "description": "يُستخدم المبني للمجهول عندما يكون التركيز على الفعل أو الشيء الذي وقع عليه الفعل بدلًا من الشخص الذي قام به. ويظهر بكثرة في اللغة الأكاديمية والعلمية، مما يجعله مهمًا جدًا في أسئلة الـPTE.",
+    "explanation": "يتكون المبني للمجهول بشكل أساسي من صيغة مناسبة من الفعل be + التصريف الثالث للفعل (past participle). في الجملة المبنية للمعلوم يكون التركيز عادةً على الفاعل الذي يقوم بالفعل، مثل: Scientists conducted the experiment. أما في المبني للمجهول فنقول: The experiment was conducted by scientists. هنا أصبح experiment هو محور الجملة، بينما يمكن حذف by scientists إذا لم يكن من المهم معرفة من أجرى التجربة. نستخدم المبني للمجهول عندما يكون الفاعل مجهولًا، أو عندما يكون واضحًا من السياق، أو عندما لا يكون مهمًا، أو عندما نريد التركيز على النتيجة أو العملية بدلًا من الشخص الذي قام بها. وهو شائع جدًا في الكتابة الأكاديمية والعلمية، مثل: The samples were collected and analyzed. أهم نقطة هي أن زمن الجملة لا يختفي عند تحويلها إلى passive؛ بل يتغير شكل be حسب الزمن بينما يبقى الفعل الرئيسي في التصريف الثالث. فالمضارع البسيط يصبح am/is/are + V3، والماضي البسيط يصبح was/were + V3، والمضارع المستمر يصبح am/is/are being + V3، والماضي المستمر يصبح was/were being + V3، والمضارع التام يصبح has/have been + V3، والماضي التام يصبح had been + V3، والمستقبل البسيط يصبح will be + V3. كما يمكن استخدام passive بعد الأفعال الناقصة: modal + be + V3، مثل: The results must be verified. وفي الأزمنة التامة مع modal نستخدم modal + have been + V3، مثل: The error may have been caused by a technical problem. عند تحويل جملة من active إلى passive، يصبح المفعول به في الجملة الأصلية هو الفاعل النحوي في الجملة الجديدة، ويظل الفعل في التصريف الثالث، ويمكن إضافة الفاعل الأصلي بعد by إذا كان ذكره مهمًا. بعض الأفعال لا يمكن تحويلها إلى passive إذا لم يكن لها مفعول به مباشر. وفي PTE، من أهم المهارات تحديد الفاعل والمفعول به، معرفة زمن الجملة، ثم اختيار صيغة be المناسبة قبل V3. كما يجب الانتباه إلى أن passive غالبًا أكثر شيوعًا في الكتابة الأكاديمية عندما يكون التركيز على العملية أو النتائج، لكنه ليس مطلوبًا في كل جملة لمجرد أن الجملة أكاديمية.",
+    "rules": [
+      "الصيغة الأساسية للمبني للمجهول هي: be + past participle (V3).",
+      "عند تحويل active إلى passive، يصبح المفعول به في الجملة الأصلية هو الفاعل النحوي في الجملة الجديدة.",
+      "يجب أن يتوافق فعل be مع زمن الجملة، بينما يبقى الفعل الرئيسي في التصريف الثالث.",
+      "Present Simple Passive: am/is/are + V3.",
+      "Past Simple Passive: was/were + V3.",
+      "Present Continuous Passive: am/is/are + being + V3.",
+      "Past Continuous Passive: was/were + being + V3.",
+      "Present Perfect Passive: has/have + been + V3.",
+      "Past Perfect Passive: had + been + V3.",
+      "Future Simple Passive: will + be + V3.",
+      "Future Perfect Passive: will + have been + V3.",
+      "Modal Passive: modal + be + V3.",
+      "Modal Perfect Passive: modal + have been + V3.",
+      "في النفي نضع not بعد أول فعل مساعد: The report was not completed.",
+      "في السؤال نضع الفعل المساعد قبل الفاعل: Was the report completed?",
+      "يمكن استخدام by + agent عندما يكون من المهم ذكر الشخص أو الجهة التي قامت بالفعل.",
+      "يمكن حذف by + agent عندما يكون الفاعل مجهولًا أو واضحًا أو غير مهم.",
+      "نستخدم passive كثيرًا في الكتابة الأكاديمية والعلمية للتركيز على العمليات والنتائج.",
+      "لا يمكن عادةً تحويل الفعل اللازم الذي لا يأخذ مفعولًا به مباشرًا إلى passive.",
+      "الأفعال التي لها مفعولان مثل give يمكن أن يكون لها أكثر من صيغة passive حسب المفعول الذي نريد التركيز عليه.",
+      "الأفعال التي تتبعها حروف جر يمكن أن تظهر في passive مع الاحتفاظ بحرف الجر: The problem was dealt with.",
+      "عند تحويل جملة فيها modal، نستخدم modal + be + V3 بدلًا من صيغة active العادية.",
+      "عند تحويل جملة فيها modal perfect، نستخدم modal + have been + V3.",
+      "عند تحويل Present Perfect إلى passive تصبح has/have been + V3، وليس has/have being + V3.",
+      "عند تحويل Continuous إلى passive يجب الاحتفاظ بـ being قبل V3.",
+      "في PTE، يجب تحديد الزمن أولًا قبل اختيار صيغة passive؛ وجود V3 وحده لا يكفي.",
+      "وجود by لا يعني تلقائيًا أن الجملة passive؛ يجب النظر إلى تركيب الفعل كاملًا.",
+      "بعض التراكيب الأكاديمية الشائعة تستخدم passive بشكل متكرر، مثل is considered, is known, is believed, is expected, is regarded as.",
+      "يمكن استخدام passive reporting structures مثل: It is believed that... و The study is believed to show...",
+      "ليس كل فعل في الكتابة الأكاديمية يجب أن يكون passive؛ نستخدمه عندما يكون التركيز على الحدث أو النتيجة أو عندما يكون الفاعل غير مهم."
+    ],
+    "examples": [
+      {
+        "en": "Scientists conduct the experiment.",
+        "ar": "يجري العلماء التجربة."
+      },
+      {
+        "en": "The experiment is conducted by scientists.",
+        "ar": "تُجرى التجربة بواسطة العلماء."
+      },
+      {
+        "en": "The researchers collected the samples.",
+        "ar": "جمع الباحثون العينات."
+      },
+      {
+        "en": "The samples were collected by the researchers.",
+        "ar": "جُمعت العينات بواسطة الباحثين."
+      },
+      {
+        "en": "They are building a new laboratory.",
+        "ar": "إنهم يبنون مختبرًا جديدًا."
+      },
+      {
+        "en": "A new laboratory is being built.",
+        "ar": "يجري بناء مختبر جديد."
+      },
+      {
+        "en": "The team has completed the project.",
+        "ar": "أكمل الفريق المشروع."
+      },
+      {
+        "en": "The project has been completed.",
+        "ar": "تم إكمال المشروع."
+      },
+      {
+        "en": "The company will launch the product next month.",
+        "ar": "ستطلق الشركة المنتج الشهر القادم."
+      },
+      {
+        "en": "The product will be launched next month.",
+        "ar": "سيتم إطلاق المنتج الشهر القادم."
+      },
+      {
+        "en": "The researchers had analyzed the data before the meeting.",
+        "ar": "كان الباحثون قد حللوا البيانات قبل الاجتماع."
+      },
+      {
+        "en": "The data had been analyzed before the meeting.",
+        "ar": "كانت البيانات قد حُللت قبل الاجتماع."
+      },
+      {
+        "en": "The results must be verified before publication.",
+        "ar": "يجب التحقق من النتائج قبل النشر."
+      },
+      {
+        "en": "The problem may have been caused by a technical error.",
+        "ar": "ربما يكون الخطأ قد نتج عن مشكلة تقنية."
+      },
+      {
+        "en": "English is spoken in many countries.",
+        "ar": "يتم التحدث بالإنجليزية في العديد من الدول."
+      },
+      {
+        "en": "The study is believed to provide important evidence.",
+        "ar": "يُعتقد أن الدراسة تقدم دليلًا مهمًا."
+      },
+      {
+        "en": "It is expected that the population will increase.",
+        "ar": "من المتوقع أن يزداد عدد السكان."
+      },
+      {
+        "en": "The issue was dealt with carefully.",
+        "ar": "تم التعامل مع القضية بعناية."
+      }
+    ],
+    "commonMistakes": [
+      "❌ The experiment is conduct by the researchers. → ✅ The experiment is conducted by the researchers. (بعد be في passive نستخدم V3).",
+      "❌ The samples were collect yesterday. → ✅ The samples were collected yesterday. (نحتاج التصريف الثالث).",
+      "❌ The project has been complete. → ✅ The project has been completed. (بعد been نستخدم V3).",
+      "❌ The building is being construct. → ✅ The building is being constructed. (في Present Continuous Passive نستخدم being + V3).",
+      "❌ The results will be publish tomorrow. → ✅ The results will be published tomorrow. (will be + V3).",
+      "❌ The report must completed today. → ✅ The report must be completed today. (Modal Passive = modal + be + V3).",
+      "❌ The data has been analyzed by the researchers yesterday. → ✅ The data was analyzed by the researchers yesterday. (yesterday يشير إلى وقت ماضٍ مكتمل، لذلك نستخدم Past Simple Passive).",
+      "❌ The research was conducted the scientists. → ✅ The research was conducted by the scientists. (عند ذكر الفاعل بعد passive نستخدم by).",
+      "❌ The students were studied the material. → ✅ The material was studied by the students. (لا يمكن أن يكون students فاعلًا بهذه الصيغة؛ يجب إعادة بناء الجملة passive بشكل صحيح).",
+      "❌ The problem was dealt carefully. → ✅ The problem was dealt with carefully. (بعض الأفعال المركبة تحتفظ بحرف الجر في passive)."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "The experiment ___ by the researchers yesterday.",
+        "options": [
+          "conducted",
+          "was conducted",
+          "is conducting",
+          "has conduct"
+        ],
+        "correct": "was conducted",
+        "answer": "was conducted",
+        "why": "الجملة في الماضي البسيط، والمبني للمجهول في Past Simple هو was/were + V3."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The results ___ before publication.",
+        "options": [
+          "must verify",
+          "must be verified",
+          "must verified",
+          "must be verify"
+        ],
+        "correct": "must be verified",
+        "answer": "must be verified",
+        "why": "Modal Passive يتكون من modal + be + V3."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "A new laboratory ___ at the university now.",
+        "options": [
+          "is being built",
+          "is built",
+          "was built",
+          "has built"
+        ],
+        "correct": "is being built",
+        "answer": "is being built",
+        "why": "now مع معنى أن البناء جارٍ يشير إلى Present Continuous Passive."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The project ___ by the team.",
+        "options": [
+          "has completed",
+          "has been completed",
+          "has been complete",
+          "is completing"
+        ],
+        "correct": "has been completed",
+        "answer": "has been completed",
+        "why": "Present Perfect Passive يتكون من has/have + been + V3."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The product ___ next month.",
+        "options": [
+          "will launch",
+          "will be launched",
+          "will launched",
+          "is launching"
+        ],
+        "correct": "will be launched",
+        "answer": "will be launched",
+        "why": "Future Simple Passive هو will + be + V3."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The data ___ before the meeting started.",
+        "options": [
+          "had analyzed",
+          "had been analyzed",
+          "was analyzing",
+          "has been analyzed"
+        ],
+        "correct": "had been analyzed",
+        "answer": "had been analyzed",
+        "why": "Past Perfect Passive يتكون من had + been + V3."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The problem ___ carefully by the committee.",
+        "options": [
+          "was dealt with",
+          "was dealt",
+          "dealt with",
+          "is dealing"
+        ],
+        "correct": "was dealt with",
+        "answer": "was dealt with",
+        "why": "الفعل deal with يحتفظ بحرف الجر with عند استخدامه في passive."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "The report is write by the student.",
+          "The report is written by the student.",
+          "The report is writing by the student.",
+          "The report written by the student."
+        ],
+        "correct": "The report is written by the student.",
+        "answer": "The report is written by the student.",
+        "why": "Present Simple Passive = am/is/are + V3."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is in the passive voice?",
+        "options": [
+          "Scientists analyzed the data.",
+          "The researchers collected the samples.",
+          "The data was analyzed by scientists.",
+          "The students completed the task."
+        ],
+        "correct": "The data was analyzed by scientists.",
+        "answer": "The data was analyzed by scientists.",
+        "why": "الجملة تحتوي على was + analyzed، وهي صيغة Past Simple Passive."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is grammatically correct?",
+        "options": [
+          "The results have been publish.",
+          "The results have been published.",
+          "The results has been published.",
+          "The results have being published."
+        ],
+        "correct": "The results have been published.",
+        "answer": "The results have been published.",
+        "why": "Results جمع، لذلك نستخدم have، وPresent Perfect Passive يحتاج been + V3."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The problem may ___ by a technical error.",
+        "options": [
+          "have caused",
+          "have been caused",
+          "be caused",
+          "been caused"
+        ],
+        "correct": "have been caused",
+        "answer": "have been caused",
+        "why": "للتعبير عن احتمال حدوث شيء في الماضي بصيغة passive نستخدم may have been + V3."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is more appropriate for academic writing when the researcher is not important?",
+        "options": [
+          "The researchers analyzed the data.",
+          "The data was analyzed.",
+          "The researchers were analyzing the data.",
+          "The researchers have analyzed the data."
+        ],
+        "correct": "The data was analyzed.",
+        "answer": "The data was analyzed.",
+        "why": "المبني للمجهول يركز على البيانات والعملية بدلًا من الباحثين عندما لا يكون الفاعل مهمًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The students are completing the assignment. Choose the passive form.",
+        "options": [
+          "The assignment is completed by the students.",
+          "The assignment is being completed by the students.",
+          "The assignment was completed by the students.",
+          "The assignment has been completed by the students."
+        ],
+        "correct": "The assignment is being completed by the students.",
+        "answer": "The assignment is being completed by the students.",
+        "why": "الجملة الأصلية في Present Continuous، لذلك يصبح passive: is being + V3."
+      },
+      {
+        "type": "true_false",
+        "prompt": "In passive voice, the main verb is normally used in the past participle form.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": "True",
+        "answer": "True",
+        "why": "الفعل الرئيسي في المبني للمجهول يأتي عادةً في صيغة V3، بينما يتغير فعل be حسب الزمن."
+      }
+    ],
+    "markers": [
+      "is done",
+      "are made",
+      "was built",
+      "were collected",
+      "is being developed",
+      "are being studied",
+      "was being used",
+      "has been completed",
+      "have been analyzed",
+      "had been finished",
+      "will be published",
+      "will have been completed",
+      "must be",
+      "should be",
+      "can be",
+      "may be",
+      "might be",
+      "must have been",
+      "may have been",
+      "is believed",
+      "is considered",
+      "is expected",
+      "is known",
+      "by"
+    ]
+  }
+]

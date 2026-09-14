@@ -1,0 +1,462 @@
+[
+  {
+    "id": "reported-speech",
+    "title": "الكلام المباشر وغير المباشر",
+    "category": "تراكيب الجمل",
+    "icon": "💬",
+    "description": "شرح الكلام المباشر وغير المباشر، وقواعد تغيير الأزمنة والضمائر وكلمات الزمان والمكان، بالإضافة إلى نقل الأسئلة والأوامر والطلبات والنصائح بطريقة صحيحة.",
+    "explanation": "الكلام المباشر (Direct Speech) ينقل كلام الشخص كما قاله بالضبط، وغالبًا يوضع بين علامتي اقتباس. أما الكلام غير المباشر (Reported Speech أو Indirect Speech) فينقل معنى كلام الشخص دون تكراره حرفيًا. عند تحويل الكلام المباشر إلى غير مباشر، قد نحتاج إلى تغيير الزمن والضمائر وكلمات الزمان والمكان، ويعتمد ذلك على زمن فعل النقل والسياق. في أسئلة PTE، من أهم المهارات تحديد نوع الجملة أولًا: statement أو question أو command/request، ثم اختيار البنية المناسبة.",
+    "rules": [
+      "الكلام المباشر ينقل الكلمات الأصلية للمتحدث، مثل: He said, \"I am tired.\"",
+      "الكلام غير المباشر ينقل المعنى، مثل: He said that he was tired.",
+      "غالبًا نستخدم say أو tell كأفعال نقل للكلام.",
+      "نستخدم say + clause، مثل: She said that she was busy.",
+      "نستخدم tell + object + clause، مثل: She told me that she was busy.",
+      "لا نقول عادة: She told that she was busy. يجب أن يأتي مفعول به بعد tell.",
+      "إذا كان فعل النقل في الماضي، يحدث غالبًا Backshift، أي رجوع الزمن خطوة إلى الماضي.",
+      "Present Simple يتحول غالبًا إلى Past Simple بعد فعل نقل في الماضي.",
+      "Present Continuous يتحول غالبًا إلى Past Continuous.",
+      "Present Perfect يتحول غالبًا إلى Past Perfect.",
+      "Past Simple يتحول غالبًا إلى Past Perfect.",
+      "Past Continuous يتحول غالبًا إلى Past Perfect Continuous في الحالات التي تتطلب توضيح التسلسل الزمني.",
+      "Will يتحول غالبًا إلى would.",
+      "Can يتحول غالبًا إلى could.",
+      "May يتحول غالبًا إلى might.",
+      "Past Perfect لا يحتاج عادةً إلى تغيير إضافي لأنه بالفعل زمن سابق بالنسبة إلى نقطة مرجعية ماضية.",
+      "الأفعال الناقصة مثل could وshould وwould وmight غالبًا لا تتغير عند النقل.",
+      "يجب تغيير الضمير حسب المتحدث والمخاطَب، وليس وفق قاعدة ثابتة واحدة.",
+      "I قد تتحول إلى he أو she حسب الشخص الذي قال الجملة.",
+      "My قد تتحول إلى his أو her حسب المتحدث.",
+      "You قد تتحول إلى I أو we أو he أو she أو they حسب الشخص الذي كان المخاطَب.",
+      "كلمات الزمان والمكان قد تتغير عند نقل الكلام إذا تغير السياق.",
+      "today قد تتحول إلى that day.",
+      "yesterday قد تتحول إلى the day before أو the previous day.",
+      "tomorrow قد تتحول إلى the next day أو the following day.",
+      "now قد تتحول إلى then.",
+      "this قد تتحول إلى that، وthese قد تتحول إلى those عندما يتغير السياق.",
+      "here قد تتحول إلى there عندما يتغير مكان المتحدث.",
+      "أسئلة Yes/No في الكلام غير المباشر تستخدم whether أو if.",
+      "في السؤال غير المباشر لا نستخدم ترتيب السؤال؛ نستخدم ترتيب الجملة العادية Subject + Verb.",
+      "He asked, \"Are you ready?\" تصبح He asked if I was ready.",
+      "في أسئلة Wh- نحتفظ بأداة السؤال مثل what وwhere وwhy وwhen وhow.",
+      "بعد أداة السؤال في الكلام غير المباشر نستخدم ترتيب الجملة العادية وليس ترتيب السؤال.",
+      "He asked, \"Where do you live?\" تصبح He asked where I lived.",
+      "لا نستخدم do أو does أو did داخل السؤال غير المباشر.",
+      "في الكلام غير المباشر لا نضع علامة استفهام عادةً إذا كانت الجملة كلها statement.",
+      "الأوامر يمكن نقلها باستخدام tell + object + to-infinitive.",
+      "النفي في الأمر يستخدم not to + base verb.",
+      "She said to me, \"Open the door.\" يمكن نقلها إلى She told me to open the door.",
+      "She said to me, \"Don't open the door.\" تصبح She told me not to open the door.",
+      "الطلبات يمكن نقلها باستخدام ask + object + to-infinitive.",
+      "النصيحة يمكن نقلها باستخدام advise + object + to-infinitive أو advise that + clause.",
+      "التحذير يمكن نقله باستخدام warn + object + to-infinitive أو warn + object + not to-infinitive.",
+      "الأفعال مثل remind وencourage وpersuade تحتاج إلى الانتباه إلى نمطها النحوي.",
+      "remind + object + to-infinitive تعني تذكير شخص بأن يفعل شيئًا.",
+      "encourage + object + to-infinitive تعني تشجيع شخص على فعل شيء.",
+      "persuade + object + to-infinitive تعني إقناع شخص بفعل شيء.",
+      "عند استخدام say لا نضع الشخص مباشرة بعد say دون حرف جر أو تركيب مناسب.",
+      "say + something، بينما tell + somebody + something.",
+      "لا يجب تغيير الزمن آليًا في كل الحالات؛ أحيانًا يبقى الزمن كما هو إذا كانت الحقيقة ما زالت صحيحة.",
+      "إذا كان فعل النقل في المضارع، لا نحتاج عادةً إلى Backshift.",
+      "إذا كان الكلام الأصلي حقيقة علمية أو حقيقة ما زالت صحيحة، يمكن الاحتفاظ بالزمن الأصلي حتى بعد فعل نقل في الماضي.",
+      "إذا كان المتحدث ينقل معلومة ما زالت صحيحة، يمكن استخدام Present Simple بدل Past Simple.",
+      "في PTE، يجب تحديد العلاقة الزمنية بين الكلام الأصلي ولحظة النقل بدل تغيير الزمن بشكل آلي.",
+      "إذا كانت الجملة الأصلية تحتوي على Future in the Past مثل would، فغالبًا يبقى would كما هو.",
+      "في التحويل إلى الكلام غير المباشر، يجب الحفاظ على المعنى الأصلي وعدم تغيير نوع الجملة.",
+      "التمييز بين statement وquestion وcommand من أهم خطوات حل أسئلة Reported Speech في PTE."
+    ],
+    "examples": [
+      {
+        "en": "He said, \"I am tired.\" → He said that he was tired.",
+        "ar": "قال: «أنا متعب». → قال إنه كان متعبًا."
+      },
+      {
+        "en": "She said, \"I work in a hospital.\" → She said that she worked in a hospital.",
+        "ar": "قالت: «أعمل في مستشفى». → قالت إنها كانت تعمل في مستشفى."
+      },
+      {
+        "en": "They said, \"We are studying for the exam.\" → They said that they were studying for the exam.",
+        "ar": "قالوا: «نحن ندرس للامتحان». → قالوا إنهم كانوا يدرسون للامتحان."
+      },
+      {
+        "en": "He said, \"I have finished the report.\" → He said that he had finished the report.",
+        "ar": "قال: «لقد أنهيت التقرير». → قال إنه كان قد أنهى التقرير."
+      },
+      {
+        "en": "She said, \"I visited London last year.\" → She said that she had visited London the previous year.",
+        "ar": "قالت: «زرت لندن العام الماضي». → قالت إنها كانت قد زارت لندن في العام السابق."
+      },
+      {
+        "en": "He said, \"I will call you tomorrow.\" → He said that he would call me the next day.",
+        "ar": "قال: «سأتصل بك غدًا». → قال إنه سيتصل بي في اليوم التالي."
+      },
+      {
+        "en": "She said, \"I can solve the problem.\" → She said that she could solve the problem.",
+        "ar": "قالت: «أستطيع حل المشكلة». → قالت إنها كانت تستطيع حل المشكلة."
+      },
+      {
+        "en": "He said, \"I may be late.\" → He said that he might be late.",
+        "ar": "قال: «قد أتأخر». → قال إنه قد يتأخر."
+      },
+      {
+        "en": "The researcher said, \"The results are reliable.\" → The researcher said that the results were reliable.",
+        "ar": "قال الباحث: «النتائج موثوقة». → قال الباحث إن النتائج كانت موثوقة."
+      },
+      {
+        "en": "The researcher said, \"Water boils at 100°C.\" → The researcher said that water boils at 100°C.",
+        "ar": "قال الباحث: «يغلي الماء عند 100 درجة مئوية». → قال الباحث إن الماء يغلي عند 100 درجة مئوية."
+      },
+      {
+        "en": "She said, \"I am busy today.\" → She said that she was busy that day.",
+        "ar": "قالت: «أنا مشغولة اليوم». → قالت إنها كانت مشغولة في ذلك اليوم."
+      },
+      {
+        "en": "He said, \"I saw him yesterday.\" → He said that he had seen him the day before.",
+        "ar": "قال: «رأيته أمس». → قال إنه كان قد رآه في اليوم السابق."
+      },
+      {
+        "en": "She said, \"I will finish this tomorrow.\" → She said that she would finish that the next day.",
+        "ar": "قالت: «سأنهي هذا غدًا». → قالت إنها ستنهي ذلك في اليوم التالي."
+      },
+      {
+        "en": "He said, \"I am working here now.\" → He said that he was working there then.",
+        "ar": "قال: «أعمل هنا الآن». → قال إنه كان يعمل هناك في ذلك الوقت."
+      },
+      {
+        "en": "He asked, \"Are you ready?\" → He asked if I was ready.",
+        "ar": "سأل: «هل أنت مستعد؟» → سألني عما إذا كنت مستعدًا."
+      },
+      {
+        "en": "She asked, \"Did you finish the assignment?\" → She asked whether I had finished the assignment.",
+        "ar": "سألت: «هل أنهيت الواجب؟» → سألت عما إذا كنت قد أنهيت الواجب."
+      },
+      {
+        "en": "He asked, \"Where do you live?\" → He asked where I lived.",
+        "ar": "سأل: «أين تعيش؟» → سأل أين كنت أعيش."
+      },
+      {
+        "en": "She asked, \"Why did they leave?\" → She asked why they had left.",
+        "ar": "سألت: «لماذا غادروا؟» → سألت لماذا كانوا قد غادروا."
+      },
+      {
+        "en": "The professor asked, \"When will the experiment start?\" → The professor asked when the experiment would start.",
+        "ar": "سأل الأستاذ: «متى ستبدأ التجربة؟» → سأل الأستاذ متى ستبدأ التجربة."
+      },
+      {
+        "en": "He said to me, \"Close the window.\" → He told me to close the window.",
+        "ar": "قال لي: «أغلق النافذة». → أخبرني أن أغلق النافذة."
+      },
+      {
+        "en": "She said to him, \"Don't touch the equipment.\" → She told him not to touch the equipment.",
+        "ar": "قالت له: «لا تلمس المعدات». → أخبرته ألا يلمس المعدات."
+      },
+      {
+        "en": "He said to me, \"Please help me.\" → He asked me to help him.",
+        "ar": "قال لي: «من فضلك ساعدني». → طلب مني أن أساعده."
+      },
+      {
+        "en": "The doctor said to the patient, \"You should rest.\" → The doctor advised the patient to rest.",
+        "ar": "قال الطبيب للمريض: «يجب أن ترتاح». → نصح الطبيب المريض بالراحة."
+      },
+      {
+        "en": "She said, \"Don't forget to submit the form.\" → She reminded me to submit the form.",
+        "ar": "قالت: «لا تنسَ تقديم النموذج». → ذكّرتني بتقديم النموذج."
+      }
+    ],
+    "commonMistakes": [
+      "استخدام ترتيب السؤال داخل الجملة غير المباشرة: I don't know where does he live. الصحيح: I don't know where he lives.",
+      "استخدام do أو does أو did داخل السؤال غير المباشر. الصحيح: She asked where I lived وليس where did I live.",
+      "الخلط بين say وtell: نقول He said that... لكن He told me that... ولا نقول He told that...",
+      "استخدام if مع whether + to-infinitive. الصحيح: We need to decide whether to continue، وليس if to continue.",
+      "نسيان تغيير الضمير عند الحاجة: He said, \"I am busy\" تصبح He said that he was busy، وليس he said that I was busy.",
+      "تغيير الزمن بشكل آلي حتى عندما تكون المعلومة حقيقة عامة: The teacher said that water boiled at 100°C ليست أفضل من The teacher said that water boils at 100°C إذا كانت الحقيقة العلمية ما زالت صحيحة.",
+      "استخدام علامة استفهام في نهاية كل reported question. الجملة I asked where he lived ليست سؤالًا مباشرًا من حيث البنية، لذلك تنتهي بنقطة.",
+      "استخدام ترتيب السؤال بعد أداة Wh: He asked where was I going خطأ. الصحيح: He asked where I was going.",
+      "استخدام to بعد say بطريقة خاطئة: He said me to leave خطأ. الصحيح: He told me to leave أو He said to me, \"Leave.\"",
+      "نسيان not في نقل النهي: He told me to touch it يغير المعنى. الصحيح: He told me not to touch it.",
+      "الخلط بين tell وask في الطلب: He told me to help him تعني أخبرني/طلب مني بصيغة توجيه، بينما He asked me to help him تعني طلب مني.",
+      "الخلط بين reported command وreported statement: الأمر يحتاج غالبًا إلى object + to-infinitive، وليس that-clause."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "He said, \"I am tired.\" Choose the correct reported speech.",
+        "options": [
+          "He said that he was tired.",
+          "He said that I was tired.",
+          "He told that he was tired.",
+          "He said that he is tired."
+        ],
+        "correct": 0,
+        "answer": "He said that he was tired.",
+        "why": "مع said في الماضي، يتحول Present Simple/Present state غالبًا إلى Past Simple، كما يتغير الضمير I إلى he."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She said, \"I will call you tomorrow.\"",
+        "options": [
+          "She said that she will call me tomorrow.",
+          "She said that she would call me the next day.",
+          "She told that she would call me tomorrow.",
+          "She said that I would call her the next day."
+        ],
+        "correct": 1,
+        "answer": "She said that she would call me the next day.",
+        "why": "will تتحول غالبًا إلى would، وtomorrow تتحول إلى the next day، كما يتغير you حسب السياق إلى me."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "He asked, \"Where do you live?\"",
+        "options": [
+          "He asked where did I live.",
+          "He asked where I lived.",
+          "He asked where do I live.",
+          "He asked where I do live."
+        ],
+        "correct": 1,
+        "answer": "He asked where I lived.",
+        "why": "السؤال غير المباشر يستخدم ترتيب الجملة العادية: subject + verb، ولا نستخدم do."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She asked, \"Are you ready?\"",
+        "options": [
+          "She asked if I was ready.",
+          "She asked if was I ready.",
+          "She asked that I was ready.",
+          "She asked whether was I ready."
+        ],
+        "correct": 0,
+        "answer": "She asked if I was ready.",
+        "why": "أسئلة Yes/No تستخدم if أو whether، وبعدهما نستخدم ترتيب الجملة العادية."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is grammatically correct?",
+        "options": [
+          "He told that he was busy.",
+          "He said me that he was busy.",
+          "He told me that he was busy.",
+          "He told me he is busy yesterday."
+        ],
+        "correct": 2,
+        "answer": "He told me that he was busy.",
+        "why": "tell تحتاج إلى مفعول به، مثل tell me. أما say فلا تحتاج إلى مفعول مباشر بالطريقة نفسها."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The teacher said, \"Water boils at 100°C.\"",
+        "options": [
+          "The teacher said that water boiled at 100°C.",
+          "The teacher said that water boils at 100°C.",
+          "The teacher told that water boils at 100°C.",
+          "The teacher said that water had boiled at 100°C."
+        ],
+        "correct": 1,
+        "answer": "The teacher said that water boils at 100°C.",
+        "why": "الحقيقة العلمية العامة ما زالت صحيحة، لذلك يمكن الاحتفاظ بـ Present Simple."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "He said to me, \"Close the door.\"",
+        "options": [
+          "He said me to close the door.",
+          "He told me close the door.",
+          "He told me to close the door.",
+          "He asked that I close the door."
+        ],
+        "correct": 2,
+        "answer": "He told me to close the door.",
+        "why": "الأوامر تنقل غالبًا باستخدام tell + object + to-infinitive."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She said to him, \"Don't touch it.\"",
+        "options": [
+          "She told him not to touch it.",
+          "She told him to not touched it.",
+          "She said him not touch it.",
+          "She asked him don't touch it."
+        ],
+        "correct": 0,
+        "answer": "She told him not to touch it.",
+        "why": "النهي في الكلام غير المباشر يستخدم not to + base verb."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "I don't know ______.",
+        "options": [
+          "where does he live",
+          "where he lives",
+          "where did he live",
+          "where is he live"
+        ],
+        "correct": 1,
+        "answer": "where he lives",
+        "why": "بعد أداة السؤال في noun clause نستخدم ترتيب الجملة العادية، وليس ترتيب السؤال."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers wanted to know ______ the treatment was effective.",
+        "options": [
+          "if",
+          "that",
+          "what",
+          "why"
+        ],
+        "correct": 0,
+        "answer": "if",
+        "why": "السؤال Yes/No غير المباشر يمكن أن يستخدم if أو whether."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers must decide ______ to continue the experiment.",
+        "options": [
+          "if",
+          "whether",
+          "that",
+          "what"
+        ],
+        "correct": 1,
+        "answer": "whether",
+        "why": "نستخدم whether + to-infinitive، ولا نستخدم if + to-infinitive في هذا التركيب."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She said, \"I have finished the project.\"",
+        "options": [
+          "She said that she has finished the project.",
+          "She said that she had finished the project.",
+          "She told that she had finished the project.",
+          "She said that I had finished the project."
+        ],
+        "correct": 1,
+        "answer": "She said that she had finished the project.",
+        "why": "Present Perfect يتحول غالبًا إلى Past Perfect بعد فعل نقل في الماضي."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "He said, \"I saw the professor yesterday.\"",
+        "options": [
+          "He said that he saw the professor yesterday.",
+          "He said that he had seen the professor the day before.",
+          "He told that he had seen the professor yesterday.",
+          "He said that I had seen the professor the day before."
+        ],
+        "correct": 1,
+        "answer": "He said that he had seen the professor the day before.",
+        "why": "Past Simple يتحول غالبًا إلى Past Perfect، وyesterday تتحول إلى the day before."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence correctly reports a request?",
+        "options": [
+          "She asked me to help her.",
+          "She asked that I to help her.",
+          "She said me to help her.",
+          "She asked me help her."
+        ],
+        "correct": 0,
+        "answer": "She asked me to help her.",
+        "why": "الطلب يستخدم ask + object + to-infinitive."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "He asked where was the station.",
+          "He asked where the station was.",
+          "He asked where did the station be.",
+          "He asked where is the station was."
+        ],
+        "correct": 1,
+        "answer": "He asked where the station was.",
+        "why": "في reported WH-question نستخدم ترتيب الجملة العادية: where + subject + verb."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The doctor said to the patient, \"You should rest.\"",
+        "options": [
+          "The doctor advised the patient to rest.",
+          "The doctor said the patient rest.",
+          "The doctor told that the patient should rest.",
+          "The doctor advised to the patient rest."
+        ],
+        "correct": 0,
+        "answer": "The doctor advised the patient to rest.",
+        "why": "advise يمكن أن تستخدم مع object + to-infinitive."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "She told me that she was busy.",
+          "She told that she was busy.",
+          "She said me that she was busy.",
+          "She told me was busy."
+        ],
+        "correct": 0,
+        "answer": "She told me that she was busy.",
+        "why": "tell تحتاج إلى object، بينما say يمكن أن تأتي مباشرة مع that-clause."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "He said, \"I can solve the problem.\"",
+        "options": [
+          "He said that he can solved the problem.",
+          "He said that he could solve the problem.",
+          "He said that he could solved the problem.",
+          "He told that he could solve the problem."
+        ],
+        "correct": 1,
+        "answer": "He said that he could solve the problem.",
+        "why": "can تتحول غالبًا إلى could، وبعد modal نستخدم base verb: solve."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which reported question is correct?",
+        "options": [
+          "She asked what did he want.",
+          "She asked what he wanted.",
+          "She asked what does he want.",
+          "She asked what he does wanted."
+        ],
+        "correct": 1,
+        "answer": "She asked what he wanted.",
+        "why": "يجب استخدام ترتيب الجملة العادية وعدم استخدام did داخل reported question."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence correctly reports the warning: \"Don't enter the laboratory\"?",
+        "options": [
+          "The scientist warned us not to enter the laboratory.",
+          "The scientist warned us don't enter the laboratory.",
+          "The scientist said us not enter the laboratory.",
+          "The scientist warned to us not entering the laboratory."
+        ],
+        "correct": 0,
+        "answer": "The scientist warned us not to enter the laboratory.",
+        "why": "warn + object + not to-infinitive هو تركيب صحيح لنقل التحذير."
+      }
+    ],
+    "markers": [
+      "said",
+      "told",
+      "asked",
+      "reported",
+      "explained",
+      "mentioned",
+      "claimed",
+      "admitted",
+      "according to",
+      "he said that",
+      "she told me that",
+      "they asked whether",
+      "he asked if",
+      "she asked why",
+      "he asked where",
+      "the researcher reported that",
+      "the study indicated that"
+    ]
+  }
+]

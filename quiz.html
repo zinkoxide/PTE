@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTE Trainer — الاختبارات</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/theme.js"></script>
+</head>
+<body>
+
+  <div class="shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">PTE</div>
+        <div>
+          <div class="brand-name">PTE Trainer</div>
+          <div class="brand-sub">Practice smarter</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">
+          <span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span>
+        </a>
+        <a class="nav-link" href="repeat.html">
+          <span class="nav-icon">🗣️</span><span class="nav-label">Repeat Sentence</span>
+        </a>
+        <a class="nav-link" href="vocabulary.html">
+          <span class="nav-icon">📚</span><span class="nav-label">Vocabulary</span>
+        </a>
+        <a class="nav-link active" href="grammar.html">
+          <span class="nav-icon">📘</span><span class="nav-label">Grammar</span>
+        </a>
+        <a class="nav-link" href="quiz.html">
+          <span class="nav-icon">📝</span><span class="nav-label">اختبارات</span>
+        </a>
+        <a class="nav-link" href="add-word.html">
+          <span class="nav-icon">➕</span><span class="nav-label">إضافة كلمات</span>
+        </a>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">
+        <span class="theme-ico icon-day">☀️</span>
+        <span class="theme-ico icon-night">🌙</span>
+        <span class="theme-label">Dark</span>
+      </button>
+
+      <div class="sidebar-footer">PTE Trainer · v2</div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="page">
+
+        <header class="page-header">
+          <h1 class="page-title">اختبارات تفاعلية</h1>
+          <p class="page-subtitle">اختبر كلماتك: معنى، صوت، جملة ناقصة، أو إملاء — بلا خادم وبلا إنترنت.</p>
+        </header>
+
+        <!-- ===================== Setup ===================== -->
+        <div id="quiz-setup">
+
+          <section class="card">
+            <div class="card-title">
+              <span>١ · نوع الاختبار</span>
+              <span id="quiz-mode-note" class="pill"></span>
+            </div>
+            <div id="quiz-modes" class="quiz-modes-grid"></div>
+          </section>
+
+          <section class="card">
+            <div class="card-title"><span>٢ · الإعدادات</span></div>
+
+            <div class="quiz-settings">
+              <label>
+                <span>عدد الأسئلة</span>
+                <select id="quiz-count" class="select">
+                  <option value="10">10</option>
+                  <option value="25" selected>25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </label>
+              <label>
+                <span>المستوى CEFR</span>
+                <select id="quiz-cefr" class="select">
+                  <option value="all">كل المستويات</option>
+                  <option value="A1">A1</option>
+                  <option value="A2">A2</option>
+                  <option value="B1">B1</option>
+                  <option value="B2" selected>B2</option>
+                  <option value="C1">C1</option>
+                  <option value="C2">C2</option>
+                </select>
+              </label>
+              <label>
+                <span>حالة الدراسة</span>
+                <select id="quiz-study" class="select">
+                  <option value="all">الكل</option>
+                  <option value="unstudied">غير مدرسّة</option>
+                  <option value="learned">مُتعلَّمة ✓</option>
+                  <option value="review">قيد المراجعة ↻</option>
+                </select>
+              </label>
+              <label>
+                <span>عدد الخيارات (أسئلة الاختيار)</span>
+                <select id="quiz-choices" class="select">
+                  <option value="3">3</option>
+                  <option value="4" selected>4</option>
+                  <option value="5">5</option>
+                </select>
+              </label>
+              <label>
+                <span>مؤقّت لكل سؤال</span>
+                <select id="quiz-timer" class="select">
+                  <option value="0" selected>بدون</option>
+                  <option value="15">15 ثانية</option>
+                  <option value="30">30 ثانية</option>
+                  <option value="45">45 ثانية</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="quiz-toggle">
+              <input id="quiz-auto-learn" type="checkbox">
+              <span>علّم الكلمة الصحيحة تلقائياً كـ «مُتعلَّمة ✓» (تقدّم يظهر في صفحة Vocabulary)</span>
+            </label>
+
+            <div id="quiz-stats" class="toolbar"></div>
+
+            <div class="toolbar">
+              <button id="quiz-start" class="btn" type="button">▶ ابدأ الاختبار</button>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ===================== Quiz ===================== -->
+        <div id="quiz-view" hidden>
+
+          <section class="card">
+            <div class="card-title">
+              <span>السؤال <strong id="quiz-question-number">1 / 10</strong></span>
+              <span id="quiz-mode-badge" class="pill"></span>
+              <span id="quiz-score-pill" class="pill info">0 / 0</span>
+              <span id="quiz-streak-pill" class="pill ok" hidden>🔥 0</span>
+              <span id="quiz-timer-pill" class="pill warn" hidden>⏱ 0s</span>
+            </div>
+            <div class="progress-track">
+              <div id="quiz-progress-fill" class="progress-fill"></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div id="quiz-prompt" class="quiz-prompt">…</div>
+
+            <div id="quiz-audio-row" class="quiz-audio-row" hidden>
+              <button id="quiz-play-audio" class="btn" type="button">▶ استمع للكلمة</button>
+            </div>
+
+            <div id="quiz-example" class="quiz-example" hidden></div>
+
+            <div id="quiz-options" class="quiz-options" hidden></div>
+
+            <div id="quiz-typing" class="quiz-typing" hidden>
+              <input id="quiz-answer-input" class="input" type="text"
+                     placeholder="اكتب الكلمة بالإنجليزية…" autocomplete="off">
+              <button id="quiz-check-answer" class="btn" type="button">تحقق ✓</button>
+            </div>
+
+            <div id="quiz-feedback" class="quiz-feedback" hidden></div>
+
+            <div class="toolbar">
+              <button id="quiz-skip" class="btn btn-ghost" type="button">⏭ تخطّي</button>
+              <button id="quiz-next" class="btn" type="button" hidden>التالي ←</button>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ===================== Results ===================== -->
+        <div id="quiz-results" hidden>
+
+          <section class="card">
+            <div class="card-title"><span>النتيجة النهائية</span></div>
+            <div class="quiz-result-hero">
+              <div id="quiz-result-score" class="gauge">0%</div>
+              <p id="quiz-result-text" class="status-text"></p>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card">
+                <div class="rc-label">صحيح</div>
+                <div class="rc-value value-green" id="quiz-result-correct">0</div>
+              </div>
+              <div class="result-card">
+                <div class="rc-label">خطأ</div>
+                <div class="rc-value value-red" id="quiz-result-wrong">0</div>
+              </div>
+              <div class="result-card">
+                <div class="rc-label">أفضل نتيجة سابقة</div>
+                <div class="rc-value value-violet" id="quiz-result-best">—</div>
+              </div>
+              <div class="result-card">
+                <div class="rc-label">أفضل سلسلة 🔥</div>
+                <div class="rc-value value-amber" id="quiz-result-streak">0</div>
+              </div>
+            </div>
+
+            <div class="card-title" style="margin-top: 24px;"><span>مراجعة الأسئلة</span></div>
+            <div id="quiz-review" class="review-list"></div>
+
+            <div class="quiz-actions">
+              <button id="quiz-retry" class="btn" type="button">↻ إعادة نفس الاختبار</button>
+              <button id="quiz-new-test" class="btn btn-secondary" type="button">✚ اختبار جديد</button>
+              <button id="quiz-reset-stats" class="btn btn-danger" type="button">🗑 إعادة تعيين الإحصائيات</button>
+              <a class="btn btn-ghost" href="index.html">🏠 لوحة التحكم</a>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <div id="quiz-toast" class="toast" hidden></div>
+
+  <script type="module" src="./js/quiz-app.js"></script>
+
+</body>
+</html>

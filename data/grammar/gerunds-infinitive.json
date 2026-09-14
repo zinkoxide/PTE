@@ -1,0 +1,492 @@
+[
+  {
+    "id": "gerunds-infinitives",
+    "title": "Gerunds & Infinitives",
+    "category": "تراكيب الأفعال",
+    "icon": "🔀",
+    "description": "فهم استخدام Gerunds وInfinitives بعد الأفعال وحروف الجر والتراكيب المختلفة، مع التركيز على الفروق التي تظهر كثيرًا في أسئلة PTE.",
+    "explanation": "يُستخدم Gerund وهو صيغة الفعل المنتهية بـ -ing في عدة مواقع في الجملة، بينما يُستخدم Infinitive غالبًا في صورة to + base verb. اختيار الصيغة الصحيحة لا يعتمد على معنى الجملة فقط، بل على الفعل أو حرف الجر أو التركيب الذي يسبقها. بعض الأفعال تتبعها صيغة -ing فقط، وبعضها تتبعها صيغة to + verb، وبعضها يقبل الصيغتين مع اختلاف في المعنى. في أسئلة PTE قد يظهر الفرق في صورة فراغ بعد فعل أو حرف جر، ولذلك من المهم معرفة الـverb patterns وليس حفظ الكلمات منفردة فقط.\n\nGerund يمكن أن يعمل مثل الاسم في الجملة، مثل: 'Reading improves vocabulary.' أما Infinitive فيُستخدم كثيرًا للتعبير عن الغرض أو النية أو ما نريد أو نخطط للقيام به، مثل: 'She decided to study.'\n\nأهم قاعدة يجب تذكرها: بعد حرف الجر يأتي Gerund وليس Infinitive. لذلك نقول 'interested in learning' وليس 'interested in to learn'. ومن التراكيب المهمة أيضًا 'look forward to doing'؛ هنا كلمة to حرف جر، ولذلك يأتي بعدها Gerund.\n\nهناك أيضًا أفعال يتغير معناها بحسب استخدام Gerund أو Infinitive. مثل 'stop smoking' التي تعني التوقف عن التدخين، و'stop to smoke' التي تعني التوقف عن فعل آخر من أجل التدخين. وكذلك 'remember doing' تعني تذكر حدث وقع بالفعل، بينما 'remember to do' تعني عدم نسيان القيام بشيء.\n\nفي الكتابة الأكاديمية وPTE، فهم هذه الأنماط مهم جدًا لأن الاختيار الصحيح غالبًا يعتمد على الكلمة السابقة مباشرة وليس على ترجمة الجملة حرفيًا.",
+    "rules": [
+      "Gerund هو verb + ing ويعمل في كثير من الحالات كاسم، مثل: 'Reading is useful.'",
+      "Infinitive هو to + base verb، مثل: 'She decided to study.'",
+      "يمكن استخدام Gerund كفاعل للجملة: 'Learning a language takes time.'",
+      "يمكن استخدام Gerund كمفعول به بعد أفعال معينة مثل enjoy, avoid, suggest, consider, admit, recommend.",
+      "بعد enjoy يأتي Gerund: 'I enjoy reading.'",
+      "بعد avoid يأتي Gerund: 'They avoided discussing the problem.'",
+      "بعد suggest يأتي Gerund: 'The teacher suggested studying harder.'",
+      "بعد consider يأتي Gerund: 'We are considering moving abroad.'",
+      "بعد admit يأتي Gerund: 'He admitted making a mistake.'",
+      "بعد recommend يأتي Gerund: 'The doctor recommended exercising regularly.'",
+      "أفعال مثل decide, plan, hope, want, agree, refuse, promise, manage غالبًا يتبعها Infinitive.",
+      "بعد decide نستخدم Infinitive: 'She decided to leave.'",
+      "بعد plan نستخدم Infinitive: 'They plan to expand the company.'",
+      "بعد hope نستخدم Infinitive: 'We hope to achieve better results.'",
+      "بعد refuse نستخدم Infinitive: 'He refused to answer the question.'",
+      "بعد manage نستخدم Infinitive: 'She managed to solve the problem.'",
+      "بعد promise نستخدم Infinitive: 'They promised to help us.'",
+      "بعد agree نستخدم Infinitive: 'The researchers agreed to participate.'",
+      "بعد حروف الجر يأتي Gerund: 'She is interested in learning English.'",
+      "بعد in كحرف جر نستخدم Gerund: 'He succeeded in solving the problem.'",
+      "بعد for كحرف جر نستخدم Gerund: 'Thank you for helping me.'",
+      "بعد about نستخدم Gerund: 'They talked about changing the plan.'",
+      "بعد without نستخدم Gerund: 'He left without saying goodbye.'",
+      "بعد before وafter يمكن استخدام Gerund عندما يأتي بعدهما فعل في تركيب مختصر: 'Before leaving, she checked the door.'",
+      "عبارة 'look forward to' تتبعها Gerund لأن to هنا حرف جر: 'I look forward to meeting you.'",
+      "عبارة 'be used to' تتبعها Gerund عندما يكون معناها الاعتياد على شيء: 'She is used to working late.'",
+      "عبارة 'get used to' تتبعها Gerund: 'He is getting used to living alone.'",
+      "يجب التمييز بين 'used to do' و'be used to doing'. الأولى تعني عادة في الماضي، والثانية تعني الاعتياد على شيء.",
+      "بعد بعض الأفعال يمكن استخدام object + infinitive، مثل: 'I want him to study.'",
+      "من الأفعال التي تتبعها صيغة object + infinitive: want, need, expect, advise, allow, encourage, persuade, remind.",
+      "نقول 'The teacher encouraged students to participate.' وليس 'encouraged students participating.'",
+      "بعد make وlet في المبني للمعلوم يأتي المفعول ثم base verb بدون to: 'She made him apologize.' و'They let him leave.'",
+      "بعد help يمكن استخدام infinitive مع أو بدون to: 'She helped me to understand.' و'She helped me understand.'",
+      "بعض الأفعال تقبل Gerund وInfinitive مع معنى متقارب، مثل begin, start, continue.",
+      "بعد stop + Gerund يتغير النشاط نفسه: 'He stopped smoking.'",
+      "بعد stop + Infinitive يعني أن الشخص توقف عن نشاط آخر لكي يقوم بالفعل التالي: 'He stopped to smoke.'",
+      "remember + Gerund تعني تذكر شيء حدث بالفعل: 'I remember meeting her.'",
+      "remember + Infinitive تعني تذكر ضرورة القيام بشيء: 'Remember to call her.'",
+      "forget + Gerund تشير إلى عدم نسيان تجربة أو حدث سابق: 'I will never forget visiting Paris.'",
+      "forget + Infinitive تعني عدم تذكر القيام بشيء: 'I forgot to send the email.'",
+      "try + Infinitive تعني محاولة القيام بشيء: 'She tried to open the door.'",
+      "try + Gerund تعني تجربة طريقة أو حل لمعرفة ما إذا كان مفيدًا: 'Try restarting the computer.'",
+      "regret + Gerund تعني الندم على شيء حدث: 'He regrets leaving the company.'",
+      "regret + Infinitive تستخدم كثيرًا في الأسلوب الرسمي للإخبار عن شيء سيئ أو غير سار: 'We regret to inform you that your application was unsuccessful.'",
+      "mean + Infinitive تعني أن الشخص يقصد أو ينوي فعل شيء: 'I meant to call you.'",
+      "mean + Gerund تعني أن شيئًا ما يتضمن أو يستلزم نتيجة معينة: 'This job means working long hours.'",
+      "go on + Gerund تعني الاستمرار في نفس النشاط: 'She went on talking.'",
+      "go on + Infinitive تعني الانتقال إلى نشاط أو موضوع جديد: 'She went on to explain the next point.'",
+      "بعد need يمكن استخدام Gerund في تركيب خاص عندما يكون المعنى أن الشيء يحتاج إلى أن يُفعل: 'The car needs washing.' وهذا يعادل 'The car needs to be washed.'",
+      "بعد worth يأتي Gerund: 'The book is worth reading.'",
+      "بعد busy يأتي Gerund: 'She is busy preparing for the exam.'",
+      "بعد spend + time/money يأتي Gerund: 'He spent two hours studying.'",
+      "بعد have difficulty/trouble/problem يأتي Gerund: 'She had difficulty understanding the lecture.'",
+      "من الأخطاء المهمة في PTE استخدام Infinitive بعد حرف الجر؛ الصحيح هو Gerund: 'interested in learning'.",
+      "عند اختيار الإجابة في PTE، حدد أولًا الكلمة التي تسبق الفراغ ثم اسأل: هل هذا الفعل أو حرف الجر يتطلب Gerund أم Infinitive؟",
+      "لا تعتمد على الترجمة العربية وحدها؛ كثير من التراكيب الإنجليزية لها نمط ثابت لا يمكن استنتاجه من العربية.",
+      "في أسئلة PTE يجب الانتباه إلى الفرق بين 'to' كجزء من Infinitive و'to' كحرف جر؛ بعد الأول يأتي base verb، وبعد الثاني يأتي Gerund."
+    ],
+    "examples": [
+      {
+        "en": "Reading regularly improves your vocabulary.",
+        "ar": "القراءة بانتظام تحسن مفرداتك."
+      },
+      {
+        "en": "She enjoys learning new languages.",
+        "ar": "هي تستمتع بتعلم لغات جديدة."
+      },
+      {
+        "en": "The researchers avoided discussing the issue.",
+        "ar": "تجنب الباحثون مناقشة القضية."
+      },
+      {
+        "en": "The teacher suggested reviewing the material.",
+        "ar": "اقترح المعلم مراجعة المادة."
+      },
+      {
+        "en": "They decided to postpone the meeting.",
+        "ar": "قرروا تأجيل الاجتماع."
+      },
+      {
+        "en": "The company plans to expand its operations.",
+        "ar": "تخطط الشركة لتوسيع عملياتها."
+      },
+      {
+        "en": "We hope to achieve better results.",
+        "ar": "نأمل في تحقيق نتائج أفضل."
+      },
+      {
+        "en": "She managed to solve the problem.",
+        "ar": "تمكنت من حل المشكلة."
+      },
+      {
+        "en": "He is interested in studying abroad.",
+        "ar": "هو مهتم بالدراسة في الخارج."
+      },
+      {
+        "en": "The students succeeded in completing the project.",
+        "ar": "نجح الطلاب في إكمال المشروع."
+      },
+      {
+        "en": "I look forward to meeting you.",
+        "ar": "أتطلع إلى مقابلتك."
+      },
+      {
+        "en": "She is used to working under pressure.",
+        "ar": "هي معتادة على العمل تحت الضغط."
+      },
+      {
+        "en": "He used to work in a hospital.",
+        "ar": "كان يعمل في مستشفى في الماضي."
+      },
+      {
+        "en": "The manager encouraged employees to participate.",
+        "ar": "شجع المدير الموظفين على المشاركة."
+      },
+      {
+        "en": "The teacher made the students rewrite the paragraph.",
+        "ar": "جعل المعلم الطلاب يعيدون كتابة الفقرة."
+      },
+      {
+        "en": "I remember meeting him at the conference.",
+        "ar": "أتذكر أنني قابلته في المؤتمر."
+      },
+      {
+        "en": "Remember to submit the assignment before Friday.",
+        "ar": "تذكر أن تسلم الواجب قبل يوم الجمعة."
+      },
+      {
+        "en": "She stopped smoking last year.",
+        "ar": "توقفت عن التدخين العام الماضي."
+      },
+      {
+        "en": "She stopped to answer the phone.",
+        "ar": "توقفت عن النشاط الذي كانت تقوم به لترد على الهاتف."
+      },
+      {
+        "en": "Try restarting the computer.",
+        "ar": "جرب إعادة تشغيل الكمبيوتر."
+      },
+      {
+        "en": "He tried to restart the computer.",
+        "ar": "حاول إعادة تشغيل الكمبيوتر."
+      },
+      {
+        "en": "The book is worth reading.",
+        "ar": "الكتاب يستحق القراءة."
+      },
+      {
+        "en": "She had difficulty understanding the lecture.",
+        "ar": "واجهت صعوبة في فهم المحاضرة."
+      },
+      {
+        "en": "He spent three hours preparing for the test.",
+        "ar": "قضى ثلاث ساعات في الاستعداد للاختبار."
+      }
+    ],
+    "commonMistakes": [
+      "خطأ: 'She enjoys to read.' الصحيح: 'She enjoys reading.' لأن enjoy يتبعه Gerund.",
+      "خطأ: 'They decided going home.' الصحيح: 'They decided to go home.' لأن decide يتبعه Infinitive.",
+      "خطأ: 'He is interested in to study abroad.' الصحيح: 'He is interested in studying abroad.' لأن in حرف جر ويتبعه Gerund.",
+      "خطأ: 'I look forward to see you.' الصحيح: 'I look forward to seeing you.' لأن to في look forward to حرف جر.",
+      "خطأ: 'She suggested to take a break.' الصحيح: 'She suggested taking a break.'",
+      "خطأ: 'He made me to apologize.' الصحيح: 'He made me apologize.' لأن make في المبني للمعلوم يتبعها object + base verb.",
+      "خطأ: 'I remember to meet him last year.' إذا كنت تقصد أنك تتذكر حدثًا وقع بالفعل، الصحيح: 'I remember meeting him last year.'",
+      "خطأ: 'I stopped to smoke.' إذا كان المقصود أنك توقفت عن التدخين نهائيًا، الصحيح: 'I stopped smoking.'",
+      "خطأ: 'She is used to work late.' إذا كان المعنى أنها معتادة على العمل لوقت متأخر، الصحيح: 'She is used to working late.'",
+      "خطأ: الخلط بين 'used to do' و'be used to doing'. الأولى تتحدث عن عادة في الماضي، بينما الثانية تعني الاعتياد على شيء.",
+      "خطأ: 'The students had difficulty to understand the lecture.' الصحيح: 'The students had difficulty understanding the lecture.'",
+      "خطأ: اختيار infinitive لمجرد وجود كلمة 'to'؛ يجب أولًا تحديد ما إذا كانت to جزءًا من infinitive أم حرف جر."
+    ],
+    "quiz": [
+      {
+        "type": "multiple-choice",
+        "prompt": "She enjoys _____ academic articles.",
+        "options": [
+          "read",
+          "to read",
+          "reading",
+          "to reading"
+        ],
+        "correct": 2,
+        "answer": "reading",
+        "why": "الفعل enjoy يتبعه Gerund، لذلك نقول 'enjoys reading'."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The researchers decided _____ the experiment.",
+        "options": [
+          "repeat",
+          "repeating",
+          "to repeat",
+          "to repeating"
+        ],
+        "correct": 2,
+        "answer": "to repeat",
+        "why": "الفعل decide يتبعه Infinitive: decide to + base verb."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "She is interested in _____ abroad.",
+        "options": [
+          "study",
+          "studying",
+          "to study",
+          "studied"
+        ],
+        "correct": 1,
+        "answer": "studying",
+        "why": "in هنا حرف جر، وبعد حرف الجر نستخدم Gerund."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "I look forward to _____ from you.",
+        "options": [
+          "hear",
+          "hearing",
+          "to hear",
+          "heard"
+        ],
+        "correct": 1,
+        "answer": "hearing",
+        "why": "في look forward to تكون to حرف جر، ولذلك يأتي بعدها Gerund."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The teacher suggested _____ the lesson again.",
+        "options": [
+          "review",
+          "to review",
+          "reviewing",
+          "reviewed"
+        ],
+        "correct": 2,
+        "answer": "reviewing",
+        "why": "suggest يتبعه Gerund وليس infinitive."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "They hope _____ the project next month.",
+        "options": [
+          "complete",
+          "completing",
+          "to complete",
+          "completed"
+        ],
+        "correct": 2,
+        "answer": "to complete",
+        "why": "hope يتبعه Infinitive: hope to + base verb."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The manager encouraged the employees _____ harder.",
+        "options": [
+          "work",
+          "working",
+          "to work",
+          "worked"
+        ],
+        "correct": 2,
+        "answer": "to work",
+        "why": "encourage يتبعها object + to-infinitive: encourage someone to do something."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "She made him _____ the report.",
+        "options": [
+          "rewrite",
+          "to rewrite",
+          "rewriting",
+          "rewritten"
+        ],
+        "correct": 0,
+        "answer": "rewrite",
+        "why": "make في المبني للمعلوم يتبعها object + base verb بدون to."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "I remember _____ her at the conference.",
+        "options": [
+          "meet",
+          "to meet",
+          "meeting",
+          "met"
+        ],
+        "correct": 2,
+        "answer": "meeting",
+        "why": "remember + Gerund تشير إلى تذكر حدث وقع بالفعل."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Remember _____ the application before Friday.",
+        "options": [
+          "submit",
+          "submitting",
+          "to submit",
+          "submitted"
+        ],
+        "correct": 2,
+        "answer": "to submit",
+        "why": "remember + infinitive تعني تذكر القيام بشيء مطلوب."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "He stopped _____ two years ago.",
+        "options": [
+          "to smoke",
+          "smoking",
+          "smoke",
+          "smoked"
+        ],
+        "correct": 1,
+        "answer": "smoking",
+        "why": "stop + Gerund تعني التوقف عن النشاط نفسه."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The car needs _____.",
+        "options": [
+          "wash",
+          "to wash",
+          "washing",
+          "washed"
+        ],
+        "correct": 2,
+        "answer": "washing",
+        "why": "need + Gerund يمكن أن تستخدم عندما يكون المعنى أن الشيء يحتاج إلى أن يُفعل، مثل 'The car needs washing.'"
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The students had difficulty _____ the lecture.",
+        "options": [
+          "understand",
+          "to understand",
+          "understanding",
+          "understood"
+        ],
+        "correct": 2,
+        "answer": "understanding",
+        "why": "التعبير had difficulty يتبعه Gerund."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "She is used to work late.",
+          "She is used to working late.",
+          "She used to working late.",
+          "She is use to work late."
+        ],
+        "correct": 1,
+        "answer": "She is used to working late.",
+        "why": "be used to تعني الاعتياد على شيء، وto هنا حرف جر، لذلك يأتي بعدها Gerund."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence correctly describes a past habit?",
+        "options": [
+          "She is used to live alone.",
+          "She is used to living alone.",
+          "She used to live alone.",
+          "She used to living alone."
+        ],
+        "correct": 2,
+        "answer": "She used to live alone.",
+        "why": "used to + base verb تستخدم للحديث عن عادة أو حالة في الماضي لم تعد صحيحة الآن."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Try _____ the application again if it does not open.",
+        "options": [
+          "restart",
+          "to restart",
+          "restarting",
+          "restarted"
+        ],
+        "correct": 2,
+        "answer": "restarting",
+        "why": "try + Gerund تعني تجربة طريقة أو حل لمعرفة ما إذا كان سيعمل."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "She tried _____ the problem but could not solve it.",
+        "options": [
+          "solving",
+          "to solve",
+          "solve",
+          "solved"
+        ],
+        "correct": 1,
+        "answer": "to solve",
+        "why": "try + infinitive تعني محاولة القيام بشيء."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The book is worth _____.",
+        "options": [
+          "to read",
+          "read",
+          "reading",
+          "to reading"
+        ],
+        "correct": 2,
+        "answer": "reading",
+        "why": "التعبير worth يتبعه Gerund."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "They left without _____ goodbye.",
+        "options": [
+          "say",
+          "to say",
+          "saying",
+          "said"
+        ],
+        "correct": 2,
+        "answer": "saying",
+        "why": "without حرف جر، وبعده يأتي Gerund."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "He succeeded in to complete the task.",
+          "He succeeded in completing the task.",
+          "He succeeded to completing the task.",
+          "He succeeded complete the task."
+        ],
+        "correct": 1,
+        "answer": "He succeeded in completing the task.",
+        "why": "succeed in تركيب ثابت، وin حرف جر يتبعه Gerund."
+      }
+    ],
+    "markers": [
+      "gerund",
+      "gerunds",
+      "infinitive",
+      "infinitives",
+      "verb + ing",
+      "to + verb",
+      "gerund after verbs",
+      "infinitive after verbs",
+      "preposition + gerund",
+      "enjoy doing",
+      "avoid doing",
+      "suggest doing",
+      "consider doing",
+      "recommend doing",
+      "decide to do",
+      "plan to do",
+      "hope to do",
+      "manage to do",
+      "refuse to do",
+      "promise to do",
+      "want someone to do",
+      "encourage someone to do",
+      "make someone do",
+      "let someone do",
+      "look forward to doing",
+      "be used to doing",
+      "get used to doing",
+      "used to do",
+      "remember doing",
+      "remember to do",
+      "forget doing",
+      "forget to do",
+      "stop doing",
+      "stop to do",
+      "try doing",
+      "try to do",
+      "regret doing",
+      "regret to do",
+      "mean doing",
+      "mean to do",
+      "go on doing",
+      "go on to do",
+      "worth doing",
+      "difficulty doing",
+      "need doing",
+      "PTE gerund infinitive",
+      "PTE grammar"
+    ]
+  }
+]

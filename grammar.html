@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTE Trainer — القواعد</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/theme.js"></script>
+</head>
+<body>
+
+  <div class="shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">PTE</div>
+        <div>
+          <div class="brand-name">PTE Trainer</div>
+          <div class="brand-sub">Practice smarter</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">
+          <span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span>
+        </a>
+        <a class="nav-link" href="repeat.html">
+          <span class="nav-icon">🗣️</span><span class="nav-label">Repeat Sentence</span>
+        </a>
+        <a class="nav-link" href="vocabulary.html">
+          <span class="nav-icon">📚</span><span class="nav-label">Vocabulary</span>
+        </a>
+        <a class="nav-link active" href="grammar.html">
+          <span class="nav-icon">📘</span><span class="nav-label">Grammar</span>
+        </a>
+        <a class="nav-link" href="quiz.html">
+          <span class="nav-icon">📝</span><span class="nav-label">اختبارات</span>
+        </a>
+        <a class="nav-link" href="add-word.html">
+          <span class="nav-icon">➕</span><span class="nav-label">إضافة كلمات</span>
+        </a>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">
+        <span class="theme-ico icon-day">☀️</span>
+        <span class="theme-ico icon-night">🌙</span>
+        <span class="theme-label">Dark</span>
+      </button>
+
+      <div class="sidebar-footer">PTE Trainer · v2</div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="page">
+
+        <header class="page-header">
+          <h1 class="page-title">قواعد اللغة الإنجليزية</h1>
+          <p class="page-subtitle">دروس مرجعية مبسّطة بالعربية + اختبارات تفاعلية (اختيار من متعدد وصح/خطأ) — تعمل بلا خادم وبلا إنترنت.</p>
+        </header>
+
+        <!-- ===================== Browse ===================== -->
+        <div id="grammar-browse">
+
+          <div class="grammar-layout">
+
+            <!-- Left: lesson list -->
+            <section class="card grammar-panel grammar-panel-nav">
+              <div class="card-title">
+                <span>الدروس</span>
+                <span id="grammar-browse-stats" class="toolbar"></span>
+              </div>
+              <div id="grammar-cat-filter" class="grammar-cats"></div>
+              <p id="grammar-lesson-note" class="lesson-note"></p>
+              <div id="grammar-lesson-list" class="grammar-lesson-list"></div>
+            </section>
+
+            <!-- Right: lesson reader + tests -->
+            <section class="card grammar-panel">
+
+              <div class="lesson-toolbar">
+                <button id="grammar-test-all" class="btn btn-ghost" type="button">📘 اختبار كل الدروس</button>
+                <div class="lesson-spacer"></div>
+                <span class="lesson-timer-label">مؤقّت لكل سؤال</span>
+                <select id="grammar-timer" class="select">
+                  <option value="0" selected>بدون</option>
+                  <option value="15">15 ثانية</option>
+                  <option value="30">30 ثانية</option>
+                </select>
+              </div>
+
+              <div id="grammar-detail"></div>
+
+            </section>
+
+          </div>
+
+        </div>
+
+        <!-- ===================== Quiz ===================== -->
+        <div id="grammar-quiz" hidden>
+
+          <section class="card">
+            <div class="card-title">
+              <span>السؤال <strong id="gq-number">1 / 10</strong></span>
+              <span id="gq-badge" class="pill"></span>
+              <span id="gq-score" class="pill info">0 / 0</span>
+              <span id="gq-streak" class="pill ok" hidden>🔥 0</span>
+              <span id="gq-timer" class="pill warn" hidden>⏱ 0s</span>
+            </div>
+            <div class="progress-track">
+              <div id="gq-progress" class="progress-fill"></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div id="gq-prompt" class="quiz-prompt">…</div>
+
+            <div id="gq-options" class="quiz-options" hidden></div>
+
+            <div id="gq-tf" class="quiz-tf" hidden></div>
+
+            <div id="gq-feedback" class="quiz-feedback" hidden></div>
+
+            <div class="toolbar">
+              <button id="gq-skip" class="btn btn-ghost" type="button">⏭ تخطّي</button>
+              <button id="gq-next" class="btn" type="button" hidden>التالي ←</button>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ===================== Results ===================== -->
+        <div id="grammar-results" hidden>
+
+          <section class="card">
+            <div class="card-title"><span>نتيجة اختبار القواعد</span></div>
+            <div class="quiz-result-hero">
+              <div id="gqr-score" class="gauge">0%</div>
+              <p id="gqr-text" class="status-text"></p>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card">
+                <div class="rc-label">صحيح</div>
+                <div class="rc-value value-green" id="gqr-correct">0</div>
+              </div>
+              <div class="result-card">
+                <div class="rc-label">خطأ</div>
+                <div class="rc-value value-red" id="gqr-wrong">0</div>
+              </div>
+              <div class="result-card">
+                <div class="rc-label">أفضل نتيجة كلية</div>
+                <div class="rc-value value-violet" id="gqr-best">—</div>
+              </div>
+              <div class="result-card">
+                <div class="rc-label">أفضل سلسلة 🔥</div>
+                <div class="rc-value value-amber" id="gqr-streak">0</div>
+              </div>
+            </div>
+
+            <div class="card-title" style="margin-top: 24px;"><span>مراجعة الأسئلة</span></div>
+            <div id="gqr-review" class="review-list"></div>
+
+            <div class="quiz-actions">
+              <button id="gqr-retry" class="btn" type="button">↻ إعادة نفس الاختبار</button>
+              <button id="gqr-browse" class="btn btn-secondary" type="button">📘 العودة للدروس</button>
+              <button id="gqr-reset" class="btn btn-danger" type="button">🗑 إعادة تعيين الإحصائيات</button>
+              <a class="btn btn-ghost" href="index.html">🏠 لوحة التحكم</a>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <div id="grammar-toast" class="toast" hidden></div>
+
+  <script type="module" src="./js/grammar-app.js"></script>
+
+</body>
+</html>

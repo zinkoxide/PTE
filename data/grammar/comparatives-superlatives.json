@@ -1,0 +1,638 @@
+[
+  {
+    "id": "comparatives-superlatives",
+    "title": "صيغ المقارنة والتفضيل",
+    "category": "الصفات والظروف",
+    "icon": "📊",
+    "description": "شرح شامل للمقارنة بين شخصين أو شيئين أو أكثر باستخدام comparative وsuperlative، بما في ذلك more/less، -er/-est، صيغ المقارنة غير المنتظمة، as...as، than، the more...the more، much/far/slightly مع المقارنة، المقارنة بين الصفات والظروف، المقارنة التدريجية، والتراكيب الشائعة في اللغة الأكاديمية وأسئلة PTE.",
+    "explanation": "نستخدم Comparative عندما نقارن بين شيئين أو شخصين أو مجموعتين، ونستخدم Superlative عندما نحدد أن شيئًا أو شخصًا هو الأعلى أو الأقل درجة داخل مجموعة.\\n\\nالصفات القصيرة غالبًا تستخدم -er و-est: small → smaller → smallest. أما الصفات الأطول فعادة تستخدم more وmost: effective → more effective → most effective.\\n\\nيمكن أيضًا التعبير عن المقارنة باستخدام less وleast عندما نريد معنى 'أقل'.\\n\\nفي PTE، لا يكفي معرفة قاعدة -er و-est. يجب تحديد عدد الأشياء التي تتم مقارنتها، والانتباه إلى وجود than أو the، ومعرفة ما إذا كانت الكلمة adjective أم adverb، وكذلك اختيار الصيغة الصحيحة مع الكلمات غير المنتظمة مثل good → better → best وbad → worse → worst. كما تظهر تراكيب مهمة جدًا مثل as...as، not as...as، much better، slightly higher، far more effective، the more...the more، وmore and more.",
+    "rules": [
+      "Comparative تستخدم عادة للمقارنة بين شيئين أو شخصين أو مجموعتين.",
+      "Superlative تستخدم للمقارنة داخل مجموعة من ثلاثة أشياء أو أكثر عندما نحدد الأعلى أو الأدنى درجة.",
+      "مع الصفات القصيرة نستخدم غالبًا -er للمقارنة و-est للتفضيل.",
+      "small → smaller → smallest.",
+      "fast → faster → fastest.",
+      "high → higher → highest.",
+      "مع كثير من الصفات التي تحتوي على مقطعين أو أكثر نستخدم more وmost.",
+      "important → more important → most important.",
+      "effective → more effective → most effective.",
+      "expensive → more expensive → most expensive.",
+      "عند استخدام comparative adjective للمقارنة بين شيئين نستخدم than غالبًا.",
+      "مثال: The new method is more effective than the old method.",
+      "Superlative غالبًا تأتي معها the عندما تكون قبل noun أو بعد linking verb للدلالة على أعلى درجة داخل مجموعة محددة.",
+      "مثال: This is the most effective method.",
+      "لا نستخدم more و-er معًا في الصيغة القياسية: more easier خطأ، والصحيح easier.",
+      "لا نستخدم most و-est معًا: most fastest خطأ، والصحيح fastest.",
+      "الصفات المنتهية بـ e تضيف -r و-st فقط: large → larger → largest.",
+      "الصفات القصيرة التي تنتهي بحرف ساكن بعد vowel واحد غالبًا تضاعف الحرف الأخير: big → bigger → biggest.",
+      "hot → hotter → hottest.",
+      "thin → thinner → thinnest.",
+      "إذا انتهت الصفة بـ consonant + y، تتحول y إلى i: easy → easier → easiest.",
+      "happy → happier → happiest.",
+      "إذا انتهت الصفة بـ vowel + y، تبقى y عادة: gray → grayer → grayest.",
+      "مع بعض الصفات ذات المقطعين يمكن استخدام -er/-est أو more/most حسب الكلمة والاستعمال، مثل narrow → narrower → narrowest.",
+      "بعض الصفات ذات المقطعين تستخدم more/most بصورة طبيعية، مثل careful → more careful → most careful.",
+      "صفة polite يمكن أن تستخدم more polite وmost polite.",
+      "صفة simple يمكن أن تستخدم simpler وsimplest، وتستخدم more simple في بعض السياقات، لكن simpler هو الاختيار الشائع.",
+      "عندما تكون الصفة طويلة، more هو الاختيار المعتاد: more reliable، more significant، more complicated.",
+      "يمكن استخدام less مع adjective للدلالة على درجة أقل: less effective.",
+      "يمكن استخدام least للدلالة على أقل درجة داخل مجموعة: the least effective method.",
+      "more لا تعني دائمًا 'أكثر' فقط؛ في comparative تعني درجة أعلى من الصفة.",
+      "less هي عكس more في كثير من المقارنات: more expensive / less expensive.",
+      "مع countable plural nouns يمكن استخدام fewer بمعنى 'عدد أقل'.",
+      "مع uncountable nouns نستخدم less بمعنى 'كمية أقل'.",
+      "مثال: fewer students، less information.",
+      "لا نستخدم fewer عادة مع uncountable nouns في الإنجليزية القياسية: fewer information خطأ، والصحيح less information.",
+      "لا نستخدم less عادة مع countable plural nouns عندما نتحدث عن العدد: less students أقل دقة في الاستخدام الأكاديمي، والأفضل fewer students.",
+      "more يمكن استخدامها مع countable وuncountable nouns: more students، more information.",
+      "most يمكن استخدامها مع countable وuncountable nouns: most students، most information.",
+      "صيغ المقارنة غير المنتظمة يجب حفظها لأنها لا تتبع more/-er بشكل مباشر.",
+      "good → better → best.",
+      "well → better → best عندما تكون well ظرفًا.",
+      "bad → worse → worst.",
+      "badly → worse → worst عندما تكون badly ظرفًا.",
+      "far → farther/further → farthest/furthest.",
+      "little → less → least عندما نتحدث عن كمية صغيرة.",
+      "much/many → more → most.",
+      "old → older → oldest هي الصيغة العامة، بينما elder/eldest تستخدم في بعض سياقات العلاقات العائلية، خاصة قبل noun.",
+      "Comparative adjective يمكن أن تأتي قبل noun: a better method.",
+      "Comparative adjective يمكن أن تأتي بعد linking verb: The new method is better.",
+      "Superlative adjective يمكن أن تأتي قبل noun: the best method.",
+      "Superlative adjective يمكن أن تأتي بعد linking verb: This method is the best.",
+      "عند مقارنة شيئين فقط يمكن استخدام comparative حتى لو كان السياق يتحدث عن مجموعتين.",
+      "عند تحديد شيء واحد على أنه الأعلى داخل مجموعة نستخدم superlative.",
+      "نستخدم as + adjective + as للمساواة في الدرجة: The new method is as effective as the old one.",
+      "نستخدم not as + adjective + as لعدم المساواة: The old method is not as effective as the new one.",
+      "يمكن استخدام just as + adjective + as للتأكيد على المساواة: The second method is just as reliable as the first.",
+      "يمكن استخدام nearly/almost as...as للتعبير عن تقارب شديد: nearly as effective as.",
+      "نستخدم twice as + adjective + as للمقارنة بنسبة الضعف: twice as effective as.",
+      "نستخدم three times as + adjective + as للتعبير عن ثلاثة أضعاف الدرجة.",
+      "يمكن استخدام half as + adjective + as للتعبير عن نصف الدرجة.",
+      "لا نقول twice more effective عندما يكون المقصود 'ضعف الفعالية' في الكتابة الدقيقة؛ twice as effective as أو two times as effective as أكثر وضوحًا.",
+      "يمكن استخدام comparative مع than: more effective than, less expensive than.",
+      "بعد than يجب الانتباه إلى أن المقارنة منطقية ومتوازية.",
+      "مثال: The new system is more efficient than the old system.",
+      "يمكن استخدام pronoun بعد than بحسب مستوى الرسمية: She is taller than I am أكثر رسمية، وShe is taller than me شائعة في الإنجليزية العامة.",
+      "في الكتابة الأكاديمية، من الأفضل الحفاظ على parallel structure في المقارنات.",
+      "نستخدم much + comparative adjective للدلالة على فرق واضح: much better.",
+      "نستخدم far + comparative: far more effective.",
+      "نستخدم considerably + comparative: considerably higher.",
+      "نستخدم significantly + comparative عندما نريد الإشارة إلى فرق مهم أو ذي دلالة بحسب السياق: significantly lower.",
+      "نستخدم substantially + comparative للدلالة على فرق كبير: substantially more accurate.",
+      "نستخدم slightly + comparative عندما يكون الفرق صغيرًا: slightly higher.",
+      "نستخدم somewhat + comparative عندما يكون الفرق محدودًا نسبيًا: somewhat more difficult.",
+      "يمكن استخدام a little/a bit + comparative في اللغة العامة: a little better.",
+      "يمكن استخدام even + comparative للتأكيد على زيادة المقارنة: even more effective.",
+      "يمكن استخدام still + comparative للإشارة إلى أن شيئًا ما أكثر من السابق أو أكثر مما هو متوقع: still higher.",
+      "يمكن استخدام by far + superlative للتأكيد على أن الفارق كبير: by far the most effective.",
+      "يمكن استخدام easily + superlative في بعض السياقات: easily the best option.",
+      "لا نستخدم very مباشرة قبل comparative في الاستخدام القياسي: very better خطأ.",
+      "بدل very better نستخدم much better أو far better.",
+      "يمكن استخدام very مع superlative في بعض التراكيب، لكن by far أو easily أكثر شيوعًا للتأكيد القوي على superlative.",
+      "يمكن استخدام the same as للمساواة أو التشابه: The results are the same as those of the previous study.",
+      "يمكن استخدام different from للمقارنة بالاختلاف: The results are different from those of the previous study.",
+      "يمكن استخدام similar to للتشابه: The findings are similar to those of earlier studies.",
+      "لا نقول similar with في الإنجليزية الأكاديمية القياسية؛ الصحيح similar to.",
+      "لا نقول different than في الاستخدام الأكاديمي التقليدي عندما يمكن استخدام different from.",
+      "نستخدم compared with أو compared to عند إجراء مقارنة.",
+      "مثال: Compared with the previous method, the new method is more efficient.",
+      "يمكن أن تأتي compared with في بداية الجملة كعبارة مختصرة للمقارنة.",
+      "في المقارنة يجب أن تكون الأشياء المقارنة منطقية؛ لا نقارن صفة بشخص أو فعلًا باسم دون بنية مناسبة.",
+      "مثال غير منطقي: The new method is more effective than researchers. الأفضل: The new method is more effective than the previous method.",
+      "عند مقارنة مجموعتين يجب الانتباه إلى أن المقارنة قد تكون بين المتوسطات أو النتائج أو الخصائص، وليس بين أسماء غير متجانسة.",
+      "نستخدم the comparative..., the comparative... للدلالة على علاقة متبادلة في التغير.",
+      "التركيب الشائع هو the + comparative + subject + verb, the + comparative + subject + verb.",
+      "مثال: The more students practice, the more confident they become.",
+      "يمكن أن يكون أحد طرفي التركيب adjective أو adverb: The faster they work, the sooner they finish.",
+      "يمكن استخدام the less...the less: The less sleep students get, the less effectively they perform.",
+      "يمكن استخدام the more...the less: The more complex the system becomes, the less reliable it may be.",
+      "لا نضع than في تركيب the more...the more.",
+      "يمكن استخدام comparative + and + comparative للتعبير عن التغير التدريجي: more and more important.",
+      "مع الصفات القصيرة يمكن استخدام bigger and bigger.",
+      "مع الصفات الطويلة نستخدم more and more + adjective: more and more important.",
+      "يمكن استخدام less and less + adjective: less and less effective.",
+      "يمكن استخدام increasingly + adjective في اللغة الأكاديمية: increasingly important.",
+      "يمكن استخدام decreasingly في بعض السياقات، لكن less and less أكثر طبيعية في كثير من الجمل.",
+      "يمكن استخدام ever + comparative في بعض التراكيب: increasingly difficult أو ever more difficult.",
+      "يمكن استخدام no longer وless common مع المقارنة حسب السياق، لكن يجب فهم المعنى قبل الاختيار.",
+      "مع الأرقام والنسب يمكن استخدام higher/lower وليس more high/less high: higher than 50%.",
+      "نستخدم higher/lower rates, levels, percentages, temperatures, costs, values.",
+      "نستخدم greater/smaller amounts مع بعض الأسماء، بينما fewer/less يرتبطان بالعدد والكمية.",
+      "نستخدم greater number of في الكتابة الأكاديمية، لكن a greater number of + plural countable noun.",
+      "نستخدم a higher number of أحيانًا، لكن a greater number of أكثر رسمية وطبيعية في بعض السياقات الأكاديمية.",
+      "نستخدم a higher level of + uncountable noun: a higher level of pollution.",
+      "نستخدم a lower rate of + noun: a lower rate of unemployment.",
+      "يمكن استخدام more + adjective + noun: a more effective method.",
+      "لا نقول a more effective than method؛ than يجب أن تأتي في تركيب المقارنة الكامل.",
+      "يمكن استخدام one of the + superlative + plural noun: one of the most important factors.",
+      "بعد one of the most نستخدم noun جمعًا: one of the most important factors.",
+      "خطأ شائع: one of the most important factor؛ الصحيح factors.",
+      "يمكن استخدام among the + superlative + plural noun: among the most significant findings.",
+      "نستخدم the first/second/last + to-infinitive في كثير من التراكيب: the first researcher to identify the problem.",
+      "لا نخلط بين superlative وordinal numbers؛ first وsecond ليستا صيغ comparative/superlative لكنها قد تتبعها to-infinitive.",
+      "يمكن استخدام the least + adjective + noun: the least expensive option.",
+      "يمكن استخدام less and fewer في المقارنة، لكن يجب تحديد هل الاسم countable أم uncountable.",
+      "في PTE، إذا وجدت than فغالبًا ابحث عن comparative قبلها، لكن لا تعتمد على than وحدها لأن بعض تراكيب than لا تتطلب comparative مباشرة.",
+      "في PTE، إذا وجدت the قبل adjective وكان المعنى يحدد الأعلى أو الأدنى داخل مجموعة، افحص احتمال superlative.",
+      "في PTE، إذا وجدت as قبل adjective وبعده as، افحص تركيب as...as.",
+      "في PTE، إذا وجدت twice/three times/half فغالبًا تحتاج as...as.",
+      "في PTE، إذا وجدت much/far/slightly/significantly قبل الفراغ، فغالبًا تحتاج comparative.",
+      "في PTE، إذا وجدت one of the قبل الفراغ ثم noun جمع، فغالبًا تحتاج superlative.",
+      "في PTE، لا تختَر between more و- er بناءً على طول الكلمة فقط؛ افحص الصيغة القياسية للكلمة.",
+      "في PTE، راقب الأخطاء التي تجمع بين more و-er أو most و-est.",
+      "في PTE، انتبه إلى parallel structure في المقارنات: more efficient and more reliable، وليس more efficient and reliability.",
+      "في PTE، لا تخلط بين adjective comparative وadverb comparative: more efficient / more efficiently.",
+      "في PTE، انتبه إلى fewer وless لأنهما من أكثر نقاط المقارنة والكمية شيوعًا.",
+      "في PTE، افحص ما إذا كانت المقارنة منطقية من حيث الأشياء التي تتم مقارنتها.",
+      "المقارنة لا تعني دائمًا وجود than؛ يمكن استخدام comparative بدون ذكر الطرف الآخر إذا كان مفهومًا من السياق.",
+      "مثال: The situation is becoming worse.",
+      "يمكن استخدام superlative بدون noun مباشر عندما يكون المرجع واضحًا: This option is the best.",
+      "في الكتابة الأكاديمية، comparative structures تساعد على وصف البيانات والاتجاهات: higher, lower, greater, smaller, more significant, less common.",
+      "higher وlower تستخدمان كثيرًا مع levels, rates, values, percentages, temperatures, costs.",
+      "greater وsmaller تستخدمان كثيرًا مع differences, effects, impact, importance, variation.",
+      "more وless تستخدمان كثيرًا مع adjectives طويلة: more significant, less reliable.",
+      "عند وصف فرق إحصائي يمكن استخدام significantly higher/lower، لكن significant difference هو adjective يصف noun difference.",
+      "لا تخلط بين significantly وsignificant: The difference is significant / The value is significantly higher.",
+      "لا تخلط بين considerably وconsiderable: considerably higher / a considerable difference.",
+      "لا تخلط بين increasingly وincreasing: an increasingly important issue / an increasing number of students.",
+      "increasing number of تعني أن العدد نفسه في ازدياد: an increasing number of students.",
+      "increasingly important تعني أن درجة الأهمية تزداد.",
+      "يمكن استخدام more and more students، لكن an increasing number of students أكثر رسمية في الكتابة الأكاديمية.",
+      "يمكن استخدام fewer and fewer students للدلالة على انخفاض عدد الطلاب.",
+      "يمكن استخدام less and less information للدلالة على تناقص كمية المعلومات."
+    ],
+    "examples": [
+      {
+        "en": "The new method is more effective than the old method.",
+        "ar": "الطريقة الجديدة أكثر فعالية من الطريقة القديمة."
+      },
+      {
+        "en": "The new method is less expensive than the previous one.",
+        "ar": "الطريقة الجديدة أقل تكلفة من الطريقة السابقة."
+      },
+      {
+        "en": "This is the most effective method available.",
+        "ar": "هذه هي الطريقة الأكثر فعالية المتاحة."
+      },
+      {
+        "en": "The second experiment was more complicated than the first.",
+        "ar": "كانت التجربة الثانية أكثر تعقيدًا من الأولى."
+      },
+      {
+        "en": "The final experiment was the most complicated of the three.",
+        "ar": "كانت التجربة الأخيرة الأكثر تعقيدًا بين التجارب الثلاث."
+      },
+      {
+        "en": "The results were better than expected.",
+        "ar": "كانت النتائج أفضل مما كان متوقعًا."
+      },
+      {
+        "en": "The second group performed worse than the first group.",
+        "ar": "كان أداء المجموعة الثانية أسوأ من المجموعة الأولى."
+      },
+      {
+        "en": "This is the best solution to the problem.",
+        "ar": "هذا هو أفضل حل للمشكلة."
+      },
+      {
+        "en": "The new system is as reliable as the previous one.",
+        "ar": "النظام الجديد موثوق به بقدر النظام السابق."
+      },
+      {
+        "en": "The old system is not as efficient as the new one.",
+        "ar": "النظام القديم ليس بكفاءة النظام الجديد."
+      },
+      {
+        "en": "The new method is twice as efficient as the old method.",
+        "ar": "الطريقة الجديدة أكثر كفاءة بمرتين من الطريقة القديمة."
+      },
+      {
+        "en": "The new system is much more reliable than the previous one.",
+        "ar": "النظام الجديد أكثر موثوقية بكثير من النظام السابق."
+      },
+      {
+        "en": "The results were slightly higher than those reported previously.",
+        "ar": "كانت النتائج أعلى قليلًا من النتائج التي أُبلغ عنها سابقًا."
+      },
+      {
+        "en": "The new method is significantly more accurate.",
+        "ar": "الطريقة الجديدة أكثر دقة بدرجة ملحوظة."
+      },
+      {
+        "en": "The new treatment produced substantially better results.",
+        "ar": "أنتج العلاج الجديد نتائج أفضل بدرجة كبيرة."
+      },
+      {
+        "en": "This is by far the most reliable method.",
+        "ar": "هذه بلا شك الطريقة الأكثر موثوقية بفارق كبير."
+      },
+      {
+        "en": "The more students practice, the more confident they become.",
+        "ar": "كلما تدرب الطلاب أكثر، أصبحوا أكثر ثقة."
+      },
+      {
+        "en": "The more complex the system becomes, the less reliable it may be.",
+        "ar": "كلما أصبح النظام أكثر تعقيدًا، قلّت موثوقيته."
+      },
+      {
+        "en": "The results are becoming more and more significant.",
+        "ar": "أصبحت النتائج أكثر أهمية تدريجيًا."
+      },
+      {
+        "en": "The issue is becoming increasingly important in academic research.",
+        "ar": "أصبحت القضية أكثر أهمية بصورة متزايدة في البحث الأكاديمي."
+      },
+      {
+        "en": "The study included fewer participants than the previous study.",
+        "ar": "شملت الدراسة عددًا أقل من المشاركين مقارنة بالدراسة السابقة."
+      },
+      {
+        "en": "The researchers collected less information than expected.",
+        "ar": "جمع الباحثون معلومات أقل مما كان متوقعًا."
+      },
+      {
+        "en": "The new study involved a greater number of participants.",
+        "ar": "اشتملت الدراسة الجديدة على عدد أكبر من المشاركين."
+      },
+      {
+        "en": "The new method resulted in a higher level of accuracy.",
+        "ar": "أدت الطريقة الجديدة إلى مستوى أعلى من الدقة."
+      },
+      {
+        "en": "The two studies produced similar results.",
+        "ar": "أنتجت الدراستان نتائج متشابهة."
+      },
+      {
+        "en": "The findings were different from those of the earlier study.",
+        "ar": "كانت النتائج مختلفة عن نتائج الدراسة السابقة."
+      },
+      {
+        "en": "The new method is one of the most reliable approaches available.",
+        "ar": "الطريقة الجديدة واحدة من أكثر الأساليب المتاحة موثوقية."
+      },
+      {
+        "en": "Compared with the previous method, the new approach is considerably more efficient.",
+        "ar": "بالمقارنة مع الطريقة السابقة، فإن النهج الجديد أكثر كفاءة بدرجة كبيرة."
+      },
+      {
+        "en": "An increasing number of students are using online resources.",
+        "ar": "يستخدم عدد متزايد من الطلاب الموارد الإلكترونية."
+      },
+      {
+        "en": "Fewer and fewer students are attending the optional lectures.",
+        "ar": "يحضر عدد متناقص من الطلاب المحاضرات الاختيارية."
+      }
+    ],
+    "commonMistakes": [
+      "استخدام more مع صفة قصيرة بلا حاجة: more easier ❌ → easier ✅.",
+      "استخدام most مع -est: most fastest ❌ → fastest ✅.",
+      "نسيان than بعد comparative عندما يكون الطرف الآخر مذكورًا.",
+      "استخدام superlative لمقارنة شيئين فقط: the better of the two هو الاختيار المعتاد، وليس the best of the two.",
+      "نسيان the مع superlative عندما تكون الصيغة محددة: the most effective method.",
+      "استخدام very مع comparative: very better ❌ → much better ✅.",
+      "استخدام more مع صيغة غير منتظمة: more better ❌ → better ✅.",
+      "الخلط بين good → better → best وwell → better → best.",
+      "الخلط بين bad → worse → worst.",
+      "الخلط بين fewer وless: fewer students / less information.",
+      "استخدام fewer مع uncountable noun: fewer information ❌ → less information ✅.",
+      "استخدام less مع plural countable noun في الكتابة الأكاديمية عندما يكون المقصود عددًا: less students ❌ → fewer students ✅.",
+      "الخلط بين as...as وso...as في التراكيب الأساسية للمساواة.",
+      "استخدام than مع as...as: as effective than ❌ → as effective as ✅.",
+      "استخدام twice more بدل twice as...as عندما يكون المقصود ضعف الدرجة.",
+      "نسيان أن one of the most يتبعها plural noun: one of the most important factors ✅.",
+      "استخدام singular بعد one of the most: one of the most important factor ❌.",
+      "الخلط بين more efficient وmore efficiently.",
+      "استخدام more مع comparative adverb بشكل غير صحيح: more better ❌.",
+      "الخلط بين significant وsignificantly: significantly higher / a significant difference.",
+      "الخلط بين considerable وconsiderably: a considerable increase / considerably higher.",
+      "الخلط بين increasing وincreasingly: an increasing number / increasingly important.",
+      "استخدام than في تركيب the more...the more: The more you study, the better you perform ✅.",
+      "نسيان the في الطرفين من تركيب the more...the more.",
+      "إجراء مقارنة غير منطقية بين عنصرين غير متجانسين: The method is better than researchers ❌.",
+      "الخلط بين similar to وsimilar with؛ الصحيح في الاستخدام الأكاديمي المعتاد similar to.",
+      "الخلط بين different from وdifferent than؛ different from هو الاختيار التقليدي في الكتابة الأكاديمية.",
+      "الخلط بين higher/lower وmore high/less high.",
+      "استخدام high بدل higher عند وجود مقارنة واضحة.",
+      "استخدام superlative دون تحديد المجموعة عندما يكون المطلوب مجرد مقارنة بين عنصرين.",
+      "الخلط بين farther وfurther؛ farther يرتبط غالبًا بالمسافة المادية، وfurther يستخدم كثيرًا للمعنى المجازي أو الإضافي.",
+      "الخلط بين older وelder؛ elder محدود أكثر، خاصة في سياقات العلاقات العائلية.",
+      "نسيان parallel structure: more efficient and more reliable، وليس more efficient and reliability.",
+      "استخدام less مع شيء معدود جمعًا عندما يكون المقصود عددًا.",
+      "عدم الانتباه إلى أن comparative يمكن أن تأتي بدون than إذا كان الطرف الآخر مفهومًا من السياق.",
+      "استخدام most مع adjective قصيرة بلا داعٍ عندما تكون صيغة -est هي الصيغة الطبيعية: most fast ❌ → fastest ✅.",
+      "الخلط بين a higher level of وa greater number of؛ الأولى للـlevel والثانية لعدد العناصر المعدودة.",
+      "في PTE، اختيار comparative لمجرد وجود than دون التأكد من المعنى والبنية الكاملة.",
+      "في PTE، تجاهل الفرق بين adjective وadverb عند تكوين المقارنة."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "The new method is ____ than the old method.",
+        "options": [
+          "more efficient",
+          "more efficiently",
+          "most efficient",
+          "efficiently"
+        ],
+        "correct": 0,
+        "answer": "more efficient",
+        "why": "نقارن بين طريقتين باستخدام comparative adjective: more efficient + than."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "This is ____ method available.",
+        "options": [
+          "more effective",
+          "the most effective",
+          "most effectively",
+          "the more effective"
+        ],
+        "correct": 1,
+        "answer": "the most effective",
+        "why": "نحدد أعلى درجة داخل مجموعة، لذلك نستخدم superlative مع the."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The second experiment was ____ than the first.",
+        "options": [
+          "complicated",
+          "more complicated",
+          "most complicated",
+          "more complicately"
+        ],
+        "correct": 1,
+        "answer": "more complicated",
+        "why": "complicated صفة طويلة، والمقارنة تستخدم more."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The results were ____ than expected.",
+        "options": [
+          "good",
+          "better",
+          "best",
+          "more good"
+        ],
+        "correct": 1,
+        "answer": "better",
+        "why": "better هي comparative غير المنتظمة لـ good."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "This was the ____ result obtained in the experiment.",
+        "options": [
+          "bad",
+          "worse",
+          "worst",
+          "most bad"
+        ],
+        "correct": 2,
+        "answer": "worst",
+        "why": "نحتاج superlative من bad، وهي worst."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The new system is ____ reliable as the previous one.",
+        "options": [
+          "as",
+          "than",
+          "more",
+          "most"
+        ],
+        "correct": 0,
+        "answer": "as",
+        "why": "التركيب الصحيح للمساواة هو as + adjective + as."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The old system is not ____ efficient as the new one.",
+        "options": [
+          "than",
+          "as",
+          "more",
+          "most"
+        ],
+        "correct": 1,
+        "answer": "as",
+        "why": "التركيب الصحيح هو not as + adjective + as."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The new method is ____ more accurate than the old one.",
+        "options": [
+          "much",
+          "very",
+          "many",
+          "most"
+        ],
+        "correct": 0,
+        "answer": "much",
+        "why": "much يمكن أن تقوي comparative: much more accurate."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The difference was ____ smaller than expected.",
+        "options": [
+          "slightly",
+          "very",
+          "most",
+          "too"
+        ],
+        "correct": 0,
+        "answer": "slightly",
+        "why": "slightly تستخدم مع comparative للدلالة على فرق صغير."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The more students practice, ____ confident they become.",
+        "options": [
+          "the more",
+          "more",
+          "the most",
+          "than more"
+        ],
+        "correct": 0,
+        "answer": "the more",
+        "why": "التركيب الصحيح هو the more..., the more...."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The more complex the system becomes, ____ reliable it may be.",
+        "options": [
+          "the less",
+          "less",
+          "the least",
+          "least"
+        ],
+        "correct": 0,
+        "answer": "the less",
+        "why": "نستخدم the less في الطرف الثاني للدلالة على علاقة عكسية."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The results are becoming ____ important.",
+        "options": [
+          "more and more",
+          "more and much",
+          "most and most",
+          "much and more"
+        ],
+        "correct": 0,
+        "answer": "more and more",
+        "why": "more and more + adjective تعبر عن الزيادة التدريجية."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The new method is one of the ____ approaches available.",
+        "options": [
+          "most reliable",
+          "more reliable",
+          "reliably",
+          "most reliably"
+        ],
+        "correct": 0,
+        "answer": "most reliable",
+        "why": "التركيب one of the most + plural noun يتطلب superlative."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The study involved ____ participants than the previous study.",
+        "options": [
+          "less",
+          "fewer",
+          "little",
+          "least"
+        ],
+        "correct": 1,
+        "answer": "fewer",
+        "why": "participants اسم معدود جمع، لذلك نستخدم fewer."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers collected ____ information than expected.",
+        "options": [
+          "fewer",
+          "less",
+          "few",
+          "fewest"
+        ],
+        "correct": 1,
+        "answer": "less",
+        "why": "information اسم غير معدود، لذلك نستخدم less."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The new method produced a ____ level of accuracy.",
+        "options": [
+          "higher",
+          "more high",
+          "highest",
+          "highly"
+        ],
+        "correct": 0,
+        "answer": "higher",
+        "why": "higher هي comparative المناسبة مع level."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The difference between the groups was ____ significant.",
+        "options": [
+          "significant",
+          "significantly",
+          "more significant",
+          "significance"
+        ],
+        "correct": 2,
+        "answer": "more significant",
+        "why": "نحتاج comparative adjective لأن الجملة تقارن مستوى significance بين المجموعتين."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Compared with the previous system, the new system works ____.",
+        "options": [
+          "more efficient",
+          "more efficiently",
+          "most efficient",
+          "efficient"
+        ],
+        "correct": 1,
+        "answer": "more efficiently",
+        "why": "الكلمة تصف الفعل works، لذلك نستخدم comparative adverb."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "This is ____ the most reliable option available.",
+        "options": [
+          "by far",
+          "very",
+          "much",
+          "many"
+        ],
+        "correct": 0,
+        "answer": "by far",
+        "why": "by far تستخدم لتقوية superlative والتأكيد على وجود فارق واضح."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The new approach is ____ as effective as the previous one.",
+        "options": [
+          "twice",
+          "two",
+          "more",
+          "most"
+        ],
+        "correct": 0,
+        "answer": "twice",
+        "why": "التركيب الصحيح للتعبير عن الضعف هو twice as + adjective + as."
+      }
+    ],
+    "markers": [
+      "Comparative = مقارنة بين عنصرين",
+      "Superlative = أعلى/أدنى درجة داخل مجموعة",
+      "-er / -est",
+      "more / most",
+      "less / least",
+      "good → better → best",
+      "bad → worse → worst",
+      "much/many → more → most",
+      "little → less → least",
+      "far → farther/further → farthest/furthest",
+      "as + adjective + as",
+      "not as + adjective + as",
+      "twice as + adjective + as",
+      "three times as + adjective + as",
+      "half as + adjective + as",
+      "much + comparative",
+      "far + comparative",
+      "slightly + comparative",
+      "significantly + comparative",
+      "considerably + comparative",
+      "substantially + comparative",
+      "one of the most + plural noun",
+      "by far + superlative",
+      "the more..., the more...",
+      "the more..., the less...",
+      "more and more + adjective",
+      "less and less + adjective",
+      "increasingly + adjective",
+      "fewer + countable plural",
+      "less + uncountable noun",
+      "higher/lower + level/rate/value",
+      "greater/smaller + difference/effect/impact",
+      "significant difference",
+      "significantly higher/lower",
+      "considerable difference",
+      "considerably higher/lower",
+      "increasing number of + plural noun",
+      "increasingly important",
+      "similar to",
+      "different from",
+      "compared with/to",
+      "PTE: than → افحص comparative",
+      "PTE: the + adjective → افحص superlative",
+      "PTE: as...as → مساواة",
+      "PTE: much/far/slightly → comparative",
+      "PTE: one of the most → superlative + plural noun"
+    ]
+  }
+]

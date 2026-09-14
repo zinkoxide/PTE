@@ -1,0 +1,454 @@
+[
+  {
+    "id": "relative-clauses",
+    "title": "الجمل الموصولة",
+    "category": "تراكيب الجمل",
+    "icon": "🔗",
+    "description": "شرح شامل للجمل الموصولة Relative Clauses، بما في ذلك defining وnon-defining relative clauses، وأدوات الوصل who, whom, which, that, whose, where, when، مع حذف أداة الوصل والـreduced relative clauses وأهم أخطاء PTE.",
+    "explanation": "Relative Clause هي جملة تأتي بعد اسم أو ضمير لتقديم معلومات إضافية عنه. تبدأ غالبًا بأداة وصل مثل who, whom, which, that, whose, where أو when. تساعد الجمل الموصولة على دمج جملتين في جملة واحدة أكثر ترابطًا، ولذلك فهي مهمة جدًا في الكتابة الأكاديمية وأسئلة PTE.\n\nهناك نوعان رئيسيان: Defining Relative Clauses وNon-defining Relative Clauses. الـDefining Relative Clause تقدم معلومات ضرورية لتحديد الشخص أو الشيء المقصود. إذا حذفناها فقد يصبح معنى الجملة غير واضح أو يتغير. لذلك لا نضع فاصلة عادةً حولها، ويمكن استخدام that فيها. مثال: 'The students who study regularly usually achieve better results.' هنا الجملة 'who study regularly' تحدد أي طلاب نتحدث عنهم.\n\nأما Non-defining Relative Clause فتضيف معلومات إضافية غير ضرورية لتحديد الاسم. يمكن حذفها دون أن يضيع المرجع الأساسي. لذلك تُحاط عادةً بفواصل، ولا نستخدم that فيها. مثال: 'Dr. Ahmed, who teaches linguistics, published a new study.'\n\nاختيار أداة الوصل يعتمد على الاسم الذي تشير إليه وعلى وظيفة الأداة داخل الجملة. نستخدم who غالبًا للأشخاص عندما تكون أداة الوصل فاعلًا، وwhom للأشخاص عندما تكون مفعولًا به في الأسلوب الرسمي. نستخدم which للأشياء والحيوانات، وthat للأشخاص أو الأشياء في defining relative clauses. نستخدم whose للتعبير عن الملكية، وwhere للمكان، وwhen للوقت.\n\nمن النقاط المهمة جدًا أن who أو which أو that قد تكون فاعلًا أو مفعولًا به. إذا كانت أداة الوصل هي الفاعل، فلا يمكن حذفها عادةً. أما إذا كانت مفعولًا به، فيمكن حذفها في defining relative clauses. لذلك نقول: 'The book that I bought was expensive' أو 'The book I bought was expensive.' لكن لا نقول في الجملة القياسية: 'The book that contains useful information...' ثم نحذف that إذا كانت هي الفاعل.\n\nيمكن أيضًا استخدام preposition + whom/which في الأسلوب الرسمي، مثل 'the professor to whom I spoke' و'the system on which the study was based'. وفي الأسلوب الأقل رسمية يمكن وضع حرف الجر في نهاية الجملة: 'the professor who I spoke to'.\n\nReduced Relative Clauses هي صورة مختصرة من الجمل الموصولة، وتظهر كثيرًا في الكتابة الأكاديمية. يمكن اختصار بعض الجمل التي تحتوي على active relative clause باستخدام Present Participle، مثل 'Students who study regularly...' إلى 'Students studying regularly...'. ويمكن اختصار passive relative clauses باستخدام Past Participle، مثل 'The data which were collected...' إلى 'The data collected...'.\n\nفي PTE، يجب أولًا تحديد الاسم الذي تصفه الجملة الموصولة، ثم تحديد ما إذا كانت المعلومات ضرورية أم إضافية، ثم تحديد وظيفة أداة الوصل: فاعل أم مفعول به. بعد ذلك يصبح اختيار who/whom/which/that أو إمكانية الحذف أكثر وضوحًا.",
+    "rules": [
+      "Relative Clause هي جملة تصف اسمًا أو ضميرًا سبقها.",
+      "الاسم الذي تصفه Relative Clause يسمى antecedent.",
+      "who تستخدم غالبًا مع الأشخاص.",
+      "who تستخدم عندما تكون أداة الوصل فاعلًا داخل الجملة الموصولة: 'The scientist who conducted the study...' ",
+      "whom تستخدم مع الأشخاص عندما تكون أداة الوصل مفعولًا به، خصوصًا في الأسلوب الرسمي.",
+      "مثال: 'The researcher whom we interviewed published a paper.'",
+      "which تستخدم غالبًا مع الأشياء والحيوانات.",
+      "that يمكن أن تستخدم مع الأشخاص أو الأشياء في Defining Relative Clauses.",
+      "whose تستخدم للتعبير عن الملكية، ويمكن استخدامها مع الأشخاص والأشياء في تراكيب معينة.",
+      "where تستخدم للإشارة إلى مكان.",
+      "when تستخدم للإشارة إلى وقت.",
+      "Defining Relative Clause تقدم معلومات ضرورية لتحديد الاسم.",
+      "لا نضع فواصل عادةً حول Defining Relative Clause.",
+      "يمكن استخدام that في Defining Relative Clauses.",
+      "Non-defining Relative Clause تقدم معلومات إضافية وليست ضرورية لتحديد الاسم.",
+      "نضع فواصل حول Non-defining Relative Clause.",
+      "لا نستخدم that في Non-defining Relative Clauses.",
+      "يمكن استخدام who أو whom أو which في Non-defining Relative Clauses حسب الوظيفة.",
+      "يمكن حذف Relative Pronoun عندما تكون مفعولًا به في Defining Relative Clause.",
+      "مثال: 'The book that I bought was useful.' ويمكن حذف that: 'The book I bought was useful.'",
+      "لا يمكن عادةً حذف Relative Pronoun عندما تكون هي الفاعل.",
+      "مثال: 'The researcher who conducted the experiment...' لا نحذف who لأن who هي الفاعل.",
+      "إذا جاء بعد Relative Pronoun فاعل آخر ثم فعل، فغالبًا تكون أداة الوصل مفعولًا به ويمكن حذفها في defining clause.",
+      "إذا جاء الفعل مباشرة بعد Relative Pronoun، فقد تكون أداة الوصل هي الفاعل، ولذلك لا يمكن حذفها.",
+      "الفرق بين 'The students who completed the test...' و'The test that the students completed...' هو أن who في الأولى فاعل، بينما that في الثانية مفعول به.",
+      "that لا تستخدم عادةً بعد الفاصلة في Non-defining Relative Clauses.",
+      "لا نقول: 'My brother, that lives in Cairo, ...' والصحيح: 'My brother, who lives in Cairo, ...'",
+      "who وwhich يمكن استخدامهما في Non-defining Relative Clauses.",
+      "يمكن استخدام whose مع الأشخاص: 'The student whose laptop was stolen...' ",
+      "يمكن استخدام whose مع الأشياء في بعض التراكيب: 'a company whose products are widely used.'",
+      "where تستخدم عندما يكون antecedent مكانًا: 'the university where I studied.'",
+      "where يمكن استبدالها في بعض الحالات بـ 'in which': 'the university in which I studied.'",
+      "when يمكن استخدامها مع تعبيرات الوقت: 'the year when the study was conducted.'",
+      "when يمكن أن تستبدل أحيانًا بـ 'in which' أو 'during which' حسب المعنى.",
+      "يمكن وضع حرف الجر قبل whom أو which في الأسلوب الرسمي: 'the person to whom I spoke.'",
+      "لا نستخدم that مباشرةً بعد حرف الجر في هذا التركيب الرسمي: لا نقول 'the person to that I spoke.'",
+      "في الأسلوب غير الرسمي يمكن وضع حرف الجر في نهاية الجملة: 'the person who I spoke to.'",
+      "يمكن استخدام that بعد superlatives في تراكيب شائعة: 'the best book that I have ever read.'",
+      "يمكن استخدام that بعد كلمات مثل all, everything, nothing, something, the only في كثير من Defining Relative Clauses.",
+      "Reduced Relative Clause يمكن أن تختصر Active Relative Clause باستخدام Present Participle.",
+      "مثال: 'Students who attend the course regularly...' يمكن اختصارها إلى 'Students attending the course regularly...'",
+      "Reduced Relative Clause يمكن أن تختصر Passive Relative Clause باستخدام Past Participle.",
+      "مثال: 'The data that were collected during the study...' يمكن اختصارها إلى 'The data collected during the study...'",
+      "في بعض الحالات يمكن استخدام 'being + V3' لاختصار Passive Continuous Relative Clause، لكن هذا التركيب أقل شيوعًا.",
+      "يمكن استخدام infinitive في بعض Reduced Relative Clauses بعد ترتيب أو superlative أو the first/second/last/only: 'She was the first researcher to identify the problem.'",
+      "في PTE يجب تحديد antecedent قبل اختيار relative pronoun.",
+      "إذا كان antecedent شخصًا، ابدأ عادةً بالتفكير في who أو whom أو whose.",
+      "إذا كان antecedent شيئًا، ابدأ عادةً بالتفكير في which أو that أو whose حسب المعنى.",
+      "إذا كان antecedent مكانًا وكان المعنى 'في المكان الذي'، فكر في where.",
+      "إذا كان antecedent وقتًا وكان المعنى 'في الوقت الذي'، فكر في when.",
+      "إذا كانت المعلومة غير ضرورية لتحديد الاسم، استخدم Non-defining Relative Clause مع الفواصل.",
+      "إذا كانت المعلومة ضرورية لتحديد الاسم، استخدم Defining Relative Clause بدون فواصل.",
+      "إذا كانت أداة الوصل مفعولًا به في Defining Clause، يمكن حذفها.",
+      "إذا كانت أداة الوصل فاعلًا، لا يمكن حذفها عادةً.",
+      "وجود comma قبل أو بعد Relative Clause علامة مهمة جدًا في PTE لتحديد ما إذا كانت الجملة defining أو non-defining.",
+      "لا تستخدم who مع الأشياء في الاستخدام القياسي.",
+      "لا تستخدم which للإشارة إلى شخص في الجملة القياسية.",
+      "لا تستخدم that في Non-defining Relative Clauses.",
+      "تجنب التكرار الخاطئ للضمير: 'The student who he passed the exam...' خطأ لأن who تؤدي وظيفة الفاعل ولا نحتاج he.",
+      "بعد whom أو which كأداة مفعول لا نضيف ضميرًا آخر يؤدي الوظيفة نفسها.",
+      "يجب الانتباه إلى أن relative pronoun قد تكون فاعلًا أو مفعولًا، وهذا يحدد إمكانية حذفها.",
+      "Reduced Relative Clauses يجب أن تحافظ على نفس العلاقة المنطقية والزمنية للجملة الأصلية."
+    ],
+    "examples": [
+      {
+        "en": "The students who study regularly usually achieve better results.",
+        "ar": "الطلاب الذين يدرسون بانتظام يحققون عادةً نتائج أفضل."
+      },
+      {
+        "en": "The researcher who conducted the experiment published the results.",
+        "ar": "الباحث الذي أجرى التجربة نشر النتائج."
+      },
+      {
+        "en": "The book that I bought was extremely useful.",
+        "ar": "الكتاب الذي اشتريته كان مفيدًا جدًا."
+      },
+      {
+        "en": "The book I bought was extremely useful.",
+        "ar": "الكتاب الذي اشتريته كان مفيدًا جدًا. وهنا تم حذف that لأنها مفعول به."
+      },
+      {
+        "en": "The scientist who discovered the problem proposed a solution.",
+        "ar": "العالِم الذي اكتشف المشكلة اقترح حلًا."
+      },
+      {
+        "en": "The problem that the scientist discovered was serious.",
+        "ar": "المشكلة التي اكتشفها العالِم كانت خطيرة."
+      },
+      {
+        "en": "The university where I studied has a large library.",
+        "ar": "الجامعة التي درست فيها لديها مكتبة كبيرة."
+      },
+      {
+        "en": "The year when the study was published was significant.",
+        "ar": "السنة التي نُشرت فيها الدراسة كانت مهمة."
+      },
+      {
+        "en": "The student whose research won the award received a scholarship.",
+        "ar": "الطالب الذي فاز بحثه بالجائزة حصل على منحة."
+      },
+      {
+        "en": "The company whose products are widely used has expanded rapidly.",
+        "ar": "الشركة التي تُستخدم منتجاتها على نطاق واسع توسعت بسرعة."
+      },
+      {
+        "en": "Dr. Ahmed, who teaches linguistics, published a new study.",
+        "ar": "الدكتور أحمد، الذي يدرّس علم اللغة، نشر دراسة جديدة."
+      },
+      {
+        "en": "The Nile, which is one of the world's longest rivers, passes through Egypt.",
+        "ar": "نهر النيل، الذي يعد أحد أطول أنهار العالم، يمر عبر مصر."
+      },
+      {
+        "en": "The professor whom we interviewed published several papers.",
+        "ar": "الأستاذ الذي أجرينا معه مقابلة نشر عدة أبحاث."
+      },
+      {
+        "en": "The professor to whom I spoke was very helpful.",
+        "ar": "الأستاذ الذي تحدثت إليه كان متعاونًا جدًا."
+      },
+      {
+        "en": "The system on which the study was based has been updated.",
+        "ar": "النظام الذي استندت إليه الدراسة تم تحديثه."
+      },
+      {
+        "en": "Students attending the course regularly tend to perform better.",
+        "ar": "الطلاب الذين يحضرون الدورة بانتظام يميلون إلى تحقيق أداء أفضل."
+      },
+      {
+        "en": "The data collected during the experiment were carefully analyzed.",
+        "ar": "تم تحليل البيانات التي جُمعت أثناء التجربة بعناية."
+      },
+      {
+        "en": "She was the first researcher to identify the problem.",
+        "ar": "كانت أول باحثة تحدد المشكلة."
+      },
+      {
+        "en": "The report, which was published last month, received considerable attention.",
+        "ar": "التقرير، الذي نُشر الشهر الماضي، حظي باهتمام كبير."
+      },
+      {
+        "en": "The students who completed the test received their results immediately.",
+        "ar": "الطلاب الذين أكملوا الاختبار حصلوا على نتائجهم فورًا."
+      }
+    ],
+    "commonMistakes": [
+      "خطأ: 'The researcher which conducted the study...' والصحيح مع الشخص: 'The researcher who conducted the study.'",
+      "خطأ: 'The report who was published yesterday...' والصحيح مع الشيء: 'The report which was published yesterday.'",
+      "خطأ: 'My brother, that lives abroad, is a doctor.' في Non-defining Relative Clause الصحيح: 'My brother, who lives abroad, is a doctor.'",
+      "خطأ: 'The book who I bought...' والصحيح: 'The book that/which I bought.'",
+      "خطأ: 'The university which I studied...' إذا كان المقصود المكان الذي درست فيه، يمكن القول: 'The university where I studied' أو 'The university at which I studied' حسب المعنى.",
+      "خطأ: 'The student who he won the prize...' الصحيح: 'The student who won the prize...' لأن who هي الفاعل.",
+      "خطأ: 'The book that I bought it...' الصحيح: 'The book that I bought...' لأن that تقوم بدور المفعول ولا نضيف it.",
+      "خطأ: حذف relative pronoun عندما تكون فاعلًا: 'The researcher conducted the study published the results.' هذه الصيغة تغير التركيب وتصبح غير صحيحة؛ يجب الاحتفاظ بـwho أو إعادة بناء الجملة.",
+      "خطأ: استخدام that بعد comma: 'The study, that was published last year,...' والصحيح: 'The study, which was published last year,...'",
+      "خطأ: 'The person to that I spoke...' والصحيح رسميًا: 'The person to whom I spoke.'",
+      "خطأ: الخلط بين 'the company that I work for' و'the company for which I work'. كلاهما ممكن، لكن الثاني أكثر رسمية.",
+      "خطأ: الخلط بين Defining وNon-defining. إذا كانت المعلومة ضرورية لتحديد الاسم فلا نضع فواصل، وإذا كانت إضافية نستخدم الفواصل."
+    ],
+    "quiz": [
+      {
+        "type": "multiple-choice",
+        "prompt": "The scientist _____ conducted the experiment published the results.",
+        "options": [
+          "which",
+          "who",
+          "where",
+          "whose"
+        ],
+        "correct": 1,
+        "answer": "who",
+        "why": "العائد هنا شخص، وwho هي الفاعل داخل Relative Clause."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The report _____ I read yesterday was very informative.",
+        "options": [
+          "who",
+          "where",
+          "that",
+          "whose"
+        ],
+        "correct": 2,
+        "answer": "that",
+        "why": "report شيء، وthat يمكن استخدامها في Defining Relative Clause، وهنا that مفعول به."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The book _____ I bought was expensive.",
+        "options": [
+          "who",
+          "which",
+          "where",
+          "whose"
+        ],
+        "correct": 1,
+        "answer": "which",
+        "why": "book شيء، وwhich يمكن أن تكون أداة الوصل المناسبة."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The student _____ laptop was stolen reported the incident.",
+        "options": [
+          "who",
+          "which",
+          "whose",
+          "whom"
+        ],
+        "correct": 2,
+        "answer": "whose",
+        "why": "whose تستخدم للتعبير عن الملكية: the student's laptop."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "This is the university _____ I studied.",
+        "options": [
+          "who",
+          "where",
+          "whose",
+          "whom"
+        ],
+        "correct": 1,
+        "answer": "where",
+        "why": "university مكان، وwhere تعني تقريبًا in/at which في هذا السياق."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The year _____ the research was conducted was particularly important.",
+        "options": [
+          "where",
+          "who",
+          "when",
+          "whose"
+        ],
+        "correct": 2,
+        "answer": "when",
+        "why": "year تعبير عن وقت، ولذلك يمكن استخدام when."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The professor _____ we interviewed published a new paper.",
+        "options": [
+          "which",
+          "whom",
+          "where",
+          "whose"
+        ],
+        "correct": 1,
+        "answer": "whom",
+        "why": "professor شخص، وأداة الوصل مفعول به لأن we هي الفاعل؛ whom مناسب في الأسلوب الرسمي."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The researcher _____ conducted the study received an award.",
+        "options": [
+          "who",
+          "whom",
+          "which",
+          "where"
+        ],
+        "correct": 0,
+        "answer": "who",
+        "why": "who هي الفاعل للفعل conducted، ولذلك لا يمكن حذفها هنا."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The book _____ I borrowed was excellent.",
+        "options": [
+          "who",
+          "which",
+          "where",
+          "whose"
+        ],
+        "correct": 1,
+        "answer": "which",
+        "why": "which هنا مفعول به ويمكن حذفها: 'The book I borrowed was excellent.'"
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "The scientist, that won the award, is famous.",
+          "The scientist which won the award is famous.",
+          "The scientist, who won the award, is famous.",
+          "The scientist, where won the award, is famous."
+        ],
+        "correct": 2,
+        "answer": "The scientist, who won the award, is famous.",
+        "why": "الجملة Non-defining لأنها محاطة بفواصل، ولذلك نستخدم who وليس that."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The data _____ during the experiment were analyzed carefully.",
+        "options": [
+          "collecting",
+          "collected",
+          "collect",
+          "to collect"
+        ],
+        "correct": 1,
+        "answer": "collected",
+        "why": "هذه Reduced Passive Relative Clause: data which were collected → data collected."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Students _____ regularly tend to achieve higher scores.",
+        "options": [
+          "study",
+          "studied",
+          "studying",
+          "to study"
+        ],
+        "correct": 2,
+        "answer": "studying",
+        "why": "هذه Reduced Active Relative Clause: students who study regularly → students studying regularly."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The person to _____ I spoke was very helpful.",
+        "options": [
+          "who",
+          "which",
+          "whom",
+          "that"
+        ],
+        "correct": 2,
+        "answer": "whom",
+        "why": "بعد حرف الجر to في الأسلوب الرسمي نستخدم whom مع الأشخاص."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "The company, that I work for, is expanding.",
+          "The company which I work for is expanding.",
+          "The company who I work for is expanding.",
+          "The company where I work for is expanding."
+        ],
+        "correct": 1,
+        "answer": "The company which I work for is expanding.",
+        "why": "company شيء/مؤسسة، وwhich مناسبة. كما أن 'that' يمكن استخدامها إذا لم تكن الجملة Non-defining، لكن الخيار يتضمن فواصل لذلك which هو الصحيح هنا."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence correctly uses a defining relative clause?",
+        "options": [
+          "The students, who passed the exam, received certificates.",
+          "The students who passed the exam received certificates.",
+          "The students, that passed the exam received certificates.",
+          "The students which passed the exam received certificates."
+        ],
+        "correct": 1,
+        "answer": "The students who passed the exam received certificates.",
+        "why": "في هذه الجملة clause تحدد أي طلاب نتحدث عنهم، لذلك هي Defining ولا نضع فواصل."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence allows the relative pronoun to be omitted?",
+        "options": [
+          "The researcher who conducted the study won an award.",
+          "The student who arrived late apologized.",
+          "The book that I bought was useful.",
+          "The scientist who discovered the problem published a paper."
+        ],
+        "correct": 2,
+        "answer": "The book that I bought was useful.",
+        "why": "that مفعول به لأن I هو الفاعل، ولذلك يمكن حذفها: 'The book I bought was useful.'"
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is incorrect?",
+        "options": [
+          "The researcher who conducted the study was experienced.",
+          "The report which was published yesterday was important.",
+          "My brother, who lives abroad, is a doctor.",
+          "My brother, that lives abroad, is a doctor."
+        ],
+        "correct": 3,
+        "answer": "My brother, that lives abroad, is a doctor.",
+        "why": "that لا تستخدم في Non-defining Relative Clauses المحاطة بفواصل."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Choose the correct formal structure: The professor _____ I spoke was helpful.",
+        "options": [
+          "to who",
+          "to whom",
+          "to that",
+          "to which"
+        ],
+        "correct": 1,
+        "answer": "to whom",
+        "why": "بعد حرف الجر to ومع شخص في الأسلوب الرسمي نستخدم whom."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence contains a reduced relative clause?",
+        "options": [
+          "The students who study hard succeed.",
+          "The students studying hard succeed.",
+          "The students will study hard.",
+          "The students studied hard."
+        ],
+        "correct": 1,
+        "answer": "The students studying hard succeed.",
+        "why": "studying hard اختصار لـ who study hard، وهي Reduced Active Relative Clause."
+      }
+    ],
+    "markers": [
+      "relative clauses",
+      "relative clause",
+      "relative pronouns",
+      "defining relative clause",
+      "non-defining relative clause",
+      "who",
+      "whom",
+      "which",
+      "that",
+      "whose",
+      "where",
+      "when",
+      "relative pronoun omission",
+      "omitting relative pronouns",
+      "relative pronoun as subject",
+      "relative pronoun as object",
+      "preposition + whom",
+      "preposition + which",
+      "reduced relative clauses",
+      "reduced relative clause",
+      "present participle relative clause",
+      "past participle relative clause",
+      "who vs whom",
+      "who vs which",
+      "which vs that",
+      "that vs which",
+      "whose",
+      "where vs which",
+      "when relative clause",
+      "PTE relative clauses",
+      "PTE grammar",
+      "PTE fill in the blanks",
+      "academic relative clauses"
+    ]
+  }
+]

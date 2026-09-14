@@ -1,0 +1,683 @@
+[
+  {
+    "id": "quantifiers",
+    "title": "محددات الكمية",
+    "category": "محددات الكمية",
+    "icon": "🔢",
+    "description": "شرح شامل لمحددات الكمية Quantifiers واستخدامها مع الأسماء المعدودة وغير المعدودة، بما في ذلك much, many, few, little, fewer, less, some, any, several, enough, plenty of, a lot of, all, both, each, every, either, neither, no, none, a number of, the number of، مع التركيز على الأخطاء الشائعة وأسئلة PTE.",
+    "explanation": "Quantifiers هي كلمات وتراكيب تستخدم للتعبير عن كمية أو عدد شيء ما. أهم نقطة في استخدامها هي معرفة نوع الاسم الذي يأتي بعدها: هل هو countable أم uncountable؟ وهل هو مفرد أم جمع؟\\n\\nنستخدم many وfew وfewer مع الأسماء المعدودة الجمع، مثل many students وfew problems وfewer errors. ونستخدم much وlittle وless مع الأسماء غير المعدودة، مثل much information وlittle time وless research.\\n\\nهناك محددات يمكن استخدامها مع النوعين، مثل some, any, a lot of, lots of, plenty of, enough, more, most, all.\\n\\nفي PTE، كثير من الأسئلة لا تختبر معنى quantifier فقط، بل تختبر العلاقة بين quantifier والاسم الذي يأتي بعده، وكذلك الفرق بين العدد والكمية، وبين المعنى الإيجابي والسلبي لبعض الكلمات مثل few وa few وlittle وa little. لذلك يجب تحديد نوع الاسم أولًا ثم تحديد المعنى المقصود.",
+    "rules": [
+      "Quantifier هي كلمة أو عبارة تحدد كمية أو عدد الاسم.",
+      "قبل اختيار quantifier يجب تحديد ما إذا كان الاسم countable أو uncountable.",
+      "many تستخدم مع الأسماء المعدودة الجمع: many students.",
+      "much تستخدم مع الأسماء غير المعدودة: much information.",
+      "few تستخدم مع الأسماء المعدودة الجمع وتعني عددًا قليلًا جدًا أو غير كافٍ غالبًا.",
+      "a few تستخدم مع الأسماء المعدودة الجمع وتعني عددًا قليلًا لكنه موجود ومقبول.",
+      "little تستخدم مع الأسماء غير المعدودة وتعني كمية قليلة جدًا أو غير كافية غالبًا.",
+      "a little تستخدم مع الأسماء غير المعدودة وتعني كمية صغيرة لكنها موجودة ومقبولة.",
+      "الفرق بين few وa few مهم جدًا: few لها معنى سلبي نسبيًا، بينما a few لها معنى إيجابي أو محايد.",
+      "مثال: Few students passed the test. تعني أن عددًا قليلًا جدًا من الطلاب نجح.",
+      "مثال: A few students passed the test. تعني أن بعض الطلاب نجحوا.",
+      "الفرق بين little وa little مشابه: little تعني كمية قليلة جدًا أو غير كافية، بينما a little تعني كمية صغيرة لكنها موجودة.",
+      "less تستخدم مع الأسماء غير المعدودة للمقارنة في الكمية.",
+      "fewer تستخدم مع الأسماء المعدودة الجمع للمقارنة في العدد.",
+      "less information صحيح لأن information غير معدود.",
+      "fewer students صحيح لأن students معدود جمع.",
+      "لا نستخدم fewer مع اسم غير معدود في الاستخدام الأكاديمي القياسي.",
+      "لا نستخدم less مع plural countable nouns عندما يكون المقصود العدد؛ الأفضل fewer.",
+      "more يمكن استخدامها مع الأسماء المعدودة الجمع وغير المعدودة.",
+      "more students وmore information كلاهما صحيح.",
+      "most يمكن استخدامها مع الأسماء المعدودة وغير المعدودة حسب السياق.",
+      "most students تعني معظم الطلاب، وmost information تعني معظم المعلومات.",
+      "some تستخدم غالبًا في الجمل المثبتة مع countable plural وuncountable nouns.",
+      "some students صحيح، وsome information صحيح.",
+      "some يمكن استخدامها في الأسئلة عندما نتوقع إجابة إيجابية أو عندما نقدم أو نطلب شيئًا بطريقة مهذبة.",
+      "مثال: Would you like some coffee?",
+      "any تستخدم كثيرًا في الأسئلة والجمل المنفية.",
+      "مثال: Do you have any questions?",
+      "مثال: We do not have any evidence.",
+      "any يمكن استخدامها في الجمل المثبتة عندما يكون معناها 'أيًّا كان' أو 'أي'.",
+      "مثال: Any student can participate.",
+      "no يمكن أن تأتي مباشرة قبل noun وتمنح الجملة معنى النفي.",
+      "no students تعني لا يوجد طلاب.",
+      "no information تعني لا توجد معلومات.",
+      "بعد no لا نستخدم not في الجملة نفسها عادةً: We have no evidence.",
+      "لا نقول We don't have no evidence في الإنجليزية القياسية إذا كان المقصود نفيًا واحدًا.",
+      "none تستخدم بدل noun أو قبل of + noun phrase، وتدل على عدم وجود أي كمية أو عدد.",
+      "none of + plural noun صحيح: none of the students.",
+      "none of + uncountable noun صحيح: none of the information.",
+      "يمكن أن يأتي الفعل بعد none بصيغة مفرد أو جمع حسب السياق، لكن الجمع شائع جدًا عندما يكون المرجع countable plural.",
+      "several تعني عددًا من الأشياء، وعادة تستخدم مع plural countable nouns.",
+      "several students صحيح.",
+      "لا تستخدم several مع uncountable nouns.",
+      "numerous تعني عددًا كبيرًا من، وتستخدم مع plural countable nouns.",
+      "numerous studies صحيح.",
+      "numerous information خطأ؛ information غير معدود.",
+      "various تعني متنوعًا أو عددًا من الأنواع المختلفة، وتستخدم عادة قبل plural countable nouns.",
+      "various factors صحيح.",
+      "various information ليست الاختيار المعتاد؛ يمكن استخدام various pieces of information.",
+      "enough تعني كمية أو عددًا كافيًا.",
+      "enough يمكن استخدامها مع countable plural وuncountable nouns.",
+      "enough students صحيح.",
+      "enough time صحيح.",
+      "enough تأتي قبل noun: enough information.",
+      "enough تأتي بعد adjective أو adverb: sufficiently large أو large enough.",
+      "عندما يكون enough قبل noun فإنها تعمل كـ determiner/quantifier.",
+      "plenty of تعني كمية أو عددًا أكثر من الكفاية، ويمكن استخدامها مع countable plural وuncountable nouns.",
+      "plenty of time صحيح.",
+      "plenty of opportunities صحيح.",
+      "a lot of وlots of تستخدمان مع countable plural وuncountable nouns.",
+      "a lot of students صحيح.",
+      "a lot of research صحيح.",
+      "lots of information صحيح.",
+      "في الكتابة الأكاديمية الرسمية، يمكن أحيانًا تفضيل more specific expressions بدل a lot of إذا كان ذلك أكثر دقة.",
+      "a great deal of تستخدم مع uncountable nouns.",
+      "a great deal of research صحيح.",
+      "a great deal of information صحيح.",
+      "a large amount of تستخدم عادة مع uncountable nouns.",
+      "a large amount of data يمكن استخدامها عندما يُعامل data كاسم كمية في السياق، لكن a large amount of information أو research أو money أكثر وضوحًا.",
+      "a large number of تستخدم مع plural countable nouns.",
+      "a large number of students صحيح.",
+      "a great number of تستخدم مع plural countable nouns، وهي أكثر رسمية.",
+      "a great number of studies صحيح.",
+      "amount تستخدم أساسًا مع uncountable nouns.",
+      "number تستخدم مع countable nouns.",
+      "the amount of information صحيح.",
+      "the number of students صحيح.",
+      "a number of تعني 'عدد من' ويأتي بعدها plural noun، والفعل بعدها يكون عادة plural.",
+      "A number of students are absent.",
+      "the number of تعني 'عدد الـ...' ويأتي بعدها plural noun، لكن الفعل يكون singular لأن subject الحقيقي هو number.",
+      "The number of students is increasing.",
+      "الفرق بين a number of وthe number of من أهم نقاط PTE.",
+      "each تستخدم مع individual members، ويأتي بعدها عادة singular countable noun.",
+      "each student صحيح.",
+      "each student has... وليس each student have.",
+      "every تستخدم مع singular countable noun.",
+      "every student صحيح.",
+      "every student has صحيح.",
+      "each وevery كلاهما يتطلبان singular countable noun مباشرة بعدهما.",
+      "لا نقول every students في الاستخدام القياسي.",
+      "each يمكن أن تأتي بعد determiner أو pronoun في تراكيب مثل each of the students.",
+      "بعد each of + plural noun/pronoun يأتي اسم جمع، لكن الفعل غالبًا singular.",
+      "Each of the students has completed the task.",
+      "every one of + plural noun ممكن، ويأتي الفعل عادة singular.",
+      "Every one of the students has completed the task.",
+      "both تستخدم مع شيئين أو مجموعتين، وتأتي مع plural noun.",
+      "both students صحيح.",
+      "both of + plural noun/pronoun صحيح: both of the students.",
+      "الفعل بعد both يكون plural: Both students are ready.",
+      "either تشير إلى واحد من خيارين.",
+      "either + singular countable noun: either option.",
+      "either of + plural noun/pronoun: either of the options.",
+      "الفعل بعد either of يكون عادة singular في الإنجليزية الأكاديمية الرسمية.",
+      "Either of the methods is acceptable.",
+      "neither تعني لا هذا ولا ذاك من خيارين.",
+      "neither + singular countable noun: neither method.",
+      "neither of + plural noun/pronoun: neither of the methods.",
+      "الفعل بعد neither of يكون عادة singular في الكتابة الرسمية: Neither of the methods is effective.",
+      "either...or تستخدم للاختيار بين خيارين أو أكثر.",
+      "neither...nor تستخدم لنفي الخيارين.",
+      "both...and تستخدم للإشارة إلى شيئين معًا.",
+      "not only...but also تستخدم للإشارة إلى شيئين مع التأكيد.",
+      "في either...or وneither...nor، إذا كان الفاعلان مختلفين في العدد فقد يتبع الفعل الاسم الأقرب إليه في بعض التراكيب، لكن الأفضل في الكتابة الأكاديمية صياغة الجملة بحيث يكون الاتفاق واضحًا.",
+      "all تستخدم مع plural countable nouns وuncountable nouns.",
+      "all students صحيح.",
+      "all information صحيح.",
+      "all of the students صحيح.",
+      "all of the information صحيح.",
+      "most تستخدم مع plural countable nouns وuncountable nouns.",
+      "most students صحيح.",
+      "most research صحيح.",
+      "most of + determiner/pronoun صحيح: most of the students.",
+      "some of + determiner/pronoun صحيح: some of the research.",
+      "any of + determiner/pronoun صحيح: any of the students.",
+      "none of + determiner/pronoun صحيح: none of the students.",
+      "a number of لا تعني نفس the number of.",
+      "a number of students are... بينما the number of students is...",
+      "a great deal of تعني كمية كبيرة من، وتستخدم مع uncountable nouns.",
+      "a great many تعني عددًا كبيرًا من، وتستخدم مع plural countable nouns.",
+      "a great many students صحيح.",
+      "a great deal of students خطأ إذا كان المقصود عدد الطلاب؛ الصحيح a great many students أو a large number of students.",
+      "a large amount of students غير مفضل لأن students معدود؛ الصحيح a large number of students.",
+      "a large number of information خطأ لأن information غير معدود؛ الصحيح a large amount of information أو a great deal of information.",
+      "a piece of information تستخدم لتحويل information إلى وحدة معدودة.",
+      "pieces of information هي صيغة الجمع.",
+      "a piece of advice وpieces of advice، وليس advices.",
+      "a piece of research وpieces of research ممكنة عندما نريد الحديث عن دراسات أو وحدات بحثية منفصلة.",
+      "too much تستخدم مع uncountable nouns للدلالة على كمية زائدة.",
+      "too many تستخدم مع plural countable nouns للدلالة على عدد زائد.",
+      "too much information صحيح.",
+      "too many students صحيح.",
+      "so much تستخدم مع uncountable nouns للتأكيد على كمية كبيرة.",
+      "so many تستخدم مع plural countable nouns.",
+      "so much research صحيح.",
+      "so many studies صحيح.",
+      "very لا تعمل بالطريقة نفسها مع nouns؛ نقول very important، لكن so much information أو very little information.",
+      "very little تعني كمية صغيرة جدًا، وvery few تعني عددًا صغيرًا جدًا.",
+      "quite a few تعني عددًا لا بأس به أو عددًا كبيرًا نسبيًا، وليست مساوية تمامًا لـ very few.",
+      "quite a little تعني كمية لا بأس بها نسبيًا.",
+      "a few وa little تحملان معنى وجود كمية أو عدد، بينما few وlittle تحملان غالبًا معنى النقص.",
+      "more than one + singular countable noun يأخذ عادة فعلًا مفردًا في الإنجليزية القياسية.",
+      "More than one student has reported the problem.",
+      "one and a half + plural noun عادة: one and a half hours.",
+      "half of + plural countable noun قد تأخذ فعلًا جمعًا.",
+      "Half of the students are ready.",
+      "half of + uncountable noun تأخذ عادة فعلًا مفردًا.",
+      "Half of the information is useful.",
+      "a percentage of يتبعها فعل بحسب الاسم الذي بعدها أو حسب التركيز في السياق.",
+      "A large percentage of students are successful.",
+      "A large percentage of the population is employed.",
+      "a majority of + plural countable noun غالبًا تأخذ فعلًا جمعًا في الاستخدام الأكاديمي البريطاني، وقد تختلف الصياغة حسب الإنجليزية والسياق.",
+      "the majority of + plural noun يمكن أن تأخذ فعلًا جمعًا عندما نركز على الأفراد.",
+      "a minority of تستخدم للدلالة على مجموعة أصغر من الأغلبية.",
+      "each of وevery one of لا يعنيان الشيء نفسه تمامًا من ناحية التركيب، لكن كلاهما يشيران إلى الأفراد بصورة منفصلة.",
+      "all of تشير إلى المجموعة ككل.",
+      "each تشير إلى الأفراد واحدًا واحدًا.",
+      "every تشير إلى كل فرد ضمن مجموعة بطريقة عامة أو منتظمة.",
+      "both تشير إلى عنصرين معًا.",
+      "either تشير إلى أحد خيارين.",
+      "neither تشير إلى عدم اختيار أي من خيارين.",
+      "either وneither يرتبطان أساسًا باثنين، بينما any وnone يمكن أن يرتبطا بمجموعات أكبر.",
+      "any قد تعني 'أي واحد' دون تحديد العدد: Any student can apply.",
+      "no + noun يمكن تحويلها إلى not + any: No students attended = The students did not attend.",
+      "لكن لا نستخدم الصيغتين معًا إذا كان ذلك يؤدي إلى double negative.",
+      "not many تعني ليس عددًا كبيرًا من.",
+      "not much تعني ليست كمية كبيرة من.",
+      "not enough تعني كمية أو عددًا غير كافٍ.",
+      "more than enough تعني أكثر من الكفاية.",
+      "far too much تعني أكثر بكثير من اللازم.",
+      "far too many تعني عددًا أكبر بكثير من اللازم.",
+      "only a few تعني عددًا قليلًا فقط.",
+      "only a little تعني كمية صغيرة فقط.",
+      "quite a few تعني عددًا لا بأس به، وغالبًا أكثر مما قد يتوقعه المتحدث.",
+      "quite a little تعني كمية لا بأس بها.",
+      "such a large number of + plural noun ممكن في الكتابة الأكاديمية.",
+      "such a small amount of + uncountable noun ممكن.",
+      "so many + plural noun.",
+      "so much + uncountable noun.",
+      "such many ليست الصيغة القياسية.",
+      "such much ليست الصيغة القياسية.",
+      "في PTE، إذا جاء بعد الفراغ plural countable noun فابدأ باحتمالات many, few, fewer, several, numerous, both, each/every حسب البنية.",
+      "في PTE، إذا جاء بعد الفراغ uncountable noun فافحص much, little, less, a great deal of, a large amount of حسب المعنى.",
+      "في PTE، إذا وجدت than في المقارنة بين الكمية، افحص less/fewer أو more.",
+      "في PTE، إذا وجدت a number of فالفعل بعدها غالبًا plural.",
+      "في PTE، إذا وجدت the number of فالفعل بعدها singular.",
+      "في PTE، إذا وجدت each أو every فغالبًا يأتي بعدها singular countable noun.",
+      "في PTE، إذا وجدت both فغالبًا يأتي بعدها plural noun وفعل جمع.",
+      "في PTE، إذا وجدت either/neither فافحص هل السياق يتحدث عن خيارين.",
+      "في PTE، إذا وجدت of بعد quantifier، افحص هل الاسم يحتاج determiner مثل the, these, my, them.",
+      "في PTE، لا تختَر quantifier بناءً على المعنى فقط؛ تحقق من countability والعدد واتفاق الفعل."
+    ],
+    "examples": [
+      {
+        "en": "Many students participated in the study.",
+        "ar": "شارك العديد من الطلاب في الدراسة."
+      },
+      {
+        "en": "Much information was collected during the experiment.",
+        "ar": "جُمعت معلومات كثيرة أثناء التجربة."
+      },
+      {
+        "en": "Few students completed the optional task.",
+        "ar": "أكمل عدد قليل جدًا من الطلاب المهمة الاختيارية."
+      },
+      {
+        "en": "A few students completed the task successfully.",
+        "ar": "تمكن بعض الطلاب من إكمال المهمة بنجاح."
+      },
+      {
+        "en": "There is little evidence to support this claim.",
+        "ar": "هناك القليل جدًا من الأدلة التي تدعم هذا الادعاء."
+      },
+      {
+        "en": "There is a little evidence supporting the hypothesis.",
+        "ar": "هناك بعض الأدلة التي تدعم الفرضية."
+      },
+      {
+        "en": "The new study involved fewer participants.",
+        "ar": "اشتملت الدراسة الجديدة على عدد أقل من المشاركين."
+      },
+      {
+        "en": "The researchers collected less information than expected.",
+        "ar": "جمع الباحثون معلومات أقل مما كان متوقعًا."
+      },
+      {
+        "en": "The researchers need more data.",
+        "ar": "يحتاج الباحثون إلى مزيد من البيانات."
+      },
+      {
+        "en": "Some students preferred the first method.",
+        "ar": "فضّل بعض الطلاب الطريقة الأولى."
+      },
+      {
+        "en": "The researchers did not find any significant differences.",
+        "ar": "لم يجد الباحثون أي فروق مهمة."
+      },
+      {
+        "en": "Any student can participate in the experiment.",
+        "ar": "يمكن لأي طالب المشاركة في التجربة."
+      },
+      {
+        "en": "Several studies have investigated this issue.",
+        "ar": "بحثت عدة دراسات هذه القضية."
+      },
+      {
+        "en": "Numerous studies have reached similar conclusions.",
+        "ar": "توصلت دراسات عديدة إلى استنتاجات متشابهة."
+      },
+      {
+        "en": "The researchers collected enough data to support the conclusion.",
+        "ar": "جمع الباحثون بيانات كافية لدعم الاستنتاج."
+      },
+      {
+        "en": "There is plenty of evidence to support the theory.",
+        "ar": "هناك أدلة أكثر من كافية لدعم النظرية."
+      },
+      {
+        "en": "A great deal of research has been conducted on this topic.",
+        "ar": "أُجري قدر كبير من الأبحاث حول هذا الموضوع."
+      },
+      {
+        "en": "A large number of students participated in the survey.",
+        "ar": "شارك عدد كبير من الطلاب في الاستطلاع."
+      },
+      {
+        "en": "A number of students were absent.",
+        "ar": "كان عدد من الطلاب غائبين."
+      },
+      {
+        "en": "The number of students is increasing.",
+        "ar": "عدد الطلاب في ازدياد."
+      },
+      {
+        "en": "Each student has to complete the assignment.",
+        "ar": "يجب على كل طالب إكمال المهمة."
+      },
+      {
+        "en": "Each of the students has completed the assignment.",
+        "ar": "أكمل كل واحد من الطلاب المهمة."
+      },
+      {
+        "en": "Every student received a copy of the report.",
+        "ar": "حصل كل طالب على نسخة من التقرير."
+      },
+      {
+        "en": "Both methods are effective.",
+        "ar": "كلتا الطريقتين فعالتان."
+      },
+      {
+        "en": "Neither of the methods is suitable for this experiment.",
+        "ar": "لا تصلح أي من الطريقتين لهذه التجربة."
+      },
+      {
+        "en": "Either of the methods is acceptable.",
+        "ar": "أي من الطريقتين مقبولة."
+      },
+      {
+        "en": "All the participants completed the questionnaire.",
+        "ar": "أكمل جميع المشاركين الاستبيان."
+      },
+      {
+        "en": "Most of the information was relevant.",
+        "ar": "كانت معظم المعلومات ذات صلة."
+      },
+      {
+        "en": "Too much information can make the report difficult to read.",
+        "ar": "يمكن أن تجعل كثرة المعلومات التقرير صعب القراءة."
+      },
+      {
+        "en": "Too many variables can make the analysis complicated.",
+        "ar": "يمكن أن تجعل كثرة المتغيرات التحليل معقدًا."
+      }
+    ],
+    "commonMistakes": [
+      "استخدام much مع plural countable noun: much students ❌ → many students ✅.",
+      "استخدام many مع uncountable noun: many information ❌ → much information ✅.",
+      "استخدام fewer مع uncountable noun: fewer research ❌ → less research أو a smaller amount of research ✅.",
+      "استخدام less مع plural countable noun في الكتابة الأكاديمية: less students ❌ → fewer students ✅.",
+      "الخلط بين few وa few: few تعني عددًا قليلًا جدًا، بينما a few تعني بعضًا.",
+      "الخلط بين little وa little: little تعني كمية قليلة جدًا، بينما a little تعني بعض الكمية.",
+      "استخدام several مع uncountable noun: several information ❌.",
+      "استخدام numerous مع uncountable noun: numerous information ❌.",
+      "استخدام a large number of مع uncountable noun: a large number of information ❌ → a large amount of information ✅.",
+      "استخدام a large amount of مع plural countable noun: a large amount of students ❌ → a large number of students ✅.",
+      "الخلط بين a number of وthe number of: A number of students are... / The number of students is....",
+      "استخدام every مع plural noun: every students ❌ → every student ✅.",
+      "استخدام each مع plural noun مباشرة: each students ❌ → each student ✅.",
+      "نسيان أن each of + plural noun يأخذ فعلًا مفردًا عادة: Each of the students has... وليس have.",
+      "استخدام both مع singular noun: both student ❌ → both students ✅.",
+      "استخدام either/neither وكأنهما يشيران إلى عدد كبير من الخيارات؛ الاستخدام الأساسي لهما يتعلق بخيارين.",
+      "الخلط بين no وnone: no + noun، بينما none يمكن أن تعمل بدل noun أو مع of.",
+      "استخدام not مع no بطريقة تؤدي إلى double negative: We don't have no evidence ❌.",
+      "استخدام too much مع countable plural: too much students ❌ → too many students ✅.",
+      "استخدام too many مع uncountable: too many information ❌ → too much information ✅.",
+      "استخدام so much مع plural countable noun: so much students ❌ → so many students ✅.",
+      "استخدام so many مع uncountable noun: so many research ❌ → so much research ✅.",
+      "استخدام such much أو such many: كلاهما غير قياسي في هذه البنية.",
+      "الخلط بين amount وnumber.",
+      "الخلط بين great deal وgreat many: a great deal of research / a great many studies.",
+      "استخدام advices بدل advice؛ الصحيح advice أو pieces of advice.",
+      "استخدام informations بدل information؛ information غير معدود.",
+      "الخلط بين enough + noun وadjective + enough: enough time / enough students / large enough.",
+      "نسيان determiner بعد quantifier + of: most of the students، وليس most of students عندما يكون المقصود مجموعة محددة.",
+      "استخدام each of the students are؛ الصحيح في الصياغة الرسمية each of the students is.",
+      "نسيان أن both يتطلب فعلًا جمعًا: Both methods are effective.",
+      "الخلط بين most students وmost of the students؛ الثانية تشير عادة إلى مجموعة محددة.",
+      "الخلط بين some وany في الجمل المنفية والأسئلة.",
+      "استخدام any فقط في الأسئلة والنفي ونسيان استخدامها بمعنى 'أيًّا كان' في الجمل المثبتة.",
+      "الخلط بين a few وfew في المعنى؛ a few تحمل معنى وجود عدد ما، بينما few تشير إلى نقص.",
+      "في PTE، اختيار quantifier دون تحديد countable/uncountable أولًا."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "There were ____ students in the classroom.",
+        "options": [
+          "much",
+          "many",
+          "little",
+          "a great deal of"
+        ],
+        "correct": 1,
+        "answer": "many",
+        "why": "students اسم معدود جمع، لذلك نستخدم many."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers collected ____ information.",
+        "options": [
+          "many",
+          "few",
+          "much",
+          "several"
+        ],
+        "correct": 2,
+        "answer": "much",
+        "why": "information اسم غير معدود، لذلك نستخدم much."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The study included ____ participants than expected.",
+        "options": [
+          "less",
+          "fewer",
+          "little",
+          "much"
+        ],
+        "correct": 1,
+        "answer": "fewer",
+        "why": "participants اسم معدود جمع، ومع المقارنة في العدد نستخدم fewer."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers had ____ time to complete the experiment.",
+        "options": [
+          "few",
+          "fewer",
+          "little",
+          "many"
+        ],
+        "correct": 2,
+        "answer": "little",
+        "why": "time اسم غير معدود، وlittle تعني كمية قليلة جدًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "____ students passed the test, so the results were disappointing.",
+        "options": [
+          "A few",
+          "Few",
+          "Much",
+          "A little"
+        ],
+        "correct": 1,
+        "answer": "Few",
+        "why": "السياق يشير إلى عدد قليل جدًا وغير كافٍ، لذلك few مناسبة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "____ students volunteered to participate.",
+        "options": [
+          "A few",
+          "Much",
+          "A little",
+          "Little"
+        ],
+        "correct": 0,
+        "answer": "A few",
+        "why": "المقصود وجود بعض الطلاب، لذلك a few هي المناسبة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "There is ____ evidence to support the claim.",
+        "options": [
+          "few",
+          "a few",
+          "little",
+          "many"
+        ],
+        "correct": 2,
+        "answer": "little",
+        "why": "evidence غير معدود، وlittle تعني كمية قليلة جدًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "There is ____ evidence that supports the hypothesis.",
+        "options": [
+          "a little",
+          "a few",
+          "few",
+          "many"
+        ],
+        "correct": 0,
+        "answer": "a little",
+        "why": "evidence غير معدود، وa little تعني وجود كمية صغيرة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "A ____ of students were absent.",
+        "options": [
+          "number",
+          "amount",
+          "deal",
+          "little"
+        ],
+        "correct": 0,
+        "answer": "number",
+        "why": "students اسم معدود جمع، لذلك نستخدم a number of."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The ____ of students is increasing.",
+        "options": [
+          "number",
+          "amount",
+          "few",
+          "many"
+        ],
+        "correct": 0,
+        "answer": "number",
+        "why": "The number of + plural noun تأخذ فعلًا مفردًا: is increasing."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers collected a large ____ of data.",
+        "options": [
+          "number",
+          "amount",
+          "few",
+          "many"
+        ],
+        "correct": 1,
+        "answer": "amount",
+        "why": "data هنا تشير إلى كمية، وamount تستخدم مع الكميات غير المعدودة في هذا السياق."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "A large ____ of students participated in the survey.",
+        "options": [
+          "amount",
+          "number",
+          "deal",
+          "little"
+        ],
+        "correct": 1,
+        "answer": "number",
+        "why": "students اسم معدود جمع، لذلك نستخدم a large number of."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "____ student has to complete the assignment.",
+        "options": [
+          "Every",
+          "Many",
+          "Both",
+          "Several"
+        ],
+        "correct": 0,
+        "answer": "Every",
+        "why": "every يتبعها singular countable noun: every student."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Each of the students ____ completed the task.",
+        "options": [
+          "have",
+          "has",
+          "are",
+          "were"
+        ],
+        "correct": 1,
+        "answer": "has",
+        "why": "subject هو each، ولذلك نستخدم فعلًا مفردًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Both methods ____ effective.",
+        "options": [
+          "is",
+          "was",
+          "are",
+          "has"
+        ],
+        "correct": 2,
+        "answer": "are",
+        "why": "both تشير إلى عنصرين، ولذلك تأخذ فعلًا جمعًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Neither of the methods ____ suitable.",
+        "options": [
+          "are",
+          "is",
+          "were",
+          "have"
+        ],
+        "correct": 1,
+        "answer": "is",
+        "why": "في الكتابة الرسمية، neither of + plural noun تأخذ عادة فعلًا مفردًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers did not find ____ significant differences.",
+        "options": [
+          "some",
+          "any",
+          "much",
+          "little"
+        ],
+        "correct": 1,
+        "answer": "any",
+        "why": "any تستخدم بصورة طبيعية في الجمل المنفية مع plural countable nouns."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "There is ____ time left before the examination.",
+        "options": [
+          "few",
+          "a few",
+          "little",
+          "many"
+        ],
+        "correct": 2,
+        "answer": "little",
+        "why": "time غير معدود، والسياق يدل على كمية قليلة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The report contains ____ useful information.",
+        "options": [
+          "many",
+          "a lot of",
+          "few",
+          "several"
+        ],
+        "correct": 1,
+        "answer": "a lot of",
+        "why": "information غير معدود، وa lot of يمكن استخدامها مع uncountable nouns."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "There are ____ many variables in the model.",
+        "options": [
+          "too",
+          "much",
+          "little",
+          "a little"
+        ],
+        "correct": 0,
+        "answer": "too",
+        "why": "too many + plural countable noun تعني عددًا زائدًا عن الحد المناسب."
+      }
+    ],
+    "markers": [
+      "many + plural countable noun",
+      "much + uncountable noun",
+      "few + plural countable noun",
+      "a few + plural countable noun",
+      "little + uncountable noun",
+      "a little + uncountable noun",
+      "fewer + plural countable noun",
+      "less + uncountable noun",
+      "more + countable/uncountable",
+      "most + countable/uncountable",
+      "some + countable plural/uncountable",
+      "any + questions/negatives/general meaning",
+      "no + noun",
+      "none + noun reference / none of",
+      "several + plural countable",
+      "numerous + plural countable",
+      "various + plural countable",
+      "enough + noun",
+      "adjective/adverb + enough",
+      "plenty of + countable/uncountable",
+      "a lot of + countable/uncountable",
+      "a great deal of + uncountable",
+      "a great many + plural countable",
+      "a large amount of + uncountable",
+      "a large number of + plural countable",
+      "a number of + plural noun + plural verb",
+      "the number of + plural noun + singular verb",
+      "each + singular countable noun",
+      "every + singular countable noun",
+      "each of + plural noun + singular verb",
+      "both + plural noun",
+      "either + singular noun",
+      "neither + singular noun",
+      "all + plural/uncountable",
+      "most of + determiner/pronoun",
+      "too much + uncountable",
+      "too many + plural countable",
+      "so much + uncountable",
+      "so many + plural countable",
+      "very few + plural countable",
+      "very little + uncountable",
+      "quite a few",
+      "quite a little",
+      "more than one + singular noun",
+      "half of + noun",
+      "PTE: حدد countable/uncountable أولًا",
+      "PTE: a number of ≠ the number of"
+    ]
+  }
+]

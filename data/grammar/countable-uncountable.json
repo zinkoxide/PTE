@@ -1,0 +1,641 @@
+[
+  {
+    "id": "countable-uncountable",
+    "title": "الأسماء المعدودة وغير المعدودة",
+    "category": "الأسماء",
+    "icon": "📦",
+    "description": "فهم الفرق بين الأسماء المعدودة وغير المعدودة واختيار أدوات الكمية والتحديد الصحيحة، مع التركيز على أكثر الأخطاء شيوعًا في أسئلة PTE.",
+    "explanation": "في اللغة الإنجليزية تنقسم الأسماء من حيث قابلية العد إلى Countable Nouns (أسماء معدودة) وUncountable Nouns (أسماء غير معدودة). الاسم المعدود يمكن أن يكون مفردًا أو جمعًا، ويمكن استخدام a/an معه في المفرد، مثل a student وan experiment. أما الاسم غير المعدود فيُعامل عادةً على أنه اسم مفرد من ناحية القواعد، ولا يُستخدم معه a/an ولا يُجمع بالطريقة العادية، مثل information وadvice وresearch وequipment. فهم هذا الفرق أساسي جدًا لأن كثيرًا من أخطاء PTE تنتج عن اختيار أداة كمية غير مناسبة للاسم، مثل much students أو many information أو an advice. كما أن بعض الكلمات قد تكون معدودة أو غير معدودة حسب المعنى المقصود، مثل experience وpaper وtime وroom وlight وcoffee وchicken.",
+    "rules": [
+      "الاسم المعدود Countable Noun هو اسم يمكن عده كأفراد أو وحدات منفصلة: one student, two students, three students.",
+      "الاسم المعدود المفرد يحتاج عادةً إلى محدد Determiner قبلَه، مثل a/an أو the أو this أو my أو each.",
+      "لا نقول عادةً: Student completed the task. والصحيح: A student completed the task أو The student completed the task.",
+      "يمكن استخدام a/an مع الاسم المعدود المفرد: a book, an experiment, a university.",
+      "الاسم المعدود يمكن أن يكون جمعًا: student → students, experiment → experiments.",
+      "يمكن استخدام many مع الأسماء المعدودة الجمع: many students, many experiments.",
+      "يمكن استخدام few مع الأسماء المعدودة الجمع: few students, few studies.",
+      "يمكن استخدام a few مع الأسماء المعدودة الجمع: a few students, a few studies.",
+      "يمكن استخدام fewer مع الأسماء المعدودة الجمع: fewer students, fewer errors.",
+      "الاسم غير المعدود Uncountable Noun يشير عادةً إلى مادة أو مفهوم أو كمية لا نتعامل معها كأفراد منفصلة في القاعدة الإنجليزية.",
+      "الاسم غير المعدود لا يأخذ a/an مباشرة: information وليس an information.",
+      "الاسم غير المعدود لا يُجمع عادةً بإضافة s: information وليس informations، advice وليس advices.",
+      "الأسماء غير المعدودة تُعامل عادةً كأسماء مفردة في اتفاق الفعل: The information is useful.",
+      "يمكن استخدام much مع الأسماء غير المعدودة: much information, much research.",
+      "يمكن استخدام little مع الأسماء غير المعدودة: little evidence, little information.",
+      "يمكن استخدام a little مع الأسماء غير المعدودة: a little information, a little evidence.",
+      "يمكن استخدام less مع الأسماء غير المعدودة: less information, less research.",
+      "لا نستخدم many مباشرةً مع الاسم غير المعدود: many information خطأ، والصحيح much information أو a lot of information.",
+      "لا نستخدم much مباشرةً مع الاسم المعدود الجمع: much students خطأ، والصحيح many students.",
+      "some وany يمكن استخدامهما مع الأسماء المعدودة الجمع وغير المعدودة حسب السياق: some students, some information.",
+      "a lot of وlots of يمكن استخدامهما مع الأسماء المعدودة الجمع وغير المعدودة: a lot of students / a lot of information.",
+      "plenty of يمكن أن تأتي مع المعدود الجمع وغير المعدود: plenty of opportunities / plenty of evidence.",
+      "enough يمكن أن تأتي مع المعدود الجمع وغير المعدود: enough students / enough time.",
+      "too many تستخدم مع الأسماء المعدودة الجمع: too many students.",
+      "too much تستخدم مع الأسماء غير المعدودة: too much information.",
+      "so many تستخدم مع الأسماء المعدودة الجمع: so many questions.",
+      "so much تستخدم مع الأسماء غير المعدودة: so much research.",
+      "a number of تستخدم مع الأسماء المعدودة الجمع ويأتي بعدها فعل جمع: A number of students are absent.",
+      "the number of تستخدم مع الأسماء المعدودة الجمع ولكنها تشير إلى العدد نفسه، لذلك يأتي بعدها فعل مفرد: The number of students is increasing.",
+      "amount تُستخدم عادةً مع الأسماء غير المعدودة: a large amount of information.",
+      "number تُستخدم مع الأسماء المعدودة: a large number of students.",
+      "لا نستخدم عادةً a number of مع اسم غير معدود: a number of information خطأ.",
+      "لا نستخدم عادةً a large amount of مع اسم معدود جمع: a large amount of students خطأ؛ والصحيح a large number of students.",
+      "بعض الأسماء غير المعدودة المهمة أكاديميًا هي information, advice, research, evidence, knowledge, equipment, furniture, luggage, homework, progress, traffic, accommodation, software, vocabulary, education, money وwork.",
+      "information اسم غير معدود: some information وليس some informations.",
+      "advice اسم غير معدود: some advice وليس some advices.",
+      "research يمكن أن تكون اسمًا غير معدود عندما نتحدث عن البحث بشكل عام أو عن النشاط البحثي: much research has been conducted.",
+      "evidence اسم غير معدود: little evidence وليس few evidence.",
+      "equipment اسم غير معدود: modern equipment وليس modern equipments.",
+      "furniture اسم غير معدود: some furniture وليس some furnitures.",
+      "homework اسم غير معدود: much homework وليس many homeworks.",
+      "progress اسم غير معدود: significant progress وليس significant progresses عندما نتحدث عن التقدم بشكل عام.",
+      "news اسم غير معدود من الناحية النحوية رغم انتهائه بـ s، ولذلك نقول: The news is surprising.",
+      "knowledge اسم غير معدود: extensive knowledge وليس extensive knowledges.",
+      "للتعبير عن وحدة واحدة من اسم غير معدود نستخدم expression of quantity مثل a piece of advice أو a piece of information.",
+      "يمكن قول a piece of advice، two pieces of advice، three pieces of advice.",
+      "يمكن قول a piece of information، two pieces of information.",
+      "equipment يمكن التعبير عن وحداته بـ a piece of equipment أو items of equipment.",
+      "furniture يمكن التعبير عن وحداته بـ a piece of furniture أو items of furniture.",
+      "research يمكن التعبير عن دراسة أو عمل بحثي منفرد باستخدام a piece of research أو a research study، حسب المعنى.",
+      "bread اسم غير معدود بشكل عام، لكن يمكن قول a loaf of bread أو two slices of bread.",
+      "water اسم غير معدود، لكن يمكن قول a bottle of water أو a glass of water.",
+      "rice اسم غير معدود، لكن يمكن الحديث عن grains of rice عند الحاجة إلى عد الحبات.",
+      "بعض الأسماء تتغير قابليتها للعد حسب المعنى: experience قد تكون غير معدودة بمعنى الخبرة العامة، ومعدودة بمعنى تجربة أو موقف مر به الشخص.",
+      "paper يمكن أن يكون غير معدود عندما يعني مادة الورق، ومعدودًا عندما يعني ورقة أو بحثًا أكاديميًا.",
+      "time يكون غير معدود عندما يعني الوقت بشكل عام، ومعدودًا عندما يعني مناسبة أو مرة: three times.",
+      "room يكون معدودًا عندما يعني غرفة، وغير معدود عندما يعني مساحة أو مكانًا كافيًا: There is not much room.",
+      "light يمكن أن يكون غير معدود عندما يعني الضوء، ومعدودًا عندما يعني مصباحًا أو مصدر ضوء: Turn off the lights.",
+      "coffee يمكن أن يكون غير معدود عندما نتحدث عن المشروب، ويمكن أن يكون معدودًا بشكل غير رسمي عندما نعني كوبًا من القهوة: two coffees.",
+      "chicken يمكن أن يكون معدودًا عندما يعني طائرًا، وغير معدود عندما يعني لحم الدجاج.",
+      "business يمكن أن يكون غير معدود عندما يعني النشاط التجاري بشكل عام، ومعدودًا عندما يعني شركة أو نشاطًا تجاريًا معينًا.",
+      "work غالبًا اسم غير معدود عندما يعني العمل أو الوظيفة بشكل عام: I have a lot of work.",
+      "job اسم معدود: I have three jobs.",
+      "money اسم غير معدود: much money أو a lot of money.",
+      "currency units such as dollars and pounds are countable: five dollars, ten pounds.",
+      "education غالبًا غير معدود عندما نتحدث عن التعليم كمفهوم عام: Education is important.",
+      "an education يمكن أن تشير إلى تعليم أو تكوين تعليمي معين في بعض السياقات.",
+      "experience غالبًا غير معدود عندما يعني الخبرة: She has extensive experience.",
+      "an experience تعني تجربة أو حدثًا معينًا: It was an unforgettable experience.",
+      "data لها استخدامان شائعان في الإنجليزية الأكاديمية الحديثة؛ data قد تُعامل كجمع رسمي لـ datum، وقد تُستخدم أيضًا كاسم كتلي في بعض السياقات الحديثة.",
+      "في الكتابة الأكاديمية الرسمية يمكن استخدام: The data are consistent with previous findings.",
+      "datum هو المفرد النظري لكلمة data، لكنه أقل استخدامًا في الكتابة العامة.",
+      "بعض الأسماء لها جموع غير منتظمة مهمة في PTE، مثل analysis → analyses وcriterion → criteria وphenomenon → phenomena.",
+      "analysis اسم معدود: one analysis, two analyses.",
+      "criterion اسم معدود: one criterion, two criteria.",
+      "phenomenon اسم معدود: one phenomenon, several phenomena.",
+      "thesis اسم معدود: one thesis, two theses.",
+      "basis اسم معدود: one basis, several bases.",
+      "لا تضف s إلى الجمع غير المنتظم: analyses وليس analysises، criteria وليس criterions في الاستخدام الأكاديمي الصحيح.",
+      "الأسماء المعدودة الجمع يمكن أن تستخدم بدون أداة عندما نتحدث عنها بشكل عام: Students need feedback.",
+      "الأسماء غير المعدودة يمكن أن تستخدم بدون أداة عندما نتحدث عنها بشكل عام: Research is important.",
+      "معنى الاسم قد يحدد الأداة المناسبة، لذلك لا يكفي حفظ الكلمة وحدها؛ يجب معرفة كيفية استخدامها في الجملة.",
+      "في أسئلة PTE يجب أولًا تحديد ما إذا كان الاسم بعد الفراغ معدودًا مفردًا أو معدودًا جمعًا أو غير معدود.",
+      "إذا كان الاسم معدودًا مفردًا، فغالبًا ستحتاج إلى determiner مثل a/an/the/my/this/each.",
+      "إذا كان الاسم جمعًا معدودًا، يمكن أن تستخدم many, few, a few, fewer, several, numerous وغيرها.",
+      "إذا كان الاسم غير معدود، يمكن أن تستخدم much, little, a little, less وغيرها.",
+      "في أسئلة PTE، لا تعتمد على ترجمة much وmany فقط؛ افحص طبيعة الاسم الذي يليهما.",
+      "الفرق بين few وa few ليس مجرد فرق نحوي؛ few تعني عددًا قليلًا جدًا أو غير كافٍ غالبًا، بينما a few تعني بعضًا أو عددًا قليلًا لكنه موجود.",
+      "الفرق بين little وa little مشابه؛ little تعني كمية قليلة جدًا أو غير كافية غالبًا، بينما a little تعني كمية صغيرة لكنها موجودة.",
+      "fewer تستخدم عادةً مع الأشياء التي يمكن عدها: fewer errors, fewer students.",
+      "less تستخدم عادةً مع الكميات غير المعدودة: less information, less time.",
+      "في الاستخدام غير الرسمي قد تظهر less مع بعض الأسماء المعدودة، لكن في الكتابة الأكاديمية واختبارات PTE يفضل الالتزام بـ fewer مع المعدود وless مع غير المعدود.",
+      "القاعدة الأساسية التي تساعد في PTE هي: many/few/fewer → countable plural، وmuch/little/less → uncountable.",
+      "إذا أردت عد اسم غير معدود، أضف وحدة قياس أو حاوية: a piece of information, a bottle of water, a piece of equipment.",
+      "التمييز بين countable وuncountable يؤثر أيضًا في اختيار الفعل، لأن الاسم غير المعدود يأخذ فعلًا مفردًا عادةً.",
+      "Research is important صحيحة، بينما Research are important خطأ عندما تكون research غير معدودة.",
+      "The information is reliable صحيحة، بينما The information are reliable خطأ.",
+      "Equipment is expensive صحيحة، بينما Equipment are expensive خطأ عندما يُستخدم equipment كاسم غير معدود.",
+      "عند استخدام a piece of مع اسم غير معدود، يصبح الفعل مرتبطًا بـ piece: A piece of information is useful.",
+      "عند استخدام pieces of مع اسم غير معدود، يصبح الفعل جمعًا: Two pieces of information are useful."
+    ],
+    "examples": [
+      {
+        "en": "Many students participated in the study.",
+        "ar": "شارك العديد من الطلاب في الدراسة."
+      },
+      {
+        "en": "Much information was collected during the experiment.",
+        "ar": "تم جمع الكثير من المعلومات أثناء التجربة."
+      },
+      {
+        "en": "The researcher conducted several experiments.",
+        "ar": "أجرى الباحث عدة تجارب."
+      },
+      {
+        "en": "The study provided valuable information.",
+        "ar": "قدمت الدراسة معلومات قيّمة."
+      },
+      {
+        "en": "There are many possible explanations for this result.",
+        "ar": "هناك العديد من التفسيرات المحتملة لهذه النتيجة."
+      },
+      {
+        "en": "There is little evidence to support this claim.",
+        "ar": "هناك القليل من الأدلة التي تدعم هذا الادعاء."
+      },
+      {
+        "en": "There is a little evidence supporting the hypothesis.",
+        "ar": "هناك بعض الأدلة التي تدعم الفرضية."
+      },
+      {
+        "en": "Few students completed the optional task.",
+        "ar": "أكمل عدد قليل جدًا من الطلاب المهمة الاختيارية."
+      },
+      {
+        "en": "A few students completed the task successfully.",
+        "ar": "أكمل بعض الطلاب المهمة بنجاح."
+      },
+      {
+        "en": "The new study involved fewer participants.",
+        "ar": "شملت الدراسة الجديدة عددًا أقل من المشاركين."
+      },
+      {
+        "en": "The researchers collected less information than expected.",
+        "ar": "جمع الباحثون معلومات أقل مما كان متوقعًا."
+      },
+      {
+        "en": "A large number of students participated in the survey.",
+        "ar": "شارك عدد كبير من الطلاب في الاستبيان."
+      },
+      {
+        "en": "A large amount of information was collected.",
+        "ar": "تم جمع كمية كبيرة من المعلومات."
+      },
+      {
+        "en": "A number of students were absent.",
+        "ar": "كان عدد من الطلاب غائبين."
+      },
+      {
+        "en": "The number of students is increasing.",
+        "ar": "عدد الطلاب يتزايد."
+      },
+      {
+        "en": "The researchers need more data.",
+        "ar": "يحتاج الباحثون إلى مزيد من البيانات."
+      },
+      {
+        "en": "The researchers need more equipment.",
+        "ar": "يحتاج الباحثون إلى مزيد من المعدات."
+      },
+      {
+        "en": "The university purchased new equipment.",
+        "ar": "اشترت الجامعة معدات جديدة."
+      },
+      {
+        "en": "The professor gave us some useful advice.",
+        "ar": "قدم لنا الأستاذ بعض النصائح المفيدة."
+      },
+      {
+        "en": "She gave me a useful piece of advice.",
+        "ar": "قدمت لي نصيحة مفيدة."
+      },
+      {
+        "en": "The report contains several pieces of information.",
+        "ar": "يحتوي التقرير على عدة معلومات."
+      },
+      {
+        "en": "A piece of furniture was removed from the room.",
+        "ar": "تمت إزالة قطعة أثاث من الغرفة."
+      },
+      {
+        "en": "Two pieces of equipment were damaged.",
+        "ar": "تضررت قطعتان من المعدات."
+      },
+      {
+        "en": "The researchers have conducted a great deal of research.",
+        "ar": "أجرى الباحثون قدرًا كبيرًا من البحث."
+      },
+      {
+        "en": "The research is highly relevant to the problem.",
+        "ar": "البحث وثيق الصلة بالمشكلة."
+      },
+      {
+        "en": "She has extensive experience in academic research.",
+        "ar": "لديها خبرة واسعة في البحث الأكاديمي."
+      },
+      {
+        "en": "The conference was an unforgettable experience.",
+        "ar": "كان المؤتمر تجربة لا تُنسى."
+      },
+      {
+        "en": "The researcher published two papers last year.",
+        "ar": "نشر الباحث بحثين العام الماضي."
+      },
+      {
+        "en": "The students need more time to complete the assignment.",
+        "ar": "يحتاج الطلاب إلى مزيد من الوقت لإكمال الواجب."
+      },
+      {
+        "en": "The students completed the assignment three times.",
+        "ar": "أكمل الطلاب الواجب ثلاث مرات."
+      },
+      {
+        "en": "The news is surprising.",
+        "ar": "الأخبار مفاجئة."
+      },
+      {
+        "en": "The data are consistent with previous findings.",
+        "ar": "البيانات متوافقة مع النتائج السابقة."
+      },
+      {
+        "en": "The analysis revealed several important patterns.",
+        "ar": "كشف التحليل عن عدة أنماط مهمة."
+      },
+      {
+        "en": "The researchers used two different criteria.",
+        "ar": "استخدم الباحثون معيارين مختلفين."
+      },
+      {
+        "en": "There is not enough evidence to support the conclusion.",
+        "ar": "لا توجد أدلة كافية لدعم الاستنتاج."
+      },
+      {
+        "en": "Too much information can make a report difficult to read.",
+        "ar": "يمكن أن تجعل كثرة المعلومات التقرير صعب القراءة."
+      },
+      {
+        "en": "Too many variables can make the analysis complicated.",
+        "ar": "يمكن أن تجعل كثرة المتغيرات التحليل معقدًا."
+      },
+      {
+        "en": "There is plenty of evidence to support the theory.",
+        "ar": "هناك الكثير من الأدلة التي تدعم النظرية."
+      },
+      {
+        "en": "There are plenty of opportunities for further research.",
+        "ar": "هناك الكثير من الفرص لمزيد من البحث."
+      },
+      {
+        "en": "Two bottles of water were placed on the table.",
+        "ar": "وُضعت زجاجتان من الماء على الطاولة."
+      }
+    ],
+    "commonMistakes": [
+      "خطأ: many information → الصحيح: much information أو a lot of information.",
+      "خطأ: many advice → الصحيح: much advice أو some advice.",
+      "خطأ: an advice → الصحيح: a piece of advice.",
+      "خطأ: advices → الصحيح: advice أو pieces of advice.",
+      "خطأ: informations → الصحيح: information.",
+      "خطأ: researches عند استخدام research بمعنى البحث بشكل عام → الصحيح غالبًا: research.",
+      "خطأ: equipments → الصحيح: equipment أو pieces of equipment.",
+      "خطأ: furnitures → الصحيح: furniture أو pieces of furniture.",
+      "خطأ: homeworks → الصحيح: homework.",
+      "خطأ: many evidence → الصحيح: much evidence أو a lot of evidence.",
+      "خطأ: few evidence → الصحيح: little evidence.",
+      "خطأ: much students → الصحيح: many students.",
+      "خطأ: much experiments → الصحيح: many experiments.",
+      "خطأ: many money → الصحيح: much money أو a lot of money.",
+      "خطأ: fewer information → الصحيح: less information.",
+      "خطأ: less students → في الكتابة الأكاديمية يفضل: fewer students.",
+      "خطأ: a large amount of students → الصحيح: a large number of students.",
+      "خطأ: a large number of information → الصحيح: a large amount of information أو a large quantity of information.",
+      "خطأ: a number of information → الصحيح: a number of pieces of information أو some information.",
+      "خطأ: The number of students are increasing → الصحيح: The number of students is increasing.",
+      "خطأ: A number of students is absent → الصحيح: A number of students are absent.",
+      "خطأ: The information are useful → الصحيح: The information is useful.",
+      "خطأ: The equipment are expensive → الصحيح: The equipment is expensive.",
+      "خطأ: Research are important → الصحيح: Research is important.",
+      "خطأ: an information → الصحيح: a piece of information أو some information.",
+      "خطأ: a research عند استخدام research كاسم غير معدود بشكل عام → الأفضل: research أو a research study حسب المعنى.",
+      "خطأ: one advice → الصحيح: one piece of advice.",
+      "خطأ: two researches عند قصد دراستين منفصلتين → الأفضل: two studies أو two research studies.",
+      "خطأ: two analysis → الصحيح: two analyses.",
+      "خطأ: several criterions → الصحيح: several criteria.",
+      "خطأ: many furniture → الصحيح: much furniture أو many pieces of furniture.",
+      "خطأ: a lot of researches → إذا كان المقصود نشاط البحث بشكل عام، الأفضل: a lot of research.",
+      "خطأ: The news are → الصحيح: The news is.",
+      "خطأ: an experience عند قصد الخبرة العامة → الصحيح: experience.",
+      "خطأ: experience عند قصد تجربة أو حدث محدد → قد يكون الصحيح: an experience.",
+      "خطأ: a paper عند قصد مادة الورق → في هذا المعنى نقول paper.",
+      "خطأ: paper عند قصد بحث أكاديمي منفصل → يمكن استخدام a paper.",
+      "خطأ: many time → إذا كان المقصود كمية الوقت: much time؛ وإذا كان المقصود مرات: many times.",
+      "خطأ: much rooms → إذا كان المقصود غرفًا: many rooms؛ أما المساحة فنقول much room.",
+      "خطأ: many work → الصحيح: much work أو a lot of work؛ أما الوظائف فنستخدم jobs.",
+      "خطأ: a work عند قصد العمل بشكل عام → غالبًا work غير معدود.",
+      "خطأ: many homework → الصحيح: much homework.",
+      "خطأ: a homework → الصحيح: a piece of homework أو an assignment.",
+      "خطأ: many traffic → الصحيح: much traffic.",
+      "خطأ: a traffic → غير صحيح عندما يكون المقصود حركة المرور بشكل عام.",
+      "خطأ: a knowledge → عادةً الصحيح: knowledge أو a good knowledge of something حسب السياق.",
+      "خطأ: many vocabulary → الصحيح: a lot of vocabulary أو many words.",
+      "خطأ: an education في كل السياقات → غالبًا education غير معدود عند الحديث عن التعليم عمومًا.",
+      "خطأ: many research → الصحيح: much research أو many studies حسب المعنى.",
+      "خطأ: استخدام many/few قبل اسم غير معدود أو much/little قبل اسم معدود جمع هو من أكثر الأخطاء التي يجب الانتباه إليها في PTE.",
+      "خطأ: اختيار الأداة اعتمادًا على الترجمة العربية فقط؛ يجب تحديد طبيعة الاسم في الإنجليزية.",
+      "خطأ: نسيان أن الاسم المعدود المفرد يحتاج عادةً إلى determiner مثل a/an/the/my/this.",
+      "خطأ: التعامل مع كل كلمة منتهية بـ s على أنها جمع؛ news اسم مفرد نحويًا.",
+      "خطأ: افتراض أن كل اسم يمكن جمعه بإضافة s؛ بعض الأسماء لها جموع غير منتظمة مثل analysis → analyses."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "There is ___ information available about the new method.",
+        "options": [
+          "many",
+          "much",
+          "few",
+          "several"
+        ],
+        "correct": 1,
+        "answer": "much",
+        "why": "Information اسم غير معدود، لذلك نستخدم much وليس many."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ students participated in the experiment.",
+        "options": [
+          "Much",
+          "A little",
+          "Many",
+          "Little"
+        ],
+        "correct": 2,
+        "answer": "Many",
+        "why": "Students اسم معدود جمع، لذلك نستخدم many."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers found ___ evidence to support the hypothesis.",
+        "options": [
+          "few",
+          "many",
+          "little",
+          "several"
+        ],
+        "correct": 2,
+        "answer": "little",
+        "why": "Evidence اسم غير معدود، لذلك نستخدم little."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The new study involved ___ participants than the previous one.",
+        "options": [
+          "less",
+          "little",
+          "fewer",
+          "much"
+        ],
+        "correct": 2,
+        "answer": "fewer",
+        "why": "Participants اسم معدود جمع، لذلك نستخدم fewer للمقارنة بين الأعداد."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers collected ___ information than expected.",
+        "options": [
+          "fewer",
+          "less",
+          "few",
+          "many"
+        ],
+        "correct": 1,
+        "answer": "less",
+        "why": "Information اسم غير معدود، لذلك نستخدم less."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The professor gave us ___ advice.",
+        "options": [
+          "an",
+          "a",
+          "some",
+          "many"
+        ],
+        "correct": 2,
+        "answer": "some",
+        "why": "Advice اسم غير معدود، ويمكن استخدام some advice."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She gave me a useful ___ of advice.",
+        "options": [
+          "piece",
+          "item",
+          "number",
+          "amount"
+        ],
+        "correct": 0,
+        "answer": "piece",
+        "why": "التعبير الصحيح هو a piece of advice."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "A large ___ of students participated in the survey.",
+        "options": [
+          "amount",
+          "number",
+          "quantity",
+          "piece"
+        ],
+        "correct": 1,
+        "answer": "number",
+        "why": "Students اسم معدود جمع، لذلك نستخدم a large number of students."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "A large ___ of information was collected.",
+        "options": [
+          "number",
+          "amount",
+          "few",
+          "many"
+        ],
+        "correct": 1,
+        "answer": "amount",
+        "why": "Information اسم غير معدود، لذلك نستخدم a large amount of information."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The number of students ___ increasing.",
+        "options": [
+          "are",
+          "were",
+          "is",
+          "have"
+        ],
+        "correct": 2,
+        "answer": "is",
+        "why": "The number of تعني العدد نفسه، ولذلك تعامل نحويًا كمفرد."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "A number of students ___ absent today.",
+        "options": [
+          "is",
+          "are",
+          "was",
+          "has"
+        ],
+        "correct": 1,
+        "answer": "are",
+        "why": "A number of تعني عددًا من، ولذلك يكون الاسم بعدها جمعًا والفعل جمعًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The new equipment ___ very expensive.",
+        "options": [
+          "are",
+          "were",
+          "is",
+          "have"
+        ],
+        "correct": 2,
+        "answer": "is",
+        "why": "Equipment اسم غير معدود ويأخذ فعلًا مفردًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers conducted ___ experiments.",
+        "options": [
+          "much",
+          "a little",
+          "several",
+          "little"
+        ],
+        "correct": 2,
+        "answer": "several",
+        "why": "Experiments اسم معدود جمع، وseveral تستخدم مع المعدود الجمع."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "There is ___ evidence supporting the claim.",
+        "options": [
+          "few",
+          "a few",
+          "little",
+          "several"
+        ],
+        "correct": 2,
+        "answer": "little",
+        "why": "Evidence غير معدود، لذلك نستخدم little."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "There are ___ students waiting outside.",
+        "options": [
+          "a little",
+          "much",
+          "a few",
+          "little"
+        ],
+        "correct": 2,
+        "answer": "a few",
+        "why": "Students اسم معدود جمع، لذلك نستخدم a few."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers need ___ time to complete the experiment.",
+        "options": [
+          "many",
+          "few",
+          "more",
+          "several"
+        ],
+        "correct": 2,
+        "answer": "more",
+        "why": "Time غير معدود، وmore يمكن استخدامها مع المعدود الجمع وغير المعدود."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "There were ___ errors in the second report.",
+        "options": [
+          "less",
+          "little",
+          "fewer",
+          "much"
+        ],
+        "correct": 2,
+        "answer": "fewer",
+        "why": "Errors اسم معدود جمع، لذلك نستخدم fewer."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Too ___ information can make a report difficult to read.",
+        "options": [
+          "many",
+          "much",
+          "few",
+          "several"
+        ],
+        "correct": 1,
+        "answer": "much",
+        "why": "Information اسم غير معدود، لذلك نقول too much information."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Too ___ variables can make the analysis complicated.",
+        "options": [
+          "much",
+          "little",
+          "many",
+          "less"
+        ],
+        "correct": 2,
+        "answer": "many",
+        "why": "Variables اسم معدود جمع، لذلك نقول too many variables."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "She gave me an advice.",
+          "She gave me some advice.",
+          "She gave me many advice.",
+          "She gave me an advices."
+        ],
+        "correct": 1,
+        "answer": "She gave me some advice.",
+        "why": "Advice اسم غير معدود، لذلك لا نستخدم معه an ولا نجمعه بإضافة s."
+      }
+    ],
+    "markers": [
+      "Countable noun",
+      "Uncountable noun",
+      "Countable singular",
+      "Countable plural",
+      "Many",
+      "Much",
+      "Few",
+      "A few",
+      "Little",
+      "A little",
+      "Fewer",
+      "Less",
+      "Some",
+      "Any",
+      "Several",
+      "Numerous",
+      "Enough",
+      "Plenty of",
+      "A lot of",
+      "Too many",
+      "Too much",
+      "So many",
+      "So much",
+      "A number of",
+      "The number of",
+      "A large number of",
+      "A large amount of",
+      "Piece of",
+      "Information",
+      "Advice",
+      "Research",
+      "Evidence",
+      "Equipment",
+      "Furniture",
+      "Knowledge",
+      "Homework",
+      "Progress",
+      "News",
+      "Experience",
+      "Analysis",
+      "Analyses",
+      "Criterion",
+      "Criteria",
+      "Phenomenon",
+      "Phenomena",
+      "PTE grammar",
+      "Academic English"
+    ]
+  }
+]

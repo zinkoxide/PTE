@@ -1,0 +1,466 @@
+[
+  {
+    "id": "conditionals",
+    "title": "الجمل الشرطية",
+    "category": "تراكيب الجمل",
+    "icon": "🔀",
+    "description": "شرح شامل للجمل الشرطية في اللغة الإنجليزية، بما في ذلك Zero, First, Second, Third وMixed Conditionals، مع أدوات الشرط والتراكيب البديلة والأخطاء الشائعة في PTE.",
+    "explanation": "الجمل الشرطية تستخدم للتعبير عن علاقة بين شرط ونتيجة. غالبًا تتكون الجملة الشرطية من جزأين: if-clause الذي يعبّر عن الشرط، وmain clause الذي يعبّر عن النتيجة. يمكن أن يأتي الشرط أولًا أو النتيجة أولًا دون تغيير المعنى الأساسي.\n\nهناك أربعة أنواع أساسية من الجمل الشرطية. Zero Conditional يستخدم للحقائق العامة والقواعد والنتائج التي تحدث عادةً عندما يتحقق الشرط. First Conditional يستخدم للمواقف المستقبلية المحتملة أو الواقعية. Second Conditional يستخدم للمواقف الافتراضية أو غير المرجحة في الحاضر أو المستقبل. Third Conditional يستخدم للحديث عن مواقف غير حقيقية في الماضي ونتائج لم تحدث.\n\nبالإضافة إلى ذلك، توجد Mixed Conditionals، وهي تربط زمنين مختلفين، مثل شرط في الماضي له نتيجة في الحاضر، أو حالة في الحاضر كانت سببًا لنتيجة في الماضي.\n\nمن أهم النقاط في PTE أن وجود if لا يعني تلقائيًا استخدام will. في First Conditional نستخدم عادةً Present Simple في جملة الشرط وwill + base verb في جملة النتيجة. لذلك نقول: 'If the results improve, the researchers will continue the study.' ولا نقول عادةً: 'If the results will improve...'.\n\nفي Second Conditional نستخدم Past Simple في if-clause وwould + base verb في النتيجة. أما Third Conditional فنستخدم Past Perfect في if-clause وwould have + past participle في النتيجة.\n\nيجب أيضًا التمييز بين unless وif...not. فكلمة unless تعني تقريبًا 'if...not'، ولذلك لا نضع not بعدها عادةً. نقول: 'Unless you study, you will fail' وليس 'Unless you do not study, you will fail' عندما يكون المقصود هو نفس معنى if you do not study.\n\nتوجد أدوات وتراكيب أخرى للتعبير عن الشرط مثل provided that, providing that, as long as, on condition that, assuming that, in case وotherwise. هذه التراكيب مهمة في الكتابة الأكاديمية لأنها تجعل التعبير عن العلاقات المنطقية أكثر تنوعًا ودقة.",
+    "rules": [
+      "الجملة الشرطية تتكون غالبًا من if-clause وmain clause.",
+      "إذا جاءت if-clause أولًا، نضع فاصلة غالبًا قبل main clause: 'If it rains, we will stay home.'",
+      "إذا جاءت main clause أولًا، لا نحتاج عادةً إلى فاصلة: 'We will stay home if it rains.'",
+      "Zero Conditional يستخدم للحقائق العامة والقواعد والنتائج المعتادة.",
+      "صيغة Zero Conditional الأساسية هي: If + Present Simple, Present Simple.",
+      "مثال Zero Conditional: 'If water reaches 100°C, it boils.'",
+      "يمكن استخدام when بدل if في كثير من جمل Zero Conditional عندما تكون النتيجة مؤكدة أو معتادة.",
+      "First Conditional يستخدم للمواقف المستقبلية المحتملة أو الواقعية.",
+      "صيغة First Conditional الأساسية هي: If + Present Simple, will + base verb.",
+      "مثال First Conditional: 'If the weather improves, we will go outside.'",
+      "لا نستخدم عادةً will في if-clause في First Conditional عندما يكون will مجرد علامة على المستقبل.",
+      "نقول: 'If she arrives early, we will start the meeting.' وليس 'If she will arrive early...'.",
+      "يمكن استخدام can أو may أو might أو imperative في main clause بدل will عندما يناسب المعنى.",
+      "مثال: 'If you finish early, you can leave.'",
+      "Second Conditional يستخدم للمواقف الافتراضية أو غير المرجحة في الحاضر أو المستقبل.",
+      "صيغة Second Conditional الأساسية هي: If + Past Simple, would + base verb.",
+      "مثال: 'If I had more time, I would learn another language.'",
+      "Past Simple في Second Conditional لا يشير بالضرورة إلى الماضي؛ بل يستخدم لإظهار أن الحالة افتراضية أو غير حقيقية.",
+      "في اللغة الرسمية يمكن استخدام were مع جميع الضمائر بعد if في Second Conditional، خصوصًا في التعبير 'If I were you'.",
+      "نقول: 'If I were you, I would accept the offer.'",
+      "Third Conditional يستخدم للمواقف غير الحقيقية في الماضي والنتائج التي لم تحدث.",
+      "صيغة Third Conditional الأساسية هي: If + Past Perfect, would have + V3.",
+      "مثال: 'If they had studied harder, they would have passed the exam.'",
+      "في Third Conditional يتحدث الشرط عن الماضي، وكذلك النتيجة؛ كلاهما لم يحدث.",
+      "يمكن استخدام could have أو might have بدل would have عندما يكون المعنى قدرة أو احتمالًا.",
+      "Mixed Conditional يستخدم عندما يكون زمن الشرط مختلفًا عن زمن النتيجة.",
+      "النوع الشائع الأول من Mixed Conditional يربط سببًا في الماضي بنتيجة في الحاضر: If + Past Perfect, would + base verb.",
+      "مثال: 'If I had studied medicine, I would be a doctor now.'",
+      "النوع الشائع الثاني من Mixed Conditional يربط حالة غير حقيقية في الحاضر بنتيجة في الماضي: If + Past Simple, would have + V3.",
+      "مثال: 'If I were more organized, I would have finished the project yesterday.'",
+      "يمكن استخدام unless بمعنى if...not.",
+      "نقول: 'Unless you hurry, you will miss the train.' أي 'If you do not hurry, you will miss the train.'",
+      "لا نستخدم عادةً not بعد unless عندما يكون المعنى مجرد if...not.",
+      "provided that وproviding that تعنيان بشرط أن.",
+      "مثال: 'You can join the course provided that you meet the requirements.'",
+      "as long as تعني طالما أو بشرط أن، وتستخدم لوضع شرط يجب تحقيقه.",
+      "مثال: 'You can use the laboratory as long as you follow the safety rules.'",
+      "on condition that تعني بشرط أن، وتستخدم خصوصًا في السياقات الرسمية.",
+      "assuming that تعني على افتراض أن.",
+      "in case تستخدم للتعبير عن اتخاذ احتياط بسبب احتمال حدوث شيء، وليست بديلًا مباشرًا لـ if في جميع الحالات.",
+      "مثال: 'Take an umbrella in case it rains.'",
+      "otherwise تعني وإلا أو إذا لم يحدث ذلك، وغالبًا تربط نتيجة سلبية بعدم تحقيق شرط سابق.",
+      "مثال: 'Submit the form today; otherwise, your application may be rejected.'",
+      "يمكن استخدام imperative في main clause بعد if: 'If you see John, tell him to call me.'",
+      "يمكن استخدام modal verbs في main clause حسب المعنى: 'If you study regularly, you may improve your score.'",
+      "يمكن استخدام Present Simple في كلا الجزأين عندما تكون الجملة Zero Conditional.",
+      "لا تخلط بين First Conditional وSecond Conditional؛ First يتحدث عن احتمال واقعي، بينما Second يتحدث عن حالة افتراضية أو غير مرجحة.",
+      "لا تخلط بين Second Conditional وThird Conditional؛ Second يتعلق أساسًا بالحاضر أو المستقبل الافتراضي، بينما Third يتعلق بالماضي غير الحقيقي.",
+      "في Third Conditional نستخدم had + V3 في if-clause، وليس would have.",
+      "لا نقول عادةً: 'If I would have known...' في Third Conditional القياسي؛ الصحيح: 'If I had known...'.",
+      "في Second Conditional نستخدم would + base verb، وليس would + past verb.",
+      "في Third Conditional نستخدم would have + V3، مثل: 'would have gone' وليس 'would have went'.",
+      "في أسئلة PTE يجب تحديد الزمن المقصود أولًا قبل اختيار صيغة الشرط.",
+      "إذا كان الشرط حقيقة عامة، فكر في Zero Conditional.",
+      "إذا كان الشرط احتمالًا حقيقيًا في المستقبل، فكر في First Conditional.",
+      "إذا كان الشرط افتراضيًا أو غير مرجح في الحاضر أو المستقبل، فكر في Second Conditional.",
+      "إذا كان الشرط متعلقًا بماضٍ لم يحدث، فكر في Third Conditional.",
+      "إذا كان السبب في الماضي والنتيجة في الحاضر، فكر في Mixed Conditional.",
+      "بعد unless نستخدم عادةً جملة مثبتة لأن unless نفسها تحمل معنى النفي.",
+      "provided that وproviding that وas long as لا تعني بالضرورة أن الموقف مستقبلي؛ الزمن يعتمد على السياق.",
+      "يمكن أن تأتي if-clause بعد main clause دون فاصلة.",
+      "يمكن أن تحتوي if-clause على passive voice أو modal structure إذا تطلب المعنى ذلك.",
+      "الشرط لا يشترط دائمًا أن يكون مع if؛ يمكن التعبير عنه بأدوات شرط أخرى.",
+      "في الكتابة الأكاديمية، تنويع أدوات الشرط يمكن أن يجعل العلاقات بين الأفكار أكثر وضوحًا ودقة."
+    ],
+    "examples": [
+      {
+        "en": "If you heat ice, it melts.",
+        "ar": "إذا سخنت الثلج، فإنه يذوب."
+      },
+      {
+        "en": "If students study regularly, they usually achieve better results.",
+        "ar": "إذا درس الطلاب بانتظام، فعادةً ما يحققون نتائج أفضل."
+      },
+      {
+        "en": "If the temperature rises above 100°C, water boils.",
+        "ar": "إذا ارتفعت درجة الحرارة فوق 100 درجة مئوية، يغلي الماء."
+      },
+      {
+        "en": "If the results improve, the researchers will continue the study.",
+        "ar": "إذا تحسنت النتائج، فسيواصل الباحثون الدراسة."
+      },
+      {
+        "en": "If you finish the assignment today, you can submit it tomorrow.",
+        "ar": "إذا أنهيت الواجب اليوم، يمكنك تسليمه غدًا."
+      },
+      {
+        "en": "If the university accepts my application, I will move to another city.",
+        "ar": "إذا قبلت الجامعة طلبي، فسأنتقل إلى مدينة أخرى."
+      },
+      {
+        "en": "If I had more time, I would learn another language.",
+        "ar": "لو كان لدي وقت أكثر، لتعلمت لغة أخرى."
+      },
+      {
+        "en": "If I were you, I would accept the offer.",
+        "ar": "لو كنت مكانك، لقبِلت العرض."
+      },
+      {
+        "en": "If the company invested more in research, it would develop better products.",
+        "ar": "لو استثمرت الشركة أكثر في البحث، لطورت منتجات أفضل."
+      },
+      {
+        "en": "If they had studied harder, they would have passed the exam.",
+        "ar": "لو كانوا قد درسوا بجدية أكبر، لكانوا قد نجحوا في الاختبار."
+      },
+      {
+        "en": "If we had left earlier, we would have arrived on time.",
+        "ar": "لو كنا قد غادرنا مبكرًا، لكنا وصلنا في الموعد."
+      },
+      {
+        "en": "If she had followed the instructions, she might have avoided the problem.",
+        "ar": "لو كانت قد اتبعت التعليمات، فربما كانت قد تجنبت المشكلة."
+      },
+      {
+        "en": "If I had studied medicine, I would be a doctor now.",
+        "ar": "لو كنت قد درست الطب، لكنت طبيبًا الآن."
+      },
+      {
+        "en": "If he had accepted the job, he would live in London now.",
+        "ar": "لو كان قد قبل الوظيفة، لكان يعيش في لندن الآن."
+      },
+      {
+        "en": "If I were more organized, I would have finished the project yesterday.",
+        "ar": "لو كنت أكثر تنظيمًا، لكنت أنهيت المشروع بالأمس."
+      },
+      {
+        "en": "Unless you study, you will not pass the exam.",
+        "ar": "إذا لم تدرس، فلن تنجح في الاختبار."
+      },
+      {
+        "en": "You can use the laboratory as long as you follow the safety rules.",
+        "ar": "يمكنك استخدام المختبر طالما أنك تتبع قواعد السلامة."
+      },
+      {
+        "en": "You can join the course provided that you meet the requirements.",
+        "ar": "يمكنك الانضمام إلى الدورة بشرط أن تستوفي المتطلبات."
+      },
+      {
+        "en": "Take an umbrella in case it rains.",
+        "ar": "خذ مظلة تحسبًا لهطول المطر."
+      },
+      {
+        "en": "Submit the application today; otherwise, it may be rejected.",
+        "ar": "قدّم الطلب اليوم، وإلا فقد يتم رفضه."
+      },
+      {
+        "en": "If you see the professor, ask him about the assignment.",
+        "ar": "إذا رأيت الأستاذ، فاسأله عن الواجب."
+      },
+      {
+        "en": "If the evidence is confirmed, the researchers may publish the results.",
+        "ar": "إذا تم تأكيد الأدلة، فقد ينشر الباحثون النتائج."
+      }
+    ],
+    "commonMistakes": [
+      "خطأ: 'If it will rain, we will stay home.' في First Conditional القياسي الصحيح: 'If it rains, we will stay home.'",
+      "خطأ: 'If I would have more money, I would travel.' الصحيح: 'If I had more money, I would travel.' لأن هذه Second Conditional.",
+      "خطأ: 'If I would have known, I would have helped.' الصحيح: 'If I had known, I would have helped.'",
+      "خطأ: 'If I knew the answer yesterday, I would have told you.' إذا كان المقصود شرطًا ماضيًا غير حقيقي، الصحيح: 'If I had known the answer yesterday, I would have told you.'",
+      "خطأ: 'If I had studied harder, I would be passed.' الصحيح: 'If I had studied harder, I would have passed.' في Third Conditional نستخدم would have + V3.",
+      "خطأ: 'If I were you, I will accept the offer.' الصحيح: 'If I were you, I would accept the offer.'",
+      "خطأ: 'Unless you don't study, you will fail.' عندما يكون المقصود 'If you do not study', الصحيح: 'Unless you study, you will fail.'",
+      "خطأ: الخلط بين 'If I had more time, I would...' و'If I had had more time, I would have...' الأولى Second Conditional، والثانية Third Conditional.",
+      "خطأ: استخدام 'in case' كمرادف دائم لـ'if'. 'In case' غالبًا تشير إلى الاحتياط تحسبًا لاحتمال حدوث شيء.",
+      "خطأ: 'If I would be rich, I would buy a house.' الصحيح: 'If I were rich, I would buy a house.'",
+      "خطأ: 'If she had studied, she would pass the exam.' إذا كان كل من الشرط والنتيجة في الماضي، فالأدق: 'If she had studied, she would have passed the exam.'",
+      "خطأ: 'Provided you will finish the work, you can leave.' في هذا النوع من الجمل الشرطية لا نحتاج عادةً إلى will في clause الشرط؛ الأفضل: 'Provided you finish the work, you can leave.'"
+    ],
+    "quiz": [
+      {
+        "type": "multiple-choice",
+        "prompt": "If you heat water to 100°C, it _____.",
+        "options": [
+          "will boil",
+          "would boil",
+          "boils",
+          "boiled"
+        ],
+        "correct": 2,
+        "answer": "boils",
+        "why": "هذه حقيقة علمية عامة، لذلك نستخدم Zero Conditional: If + Present Simple, Present Simple."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "If it _____ tomorrow, we will cancel the trip.",
+        "options": [
+          "will rain",
+          "rains",
+          "rained",
+          "would rain"
+        ],
+        "correct": 1,
+        "answer": "rains",
+        "why": "هذا First Conditional، لذلك نستخدم Present Simple في if-clause."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "If I _____ more free time, I would learn Spanish.",
+        "options": [
+          "have",
+          "had",
+          "will have",
+          "had had"
+        ],
+        "correct": 1,
+        "answer": "had",
+        "why": "هذه Second Conditional: If + Past Simple, would + base verb."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "If they _____ earlier, they would have caught the train.",
+        "options": [
+          "leave",
+          "left",
+          "had left",
+          "would leave"
+        ],
+        "correct": 2,
+        "answer": "had left",
+        "why": "هذه Third Conditional وتتطلب Past Perfect في if-clause."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "If I _____ you, I would take the opportunity.",
+        "options": [
+          "am",
+          "was",
+          "were",
+          "had been"
+        ],
+        "correct": 2,
+        "answer": "were",
+        "why": "في Second Conditional، الصيغة الرسمية الشائعة هي 'If I were you'."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "If she had accepted the offer, she _____ in London now.",
+        "options": [
+          "lives",
+          "would live",
+          "would have lived",
+          "will live"
+        ],
+        "correct": 1,
+        "answer": "would live",
+        "why": "الشرط في الماضي والنتيجة في الحاضر، لذلك هذه Mixed Conditional."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "_____ you study regularly, you will improve your score.",
+        "options": [
+          "Unless",
+          "If",
+          "In case",
+          "Otherwise"
+        ],
+        "correct": 1,
+        "answer": "If",
+        "why": "المعنى هنا شرط مستقبلي محتمل، والصيغة المناسبة هي If + Present Simple."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "_____ you hurry, you will miss the bus.",
+        "options": [
+          "Unless",
+          "If",
+          "Provided",
+          "As long"
+        ],
+        "correct": 0,
+        "answer": "Unless",
+        "why": "Unless تعني if...not، والجملة تعني: If you do not hurry, you will miss the bus."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "You can use my computer _____ you handle it carefully.",
+        "options": [
+          "unless",
+          "as long as",
+          "otherwise",
+          "in case"
+        ],
+        "correct": 1,
+        "answer": "as long as",
+        "why": "as long as تعني بشرط أن أو طالما أن."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The application will be accepted provided that the applicant _____ the requirements.",
+        "options": [
+          "will meet",
+          "meets",
+          "met",
+          "would meet"
+        ],
+        "correct": 1,
+        "answer": "meets",
+        "why": "بعد provided that نستخدم الزمن المناسب للشرط، وهنا Present Simple."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Take some extra money in case you _____ to pay for transportation.",
+        "options": [
+          "need",
+          "will need",
+          "needed",
+          "would need"
+        ],
+        "correct": 0,
+        "answer": "need",
+        "why": "بعد in case يمكن استخدام Present Simple عند الحديث عن احتمال مستقبلي."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Finish the assignment today; _____, you may lose marks.",
+        "options": [
+          "unless",
+          "otherwise",
+          "provided",
+          "as long as"
+        ],
+        "correct": 1,
+        "answer": "otherwise",
+        "why": "otherwise تعني وإلا، وتربط الإجراء بالنتيجة التي قد تحدث إذا لم يتم تنفيذ الشرط."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "If the researchers _____ the error earlier, they would have corrected it.",
+        "options": [
+          "discover",
+          "discovered",
+          "had discovered",
+          "would discover"
+        ],
+        "correct": 2,
+        "answer": "had discovered",
+        "why": "النتيجة تتعلق بماضٍ لم يحدث، لذلك نستخدم Third Conditional."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "If I _____ more careful, I would not have made that mistake.",
+        "options": [
+          "am",
+          "was",
+          "were",
+          "had been"
+        ],
+        "correct": 3,
+        "answer": "had been",
+        "why": "الخطأ حدث في الماضي، والشرط غير الحقيقي يتعلق بالماضي، لذلك نستخدم Past Perfect."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "If he were more organized, he _____ the report yesterday.",
+        "options": [
+          "would finish",
+          "would have finished",
+          "will finish",
+          "had finished"
+        ],
+        "correct": 1,
+        "answer": "would have finished",
+        "why": "الحالة الافتراضية في الحاضر تؤثر في نتيجة ماضية؛ لذلك نستخدم Mixed Conditional."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "If she will study, she will pass.",
+          "If she studies, she will pass.",
+          "If she studied, she will pass.",
+          "If she study, she would pass."
+        ],
+        "correct": 1,
+        "answer": "If she studies, she will pass.",
+        "why": "هذه First Conditional: Present Simple بعد if وwill + base verb في النتيجة."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "If I would have known, I would have helped.",
+          "If I had known, I would have helped.",
+          "If I knew, I would have helped yesterday.",
+          "If I have known, I would help."
+        ],
+        "correct": 1,
+        "answer": "If I had known, I would have helped.",
+        "why": "Third Conditional تتطلب If + Past Perfect ثم would have + V3."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence has the correct use of unless?",
+        "options": [
+          "Unless you don't hurry, you will be late.",
+          "Unless you hurry, you will be late.",
+          "Unless you will hurry, you will be late.",
+          "Unless you hurried, you will be late."
+        ],
+        "correct": 1,
+        "answer": "Unless you hurry, you will be late.",
+        "why": "Unless تحمل معنى if...not، ولذلك لا نحتاج إلى not هنا."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence expresses a past condition with a present result?",
+        "options": [
+          "If I had studied harder, I would have passed.",
+          "If I study harder, I will pass.",
+          "If I had studied medicine, I would be a doctor now.",
+          "If I studied medicine, I would be a doctor."
+        ],
+        "correct": 2,
+        "answer": "If I had studied medicine, I would be a doctor now.",
+        "why": "الشرط حدث افتراضيًا في الماضي، لكن النتيجة مرتبطة بالحاضر؛ وهذا Mixed Conditional."
+      }
+    ],
+    "markers": [
+      "conditionals",
+      "conditional sentences",
+      "if clause",
+      "main clause",
+      "zero conditional",
+      "first conditional",
+      "second conditional",
+      "third conditional",
+      "mixed conditional",
+      "zero conditional grammar",
+      "first conditional grammar",
+      "second conditional grammar",
+      "third conditional grammar",
+      "mixed conditionals",
+      "if",
+      "unless",
+      "provided that",
+      "providing that",
+      "as long as",
+      "on condition that",
+      "assuming that",
+      "in case",
+      "otherwise",
+      "if not",
+      "if I were you",
+      "would",
+      "would have",
+      "could have",
+      "might have",
+      "past perfect conditional",
+      "unreal condition",
+      "hypothetical condition",
+      "PTE conditionals",
+      "PTE grammar",
+      "conditional fill in the blanks"
+    ]
+  }
+]

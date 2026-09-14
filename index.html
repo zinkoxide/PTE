@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTE Trainer — Home</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/theme.js"></script>
+</head>
+<body>
+
+  <div class="shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">PTE</div>
+        <div>
+          <div class="brand-name">PTE Trainer</div>
+          <div class="brand-sub">Practice smarter</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link active" href="index.html">
+          <span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span>
+        </a>
+        <a class="nav-link" href="repeat.html">
+          <span class="nav-icon">🗣️</span><span class="nav-label">Repeat Sentence</span>
+        </a>
+        <a class="nav-link" href="vocabulary.html">
+          <span class="nav-icon">📚</span><span class="nav-label">Vocabulary</span>
+        </a>
+        <a class="nav-link" href="grammar.html">
+          <span class="nav-icon">📘</span><span class="nav-label">Grammar</span>
+        </a>
+        <a class="nav-link" href="quiz.html">
+          <span class="nav-icon">📝</span><span class="nav-label">اختبارات</span>
+        </a>
+        <a class="nav-link" href="add-word.html">
+          <span class="nav-icon">➕</span><span class="nav-label">إضافة كلمات</span>
+        </a>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">
+        <span class="theme-ico icon-day">☀️</span>
+        <span class="theme-ico icon-night">🌙</span>
+        <span class="theme-label">Dark</span>
+      </button>
+
+      <div class="sidebar-footer">PTE Trainer · v2</div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="page">
+
+        <header class="page-header">
+          <h1 class="page-title">Dashboard</h1>
+          <p class="page-subtitle">Choose a practice mode to get started.</p>
+        </header>
+
+        <!-- Hero -->
+        <section class="card dash-hero">
+          <div class="hero-glow">🎯</div>
+          <h2>Welcome back!</h2>
+          <p>
+            Train for the PTE Academic speaking sections with
+            real-time speech recognition, instant feedback,
+            and a growing vocabulary bank.
+          </p>
+        </section>
+
+        <!-- Modes -->
+        <section class="mode-grid">
+
+          <button class="mode-card" type="button" onclick="window.location.href='repeat.html'">
+            <div class="mode-icon">🗣️</div>
+            <h3>Repeat Sentence</h3>
+            <p>
+              Listen to a sentence and repeat it aloud. Get an
+              instant word-by-word comparison with a practice score.
+            </p>
+            <span class="mode-badge">Speech recognition</span>
+          </button>
+
+          <button class="mode-card" type="button" onclick="window.location.href='vocabulary.html'">
+            <div class="mode-icon">📚</div>
+            <h3>Vocabulary</h3>
+            <p>
+              Explore 1000+ essential PTE words with meanings,
+              collocations, examples, and pronunciation audio.
+            </p>
+            <span class="mode-badge">1000+ words</span>
+          </button>
+
+          <button class="mode-card" type="button" onclick="window.location.href='grammar.html'">
+            <div class="mode-icon">📘</div>
+            <h3>Grammar</h3>
+            <p>
+              Browse bilingual reference lessons on tenses, conditionals,
+              and more, then practice with interactive quizzes.
+            </p>
+            <span class="mode-badge">29 lessons</span>
+          </button>
+
+          <button class="mode-card" type="button" onclick="window.location.href='quiz.html'">
+            <div class="mode-icon">📝</div>
+            <h3>Interactive Tests</h3>
+            <p>
+              Quiz yourself with meaning→word, listening, cloze, and
+              spelling questions over your vocabulary bank.
+            </p>
+            <span class="mode-badge">4 quiz modes</span>
+          </button>
+
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>

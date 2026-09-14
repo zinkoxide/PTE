@@ -1,0 +1,500 @@
+[
+  {
+    "id": "noun-clauses",
+    "title": "الجمل الاسمية",
+    "category": "تراكيب الجمل",
+    "icon": "🧩",
+    "description": "شرح شامل للجمل الاسمية Noun Clauses، بما في ذلك that-clauses وwhether/if clauses وwh-clauses، مع توضيح وظائفها داخل الجملة والفرق بينها وبين الأسئلة المباشرة والجمل الموصولة.",
+    "explanation": "Noun Clause هي جملة تحتوي على subject وverb لكنها تعمل داخل الجملة مثل الاسم. يمكن أن تكون فاعلًا أو مفعولًا به أو complement أو تأتي بعد حرف جر في بعض التراكيب. أهميتها كبيرة في اللغة الأكاديمية لأننا نستخدمها للتعبير عن الحقائق والآراء والمعلومات والأسئلة غير المباشرة.\n\nيمكن أن تبدأ Noun Clause بكلمة that، أو whether/if، أو كلمات السؤال مثل what, who, whom, whose, which, where, when, why وhow. الاختيار يعتمد على المعنى ووظيفة الجملة.\n\nفي that-clause نستخدم that لإدخال معلومة أو فكرة، مثل: 'The researchers concluded that the method was effective.' هنا الجملة 'that the method was effective' تعمل مفعولًا به للفعل concluded.\n\nفي بعض الحالات يمكن حذف that عندما تكون الجملة الاسمية مفعولًا به، خصوصًا في الأسلوب غير الرسمي أو عندما تكون الجملة واضحة. مثل: 'I think that he is right' و'I think he is right.' لكن لا يمكن حذف that عندما يؤدي ذلك إلى غموض أو عندما تكون that جزءًا من تركيب يحتاج إليها.\n\nWhether وif يمكن أن يستخدما لإدخال سؤال غير مباشر تكون إجابته نعم أو لا. مثل: 'The researchers wanted to know whether the treatment was effective.' ويمكن في كثير من الحالات استخدام if بدل whether: 'The researchers wanted to know if the treatment was effective.' لكن whether أكثر شيوعًا في الأسلوب الرسمي، وهناك تراكيب لا يكون فيها if مناسبًا.\n\nمن أهم قواعد Noun Clauses أن ترتيب الكلمات يكون ترتيب الجملة الخبرية، وليس ترتيب السؤال. نقول: 'I don't know where he lives' وليس 'I don't know where does he live.' وكذلك: 'She asked what the problem was' وليس 'what was the problem.' هذه النقطة شائعة جدًا في الاختبارات.\n\nWh-clauses تستخدم كلمات مثل what, where, when, why, who, which وhow لإدخال معلومات أو أسئلة غير مباشرة. يجب الانتباه إلى الفرق بين what وwhich؛ what غالبًا تعني الشيء أو الأشياء غير المحددة ضمن مجموعة، بينما which تشير عادةً إلى اختيار من مجموعة محددة.\n\nNoun Clause يمكن أن تأتي في بداية الجملة كفاعل، مثل: 'What the researchers discovered was surprising.' ويمكن أن تأتي بعد أفعال مثل know, believe, think, explain, understand, remember, determine, suggest, show وdemonstrate.\n\nفي الكتابة الأكاديمية، تظهر Noun Clauses بكثرة بعد أفعال reporting وacademic verbs، مثل: 'The study shows that...', 'The results suggest that...', 'Researchers have found that...' ولذلك فإن فهمها يساعد في بناء جمل أكاديمية دقيقة وطبيعية.",
+    "rules": [
+      "Noun Clause هي جملة تحتوي على subject وverb لكنها تعمل مثل الاسم داخل الجملة.",
+      "يمكن أن تعمل Noun Clause كفاعل للجملة.",
+      "يمكن أن تعمل Noun Clause كمفعول به للفعل.",
+      "يمكن أن تعمل Noun Clause كـsubject complement بعد أفعال الربط مثل be.",
+      "يمكن أن تأتي Noun Clause بعد بعض حروف الجر في تراكيب محددة.",
+      "that تستخدم لإدخال حقيقة أو معلومة أو فكرة.",
+      "مثال: 'The researchers found that the treatment was effective.'",
+      "بعد أفعال مثل think, believe, know, find, show, suggest, report, explain يمكن أن تأتي that-clause.",
+      "يمكن حذف that أحيانًا عندما تكون that مجرد conjunction وتأتي الجملة بعدها كمفعول به واضح.",
+      "مثال: 'I think that she is right' و'I think she is right.'",
+      "لا نحذف that في جميع الحالات؛ يجب مراعاة التركيب ووضوح الجملة.",
+      "whether تستخدم لإدخال سؤال غير مباشر تكون إجابته نعم أو لا.",
+      "يمكن استخدام if بدل whether في كثير من الجمل غير الرسمية.",
+      "whether أكثر ملاءمة عادةً في الكتابة الأكاديمية والرسمية.",
+      "بعد حروف الجر نستخدم whether وليس if في التراكيب التي تحتاج إلى حرف جر قبلها.",
+      "نقول: 'It depends on whether the results are reliable.' ولا نقول عادةً 'depends on if'.",
+      "يمكن استخدام whether + to-infinitive: 'The researchers must decide whether to continue.'",
+      "لا نستخدم if + to-infinitive: لا نقول 'whether/if to continue'؛ الصحيح 'whether to continue'.",
+      "Wh-words يمكن أن تبدأ Noun Clause، مثل what, who, whom, whose, which, where, when, why وhow.",
+      "في Noun Clause يأتي ترتيب الكلمات مثل الجملة الخبرية، وليس ترتيب السؤال.",
+      "نقول: 'I know where he lives.' وليس 'I know where does he live.'",
+      "نقول: 'She asked what the problem was.' وليس 'She asked what was the problem.'",
+      "إذا كانت wh-word نفسها هي الفاعل، يأتي الفعل بعدها مباشرة في كثير من الحالات.",
+      "مثال: 'I know who caused the problem.'",
+      "إذا كانت wh-word مفعولًا به، يأتي subject ثم verb بعدها.",
+      "مثال: 'I know who the researchers interviewed.'",
+      "what يمكن أن تعني 'الشيء الذي' أو 'ما الذي' وتستطيع أن تعمل كجزء أساسي من Noun Clause.",
+      "مثال: 'What the researchers discovered was unexpected.'",
+      "which تستخدم غالبًا عندما يكون الاختيار من مجموعة محددة أو معروفة.",
+      "مثال: 'The researcher explained which method was more effective.'",
+      "where تستخدم للإشارة إلى المكان في Noun Clause.",
+      "مثال: 'We need to determine where the samples were collected.'",
+      "when تستخدم للإشارة إلى الوقت.",
+      "مثال: 'The researchers know when the experiment began.'",
+      "why تستخدم للسؤال عن السبب.",
+      "مثال: 'The study explains why the results changed.'",
+      "how تستخدم للتعبير عن الطريقة أو الكيفية.",
+      "مثال: 'The researchers investigated how the system works.'",
+      "who تستخدم عندما يكون المقصود شخصًا.",
+      "whom يمكن استخدامها كمفعول به في الأسلوب الرسمي.",
+      "whose تستخدم للتعبير عن الملكية.",
+      "Noun Clause يمكن أن تأتي بعد أفعال الإدراك والمعرفة مثل know, understand, realize وdiscover.",
+      "Noun Clause يمكن أن تأتي بعد أفعال الاعتقاد والرأي مثل think, believe, assume وsuppose.",
+      "Noun Clause يمكن أن تأتي بعد أفعال البحث والتحليل مثل determine, investigate, examine وestablish.",
+      "Noun Clause شائعة جدًا بعد أفعال reporting الأكاديمية مثل report, demonstrate, indicate, reveal, suggest وshow.",
+      "تعبير 'The study shows that...' من التراكيب الشائعة في الكتابة الأكاديمية.",
+      "تعبير 'The results suggest that...' يستخدم للتعبير عن استنتاج أو دلالة.",
+      "تعبير 'Research indicates that...' يستخدم لتقديم نتيجة أو دليل.",
+      "يمكن أن تأتي Noun Clause في بداية الجملة كفاعل، لكن استخدام dummy it قد يجعل الجملة أكثر طبيعية في بعض السياقات.",
+      "مثال: 'That the experiment failed was surprising.'",
+      "يمكن إعادة صياغتها باستخدام it: 'It was surprising that the experiment failed.'",
+      "يجب عدم الخلط بين Noun Clause وRelative Clause.",
+      "في 'I know what he wants'، what he wants هي Noun Clause لأنها تعمل مفعولًا به للفعل know.",
+      "في 'I know the book that he wants'، that he wants هي Relative Clause لأنها تصف الاسم book.",
+      "لا تستخدم علامة استفهام عادةً في Indirect Questions إذا كانت الجملة كلها خبرية.",
+      "مثال: 'I don't know where he lives.' وليس بالضرورة علامة استفهام.",
+      "إذا كانت الجملة كلها سؤالًا مباشرًا يحتوي على سؤال غير مباشر، يمكن أن تنتهي بعلامة استفهام: 'Do you know where he lives?'",
+      "في Indirect Questions لا نستخدم do/does/did بالطريقة المستخدمة في الأسئلة المباشرة.",
+      "السؤال المباشر: 'Where does he live?'",
+      "السؤال غير المباشر: 'I know where he lives.'",
+      "السؤال المباشر: 'What did she say?'",
+      "السؤال غير المباشر: 'I don't know what she said.'",
+      "في PTE، إذا وجدت فراغًا بعد فعل مثل know أو understand أو determine، فكر في Noun Clause.",
+      "إذا كانت الإجابة تتطلب سؤالًا غير مباشر، استخدم ترتيب الجملة الخبرية.",
+      "في الكتابة الأكاديمية، that-clauses مفيدة جدًا لتقديم نتائج الدراسات والادعاءات والاستنتاجات.",
+      "لا تضع that مباشرة قبل سؤال بترتيب السؤال.",
+      "الصحيح: 'The researchers found that the method was effective.' وليس 'that was the method effective.'",
+      "بعد whether يمكن استخدام infinitive في تركيب whether to + verb.",
+      "whether to do وwhether or not to do من التراكيب الشائعة.",
+      "يمكن استخدام whether or not لإظهار أن الخيارين محتملان.",
+      "مثال: 'The researchers must decide whether or not to repeat the experiment.'"
+    ],
+    "examples": [
+      {
+        "en": "The researchers concluded that the method was effective.",
+        "ar": "خلص الباحثون إلى أن الطريقة كانت فعالة."
+      },
+      {
+        "en": "The study shows that regular exercise improves concentration.",
+        "ar": "توضح الدراسة أن ممارسة الرياضة بانتظام تحسن التركيز."
+      },
+      {
+        "en": "I believe that the results are reliable.",
+        "ar": "أعتقد أن النتائج موثوقة."
+      },
+      {
+        "en": "I believe the results are reliable.",
+        "ar": "أعتقد أن النتائج موثوقة. وهنا تم حذف that."
+      },
+      {
+        "en": "The researchers wanted to know whether the treatment was effective.",
+        "ar": "أراد الباحثون معرفة ما إذا كان العلاج فعالًا."
+      },
+      {
+        "en": "It is unclear whether the results can be replicated.",
+        "ar": "من غير الواضح ما إذا كان يمكن تكرار النتائج."
+      },
+      {
+        "en": "The decision depends on whether the evidence is sufficient.",
+        "ar": "يعتمد القرار على ما إذا كانت الأدلة كافية."
+      },
+      {
+        "en": "The researchers must decide whether to continue the experiment.",
+        "ar": "يجب على الباحثين أن يقرروا ما إذا كانوا سيواصلون التجربة."
+      },
+      {
+        "en": "I don't know where the samples were collected.",
+        "ar": "لا أعرف أين جُمعت العينات."
+      },
+      {
+        "en": "The researchers investigated how the system works.",
+        "ar": "بحث الباحثون في كيفية عمل النظام."
+      },
+      {
+        "en": "The report explains why the results changed.",
+        "ar": "يشرح التقرير سبب تغير النتائج."
+      },
+      {
+        "en": "We need to determine when the experiment began.",
+        "ar": "نحتاج إلى تحديد متى بدأت التجربة."
+      },
+      {
+        "en": "The professor asked what the students understood.",
+        "ar": "سأل الأستاذ عما فهمه الطلاب."
+      },
+      {
+        "en": "I don't know what the researcher discovered.",
+        "ar": "لا أعرف ما الذي اكتشفه الباحث."
+      },
+      {
+        "en": "The researcher explained which method was more effective.",
+        "ar": "شرح الباحث أي طريقة كانت أكثر فعالية."
+      },
+      {
+        "en": "What the researchers discovered was surprising.",
+        "ar": "ما اكتشفه الباحثون كان مفاجئًا."
+      },
+      {
+        "en": "Who conducted the experiment remains unclear.",
+        "ar": "من أجرى التجربة لا يزال غير واضح."
+      },
+      {
+        "en": "The study demonstrates how technology can improve learning.",
+        "ar": "توضح الدراسة كيف يمكن للتكنولوجيا أن تحسن التعلم."
+      },
+      {
+        "en": "The results suggest that further research is necessary.",
+        "ar": "تشير النتائج إلى أن هناك حاجة إلى مزيد من البحث."
+      },
+      {
+        "en": "It was surprising that the experiment failed.",
+        "ar": "كان من المفاجئ أن التجربة فشلت."
+      },
+      {
+        "en": "That the experiment failed was surprising.",
+        "ar": "أن التجربة فشلت كان أمرًا مفاجئًا."
+      },
+      {
+        "en": "Do you know where the conference will be held?",
+        "ar": "هل تعرف أين سيُعقد المؤتمر؟"
+      },
+      {
+        "en": "I don't know where the conference will be held.",
+        "ar": "لا أعرف أين سيُعقد المؤتمر."
+      },
+      {
+        "en": "The committee has not decided whether or not to approve the proposal.",
+        "ar": "لم تقرر اللجنة بعد ما إذا كانت ستوافق على المقترح أم لا."
+      }
+    ],
+    "commonMistakes": [
+      "خطأ: 'I don't know where does he live.' الصحيح: 'I don't know where he lives.' لأن Noun Clause تستخدم ترتيب الجملة الخبرية.",
+      "خطأ: 'She asked what was the problem.' في Indirect Question المعتادة، الصحيح: 'She asked what the problem was.'",
+      "خطأ: 'The researchers wanted to know whether was the method effective.' الصحيح: 'whether the method was effective.'",
+      "خطأ: استخدام if بعد حرف الجر: 'It depends on if the results are accurate.' الأفضل والأكثر رسمية: 'It depends on whether the results are accurate.'",
+      "خطأ: 'They discussed about whether the study was successful.' الفعل discuss لا يحتاج about: 'They discussed whether the study was successful.'",
+      "خطأ: 'I don't know what did he say.' الصحيح: 'I don't know what he said.'",
+      "خطأ: 'The study shows that how technology affects learning.' لا نجمع that وhow بهذه الطريقة؛ الصحيح: 'The study shows how technology affects learning.'",
+      "خطأ: الخلط بين Noun Clause وRelative Clause: 'I know what he wants' تختلف عن 'I know the thing that he wants.'",
+      "خطأ: استخدام that عندما نحتاج whether/if لسؤال نعم أو لا: 'I don't know that he will come' لا تعني 'لا أعرف هل سيأتي'. الصحيح: 'I don't know whether/if he will come.'",
+      "خطأ: استخدام if + to-infinitive: 'We must decide if to continue.' الأفضل: 'We must decide whether to continue.'",
+      "خطأ: الحفاظ على ترتيب السؤال المباشر داخل Noun Clause: 'I wonder where is the laboratory.' الصحيح: 'I wonder where the laboratory is.'",
+      "خطأ: استخدام علامة استفهام تلقائيًا في نهاية Indirect Question: 'I don't know where he lives?' الجملة الخبرية العادية لا تحتاج علامة استفهام.",
+      "خطأ: الخلط بين what وwhich. غالبًا what تستخدم عندما لا توجد مجموعة محددة، بينما which تشير إلى اختيار من مجموعة محددة.",
+      "خطأ: استخدام do/does/did داخل Noun Clause بعد wh-word: 'I know where does she work.' الصحيح: 'I know where she works.'"
+    ],
+    "quiz": [
+      {
+        "type": "multiple-choice",
+        "prompt": "The researchers found _____ the treatment was effective.",
+        "options": [
+          "what",
+          "that",
+          "where",
+          "whether"
+        ],
+        "correct": 1,
+        "answer": "that",
+        "why": "نستخدم that لإدخال معلومة أو نتيجة: found that the treatment was effective."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "I don't know _____ he lives.",
+        "options": [
+          "where does",
+          "where",
+          "where is",
+          "does where"
+        ],
+        "correct": 1,
+        "answer": "where",
+        "why": "هذه Indirect Question، ولذلك يأتي بعدها ترتيب الجملة الخبرية: where he lives."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "She asked _____ the problem was.",
+        "options": [
+          "what",
+          "what did",
+          "what was",
+          "that"
+        ],
+        "correct": 0,
+        "answer": "what",
+        "why": "في Noun Clause نستخدم ترتيب الجملة الخبرية: what the problem was."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The researchers wanted to know _____ the treatment was effective.",
+        "options": [
+          "what",
+          "whether",
+          "where",
+          "that"
+        ],
+        "correct": 1,
+        "answer": "whether",
+        "why": "السؤال هنا نعم/لا: هل كان العلاج فعالًا أم لا؟ لذلك whether مناسبة."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The decision depends on _____ the evidence is reliable.",
+        "options": [
+          "if",
+          "whether",
+          "that",
+          "what"
+        ],
+        "correct": 1,
+        "answer": "whether",
+        "why": "بعد حرف الجر on نستخدم whether في الأسلوب القياسي والرسمـي."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The researchers must decide whether _____ the experiment.",
+        "options": [
+          "repeat",
+          "repeating",
+          "to repeat",
+          "repeated"
+        ],
+        "correct": 2,
+        "answer": "to repeat",
+        "why": "whether يمكن أن تتبعها to-infinitive: whether to repeat."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The report explains _____ the results changed.",
+        "options": [
+          "why",
+          "why did",
+          "that why",
+          "what did"
+        ],
+        "correct": 0,
+        "answer": "why",
+        "why": "why introduces a noun clause explaining the reason، وبعدها يأتي ترتيب الجملة الخبرية."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The researchers investigated _____ the system works.",
+        "options": [
+          "how",
+          "how does",
+          "that how",
+          "what does"
+        ],
+        "correct": 0,
+        "answer": "how",
+        "why": "how introduces a noun clause describing the method or way."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "I don't know _____ the professor said.",
+        "options": [
+          "what did",
+          "what",
+          "what was",
+          "that what"
+        ],
+        "correct": 1,
+        "answer": "what",
+        "why": "الصحيح هو what the professor said، وهو ترتيب خبري وليس ترتيب سؤال."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "_____ the researchers discovered was unexpected.",
+        "options": [
+          "That",
+          "What",
+          "Whether",
+          "Which"
+        ],
+        "correct": 1,
+        "answer": "What",
+        "why": "What the researchers discovered تعمل Noun Clause كفاعل وتعني 'ما اكتشفه الباحثون'."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "I don't know where does she work.",
+          "I don't know where she works.",
+          "I don't know where works she.",
+          "I don't know where is she work."
+        ],
+        "correct": 1,
+        "answer": "I don't know where she works.",
+        "why": "Noun Clause تستخدم ترتيب الجملة الخبرية: subject + verb."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "She asked what was the answer.",
+          "She asked what the answer was.",
+          "She asked what did the answer mean.",
+          "She asked what does the answer mean."
+        ],
+        "correct": 1,
+        "answer": "She asked what the answer was.",
+        "why": "في Indirect Question يأتي subject قبل verb: what the answer was."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence correctly uses whether?",
+        "options": [
+          "It depends on if the results are valid.",
+          "It depends on whether the results are valid.",
+          "It depends whether are the results valid.",
+          "It depends on whether are the results valid."
+        ],
+        "correct": 1,
+        "answer": "It depends on whether the results are valid.",
+        "why": "بعد حرف الجر on، whether هي الاختيار المناسب، مع ترتيب الجملة الخبرية."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "We must decide if to continue.",
+          "We must decide whether to continue.",
+          "We must decide whether continuing.",
+          "We must decide that to continue."
+        ],
+        "correct": 1,
+        "answer": "We must decide whether to continue.",
+        "why": "التركيب الصحيح هو whether + to-infinitive."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "The study shows _____ technology affects learning.",
+        "options": [
+          "that how",
+          "how",
+          "how does",
+          "what does"
+        ],
+        "correct": 1,
+        "answer": "how",
+        "why": "how technology affects learning هي Noun Clause، ولا نستخدم that قبل how هنا."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence contains a Noun Clause?",
+        "options": [
+          "The student who won the prize is talented.",
+          "The book that I bought is useful.",
+          "I know what the student wants.",
+          "The student studying here is talented."
+        ],
+        "correct": 2,
+        "answer": "I know what the student wants.",
+        "why": "what the student wants تعمل مفعولًا به للفعل know، ولذلك فهي Noun Clause."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence uses a Relative Clause rather than a Noun Clause?",
+        "options": [
+          "I know what he wants.",
+          "I know where he lives.",
+          "The book that he recommended was useful.",
+          "She explained why the results changed."
+        ],
+        "correct": 2,
+        "answer": "The book that he recommended was useful.",
+        "why": "that he recommended تصف الاسم book، ولذلك هي Relative Clause."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "I wonder where is the laboratory.",
+          "I wonder where the laboratory is.",
+          "I wonder where does the laboratory is.",
+          "I wonder where the laboratory does be."
+        ],
+        "correct": 1,
+        "answer": "I wonder where the laboratory is.",
+        "why": "Noun Clause بعد wonder تستخدم ترتيب الجملة الخبرية."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "_____ the experiment failed was surprising.",
+        "options": [
+          "What",
+          "That",
+          "Whether",
+          "Where"
+        ],
+        "correct": 1,
+        "answer": "That",
+        "why": "That the experiment failed هي Noun Clause تعمل كفاعل للجملة."
+      },
+      {
+        "type": "multiple-choice",
+        "prompt": "Which sentence is most appropriate for formal academic writing?",
+        "options": [
+          "The study shows that the method works.",
+          "The study shows that does the method work.",
+          "The study shows what does the method work.",
+          "The study shows if the method works."
+        ],
+        "correct": 0,
+        "answer": "The study shows that the method works.",
+        "why": "هذه صياغة أكاديمية صحيحة باستخدام that-clause وترتيب خبري."
+      }
+    ],
+    "markers": [
+      "noun clauses",
+      "noun clause",
+      "that clause",
+      "that-clauses",
+      "whether clause",
+      "if clause noun clause",
+      "whether or not",
+      "whether to",
+      "indirect questions",
+      "indirect question",
+      "embedded questions",
+      "embedded question",
+      "what clause",
+      "who clause",
+      "whom clause",
+      "whose clause",
+      "which clause",
+      "where clause",
+      "when clause",
+      "why clause",
+      "how clause",
+      "that",
+      "whether",
+      "if",
+      "what",
+      "who",
+      "whom",
+      "whose",
+      "which",
+      "where",
+      "when",
+      "why",
+      "how",
+      "academic noun clauses",
+      "PTE noun clauses",
+      "PTE grammar",
+      "PTE fill in the blanks",
+      "indirect question word order",
+      "noun clause vs relative clause"
+    ]
+  }
+]

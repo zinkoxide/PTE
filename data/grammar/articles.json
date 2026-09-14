@@ -1,0 +1,497 @@
+[
+  {
+    "id": "articles",
+    "title": "أدوات التعريف والتنكير",
+    "category": "Articles",
+    "icon": "📝",
+    "description": "شرح استخدام a و an و the وعدم استخدام أداة التعريف أو التنكير (zero article)، مع التركيز على الأسماء المعدودة وغير المعدودة، والأسماء العامة والمحددة، وأسماء الأماكن والمؤسسات، وأهم الأخطاء الشائعة في PTE.",
+    "explanation": "تُستخدم أدوات التعريف والتنكير في الإنجليزية لتحديد ما إذا كان الاسم يشير إلى شيء غير محدد، أو إلى شيء محدد ومعروف، أو إلى الأشياء بشكل عام. أهم الأدوات هي a و an و the، بالإضافة إلى حالات عدم استخدام أي أداة، وهو ما يسمى zero article. القاعدة الأساسية هي أن a و an تُستخدمان عادةً مع الاسم المفرد المعدود عندما نتحدث عن شيء واحد غير محدد، بينما the تُستخدم عندما يكون الشيء محددًا أو معروفًا من السياق. أما عند الحديث عن الأشياء أو المفاهيم بشكل عام، فقد لا نستخدم أي أداة. في أسئلة PTE، لا يكفي حفظ قاعدة واحدة؛ يجب أولًا تحديد نوع الاسم: countable أو uncountable، singular أو plural، ثم تحديد ما إذا كان المقصود عامًا أم محددًا.",
+    "rules": [
+      "نستخدم a أو an مع الاسم المفرد المعدود عندما نتحدث عن شخص أو شيء واحد غير محدد.",
+      "لا يمكن استخدام a أو an مع الاسم الجمع أو الاسم غير المعدود.",
+      "نستخدم a قبل الكلمات التي يبدأ نطقها بصوت ساكن، وليس بالضرورة بحرف ساكن.",
+      "نستخدم an قبل الكلمات التي يبدأ نطقها بصوت متحرك.",
+      "نقول a university لأن university تبدأ صوتيًا بـ /juː/ وهو صوت ساكن.",
+      "نقول an hour لأن h في hour لا تُنطق، وتبدأ الكلمة صوتيًا بصوت متحرك.",
+      "نقول an honest person لأن h في honest غير منطوقة.",
+      "نقول a European country لأن European تبدأ صوتيًا بـ /j/.",
+      "يمكن استخدام a/an عندما نذكر شيئًا للمرة الأولى.",
+      "عند ذكر الشيء نفسه مرة أخرى، نستخدم the إذا أصبح محددًا ومعروفًا.",
+      "مثال: I saw a dog. The dog was barking.",
+      "نستخدم the عندما يكون الشيء معروفًا للمتحدث والمستمع أو يمكن تحديده من السياق.",
+      "نستخدم the عندما يكون هناك شيء واحد محدد من نوعه في السياق، مثل the door في غرفة معينة.",
+      "نستخدم the مع الأشياء الفريدة أو التي يُنظر إليها على أنها فريدة، مثل the sun وthe moon وthe Earth.",
+      "نستخدم the مع صيغ التفضيل، مثل the best وthe most important.",
+      "نستخدم the مع first وsecond وغيرها عندما نشير إلى ترتيب محدد، مثل the first study.",
+      "نستخدم the مع only، مثل the only solution.",
+      "نستخدم the مع same، مثل the same problem.",
+      "نستخدم the مع الأرقام الترتيبية عندما تكون محددة، مثل the third chapter.",
+      "يمكن استخدام a/an مع المهن والوظائف بعد be، مثل She is a doctor.",
+      "نستخدم a/an مع المعدود المفرد بعد كلمات مثل such وquite في تراكيب معينة: such a difficult problem وquite a useful method.",
+      "نستخدم a/an مع معنى 'واحد' عندما يكون الاسم مفردًا معدودًا، مثل I need a pen.",
+      "لا نستخدم a/an مع أسماء الأشخاص عادةً عندما نستخدم الاسم كاسم علم: Ahmed is a student.",
+      "لا نستخدم the عادةً مع أسماء الأشخاص، مثل Ahmed وSara، إلا في حالات خاصة.",
+      "لا نستخدم the عادةً مع معظم أسماء المدن والبلدان المفردة، مثل Cairo وEgypt.",
+      "لكن بعض أسماء البلدان تحتاج the، مثل the United States وthe United Kingdom.",
+      "نستخدم the مع أسماء الأنهار، مثل the Nile.",
+      "نستخدم the مع البحار والمحيطات، مثل the Mediterranean Sea وthe Atlantic Ocean.",
+      "نستخدم the مع سلاسل الجبال، مثل the Alps.",
+      "نستخدم the مع مجموعات الجزر، مثل the Philippines.",
+      "نستخدم the مع الصحارى، مثل the Sahara.",
+      "نستخدم the مع بعض أسماء المؤسسات أو المباني عندما يكون الاسم محددًا ويُستخدم بهذا الشكل.",
+      "مع university وschool وhospital وprison وchurch، قد نستخدم الاسم دون the عندما نتحدث عن الوظيفة الأساسية للمكان.",
+      "مثال: Students go to school تعني الذهاب إلى المدرسة لأغراض الدراسة.",
+      "مثال: Her mother went to the school تعني الذهاب إلى مبنى المدرسة أو إلى مدرسة محددة، وليس بالضرورة للدراسة كطالبة.",
+      "ينطبق هذا الفرق أيضًا على hospital وprison وuniversity في بعض السياقات.",
+      "نستخدم zero article مع الأسماء الجمع المعدودة عندما نتحدث عن الأشياء بشكل عام.",
+      "مثال: Students need access to libraries يتحدث عن الطلاب والمكتبات بشكل عام.",
+      "يمكن استخدام the مع الاسم الجمع عندما نتحدث عن مجموعة محددة.",
+      "مثال: The students in this class are preparing for the exam.",
+      "نستخدم zero article غالبًا مع الأسماء غير المعدودة عندما نتحدث عن المفهوم بشكل عام.",
+      "مثال: Information is essential for research.",
+      "عندما يصبح الاسم غير المعدود محددًا، يمكن استخدام the، مثل the information provided by the researchers.",
+      "لا نقول an information لأن information اسم غير معدود.",
+      "لا نقول a research عندما نقصد research كمجال أو نشاط عام، ولكن يمكن أن نجد a research study أو a piece of research.",
+      "لا نقول an advice؛ advice اسم غير معدود، ويمكن أن نقول a piece of advice.",
+      "نستخدم the عندما يحدد phrase أو clause الاسم، مثل the information that we collected.",
+      "في تراكيب مثل the book on the table، عبارة on the table تجعل الكتاب محددًا.",
+      "في تراكيب مثل a book on the table، قد يكون الكتاب غير محدد رغم وجود وصف له.",
+      "الفرق بين a وthe يعتمد على ما إذا كان المستمع يستطيع تحديد الشيء المقصود، وليس فقط على وجود وصف بعد الاسم.",
+      "مع أسماء المواد الدراسية واللغات، نستخدم عادةً zero article عند الحديث عنها بشكل عام، مثل English وbiology وmathematics.",
+      "نقول English is widely spoken، وليس The English is widely spoken عندما نقصد اللغة.",
+      "نستخدم the English عندما يكون المقصود الشعب الإنجليزي أو صفة اسمية في سياق مختلف.",
+      "نستخدم zero article غالبًا مع الوجبات عندما نتحدث عنها بشكل عام، مثل breakfast وlunch وdinner.",
+      "يمكن استخدام the مع الوجبة عندما نتحدث عن وجبة محددة، مثل The dinner we had yesterday was excellent.",
+      "نستخدم zero article عادةً مع الرياضات، مثل football وtennis وbasketball.",
+      "نستخدم zero article مع معظم أسماء وسائل النقل عندما تأتي في تراكيب مثل by car وby train وby bus.",
+      "نستخدم the في تراكيب محددة مثل on the bus أو in the car عندما نشير إلى وسيلة نقل معينة.",
+      "نستخدم the مع بعض وسائل الإعلام والتقنيات في تراكيب ثابتة، مثل the Internet في بعض أنماط الإنجليزية.",
+      "عند الحديث عن اسم علم يحتوي أصلًا على the، يجب الاحتفاظ بها، مثل the United States.",
+      "لا نستخدم the عادةً مع أسماء اللغات، مثل Arabic وEnglish وFrench.",
+      "لا نستخدم the عادةً مع أسماء الأشخاص أو معظم أسماء الشوارع، مثل Oxford Street.",
+      "نستخدم the مع أسماء بعض الشوارع أو الطرق عندما يكون الاسم من نوع road أو highway في بعض التراكيب، لكن الاستخدام يعتمد على الاسم الرسمي.",
+      "نستخدم the مع الاتجاهات عندما تشير إلى مناطق أو أجزاء محددة، مثل the north of Egypt.",
+      "نستخدم zero article مع الاتجاهات عندما تُستخدم كاتجاه عام، مثل Travel north.",
+      "نستخدم the مع أجزاء الجسم في بعض التراكيب الثابتة، مثل hit him on the head.",
+      "نستخدم a/an مع singular countable noun عندما يكون الاسم هو المفعول أو الفاعل لأول مرة وغير محدد.",
+      "في الجمل التي تبدأ بـ There is، نستخدم a/an مع الاسم المفرد المعدود غير المحدد: There is a problem.",
+      "مع There are، إذا كان الاسم جمعًا عامًا، لا نستخدم a/an: There are several problems.",
+      "إذا كان الاسم محددًا في جملة There is/are، يمكن استخدام the: There is a problem. The problem is serious.",
+      "يمكن أن تكون the مع اسم مفرد أو جمع أو غير معدود، طالما أن الاسم محدد.",
+      "لا توجد أداة واحدة تناسب جميع الأسماء؛ يجب النظر إلى العدد وإلى كون الاسم محددًا أو عامًا.",
+      "في PTE، إذا كان الاسم مفردًا معدودًا وسبقته صفة، لا تنسَ أن الاسم ما زال يحتاج إلى determiner: an important factor، وليس important factor.",
+      "في PTE، من الأخطاء الشائعة حذف a/an قبل singular countable noun: She is researcher خطأ، والصحيح She is a researcher.",
+      "إذا كان الاسم عامًا بصيغة الجمع، غالبًا لا نحتاج إلى the: Researchers need reliable data.",
+      "إذا كنا نقصد باحثين محددين، نستخدم the: The researchers collected the data.",
+      "إذا كان الاسم غير معدود ويشير إلى مفهوم عام، غالبًا نستخدم zero article: Research requires time.",
+      "إذا كان الاسم غير معدود ومحددًا، نستخدم the: The research conducted by the team was valuable.",
+      "التمييز بين general وspecific من أهم مفاتيح اختيار article الصحيح في PTE."
+    ],
+    "examples": [
+      {
+        "en": "She is a doctor.",
+        "ar": "هي طبيبة."
+      },
+      {
+        "en": "He bought an umbrella.",
+        "ar": "اشترى مظلة."
+      },
+      {
+        "en": "She studies at a university in Cairo.",
+        "ar": "تدرس في إحدى الجامعات في القاهرة."
+      },
+      {
+        "en": "He waited for an hour.",
+        "ar": "انتظر لمدة ساعة."
+      },
+      {
+        "en": "She is an honest researcher.",
+        "ar": "هي باحثة صادقة."
+      },
+      {
+        "en": "He is a European scientist.",
+        "ar": "هو عالم أوروبي."
+      },
+      {
+        "en": "I saw a dog in the street. The dog was very friendly.",
+        "ar": "رأيت كلبًا في الشارع. كان الكلب ودودًا جدًا."
+      },
+      {
+        "en": "The book on the table belongs to me.",
+        "ar": "الكتاب الموجود على الطاولة يخصني."
+      },
+      {
+        "en": "The students in this class performed well.",
+        "ar": "أدى الطلاب في هذا الصف أداءً جيدًا."
+      },
+      {
+        "en": "Students need regular practice.",
+        "ar": "يحتاج الطلاب إلى ممارسة منتظمة."
+      },
+      {
+        "en": "Research requires careful planning.",
+        "ar": "يتطلب البحث تخطيطًا دقيقًا."
+      },
+      {
+        "en": "The research conducted by the university was valuable.",
+        "ar": "كان البحث الذي أجرته الجامعة ذا قيمة."
+      },
+      {
+        "en": "Information is essential for making good decisions.",
+        "ar": "المعلومات ضرورية لاتخاذ قرارات جيدة."
+      },
+      {
+        "en": "The information provided by the researchers was accurate.",
+        "ar": "كانت المعلومات التي قدمها الباحثون دقيقة."
+      },
+      {
+        "en": "The Nile is one of the world's longest rivers.",
+        "ar": "النيل أحد أطول أنهار العالم."
+      },
+      {
+        "en": "Egypt is located in North Africa.",
+        "ar": "تقع مصر في شمال أفريقيا."
+      },
+      {
+        "en": "The United States has a large higher-education system.",
+        "ar": "تمتلك الولايات المتحدة نظامًا كبيرًا للتعليم العالي."
+      },
+      {
+        "en": "Students usually go to school to study.",
+        "ar": "يذهب الطلاب عادةً إلى المدرسة للدراسة."
+      },
+      {
+        "en": "Her father went to the school to meet the principal.",
+        "ar": "ذهب والدها إلى المدرسة لمقابلة المدير."
+      },
+      {
+        "en": "I had breakfast at seven.",
+        "ar": "تناولت الإفطار في السابعة."
+      },
+      {
+        "en": "The breakfast we had at the hotel was excellent.",
+        "ar": "كان الإفطار الذي تناولناه في الفندق ممتازًا."
+      },
+      {
+        "en": "English is widely used in academic research.",
+        "ar": "تُستخدم اللغة الإنجليزية على نطاق واسع في البحث الأكاديمي."
+      },
+      {
+        "en": "The first study produced unexpected results.",
+        "ar": "أنتجت الدراسة الأولى نتائج غير متوقعة."
+      },
+      {
+        "en": "This is the only solution available.",
+        "ar": "هذا هو الحل الوحيد المتاح."
+      }
+    ],
+    "commonMistakes": [
+      "حذف a/an قبل الاسم المفرد المعدود: She is researcher. الصحيح: She is a researcher.",
+      "استخدام a/an مع اسم غير معدود: an information أو an advice خطأ. الصحيح: information وadvice، أو a piece of information / a piece of advice.",
+      "استخدام an بسبب الحرف بدل الصوت: an university خطأ. الصحيح: a university.",
+      "استخدام a مع صوت متحرك: a hour خطأ. الصحيح: an hour.",
+      "استخدام the مع الحديث العام عن الأشياء: The students need practice قد تعني الطلاب المحددين، بينما Students need practice تعني الطلاب بشكل عام.",
+      "نسيان the مع اسم محدد: The researchers collected data. إذا كنا نقصد مجموعة باحثين معروفة من السياق، نحتاج the.",
+      "استخدام the مع معظم أسماء البلدان والمدن: the Egypt وthe Cairo خطأ في الاستخدام العادي. الصحيح: Egypt وCairo.",
+      "نسيان the مع أسماء مثل the United States وthe United Kingdom.",
+      "استخدام the مع اللغات: The English is spoken worldwide خطأ إذا كان المقصود اللغة بشكل عام. الصحيح: English is spoken worldwide.",
+      "استخدام a مع research عندما يُقصد البحث كمفهوم عام: a research requires time خطأ. الصحيح: Research requires time.",
+      "الخلط بين school وthe school أو hospital وthe hospital. غياب the قد يشير إلى الوظيفة الأساسية للمكان، بينما the قد تشير إلى مكان محدد.",
+      "الخلط بين a وthe عند أول ذكر: I bought the book قد يكون صحيحًا فقط إذا كان الكتاب محددًا ومعروفًا بالفعل.",
+      "الاعتقاد أن كل اسم بعد صفة يحتاج the. الصحيح يعتمد على كون الاسم محددًا أو غير محدد: an important factor وthe important factor لهما معنيان مختلفان.",
+      "استخدام article قبل الاسم الجمع العام: The computers are useful قد تعني أجهزة كمبيوتر محددة، بينما Computers are useful تعني أجهزة الكمبيوتر بشكل عام."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "She is ___ experienced researcher.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "no article"
+        ],
+        "correct": 1,
+        "answer": "an",
+        "why": "Experienced تبدأ بصوت متحرك، لذلك نستخدم an."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "He studies at ___ university in London.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "no article"
+        ],
+        "correct": 0,
+        "answer": "a",
+        "why": "University تبدأ بصوت /juː/ وهو صوت ساكن، لذلك نستخدم a."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She waited for ___ hour.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "no article"
+        ],
+        "correct": 1,
+        "answer": "an",
+        "why": "الـh في hour غير منطوقة، لذلك تبدأ الكلمة بصوت متحرك."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ research requires careful planning.",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "No article"
+        ],
+        "correct": 3,
+        "answer": "No article",
+        "why": "Research هنا اسم غير معدود ويشير إلى البحث كمفهوم عام."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ research conducted by the university was impressive.",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "No article"
+        ],
+        "correct": 2,
+        "answer": "The",
+        "why": "البحث محدد؛ فهو البحث الذي أجرته الجامعة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ students need regular practice.",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "No article"
+        ],
+        "correct": 3,
+        "answer": "No article",
+        "why": "Students اسم جمع ويُستخدم هنا للحديث عن الطلاب بشكل عام."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ students in this classroom are preparing for the exam.",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "No article"
+        ],
+        "correct": 2,
+        "answer": "The",
+        "why": "المقصود مجموعة محددة: الطلاب الموجودون في هذا الصف."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "I saw ___ interesting article yesterday.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "no article"
+        ],
+        "correct": 1,
+        "answer": "an",
+        "why": "Interesting تبدأ بصوت متحرك، والمقال مفرد معدود وغير محدد."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "I read an article yesterday. ___ article was about artificial intelligence.",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "No article"
+        ],
+        "correct": 2,
+        "answer": "The",
+        "why": "تم ذكر المقال لأول مرة باستخدام an، وأصبح الآن محددًا، لذلك نستخدم the."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "She is researcher.",
+          "She is a researcher.",
+          "She is an researcher.",
+          "She is the researcher."
+        ],
+        "correct": 1,
+        "answer": "She is a researcher.",
+        "why": "Researcher اسم مفرد معدود ويُذكر هنا كمهنة غير محددة، لذلك نستخدم a."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "He gave me an advice.",
+          "He gave me a advice.",
+          "He gave me some advice.",
+          "He gave me the advice generally."
+        ],
+        "correct": 2,
+        "answer": "He gave me some advice.",
+        "why": "Advice اسم غير معدود، لذلك لا نستخدم a/an معه."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "An university was established in the city.",
+          "A university was established in the city.",
+          "The university was established in a city generally.",
+          "University was established in the city."
+        ],
+        "correct": 1,
+        "answer": "A university was established in the city.",
+        "why": "University تبدأ بصوت /juː/، لذلك نستخدم a."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "The Egypt is a large country.",
+          "Egypt is a large country.",
+          "An Egypt is a large country.",
+          "A Egypt is a large country."
+        ],
+        "correct": 1,
+        "answer": "Egypt is a large country.",
+        "why": "Egypt اسم بلد ولا يحتاج the في الاستخدام العادي."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "United States is a large country.",
+          "The United States is a large country.",
+          "A United States is a large country.",
+          "An United States is a large country."
+        ],
+        "correct": 1,
+        "answer": "The United States is a large country.",
+        "why": "United States من أسماء البلدان التي تستخدم the."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "The Nile is a major river.",
+          "Nile is a major river.",
+          "A Nile is a major river.",
+          "An Nile is a major river."
+        ],
+        "correct": 0,
+        "answer": "The Nile is a major river.",
+        "why": "أسماء الأنهار تستخدم عادةً مع the."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Students usually go to ___ school to study.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "no article"
+        ],
+        "correct": 3,
+        "answer": "no article",
+        "why": "School هنا تشير إلى الوظيفة الأساسية للمؤسسة، أي الدراسة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Her father went to ___ school to meet the principal.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "no article"
+        ],
+        "correct": 2,
+        "answer": "the",
+        "why": "المقصود مدرسة محددة ومبنى محدد، وليس الذهاب إلى المدرسة كطالب للدراسة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence refers to research in general?",
+        "options": [
+          "The research conducted by the team was useful.",
+          "Research is essential for scientific progress.",
+          "The research published last month was important.",
+          "The research from this university was excellent."
+        ],
+        "correct": 1,
+        "answer": "Research is essential for scientific progress.",
+        "why": "Research هنا مفهوم عام، لذلك لا نستخدم article."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "This is ___ first study to investigate the issue.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "no article"
+        ],
+        "correct": 2,
+        "answer": "the",
+        "why": "نستخدم the مع first عندما نشير إلى الترتيب المحدد."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She found ___ solution to the problem.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "no article"
+        ],
+        "correct": 0,
+        "answer": "a",
+        "why": "Solution اسم مفرد معدود وغير محدد، لذلك نستخدم a."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She found a solution. ___ solution solved the problem.",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "No article"
+        ],
+        "correct": 2,
+        "answer": "The",
+        "why": "بعد ذكر solution للمرة الأولى، أصبحت محددة ومعروفة في السياق."
+      }
+    ],
+    "markers": [
+      "a",
+      "an",
+      "the",
+      "no article",
+      "zero article",
+      "a university",
+      "an hour",
+      "the first",
+      "the only",
+      "the same",
+      "the best",
+      "the Nile",
+      "the United States",
+      "in general",
+      "as a whole"
+    ]
+  }
+]

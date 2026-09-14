@@ -1,0 +1,592 @@
+[
+  {
+    "id": "adjectives-adverbs",
+    "title": "الصفات والظروف",
+    "category": "الصفات والظروف",
+    "icon": "✨",
+    "description": "شرح شامل لاستخدام الصفات والظروف، مواقعها في الجملة، الفرق بين adjective وadverb، النهايات -ly، الكلمات غير المنتظمة، الصفات المنتهية بـ -ed و-ing، ترتيب الصفات، وظروف الدرجة والتكرار، مع التركيز على أخطاء PTE الشائعة.",
+    "explanation": "الصفة (Adjective) تصف اسمًا أو ضميرًا، بينما الظرف (Adverb) يصف فعلًا أو صفة أو ظرفًا آخر أو الجملة بأكملها. هذا الفرق مهم جدًا في أسئلة PTE لأن الاختيار الصحيح يعتمد غالبًا على معرفة الكلمة التي تحتاج إلى وصفها وموقع الفراغ داخل الجملة.\\n\\nAdjective: تصف noun أو pronoun. مثال: The results are significant.\\nAdverb: تصف verb أو adjective أو adverb أو clause. مثال: The researchers analyzed the data carefully.\\n\\nكثير من الظروف تتكون بإضافة -ly إلى الصفة: careful → carefully، significant → significantly، successful → successfully. لكن هذه القاعدة ليست مطلقة؛ فهناك كلمات خاصة مثل good → well، hard → hard، late → late، وhigh → highly التي يجب حفظ معناها واستخدامها.\\n\\nفي PTE، لا تختار الكلمة بناءً على شكلها فقط. انظر أولًا إلى الكلمة التي تسبق الفراغ والتي تليه: إذا كنت تصف noun فغالبًا تحتاج adjective، وإذا كنت تصف verb فغالبًا تحتاج adverb. وبعد ذلك افحص المعنى والسياق.",
+    "rules": [
+      "Adjective تصف اسمًا (noun) أو ضميرًا (pronoun).",
+      "Adverb تصف فعلًا (verb) أو صفة (adjective) أو ظرفًا آخر (adverb)، وقد تصف الجملة كاملة.",
+      "يمكن أن تأتي الصفة قبل الاسم مباشرة: a difficult task.",
+      "يمكن أن تأتي الصفة بعد أفعال الربط مثل be, seem, become, feel, look, appear, remain, stay, sound, smell, taste.",
+      "بعد أفعال الربط نستخدم adjective وليس adverb عندما نصف حالة الفاعل.",
+      "مثال: The results seem reliable. وليس reliably لأن reliable تصف results.",
+      "يمكن استخدام adverb لوصف الطريقة التي يحدث بها الفعل: The researchers worked carefully.",
+      "الظروف التي تنتهي بـ -ly غالبًا تصف كيفية حدوث الفعل.",
+      "الصيغة الشائعة لتحويل adjective إلى adverb هي adjective + ly.",
+      "careful → carefully.",
+      "quick → quickly.",
+      "successful → successfully.",
+      "significant → significantly.",
+      "إذا انتهت الصفة بـ -y، غالبًا تتحول y إلى i ثم نضيف -ly: easy → easily.",
+      "إذا انتهت الصفة بـ -le، غالبًا تتحول إلى -ly: possible → possibly.",
+      "إذا انتهت الصفة بـ -ic، غالبًا نضيف -ally: basic → basically، scientific → scientifically.",
+      "هناك ظروف لا تتبع قاعدة -ly ويجب تعلمها بصورة منفصلة.",
+      "good صفة، وwell ظرف في الاستخدام المعتاد.",
+      "نقول: She is a good researcher. ونقول: She works well.",
+      "بعد أفعال الربط نستخدم good عندما نصف حالة الشخص أو الشيء: The researcher is good.",
+      "hard يمكن أن تكون adjective أو adverb، والظرف hard يعني 'بجد / بشدة'.",
+      "hardly ليست صيغة adverb عادية من hard؛ معناها 'بالكاد / تقريبًا لا'.",
+      "late يمكن أن تكون adjective أو adverb، بينما lately تعني 'مؤخرًا'.",
+      "high يمكن أن تكون adjective أو adverb بمعنى 'على ارتفاع عالٍ'، بينما highly تعني 'بدرجة كبيرة / للغاية'.",
+      "close يمكن أن تكون adjective أو adverb، بينما closely تعني 'عن كثب / بدقة'.",
+      "free يمكن أن تكون adjective أو adverb في بعض الاستخدامات، بينما freely تعني 'بحرية'.",
+      "direct يمكن أن تكون adjective أو adverb، بينما directly تعني 'بشكل مباشر / فورًا' حسب السياق.",
+      "في بعض الحالات تكون الصفة والظرف متطابقين في الشكل، مثل fast, hard, late, early, straight.",
+      "fast تعني سريعًا عندما تستخدم كظرف: The machine operates fast.",
+      "early يمكن أن تكون adjective أو adverb: an early meeting / She arrived early.",
+      "الصفة بعد linking verb تصف subject وليس الفعل نفسه.",
+      "be + adjective من أكثر التراكيب شيوعًا: The results are accurate.",
+      "seem + adjective: The explanation seems clear.",
+      "become + adjective: The situation became difficult.",
+      "remain + adjective: The problem remains serious.",
+      "feel + adjective: The students feel confident.",
+      "look + adjective عندما يكون المعنى 'يبدو': The results look promising.",
+      "sound + adjective: The proposal sounds reasonable.",
+      "smell + adjective: The chemical smells unpleasant.",
+      "taste + adjective: The food tastes good.",
+      "يمكن استخدام adverb قبل adjective لتحديد درجتها: highly effective، extremely important، relatively small.",
+      "يمكن استخدام adverb قبل adverb آخر: very carefully، extremely quickly.",
+      "very تستخدم عادة لتقوية adjective أو adverb: very important، very carefully.",
+      "too تعني 'أكثر من اللازم' وغالبًا تأتي قبل adjective أو adverb.",
+      "enough تأتي بعد adjective أو adverb: sufficiently large / large enough.",
+      "enough تأتي قبل noun: enough evidence.",
+      "too + adjective + to-infinitive: The task was too difficult to complete.",
+      "adjective + enough + to-infinitive: The task was easy enough to complete.",
+      "so + adjective/adverb + that: The task was so difficult that many students failed.",
+      "such + noun phrase + that: It was such a difficult task that many students failed.",
+      "such + adjective + plural/uncountable noun + that: such useful information that...",
+      "rather, quite, fairly, pretty يمكن أن تعمل كظروف درجة، لكن قوة المعنى تختلف حسب السياق.",
+      "quite يمكن أن تعني 'إلى حد ما' أو 'تمامًا' حسب الصفة والسياق.",
+      "fairly وrather غالبًا تعنيان 'إلى حد ما'، وrather قد توحي بدرجة أعلى أو بمفاجأة في بعض السياقات.",
+      "almost تعني 'تقريبًا' وتأتي عادة قبل الرقم أو الصفة أو الفعل الذي تحدده.",
+      "nearly قريبة في المعنى من almost.",
+      "very لا تأتي عادة قبل comparative مثل more better؛ لا نجمع بين very وcomparative بهذه الطريقة.",
+      "نستخدم much أو far أو significantly مع comparative في كثير من السياقات: much better، far more effective.",
+      "نستخدم slightly مع comparative عندما يكون الفرق صغيرًا: slightly higher.",
+      "نستخدم considerably/substantially مع comparative للدلالة على فرق كبير.",
+      "Adverbs of frequency مثل always, usually, often, sometimes, rarely, never تحدد تكرار الفعل.",
+      "عادة تأتي ظروف التكرار قبل الفعل الرئيسي: Researchers often conduct experiments.",
+      "تأتي ظروف التكرار بعد فعل be: The results are often reliable.",
+      "تأتي ظروف التكرار بعد auxiliary/modal وقبل الفعل الرئيسي: The researchers have often discussed this issue.",
+      "always لا تعني دائمًا أنها تأتي في بداية الجملة؛ موقعها يعتمد على نوع الفعل.",
+      "sometimes يمكن أن تأتي في بداية الجملة أو وسطها أو أحيانًا في نهايتها.",
+      "never تحمل معنى النفي، ولذلك لا نستخدم معها not في الجملة القياسية: He never attends the lectures.",
+      "Adverbs of manner مثل carefully, slowly, effectively غالبًا تأتي بعد الفعل أو بعد المفعول به إذا كان موجودًا.",
+      "نقول: The researchers analyzed the data carefully.",
+      "نقول: She completed the task successfully.",
+      "مع الأفعال المتعدية، من الطبيعي وضع ظرف الطريقة بعد المفعول به: They completed the experiment carefully.",
+      "بعض الظروف يمكن أن تأتي في بداية الجملة لتوضيح موقف المتحدث: Fortunately, the results were positive.",
+      "Sentence adverbs مثل fortunately, unfortunately, clearly, apparently يمكن أن تعلق على الجملة بأكملها.",
+      "Participial adjectives المنتهية بـ -ing تصف الشيء أو الشخص الذي يسبب الشعور أو الانطباع.",
+      "interesting تعني أن الشيء يسبب الاهتمام.",
+      "interested تعني أن الشخص يشعر بالاهتمام.",
+      "boring تعني مسببًا للملل، بينما bored تعني يشعر بالملل.",
+      "confusing تعني مسببًا للارتباك، بينما confused تعني يشعر بالارتباك.",
+      "exciting تعني مسببًا للإثارة، بينما excited تعني يشعر بالإثارة.",
+      "disappointing تصف الشيء الذي يسبب خيبة الأمل، بينما disappointed تصف الشخص الذي يشعر بها.",
+      "لا تستخدم -ed و-ing interchangeably لأن المعنى يتغير.",
+      "ترتيب الصفات عند وجود أكثر من adjective له نمط شائع: opinion → size → age → shape → color → origin → material → purpose + noun.",
+      "مثال: a beautiful small old wooden table.",
+      "Opinion مثل beautiful, useful, interesting.",
+      "Size مثل large, small, enormous.",
+      "Age مثل old, new, ancient.",
+      "Shape مثل round, square, rectangular.",
+      "Color مثل red, blue, white.",
+      "Origin مثل Egyptian, European, American.",
+      "Material مثل wooden, metal, plastic.",
+      "Purpose مثل research, medical, academic عندما تعمل كصفة قبل الاسم.",
+      "لا تحتاج دائمًا إلى استخدام جميع أنواع الصفات؛ القاعدة مهمة أساسًا عند وجود عدة صفات متتابعة.",
+      "الأسماء التي تعمل كصفات غالبًا تأتي قبل الاسم الرئيسي: research methods، university students.",
+      "في تركيب noun + noun يكون الاسم الأول محددًا لوظيفة الاسم الثاني وغالبًا لا يأخذ جمعًا: research method وليس researches method.",
+      "بعد seem, appear, become, remain, stay نستخدم adjective عندما يكون الفاعل هو الموصوف.",
+      "بعد فعل عادي نستخدم adverb إذا كان المطلوب وصف طريقة أداء الفعل.",
+      "في أسئلة PTE، إذا كان الفراغ بين subject وnoun فافحص احتمال adjective attributive.",
+      "إذا جاء الفراغ بعد linking verb فابدأ باحتمال adjective.",
+      "إذا جاء الفراغ بعد verb مكتمل المعنى ويحتاج إلى وصف طريقة حدوثه، فغالبًا تحتاج adverb.",
+      "إذا جاء الفراغ قبل adjective آخر، فغالبًا تحتاج adverb of degree مثل highly, extremely, relatively.",
+      "إذا جاء الفراغ قبل noun مباشرة، فغالبًا تحتاج adjective أو noun modifier، وليس adverb منتهيًا بـ -ly.",
+      "إذا كان الاختيار يحتوي على adjective وadverb من الجذر نفسه، حدد أولًا الكلمة التي يصفها الفراغ.",
+      "لا تعتمد على وجود -ly وحده؛ بعض الصفات تنتهي بـ -ly مثل friendly, lovely, likely, lively, lonely.",
+      "friendly وlovely وlively صفات وليست ظروفًا عادية.",
+      "لا نحول friendly إلى friendlyly.",
+      "يمكن التعبير عن الظرف لبعض الصفات المنتهية بـ -ly باستخدام in a friendly manner أو in a lively way حسب السياق.",
+      "likely صفة شائعة: It is likely that the results will change.",
+      "يمكن أيضًا استخدام likely بعد linking verb: The results are likely to change.",
+      "لا تخلط بين high وhighly: highly recommended تعني موصى به بشدة، بينما high temperature تعني درجة حرارة مرتفعة.",
+      "لا تخلط بين hard وhardly: He works hard تعني يعمل بجد، بينما He hardly works تعني بالكاد يعمل.",
+      "لا تخلط بين late وlately: He arrived late تعني وصل متأخرًا، بينما He has been busy lately تعني كان مشغولًا مؤخرًا.",
+      "لا تخلط بين near وnearly: near تعني قريب، nearly تعني تقريبًا.",
+      "لا تخلط بين close وclosely: close تعني قريب، closely تعني عن كثب أو بدقة.",
+      "في المقارنة، adjective بعد linking verb: The new method is more effective.",
+      "في المقارنة، adverb بعد الفعل إذا كان يصف طريقة الأداء: The new method works more effectively.",
+      "نستخدم comparative adjective قبل noun: a more efficient system.",
+      "نستخدم comparative adverb بعد verb: The system operates more efficiently.",
+      "Superlative adjective يأتي قبل noun أو بعد linking verb: the most effective method / This method is the most effective.",
+      "Superlative adverb يصف الفعل: The method worked most effectively.",
+      "بعض الصفات والظروف لها صيغ مقارنة غير منتظمة: good/well → better → best.",
+      "bad/badly → worse → worst.",
+      "far → farther/further → farthest/furthest حسب المعنى والسياق.",
+      "little → less → least عندما نتحدث عن الكمية.",
+      "much/many → more → most.",
+      "بعد look بمعنى 'يبدو' نستخدم adjective، أما look carefully فـ carefully تصف الفعل عندما يكون المعنى 'انظر بعناية'.",
+      "بعد feel بمعنى الحالة الجسدية أو العاطفية نستخدم adjective: I feel tired.",
+      "يمكن أن يأتي adverb قبل participial adjective: highly recommended، deeply concerned، extremely interested.",
+      "بعض التراكيب ثابتة ويجب تعلمها كوحدات: deeply concerned، highly effective، widely used، closely related، strongly recommended.",
+      "PTE يختبر كثيرًا الفرق بين widely used وwide used؛ الصحيح هو widely used.",
+      "نستخدم widely مع participles لوصف مدى انتشار الاستخدام: a widely used method.",
+      "نستخدم closely related بمعنى 'مرتبط ارتباطًا وثيقًا'.",
+      "نستخدم strongly associated عندما يكون الارتباط قويًا.",
+      "نستخدم significantly different عندما يكون الفرق ذا دلالة أو كبيرًا بحسب السياق.",
+      "نستخدم relatively small/large/common عندما نقارن الشيء بسياق عام أو مرجعي.",
+      "عند حل سؤال PTE، حدد نوع الكلمة المطلوبة أولًا، ثم افحص الزمن والبنية، ثم المعنى، ثم collocation إن وُجد."
+    ],
+    "examples": [
+      {
+        "en": "The researchers conducted a careful analysis of the data.",
+        "ar": "أجرى الباحثون تحليلًا دقيقًا للبيانات."
+      },
+      {
+        "en": "The researchers analyzed the data carefully.",
+        "ar": "حلل الباحثون البيانات بعناية."
+      },
+      {
+        "en": "The results are highly significant.",
+        "ar": "النتائج ذات أهمية كبيرة جدًا."
+      },
+      {
+        "en": "The researchers worked extremely carefully.",
+        "ar": "عمل الباحثون بعناية شديدة."
+      },
+      {
+        "en": "The explanation seems clear.",
+        "ar": "يبدو الشرح واضحًا."
+      },
+      {
+        "en": "The researchers explained the procedure clearly.",
+        "ar": "شرح الباحثون الإجراء بوضوح."
+      },
+      {
+        "en": "She is a good researcher.",
+        "ar": "هي باحثة جيدة."
+      },
+      {
+        "en": "She works well under pressure.",
+        "ar": "تعمل جيدًا تحت الضغط."
+      },
+      {
+        "en": "The students worked hard to complete the project.",
+        "ar": "عمل الطلاب بجد لإكمال المشروع."
+      },
+      {
+        "en": "The students hardly worked during the final week.",
+        "ar": "بالكاد عمل الطلاب خلال الأسبوع الأخير."
+      },
+      {
+        "en": "The researcher arrived late.",
+        "ar": "وصل الباحث متأخرًا."
+      },
+      {
+        "en": "The researchers have recently published a new study.",
+        "ar": "نشر الباحثون مؤخرًا دراسة جديدة."
+      },
+      {
+        "en": "The experiment was highly successful.",
+        "ar": "كانت التجربة ناجحة بدرجة كبيرة."
+      },
+      {
+        "en": "The temperature remained high throughout the experiment.",
+        "ar": "ظلت درجة الحرارة مرتفعة طوال التجربة."
+      },
+      {
+        "en": "The machine operates efficiently.",
+        "ar": "تعمل الآلة بكفاءة."
+      },
+      {
+        "en": "The new machine is more efficient than the old one.",
+        "ar": "الآلة الجديدة أكثر كفاءة من القديمة."
+      },
+      {
+        "en": "The students were extremely interested in the topic.",
+        "ar": "كان الطلاب مهتمين جدًا بالموضوع."
+      },
+      {
+        "en": "The lecture was extremely interesting.",
+        "ar": "كانت المحاضرة ممتعة جدًا."
+      },
+      {
+        "en": "The instructions were confusing, so several students became confused.",
+        "ar": "كانت التعليمات مربكة، لذلك أصبح العديد من الطلاب مرتبكين."
+      },
+      {
+        "en": "The researchers developed a highly effective method.",
+        "ar": "طوّر الباحثون طريقة فعالة للغاية."
+      },
+      {
+        "en": "The method is widely used in scientific research.",
+        "ar": "تُستخدم الطريقة على نطاق واسع في البحث العلمي."
+      },
+      {
+        "en": "The two variables are closely related.",
+        "ar": "المتغيران مرتبطان ارتباطًا وثيقًا."
+      },
+      {
+        "en": "The new method is significantly more accurate.",
+        "ar": "الطريقة الجديدة أكثر دقة بدرجة ملحوظة."
+      },
+      {
+        "en": "The task was too difficult to complete in one hour.",
+        "ar": "كانت المهمة صعبة للغاية بحيث لا يمكن إكمالها في ساعة واحدة."
+      },
+      {
+        "en": "The sample was large enough to produce reliable results.",
+        "ar": "كانت العينة كبيرة بما يكفي لإنتاج نتائج موثوقة."
+      },
+      {
+        "en": "The experiment was so complicated that additional equipment was required.",
+        "ar": "كانت التجربة معقدة جدًا لدرجة أن معدات إضافية كانت مطلوبة."
+      },
+      {
+        "en": "It was such a difficult experiment that the researchers repeated it several times.",
+        "ar": "كانت تجربة صعبة إلى درجة أن الباحثين كرروها عدة مرات."
+      },
+      {
+        "en": "Researchers often conduct experiments under controlled conditions.",
+        "ar": "غالبًا ما يجري الباحثون التجارب في ظروف مضبوطة."
+      },
+      {
+        "en": "The results are often difficult to interpret.",
+        "ar": "غالبًا ما يكون من الصعب تفسير النتائج."
+      },
+      {
+        "en": "Fortunately, the researchers identified the problem early.",
+        "ar": "لحسن الحظ، حدد الباحثون المشكلة مبكرًا."
+      }
+    ],
+    "commonMistakes": [
+      "استخدام adjective بدل adverb بعد فعل عادي: The researchers worked careful ❌ → worked carefully ✅.",
+      "استخدام adverb بعد linking verb: The results seem reliably ❌ → seem reliable ✅.",
+      "الخلط بين good وwell: She sings good ❌ → She sings well ✅.",
+      "الخلط بين hard وhardly: He works hardly ❌ إذا كان المقصود 'يعمل بجد' → He works hard ✅.",
+      "الخلط بين late وlately: He arrived lately ❌ إذا كان المقصود 'وصل متأخرًا' → He arrived late ✅.",
+      "الخلط بين high وhighly: a highly temperature ❌ → a high temperature ✅.",
+      "استخدام -ly مع كل كلمة دون التحقق من الصيغة: fastly ❌ → fast ✅.",
+      "اعتقاد أن كل كلمة منتهية بـ -ly هي adverb: friendly, likely, lively هي adjectives.",
+      "الخلط بين interested وinteresting: The students were interesting ❌ إذا كان المقصود أنهم شعروا بالاهتمام → interested ✅.",
+      "الخلط بين bored وboring: The students were boring ❌ إذا كان المقصود أنهم شعروا بالملل → bored ✅.",
+      "استخدام too وvery بنفس المعنى: too difficult تعني أصعب من الحد المناسب، بينما very difficult تعني صعب جدًا.",
+      "الخلط بين so وsuch: so + adjective/adverb، بينما such + noun phrase.",
+      "استخدام enough في المكان الخطأ: enough large ❌ → large enough ✅، لكن enough information ✅.",
+      "الخلط بين comparative adjective وcomparative adverb: The system is more efficient / works more efficiently.",
+      "استخدام very مع comparative: very better ❌ → much better أو far better ✅.",
+      "نسيان ترتيب الصفات عند وجود أكثر من صفة قبل الاسم.",
+      "استخدام adjective بدل adverb مع participle: a widely used method وليس a wide used method.",
+      "استخدام not مع never: He does not never attend ❌ → He never attends ✅.",
+      "استخدام hardly بمعنى hard: hardly تعني بالكاد، وليس بجد.",
+      "الخلط بين near وnearly: The station is near / The experiment is nearly complete.",
+      "الخلط بين close وclosely: The researchers worked closely together.",
+      "استخدام adverb بعد be عندما يكون المطلوب وصف subject: The results are significantly ❌ إذا لم يتبعها adjective مناسب.",
+      "نسيان أن بعض الكلمات مثل feel, look, sound, smell, taste تعمل كـ linking verbs في معانٍ معينة وتأخذ adjective.",
+      "اختيار الكلمة اعتمادًا على نهايتها فقط بدل تحديد الكلمة التي يصفها الفراغ."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers analyzed the data ____.",
+        "options": [
+          "careful",
+          "carefully",
+          "carefulness",
+          "more careful"
+        ],
+        "correct": 1,
+        "answer": "carefully",
+        "why": "الكلمة تصف طريقة تحليل البيانات، لذلك نحتاج adverb."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The results seem ____.",
+        "options": [
+          "reliably",
+          "reliability",
+          "reliable",
+          "reliably enough"
+        ],
+        "correct": 2,
+        "answer": "reliable",
+        "why": "seem هنا linking verb، ولذلك نستخدم adjective لوصف النتائج."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She is a ____ researcher.",
+        "options": [
+          "carefully",
+          "careful",
+          "carefulness",
+          "care"
+        ],
+        "correct": 1,
+        "answer": "careful",
+        "why": "الكلمة تأتي قبل noun researcher، لذلك نحتاج adjective."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researcher performed the experiment ____.",
+        "options": [
+          "successful",
+          "success",
+          "successfully",
+          "succeed"
+        ],
+        "correct": 2,
+        "answer": "successfully",
+        "why": "الفراغ يصف طريقة أداء الفعل performed، لذلك نستخدم adverb."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The students worked ____ to finish the project.",
+        "options": [
+          "hard",
+          "hardly",
+          "hardness",
+          "harderly"
+        ],
+        "correct": 0,
+        "answer": "hard",
+        "why": "hard هنا ظرف بمعنى 'بجد'. hardly تعني 'بالكاد' ولا تناسب المعنى."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The students could ____ understand the explanation.",
+        "options": [
+          "hard",
+          "hardly",
+          "hardness",
+          "harder"
+        ],
+        "correct": 1,
+        "answer": "hardly",
+        "why": "hardly تعني 'بالكاد'، وهي مناسبة مع understand."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The lecture was very ____.",
+        "options": [
+          "interestingly",
+          "interested",
+          "interesting",
+          "interest"
+        ],
+        "correct": 2,
+        "answer": "interesting",
+        "why": "المحاضرة هي التي تسبب الاهتمام، لذلك نستخدم interesting."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The students were very ____ in the lecture.",
+        "options": [
+          "interesting",
+          "interested",
+          "interestingly",
+          "interest"
+        ],
+        "correct": 1,
+        "answer": "interested",
+        "why": "الطلاب هم الذين يشعرون بالاهتمام، لذلك نستخدم interested."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The method is ____ effective.",
+        "options": [
+          "high",
+          "highly",
+          "height",
+          "higher"
+        ],
+        "correct": 1,
+        "answer": "highly",
+        "why": "highly effective تركيب شائع، وhighly هنا adverb يحدد درجة effective."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The temperature remained ____ during the experiment.",
+        "options": [
+          "highly",
+          "high",
+          "higherly",
+          "height"
+        ],
+        "correct": 1,
+        "answer": "high",
+        "why": "remained هنا linking verb، ونحتاج adjective لوصف temperature."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The new system operates ____ than the old one.",
+        "options": [
+          "efficient",
+          "more efficient",
+          "more efficiently",
+          "efficiency"
+        ],
+        "correct": 2,
+        "answer": "more efficiently",
+        "why": "الكلمة تصف الفعل operates، لذلك نحتاج comparative adverb."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The new system is ____ than the old one.",
+        "options": [
+          "more efficiently",
+          "more efficient",
+          "efficiently",
+          "efficiency"
+        ],
+        "correct": 1,
+        "answer": "more efficient",
+        "why": "بعد is نحتاج adjective لوصف system."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The task was ____ difficult to complete in one hour.",
+        "options": [
+          "too",
+          "enough",
+          "very enough",
+          "such"
+        ],
+        "correct": 0,
+        "answer": "too",
+        "why": "التركيب الصحيح هو too + adjective + to-infinitive."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The sample was large ____ to produce reliable results.",
+        "options": [
+          "too",
+          "enough",
+          "such",
+          "very"
+        ],
+        "correct": 1,
+        "answer": "enough",
+        "why": "التركيب الصحيح هو adjective + enough + to-infinitive."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "It was ____ a difficult experiment that the researchers repeated it.",
+        "options": [
+          "so",
+          "such",
+          "too",
+          "very"
+        ],
+        "correct": 1,
+        "answer": "such",
+        "why": "بعد such يأتي noun phrase: such a difficult experiment."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The experiment was ____ difficult that additional equipment was required.",
+        "options": [
+          "such",
+          "so",
+          "too",
+          "enough"
+        ],
+        "correct": 1,
+        "answer": "so",
+        "why": "التركيب الصحيح هو so + adjective + that."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Researchers ____ conduct experiments under controlled conditions.",
+        "options": [
+          "often",
+          "oftenly",
+          "frequent",
+          "frequency"
+        ],
+        "correct": 0,
+        "answer": "often",
+        "why": "often هو adverb of frequency، ولا توجد صيغة oftenly في الإنجليزية القياسية."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The method is ____ used in scientific research.",
+        "options": [
+          "wide",
+          "widely",
+          "widen",
+          "width"
+        ],
+        "correct": 1,
+        "answer": "widely",
+        "why": "widely used تركيب شائع، وwidely تصف مدى انتشار الاستخدام."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The two variables are ____ related.",
+        "options": [
+          "close",
+          "closely",
+          "closed",
+          "closeness"
+        ],
+        "correct": 1,
+        "answer": "closely",
+        "why": "closely related تعني مرتبطان ارتباطًا وثيقًا، وهو collocation شائع."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researcher arrived ____ for the meeting.",
+        "options": [
+          "lately",
+          "late",
+          "latest",
+          "laterly"
+        ],
+        "correct": 1,
+        "answer": "late",
+        "why": "late تعني متأخرًا، بينما lately تعني مؤخرًا."
+      }
+    ],
+    "markers": [
+      "Adjective: قبل noun أو بعد linking verb.",
+      "Adverb: بعد/حول verb لوصف طريقة حدوث الفعل.",
+      "Adverb of degree: قبل adjective أو adverb.",
+      "good → well",
+      "hard → hard / hardly",
+      "late → late / lately",
+      "high → high / highly",
+      "near → nearly",
+      "close → closely",
+      "fast → fast",
+      "early → early",
+      "-ly: careful → carefully",
+      "-y → -ily: easy → easily",
+      "-ic → -ically: scientific → scientifically",
+      "interesting vs interested",
+      "boring vs bored",
+      "confusing vs confused",
+      "exciting vs excited",
+      "too + adjective + to",
+      "adjective + enough + to",
+      "so + adjective + that",
+      "such + noun phrase + that",
+      "very + adjective/adverb",
+      "much/far + comparative",
+      "slightly + comparative",
+      "always/usually/often/rarely/never",
+      "widely used",
+      "highly effective",
+      "closely related",
+      "strongly recommended",
+      "significantly different",
+      "relatively small",
+      "PTE: حدد الكلمة التي يصفها الفراغ أولًا"
+    ]
+  }
+]

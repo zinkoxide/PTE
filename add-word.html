@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTE Trainer — إضافة كلمات</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/theme.js"></script>
+</head>
+<body>
+
+  <div class="shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">PTE</div>
+        <div>
+          <div class="brand-name">PTE Trainer</div>
+          <div class="brand-sub">Practice smarter</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">
+          <span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span>
+        </a>
+        <a class="nav-link" href="repeat.html">
+          <span class="nav-icon">🗣️</span><span class="nav-label">Repeat Sentence</span>
+        </a>
+        <a class="nav-link" href="vocabulary.html">
+          <span class="nav-icon">📚</span><span class="nav-label">Vocabulary</span>
+        </a>
+        <a class="nav-link" href="grammar.html">
+          <span class="nav-icon">📘</span><span class="nav-label">Grammar</span>
+        </a>
+        <a class="nav-link" href="quiz.html">
+          <span class="nav-icon">📝</span><span class="nav-label">اختبارات</span>
+        </a>
+        <a class="nav-link active" href="add-word.html">
+          <span class="nav-icon">➕</span><span class="nav-label">إضافة كلمات</span>
+        </a>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">
+        <span class="theme-ico icon-day">☀️</span>
+        <span class="theme-ico icon-night">🌙</span>
+        <span class="theme-label">Dark</span>
+      </button>
+
+      <div class="sidebar-footer">PTE Trainer · v2</div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="page">
+
+        <header class="page-header">
+          <h1 class="page-title">إضافة كلمات</h1>
+          <p class="page-subtitle">تُفتح هذه الصفحة فقط عند رغبتك في الإضافة. رقم الكلمة الجديدة تلقائي (1001، 1002، …) ويُولَّد صوتها فور الحفظ.</p>
+        </header>
+
+        <section class="card">
+          <form id="add-word-form" class="modal-body" novalidate>
+
+            <div id="add-service-status" class="aw-service-status aw-service-off">التحقق من حالة خدمة الإضافة…</div>
+            <div class="aw-status-actions">
+              <button type="button" id="retry-service" class="btn btn-ghost btn-sm">⟳ إعادة فحص الخادم</button>
+            </div>
+
+            <div class="add-form-row">
+              <label class="add-field">
+                <span class="add-label">Word *</span>
+                <input id="aw-word" class="input" type="text" placeholder="e.g. Innovation" autocomplete="off" required>
+                <span id="aw-word-status" class="aw-status add-status"></span>
+              </label>
+              <label class="add-field">
+                <span class="add-label">Part of Speech *</span>
+                <select id="aw-pos" class="select">
+                  <option value="Noun">Noun</option>
+                  <option value="Verb">Verb</option>
+                  <option value="Adjective">Adjective</option>
+                  <option value="Adverb">Adverb</option>
+                  <option value="Noun; Verb">Noun; Verb</option>
+                  <option value="Noun; Adjective">Noun; Adjective</option>
+                  <option value="Verb; Adjective">Verb; Adjective</option>
+                </select>
+              </label>
+              <label class="add-field">
+                <span class="add-label">CEFR Level *</span>
+                <select id="aw-cefr" class="select">
+                  <option value="A1">A1</option>
+                  <option value="A2">A2</option>
+                  <option value="B1">B1</option>
+                  <option value="B2" selected>B2</option>
+                  <option value="C1">C1</option>
+                  <option value="C2">C2</option>
+                </select>
+              </label>
+              <label class="add-field">
+                <span class="add-label">Frequency *</span>
+                <select id="aw-frequency" class="select">
+                  <option value="5">5 — Common</option>
+                  <option value="4" selected>4</option>
+                  <option value="3">3</option>
+                  <option value="2">2 — Rare</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="add-form-row">
+              <label class="add-field">
+                <span class="add-label">Pronunciation (IPA) *</span>
+                <input id="aw-pronunciation" class="input" type="text" placeholder="/ˌɪnəˈveɪʃən/" required>
+              </label>
+              <label class="add-field double">
+                <span class="add-label">Meaning (English) *</span>
+                <input id="aw-meaning-en" class="input" type="text" placeholder="A new idea, method, or invention" required>
+              </label>
+            </div>
+
+            <label class="add-field full">
+              <span class="add-label">المعنى (بالعربية) *</span>
+              <input id="aw-meaning-ar" class="input" type="text" placeholder="ابتكار، تحديث" required>
+            </label>
+
+            <label class="add-field full">
+              <span class="add-label">Collocations (المصاحبات — فاصلة بين كل عنصر، 3 فأكثر) *</span>
+              <textarea id="aw-collocations" class="input add-textarea" placeholder="technical innovation, drive innovation, foster innovation" required></textarea>
+            </label>
+
+            <label class="add-field full">
+              <span class="add-label">Synonyms (المرادفات — فاصلة، 3 فأكثر) *</span>
+              <textarea id="aw-synonyms" class="input add-textarea" placeholder="novelty, creation, breakthrough" required></textarea>
+            </label>
+
+            <label class="add-field full">
+              <span class="add-label">Examples (جمل أمثلة — كل جملة في سطر، 3 فأكثر) *</span>
+              <textarea id="aw-examples" class="input add-textarea" placeholder="The company invests in innovation.&#10;Innovation drives economic growth.&#10;Innovation requires creativity." required></textarea>
+            </label>
+
+            <label class="add-field full">
+              <span class="add-label">Common Mistakes (الأخطاء الشائعة — سطر لكل خطأ)</span>
+              <textarea id="aw-mistakes" class="input add-textarea" placeholder="innovation ≠ invention&#10;ملاحظة: innovation اسم، innovate الفعل."></textarea>
+            </label>
+
+            <label class="add-field full">
+              <span class="add-label">Word Family (عائلة الكلمة — فاصلة)</span>
+              <textarea id="aw-family" class="input add-textarea" placeholder="innovative (adj.), innovate (v.), innovator (n.)"></textarea>
+            </label>
+
+            <p id="add-form-errors" class="aw-errors" hidden></p>
+
+            <p id="submit-hint" class="aw-hint"></p>
+
+            <div class="modal-actions">
+              <a class="btn btn-secondary" href="vocabulary.html">📚 الرجوع للقاموس</a>
+              <button type="button" id="add-server-shutdown" class="btn btn-ghost" hidden>⏻ إيقاف خادم الإضافة</button>
+              <button type="submit" id="add-word-submit" class="btn" disabled>حفظ الكلمة (رقم تلقائي + صوت)</button>
+            </div>
+          </form>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script type="module" src="./js/add-word.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,673 @@
+[
+  {
+    "id": "pronouns-determiners",
+    "title": "الضمائر والمحددات",
+    "category": "الضمائر والمحددات",
+    "icon": "👤",
+    "description": "شرح الضمائر والمحددات الأساسية والمتقدمة، مع التركيز على الاختيار الصحيح بين each وevery وeither وneither وanother وother وthe other وothers، واستخدام one/ones والضمائر الملكية والإشارية في اللغة الأكاديمية واختبارات PTE.",
+    "explanation": "الضمائر Pronouns هي كلمات تحل محل الأسماء أو تشير إليها، مثل he, she, it, they, who, which, someone وthose. أما المحددات Determiners فهي كلمات تأتي قبل الأسماء لتحديدها أو بيان كميتها أو ملكيتها أو قربها وبعدها، مثل a, the, this, those, each, every, either, neither, my, some وany. في أسئلة PTE قد يكون الفرق بين إجابتين صغيرًا جدًا، ولذلك يجب تحديد نوع الكلمة التي تحتاجها الجملة أولًا: هل نحتاج ضميرًا يحل محل اسم؟ أم محددًا يأتي قبل اسم؟ كما يجب الانتباه إلى العدد Countability، والمفرد والجمع، ومرجع الضمير، والمفردات التي تتطلب بنية معينة مثل each of وeither of وneither of وone of.",
+    "rules": [
+      "الضمير Pronoun يحل محل اسم أو مجموعة اسمية لتجنب التكرار: The researchers completed the study. They published the results.",
+      "ضمائر الفاعل Subject Pronouns هي: I, you, he, she, it, we, they.",
+      "ضمائر المفعول Object Pronouns هي: me, you, him, her, it, us, them.",
+      "ضمائر الفاعل تستخدم عادةً قبل الفعل عندما يكون الضمير هو الفاعل: She works here.",
+      "ضمائر المفعول تستخدم بعد الأفعال وحروف الجر: The professor helped him. The book was written by her.",
+      "ضمائر الملكية Possessive Adjectives هي: my, your, his, her, its, our, their، وتأتي قبل الاسم: my research, their results.",
+      "ضمائر الملكية Possessive Pronouns هي: mine, yours, his, hers, ours, theirs، وتستخدم بدل الاسم: This book is mine.",
+      "لا نستخدم ضمير ملكية مثل mine مباشرةً قبل اسم: my book صحيحة، أما mine book فخطأ.",
+      "ضمائر الانعكاس Reflexive Pronouns هي: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves.",
+      "تستخدم الضمائر الانعكاسية عندما يعود المفعول إلى الفاعل نفسه: The researcher examined himself.",
+      "يمكن استخدام الضمير الانعكاسي للتأكيد: The professor himself conducted the experiment.",
+      "لا تستخدم الضمائر الانعكاسية بدل ضمائر المفعول العادية دون سبب: The professor helped me صحيحة، وليس The professor helped myself.",
+      "it يمكن أن يشير إلى اسم مفرد غير عاقل أو إلى فكرة أو موقف سبق ذكره.",
+      "they يمكن أن يشير إلى مجموعة جمع، وفي الإنجليزية الحديثة يمكن أيضًا استخدام singular they عندما يكون جنس الشخص غير محدد أو غير مهم.",
+      "this وthat يستخدمان للإشارة إلى المفرد أو اسم غير معدود: this study, that information.",
+      "these وthose يستخدمان للإشارة إلى الجمع: these studies, those results.",
+      "this وthese غالبًا يشيران إلى شيء قريب أو حاضر في السياق، بينما that وthose غالبًا يشيران إلى شيء أبعد أو سبق ذكره.",
+      "this/that يمكن أن يشيرا إلى فكرة أو نتيجة كاملة، وليس فقط إلى اسم: This was unexpected.",
+      "another تعني واحدًا إضافيًا أو آخر من نفس النوع، وتأتي عادةً مع اسم معدود مفرد: another study.",
+      "another = an + other من الناحية التاريخية، ولذلك تستخدم عادةً مع اسم معدود مفرد.",
+      "يمكن استخدام another مع الأرقام في بنية another + number + plural noun: another two weeks.",
+      "other تأتي عادةً قبل اسم جمع أو اسم غير معدود: other students, other information.",
+      "others ضمير ويحل محل other + plural noun، لذلك لا يأتي بعده اسم مباشرةً: Some students agreed; others disagreed.",
+      "the other تشير إلى الشخص أو الشيء المتبقي من مجموعة محددة، خاصةً عند وجود اثنين: One method is cheap; the other is expensive.",
+      "the others تعني الأشخاص أو الأشياء المتبقية من مجموعة محددة: Some students left; the others stayed.",
+      "one يمكن أن تحل محل اسم معدود مفرد سبق ذكره: I need a new laptop. I will buy one.",
+      "ones تحل محل اسم معدود جمع سبق ذكره: These methods are better than the old ones.",
+      "لا تستخدم one/ones عادةً بدل الأسماء غير المعدودة: information لا تستبدل عادةً بـ one.",
+      "one يمكن أن تستخدم أيضًا كضمير عام بمعنى الشخص عمومًا في الأسلوب الرسمي: One should consider all the evidence.",
+      "each تشير إلى أفراد المجموعة واحدًا واحدًا، وتأتي عادةً مع اسم معدود مفرد: Each student received a copy.",
+      "each + singular noun يأخذ عادةً فعلًا مفردًا: Each student has a book.",
+      "each of + plural noun/pronoun: Each of the students has a book.",
+      "بعد each of نستخدم اسمًا جمعًا أو ضميرًا جمعًا، لكن الفعل غالبًا يبقى مفردًا: Each of them is responsible.",
+      "every تشير إلى جميع أفراد المجموعة بشكل فردي لكنها تستخدم مع اسم معدود مفرد: Every student must attend.",
+      "every لا تأتي عادةً مباشرةً مع اسم جمع: every students خطأ.",
+      "every one of + plural noun/pronoun: Every one of the students completed the task.",
+      "each يمكن أن تستخدم مع مجموعات صغيرة أو كبيرة، بينما every تميل إلى التعبير عن المجموعة ككل مع التركيز على جميع أفرادها.",
+      "each يمكن أن تأتي بعد الفاعل أو في نهاية العبارة: The students each received a certificate.",
+      "either تعني واحدًا من اثنين أو أي واحد من اثنين، وتأتي مع اسم معدود مفرد: either method.",
+      "either of + plural noun/pronoun: Either of the methods is acceptable.",
+      "neither تعني لا هذا ولا ذاك من اثنين، وتأتي مع اسم معدود مفرد: neither method.",
+      "neither of + plural noun/pronoun: Neither of the methods is suitable.",
+      "في الكتابة الأكاديمية يفضل استخدام فعل مفرد بعد either of وneither of عندما يشير التركيب إلى واحد من اثنين أو لا واحد منهما: Neither of the methods is effective.",
+      "both تعني الاثنان معًا، وتأتي مع اسم جمع: both methods.",
+      "both of + plural noun/pronoun: Both of the methods are effective.",
+      "all تستخدم مع مجموعة كاملة، ويمكن أن تأتي مع اسم جمع معدود أو اسم غير معدود: all students, all information.",
+      "all of + determiner/pronoun/noun phrase: all of the students, all of them.",
+      "most تستخدم للتعبير عن غالبية المجموعة: most students, most information.",
+      "most of تحتاج عادةً إلى محدد أو ضمير: most of the students, most of them.",
+      "some يمكن أن تأتي مع جمع معدود أو اسم غير معدود: some students, some information.",
+      "any يمكن أن تأتي مع جمع معدود أو اسم غير معدود، خصوصًا في النفي والأسئلة: any students, any information.",
+      "no تأتي مباشرةً قبل الاسم: no students, no information.",
+      "none ضمير ولا يأتي بعده الاسم مباشرةً: None of the students passed.",
+      "both/either/neither تستخدم عندما يكون العدد اثنين، بينما all/any/none يمكن أن تشير إلى مجموعات أكبر حسب السياق.",
+      "someone, somebody, anyone, anybody, everyone, everybody, no one وnobody ضمائر غير محددة.",
+      "الضمائر المنتهية بـ -one و-body تعامل عادةً كمفرد نحويًا: Everyone is ready.",
+      "بعد everyone/everybody نستخدم عادةً فعلًا مفردًا: Everybody knows the answer.",
+      "each, every, everyone, someone, anyone, nobody وغيرها لا تأخذ عادةً فعلًا جمعًا في الكتابة الأكاديمية القياسية.",
+      "something, anything, everything وnothing ضمائر تشير إلى أشياء أو أفكار غير محددة، وتتعامل نحويًا كمفرد.",
+      "who يستخدم غالبًا للأشخاص، وwhich للأشياء والحيوانات، وthat يمكن أن تستخدم للأشخاص أو الأشياء في defining relative clauses.",
+      "who يمكن أن تكون فاعلًا أو مفعولًا في الجملة الموصولة، بينما whom تستخدم رسميًا كمفعول.",
+      "whose تستخدم للتعبير عن الملكية مع الأشخاص والأشياء: the researcher whose study was published.",
+      "ضمير الوصل يجب أن تكون له مرجعية واضحة، ويجب تجنب الضمائر الغامضة التي تجعل القارئ غير متأكد مما تشير إليه.",
+      "إذا كان هناك اسمان مفردان متتاليان، يجب التأكد من أن it/he/she لا يمكن أن يشير إلى أكثر من اسم بشكل غامض.",
+      "ضمائر الإشارة يمكن أن تشير إلى فكرة كاملة: The results were unexpected. This suggests that the method needs improvement.",
+      "that/those يمكن استخدامهما في المقارنات لتجنب تكرار الاسم: The population of City A is larger than that of City B.",
+      "those تستخدم بدل اسم جمع سبق ذكره: The results of the new study differ from those of the previous study.",
+      "لا نقول عادةً: The population of City A is larger than City B عندما يكون المقصود مقارنة السكان؛ الأفضل: larger than that of City B.",
+      "one of + plural noun تعني واحدًا من مجموعة: one of the most important factors.",
+      "بعد one of يجب أن يأتي اسم جمع: one of the factors، وليس one of the factor.",
+      "one of + plural noun يأخذ فعلًا مفردًا عندما يكون one هو الفاعل: One of the students is absent.",
+      "a/an تستخدم مع اسم معدود مفرد غير محدد: a study, an experiment.",
+      "the تستخدم عندما يكون الاسم محددًا أو معروفًا من السياق أو ذُكر سابقًا أو كان فريدًا في السياق.",
+      "this/that/my/your/each/every يمكن أن تعمل كمحددات قبل الاسم، ولذلك لا نجمع بينها عشوائيًا: this study صحيحة، أما this a study فخطأ.",
+      "بعض المحددات يمكن أن تتشارك في تركيب واحد: all the students، both of the methods، each of the students.",
+      "لا نقول every of the students؛ الصحيح every one of the students أو each of the students.",
+      "لا نقول each students؛ الصحيح each student أو each of the students.",
+      "لا نقول every of them؛ الصحيح every one of them، بينما each of them صحيحة.",
+      "another + singular countable noun: another option.",
+      "other + plural noun: other options.",
+      "other + uncountable noun: other information.",
+      "the other + singular noun تستخدم للعنصر المتبقي من اثنين: the other option.",
+      "the other + plural noun يمكن أن تشير إلى مجموعة محددة متبقية: the other students.",
+      "others = other people/things، ولا نضع اسمًا بعدها مباشرةً: Some researchers agree; others disagree.",
+      "the others تشير إلى الباقي المحدد من مجموعة معروفة: Five students passed; the others failed.",
+      "another one يمكن استخدامها عندما يكون المقصود عنصرًا إضافيًا آخر: I need another one.",
+      "other one غير صحيحة عادةً عندما نقصد عنصرًا إضافيًا واحدًا؛ نستخدم another one أو the other one حسب المعنى.",
+      "the other one تعني العنصر الآخر المحدد: I have two options. One is cheap; the other one is expensive.",
+      "one another وeach other يستخدمان عادةً للإشارة إلى علاقة متبادلة: The two researchers helped each other.",
+      "في اللغة الحديثة غالبًا ما يستخدم each other وone another بالتبادل في معظم السياقات.",
+      "myself, yourself وغيرها يجب أن تتوافق مع الفاعل في العدد والشخص: I → myself، she → herself، they → themselves.",
+      "its للملكية، بينما it's اختصار لـ it is أو it has: The company changed its policy. It's important.",
+      "their للملكية، they're اختصار لـ they are، وthere تستخدم للإشارة إلى المكان أو في there is/are.",
+      "your للملكية، you're اختصار لـ you are.",
+      "whose للملكية، who's اختصار لـ who is أو who has.",
+      "these/those يجب أن تتوافق مع اسم جمع، بينما this/that مع اسم مفرد أو غير معدود.",
+      "في PTE يجب النظر إلى الكلمة التي تأتي بعد الفراغ؛ إذا كانت اسمًا مفردًا معدودًا فبعض الخيارات مثل each/every/another/either/neither قد تكون مناسبة، أما إذا كان الاسم جمعًا فخيارات أخرى مثل other/these/those/both قد تكون أنسب.",
+      "إذا كان الفراغ قبل فعل وليس قبله اسم، فقد نحتاج ضميرًا مثل someone أو everyone أو they بدل determiner.",
+      "إذا كان الفراغ قبل اسم مباشرةً، فمن المحتمل أننا نحتاج determiner وليس pronoun.",
+      "إذا كان الاسم مذكورًا بالفعل ولا نريد تكراره، فقد نحتاج one/ones/that/those أو ضميرًا مناسبًا.",
+      "في المقارنات الأكاديمية، that/those مهمتان جدًا لتجنب تكرار الاسم: the results of this study were similar to those of previous studies.",
+      "يجب اختيار الضمير بناءً على العدد والمرجع والمعنى، وليس فقط بناءً على أقرب اسم في الجملة.",
+      "في PTE، وجود كلمة of بعد الفراغ قد يكون مؤشرًا على تراكيب مثل each of, either of, neither of, both of, all of, most of, some of وnone of.",
+      "بعد of في هذه التراكيب نحتاج غالبًا إلى اسم جمع أو ضمير مناسب: each of the students, both of them.",
+      "إذا كان المقصود اثنين فقط، فكر في both/either/neither/the other قبل خيارات مثل all/every/another.",
+      "إذا كان المقصود واحدًا إضافيًا من نفس النوع، فكر في another؛ وإذا كان المقصود واحدًا متبقيًا محددًا من اثنين، فكر في the other.",
+      "إذا كان الاسم غير مذكور بعد other، فغالبًا نستخدم others بدل other: Some prefer online learning; others prefer traditional classes.",
+      "التمييز بين pronoun وdeterminer مهم: each student محدد، بينما each في بعض السياقات يمكن أن يعمل ضميرًا: The students each received a certificate.",
+      "في الكتابة الأكاديمية، تجنب الضمائر الغامضة مثل it وthis وthey عندما لا يكون المرجع واضحًا.",
+      "استخدم this/these للإشارة إلى نتيجة أو فكرة محددة، ويفضل أحيانًا إضافة اسم يوضح المرجع: This finding suggests... بدل This suggests... إذا كان السياق قد يكون غامضًا.",
+      "عند مراجعة سؤال PTE، ابدأ بتحديد ما إذا كان الفراغ يحتاج اسمًا بعده أم يمكن أن يحل الضمير محل الاسم؛ هذه الخطوة تستبعد عددًا كبيرًا من الخيارات بسرعة."
+    ],
+    "examples": [
+      {
+        "en": "She completed the experiment successfully.",
+        "ar": "أكملت التجربة بنجاح."
+      },
+      {
+        "en": "The professor helped them with the analysis.",
+        "ar": "ساعدهم الأستاذ في التحليل."
+      },
+      {
+        "en": "Their results were consistent with previous studies.",
+        "ar": "كانت نتائجهم متوافقة مع الدراسات السابقة."
+      },
+      {
+        "en": "This book is mine.",
+        "ar": "هذا الكتاب لي."
+      },
+      {
+        "en": "The researcher examined the data herself.",
+        "ar": "فحصت الباحثة البيانات بنفسها."
+      },
+      {
+        "en": "The professor himself conducted the experiment.",
+        "ar": "أجرى الأستاذ نفسه التجربة."
+      },
+      {
+        "en": "This study provides important evidence.",
+        "ar": "تقدم هذه الدراسة أدلة مهمة."
+      },
+      {
+        "en": "These results support the hypothesis.",
+        "ar": "تدعم هذه النتائج الفرضية."
+      },
+      {
+        "en": "The first method is expensive, but the other is cheaper.",
+        "ar": "الطريقة الأولى مكلفة، لكن الأخرى أرخص."
+      },
+      {
+        "en": "The researchers conducted another experiment.",
+        "ar": "أجرى الباحثون تجربة أخرى."
+      },
+      {
+        "en": "The researchers considered other explanations.",
+        "ar": "نظر الباحثون في تفسيرات أخرى."
+      },
+      {
+        "en": "Some students preferred online learning; others preferred classroom learning.",
+        "ar": "فضل بعض الطلاب التعلم عبر الإنترنت، بينما فضل آخرون التعلم في الفصل."
+      },
+      {
+        "en": "One method was highly effective, while the other was less reliable.",
+        "ar": "كانت إحدى الطريقتين فعالة جدًا، بينما كانت الأخرى أقل موثوقية."
+      },
+      {
+        "en": "Some students left early; the others stayed until the end.",
+        "ar": "غادر بعض الطلاب مبكرًا، بينما بقي الآخرون حتى النهاية."
+      },
+      {
+        "en": "I need a new computer, so I am going to buy one.",
+        "ar": "أحتاج إلى جهاز كمبيوتر جديد، لذلك سأشتري واحدًا."
+      },
+      {
+        "en": "The new methods are more reliable than the old ones.",
+        "ar": "الطرق الجديدة أكثر موثوقية من الطرق القديمة."
+      },
+      {
+        "en": "Each student received a copy of the report.",
+        "ar": "حصل كل طالب على نسخة من التقرير."
+      },
+      {
+        "en": "Each of the students received a certificate.",
+        "ar": "حصل كل واحد من الطلاب على شهادة."
+      },
+      {
+        "en": "Every student must complete the assignment.",
+        "ar": "يجب على كل طالب إكمال الواجب."
+      },
+      {
+        "en": "Every one of the students completed the assignment.",
+        "ar": "أكمل كل واحد من الطلاب الواجب."
+      },
+      {
+        "en": "Both methods produced similar results.",
+        "ar": "أنتجت كلتا الطريقتين نتائج متشابهة."
+      },
+      {
+        "en": "Both of the methods are suitable for the experiment.",
+        "ar": "كلتا الطريقتين مناسبتان للتجربة."
+      },
+      {
+        "en": "Either method can be used.",
+        "ar": "يمكن استخدام أي من الطريقتين."
+      },
+      {
+        "en": "Either of the methods is acceptable.",
+        "ar": "أي من الطريقتين مقبول."
+      },
+      {
+        "en": "Neither method is suitable for this experiment.",
+        "ar": "لا تصلح أي من الطريقتين لهذه التجربة."
+      },
+      {
+        "en": "Neither of the methods is sufficiently reliable.",
+        "ar": "لا تتمتع أي من الطريقتين بموثوقية كافية."
+      },
+      {
+        "en": "Most students agreed with the conclusion.",
+        "ar": "وافق معظم الطلاب على الاستنتاج."
+      },
+      {
+        "en": "Most of the students agreed with the conclusion.",
+        "ar": "وافق معظم الطلاب على الاستنتاج."
+      },
+      {
+        "en": "None of the participants reported any problems.",
+        "ar": "لم يبلغ أي من المشاركين عن أي مشكلات."
+      },
+      {
+        "en": "Everyone is responsible for completing the task.",
+        "ar": "الجميع مسؤول عن إكمال المهمة."
+      },
+      {
+        "en": "Someone has left a book in the laboratory.",
+        "ar": "ترك شخص ما كتابًا في المختبر."
+      },
+      {
+        "en": "One of the researchers is conducting a new study.",
+        "ar": "يجري أحد الباحثين دراسة جديدة."
+      },
+      {
+        "en": "One of the main factors is the lack of funding.",
+        "ar": "أحد العوامل الرئيسية هو نقص التمويل."
+      },
+      {
+        "en": "The population of City A is larger than that of City B.",
+        "ar": "عدد سكان المدينة A أكبر من عدد سكان المدينة B."
+      },
+      {
+        "en": "The results of the new study differ from those of previous studies.",
+        "ar": "تختلف نتائج الدراسة الجديدة عن نتائج الدراسات السابقة."
+      },
+      {
+        "en": "The researcher whose study was published received an award.",
+        "ar": "حصل الباحث الذي نُشرت دراسته على جائزة."
+      },
+      {
+        "en": "The two researchers helped each other during the experiment.",
+        "ar": "ساعد الباحثان أحدهما الآخر أثناء التجربة."
+      },
+      {
+        "en": "Its results were published in an academic journal.",
+        "ar": "نُشرت نتائجها في مجلة أكاديمية."
+      },
+      {
+        "en": "It's important to examine the evidence carefully.",
+        "ar": "من المهم فحص الأدلة بعناية."
+      }
+    ],
+    "commonMistakes": [
+      "خطأ: Each students → الصحيح: Each student.",
+      "خطأ: Each of the student → الصحيح: Each of the students.",
+      "خطأ: Each of the students are → الصحيح: Each of the students is.",
+      "خطأ: Every students → الصحيح: Every student.",
+      "خطأ: Every of the students → الصحيح: Every one of the students أو Each of the students.",
+      "خطأ: Every of them → الصحيح: Every one of them.",
+      "خطأ: Both student → الصحيح: Both students.",
+      "خطأ: Both of student → الصحيح: Both of the students.",
+      "خطأ: Either methods → الصحيح: Either method.",
+      "خطأ: Either of the method → الصحيح: Either of the methods.",
+      "خطأ: Neither methods → الصحيح: Neither method.",
+      "خطأ: Neither of the method → الصحيح: Neither of the methods.",
+      "خطأ: Either of the methods are → في الاستخدام الرسمي الأفضل: Either of the methods is.",
+      "خطأ: Neither of the methods are → في الاستخدام الرسمي الأفضل: Neither of the methods is.",
+      "خطأ: Some students agreed; other disagreed → الصحيح: Some students agreed; others disagreed.",
+      "خطأ: Some students agreed; others students disagreed → الصحيح: Some students agreed; other students disagreed أو Some students agreed; others disagreed.",
+      "خطأ: another students → الصحيح: another student.",
+      "خطأ: another information → الصحيح: other information أو another piece of information حسب المعنى.",
+      "خطأ: other student عندما نقصد طالبًا إضافيًا واحدًا → الصحيح: another student.",
+      "خطأ: the other students عندما نقصد طلابًا آخرين بشكل عام → غالبًا الصحيح: other students.",
+      "خطأ: other one في معنى واحد إضافي → الصحيح: another one.",
+      "خطأ: another one عندما يكون المقصود الآخر المحدد من اثنين → الصحيح: the other one.",
+      "خطأ: one of the student → الصحيح: one of the students.",
+      "خطأ: One of the students are absent → الصحيح: One of the students is absent.",
+      "خطأ: The results are better than that of the previous study → إذا كان المقصود results، الصحيح: those of the previous study.",
+      "خطأ: The population of City A is larger than City B → الأفضل: larger than that of City B.",
+      "خطأ: The study was conducted by myself → غالبًا إذا كان المقصود الفاعل البسيط: I conducted the study.",
+      "خطأ: The professor helped myself → الصحيح: The professor helped me.",
+      "خطأ: She completed the experiment by herself → صحيحة عندما يكون المقصود أنها فعلت ذلك دون مساعدة.",
+      "خطأ: Everyone are ready → الصحيح: Everyone is ready.",
+      "خطأ: Someone have completed the task → الصحيح: Someone has completed the task.",
+      "خطأ: Nobody know the answer → الصحيح: Nobody knows the answer.",
+      "خطأ: Everything are ready → الصحيح: Everything is ready.",
+      "خطأ: This results → الصحيح: These results.",
+      "خطأ: These result → الصحيح: This result أو These results حسب المعنى.",
+      "خطأ: This information are useful → الصحيح: This information is useful.",
+      "خطأ: Those information → الصحيح: That information أو that piece of information.",
+      "خطأ: These information → الصحيح: This information أو these pieces of information.",
+      "خطأ: its وit's متبادلتان؛ الصحيح: its للملكية وit's = it is/it has.",
+      "خطأ: their وthey're متبادلتان؛ الصحيح: their للملكية وthey're = they are.",
+      "خطأ: your وyou're متبادلتان؛ الصحيح: your للملكية وyou're = you are.",
+      "خطأ: whose وwho's متبادلتان؛ الصحيح: whose للملكية وwho's = who is/who has.",
+      "خطأ: The researchers completed the study. This published the results → الضمير يجب أن يشير إلى مرجع منطقي؛ الأفضل: They published the results.",
+      "خطأ: استخدام they أو it عندما يكون المرجع غامضًا؛ في الكتابة الأكاديمية يجب أن يكون antecedent واضحًا.",
+      "خطأ: One of the most important factor → الصحيح: One of the most important factors.",
+      "خطأ: Each and every students → الصحيح: Each and every student.",
+      "خطأ: Every one student → إذا كان المقصود كل طالب: every student؛ أما every one of the students فهي بنية مختلفة.",
+      "خطأ: All students are ready وAll of the students are ready صحيحتان، لكن all of students خطأ في هذا السياق.",
+      "خطأ: Most students وMost of the students صحيحتان، لكن most of students غير صحيحة عادةً.",
+      "خطأ: None students → الصحيح: No students أو None of the students.",
+      "خطأ: None of the student → الصحيح: None of the students.",
+      "خطأ: all of them students → الصحيح: all of the students أو all of them.",
+      "خطأ: استخدام a/an مع this/that/my/each/every في تركيب مباشر مثل this a study أو my a book؛ لا نجمع هذه المحددات بهذه الطريقة.",
+      "خطأ: الخلط بين another وother: another + singular countable noun، بينما other + plural/uncountable noun.",
+      "خطأ: الخلط بين other وothers: other يحتاج اسمًا بعده عادةً، بينما others ضمير ولا يتبعه اسم.",
+      "خطأ: الخلط بين the other وanother؛ the other تشير إلى عنصر آخر محدد، وanother تشير إلى عنصر إضافي غير محدد.",
+      "خطأ: استخدام either/neither مع أكثر من اثنين؛ في القاعدة الأساسية هما مرتبطان بالاختيار بين اثنين، بينما all/any/none أنسب للمجموعات الأكبر.",
+      "خطأ: استخدام both مع أكثر من اثنين؛ both تعني اثنين معًا.",
+      "خطأ: استخدام each/every مع أسماء غير معدودة؛ القاعدة الأساسية: each/every + singular countable noun.",
+      "خطأ: استخدام each of + singular noun؛ الصحيح each of + plural noun/pronoun.",
+      "خطأ: نسيان أن one/ones تستخدمان عادةً مع الأسماء المعدودة وليس غير المعدودة.",
+      "خطأ: استخدام one بدل ones مع اسم جمع: the old ones وليس the old one إذا كان المقصود عدة أشياء.",
+      "خطأ: الخلط بين those كضمير إشارة وthose في تراكيب المقارنة مثل those of previous studies.",
+      "خطأ: اختيار الضمير بناءً على أقرب اسم فقط؛ يجب تحديد المرجع المنطقي للضمير."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "___ student must complete the assignment.",
+        "options": [
+          "Each",
+          "Each of",
+          "Each students",
+          "Each of student"
+        ],
+        "correct": 0,
+        "answer": "Each",
+        "why": "Each تأتي مباشرةً قبل اسم معدود مفرد: Each student."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Each of the students ___ a certificate.",
+        "options": [
+          "receive",
+          "receives",
+          "receiving",
+          "have received"
+        ],
+        "correct": 1,
+        "answer": "receives",
+        "why": "Each هو العنصر الأساسي في التركيب، ولذلك يأخذ فعلًا مفردًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ student in the class received a copy.",
+        "options": [
+          "Every",
+          "Every of",
+          "Every students",
+          "Every of the"
+        ],
+        "correct": 0,
+        "answer": "Every",
+        "why": "Every تأتي مع اسم معدود مفرد: Every student."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "Every of the students passed.",
+          "Every students passed.",
+          "Every one of the students passed.",
+          "Every one students passed."
+        ],
+        "correct": 2,
+        "answer": "Every one of the students passed.",
+        "why": "الصيغة الصحيحة هي every one of + plural noun."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ of the two methods is acceptable.",
+        "options": [
+          "Either",
+          "Either of",
+          "Either of the",
+          "Either methods"
+        ],
+        "correct": 2,
+        "answer": "Either of the",
+        "why": "عندما يأتي الاسم بعد either مع of نستخدم either of the + plural noun."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Neither of the methods ___ sufficiently reliable.",
+        "options": [
+          "are",
+          "is",
+          "were",
+          "have"
+        ],
+        "correct": 1,
+        "answer": "is",
+        "why": "في الاستخدام الرسمي، neither of + plural noun يأخذ فعلًا مفردًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Both of the methods ___ effective.",
+        "options": [
+          "is",
+          "was",
+          "are",
+          "has"
+        ],
+        "correct": 2,
+        "answer": "are",
+        "why": "Both تشير إلى اثنين معًا ولذلك تأخذ فعلًا جمعًا."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Some students preferred online learning; ___ preferred traditional classes.",
+        "options": [
+          "other",
+          "others",
+          "another",
+          "the other"
+        ],
+        "correct": 1,
+        "answer": "others",
+        "why": "Others ضمير يحل محل other + plural noun، ولا يأتي بعده اسم."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers conducted ___ experiment.",
+        "options": [
+          "other",
+          "others",
+          "another",
+          "the others"
+        ],
+        "correct": 2,
+        "answer": "another",
+        "why": "Another تستخدم مع اسم معدود مفرد بمعنى تجربة إضافية أخرى."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers considered ___ explanations.",
+        "options": [
+          "another",
+          "other",
+          "others",
+          "the other one"
+        ],
+        "correct": 1,
+        "answer": "other",
+        "why": "Other تأتي قبل اسم جمع: other explanations."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "One method is cheaper; ___ is more reliable.",
+        "options": [
+          "another",
+          "other",
+          "the other",
+          "others"
+        ],
+        "correct": 2,
+        "answer": "the other",
+        "why": "نتحدث عن طريقتين محددتين؛ الأولى one والثانية the other."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "I need a new computer, so I will buy ___.",
+        "options": [
+          "one",
+          "ones",
+          "other",
+          "others"
+        ],
+        "correct": 0,
+        "answer": "one",
+        "why": "One تحل محل اسم معدود مفرد سبق ذكره."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "These methods are more reliable than the old ___.",
+        "options": [
+          "one",
+          "ones",
+          "other",
+          "another"
+        ],
+        "correct": 1,
+        "answer": "ones",
+        "why": "Methods اسم جمع، ولذلك نستخدم ones."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The population of City A is larger than ___ of City B.",
+        "options": [
+          "those",
+          "that",
+          "one",
+          "ones"
+        ],
+        "correct": 1,
+        "answer": "that",
+        "why": "Population مفرد، لذلك نستخدم that بدل تكرار population."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The results of the new study differ from ___ of previous studies.",
+        "options": [
+          "that",
+          "one",
+          "those",
+          "another"
+        ],
+        "correct": 2,
+        "answer": "those",
+        "why": "Results جمع، لذلك نستخدم those."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ is responsible for completing the task.",
+        "options": [
+          "Everyone",
+          "Everyone are",
+          "All person",
+          "Every people"
+        ],
+        "correct": 0,
+        "answer": "Everyone",
+        "why": "Everyone ضمير مفرد ويأتي بعده فعل مفرد."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The professor conducted the experiment ___.",
+        "options": [
+          "myself",
+          "himself",
+          "herself",
+          "themselves"
+        ],
+        "correct": 1,
+        "answer": "himself",
+        "why": "إذا كان professor مذكرًا، فالضمير الانعكاسي المناسب للتأكيد هو himself."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "Each students has a book.",
+          "Each of the students have a book.",
+          "Each of the students has a book.",
+          "Every of the students has a book."
+        ],
+        "correct": 2,
+        "answer": "Each of the students has a book.",
+        "why": "الصيغة الصحيحة each of + plural noun، والفعل مفرد."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "Some students agreed; other disagreed.",
+          "Some students agreed; others disagreed.",
+          "Some students agreed; another disagreed.",
+          "Some students agreed; other students disagreed with others."
+        ],
+        "correct": 1,
+        "answer": "Some students agreed; others disagreed.",
+        "why": "Others تعمل كضمير وتحل محل other students."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "One of the most important factor is cost.",
+          "One of the most important factors are cost.",
+          "One of the most important factors is cost.",
+          "One of the most important factor are cost."
+        ],
+        "correct": 2,
+        "answer": "One of the most important factors is cost.",
+        "why": "بعد one of يجب أن يأتي اسم جمع، لكن الفاعل الحقيقي هو one، لذلك الفعل مفرد."
+      }
+    ],
+    "markers": [
+      "Pronouns",
+      "Determiners",
+      "Subject pronouns",
+      "Object pronouns",
+      "Possessive adjectives",
+      "Possessive pronouns",
+      "Reflexive pronouns",
+      "This",
+      "That",
+      "These",
+      "Those",
+      "Another",
+      "Other",
+      "The other",
+      "Others",
+      "The others",
+      "One",
+      "Ones",
+      "Each",
+      "Each of",
+      "Every",
+      "Every one of",
+      "Either",
+      "Either of",
+      "Neither",
+      "Neither of",
+      "Both",
+      "Both of",
+      "All",
+      "All of",
+      "Most",
+      "Most of",
+      "Some",
+      "Any",
+      "No",
+      "None",
+      "Someone",
+      "Anyone",
+      "Everyone",
+      "Nobody",
+      "Something",
+      "Anything",
+      "Everything",
+      "Nothing",
+      "Who",
+      "Whom",
+      "Whose",
+      "One of",
+      "That of",
+      "Those of",
+      "Each other",
+      "One another",
+      "Its",
+      "It's",
+      "Their",
+      "They're",
+      "Your",
+      "You're",
+      "Whose",
+      "Who's",
+      "PTE grammar",
+      "Academic English"
+    ]
+  }
+]

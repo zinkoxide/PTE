@@ -1,0 +1,603 @@
+[
+  {
+    "id": "participles-reduced-clauses",
+    "title": "اسم الفاعل واسم المفعول والجمل المختصرة",
+    "category": "تراكيب الجمل",
+    "icon": "🔗",
+    "description": "شرح participles والجمل الموصولة المختصرة والجمل الظرفية المختصرة، مع التركيز على present participle وpast participle وperfect participles وinfinitive reductions وأخطاء dangling participles الشائعة في PTE.",
+    "explanation": "تستخدم اللغة الإنجليزية participles لبناء تراكيب أكثر اختصارًا وكثافة، وهو أمر شائع جدًا في الكتابة الأكاديمية. يمكن اختصار بعض relative clauses وبعض adverbial clauses باستخدام present participle (-ing)، أو past participle (V3)، أو perfect participle (having + V3). كما يمكن استخدام infinitive بعد كلمات مثل the first, the last, the only وsuperlatives. فهم هذه التراكيب يساعد في PTE على تحليل الجمل الطويلة بسرعة، وتحديد العلاقة بين الفاعل والفعل، واختيار الصيغة الصحيحة. القاعدة الأساسية هي أن present participle غالبًا يشير إلى معنى نشط، بينما past participle غالبًا يشير إلى معنى مبني للمجهول أو حالة ناتجة عن فعل، أما perfect participle فيوضح أن فعلًا حدث قبل فعل آخر. ويجب الانتباه بشدة إلى dangling participles، حيث يجب أن يكون الفاعل المفهوم في الجملة المختصرة هو نفسه الفاعل المنطقي في الجملة الرئيسية.",
+    "rules": [
+      "Participle هو شكل من أشكال الفعل يمكن استخدامه كجزء من تركيب وصفي أو ظرفي بدلًا من استخدام clause كاملة.",
+      "Present participle يتكون عادةً من verb + ing: studying, working, increasing, developing.",
+      "Past participle هو التصريف الثالث للفعل V3: studied, written, developed, collected, increased.",
+      "Perfect participle يتكون من having + V3: having completed, having studied, having collected.",
+      "Perfect passive participle يتكون من having been + V3: having been completed, having been tested.",
+      "Present participle غالبًا يعطي معنى نشطًا عندما يصف الاسم: students studying abroad.",
+      "Past participle غالبًا يعطي معنى مبني للمجهول أو نتيجة فعل: data collected during the experiment.",
+      "يمكن اختصار defining relative clause التي تحتوي على فعل نشط باستخدام present participle.",
+      "مثال: Students who study regularly tend to perform better → Students studying regularly tend to perform better.",
+      "في الاختصار نحذف relative pronoun ونحول الفعل إلى -ing عندما يكون الاسم السابق هو الفاعل للفعل.",
+      "لا يمكن عادةً استخدام -ing إذا كان الاسم السابق هو المفعول به للفعل في relative clause.",
+      "مثال: The book that I bought was useful لا تختصر عادةً إلى The book buying was useful، لأن book مفعول به لـ bought.",
+      "إذا كان relative clause مبنيًا للمجهول، يمكن غالبًا اختصاره باستخدام past participle.",
+      "مثال: The data that were collected during the experiment → The data collected during the experiment.",
+      "في reduced relative clauses، present participle يدل غالبًا على active meaning، وpast participle يدل غالبًا على passive meaning.",
+      "يمكن اختصار relative clauses باستخدام infinitive بعد كلمات مثل the first, the second, the last, the next وthe only.",
+      "مثال: She was the first researcher who identified the problem → She was the first researcher to identify the problem.",
+      "بعد superlatives يمكن استخدام infinitive: the most effective method to improve accuracy.",
+      "يمكن استخدام present participle لاختصار بعض adverbial clauses عندما يكون الفاعل نفسه في الجملة الرئيسية.",
+      "مثال: While she was conducting the experiment, she noticed an error → While conducting the experiment, she noticed an error.",
+      "يمكن أحيانًا حذف while في الجملة المختصرة: While conducting the experiment → Conducting the experiment.",
+      "اختصار because/when/while clauses باستخدام -ing يكون مناسبًا عندما يكون الفاعل في الجملة المختصرة هو نفسه فاعل الجملة الرئيسية.",
+      "مثال: Because he lacked sufficient evidence, he rejected the hypothesis → Lacking sufficient evidence, he rejected the hypothesis.",
+      "يمكن استخدام past participle لاختصار بعض الجمل الظرفية المبنية للمجهول.",
+      "مثال: Because it was written in a hurry, the report contained several errors → Written in a hurry, the report contained several errors.",
+      "يمكن استخدام past participle في بداية الجملة كعبارة وصفية أو ظرفية: Located near the university, the laboratory is easy to access.",
+      "يمكن استخدام present participle لربط حدثين متزامنين أو متداخلين: Walking through the laboratory, the researcher noticed the equipment.",
+      "إذا كان الفعل المختصر يحدث في الوقت نفسه تقريبًا مع الفعل الرئيسي، فإن present participle غالبًا مناسب.",
+      "إذا أردنا التأكيد على أن الفعل المختصر حدث قبل الفعل الرئيسي، يمكن استخدام perfect participle.",
+      "Perfect participle يتكون من having + V3: Having completed the experiment, the researchers analyzed the data.",
+      "Having completed the experiment تعني أن إكمال التجربة حدث قبل تحليل البيانات.",
+      "يمكن استخدام having been + V3 عندما يكون الفعل السابق مبنيًا للمجهول: Having been tested extensively, the device was approved.",
+      "Present participle لا يعني دائمًا أن الفعل يحدث الآن؛ قد يصف فعلًا متزامنًا مع الحدث الرئيسي في الزمن المقصود.",
+      "صيغة -ing في reduced clause ليست دائمًا gerund؛ إذا كانت تؤدي وظيفة وصفية أو ظرفية فهي participle phrase.",
+      "Gerund يعمل عادةً كاسم: Swimming is useful. أما participle فيعمل كجزء من تركيب وصفي أو ظرفي: Swimming in the lake, he saw a boat.",
+      "يمكن استخدام participle phrase بعد الاسم لوصفه: The students attending the course must register online.",
+      "يمكن وضع participle phrase قبل الاسم في بعض التراكيب: the growing demand for online education.",
+      "يمكن استخدام present participle كصفة في تراكيب مثل increasing demand, rising costs, growing population.",
+      "يمكن استخدام past participle كصفة في تراكيب مثل increased demand, reduced costs, damaged equipment.",
+      "يجب التمييز بين increased وincreasing؛ increasing يعني أن الشيء في حالة ارتفاع أو نمو، بينما increased يعني أنه أصبح أعلى نتيجة تغير سابق.",
+      "مثال: increasing costs = تكاليف آخذة في الارتفاع، increased costs = تكاليف ارتفعت بالفعل أو أصبحت أعلى.",
+      "يمكن استخدام participles لتكوين تراكيب أكاديمية كثيفة مثل data collected from participants وstudents attending the course.",
+      "Reduced relative clauses شائعة جدًا في الكتابة الأكاديمية لأنها تجعل الجمل أكثر اختصارًا وكثافة.",
+      "يمكن تحويل active relative clause إلى -ing عندما يكون relative pronoun هو الفاعل.",
+      "The researchers who conducted the study → The researchers conducting the study.",
+      "يمكن تحويل passive relative clause إلى V3 عندما يكون relative pronoun هو المفعول أو نائب الفاعل في passive clause.",
+      "The data that were collected → The data collected.",
+      "إذا كان relative clause يحتوي على be + adjective أو be + prepositional phrase، يمكن في بعض الحالات حذف relative pronoun وbe: Students who are interested in research → Students interested in research.",
+      "مثال: The methods that are commonly used in research → The methods commonly used in research.",
+      "يمكن اختصار clauses تحتوي على who is/are أو which is/are + adjective/participle في بعض السياقات: The method which is suitable for beginners → The method suitable for beginners.",
+      "لا يجب حذف أجزاء الجملة بشكل عشوائي؛ يجب الحفاظ على المعنى والعلاقة النحوية.",
+      "في reduced clauses، يجب أن يكون الاسم الذي تصفه العبارة قريبًا وواضحًا.",
+      "Dangling participle يحدث عندما يبدو أن participle phrase تصف اسمًا غير منطقي أو غير مقصود.",
+      "مثال خاطئ: Walking to the university, the rain started. هنا يبدو أن rain هي التي كانت تمشي.",
+      "الصحيح: Walking to the university, I was caught in the rain.",
+      "في الجمل التي تبدأ بـ participle phrase، يجب أن يكون الفاعل المنطقي لها هو نفسه فاعل الجملة الرئيسية عادةً.",
+      "لا تستخدم participle phrase إذا كان فاعلها مختلفًا ولا يمكن فهمه بوضوح.",
+      "يمكن استخدام comma بعد introductory participle phrase غالبًا: Having completed the experiment, the researchers analyzed the data.",
+      "إذا جاءت participle phrase بعد الاسم مباشرةً لتحديده، غالبًا لا نحتاج comma في defining meaning: Students studying biology must attend the laboratory.",
+      "إذا كانت العبارة إضافية وغير ضرورية فقد تحتاج إلى commas حسب المعنى، خاصةً في non-defining structures.",
+      "يمكن استخدام participles في العناوين والتراكيب الأكاديمية: factors affecting performance، methods used in the study.",
+      "factors affecting performance تعني factors that affect performance.",
+      "methods used in the study تعني methods that were used in the study.",
+      "evidence supporting the hypothesis تعني evidence that supports the hypothesis.",
+      "evidence supported by previous studies تعني evidence that is supported by previous studies.",
+      "يمكن استخدام having + V3 للتعبير عن سبب أو تسلسل زمني سابق: Having failed the first test, the researchers repeated the experiment.",
+      "يمكن استخدام being + adjective أو being + past participle، لكن being غالبًا يمكن حذفها عندما لا تكون ضرورية للمعنى: Being tired, he went home → Tired, he went home.",
+      "في الكتابة الأكاديمية، استخدام participle phrases يجب أن يكون واضحًا ولا يسبب غموضًا في الفاعل.",
+      "لا تخلط بين present participle وpresent continuous؛ -ing في participle phrase لا تعني بالضرورة زمن المضارع المستمر.",
+      "لا تخلط بين past participle والزمن الماضي؛ V3 قد تكون جزءًا من passive أو perfect أو صفة.",
+      "في passive reduced clause، V3 غالبًا تختصر be + V3: data that were collected → data collected.",
+      "في active reduced clause، V-ing غالبًا تختصر who/which + active verb: researchers who conduct studies → researchers conducting studies.",
+      "يمكن استخدام infinitive بعد ordinal numbers: the first student to finish، the second researcher to identify the problem.",
+      "يمكن استخدام infinitive بعد only: the only method to produce reliable results.",
+      "يمكن استخدام infinitive بعد next/last: the next study to examine this issue.",
+      "بعد superlative يمكن استخدام infinitive: the most effective approach to solving the problem.",
+      "يمكن أن يكون infinitive في هذه التراكيب له معنى نشط غالبًا حتى عندما يكون الاسم هو الشيء الذي سيُفعل به الفعل.",
+      "مثال: the first researcher to identify the problem = أول باحث يحدد المشكلة.",
+      "في PTE، إذا رأيت اسمًا يتبعه مباشرةً V-ing، ففكر في reduced active relative clause أو participle phrase.",
+      "في PTE، إذا رأيت اسمًا يتبعه مباشرةً V3، ففكر في reduced passive relative clause.",
+      "في PTE، إذا رأيت the first/the last/the only/the best/the most + noun، فافحص احتمال استخدام to + infinitive.",
+      "في PTE، إذا كانت الجملة تبدأ بـ Having + V3، فغالبًا يوجد حدث سابق لحدث الجملة الرئيسية.",
+      "في PTE، إذا كانت الجملة تبدأ بـ V-ing، فغالبًا يوجد معنى active أو simultaneous action.",
+      "في PTE، إذا بدأت الجملة بـ V3، فغالبًا يوجد معنى passive أو حالة ناتجة عن فعل.",
+      "في PTE، لا تختار -ing لمجرد أن الفعل يبدو مرتبطًا بالحاضر؛ افحص العلاقة بين الاسم والفعل أولًا.",
+      "في PTE، لا تختار V3 لمجرد أن الجملة في الماضي؛ V3 لا تعني past tense بحد ذاتها.",
+      "القاعدة السريعة: active relationship → V-ing، passive relationship → V3، earlier completed action → having + V3، first/last/only/superlative → to + infinitive.",
+      "عند تحليل reduced clause، أعد بناء الجملة الكاملة ذهنيًا إذا كان المعنى غير واضح.",
+      "مثال: The data collected from participants → The data that were collected from participants.",
+      "مثال: Students participating in the program → Students who are participating in the program.",
+      "مثال: Having completed the study → After the researchers had completed the study.",
+      "ليس كل تركيب يبدأ بـ -ing قابلًا للتحويل بنفس الطريقة؛ يجب مراعاة الفاعل والزمن والمعنى.",
+      "الهدف في PTE ليس حفظ أسماء القواعد فقط، بل التعرف على العلاقة بين subject وverb واختيار الشكل الذي يحافظ على المعنى."
+    ],
+    "examples": [
+      {
+        "en": "Students studying regularly tend to achieve better results.",
+        "ar": "يميل الطلاب الذين يدرسون بانتظام إلى تحقيق نتائج أفضل."
+      },
+      {
+        "en": "Students who study regularly tend to achieve better results.",
+        "ar": "يميل الطلاب الذين يدرسون بانتظام إلى تحقيق نتائج أفضل."
+      },
+      {
+        "en": "The researchers conducting the study collected extensive data.",
+        "ar": "جمع الباحثون الذين يجرون الدراسة بيانات واسعة."
+      },
+      {
+        "en": "The researchers who conducted the study collected extensive data.",
+        "ar": "جمع الباحثون الذين أجروا الدراسة بيانات واسعة."
+      },
+      {
+        "en": "The data collected during the experiment were carefully analyzed.",
+        "ar": "تم تحليل البيانات التي جُمعت أثناء التجربة بعناية."
+      },
+      {
+        "en": "The data that were collected during the experiment were carefully analyzed.",
+        "ar": "تم تحليل البيانات التي جُمعت أثناء التجربة بعناية."
+      },
+      {
+        "en": "The methods commonly used in academic research require careful planning.",
+        "ar": "تتطلب الأساليب المستخدمة عادةً في البحث الأكاديمي تخطيطًا دقيقًا."
+      },
+      {
+        "en": "The methods that are commonly used in academic research require careful planning.",
+        "ar": "تتطلب الأساليب التي تُستخدم عادةً في البحث الأكاديمي تخطيطًا دقيقًا."
+      },
+      {
+        "en": "Students interested in linguistics should attend the seminar.",
+        "ar": "ينبغي للطلاب المهتمين بعلم اللغة حضور الندوة."
+      },
+      {
+        "en": "Students who are interested in linguistics should attend the seminar.",
+        "ar": "ينبغي للطلاب الذين يهتمون بعلم اللغة حضور الندوة."
+      },
+      {
+        "en": "The researcher working in the laboratory discovered an error.",
+        "ar": "اكتشف الباحث الذي يعمل في المختبر خطأً."
+      },
+      {
+        "en": "The researcher who was working in the laboratory discovered an error.",
+        "ar": "اكتشف الباحث الذي كان يعمل في المختبر خطأً."
+      },
+      {
+        "en": "While conducting the experiment, the researchers noticed an unexpected result.",
+        "ar": "أثناء إجراء التجربة، لاحظ الباحثون نتيجة غير متوقعة."
+      },
+      {
+        "en": "While they were conducting the experiment, the researchers noticed an unexpected result.",
+        "ar": "أثناء قيامهم بإجراء التجربة، لاحظ الباحثون نتيجة غير متوقعة."
+      },
+      {
+        "en": "Lacking sufficient evidence, the researchers rejected the hypothesis.",
+        "ar": "لعدم امتلاك الباحثين أدلة كافية، رفضوا الفرضية."
+      },
+      {
+        "en": "Because they lacked sufficient evidence, the researchers rejected the hypothesis.",
+        "ar": "لأنهم لم يمتلكوا أدلة كافية، رفض الباحثون الفرضية."
+      },
+      {
+        "en": "Written in a hurry, the report contained several errors.",
+        "ar": "لأن التقرير كُتب على عجل، فقد احتوى على عدة أخطاء."
+      },
+      {
+        "en": "Because it was written in a hurry, the report contained several errors.",
+        "ar": "لأن التقرير كُتب على عجل، فقد احتوى على عدة أخطاء."
+      },
+      {
+        "en": "Located near the university, the laboratory is easy to access.",
+        "ar": "يقع المختبر بالقرب من الجامعة، ولذلك يسهل الوصول إليه."
+      },
+      {
+        "en": "Having completed the experiment, the researchers analyzed the data.",
+        "ar": "بعد أن أكمل الباحثون التجربة، حللوا البيانات."
+      },
+      {
+        "en": "After they had completed the experiment, the researchers analyzed the data.",
+        "ar": "بعد أن كانوا قد أكملوا التجربة، حلل الباحثون البيانات."
+      },
+      {
+        "en": "Having collected the samples, the researchers transported them to the laboratory.",
+        "ar": "بعد أن جمع الباحثون العينات، نقلوها إلى المختبر."
+      },
+      {
+        "en": "Having been tested extensively, the device was approved for use.",
+        "ar": "بعد أن تم اختبار الجهاز على نطاق واسع، تمت الموافقة على استخدامه."
+      },
+      {
+        "en": "The first researcher to identify the problem received an award.",
+        "ar": "حصل أول باحث يحدد المشكلة على جائزة."
+      },
+      {
+        "en": "She was the first researcher to identify the problem.",
+        "ar": "كانت أول باحثة تحدد المشكلة."
+      },
+      {
+        "en": "This is the most effective method to improve accuracy.",
+        "ar": "هذه هي الطريقة الأكثر فعالية لتحسين الدقة."
+      },
+      {
+        "en": "The next study to examine this issue should use a larger sample.",
+        "ar": "ينبغي أن تستخدم الدراسة التالية التي ستبحث هذه القضية عينة أكبر."
+      },
+      {
+        "en": "The only method to produce reliable results is expensive.",
+        "ar": "الطريقة الوحيدة لإنتاج نتائج موثوقة مكلفة."
+      },
+      {
+        "en": "Increasing demand has created pressure on the system.",
+        "ar": "أدى الطلب المتزايد إلى ضغط على النظام."
+      },
+      {
+        "en": "Increased demand has created pressure on the system.",
+        "ar": "أدى ارتفاع الطلب إلى ضغط على النظام."
+      },
+      {
+        "en": "The factors affecting academic performance are complex.",
+        "ar": "العوامل المؤثرة في الأداء الأكاديمي معقدة."
+      },
+      {
+        "en": "The factors affecting academic performance include motivation and sleep.",
+        "ar": "تشمل العوامل المؤثرة في الأداء الأكاديمي الدافعية والنوم."
+      },
+      {
+        "en": "The evidence supporting the hypothesis is limited.",
+        "ar": "الأدلة التي تدعم الفرضية محدودة."
+      },
+      {
+        "en": "The evidence supported by previous studies is convincing.",
+        "ar": "الأدلة المدعومة بالدراسات السابقة مقنعة."
+      },
+      {
+        "en": "Walking through the laboratory, the researcher noticed a damaged machine.",
+        "ar": "أثناء سيره عبر المختبر، لاحظ الباحث آلة تالفة."
+      },
+      {
+        "en": "After being informed of the changes, the students revised their reports.",
+        "ar": "بعد إبلاغهم بالتغييرات، راجع الطلاب تقاريرهم."
+      },
+      {
+        "en": "Being aware of the risks, the researchers followed the safety procedures.",
+        "ar": "نظرًا لوعي الباحثين بالمخاطر، اتبعوا إجراءات السلامة."
+      },
+      {
+        "en": "Tired after the experiment, the researchers returned to their offices.",
+        "ar": "وبعد أن شعر الباحثون بالتعب عقب التجربة، عادوا إلى مكاتبهم."
+      },
+      {
+        "en": "The report containing the results was published online.",
+        "ar": "نُشر التقرير الذي يحتوي على النتائج على الإنترنت."
+      },
+      {
+        "en": "The samples stored in the laboratory were examined again.",
+        "ar": "تم فحص العينات المخزنة في المختبر مرة أخرى."
+      }
+    ],
+    "commonMistakes": [
+      "خطأ: Students studied regularly tend to perform better → إذا كان المقصود reduced active relative clause، الصحيح: Students studying regularly tend to perform better.",
+      "خطأ: The data collecting during the experiment → الصحيح: The data collected during the experiment.",
+      "خطأ: The researchers conducting the study عندما يكون المقصود أن الدراسة أجريت بالفعل وانتهت → قد يكون الأنسب: The researchers who conducted the study أو researchers having conducted... حسب المعنى.",
+      "خطأ: استخدام V3 مع معنى active: The researchers studied the data → The researchers studied... وليس The researchers studied as a reduced clause لمجرد أن الزمن ماضٍ.",
+      "خطأ: استخدام -ing عندما يكون الاسم مفعولًا به: The book buying by students → الصحيح: The book bought by students.",
+      "خطأ: Walking to the university, the rain started → هذه dangling participle لأن rain لا يمكن أن تكون هي التي تمشي.",
+      "الصحيح: Walking to the university, I was caught in the rain.",
+      "خطأ: Having completed the experiment, the results were analyzed → هذا قد يوحي بأن النتائج هي التي أكملت التجربة؛ الأفضل: Having completed the experiment, the researchers analyzed the results.",
+      "خطأ: Having been completed the experiment → الصحيح: Having completed the experiment إذا كان الفاعل هو من أكمل التجربة، أو Having been completed إذا كان الشيء نفسه قد تم إكماله.",
+      "خطأ: Having completed by the researchers → الصحيح: Having been completed by the researchers إذا كان المقصود passive.",
+      "خطأ: The data that collected during the experiment → الصحيح: The data collected during the experiment أو The data that were collected during the experiment.",
+      "خطأ: The students interested in research are... إذا كان المقصود students who are interested؛ هذه الصيغة صحيحة، لكن يجب فهم أن interested هنا past participle يعمل كصفة.",
+      "خطأ: The students interesting in research → الصحيح: The students interested in research.",
+      "خطأ: The method using in the study → الصحيح: The method used in the study إذا كان المعنى passive.",
+      "خطأ: The method used researchers → يجب إعادة بناء الجملة؛ قد تحتاج: The method used by researchers.",
+      "خطأ: The researchers who conducting the experiment → الصحيح: The researchers conducting the experiment أو The researchers who are conducting the experiment.",
+      "خطأ: The researchers conducted the experiment, collecting the data → قد يكون صحيحًا، لكن يجب التأكد من أن الفاعل المفهوم لـ collecting هو researchers.",
+      "خطأ: استخدام present participle لمجرد أن الفعل في المضارع؛ participle يحدد العلاقة والمعنى وليس زمن الجملة الرئيسية.",
+      "خطأ: استخدام past participle لمجرد أن الجملة تتحدث عن الماضي؛ V3 ليست past tense بحد ذاتها.",
+      "خطأ: الخلط بين gerund وparticiple: Swimming is good exercise → gerund، بينما Swimming across the lake, he became tired → participle phrase.",
+      "خطأ: The first researcher who identified the problem يمكن أن تكون صحيحة، لكن The first researcher to identify the problem أكثر اختصارًا وشيوعًا في هذا التركيب.",
+      "خطأ: The most effective method improving accuracy → في هذا السياق الأفضل: the most effective method for improving accuracy أو the most effective method to improve accuracy.",
+      "خطأ: The only researcher identified the problem → إذا كان المقصود 'الباحث الوحيد الذي حدد المشكلة' فقد نحتاج the only researcher to identify the problem أو the only researcher who identified the problem.",
+      "خطأ: استخدام having + base verb: Having complete the study → الصحيح: Having completed the study.",
+      "خطأ: استخدام having + V2: Having went → الصحيح: Having gone.",
+      "خطأ: استخدام having been + base verb: Having been complete → الصحيح: Having been completed.",
+      "خطأ: حذف الفاعل بطريقة تجعل reduced clause مرتبطة باسم غير منطقي.",
+      "خطأ: وضع participle phrase في مكان بعيد جدًا عن الاسم الذي تصفه مما يجعل المرجع غامضًا.",
+      "خطأ: The report written by the researcher was useful → صحيحة إذا كان report هو الشيء الذي كُتب؛ لا تحولها إلى writing إلا إذا أصبح المعنى active.",
+      "خطأ: The researcher writing the report → قد تعني الباحث الذي يكتب التقرير، وليس الباحث الذي كتب التقرير وانتهى؛ الزمن والسياق مهمان.",
+      "خطأ: Increased prices وIncreasing prices ليستا متطابقتين؛ الأولى تشير إلى أسعار أصبحت أعلى، والثانية إلى أسعار في حالة ارتفاع.",
+      "خطأ: The increasing number of students تعني أن العدد يتزايد، بينما the increased number of students تشير إلى العدد بعد أن أصبح أعلى.",
+      "خطأ: استخدام being في كل reduced clause دون حاجة؛ Being tired يمكن اختصارها إلى Tired عندما يكون المعنى واضحًا.",
+      "خطأ: افتراض أن كل جملة تبدأ بـ V-ing هي gerund؛ الوظيفة داخل الجملة هي التي تحدد ما إذا كانت gerund أو participle.",
+      "خطأ: حذف relative pronoun دون التأكد من أن clause قابلة للاختصار.",
+      "خطأ: The book I buying → إذا كان book مفعولًا به، لا يمكن تحويل bought إلى buying بهذه الطريقة؛ الصحيح The book I bought.",
+      "خطأ: الخلط بين active وpassive عند اختيار -ing أو V3.",
+      "خطأ: تجاهل الفاعل المنطقي في introductory participle phrases، وهو من أهم مصادر الأخطاء في الأسئلة المتقدمة."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "The students ___ the course regularly tend to perform better.",
+        "options": [
+          "attending",
+          "attended",
+          "attend",
+          "attended by"
+        ],
+        "correct": 0,
+        "answer": "attending",
+        "why": "Attending تختصر students who attend/are attending، والطلاب هم الفاعل النشط للفعل."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The data ___ during the experiment were carefully analyzed.",
+        "options": [
+          "collecting",
+          "collected",
+          "collect",
+          "were collecting"
+        ],
+        "correct": 1,
+        "answer": "collected",
+        "why": "Data هي التي تم جمعها، لذلك نستخدم past participle في reduced passive clause."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researcher ___ in the laboratory discovered an error.",
+        "options": [
+          "working",
+          "worked",
+          "was worked",
+          "working by"
+        ],
+        "correct": 0,
+        "answer": "working",
+        "why": "Working تختصر who was working/was working، والباحث هو الفاعل."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The samples ___ from the participants were stored carefully.",
+        "options": [
+          "collecting",
+          "collected",
+          "collected by collecting",
+          "collect"
+        ],
+        "correct": 1,
+        "answer": "collected",
+        "why": "Samples هي التي تم جمعها، ولذلك نستخدم collected."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ the experiment, the researchers analyzed the results.",
+        "options": [
+          "Having completed",
+          "Having complete",
+          "Completed",
+          "Completing by"
+        ],
+        "correct": 0,
+        "answer": "Having completed",
+        "why": "Having completed توضح أن إكمال التجربة حدث قبل تحليل النتائج."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ extensively, the device was approved for use.",
+        "options": [
+          "Having tested",
+          "Having been tested",
+          "Testing",
+          "Having testing"
+        ],
+        "correct": 1,
+        "answer": "Having been tested",
+        "why": "الجهاز هو الذي تم اختباره، لذلك نحتاج perfect passive participle."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She was the first researcher ___ the problem.",
+        "options": [
+          "identifying",
+          "identified",
+          "to identify",
+          "identify"
+        ],
+        "correct": 2,
+        "answer": "to identify",
+        "why": "بعد the first نستخدم عادةً to + infinitive."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The methods ___ in the study were highly effective.",
+        "options": [
+          "using",
+          "used",
+          "use",
+          "were using"
+        ],
+        "correct": 1,
+        "answer": "used",
+        "why": "Methods هي التي تم استخدامها، لذلك نستخدم used."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ through the laboratory, the researcher noticed a damaged machine.",
+        "options": [
+          "Walked",
+          "Walking",
+          "Having walked by was",
+          "Walk"
+        ],
+        "correct": 1,
+        "answer": "Walking",
+        "why": "Walking تصف فعلًا نشطًا قام به researcher في أثناء الحدث الرئيسي."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ sufficient evidence, the researchers rejected the hypothesis.",
+        "options": [
+          "Lacking",
+          "Lacked",
+          "Lack",
+          "Lacked by"
+        ],
+        "correct": 0,
+        "answer": "Lacking",
+        "why": "Lacking تعني because they lacked، والباحثون هم الفاعل."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence contains a dangling participle?",
+        "options": [
+          "Walking to the university, I saw the library.",
+          "Having completed the study, the researchers published the results.",
+          "Walking to the university, the rain started.",
+          "Working in the laboratory, the researcher found an error."
+        ],
+        "correct": 2,
+        "answer": "Walking to the university, the rain started.",
+        "why": "الجملة توحي بأن rain هي التي كانت تمشي، وهذا غير منطقي."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "The data collecting during the experiment were analyzed.",
+          "The data collected during the experiment were analyzed.",
+          "The data collect during the experiment were analyzed.",
+          "The data collecting by researchers were analyzed."
+        ],
+        "correct": 1,
+        "answer": "The data collected during the experiment were analyzed.",
+        "why": "Data هي التي تم جمعها، لذلك نستخدم past participle collected."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "Students interested in research should attend the seminar.",
+          "Students interesting in research should attend the seminar.",
+          "Students interest in research should attend the seminar.",
+          "Students interested by research should attend the seminar."
+        ],
+        "correct": 0,
+        "answer": "Students interested in research should attend the seminar.",
+        "why": "Interested هنا past participle يعمل كصفة، والتعبير الصحيح هو interested in."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The factors ___ academic performance are complex.",
+        "options": [
+          "affecting",
+          "affected",
+          "affect",
+          "affecting by"
+        ],
+        "correct": 0,
+        "answer": "affecting",
+        "why": "Factors هي التي تؤثر في performance، لذلك نستخدم active participle: affecting."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The evidence ___ by previous studies is convincing.",
+        "options": [
+          "supporting",
+          "supported",
+          "support",
+          "supports"
+        ],
+        "correct": 1,
+        "answer": "supported",
+        "why": "Evidence هي التي تم دعمها بالدراسات السابقة، لذلك نستخدم past participle."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ the report, the researchers submitted it to the journal.",
+        "options": [
+          "Having completed",
+          "Having been completed",
+          "Completing by",
+          "Completed by themselves"
+        ],
+        "correct": 0,
+        "answer": "Having completed",
+        "why": "Researchers هم الذين أكملوا التقرير، لذلك نستخدم active perfect participle."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The only method ___ reliable results was selected.",
+        "options": [
+          "producing",
+          "produced",
+          "to produce",
+          "produce"
+        ],
+        "correct": 2,
+        "answer": "to produce",
+        "why": "بعد the only يمكن استخدام to + infinitive."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence has the same meaning as 'The students who attend the course regularly perform well'?",
+        "options": [
+          "The students attending the course regularly perform well.",
+          "The students attended the course regularly perform well.",
+          "The students attended by the course perform well.",
+          "The students to attend the course regularly perform well."
+        ],
+        "correct": 0,
+        "answer": "The students attending the course regularly perform well.",
+        "why": "attending تختصر who attend لأن students هم الفاعل النشط للفعل."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence correctly expresses that the experiment happened before the analysis?",
+        "options": [
+          "Completing the experiment, the researchers analyzed the data.",
+          "Having completed the experiment, the researchers analyzed the data.",
+          "Completed the experiment, the researchers analyzed the data.",
+          "Having complete the experiment, the researchers analyzed the data."
+        ],
+        "correct": 1,
+        "answer": "Having completed the experiment, the researchers analyzed the data.",
+        "why": "Having completed توضح بوضوح أن إكمال التجربة حدث قبل التحليل."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is grammatically correct?",
+        "options": [
+          "Walking to the university, the rain started.",
+          "Walking to the university, I was caught in the rain.",
+          "Walking by the university, the rain was caught.",
+          "Having walking to the university, I saw rain."
+        ],
+        "correct": 1,
+        "answer": "Walking to the university, I was caught in the rain.",
+        "why": "الفاعل المنطقي لـWalking هو I، وليس rain، لذلك الجملة صحيحة."
+      }
+    ],
+    "markers": [
+      "Participle",
+      "Present participle",
+      "Past participle",
+      "Perfect participle",
+      "Perfect passive participle",
+      "V-ing",
+      "V3",
+      "Having + V3",
+      "Having been + V3",
+      "Reduced relative clause",
+      "Reduced passive clause",
+      "Reduced active clause",
+      "Participle phrase",
+      "Participial phrase",
+      "Active meaning",
+      "Passive meaning",
+      "Dangling participle",
+      "The first ... to",
+      "The last ... to",
+      "The only ... to",
+      "The next ... to",
+      "Superlative + infinitive",
+      "Factors affecting",
+      "Data collected",
+      "Evidence supporting",
+      "Evidence supported",
+      "Increasing",
+      "Increased",
+      "Being",
+      "Gerund vs participle",
+      "PTE grammar",
+      "Academic English"
+    ]
+  }
+]

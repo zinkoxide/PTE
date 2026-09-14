@@ -1,0 +1,716 @@
+[
+  {
+    "id": "advanced-sentence-structures",
+    "title": "تراكيب الجمل المتقدمة",
+    "category": "تراكيب الجمل",
+    "icon": "🧠",
+    "description": "شرح متقدم لبناء الجمل الإنجليزية وتحليلها، بما في ذلك أنواع الجمل، التنسيق والتبعية، التوازي، الجمل المنقسمة، القلب، الحذف والاستبدال، التراكيب الاسمية المتقدمة، fronting، emphasis، inversion، absolute phrases، والتراكيب الأكاديمية المستخدمة في PTE.",
+    "explanation": "هذا الدرس يجمع أهم تراكيب الجمل المتقدمة التي تساعد على فهم اللغة الأكاديمية المعقدة واختيار الصياغة الصحيحة في أسئلة PTE. التركيز هنا ليس على قاعدة واحدة مثل الأزمنة أو أدوات الربط، بل على كيفية بناء الجملة كاملة وربط clauses وphrases بطريقة صحيحة. تشمل الموضوعات أنواع الجمل، coordination وsubordination، parallel structure، inversion، cleft sentences، fronting، ellipsis، substitution، apposition، extraposition، absolute phrases، والتراكيب الشرطية المتقدمة. في PTE قد تكون جميع الكلمات الموجودة في الاختيارات صحيحة من حيث المعنى، لكن تركيب جملة واحد فقط يكون صحيحًا نحويًا. لذلك يجب تحليل وظيفة كل جزء من الجملة: أين subject؟ أين main verb؟ هل لدينا independent clause أم dependent clause؟ هل العناصر المتقابلة متوازية؟ وهل الترتيب بعد أدوات مثل never وonly وnot only يتطلب inversion؟",
+    "rules": [
+      "Simple sentence تحتوي على independent clause واحدة، حتى لو احتوت على أكثر من فعل أو أكثر من phrase.",
+      "Compound sentence تتكون من independent clauses مرتبطة عادةً بـ coordinating conjunction مثل and, but, or, so, yet.",
+      "Complex sentence تحتوي على independent clause واحدة وdependent clause واحدة أو أكثر.",
+      "Compound-complex sentence تجمع بين coordination وsubordination وتحتوي عادةً على أكثر من independent clause بالإضافة إلى dependent clause.",
+      "وجود أكثر من verb لا يعني بالضرورة أن الجملة compound؛ المهم هو عدد independent clauses.",
+      "مثال: The researchers collected and analyzed the data جملة بسيطة لأن لها subject رئيسيًا واحدًا وclause واحدة.",
+      "مثال: The researchers collected the data, and they analyzed the results جملة compound.",
+      "يمكن ربط independent clauses باستخدام comma + coordinating conjunction.",
+      "لا يجوز عادةً ربط جملتين مستقلتين بفاصلة فقط؛ هذا يسمى comma splice.",
+      "يمكن إصلاح comma splice باستخدام period أو semicolon أو comma + coordinating conjunction.",
+      "Semicolon يمكن أن يربط independent clauses المرتبطة معنًى: The sample was small; the results were significant.",
+      "يمكن استخدام conjunctive adverbs مثل however وtherefore وmoreover بين independent clauses، لكن يجب التعامل معها نحويًا بشكل صحيح.",
+      "Coordination تعني ربط عناصر متساوية نحويًا، بينما subordination تجعل clause تعتمد على clause أخرى.",
+      "يمكن أن تكون subordinate clause في بداية الجملة أو وسطها أو نهايتها حسب التركيب.",
+      "إذا بدأت الجملة بـ dependent clause، غالبًا نضع comma قبل main clause: Although the sample was small, the results were useful.",
+      "إذا جاءت dependent clause بعد main clause، قد لا نحتاج comma حسب نوع clause.",
+      "Defining relative clauses لا تحتاج عادةً commas لأنها تحدد الاسم.",
+      "Non-defining relative clauses تحتاج commas لأنها تضيف معلومات إضافية.",
+      "Parallel structure تعني أن العناصر المرتبطة في الجملة يجب أن تكون متشابهة نحويًا.",
+      "خطأ: The researchers wanted to collect data, analyzing the results, and to publish the findings.",
+      "الأفضل: The researchers wanted to collect data, analyze the results, and publish the findings.",
+      "بعد and/but/or/not only...but also/either...or/neither...nor يجب الحفاظ على parallel structure قدر الإمكان.",
+      "إذا كان العنصر الأول gerund، فالعناصر المرتبطة به ينبغي أن تكون gerunds: collecting data, analyzing results, and publishing findings.",
+      "إذا كان العنصر الأول infinitive، فالأفضل الحفاظ على infinitive: to collect, to analyze, and to publish.",
+      "يمكن أحيانًا حذف to من العناصر اللاحقة إذا كان التركيب يسمح بذلك: to collect, analyze, and publish.",
+      "Correlative conjunctions مثل both...and وeither...or وneither...nor وnot only...but also تتطلب parallel elements.",
+      "في not only...but also، يجب أن يكون الجزءان المتقابلان متساويين في الوظيفة النحوية.",
+      "يمكن أن يأتي not only في بداية الجملة، وعندها قد يحدث inversion في الجملة الرئيسية.",
+      "التركيب العادي: The method is not only effective but also inexpensive.",
+      "التركيب الرسمي مع inversion: Not only is the method effective, but it is also inexpensive.",
+      "عندما تبدأ الجملة بـ negative أو restrictive adverbial مثل never, rarely, seldom, hardly, scarcely, little أو under no circumstances، قد نحتاج إلى inversion.",
+      "في inversion يتحرك auxiliary verb قبل subject: Never have I seen such results.",
+      "إذا لم يوجد auxiliary verb، نستخدم do/does/did: Rarely do researchers encounter such a problem.",
+      "مع past simple نستخدم did + subject + base verb: Never did the researchers expect such a result.",
+      "مع present simple نستخدم do/does: Rarely does this method produce inaccurate results.",
+      "مع present perfect نستخدم have/has: Never has the method been tested under these conditions.",
+      "مع past perfect نستخدم had: Never had the researchers encountered such difficulties.",
+      "بعد modal verbs يمكن استخدام modal + subject: Under no circumstances should the equipment be used without supervision.",
+      "Never, rarely, seldom لا تعني أن الفعل مستحيل؛ هي تشير إلى ندرة حدوثه.",
+      "Hardly, scarcely وbarely يمكن أن تدل على أن شيئًا حدث بصعوبة أو بالكاد.",
+      "التركيب Hardly had ... when ... يستخدم للإشارة إلى أن حدثًا وقع مباشرةً قبل حدث آخر.",
+      "التركيب No sooner had ... than ... يستخدم أيضًا للإشارة إلى التتابع السريع بين حدثين.",
+      "مثال: Hardly had the experiment started when the equipment failed.",
+      "مثال: No sooner had the researchers arrived than the laboratory lost power.",
+      "لا نستخدم usually بعد hardly في هذا التركيب؛ التركيب الشائع هو hardly ... when.",
+      "مع no sooner نستخدم than، وليس when.",
+      "بعد only + time expression في بداية الجملة قد يحدث inversion.",
+      "مثال: Only after the data had been analyzed did the researchers identify the error.",
+      "مثال: Only when the results were verified did the researchers publish the findings.",
+      "مثال: Only then did the researchers understand the significance of the result.",
+      "إذا لم تبدأ الجملة بـ only، لا نحتاج عادةً إلى inversion: The researchers identified the error only after the data had been analyzed.",
+      "بعد under no circumstances وon no account وat no time يمكن استخدام inversion.",
+      "مثال: Under no circumstances should participants reveal their passwords.",
+      "مثال: At no time did the researchers ignore the safety requirements.",
+      "Little في بداية الجملة قد يؤدي إلى inversion عندما تعني أن شيئًا لم يكن معروفًا أو متوقعًا.",
+      "مثال: Little did the researchers know that the results would change the field.",
+      "Cleft sentence تستخدم للتركيز على عنصر معين في الجملة.",
+      "التركيب الأساسي: It is/was + focused element + that/who + clause.",
+      "مثال: It was the lack of funding that caused the delay.",
+      "يمكن استخدام who عندما يكون العنصر شخصًا، خاصةً في التركيب الرسمي.",
+      "مثال: It was the lead researcher who identified the error.",
+      "Cleft sentence لا تغير المعنى الأساسي بالضرورة، لكنها تغير موضع التركيز.",
+      "يمكن استخدام what-cleft أو pseudo-cleft: What the researchers need is more reliable evidence.",
+      "What-clause هنا تعمل كاسم أو subject.",
+      "يمكن عكس pseudo-cleft: More reliable evidence is what the researchers need.",
+      "يمكن استخدام what-clause للتأكيد على نتيجة أو احتياج أو هدف.",
+      "مثال: What matters most is the quality of the evidence.",
+      "Fronting يعني تقديم عنصر إلى بداية الجملة بهدف التركيز أو التنظيم.",
+      "مثال: This issue, the researchers discussed in detail.",
+      "Fronting قد يكون أسلوبًا رسميًا أو أدبيًا، لكن يجب ألا يؤدي إلى تركيب غير واضح.",
+      "Prepositional phrases يمكن تقديمها في بداية الجملة: In the final stage of the experiment, the researchers analyzed the data.",
+      "يمكن تقديم negative expressions مع inversion إذا كان التركيب يتطلب ذلك.",
+      "Extraposition تستخدم it كفاعل شكلي وتأخير clause طويلة إلى نهاية الجملة.",
+      "مثال: It is important to consider the limitations of the study.",
+      "الجملة الأصلية الممكنة: To consider the limitations of the study is important، لكنها أقل طبيعية في هذا السياق.",
+      "يمكن استخدام extraposition مع that-clause: It is surprising that the experiment failed.",
+      "يمكن استخدام it مع adjective + infinitive: It is difficult to interpret the results.",
+      "يمكن استخدام it مع adjective + for + object + infinitive: It is important for researchers to verify the data.",
+      "Dummy it لا يشير إلى شيء محدد عندما يستخدم كفاعل شكلي في extraposition.",
+      "There يمكن أن يكون existential subject لعرض وجود شيء: There are several factors affecting performance.",
+      "يجب أن يتفق الفعل مع الاسم الحقيقي بعد there: There is one problem، ولكن There are several problems.",
+      "Ellipsis تعني حذف جزء يمكن فهمه من السياق دون تكراره.",
+      "مثال: Some students preferred the first method, while others preferred the second. يمكن حذف preferred إذا كان المعنى واضحًا: Some students preferred the first method, while others the second.",
+      "Substitution تعني استخدام كلمة بدلًا من تكرار عنصر كامل، مثل one/ones, do so, so, neither.",
+      "مثال: The first method was effective, and the second one was even better.",
+      "يمكن استخدام do so لتجنب تكرار فعل أو phrase: The researchers recommended repeating the experiment, and the university agreed to do so.",
+      "يمكن استخدام so بعد أفعال مثل think, believe, expect, hope: I think so.",
+      "يمكن استخدام neither أو nor للإشارة إلى نفي عنصر سبق ذكره: The first method was not reliable, and neither was the second.",
+      "Apposition تعني وضع noun phrase بجوار noun phrase أخرى لتوضيحها أو إعادة تسميتها.",
+      "مثال: Dr. Ahmed, the lead researcher, published the findings.",
+      "يمكن أن يكون appositive defining أو non-defining حسب المعنى.",
+      "Non-defining appositives تحتاج commas: Dr. Ahmed, the lead researcher, published the findings.",
+      "Defining apposition قد تأتي دون commas عندما تكون ضرورية لتحديد الاسم.",
+      "Absolute phrase تتكون عادةً من noun/pronoun + participle أو adjective أو prepositional phrase، وتضيف معلومات مرتبطة بالجملة الرئيسية.",
+      "مثال: The experiment completed, the researchers began analyzing the results.",
+      "Absolute phrase لها subject خاص بها، ولذلك تختلف عن participial phrase التي تشترك عادةً في الفاعل مع الجملة الرئيسية.",
+      "مثال: The weather being favorable, the researchers continued the fieldwork.",
+      "Absolute phrases شائعة في الكتابة الرسمية لكنها تحتاج إلى استخدام واضح وغير مبالغ فيه.",
+      "يمكن استخدام with + noun + participle في بعض التراكيب الوصفية: The researchers worked with the equipment running continuously.",
+      "يجب التأكد من أن معنى with construction واضح وغير غامض.",
+      "Advanced conditional inversion يمكن أن تستخدم دون if في اللغة الرسمية.",
+      "Had the researchers known about the problem, they would have changed the procedure.",
+      "هذا يعادل: If the researchers had known about the problem, they would have changed the procedure.",
+      "Were the results to change, the researchers would repeat the experiment.",
+      "هذا يعادل تقريبًا: If the results were to change, the researchers would repeat the experiment.",
+      "Should you require further information, please contact the research office.",
+      "هذا يعادل: If you should require further information, please contact the research office.",
+      "بعد Had/Were/Should في conditional inversion يجب حذف if.",
+      "خطأ: Had if the researchers known... والصحيح: Had the researchers known...",
+      "Comparative structures يمكن أن تتضمن parallel clauses: The more carefully the data are analyzed, the more reliable the conclusions become.",
+      "The more..., the more... تعبر عن علاقة متناسبة بين متغيرين.",
+      "يمكن استخدام The more..., the less... أيضًا.",
+      "يمكن استخدام as...as مع parallel structure: The new method is as reliable as the previous method.",
+      "يمكن استخدام than + clause عندما تكون المقارنة بين جمل أو أفعال.",
+      "مثال: The researchers found more evidence than they had expected.",
+      "يمكن حذف العناصر المتكررة في comparative clauses إذا كان المعنى واضحًا.",
+      "في academic writing، تجنب المقارنات غير المكتملة مثل The method is more effective دون توضيح المقارنة إذا كان السياق يتطلبها.",
+      "Sentence fragments هي أجزاء غير مكتملة تفتقد عادةً إلى independent clause.",
+      "مثال غير مكتمل: Because the sample was too small. يجب ربطها بجملة رئيسية.",
+      "يمكن أن تكون fragments مقصودة في العناوين أو الأسلوب غير الرسمي، لكنها خطأ في معظم الأسئلة الأكاديمية الرسمية.",
+      "Run-on sentence تحدث عندما ترتبط independent clauses دون punctuation أو conjunction مناسب.",
+      "Comma splice تحدث عندما ترتبط independent clauses بفاصلة فقط.",
+      "لإصلاح run-on يمكن استخدام period أو semicolon أو coordinating conjunction.",
+      "يمكن استخدام colon لتقديم explanation أو list بعد independent clause مكتملة.",
+      "مثال: The researchers faced one major problem: the equipment was unavailable.",
+      "لا تستخدم colon بين subject وverb أو بين verb وobject مباشرةً.",
+      "يمكن استخدام semicolon قبل conjunctive adverbs مثل however وtherefore عندما تربط independent clauses.",
+      "مثال: The sample was small; however, the results were significant.",
+      "يمكن استخدام therefore داخل الجملة بطرق مختلفة حسب موقعها وعلامات الترقيم.",
+      "Parallelism مهم جدًا بعد both...and, either...or, neither...nor وnot only...but also.",
+      "Subject-verb agreement يجب أن يظل صحيحًا حتى عندما تكون الجملة شديدة التعقيد.",
+      "يجب تحديد main subject قبل اختيار main verb وعدم الانخداع بالعبارات الاعتراضية.",
+      "مثال: The quality of the results is important، وليس are، لأن subject هو quality.",
+      "في الجمل الطويلة يجب تجاهل prepositional phrases مؤقتًا لتحديد subject الحقيقي.",
+      "مثال: The effects of the new policy on students are significant؛ هنا subject هو effects، وهو plural.",
+      "يمكن استخدام noun phrase طويلة كفاعل: The rapid development of digital technologies has changed education.",
+      "في PTE، ابحث عن head noun داخل subject noun phrase قبل اختيار verb.",
+      "يمكن أن تحتوي الجملة على relative clause داخل subject phrase مما يزيد صعوبة تحديد main verb.",
+      "مثال: The students who participated in the experiment were satisfied.",
+      "هنا participated هو فعل داخل relative clause، بينما were هو main verb.",
+      "يمكن أن تحتوي الجملة على أكثر من auxiliary verb: The results may have been affected by several factors.",
+      "عند تحليل الجملة، حدد main verb phrase كاملة بدلًا من اعتبار كل auxiliary فعلًا مستقلًا.",
+      "Passive structures يمكن دمجها مع inversion وrelative clauses وmodal verbs في جملة واحدة.",
+      "مثال: Only after the data had been carefully examined were the errors identified.",
+      "في PTE، لا تجعل طول الجملة سببًا لاختيار إجابة عشوائية؛ قسمها إلى clauses وphrases.",
+      "الاستراتيجية الأساسية: حدد subject، ثم main verb، ثم clauses التابعة، ثم الروابط، ثم تحقق من agreement وparallelism.",
+      "إذا كان الخيار يحتوي على تركيب مختلف تمامًا، افحص أولًا الوظيفة النحوية التي يحتاجها الفراغ.",
+      "إذا كان الفراغ بعد preposition، فغالبًا تحتاج noun phrase أو gerund وليس infinitive.",
+      "إذا كان الفراغ بعد modal، تحتاج base verb.",
+      "إذا كان الفراغ بعد auxiliary، تحتاج الصيغة التي يتطلبها auxiliary.",
+      "إذا كان الفراغ بعد linking verb، افحص احتمال adjective أو noun complement.",
+      "إذا كان الفراغ بين two parallel elements، يجب أن يطابق العنصر الجديد الشكل النحوي للعناصر الأخرى.",
+      "إذا بدأت الجملة بـ negative adverbial، افحص احتمال inversion.",
+      "إذا بدأت بـ Only + time expression، افحص احتمال auxiliary + subject + main verb.",
+      "إذا بدأت بـ Had/Were/Should، افحص احتمال conditional inversion.",
+      "إذا رأيت It is/was + adjective، افحص احتمال extraposition.",
+      "إذا رأيت What + clause + is/was، افحص احتمال pseudo-cleft.",
+      "إذا رأيت noun + noun phrase محاطًا بفواصل، افحص احتمال apposition.",
+      "إذا رأيت noun + participle phrase، افحص احتمال reduced relative clause.",
+      "إذا رأيت noun + V3، افحص احتمال passive reduction.",
+      "إذا رأيت noun + V-ing، افحص احتمال active reduction.",
+      "الجملة الأكاديمية الجيدة ليست بالضرورة الأطول؛ الأهم أن تكون العلاقات بين أجزائها واضحة ودقيقة.",
+      "في PTE، فهم بنية الجملة أهم من ترجمة كل كلمة؛ يمكن غالبًا تحديد الإجابة الصحيحة من خلال التركيب النحوي حتى قبل فهم كل المفردات.",
+      "في الجمل المعقدة، ابحث أولًا عن main clause ثم تعامل مع المعلومات الإضافية داخل relative clauses وprepositional phrases وparticipial phrases.",
+      "الهدف النهائي هو القدرة على قراءة sentence architecture وليس فقط التعرف على قواعد منفصلة."
+    ],
+    "examples": [
+      {
+        "en": "The researchers collected the data and analyzed the results.",
+        "ar": "جمع الباحثون البيانات وحللوا النتائج."
+      },
+      {
+        "en": "The researchers collected the data, and they analyzed the results.",
+        "ar": "جمع الباحثون البيانات، ثم قاموا بتحليل النتائج."
+      },
+      {
+        "en": "Although the sample was small, the results were significant.",
+        "ar": "على الرغم من أن العينة كانت صغيرة، كانت النتائج ذات دلالة."
+      },
+      {
+        "en": "The sample was small; however, the results were significant.",
+        "ar": "كانت العينة صغيرة؛ ومع ذلك، كانت النتائج ذات دلالة."
+      },
+      {
+        "en": "The researchers wanted to collect data, analyze the results, and publish the findings.",
+        "ar": "أراد الباحثون جمع البيانات وتحليل النتائج ونشر النتائج."
+      },
+      {
+        "en": "The method is not only effective but also inexpensive.",
+        "ar": "الطريقة ليست فعالة فحسب، بل غير مكلفة أيضًا."
+      },
+      {
+        "en": "Not only is the method effective, but it is also inexpensive.",
+        "ar": "الطريقة ليست فعالة فقط، بل إنها غير مكلفة أيضًا."
+      },
+      {
+        "en": "Never have the researchers encountered such a difficult problem.",
+        "ar": "لم يواجه الباحثون مثل هذه المشكلة الصعبة من قبل."
+      },
+      {
+        "en": "Rarely do researchers obtain such consistent results.",
+        "ar": "نادرًا ما يحصل الباحثون على مثل هذه النتائج المتسقة."
+      },
+      {
+        "en": "Only after the data had been analyzed did the researchers identify the error.",
+        "ar": "فقط بعد تحليل البيانات تمكن الباحثون من تحديد الخطأ."
+      },
+      {
+        "en": "Only when the results were verified did the researchers publish the findings.",
+        "ar": "فقط عندما تم التحقق من النتائج نشر الباحثون النتائج."
+      },
+      {
+        "en": "Under no circumstances should participants reveal confidential information.",
+        "ar": "لا ينبغي للمشاركين تحت أي ظرف من الظروف الكشف عن معلومات سرية."
+      },
+      {
+        "en": "Little did the researchers know that the discovery would change the field.",
+        "ar": "لم يكن الباحثون يعلمون أن هذا الاكتشاف سيغير المجال."
+      },
+      {
+        "en": "Hardly had the experiment started when the equipment failed.",
+        "ar": "ما إن بدأت التجربة حتى تعطلت المعدات."
+      },
+      {
+        "en": "No sooner had the researchers arrived than the laboratory lost power.",
+        "ar": "ما إن وصل الباحثون حتى انقطعت الكهرباء عن المختبر."
+      },
+      {
+        "en": "It was the lack of funding that caused the delay.",
+        "ar": "كان نقص التمويل هو الذي تسبب في التأخير."
+      },
+      {
+        "en": "It was the lead researcher who identified the error.",
+        "ar": "كان الباحث الرئيسي هو الذي حدد الخطأ."
+      },
+      {
+        "en": "What the researchers need is more reliable evidence.",
+        "ar": "ما يحتاج إليه الباحثون هو أدلة أكثر موثوقية."
+      },
+      {
+        "en": "What matters most is the quality of the evidence.",
+        "ar": "ما يهم أكثر هو جودة الأدلة."
+      },
+      {
+        "en": "It is important to consider the limitations of the study.",
+        "ar": "من المهم أخذ قيود الدراسة في الاعتبار."
+      },
+      {
+        "en": "It is surprising that the experiment produced such different results.",
+        "ar": "من المدهش أن التجربة أنتجت نتائج مختلفة إلى هذا الحد."
+      },
+      {
+        "en": "There are several factors affecting academic performance.",
+        "ar": "هناك عدة عوامل تؤثر في الأداء الأكاديمي."
+      },
+      {
+        "en": "Some students preferred the first method, while others the second.",
+        "ar": "فضل بعض الطلاب الطريقة الأولى، بينما فضل آخرون الطريقة الثانية."
+      },
+      {
+        "en": "The first method was effective, and the second one was even better.",
+        "ar": "كانت الطريقة الأولى فعالة، وكانت الثانية أفضل منها."
+      },
+      {
+        "en": "The researchers recommended repeating the experiment, and the university agreed to do so.",
+        "ar": "أوصى الباحثون بتكرار التجربة، ووافقت الجامعة على القيام بذلك."
+      },
+      {
+        "en": "Dr. Ahmed, the lead researcher, published the findings.",
+        "ar": "نشر الدكتور أحمد، الباحث الرئيسي، النتائج."
+      },
+      {
+        "en": "The experiment completed, the researchers began analyzing the results.",
+        "ar": "بعد اكتمال التجربة، بدأ الباحثون تحليل النتائج."
+      },
+      {
+        "en": "The weather being favorable, the researchers continued the fieldwork.",
+        "ar": "وبما أن الطقس كان ملائمًا، واصل الباحثون العمل الميداني."
+      },
+      {
+        "en": "Had the researchers known about the problem, they would have changed the procedure.",
+        "ar": "لو كان الباحثون قد عرفوا بالمشكلة، لغيروا الإجراء."
+      },
+      {
+        "en": "Were the results to change, the researchers would repeat the experiment.",
+        "ar": "إذا تغيرت النتائج، فسوف يكرر الباحثون التجربة."
+      },
+      {
+        "en": "Should you require further information, please contact the research office.",
+        "ar": "إذا احتجت إلى مزيد من المعلومات، يرجى الاتصال بمكتب الأبحاث."
+      },
+      {
+        "en": "The more carefully the data are analyzed, the more reliable the conclusions become.",
+        "ar": "كلما تم تحليل البيانات بعناية أكبر، أصبحت الاستنتاجات أكثر موثوقية."
+      },
+      {
+        "en": "The more complex the system becomes, the less reliable it may be.",
+        "ar": "كلما أصبح النظام أكثر تعقيدًا، قد يصبح أقل موثوقية."
+      },
+      {
+        "en": "The rapid development of digital technologies has transformed education.",
+        "ar": "لقد أدى التطور السريع للتقنيات الرقمية إلى تغيير التعليم."
+      },
+      {
+        "en": "The quality of the results is more important than the size of the sample.",
+        "ar": "جودة النتائج أهم من حجم العينة."
+      },
+      {
+        "en": "The effects of the new policy on students are significant.",
+        "ar": "آثار السياسة الجديدة على الطلاب كبيرة."
+      },
+      {
+        "en": "The students who participated in the experiment were satisfied.",
+        "ar": "كان الطلاب الذين شاركوا في التجربة راضين."
+      },
+      {
+        "en": "Only after the results had been verified were the findings published.",
+        "ar": "فقط بعد التحقق من النتائج تم نشر النتائج."
+      },
+      {
+        "en": "The method was effective; therefore, the researchers recommended its wider use.",
+        "ar": "كانت الطريقة فعالة؛ ولذلك أوصى الباحثون باستخدامها على نطاق أوسع."
+      }
+    ],
+    "commonMistakes": [
+      "خطأ: The researchers collected the data, they analyzed the results. هذا comma splice؛ استخدم and أو semicolon أو افصل الجملتين.",
+      "خطأ: The method is effective, however, it is expensive. إذا كان however يربط independent clauses، الأفضل: The method is effective; however, it is expensive.",
+      "خطأ: The researchers wanted collecting data, analyzing results, and to publish the findings. العناصر غير متوازية.",
+      "الصحيح: The researchers wanted to collect data, analyze results, and publish the findings.",
+      "خطأ: Not only the method is effective, but it is also inexpensive. عند وضع not only في بداية الجملة مع التركيز الرسمي نستخدم inversion: Not only is the method effective, but it is also inexpensive.",
+      "خطأ: Never I have seen such results. الصحيح: Never have I seen such results.",
+      "خطأ: Rarely researchers encounter such a problem. الصحيح: Rarely do researchers encounter such a problem.",
+      "خطأ: Only after the data were analyzed the researchers identified the error. الصحيح: Only after the data were analyzed did the researchers identify the error.",
+      "خطأ: Under no circumstances participants should reveal the information. الصحيح: Under no circumstances should participants reveal the information.",
+      "خطأ: Hardly had the experiment started than the equipment failed. الصحيح: Hardly had the experiment started when the equipment failed.",
+      "خطأ: No sooner had the researchers arrived when the laboratory lost power. الصحيح: No sooner had the researchers arrived than the laboratory lost power.",
+      "خطأ: Had the researchers knew about the problem... الصحيح: Had the researchers known about the problem...",
+      "خطأ: Had if the researchers known... في conditional inversion نحذف if.",
+      "خطأ: Were if the results to change... الصحيح: Were the results to change...",
+      "خطأ: Should if you require further information... الصحيح: Should you require further information...",
+      "خطأ: It is important that researchers to verify the data. بعد that-clause نحتاج finite verb: It is important that researchers verify the data، أو نستخدم: It is important for researchers to verify the data.",
+      "خطأ: It was the lack of funding which caused the delay قد تكون ممكنة، لكن في cleft structures يجب الانتباه إلى اختيار that/who حسب العنصر.",
+      "خطأ: What the researchers need are more evidence. Evidence غير معدود، لذلك: What the researchers need is more evidence.",
+      "خطأ: There is several factors affecting performance. الصحيح: There are several factors affecting performance.",
+      "خطأ: The quality of the results are important. الصحيح: The quality ... is important لأن head noun هو quality.",
+      "خطأ: The effects of the policy on students is significant. الصحيح: The effects ... are significant.",
+      "خطأ: Because the sample was small. هذه sentence fragment إذا لم تتبعها main clause.",
+      "خطأ: The sample was small the results were significant. هذه run-on sentence.",
+      "خطأ: The sample was small, the results were significant. هذه comma splice.",
+      "خطأ: The researchers collected data and analyzing the results. يجب الحفاظ على parallelism: collected data and analyzed the results.",
+      "خطأ: Both collecting data and to analyze the results are important. يجب توحيد الشكل: Both collecting data and analyzing results are important.",
+      "خطأ: Either the first method or the second methods is acceptable. يجب الانتباه إلى agreement وparallel structure.",
+      "خطأ: The researchers not only collected data but also analyzed the results. هذه صحيحة، لكن عند نقل not only إلى البداية نحتاج inversion.",
+      "خطأ: Not only the researchers collected data, but also analyzed the results. الأفضل: Not only did the researchers collect data, but they also analyzed the results.",
+      "خطأ: Only then the researchers understood the problem. في التركيب الرسمي مع Only then في البداية: Only then did the researchers understand the problem.",
+      "خطأ: Little the researchers knew about the consequences. الصحيح: Little did the researchers know about the consequences.",
+      "خطأ: The more carefully the researchers analyze the data, the reliable the results become. يجب أن يكون التركيب متوازيًا: The more carefully..., the more reliable...",
+      "خطأ: The more complex the system becomes, the less it is reliable. الأفضل: the less reliable it is.",
+      "خطأ: Dr. Ahmed, the lead researcher published the findings. إذا كان appositive غير ضروري، نحتاج comma ثانية.",
+      "خطأ: The lead researcher, Dr. Ahmed published the findings. إذا كان الاسم في apposition غير ضروري، نحتاج commas حوله.",
+      "خطأ: It is surprising the experiment failed. في هذا التركيب الأكاديمي الأفضل: It is surprising that the experiment failed.",
+      "خطأ: It is difficult that interpret the results. الصحيح: It is difficult to interpret the results.",
+      "خطأ: It is important researchers to verify the data. الصحيح: It is important for researchers to verify the data.",
+      "خطأ: The researchers agreed to repeat the experiment, and the university agreed to repeat the experiment too. ليست خطأ نحويًا، لكنها تكرار غير ضروري؛ يمكن استخدام do so.",
+      "خطأ: Some students preferred the first method, while others preferred the second method. صحيحة، لكن يمكن استخدام ellipsis عندما يكون المعنى واضحًا: while others the second.",
+      "خطأ: استخدام inversion بعد كل negative word. inversion مرتبط بتراكيب محددة، وليس كل جملة تحتوي على نفي.",
+      "خطأ: Rarely does researchers... بعد does نستخدم base verb، والصحيح: Rarely do researchers...",
+      "خطأ: Never did the researchers found... بعد did نستخدم base verb: Never did the researchers find...",
+      "خطأ: Only after the experiment had finished did the researchers analyzed the data. بعد did نستخدم base verb: did the researchers analyze.",
+      "خطأ: Never have the researchers encountered such a problem before. صحيحة؛ لا تحذف auxiliary have لأن inversion تحتاجه.",
+      "خطأ: استخدام however كأنه coordinating conjunction بين جملتين دون punctuation مناسب.",
+      "خطأ: استخدام therefore بالطريقة نفسها التي نستخدم بها and أو but.",
+      "خطأ: وضع colon بعد subject مباشرةً: The main problem: was the lack of funding. الصحيح: The main problem was the lack of funding.",
+      "خطأ: وضع semicolon بين dependent clause وindependent clause: Although the sample was small; the results were significant. الصحيح: Although the sample was small, the results were significant.",
+      "خطأ: تجاهل main verb بسبب وجود relative clause طويلة داخل subject.",
+      "خطأ: The students who participated in the experiment was satisfied. main subject هو students، لذلك الصحيح were.",
+      "خطأ: The quality of the results that were collected are important. يجب تحديد main subject: quality ... is important.",
+      "خطأ: اختيار verb بناءً على أقرب noun بدلًا من head noun في subject phrase.",
+      "خطأ: افتراض أن طول الجملة يعني أنها تحتوي على أكثر من main clause؛ يجب تحديد independent clauses فعليًا.",
+      "خطأ: ترجمة ترتيب الكلمات العربية حرفيًا، خاصةً في inversion وcleft structures.",
+      "خطأ: استخدام تراكيب advanced لمجرد جعل الجملة أكثر تعقيدًا؛ الوضوح والدقة أهم من التعقيد.",
+      "خطأ: استخدام inversion في الكتابة العادية عندما لا يطلب التركيب ذلك.",
+      "خطأ: الخلط بين What-clause في pseudo-cleft وrelative clause.",
+      "خطأ: What the researchers discovered was surprising صحيحة؛ What هنا تعني الشيء الذي اكتشفه الباحثون وتعمل كـnoun clause.",
+      "خطأ: الخلط بين appositive وrelative clause؛ Dr. Ahmed, the lead researcher,... apposition، بينما Dr. Ahmed, who led the research,... relative clause.",
+      "خطأ: عدم الحفاظ على الفاعل المنطقي في participial أو absolute structures.",
+      "خطأ: استخدام conditional inversion مع if: Had the researchers known if... يجب التفريق بين conditional inversion وif-clause العادية."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is grammatically correct?",
+        "options": [
+          "The researchers collected the data, they analyzed the results.",
+          "The researchers collected the data and analyzed the results.",
+          "The researchers collected the data, analyzed the results.",
+          "The researchers collected the data they analyzed the results."
+        ],
+        "correct": 1,
+        "answer": "The researchers collected the data and analyzed the results.",
+        "why": "And يربط الفعلين في parallel structure داخل جملة واحدة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers wanted to collect data, ___ the results, and publish the findings.",
+        "options": [
+          "analyzing",
+          "analyzed",
+          "analyze",
+          "to analyzing"
+        ],
+        "correct": 2,
+        "answer": "analyze",
+        "why": "بعد to collect نستخدم parallel infinitive structure: to collect, analyze, and publish."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Not only ___ effective, but it is also inexpensive.",
+        "options": [
+          "the method is",
+          "is the method",
+          "the method",
+          "does the method"
+        ],
+        "correct": 1,
+        "answer": "is the method",
+        "why": "Not only في بداية الجملة يتطلب inversion: Not only is the method effective..."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Rarely ___ such consistent results.",
+        "options": [
+          "researchers obtain",
+          "do researchers obtain",
+          "researchers obtains",
+          "does researchers obtain"
+        ],
+        "correct": 1,
+        "answer": "do researchers obtain",
+        "why": "Rarely في بداية الجملة يتطلب inversion، ومع researchers نستخدم do."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Never ___ such a difficult problem before.",
+        "options": [
+          "the researchers have encountered",
+          "have the researchers encountered",
+          "the researchers encountered",
+          "did the researchers have encountered"
+        ],
+        "correct": 1,
+        "answer": "have the researchers encountered",
+        "why": "الجملة في present perfect، ولذلك auxiliary have يأتي قبل subject."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Only after the data had been analyzed ___ the researchers identify the error.",
+        "options": [
+          "did",
+          "have",
+          "were",
+          "had"
+        ],
+        "correct": 0,
+        "answer": "did",
+        "why": "Only after في بداية الجملة يتطلب inversion، وidentify في past simple تحتاج did."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Hardly had the experiment started ___ the equipment failed.",
+        "options": [
+          "than",
+          "when",
+          "that",
+          "while"
+        ],
+        "correct": 1,
+        "answer": "when",
+        "why": "التركيب الثابت هو Hardly had ... when ..."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "No sooner had the researchers arrived ___ the laboratory lost power.",
+        "options": [
+          "when",
+          "than",
+          "that",
+          "while"
+        ],
+        "correct": 1,
+        "answer": "than",
+        "why": "التركيب الثابت هو No sooner had ... than ..."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Under no circumstances ___ confidential information.",
+        "options": [
+          "participants should reveal",
+          "should participants reveal",
+          "participants reveal",
+          "do participants should reveal"
+        ],
+        "correct": 1,
+        "answer": "should participants reveal",
+        "why": "Under no circumstances في البداية يتطلب inversion مع modal."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "It was the lack of funding ___ caused the delay.",
+        "options": [
+          "what",
+          "who",
+          "that",
+          "where"
+        ],
+        "correct": 2,
+        "answer": "that",
+        "why": "هذا cleft sentence يركز على the lack of funding، والصيغة الشائعة هي It was X that..."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What the researchers need ___ more reliable evidence.",
+        "options": [
+          "are",
+          "were",
+          "is",
+          "be"
+        ],
+        "correct": 2,
+        "answer": "is",
+        "why": "What-clause تعمل كفاعل مفرد هنا، وevidence غير معدود، لذلك نستخدم is."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "It is important ___ researchers to verify the data.",
+        "options": [
+          "that",
+          "for",
+          "to",
+          "of"
+        ],
+        "correct": 1,
+        "answer": "for",
+        "why": "عندما نذكر الفاعل الذي سيقوم بالفعل نستخدم adjective + for + object + infinitive."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "There ___ several factors affecting academic performance.",
+        "options": [
+          "is",
+          "are",
+          "was",
+          "has"
+        ],
+        "correct": 1,
+        "answer": "are",
+        "why": "الاسم الحقيقي بعد there هو several factors، وهو جمع."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The quality of the results ___ important.",
+        "options": [
+          "are",
+          "were",
+          "is",
+          "have"
+        ],
+        "correct": 2,
+        "answer": "is",
+        "why": "Head noun هو quality، وهو مفرد، رغم وجود results في عبارة of."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Had the researchers ___ the problem, they would have changed the procedure.",
+        "options": [
+          "know",
+          "knew",
+          "known",
+          "knowing"
+        ],
+        "correct": 2,
+        "answer": "known",
+        "why": "Conditional inversion هنا تعادل If the researchers had known، لذلك نستخدم past participle known."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ the results to change, the researchers would repeat the experiment.",
+        "options": [
+          "Were",
+          "Was",
+          "Had",
+          "Should"
+        ],
+        "correct": 0,
+        "answer": "Were",
+        "why": "Were the results to change تعادل If the results were to change."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Should you ___ further information, please contact the office.",
+        "options": [
+          "required",
+          "require",
+          "requiring",
+          "to require"
+        ],
+        "correct": 1,
+        "answer": "require",
+        "why": "Should + subject + base verb في conditional inversion."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The more carefully the data are analyzed, ___ the conclusions become.",
+        "options": [
+          "the reliable",
+          "the more reliable",
+          "more reliable",
+          "the most reliable"
+        ],
+        "correct": 1,
+        "answer": "the more reliable",
+        "why": "التركيب هو The more..., the more..."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence contains a comma splice?",
+        "options": [
+          "The sample was small; however, the results were significant.",
+          "The sample was small, but the results were significant.",
+          "The sample was small, the results were significant.",
+          "Although the sample was small, the results were significant."
+        ],
+        "correct": 2,
+        "answer": "The sample was small, the results were significant.",
+        "why": "جملتان مستقلتان تم ربطهما بفاصلة فقط."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence has correct parallel structure?",
+        "options": [
+          "The researchers collected data, analyzing results, and to publish findings.",
+          "The researchers collected data, analyzed results, and published findings.",
+          "The researchers collecting data, analyzed results, and publish findings.",
+          "The researchers collected data, analysis results, and publishing findings."
+        ],
+        "correct": 1,
+        "answer": "The researchers collected data, analyzed results, and published findings.",
+        "why": "الأفعال الثلاثة في past simple وبنية متوازية."
+      }
+    ],
+    "markers": [
+      "Simple sentence",
+      "Compound sentence",
+      "Complex sentence",
+      "Compound-complex sentence",
+      "Independent clause",
+      "Dependent clause",
+      "Coordination",
+      "Subordination",
+      "Parallel structure",
+      "Not only...but also",
+      "Both...and",
+      "Either...or",
+      "Neither...nor",
+      "Inversion",
+      "Negative adverbial",
+      "Never",
+      "Rarely",
+      "Seldom",
+      "Hardly...when",
+      "Scarcely...when",
+      "No sooner...than",
+      "Only after",
+      "Only when",
+      "Only then",
+      "Under no circumstances",
+      "At no time",
+      "Little did",
+      "Cleft sentence",
+      "It is...that",
+      "It was...that",
+      "What-clause",
+      "Pseudo-cleft",
+      "Fronting",
+      "Extraposition",
+      "Dummy it",
+      "Existential there",
+      "Ellipsis",
+      "Substitution",
+      "Apposition",
+      "Absolute phrase",
+      "Conditional inversion",
+      "Had + subject + V3",
+      "Were + subject + to",
+      "Should + subject + verb",
+      "Comparative structure",
+      "The more...the more",
+      "Sentence fragment",
+      "Run-on sentence",
+      "Comma splice",
+      "Semicolon",
+      "Colon",
+      "Academic sentence structure",
+      "PTE grammar"
+    ]
+  }
+]

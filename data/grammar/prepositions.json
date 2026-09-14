@@ -1,0 +1,680 @@
+[
+  {
+    "id": "prepositions",
+    "title": "حروف الجر",
+    "category": "حروف الجر",
+    "icon": "📍",
+    "description": "شرح أهم حروف الجر في الإنجليزية واستخداماتها مع الزمان والمكان والحركة والعلاقات، بالإضافة إلى التراكيب الثابتة مع الأفعال والصفات والأسماء، مع التركيز على الأخطاء الشائعة في PTE.",
+    "explanation": "حروف الجر (Prepositions) كلمات تربط الاسم أو الضمير ببقية الجملة، وتوضح علاقات مثل المكان والزمان والاتجاه والسبب والوسيلة والعلاقة بين الكلمات. من أهم حروف الجر: in, on, at, by, for, since, during, while, until, between, among, despite, in spite of, because of, due to, according to وغيرها. المشكلة الأساسية في تعلم حروف الجر أن اختيارها لا يعتمد دائمًا على المعنى العربي المباشر؛ فكثير من التراكيب الإنجليزية لها حرف جر ثابت يجب تعلمه مع الكلمة نفسها، مثل depend on وinterested in وresponsible for وsimilar to. لذلك، في أسئلة PTE يجب النظر إلى السياق وإلى الكلمة التي يأتي معها حرف الجر، وليس ترجمة حرف الجر منفردًا.",
+    "rules": [
+      "نستخدم in مع الفترات الزمنية الطويلة مثل السنوات والشهور والفصول وأجزاء اليوم: in 2025, in July, in winter, in the morning.",
+      "نستخدم on مع الأيام والتواريخ المحددة: on Monday, on 15 May, on my birthday.",
+      "نستخدم at مع الوقت المحدد ونقاط زمنية محددة: at 7 o'clock, at noon, at midnight.",
+      "نستخدم at مع بعض التعبيرات الزمنية الثابتة مثل at night وat the weekend في بعض أنواع الإنجليزية.",
+      "نستخدم in مع مدة أو فترة من الزمن عندما نعني أن شيئًا سيحدث بعد هذه المدة: The project will be completed in two weeks.",
+      "نستخدم for للدلالة على مدة زمنية: for two years, for several months.",
+      "نستخدم since للدلالة على نقطة بداية زمنية: since 2020, since Monday, since the beginning of the year.",
+      "نستخدم since عادةً مع Present Perfect أو Present Perfect Continuous عندما يستمر الوضع حتى الآن.",
+      "نستخدم for مع مدة، بينما since مع نقطة بداية.",
+      "نستخدم during مع اسم فترة أو حدث: during the meeting, during the summer.",
+      "نستخدم while مع جملة تحتوي على subject + verb: while I was studying.",
+      "لا نستخدم during مباشرة قبل جملة كاملة؛ during يحتاج عادةً إلى noun أو noun phrase.",
+      "نستخدم by للدلالة على الموعد النهائي أو آخر وقت يجب أن يحدث فيه الشيء: Submit the report by Friday.",
+      "نستخدم until أو till للدلالة على استمرار الفعل حتى وقت معين: The library is open until 9 p.m.",
+      "الفرق الأساسي بين by وuntil أن by يحدد موعدًا نهائيًا، بينما until يصف الاستمرار حتى نقطة زمنية.",
+      "نستخدم from ... to أو from ... until للدلالة على بداية ونهاية فترة.",
+      "نستخدم in للدلالة على المكان داخل مساحة أو منطقة: in the room, in Cairo, in Egypt.",
+      "نستخدم on عندما يكون الشيء على سطح: on the table, on the wall.",
+      "نستخدم at غالبًا لنقطة أو موقع محدد: at the station, at the entrance, at the university.",
+      "يمكن استخدام in مع وسائل النقل التي يكون الشخص داخلها: in a car, in a taxi.",
+      "نستخدم on مع وسائل النقل العامة أو المركبات التي يمكن تصور الشخص عليها: on a bus, on a train, on a plane.",
+      "نستخدم by + transport noun للدلالة على وسيلة النقل بشكل عام: by car, by train, by bus.",
+      "لا نستخدم عادةً a/the بعد by في تراكيب وسائل النقل العامة: by car وليس by a car عندما نتحدث عن وسيلة النقل بشكل عام.",
+      "نستخدم to للدلالة على الاتجاه أو الحركة نحو مكان: go to school, travel to London.",
+      "نستخدم into عندما تكون هناك حركة من الخارج إلى الداخل: walk into the room.",
+      "نستخدم in عندما نصف موقعًا ثابتًا داخل شيء: be in the room.",
+      "نستخدم onto عندما تكون هناك حركة إلى سطح: The cat jumped onto the table.",
+      "نستخدم on عندما نصف موقعًا ثابتًا على سطح: The book is on the table.",
+      "نستخدم from للدلالة على نقطة البداية أو المصدر: from Cairo, from the university.",
+      "نستخدم out of للدلالة على الحركة من داخل شيء إلى خارجه: walk out of the building.",
+      "نستخدم through عندما تعني الحركة عبر داخل مساحة أو وسط: walk through the tunnel.",
+      "نستخدم across عندما نعني الانتقال من جانب إلى الجانب الآخر من سطح أو منطقة: walk across the street.",
+      "نستخدم between عادةً عند الحديث عن شخصين أو شيئين أو أكثر عندما تكون العلاقات منفصلة أو محددة.",
+      "نستخدم among عندما يكون الشيء ضمن مجموعة أو بين أفراد المجموعة بشكل عام.",
+      "نستخدم beside أو next to للدلالة على الموقع بجانب شيء.",
+      "نستخدم opposite للدلالة على وجود شيء في الجهة المقابلة.",
+      "نستخدم behind للدلالة على الخلف، وin front of للدلالة على الأمام.",
+      "نستخدم above للدلالة على موقع أعلى دون ضرورة وجود تماس، وon للدلالة على وجود تماس مع السطح.",
+      "نستخدم below للدلالة على موقع أدنى، بينما under غالبًا تشير إلى شيء أسفل شيء آخر وقد تكون العلاقة أكثر مباشرة.",
+      "نستخدم because of + noun أو noun phrase، وليس because of + complete clause.",
+      "نستخدم because + subject + verb لتقديم جملة سببية كاملة.",
+      "نستخدم due to غالبًا قبل noun phrase، مثل due to heavy rain.",
+      "نستخدم owing to بطريقة مشابهة لـ due to، خاصة في الأسلوب الرسمي.",
+      "نستخدم despite + noun أو gerund، وليس despite + complete clause مباشرة.",
+      "نستخدم in spite of + noun أو gerund، ولها معنى قريب جدًا من despite.",
+      "إذا أردنا استخدام جملة كاملة بعد despite أو in spite of، يمكن استخدام the fact that: despite the fact that he was tired.",
+      "نستخدم according to عندما ننسب معلومة إلى مصدر أو شخص: according to the report.",
+      "لا نستخدم according to للإعراب عن الرأي الشخصي للمتحدث بطريقة مباشرة مثل according to me في الإنجليزية الأكاديمية؛ يمكن استخدام in my opinion.",
+      "نستخدم by للدلالة على الفاعل في المبني للمجهول: The study was conducted by researchers.",
+      "نستخدم with للدلالة على الأداة أو الشيء المستخدم: The sample was analyzed with a microscope.",
+      "نستخدم about أو on مع موضوع الكلام أو الكتابة: a book about science، a study on language acquisition.",
+      "نستخدم of للدلالة على الملكية أو العلاقة أو الجزء من الكل: the results of the study.",
+      "نستخدم for للدلالة على الغرض أو المستفيد: a method for improving memory.",
+      "نستخدم to في بعض التراكيب التي تشير إلى العلاقة أو المقارنة: similar to, related to, relevant to.",
+      "لا ينبغي ترجمة to دائمًا على أنه 'إلى'؛ في بعض التراكيب يكون حرف جر ثابتًا، مثل be committed to.",
+      "بعد حرف الجر نستخدم noun أو pronoun أو gerund، وليس infinitive مباشرةً.",
+      "لذلك نقول interested in learning وليس interested in to learn.",
+      "نقول responsible for managing the project وليس responsible for to manage the project.",
+      "إذا كانت to حرف جر في تركيب مثل look forward to، يجب أن يأتي بعدها gerund: look forward to meeting.",
+      "بعض الأفعال تحتاج حرف جر ثابتًا: depend on, belong to, consist of, participate in.",
+      "بعض الصفات تحتاج حرف جر ثابتًا: interested in, responsible for, capable of, aware of.",
+      "بعض الأسماء تحتاج حرف جر ثابتًا: reason for, increase in, demand for, effect on.",
+      "depend on تعني يعتمد على، ولا نقول depend of.",
+      "consist of تعني يتكون من، ولا نقول consist from في الإنجليزية القياسية.",
+      "participate in تعني يشارك في، ولا نقول participate on.",
+      "focus on تعني يركز على.",
+      "concentrate on تعني يركز على.",
+      "contribute to تعني يساهم في، وبعد to هنا يمكن أن يأتي noun أو gerund: contribute to improving.",
+      "lead to تعني يؤدي إلى، وبعد to هنا يمكن أن يأتي noun أو gerund: lead to better results.",
+      "result in تعني يؤدي إلى نتيجة، بينما result from تعني ينتج عن سبب.",
+      "apply for تعني يتقدم بطلب للحصول على شيء، بينما apply to تعني يتقدم إلى مؤسسة أو تنطبق قاعدة على شيء.",
+      "compare with تستخدم غالبًا للمقارنة بين شيئين من حيث أوجه التشابه والاختلاف، بينما compare to قد تستخدم لتشبيه شيء بشيء آخر.",
+      "different from هو الاستخدام الشائع في الإنجليزية القياسية، رغم وجود different than في بعض أنواع الإنجليزية.",
+      "similar to وليس similar with.",
+      "interested in وليس interested on.",
+      "good at وليس good in عندما نتحدث عن مهارة أو قدرة.",
+      "afraid of وليس afraid from.",
+      "famous for وليس famous of.",
+      "responsible for وليس responsible of.",
+      "aware of وليس aware about في الاستخدام القياسي.",
+      "capable of وليس capable to في التركيب المعتاد.",
+      "PTE يختبر كثيرًا التراكيب التي يكون فيها حرف الجر جزءًا من collocation، لذلك يجب تعلم الكلمة مع حرف الجر.",
+      "عند رؤية فراغ قبل noun أو gerund، اسأل أولًا: هل توجد كلمة قبل الفراغ تتطلب حرف جر معينًا؟",
+      "إذا جاء حرف الجر قبل verb، فغالبًا يأتي الفعل بصيغة gerund: interested in studying.",
+      "لا تستخدم infinitive بعد حرف الجر مباشرةً: interested in to study خطأ.",
+      "في PTE، يجب التمييز بين preposition وto-infinitive؛ to قد تكون حرف جر أو علامة infinitive.",
+      "التراكيب مثل want to study تستخدم to-infinitive، بينما look forward to studying تستخدم to كحرف جر.",
+      "الاختيار بين in وon وat يعتمد على نوع العلاقة الزمنية أو المكانية، بينما الاختيار في collocations يعتمد غالبًا على الكلمة نفسها.",
+      "من المفيد حفظ verb + preposition وadjective + preposition وnoun + preposition كوحدات لغوية كاملة.",
+      "في الكتابة الأكاديمية، due to وbecause of وowing to وdespite وin spite of شائعة، لكن يجب استخدامها مع التركيب الصحيح.",
+      "في PTE، لا تعتمد على الترجمة الحرفية من العربية لاختيار حرف الجر؛ اعتمد على المعنى والتركيب الإنجليزي."
+    ],
+    "examples": [
+      {
+        "en": "The study was conducted in 2025.",
+        "ar": "أُجريت الدراسة في عام 2025."
+      },
+      {
+        "en": "The seminar will be held on Monday.",
+        "ar": "ستُعقد الندوة يوم الاثنين."
+      },
+      {
+        "en": "The lecture starts at 9 a.m.",
+        "ar": "تبدأ المحاضرة في الساعة التاسعة صباحًا."
+      },
+      {
+        "en": "She has worked at the university for five years.",
+        "ar": "عملت في الجامعة لمدة خمس سنوات."
+      },
+      {
+        "en": "She has worked at the university since 2021.",
+        "ar": "عملت في الجامعة منذ عام 2021."
+      },
+      {
+        "en": "The researchers collected data during the experiment.",
+        "ar": "جمع الباحثون البيانات أثناء التجربة."
+      },
+      {
+        "en": "The researchers discussed the results while they were reviewing the data.",
+        "ar": "ناقش الباحثون النتائج بينما كانوا يراجعون البيانات."
+      },
+      {
+        "en": "Please submit the application by Friday.",
+        "ar": "يرجى تقديم الطلب بحلول يوم الجمعة."
+      },
+      {
+        "en": "The laboratory will remain open until 8 p.m.",
+        "ar": "سيظل المختبر مفتوحًا حتى الساعة الثامنة مساءً."
+      },
+      {
+        "en": "The students are in the classroom.",
+        "ar": "الطلاب داخل الفصل الدراسي."
+      },
+      {
+        "en": "The books are on the table.",
+        "ar": "الكتب على الطاولة."
+      },
+      {
+        "en": "We met at the main entrance.",
+        "ar": "التقينا عند المدخل الرئيسي."
+      },
+      {
+        "en": "She traveled to London by train.",
+        "ar": "سافرت إلى لندن بالقطار."
+      },
+      {
+        "en": "He walked into the laboratory.",
+        "ar": "دخل إلى المختبر سيرًا."
+      },
+      {
+        "en": "The students walked across the bridge.",
+        "ar": "مشى الطلاب عبر الجسر إلى الجانب الآخر."
+      },
+      {
+        "en": "The researchers walked through the laboratory.",
+        "ar": "مشى الباحثون عبر المختبر."
+      },
+      {
+        "en": "The agreement was signed between the two institutions.",
+        "ar": "تم توقيع الاتفاقية بين المؤسستين."
+      },
+      {
+        "en": "The researcher was among the most experienced scientists in the group.",
+        "ar": "كان الباحث من بين أكثر العلماء خبرة في المجموعة."
+      },
+      {
+        "en": "The experiment was delayed because of technical problems.",
+        "ar": "تأخرت التجربة بسبب مشكلات تقنية."
+      },
+      {
+        "en": "The experiment was delayed because the equipment was unavailable.",
+        "ar": "تأخرت التجربة لأن المعدات لم تكن متاحة."
+      },
+      {
+        "en": "Despite the difficulties, the researchers completed the study.",
+        "ar": "على الرغم من الصعوبات، أكمل الباحثون الدراسة."
+      },
+      {
+        "en": "Despite having limited resources, the team achieved good results.",
+        "ar": "على الرغم من امتلاك موارد محدودة، حقق الفريق نتائج جيدة."
+      },
+      {
+        "en": "According to the report, the number of participants increased.",
+        "ar": "وفقًا للتقرير، زاد عدد المشاركين."
+      },
+      {
+        "en": "The researchers are interested in investigating the causes of the problem.",
+        "ar": "يهتم الباحثون بالتحقيق في أسباب المشكلة."
+      },
+      {
+        "en": "The success of the project depends on effective planning.",
+        "ar": "يعتمد نجاح المشروع على التخطيط الفعال."
+      },
+      {
+        "en": "The study focuses on improving students' academic performance.",
+        "ar": "تركز الدراسة على تحسين الأداء الأكاديمي للطلاب."
+      },
+      {
+        "en": "Regular exercise contributes to improving concentration.",
+        "ar": "تساهم ممارسة الرياضة بانتظام في تحسين التركيز."
+      },
+      {
+        "en": "Lack of sleep can lead to poor academic performance.",
+        "ar": "يمكن أن يؤدي نقص النوم إلى ضعف الأداء الأكاديمي."
+      },
+      {
+        "en": "The results resulted from careful analysis of the data.",
+        "ar": "نتجت النتائج عن تحليل دقيق للبيانات."
+      },
+      {
+        "en": "The new method resulted in more accurate measurements.",
+        "ar": "أدت الطريقة الجديدة إلى قياسات أكثر دقة."
+      }
+    ],
+    "commonMistakes": [
+      "الخلط بين in وon وat مع الزمن: in Monday خطأ، والصحيح on Monday؛ at 2025 خطأ، والصحيح in 2025.",
+      "الخلط بين for وsince: for 2020 خطأ إذا كانت نقطة بداية؛ الصحيح since 2020.",
+      "استخدام during قبل جملة كاملة: during I was studying خطأ؛ الصحيح while I was studying.",
+      "الخلط بين by وuntil: by Friday تعني قبل أو في موعد أقصاه الجمعة، بينما until Friday تعني استمرار الشيء حتى الجمعة.",
+      "استخدام because of قبل جملة كاملة: because of he was tired خطأ؛ الصحيح because he was tired أو because of his tiredness.",
+      "استخدام despite متبوعًا بجملة مباشرة: despite he was tired خطأ؛ الصحيح despite being tired أو despite the fact that he was tired.",
+      "استخدام to-infinitive بعد حرف الجر: interested in to study خطأ؛ الصحيح interested in studying.",
+      "الخلط بين look forward to وwant to: look forward to meeting صحيح، بينما want to meet صحيح.",
+      "استخدام depend of بدل depend on.",
+      "استخدام consist from بدل consist of.",
+      "استخدام participate on بدل participate in.",
+      "استخدام similar with بدل similar to.",
+      "استخدام responsible of بدل responsible for.",
+      "استخدام good in بدل good at عندما نتحدث عن مهارة: She is good at mathematics.",
+      "استخدام afraid from بدل afraid of.",
+      "استخدام aware about بدل aware of في الاستخدام القياسي.",
+      "الخلط بين result in وresult from: result in تشير إلى النتيجة، بينما result from تشير إلى السبب أو المصدر.",
+      "الخلط بين in وinto: in تصف موقعًا ثابتًا، بينما into تصف حركة إلى الداخل.",
+      "الخلط بين on وonto: on تصف موقعًا على سطح، بينما onto تصف حركة إلى سطح.",
+      "الخلط بين across وthrough: across تعني من جانب إلى آخر، بينما through تعني عبر داخل مساحة أو وسط.",
+      "استخدام by a car عندما يكون المقصود وسيلة النقل بشكل عام؛ الصحيح by car.",
+      "الاعتماد على ترجمة حرف الجر من العربية بدل تعلم collocation الإنجليزية.",
+      "نسيان أن بعض الأفعال والصفات والأسماء تتطلب حروف جر محددة، لذلك لا يمكن اختيار الحرف اعتمادًا على المعنى وحده."
+    ],
+    "quiz": [
+      {
+        "type": "multiple_choice",
+        "prompt": "The study was conducted ___ 2025.",
+        "options": [
+          "at",
+          "on",
+          "in",
+          "by"
+        ],
+        "correct": 2,
+        "answer": "in",
+        "why": "نستخدم in مع السنوات."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The examination will take place ___ Monday.",
+        "options": [
+          "in",
+          "at",
+          "on",
+          "by"
+        ],
+        "correct": 2,
+        "answer": "on",
+        "why": "نستخدم on مع أيام الأسبوع."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The lecture starts ___ 10 a.m.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "for"
+        ],
+        "correct": 2,
+        "answer": "at",
+        "why": "نستخدم at مع الوقت المحدد."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She has worked here ___ five years.",
+        "options": [
+          "since",
+          "for",
+          "during",
+          "by"
+        ],
+        "correct": 1,
+        "answer": "for",
+        "why": "five years مدة زمنية، لذلك نستخدم for."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She has worked here ___ 2021.",
+        "options": [
+          "for",
+          "since",
+          "during",
+          "until"
+        ],
+        "correct": 1,
+        "answer": "since",
+        "why": "2021 نقطة بداية زمنية، لذلك نستخدم since."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers collected the data ___ the experiment.",
+        "options": [
+          "while",
+          "during",
+          "since",
+          "by"
+        ],
+        "correct": 1,
+        "answer": "during",
+        "why": "بعد during نستخدم اسمًا أو noun phrase: the experiment."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers collected the data ___ they were conducting the experiment.",
+        "options": [
+          "during",
+          "while",
+          "by",
+          "until"
+        ],
+        "correct": 1,
+        "answer": "while",
+        "why": "بعد while تأتي جملة تحتوي على subject + verb."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Please submit the report ___ Friday.",
+        "options": [
+          "until",
+          "during",
+          "by",
+          "since"
+        ],
+        "correct": 2,
+        "answer": "by",
+        "why": "by تعني أن التقرير يجب أن يكون مقدمًا في موعد أقصاه الجمعة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The library is open ___ 9 p.m.",
+        "options": [
+          "by",
+          "until",
+          "since",
+          "during"
+        ],
+        "correct": 1,
+        "answer": "until",
+        "why": "until تستخدم للدلالة على استمرار الحالة حتى وقت معين."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The students are interested ___ learning new skills.",
+        "options": [
+          "on",
+          "at",
+          "in",
+          "for"
+        ],
+        "correct": 2,
+        "answer": "in",
+        "why": "interested in هو collocation ثابت، وبعد in نستخدم gerund."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The success of the project depends ___ effective planning.",
+        "options": [
+          "of",
+          "on",
+          "at",
+          "for"
+        ],
+        "correct": 1,
+        "answer": "on",
+        "why": "depend on هو التركيب الصحيح."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The course consists ___ six units.",
+        "options": [
+          "from",
+          "in",
+          "of",
+          "with"
+        ],
+        "correct": 2,
+        "answer": "of",
+        "why": "consist of هو التركيب الصحيح."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Students are encouraged to participate ___ discussions.",
+        "options": [
+          "on",
+          "at",
+          "in",
+          "for"
+        ],
+        "correct": 2,
+        "answer": "in",
+        "why": "participate in هو التركيب الصحيح."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The new method is similar ___ the previous method.",
+        "options": [
+          "with",
+          "for",
+          "to",
+          "from"
+        ],
+        "correct": 2,
+        "answer": "to",
+        "why": "similar to هو التركيب الصحيح."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "She is responsible ___ managing the research team.",
+        "options": [
+          "of",
+          "for",
+          "to",
+          "with"
+        ],
+        "correct": 1,
+        "answer": "for",
+        "why": "responsible for هو التركيب الصحيح."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers focused ___ improving the accuracy of the test.",
+        "options": [
+          "in",
+          "at",
+          "on",
+          "for"
+        ],
+        "correct": 2,
+        "answer": "on",
+        "why": "focus on هو التركيب الصحيح، وبعد حرف الجر يأتي improving بصيغة gerund."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Lack of sleep can lead ___ poor academic performance.",
+        "options": [
+          "for",
+          "on",
+          "at",
+          "to"
+        ],
+        "correct": 3,
+        "answer": "to",
+        "why": "lead to هو التركيب الصحيح، وto هنا حرف جر."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Regular exercise contributes to ___ concentration.",
+        "options": [
+          "improve",
+          "improving",
+          "improved",
+          "to improve"
+        ],
+        "correct": 1,
+        "answer": "improving",
+        "why": "to في contribute to حرف جر، لذلك يأتي بعده noun أو gerund."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The experiment was delayed ___ technical problems.",
+        "options": [
+          "because",
+          "because of",
+          "although",
+          "while"
+        ],
+        "correct": 1,
+        "answer": "because of",
+        "why": "بعد because of نستخدم noun phrase: technical problems."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "___ the difficulties, the researchers completed the project.",
+        "options": [
+          "Because",
+          "Despite",
+          "Although",
+          "While"
+        ],
+        "correct": 1,
+        "answer": "Despite",
+        "why": "Despite يأتي بعدها noun أو gerund: despite the difficulties."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The researchers continued the study ___ having limited resources.",
+        "options": [
+          "despite",
+          "because",
+          "because of",
+          "during"
+        ],
+        "correct": 0,
+        "answer": "despite",
+        "why": "بعد despite يمكن استخدام gerund: despite having limited resources."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "I am interested in to study biology.",
+          "I am interested on studying biology.",
+          "I am interested in studying biology.",
+          "I am interested at studying biology."
+        ],
+        "correct": 2,
+        "answer": "I am interested in studying biology.",
+        "why": "interested in + gerund هو التركيب الصحيح."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The results ___ careful analysis of the data.",
+        "options": [
+          "resulted in",
+          "resulted from",
+          "resulted to",
+          "resulted on"
+        ],
+        "correct": 1,
+        "answer": "resulted from",
+        "why": "result from تعني أن شيئًا نتج عن سبب، وهنا careful analysis هو السبب."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The new policy resulted ___ a significant reduction in costs.",
+        "options": [
+          "from",
+          "on",
+          "in",
+          "of"
+        ],
+        "correct": 2,
+        "answer": "in",
+        "why": "result in تعني يؤدي إلى نتيجة، وهنا reduction هي النتيجة."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "She went into the room and sat down.",
+          "She went in the room and entered into it.",
+          "She went on the room.",
+          "She went at the room."
+        ],
+        "correct": 0,
+        "answer": "She went into the room and sat down.",
+        "why": "into تستخدم مع الحركة من الخارج إلى الداخل."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence correctly describes transport in general?",
+        "options": [
+          "We traveled by the train.",
+          "We traveled by a train.",
+          "We traveled by train.",
+          "We traveled on train."
+        ],
+        "correct": 2,
+        "answer": "We traveled by train.",
+        "why": "بعد by مع وسيلة النقل العامة نستخدم الاسم دون article."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The students walked ___ the tunnel.",
+        "options": [
+          "across",
+          "through",
+          "onto",
+          "between"
+        ],
+        "correct": 1,
+        "answer": "through",
+        "why": "through تعني الحركة عبر داخل مساحة أو وسط، مثل tunnel."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "The students walked ___ the bridge to reach the other side.",
+        "options": [
+          "through",
+          "across",
+          "into",
+          "among"
+        ],
+        "correct": 1,
+        "answer": "across",
+        "why": "across تستخدم للحركة من جانب إلى الجانب الآخر."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "The study was conducted because of the researchers worked hard.",
+          "The study was conducted because the researchers worked hard.",
+          "The study was conducted despite the researchers worked hard.",
+          "The study was conducted during the researchers worked hard."
+        ],
+        "correct": 1,
+        "answer": "The study was conducted because the researchers worked hard.",
+        "why": "because يأتي قبل جملة كاملة تحتوي على subject + verb، بينما because of يأتي قبل noun phrase."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which sentence is correct?",
+        "options": [
+          "They look forward to meet you.",
+          "They look forward to meeting you.",
+          "They look forward meeting you.",
+          "They look forward to met you."
+        ],
+        "correct": 1,
+        "answer": "They look forward to meeting you.",
+        "why": "to في look forward to حرف جر، لذلك يأتي بعده gerund."
+      }
+    ],
+    "markers": [
+      "in",
+      "on",
+      "at",
+      "by",
+      "for",
+      "since",
+      "during",
+      "while",
+      "until",
+      "from",
+      "to",
+      "into",
+      "onto",
+      "through",
+      "across",
+      "between",
+      "among",
+      "because of",
+      "due to",
+      "owing to",
+      "despite",
+      "in spite of",
+      "according to",
+      "depend on",
+      "consist of",
+      "participate in",
+      "focus on",
+      "contribute to",
+      "lead to",
+      "result in",
+      "result from",
+      "interested in",
+      "responsible for",
+      "similar to",
+      "capable of",
+      "aware of"
+    ]
+  }
+]

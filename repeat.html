@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTE Trainer — Repeat Sentence</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/theme.js"></script>
+</head>
+<body>
+
+  <div class="shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">PTE</div>
+        <div>
+          <div class="brand-name">PTE Trainer</div>
+          <div class="brand-sub">Practice smarter</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">
+          <span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span>
+        </a>
+        <a class="nav-link active" href="repeat.html">
+          <span class="nav-icon">🗣️</span><span class="nav-label">Repeat Sentence</span>
+        </a>
+        <a class="nav-link" href="vocabulary.html">
+          <span class="nav-icon">📚</span><span class="nav-label">Vocabulary</span>
+        </a>
+        <a class="nav-link" href="grammar.html">
+          <span class="nav-icon">📘</span><span class="nav-label">Grammar</span>
+        </a>
+        <a class="nav-link" href="quiz.html">
+          <span class="nav-icon">📝</span><span class="nav-label">اختبارات</span>
+        </a>
+        <a class="nav-link" href="add-word.html">
+          <span class="nav-icon">➕</span><span class="nav-label">إضافة كلمات</span>
+        </a>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">
+        <span class="theme-ico icon-day">☀️</span>
+        <span class="theme-ico icon-night">🌙</span>
+        <span class="theme-label">Dark</span>
+      </button>
+
+      <div class="sidebar-footer">PTE Trainer · v2</div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="page">
+
+        <header class="page-header">
+          <h1 class="page-title">Repeat Sentence</h1>
+          <p class="page-subtitle">Listen, repeat aloud, and get instant feedback.</p>
+        </header>
+
+        <!-- Progress + difficulty -->
+        <section class="card">
+          <div class="card-title">
+            <span>Question <strong id="question-number">1 / 100</strong></span>
+            <span id="word-count" class="pill info">0 words</span>
+          </div>
+
+          <div class="progress-track">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+
+          <div class="toolbar">
+            <select id="difficulty-select" class="select">
+              <option value="random">Random</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Sentence card -->
+        <section class="card">
+          <div class="card-title">
+            <span>Repeat the sentence</span>
+          </div>
+
+          <div id="sentence-display" class="sentence-display">
+            Listen carefully…
+          </div>
+
+          <div class="controls-row">
+            <button id="play-button" class="btn" type="button">▶ Play</button>
+            <button id="show-sentence-button" class="btn btn-secondary" type="button" disabled>
+              👁 Show Sentence
+            </button>
+            <span id="audio-status" class="pill">Ready</span>
+          </div>
+        </section>
+
+        <!-- Recording -->
+        <section class="card">
+          <div class="card-title">
+            <span>Your Response</span>
+            <span id="recording-status" class="pill">Ready</span>
+          </div>
+
+          <div class="controls-row">
+            <button id="record-button" class="btn btn-record" type="button">🎤 Start Recording</button>
+            <button id="stop-button" class="btn btn-danger" type="button" disabled>⏹ Stop</button>
+          </div>
+
+          <div id="speech-result" class="status-text" style="margin-top: 16px;">
+            Your answer will appear here.
+          </div>
+        </section>
+
+        <!-- Results -->
+        <section class="card">
+          <div class="card-title"><span>Results</span></div>
+
+          <div class="result-grid">
+            <div class="result-card">
+              <div class="rc-label">Practice Score</div>
+              <div class="rc-value gauge" id="practice-score">0</div>
+            </div>
+            <div class="result-card">
+              <div class="rc-label">Accuracy</div>
+              <div class="rc-value value-cyan" id="accuracy-score">0%</div>
+            </div>
+            <div class="result-card">
+              <div class="rc-label">Correct</div>
+              <div class="rc-value value-green" id="correct-count">0</div>
+            </div>
+            <div class="result-card">
+              <div class="rc-label">Wrong</div>
+              <div class="rc-value value-red" id="wrong-count">0</div>
+            </div>
+            <div class="result-card">
+              <div class="rc-label">Missing</div>
+              <div class="rc-value value-amber" id="missing-count">0</div>
+            </div>
+            <div class="result-card">
+              <div class="rc-label">Extra</div>
+              <div class="rc-value value-pink" id="extra-count">0</div>
+            </div>
+            <div class="result-card">
+              <div class="rc-label">Performance</div>
+              <div class="rc-value value-violet" id="performance-result">—</div>
+            </div>
+          </div>
+
+          <div class="card-title" style="margin-top: 22px;"><span>Sentence Comparison</span></div>
+          <div id="comparison-result" class="comparison-wrap status-text">
+            Your comparison will appear here.
+          </div>
+          <div id="feedback-result" class="feedback-block status-text">
+            Your feedback will appear here.
+          </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="card pagination">
+          <button id="previous-button" class="btn btn-secondary" type="button" disabled>← Previous</button>
+          <span class="position-label">Navigate between questions</span>
+          <button id="next-button" class="btn" type="button">Next →</button>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+
+</body>
+</html>
