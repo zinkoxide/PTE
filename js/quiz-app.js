@@ -591,6 +591,11 @@ function finishQuiz() {
     const modeCorrect = modeRecords.filter((r) => r.correct).length;
     stats = recordAttempt(stats, type, modeCorrect, modeRecords.length);
   });
+  stats = {
+    ...stats,
+    history: [...(stats.history || []), { t: Date.now(), percent }].slice(-20)
+  };
+  saveStats(stats);
 
   resultScore.textContent = `${percent}%`;
   resultCorrect.textContent = correctCount;

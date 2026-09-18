@@ -12,8 +12,18 @@ import {
 import {
   loadStudyState,
   setStudyStatus,
-  getStudyStatus
+  getStudyStatus,
+  getStudyEntry,
+  isDue,
+  judgeStudy,
+  countDueToday,
+  loadPronState,
+  recordPronunciation,
+  getPronunciation,
+  needsPronunciation
 } from "./storage.js";
+import { SpeechEngine } from "./speech.js";
+import { wordMatches } from "./pronounce.js";
 
 /* --------------------------------------
    State
@@ -48,8 +58,11 @@ const wordFamily = $("word-family");
 const commonMistakes = $("common-mistakes");
 const previousButton = $("previous-button");
 const nextButton = $("next-button");
+const floatNext = $("float-next");
 const backButton = $("back-button");
 const audioButton = $("audio-button");
+const pronunciationButton = $("pronunciation-button");
+const pronunciationFeedback = $("pronunciation-feedback");
 const learnedButton = $("learned-button");
 const reviewButton = $("review-button");
 const studyStatus = $("study-status");
@@ -57,6 +70,12 @@ const studyFilter = $("study-filter");
 const searchInput = $("vocabulary-search");
 const clearSearchButton = $("clear-search");
 const searchResultsCount = $("search-results-count");
+const pronSummary = $("pron-summary");
+const pronStats = $("pron-stats");
+const srsPanel = $("srs-panel");
+const srsWord = $("srs-word");
+const srsYes = $("srs-yes");
+const srsNo = $("srs-no");
 const studyCount = $("study-count");
 const searchMatchInfo = $("search-match-info");
 const cefrFilter = $("cefr-filter");
@@ -150,7 +169,8 @@ function updateStudyStatus() {
   const item = filteredVocabulary[currentIndex];
   if (!item) return;
 
-  const status = getStudyStatus(item.word);
+  const entry = getStudyEntry(item.word);
+  const status = entry ? entry.status : null;
 
   learnedButton.classList.toggle("active-learned", status === "learned");
   reviewButton.classList.toggle("active-review", status === "review");
@@ -161,6 +181,45 @@ function updateStudyStatus() {
       : status === "review"
         ? "↻ Added to review."
         : "Not studied yet.";
+
+  if (srsPanel) {
+    const due = Boolean(entry) && isDue(item.word);
+    srsPanel.hidden = !due;
+    if (due && srsWord) srsWord.textContent = item.word;
+  }
+}
+
+function updatePronunciationStats() {
+  const item = filteredVocabulary[currentIndex];
+  if (!pronStats) return;
+
+  if (!item) {
+    pronStats.hidden = true;
+    return;
+  }
+  const pron = getPronunciation(item.word);
+  if (!pron || !pron.attempts) {
+    pronStats.hidden = true;
+    pronStats.className = "pron-pill";
+    return;
+  }
+  pronStats.hidden = false;
+  pronStats.classList.toggle("needs-attention", pron.lastCorrect === false);
+  pronStats.textContent =
+    pron.lastCorrect === false
+      ? `🎤 تحتاج نطقاً — ${pron.correct}/${pron.attempts}`
+      : `🎤 ${pron.correct}/${pron.attempts} نطق صحيح`;
+}
+
+function updatePronSummary() {
+  if (!pronSummary) return;
+  const entries = Object.values(loadPronState());
+  const attempts = entries.reduce((sum, e) => sum + e.attempts, 0);
+  const correct = entries.reduce((sum, e) => sum + e.correct, 0);
+  pronSummary.hidden = !attempts;
+  if (attempts) {
+    pronSummary.textContent = `🎤 ${correct}/${attempts} نطق صحيح`;
+  }
 }
 
 function toggleStudyStatus(status) {
@@ -180,11 +239,12 @@ function toggleStudyStatus(status) {
 }
 
 function updateStudyCount() {
-  const statuses = Object.values(loadStudyState());
-  const learned = statuses.filter((s) => s === "learned").length;
-  const review = statuses.filter((s) => s === "review").length;
+  const entries = Object.values(loadStudyState());
+  const learned = entries.filter((e) => e.status === "learned").length;
+  const review = entries.filter((e) => e.status === "review").length;
+  const due = countDueToday();
   if (studyCount) {
-    studyCount.textContent = `✓ ${learned} learned · ↻ ${review} review`;
+    studyCount.textContent = `✓ ${learned} learned · ↻ ${review} review · ⏰ ${due} due`;
   }
 }
 
@@ -195,6 +255,10 @@ function matchesStudyFilter(item) {
       return status === "learned";
     case "review":
       return status === "review";
+    case "due":
+      return Boolean(getStudyEntry(item.word)) && isDue(item.word);
+    case "needs-pron":
+      return needsPronunciation(item.word);
     case "unstudied":
       return status === null;
     default:
@@ -205,25 +269,187 @@ function matchesStudyFilter(item) {
 learnedButton.addEventListener("click", () => toggleStudyStatus("learned"));
 reviewButton.addEventListener("click", () => toggleStudyStatus("review"));
 
+srsYes.addEventListener("click", () => {
+  const item = filteredVocabulary[currentIndex];
+  if (!item) return;
+  judgeStudy(item.word, true);
+  updateStudyStatus();
+  updateStudyCount();
+});
+
+srsNo.addEventListener("click", () => {
+  const item = filteredVocabulary[currentIndex];
+  if (!item) return;
+  judgeStudy(item.word, false);
+  updateStudyStatus();
+  updateStudyCount();
+});
+
 /* --------------------------------------
    Audio playback
 -------------------------------------- */
 
-audioButton.addEventListener("click", () => {
+function playCurrentAudio() {
   const item = filteredVocabulary[currentIndex];
   if (!item) return;
 
   const path = item.audio || getWordAudio(item.word);
   if (!path) {
     console.log("No vocabulary audio available yet.");
-    studyStatus.textContent = "Audio not available.";
-    return;
+    if (studyStatus) studyStatus.textContent = "Audio not available.";
+    return false;
   }
 
   const audio = new Audio(path);
   audio.play().catch((error) => {
     console.error("Unable to play vocabulary audio:", error);
   });
+  return true;
+}
+
+audioButton.addEventListener("click", playCurrentAudio);
+
+/* --------------------------------------
+   Pronunciation check
+-------------------------------------- */
+
+let speechEngine = null;
+let speechMonitor = null;
+const PRON_TIMEOUT_MS = 9000;
+
+function setPronunciationState(state, message) {
+  if (!pronunciationFeedback) return;
+  pronunciationFeedback.hidden = false;
+  pronunciationFeedback.className = `pron-feedback ${state}`;
+  pronunciationFeedback.innerHTML = message;
+  pronunciationButton.classList.toggle("listening", state === "listening");
+  pronunciationButton.textContent =
+    state === "listening" ? "⏹ إيقاف" : "🎤 تحقق من النطق";
+  [audioButton, learnedButton, reviewButton, previousButton, nextButton, floatNext].forEach(
+    (button) => {
+      if (button) button.disabled = state === "listening";
+    }
+  );
+}
+
+function resetPronunciation() {
+  stopPronunciationCheck();
+  if (!pronunciationButton || !pronunciationFeedback) return;
+  pronunciationButton.classList.remove("listening");
+  pronunciationButton.textContent = "🎤 تحقق من النطق";
+  pronunciationFeedback.hidden = true;
+  pronunciationFeedback.className = "pron-feedback";
+  [audioButton, learnedButton, reviewButton, previousButton, nextButton, floatNext].forEach(
+    (button) => {
+      if (button) button.disabled = false;
+    }
+  );
+  if (filteredVocabulary.length) {
+    const item = filteredVocabulary[currentIndex];
+    if (item && currentIndex >= filteredVocabulary.length - 1) {
+      if (floatNext) floatNext.hidden = true;
+    }
+  }
+}
+
+function stopPronunciationCheck() {
+  if (speechMonitor) {
+    clearTimeout(speechMonitor);
+    speechMonitor = null;
+  }
+  if (speechEngine && speechEngine.isListening) {
+    speechEngine.stop();
+  }
+}
+
+function startPronunciationCheck() {
+  const item = filteredVocabulary[currentIndex];
+  if (!item || !item.word) return;
+
+  if (!speechEngine) {
+    try {
+      speechEngine = new SpeechEngine();
+    } catch (error) {
+      setPronunciationState("error", "✋ التعرف على الصوت غير متاح في هذا المتصفح.");
+      return;
+    }
+  }
+  if (!speechEngine.isSupported()) {
+    setPronunciationState("error", "✋ متصفحك لا يدعم التحقق من النطق — جرّب Chrome أو Edge.");
+    return;
+  }
+
+  speechEngine.onStart = () => {
+    setPronunciationState("listening", "🎧 استمع الآن… اقرأ الكلمة بصوتٍ واضح");
+  };
+  speechEngine.onResult = (transcript, confidence) => {
+    const spoken = String(transcript || "").trim();
+    const match = wordMatches(item.word, spoken);
+    recordPronunciation(item.word, match);
+    updatePronunciationStats();
+    updatePronSummary();
+    if (match) {
+      const conf = Math.round((confidence || 0) * 100);
+      setPronunciationState(
+        "good",
+        `✅ صحيح! نطق ممتاز للكلمة «${escapeHTML(item.word)}»` +
+          (conf ? ` · الثقة ${conf}%` : "") +
+          "."
+      );
+    } else {
+      setPronunciationState(
+        "bad",
+        `❌ ليس صحيحاً — حاول مرة أخرى<br>` +
+          `<span class="pron-heard">سُمِع: “${escapeHTML(spoken || "…")}”</span>`
+      );
+      playCurrentAudio();
+    }
+  };
+  speechEngine.onError = (error) => {
+    if (error === "not-allowed" || error === "service-not-allowed") {
+      setPronunciationState("error", "🔇 يُرجى السماح باستخدام الميكروفون ثم المحاولة مجدداً.");
+    } else if (error === "no-speech") {
+      setPronunciationState("bad", "🤔 لم أسمع شيئاً — حاول مرة أخرى");
+    } else if (error === "network") {
+      setPronunciationState("error", "⚠️ فشل الاتصال بخدمة التعرف — تحقق من الإنترنت.");
+    } else if (error === "aborted") {
+      resetPronunciation();
+    } else {
+      setPronunciationState("error", `⚠️ حدث خطأ أثناء الاستماع (${escapeHTML(error || "unknown")}).`);
+    }
+  };
+  speechEngine.onEnd = () => {
+    if (speechMonitor) {
+      clearTimeout(speechMonitor);
+      speechMonitor = null;
+    }
+    pronunciationButton.classList.remove("listening");
+  };
+
+  try {
+    speechEngine.start();
+  } catch (error) {
+    resetPronunciation();
+    setPronunciationState("error", "⚠️ تعذر بدء الاستماع — تأكد من إذن الميكروفون.");
+    return;
+  }
+
+  speechMonitor = setTimeout(() => {
+    speechMonitor = null;
+    if (speechEngine && speechEngine.isListening) {
+      speechEngine.stop();
+      setPronunciationState("bad", "⏱ انتهت مهلة الاستماع — حاول مرة أخرى");
+    }
+  }, PRON_TIMEOUT_MS);
+}
+
+pronunciationButton.addEventListener("click", () => {
+  if (speechEngine && speechEngine.isListening) {
+    stopPronunciationCheck();
+    resetPronunciation();
+    return;
+  }
+  startPronunciationCheck();
 });
 
 /* --------------------------------------
@@ -368,14 +594,20 @@ function clearWordDisplay() {
   commonMistakes.textContent = "—";
   previousButton.disabled = true;
   nextButton.disabled = true;
+  if (floatNext) floatNext.hidden = true;
   audioButton.disabled = true;
+  pronunciationButton.disabled = true;
   learnedButton.disabled = true;
   reviewButton.disabled = true;
   searchMatchInfo.textContent = "";
   studyStatus.textContent = "";
+  if (pronStats) pronStats.hidden = true;
+  if (srsPanel) srsPanel.hidden = true;
 }
 
 function updateWord() {
+  resetPronunciation();
+
   if (!filteredVocabulary.length) {
     clearWordDisplay();
     return;
@@ -405,11 +637,18 @@ function updateWord() {
   previousButton.disabled = currentIndex === 0;
   nextButton.disabled = currentIndex === filteredVocabulary.length - 1;
   audioButton.disabled = false;
+  pronunciationButton.disabled = false;
   learnedButton.disabled = false;
   reviewButton.disabled = false;
+  if (floatNext) {
+    floatNext.hidden = currentIndex >= filteredVocabulary.length - 1;
+    floatNext.disabled = false;
+  }
 
   updateSearchMatchInfo();
   updateStudyStatus();
+  updatePronunciationStats();
+  updatePronSummary();
 }
 
 /* --------------------------------------
@@ -443,17 +682,20 @@ studyFilter.addEventListener("change", (event) => {
   filterVocabulary();
 });
 
+function goNext() {
+  if (currentIndex >= filteredVocabulary.length - 1) return;
+  currentIndex++;
+  updateWord();
+}
+
 previousButton.addEventListener("click", () => {
   if (currentIndex <= 0) return;
   currentIndex--;
   updateWord();
 });
 
-nextButton.addEventListener("click", () => {
-  if (currentIndex >= filteredVocabulary.length - 1) return;
-  currentIndex++;
-  updateWord();
-});
+nextButton.addEventListener("click", goNext);
+if (floatNext) floatNext.addEventListener("click", goNext);
 
 backButton.addEventListener("click", () => {
   window.location.href = "index.html";
@@ -472,9 +714,16 @@ async function initializeVocabulary() {
 
   filteredVocabulary = [...vocabulary];
   currentIndex = 0;
-  updateStudyCount();
-  updateSearchResultsCount();
-  updateWord();
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("study") === "due" || params.get("due") === "1") {
+    selectedStudyFilter = "due";
+    if (studyFilter) studyFilter.value = "due";
+    filterVocabulary();
+  } else {
+    updateStudyCount();
+    updateSearchResultsCount();
+    updateWord();
+  }
   console.log("Vocabulary application ready.");
 }
 

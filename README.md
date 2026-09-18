@@ -77,6 +77,30 @@ with the Vocabulary study status. The results screen shows your percentage,
 best score, best streak, per-mode breakdown in `localStorage`, and a full
 review of every question.
 
+## Vocabulary (`vocabulary.html`)
+
+- Searchable trainer over 1001 PTE words: search (word/meaning, Arabic
+  supported), filters (CEFR A1–C2, part of speech, study status), IPA,
+  details (meanings, collocations, synonyms, examples, word family, mistakes),
+  and MP3 playback (▶ Play).
+- Mark words **✓ Learned** / **↻ Review**. **Spaced repetition (SRS)**:
+  learned words are rescheduled (`+3d`, then ×1.5 per correct review, 1 day
+  after a miss); a **⏰ مراجعة مستحقة** filter and due-count pill surface
+  today's queue, and a per-word "هل تتذكرها؟" panel judges each review.
+  State lives in `localStorage` (`pte.vocab.study.v1`).
+- **🎤 تحقق من النطق**: speak the current word and get instant feedback —
+  ✅ correct (with ASR **confidence %**) or ❌ "حاول مرة أخرى" with what was
+  heard and an automatic replay of the reference audio. Attempts are tracked
+  per word (🎤 3/5 pill) with a **🎤 تحتاج نطقاً** filter for failing words.
+  Requires **Chrome/Edge** and a secure context (e.g.
+  `http://127.0.0.1:5000/vocabulary.html`).
+
+## Dashboard (`index.html`)
+
+Live overview: vocabulary acquired, due reviews today, grammar/quiz/pron
+accuracy, a **last-14-days activity chart**, weak grammar lessons (best < 70%),
+and a daily SRS review banner linking into the review queue.
+
 ## Grammar (`grammar.html`)
 
 Works on any static server or fully offline. Browse **29 bilingual lessons**
@@ -107,7 +131,16 @@ practice with interactive quizzes:
   `multiple-choice` (`options` 4 + `answer` index/text) or `tf`/`true_false`/
   `true-false` (`correct` boolean / `answer` "True"/"False").
 
-## Validate data
+## Checks
+
+Run everything (data validation, JS syntax, CSS balance, and the unit
+harnesses in `tools/tests/`) with one command:
+
+```bash
+bash tools/run_checks.sh
+```
+
+Or just the data validator:
 
 ```bash
 python3 tools/validate_json.py

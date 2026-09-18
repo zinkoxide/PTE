@@ -48,7 +48,7 @@
         <span class="theme-label">Dark</span>
       </button>
 
-      <div class="sidebar-footer">PTE Trainer · v2</div>
+      <div class="sidebar-footer">PTE Trainer · v3</div>
     </aside>
 
     <!-- Main -->
@@ -84,15 +84,18 @@
             </select>
             <select id="study-filter" class="select">
               <option value="all">All words</option>
-              <option value="unstudied">Not studied</option>
+              <option value="due">⏰ مراجعة مستحقة</option>
               <option value="learned">Learned</option>
               <option value="review">Review</option>
+              <option value="needs-pron">🎤 تحتاج نطقاً</option>
+              <option value="unstudied">Not studied</option>
             </select>
           </div>
 
           <div class="toolbar">
             <span id="search-results-count" class="pill info">0 / 0 words</span>
             <span id="study-count" class="pill">✓ 0 learned · ↻ 0 review</span>
+            <span id="pron-summary" class="pill" hidden></span>
             <span id="search-match-info" class="pill"></span>
           </div>
 
@@ -117,11 +120,22 @@
             <div class="word-main" id="word">Word</div>
             <div class="word-pronunciation" id="pronunciation">/pronunciation/</div>
 
+            <div id="pron-stats" class="pron-pill" hidden></div>
+
             <div class="vocab-actions">
               <button id="audio-button" class="btn" type="button">▶ Play</button>
+              <button id="pronunciation-button" class="btn btn-record" type="button">🎤 تحقق من النطق</button>
               <button id="learned-button" class="btn btn-secondary study-btn" type="button">✓ Learned</button>
               <button id="review-button" class="btn btn-secondary study-btn" type="button">↻ Review</button>
             </div>
+
+            <div id="srs-panel" class="srs-panel" hidden>
+              <span class="srs-label">🔁 مراجعة مستحقة — هل تتذكر معنى «<strong id="srs-word">…</strong>»؟</span>
+              <button id="srs-yes" class="btn btn-sm srs-yes" type="button">✓ أتذكرها</button>
+              <button id="srs-no" class="btn btn-sm srs-no" type="button">✗ لا أتذكرها</button>
+            </div>
+
+            <div id="pronunciation-feedback" class="pron-feedback" hidden></div>
           </div>
         </section>
 
@@ -178,6 +192,8 @@
     </main>
 
   </div>
+
+  <button id="float-next" class="btn float-next" type="button" hidden aria-label="التالي">التالي ←</button>
 
   <script type="module" src="./js/vocab-app.js"></script>
 

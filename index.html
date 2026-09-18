@@ -48,7 +48,7 @@
         <span class="theme-label">Dark</span>
       </button>
 
-      <div class="sidebar-footer">PTE Trainer · v2</div>
+      <div class="sidebar-footer">PTE Trainer · v3</div>
     </aside>
 
     <!-- Main -->
@@ -71,6 +71,64 @@
           </p>
         </section>
 
+        <!-- Daily review (SRS) -->
+        <section id="dash-srs" class="card dash-srs" hidden>
+          <div class="dash-srs-main">
+            <div class="dash-srs-icon">🔁</div>
+            <div>
+              <h3 id="dash-srs-title">مراجعات مستحقة اليوم</h3>
+              <p id="dash-srs-detail"></p>
+            </div>
+          </div>
+          <a id="dash-srs-link" class="btn" href="vocabulary.html?study=due">ابدأ المراجعة الآن</a>
+        </section>
+
+        <!-- Overview stats -->
+        <section class="card dash-cards">
+          <div class="dash-card">
+            <div class="dash-card-icon">📚</div>
+            <div class="dash-card-value" id="dash-vocab">—</div>
+            <div class="dash-card-label">كلمات مكتسبة</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-icon">⏰</div>
+            <div class="dash-card-value" id="dash-due">—</div>
+            <div class="dash-card-label">مستحقة اليوم</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-icon">📘</div>
+            <div class="dash-card-value" id="dash-grammar">—</div>
+            <div class="dash-card-label">دقة القواعد</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-icon">📝</div>
+            <div class="dash-card-value" id="dash-quiz">—</div>
+            <div class="dash-card-label">دقة الاختبارات</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-icon">🎤</div>
+            <div class="dash-card-value" id="dash-pron">—</div>
+            <div class="dash-card-label">نطق صحيح</div>
+          </div>
+        </section>
+
+        <!-- Activity + weak areas -->
+        <section class="dash-panels">
+
+          <section class="card dash-panel">
+            <div class="card-title"><span>📈 النشاط — آخر 14 يوماً</span></div>
+            <div id="dash-chart" class="dash-chart"></div>
+          </section>
+
+          <section class="card dash-panel">
+            <div class="card-title"><span>🎯 نقاط الضعف في القواعد</span>
+              <a id="dash-missed-link" class="btn btn-sm btn-warn" href="grammar.html">💥 ركّز على أخطائك</a>
+            </div>
+            <div id="dash-weak" class="dash-weak"></div>
+          </section>
+
+        </section>
+
         <!-- Modes -->
         <section class="mode-grid">
 
@@ -91,7 +149,7 @@
               Explore 1000+ essential PTE words with meanings,
               collocations, examples, and pronunciation audio.
             </p>
-            <span class="mode-badge">1000+ words</span>
+            <span class="mode-badge" id="mode-badge-words">1000+ words</span>
           </button>
 
           <button class="mode-card" type="button" onclick="window.location.href='grammar.html'">
@@ -101,7 +159,7 @@
               Browse bilingual reference lessons on tenses, conditionals,
               and more, then practice with interactive quizzes.
             </p>
-            <span class="mode-badge">29 lessons</span>
+            <span class="mode-badge" id="mode-badge-grammar">29 lessons</span>
           </button>
 
           <button class="mode-card" type="button" onclick="window.location.href='quiz.html'">
@@ -111,7 +169,7 @@
               Quiz yourself with meaning→word, listening, cloze, and
               spelling questions over your vocabulary bank.
             </p>
-            <span class="mode-badge">4 quiz modes</span>
+            <span class="mode-badge" id="mode-badge-quiz">4 quiz modes</span>
           </button>
 
         </section>
@@ -120,6 +178,8 @@
     </main>
 
   </div>
+
+  <script type="module" src="./js/dashboard.js"></script>
 
 </body>
 </html>

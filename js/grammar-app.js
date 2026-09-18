@@ -6,7 +6,7 @@
 
 "use strict";
 
-import { loadGrammar, getGrammar, getCategories, getQuizItems, shuffle, shuffleOptions } from "./grammar.js";
+import { loadGrammar, getGrammar, getCategories, getQuizItems, shuffle, shuffleOptions, toSentences } from "./grammar.js";
 
 const STATS_KEY = "pte.grammar.stats.v1";
 
@@ -29,6 +29,8 @@ const lessonList = $("grammar-lesson-list");
 const lessonListNote = $("grammar-lesson-note");
 const detailBox = $("grammar-detail");
 const testAllButton = $("grammar-test-all");
+const testCatButton = $("grammar-test-cat");
+const testMissedButton = $("grammar-test-missed");
 const timerSelect = $("grammar-timer");
 const browseStats = $("grammar-browse-stats");
 const grammarSearch = $("grammar-search");
@@ -129,6 +131,15 @@ function saveStats(next) {
   }
 }
 
+function itemKey(item) {
+  return item.qid || `${item.lessonId}|${item.prompt}`;
+}
+
+function missedCount(stats) {
+  const map = (stats && stats.missed) || {};
+  return Object.keys(map).filter((key) => map[key] > 0).length;
+}
+
 function renderBrowseStats() {
   const stats = loadStats();
   const quizCount = getQuizItems().length;
@@ -136,13 +147,36 @@ function renderBrowseStats() {
     browseStats.innerHTML =
       `<span class="pill">${grammar.length} درساً</span>` +
       `<span class="pill">${quizCount} سؤالاً</span>`;
+    updateSideButtons();
     return;
   }
   const accuracy = Math.round((stats.correct / stats.total) * 100);
   browseStats.innerHTML =
     `<span class="pill info">المحاولات: ${stats.attempts}</span>` +
     `<span class="pill ok">الدقة: ${accuracy}%</span>` +
-    `<span class="pill">أفضل: ${stats.best}%</span>`;
+    `<span class="pill">أفضل: ${stats.best}%</span>` +
+    (missedCount(stats) ? `<span class="pill warn">💥 أخطاءك: ${missedCount(stats)}</span>` : "");
+  updateSideButtons();
+}
+
+function updateSideButtons() {
+  if (testCatButton) {
+    const catLessons = activeCategory === "all"
+      ? grammar.length
+      : grammar.filter((l) => l.category === activeCategory).length;
+    const catCount = grammar
+      .filter((l) => activeCategory === "all" || l.category === activeCategory)
+      .reduce((sum, l) => sum + (l.quiz || []).length, 0);
+    testCatButton.disabled = activeCategory === "all";
+    testCatButton.textContent = `🎯 اختبار فئة «${activeCategory === "all" ? "—" : activeCategory}» (${catCount})`;
+  }
+  if (testMissedButton) {
+    const total = missedCount(loadStats());
+    testMissedButton.disabled = total === 0;
+    testMissedButton.textContent = total
+      ? `💥 ركّز على أخطائك (${total})`
+      : "💥 ركّز على أخطائك";
+  }
 }
 
 gqrReset.addEventListener("click", () => {
@@ -225,6 +259,7 @@ function renderCategories() {
         c.classList.toggle("on", c.dataset.cat === activeCategory);
       });
       renderLessonList();
+      updateSideButtons();
     });
     catFilter.appendChild(chip);
   };
@@ -264,13 +299,15 @@ function renderLessonList() {
     row.type = "button";
     row.className = "lesson-row" + (selectedLessonId === lesson.id ? " on" : "");
     const best = stats.lessons && stats.lessons[lesson.id];
+    const weak = best != null && best < 70;
     row.innerHTML =
       `<span class="lesson-row-icon">${lesson.icon}</span>` +
       `<span class="lesson-row-body">` +
       `<span class="lesson-row-title">${escapeHTML(lesson.title)}</span>` +
       `<span class="lesson-row-meta">${escapeHTML(lesson.category)} · ${lesson.quiz.length} أسئلة</span>` +
       `</span>` +
-      (best ? `<span class="lesson-row-best">${best}%</span>` : "");
+      (best ? `<span class="lesson-row-best${weak ? " weak" : ""}">${best}%</span>` : "");
+    row.title = weak ? "درس يحتاج مزيداً من التدريب (أفضل نتيجة أقل من 70%)" : "";
     row.addEventListener("click", () => {
       selectedLessonId = lesson.id;
       activeTab = "summary";
@@ -310,32 +347,6 @@ function renderEmpty() {
   });
 }
 
-const ABBREVIATIONS = new Set([
-  "dr", "mr", "mrs", "ms", "prof", "st", "sr", "jr", "rev", "no",
-  "vs", "etc", "co", "inc", "ltd", "e.g", "i.e", "a.m", "p.m",
-  "u.s", "u.k", "b.c", "a.d", "fig", "pt", "pp"
-]);
-
-function toSentences(text) {
-  const parts = text.split(/\.\s+/);
-  const out = [];
-  let sentence = "";
-  for (const part of parts) {
-    const lastWord = (part.match(/([\p{L}\p{N}]+)\s*$/u) || [])[1] || "";
-    const isAbbreviation = ABBREVIATIONS.has(lastWord.toLowerCase().replace(/\.$/, ""));
-    sentence = sentence ? sentence + ". " + part : part;
-    if (!isAbbreviation) {
-      out.push(sentence);
-      sentence = "";
-    }
-  }
-  if (sentence) out.push(sentence);
-  return out
-    .map((s) => s.trim())
-    .filter(Boolean)
-    .map((s) => (/[.!؟]$/.test(s) ? s : s + "."));
-}
-
 function renderDetail(lesson) {
   const sb = escapeHTML;
   const stats = loadStats();
@@ -350,7 +361,7 @@ function renderDetail(lesson) {
     `<div class="lesson-hero-meta">` +
     `<span class="pill info">${sb(lesson.category)}</span>` +
     `<span class="pill">${lesson.quiz.length} أسئلة</span>` +
-    (best ? `<span class="pill ok">أفضل نتيجة: ${best}%</span>` : "") +
+    (best ? `<span class="pill ${best < 70 ? "warn" : "ok"}">أفضل نتيجة: ${best}%</span>` : "") +
     `</div>` +
     (lesson.markers && lesson.markers.length
       ? `<div class="lesson-markers">` +
@@ -424,16 +435,60 @@ testAllButton.addEventListener("click", () => {
   startQuizItems(getQuizItems().map(attach), { mode: "all", lessonId: null });
 });
 
+testCatButton.addEventListener("click", () => {
+  if (activeCategory === "all" || !activeCategory) return;
+  startQuizItems(getQuizItems({ categories: [activeCategory] }).map(attach), {
+    mode: "category",
+    category: activeCategory
+  });
+});
+
+testMissedButton.addEventListener("click", () => {
+  const stats = loadStats() || {};
+  const missedMap = stats.missed || {};
+  resetAttachSeq();
+  const all = getQuizItems().map(attach);
+  const missed = all.filter((item) => (missedMap[itemKey(item)] || 0) > 0);
+  if (!missed.length) {
+    toastMsg("لا توجد أخطاء مسجلة بعد — أتمّ اختباراً أولاً.");
+    return;
+  }
+  startQuizItems(missed, { mode: "missed", lessonId: null });
+});
+
+function toastMsg(message) {
+  const toast = $("grammar-toast");
+  if (!toast) return;
+  toast.textContent = message;
+  toast.className = "toast success";
+  toast.hidden = false;
+  setTimeout(() => {
+    toast.hidden = true;
+  }, 3000);
+}
+
 grammarSearch.addEventListener("input", () => {
   searchQuery = grammarSearch.value.trim().toLowerCase();
   renderLessonList();
 });
 
+let attachSeq = new Map();
+
+function resetAttachSeq() {
+  attachSeq = new Map();
+}
+
 function attach(item) {
-  return shuffleOptions({
-    ...item,
-    options: item.type === "mcq" ? [...item.options] : undefined
-  });
+  const key = `${item.lessonId}|${item.prompt}`;
+  const n = (attachSeq.get(key) || 0) + 1;
+  attachSeq.set(key, n);
+  return {
+    ...shuffleOptions({
+      ...item,
+      options: item.type === "mcq" ? [...item.options] : undefined
+    }),
+    qid: `${key}#${n}`
+  };
 }
 
 /* --------------------------------------
@@ -445,6 +500,7 @@ function startQuizItems(items, scope) {
     lessonListNote.textContent = "لا توجد أسئلة لهذا الاختبار.";
     return;
   }
+  resetAttachSeq();
   quizItems = shuffle(items);
   quizScope = scope;
   records = [];
@@ -646,12 +702,26 @@ function finishQuiz() {
     total: 0,
     lessons: {}
   };
+  const missed = {};
+  records.forEach((record) => {
+    if (!record.correct && !record.skipped && !record.timedOut) {
+      const key = itemKey(record);
+      missed[key] = (missed[key] || 0) + 1;
+    }
+  });
+  const mergedMissed = { ...(stats.missed || {}) };
+  for (const [key, count] of Object.entries(missed)) {
+    mergedMissed[key] = (mergedMissed[key] || 0) + count;
+  }
+
   const next = {
     ...stats,
     attempts: stats.attempts + 1,
     correct: stats.correct + correctCount,
     total: stats.total + total,
-    best: Math.max(stats.best || 0, percent)
+    best: Math.max(stats.best || 0, percent),
+    missed: mergedMissed,
+    history: [...(stats.history || []), { t: Date.now(), percent }].slice(-20)
   };
   if (quizScope.mode === "lesson" && quizScope.lessonId) {
     const prevBest = (stats.lessons && stats.lessons[quizScope.lessonId]) || 0;
@@ -728,6 +798,8 @@ function renderReview() {
 gqrRetry.addEventListener("click", () => {
   if (quizScope.mode === "lesson" && quizScope.lessonId) {
     startQuizItems(getQuizItems({ lessonId: quizScope.lessonId }).map(attach), quizScope);
+  } else if (quizScope.mode === "category" && quizScope.category) {
+    startQuizItems(getQuizItems({ categories: [quizScope.category] }).map(attach), quizScope);
   } else {
     startQuizItems(getQuizItems().map(attach), { mode: "all", lessonId: null });
   }

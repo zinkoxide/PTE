@@ -1,0 +1,7 @@
+{
+  "name": "pte-trainer",
+  "version": "3.14.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first PTE Academic trainer"
+}

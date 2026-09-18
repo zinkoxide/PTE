@@ -117,3 +117,30 @@ export function shuffleOptions(item) {
     answer: shuffled.findIndex((o) => o.i === item.answer)
   };
 }
+
+const SENTENCE_ABBREVIATIONS = new Set([
+  "dr", "mr", "mrs", "ms", "prof", "st", "sr", "jr", "rev", "no",
+  "vs", "etc", "co", "inc", "ltd", "e.g", "i.e", "a.m", "p.m",
+  "u.s", "u.k", "b.c", "a.d", "fig", "pt", "pp"
+]);
+
+export function toSentences(text) {
+  const parts = String(text).split(/\.\s+/);
+  const out = [];
+  let sentence = "";
+  for (const part of parts) {
+    const tokenMatch = part.match(/([\p{L}\p{N}]+(?:[.'-][\p{L}\p{N}]+)*)\s*$/u) || [];
+    const lastToken = tokenMatch[1] || "";
+    const isAbbreviation = SENTENCE_ABBREVIATIONS.has(lastToken.toLowerCase().replace(/\.+$/, ""));
+    sentence = sentence ? sentence + ". " + part : part;
+    if (!isAbbreviation) {
+      out.push(sentence);
+      sentence = "";
+    }
+  }
+  if (sentence) out.push(sentence);
+  return out
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((s) => (/[.!؟]$/.test(s) ? s : s + "."));
+}

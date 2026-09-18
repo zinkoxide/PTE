@@ -1,5 +1,78 @@
 # Changelog
 
+## v3.14 — Smart learning: SRS, dashboard, targeted grammar
+
+### Vocabulary — spaced repetition (SRS)
+- Study entries upgraded from `{ word: "learned" }` to
+  `{ word: { status, due, intervalDays, ease } }`; legacy data is migrated
+  automatically on load (`js/storage.js`).
+- Marking a word **✓ Learned** schedules its first review in **3 days**;
+  **↻ Review** makes it due immediately. A **⏰ مراجعة مستحقة** filter and a
+  **due count** in the toolbar show today's queue (`vocabulary.html?study=due`
+  deep-links straight into it).
+- Due words show an inline **SRS panel** on the card: "هل تتذكرها؟" with
+  **✓ أتذكرها / ✗ لا أتذكرها**. Remembering grows the interval (×1.5, capped
+  at 60 days); forgetting resets it to 1 day — a simple Leitner-style schedule.
+
+### Vocabulary — smarter pronunciation check
+- Confidence is now surfaced: ✅ feedback shows **الثقة N%** from the ASR.
+- Attempts are tracked per word (`pte.vocab.pron.v1`) and shown under the
+  word ("🎤 3/5") with a **🎤 تحتاج نطقاً** filter for words whose last attempt
+  failed; an overall "نطق صحيح" counter appears in the toolbar and dashboard.
+- On a wrong attempt the reference audio **replays automatically** so the user
+  hears the correct sound before trying again.
+
+### Dashboard (index.html) — now live
+- New `js/dashboard.js` renders: acquired-vocabulary / due-today / grammar /
+  quiz / pronunciation stat cards, a **📈 النشاط — آخر 14 يوماً** bar chart
+  (built from per-attempt `history` now recorded by grammar & quiz), a
+  **🎯 نقاط الضعف في القواعد** list (lessons with best < 70%), and a
+  **🔁 daily SRS review banner** with a deep link into the review queue.
+- Mode badges (word / lesson / quiz-mode counts) are filled dynamically.
+
+### Grammar — targeted practice
+- **🎯 اختبار فئة** button: quiz one category at a time (enabled when a
+  category chip is active).
+- **💥 ركّز على أخطائك**: wrong answers are tracked per question
+  (`stats.missed`), and one click rebuilds a quiz from your most-missed items.
+- Weakness indicators: a lesson whose best score is below 70% gets an amber
+  **weak** badge in the sidebar and a warn-colored "أفضل نتيجة" pill in its
+  hero.
+- `toSentences()` moved into `js/grammar.js` and now keeps dotted abbreviations
+  (`U.S.`, `e.g.`, `a.m.`) attached to their clause instead of fragmenting the
+  reader text.
+
+### Tooling
+- `tools/run_checks.sh`: one command for validator + JS syntax + CSS balance +
+  automated tests; test harnesses now live in **`tools/tests/`**
+  (`test-grammar.mjs` 946 checks, `test-storage.mjs`, `test-pronounce.mjs`,
+  `test-html.mjs`) and a root `package.json` enables them (`"type":"module"`).
+- All pages bumped to "PTE Trainer · v3".
+- **🔜 Floating Next**: the vocabulary page shows a fixed **التالي ←** pill at
+  the bottom-right of the viewport so a known word can be skipped without
+  scrolling to the page footer; it hides on the last result and disables while
+  the pronunciation check is listening.
+
+## v3.13 — Vocabulary: pronunciation check
+
+- Added a **🎤 تحقق من النطق** button to the vocabulary word card. It uses the
+  Web Speech API (`js/speech.js` `SpeechEngine`, en-US) so the user speaks the
+  word and the app judges it:
+  - While listening, the button pulses, toggles to "⏹ إيقاف", and shows an
+    Arabic listening hint; a 9-second timeout keeps sessions short.
+  - **Result**: ✅ "صحيح! نطق ممتاز" on a match, ❌ "ليس صحيحاً — حاول مرة
+    أخرى" (with what was heard) otherwise, plus graceful messages for
+    no-speech, mic permission, network, and unsupported browsers.
+  - Clicking again stops early; changing the word resets the check.
+- New `js/pronounce.js`: `wordMatches()`/`levenshtein()`/`normalizeSpoken()`
+  tolerate punctuation, articles ("a challenge"), trailing words, and minor
+  ASR variations (Levenshtein similarity ≥ 0.8), while rejecting clearly
+  different words ("mask" vs "task").
+- CSS: `.pron-feedback` states (listening/good/bad/error) + pulsing ring on
+  `.btn-record.listening`.
+- Note: speech recognition requires **Chrome/Edge** and a secure context, so
+  run it from the app server (`http://127.0.0.1:5000/`) rather than `file://`.
+
 ## v3.12 — Grammar: modern app UI (sidebar + reader)
 
 - **Layout**: the grammar page was redesigned as a modern app: a fixed
