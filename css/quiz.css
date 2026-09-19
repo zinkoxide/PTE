@@ -1,0 +1,163 @@
+/* ==========================================
+/* ==========================================
+   PTE Trainer — quiz.css (quiz.html)
+   ========================================== */
+
+/* ==========================================
+   Interactive Tests (quiz)
+   ========================================== */
+
+.quiz-modes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.mode-chip {
+  position: relative;
+  cursor: pointer;
+  text-align: left;
+  background: var(--glass);
+  border: 1px solid var(--glass-border-soft);
+  border-radius: var(--radius-md);
+  padding: 16px 14px;
+  color: var(--text);
+  font-family: var(--font);
+  opacity: 0.82;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.mode-chip:hover:not(.on) {
+  border-color: var(--glass-border);
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.mode-chip.on {
+  opacity: 1;
+  border-color: rgba(34, 211, 238, 0.9);
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.14), rgba(139, 92, 246, 0.18));
+  box-shadow:
+    0 0 34px -8px rgba(34, 211, 238, 0.55),
+    inset 0 0 0 1px rgba(34, 211, 238, 0.25);
+}
+
+.mode-chip::after {
+  content: "✓";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  color: #0a0f24;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.mode-chip.on::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mode-chip .mc-icon { font-size: 24px; }
+
+.mode-chip .mc-label {
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 8px;
+  transition: color 0.2s ease;
+}
+
+.mode-chip.on .mc-label { color: var(--cyan); }
+
+.mode-chip .mc-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.quiz-settings {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.quiz-settings label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.quiz-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.quiz-toggle input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--violet);
+  cursor: pointer;
+}
+
+.quiz-prompt.quiz-prompt-anagram { color: var(--cyan); }
+
+.quiz-headline {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.quiz-audio-row { margin-top: 16px; }
+
+.quiz-example {
+  font-size: 17px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: var(--box-bg);
+  border: 1px solid var(--glass-border-soft);
+  border-radius: var(--radius-sm);
+  line-height: 1.8;
+}
+
+.quiz-scrambled {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  color: var(--cyan);
+  text-align: center;
+}
+
+.quiz-typing {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.quiz-typing .input { flex: 1; min-width: 240px; }
+
+

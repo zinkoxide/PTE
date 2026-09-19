@@ -1,0 +1,564 @@
+/* ==========================================
+/* ==========================================
+   PTE Trainer — vocab.css (vocabulary.html)
+   ========================================== */
+
+/* ==========================================
+   Vocabulary
+   ========================================== */
+
+.vocab-search {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.vocab-search .input { flex: 1; min-width: 220px; }
+
+.word-stage { text-align: center; padding: 26px 10px; }
+
+.word-level-tags { display: flex; gap: 8px; justify-content: center; margin-bottom: 16px; }
+
+.cefr-tag {
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-strong);
+  color: var(--text-dim);
+}
+
+.cefr-A1 { color: var(--green); border-color: rgba(52, 211, 153, 0.4); }
+.cefr-A2 { color: var(--cyan); border-color: rgba(34, 211, 238, 0.4); }
+.cefr-B1 { color: var(--blue); border-color: rgba(96, 165, 250, 0.4); }
+.cefr-B2 { color: var(--violet); border-color: rgba(139, 92, 246, 0.45); }
+.cefr-C1 { color: var(--pink); border-color: rgba(244, 114, 182, 0.45); }
+.cefr-C2 { color: var(--amber); border-color: rgba(251, 191, 36, 0.45); }
+
+.word-main { font-size: 44px; font-weight: 800; letter-spacing: 0.5px; }
+
+.word-pronunciation { color: var(--text-dim); margin-top: 4px; font-size: 16px; }
+
+.vocab-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.study-btn.active-learned {
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.25), rgba(34, 211, 238, 0.2));
+  border-color: rgba(52, 211, 153, 0.55);
+  color: var(--green);
+}
+
+.study-btn.active-review {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.22), rgba(244, 114, 182, 0.18));
+  border-color: rgba(251, 191, 36, 0.55);
+  color: var(--amber);
+}
+
+.vocab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.vocab-box {
+  background: var(--box-bg);
+  border: 1px solid var(--glass-border-soft);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+}
+
+.vocab-box.full { grid-column: 1 / -1; }
+
+.vocab-box h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.vocab-box p, .vocab-box li { font-size: 14px; color: var(--text); }
+
+.vocab-box ul { list-style: none; }
+
+.vocab-box li { margin: 4px 0; }
+
+.vocab-box li::before { content: "◆"; color: var(--violet); margin-right: 8px; font-size: 9px; }
+
+.tag-stack { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.tag {
+  padding: 4px 11px;
+  border-radius: 8px;
+  font-size: 13px;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border-soft);
+  color: var(--text);
+}
+
+.tag-port { color: var(--cyan); border-color: rgba(34, 211, 238, 0.4); padding-left: 26px; position: relative; }
+.tag-port::before { content: "→"; position: absolute; left: 10px; color: var(--red); }
+
+.mistake-item {
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--glass-border-soft);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.mistake-item:last-child { border-bottom: none; }
+
+mark.search-highlight {
+  background: var(--mark-bg);
+  color: var(--mark-color);
+  border-radius: 4px;
+  padding: 0 3px;
+}
+
+.muted { color: var(--text-faint); }
+.dim { color: var(--text-dim); }
+.hide { display: none !important; }
+
+/* ==========================================
+   Vocabulary — pronunciation check
+   ========================================== */
+
+.pron-feedback {
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.pron-feedback.listening {
+  background: rgba(244, 114, 182, 0.1);
+  border: 1px solid rgba(244, 114, 182, 0.4);
+  color: var(--pink);
+}
+
+.pron-feedback.good {
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  color: var(--green);
+}
+
+.pron-feedback.bad {
+  background: rgba(251, 113, 133, 0.1);
+  border: 1px solid rgba(251, 113, 133, 0.45);
+  color: var(--red);
+}
+
+.pron-feedback.error {
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  color: var(--amber);
+}
+
+.pron-heard {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 500;
+  opacity: 0.85;
+  margin-top: 3px;
+}
+
+
+
+.pron-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  color: var(--green);
+}
+
+.pron-pill.needs-attention {
+  background: rgba(251, 113, 133, 0.1);
+  border-color: rgba(251, 113, 133, 0.45);
+  color: var(--red);
+}
+
+.srs-panel {
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  color: var(--violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13.5px;
+}
+
+.srs-label { font-weight: 600; }
+
+.srs-panel .btn-sm { padding: 6px 12px; font-size: 12.5px; }
+
+.srs-yes {
+  background: linear-gradient(135deg, #34d399, #10b981);
+  color: #fff;
+  box-shadow: 0 6px 18px -8px rgba(16, 185, 129, 0.6);
+}
+
+.srs-no {
+  background: linear-gradient(135deg, #fb7185, #f43f5e);
+  color: #fff;
+  box-shadow: 0 6px 18px -8px rgba(244, 63, 94, 0.6);
+}
+
+/* ==========================================
+/* ==========================================
+   Vocabulary — floating next button
+   ========================================== */
+
+.float-next {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 60;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 999px;
+  box-shadow: 0 14px 34px -10px rgba(16, 185, 129, 0.6);
+  background: linear-gradient(135deg, #34d399, #10b981);
+  color: #fff;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.float-next:hover:not(:disabled) { transform: translateY(-2px); }
+.float-next:disabled { opacity: 0.5; box-shadow: none; }
+
+@media (max-width: 600px) {
+  .float-next { right: 14px; bottom: 14px; padding: 13px 20px; }
+}
+
+/* ==========================================
+   Vocabulary — visual polish (page-vocab)
+   Scoped to the Vocabulary page only.
+   Calm, academic layout: neutral surfaces,
+/* ==========================================
+   one accent, subtle green/amber affordances.
+   ========================================== */
+
+/* --- Search & filters: search prominent, filters secondary --- */
+
+.page-vocab .vocab-search {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.page-vocab .search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-vocab .search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-faint);
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.page-vocab .vocab-search .input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 14px 14px 44px;
+  font-size: 15px;
+  border-radius: 14px;
+}
+
+.page-vocab .vocab-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.page-vocab .filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1 1 190px;
+}
+
+.page-vocab .filter-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  color: var(--text-faint);
+}
+
+.page-vocab .select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
+.page-vocab .toolbar {
+  margin-top: 4px;
+  border-top: 1px solid var(--glass-border-soft);
+  padding-top: 14px;
+  gap: 8px;
+}
+
+/* --- Word stage: strong word, lighter IPA, secondary status --- */
+
+.page-vocab .card-title { font-size: 14px; color: var(--text-dim); }
+.page-vocab .card-title strong { color: var(--text); font-size: 15px; font-weight: 800; }
+
+.page-vocab .status-text { font-size: 13px; }
+
+.page-vocab .progress-track {
+  height: 8px;
+  margin-top: 16px;
+}
+
+.page-vocab .progress-fill {
+  background: linear-gradient(90deg, var(--blue), var(--violet));
+  box-shadow: none;
+  animation: none;
+}
+
+.page-vocab .word-stage { padding: 32px 12px 28px; }
+
+.page-vocab .word-level-tags { margin-bottom: 20px; gap: 10px; }
+
+.page-vocab .cefr-tag {
+  padding: 5px 15px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  background: var(--glass);
+  border-color: var(--glass-border-soft);
+  color: var(--text-faint);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.page-vocab .cefr-A1, .page-vocab .cefr-A2, .page-vocab .cefr-B1,
+.page-vocab .cefr-B2, .page-vocab .cefr-C1, .page-vocab .cefr-C2 {
+  color: var(--text-faint);
+  border-color: var(--glass-border-soft);
+}
+
+.page-vocab .word-main {
+  font-size: 54px;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  padding: 4px 0 2px;
+}
+
+.page-vocab .word-pronunciation {
+  margin-top: 10px;
+  font-size: 14.5px;
+  letter-spacing: 0.4px;
+  color: var(--text-faint);
+}
+
+.page-vocab .vocab-actions { margin-top: 24px; gap: 12px; }
+
+.page-vocab .play-btn {
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.page-vocab .btn-record {
+  box-shadow: none;
+  padding: 12px 20px;
+}
+
+.page-vocab .study-btn {
+  background: var(--glass);
+  border-color: var(--glass-border-soft);
+  color: var(--text-dim);
+  box-shadow: none;
+  font-weight: 600;
+  padding: 11px 18px;
+  font-size: 13px;
+}
+
+.page-vocab .study-btn.active-learned {
+  background: rgba(52, 211, 153, 0.14);
+  border-color: rgba(52, 211, 153, 0.45);
+  color: var(--green);
+}
+
+.page-vocab .study-btn.active-review {
+  background: rgba(251, 191, 36, 0.12);
+  border-color: rgba(251, 191, 36, 0.42);
+  color: var(--amber);
+}
+
+/* --- Progress: moved under the word counter, calm --- */
+
+
+/* --- Detail sections: light cards, clear separators --- */
+
+.page-vocab .vocab-box {
+  background: var(--box-bg);
+  border-color: var(--glass-border-soft);
+  padding: 18px 20px;
+}
+
+.page-vocab .vocab-box h4 {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 1.1px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--glass-border-soft);
+  margin-bottom: 12px;
+}
+
+.page-vocab .vocab-box p,
+.page-vocab .vocab-box li,
+.page-vocab .vocab-box .tag,
+.page-vocab .vocab-box .mistake-item {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* Arabic meaning — subtle violet tint */
+.page-vocab .vocab-box.ar-box {
+  background: rgba(139, 92, 246, 0.07);
+  border-color: rgba(139, 92, 246, 0.22);
+}
+
+[data-theme="light"] .page-vocab .vocab-box.ar-box {
+  background: rgba(139, 92, 246, 0.05);
+  border-color: rgba(139, 92, 246, 0.22);
+}
+
+/* Tags / chips (collocations, synonyms, word family) */
+.page-vocab .tag-stack { gap: 8px; }
+
+.page-vocab .vocab-box .tag {
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  background: var(--glass);
+  border-color: var(--glass-border-soft);
+}
+
+/* Examples — ordered list with subtle counters */
+.page-vocab .vocab-box ul#examples {
+  list-style: none;
+  margin: 2px 0 0;
+  counter-reset: example;
+}
+
+.page-vocab .vocab-box ul#examples li {
+  counter-increment: example;
+  position: relative;
+  padding: 9px 0 11px 40px;
+  margin: 0;
+  border-bottom: 1px dashed var(--glass-border-soft);
+}
+
+.page-vocab .vocab-box ul#examples li:last-child { border-bottom: none; }
+
+.page-vocab .vocab-box ul#examples li::before {
+  content: counter(example, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 27px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--glass-strong);
+  color: var(--text-faint);
+  border: 1px solid var(--glass-border-soft);
+  font-size: 11px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Common mistakes — noticeable but calm warm tint */
+.page-vocab .vocab-box.mistakes-box {
+  background: rgba(251, 191, 36, 0.05);
+  border-color: rgba(251, 191, 36, 0.24);
+}
+
+[data-theme="light"] .page-vocab .vocab-box.mistakes-box {
+  background: rgba(251, 191, 36, 0.06);
+}
+
+.page-vocab .mistake-item {
+  padding: 9px 0;
+  font-size: 13.5px;
+  color: var(--text-dim);
+}
+
+/* --- Navigation: pair of balanced controls --- */
+
+.page-vocab .pagination { gap: 14px; }
+
+.page-vocab .pagination .btn {
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-size: 14px;
+}
+
+/* --- Sidebar: quiet, clearly-marked active item --- */
+
+.page-vocab .nav-link.active {
+  background: var(--glass-strong);
+  border-color: var(--glass-border);
+  border-inline-start: 3px solid var(--violet);
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.page-vocab .nav-link .nav-icon { width: 20px; }
+
+/* --- Floating next: softer shadow, keep green affordance --- */
+
+.page-vocab .float-next {
+  box-shadow: 0 10px 26px -12px rgba(16, 185, 129, 0.5);
+}
+
+/* --- Responsive adjustments --- */
+
+@media (max-width: 640px) {
+  .page-vocab .vocab-filters { flex-direction: column; gap: 10px; }
+  .page-vocab .filter-group { flex-basis: auto; }
+  .page-vocab .word-main { font-size: 38px; }
+  .page-vocab .word-stage { padding: 26px 6px 24px; }
+  .page-vocab .vocab-box { padding: 15px 16px; }
+}
+
+/* ==========================================
+   ========================================== */
+
+

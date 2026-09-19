@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PTE Trainer — Vocabulary</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <!-- CSS: base (shared) then page-specific -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/vocab.css">
   <script src="./js/theme.js"></script>
 </head>
-<body>
+<body class="page-vocab">
 
   <div class="shell">
 
@@ -33,6 +35,9 @@
         </a>
         <a class="nav-link" href="grammar.html">
           <span class="nav-icon">📘</span><span class="nav-label">Grammar</span>
+        </a>
+        <a class="nav-link" href="swt.html">
+          <span class="nav-icon">✍️</span><span class="nav-label">Summarize Written Text</span>
         </a>
         <a class="nav-link" href="quiz.html">
           <span class="nav-icon">📝</span><span class="nav-label">اختبارات</span>
@@ -63,33 +68,52 @@
         <!-- Search -->
         <section class="card">
           <div class="vocab-search">
-            <input id="vocabulary-search" class="input" type="text"
-                   placeholder="Search by word or meaning… (Arabic supported)" autocomplete="off">
-            <button id="clear-search" class="btn btn-ghost" type="button">✕ Clear</button>
-            <select id="cefr-filter" class="select">
-              <option value="all">All levels</option>
-              <option value="A1">A1</option>
-              <option value="A2">A2</option>
-              <option value="B1">B1</option>
-              <option value="B2">B2</option>
-              <option value="C1">C1</option>
-              <option value="C2">C2</option>
-            </select>
-            <select id="part-of-speech-filter" class="select">
-              <option value="all">All parts of speech</option>
-              <option value="noun">Noun</option>
-              <option value="verb">Verb</option>
-              <option value="adjective">Adjective</option>
-              <option value="adverb">Adverb</option>
-            </select>
-            <select id="study-filter" class="select">
-              <option value="all">All words</option>
-              <option value="due">⏰ مراجعة مستحقة</option>
-              <option value="learned">Learned</option>
-              <option value="review">Review</option>
-              <option value="needs-pron">🎤 تحتاج نطقاً</option>
-              <option value="unstudied">Not studied</option>
-            </select>
+            <div class="search-wrap">
+              <span class="search-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+              </span>
+              <input id="vocabulary-search" class="input" type="text"
+                     placeholder="Search by word or meaning… (Arabic supported)" autocomplete="off">
+              <button id="clear-search" class="btn btn-ghost" type="button">✕ Clear</button>
+            </div>
+
+            <div class="vocab-filters">
+              <label class="filter-group">
+                <span class="filter-label">Level</span>
+                <select id="cefr-filter" class="select">
+                  <option value="all">All levels</option>
+                  <option value="A1">A1</option>
+                  <option value="A2">A2</option>
+                  <option value="B1">B1</option>
+                  <option value="B2">B2</option>
+                  <option value="C1">C1</option>
+                  <option value="C2">C2</option>
+                </select>
+              </label>
+
+              <label class="filter-group">
+                <span class="filter-label">Part of speech</span>
+                <select id="part-of-speech-filter" class="select">
+                  <option value="all">All parts of speech</option>
+                  <option value="noun">Noun</option>
+                  <option value="verb">Verb</option>
+                  <option value="adjective">Adjective</option>
+                  <option value="adverb">Adverb</option>
+                </select>
+              </label>
+
+              <label class="filter-group">
+                <span class="filter-label">Study status</span>
+                <select id="study-filter" class="select">
+                  <option value="all">All words</option>
+                  <option value="due">⏰ مراجعة مستحقة</option>
+                  <option value="learned">Learned</option>
+                  <option value="review">Review</option>
+                  <option value="needs-pron">🎤 تحتاج نطقاً</option>
+                  <option value="unstudied">Not studied</option>
+                </select>
+              </label>
+            </div>
           </div>
 
           <div class="toolbar">
@@ -98,10 +122,6 @@
             <span id="pron-summary" class="pill" hidden></span>
             <span id="search-match-info" class="pill"></span>
           </div>
-
-          <div class="progress-track">
-            <div id="progress-fill" class="progress-fill"></div>
-          </div>
         </section>
 
         <!-- Word stage -->
@@ -109,6 +129,10 @@
           <div class="card-title">
             <span>Word <strong id="word-number">1 / 163</strong></span>
             <span id="study-status" class="status-text">Not studied yet.</span>
+          </div>
+
+          <div class="progress-track">
+            <div id="progress-fill" class="progress-fill"></div>
           </div>
 
           <div class="word-stage">
@@ -123,7 +147,7 @@
             <div id="pron-stats" class="pron-pill" hidden></div>
 
             <div class="vocab-actions">
-              <button id="audio-button" class="btn" type="button">▶ Play</button>
+              <button id="audio-button" class="btn play-btn" type="button">▶ Play</button>
               <button id="pronunciation-button" class="btn btn-record" type="button">🎤 تحقق من النطق</button>
               <button id="learned-button" class="btn btn-secondary study-btn" type="button">✓ Learned</button>
               <button id="review-button" class="btn btn-secondary study-btn" type="button">↻ Review</button>
@@ -148,7 +172,7 @@
               <p id="meaning-en">—</p>
             </div>
 
-            <div class="vocab-box">
+            <div class="vocab-box ar-box">
               <h4>Arabic Meaning</h4>
               <p id="meaning-ar">—</p>
             </div>
@@ -173,7 +197,7 @@
               <div id="word-family" class="tag-stack">—</div>
             </div>
 
-            <div class="vocab-box">
+            <div class="vocab-box mistakes-box">
               <h4>Common Mistakes</h4>
               <div id="common-mistakes">—</div>
             </div>

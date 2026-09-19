@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PTE Trainer — Home</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <!-- CSS: base (shared) then page-specific -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/dash.css">
   <script src="./js/theme.js"></script>
 </head>
 <body>
@@ -33,6 +35,9 @@
         </a>
         <a class="nav-link" href="grammar.html">
           <span class="nav-icon">📘</span><span class="nav-label">Grammar</span>
+        </a>
+        <a class="nav-link" href="swt.html">
+          <span class="nav-icon">✍️</span><span class="nav-label">Summarize Written Text</span>
         </a>
         <a class="nav-link" href="quiz.html">
           <span class="nav-icon">📝</span><span class="nav-label">اختبارات</span>
@@ -106,6 +111,11 @@
             <div class="dash-card-label">دقة الاختبارات</div>
           </div>
           <div class="dash-card">
+            <div class="dash-card-icon">✍️</div>
+            <div class="dash-card-value" id="dash-swt">—</div>
+            <div class="dash-card-label">دقة الملخصات</div>
+          </div>
+          <div class="dash-card">
             <div class="dash-card-icon">🎤</div>
             <div class="dash-card-value" id="dash-pron">—</div>
             <div class="dash-card-label">نطق صحيح</div>
@@ -160,6 +170,16 @@
               and more, then practice with interactive quizzes.
             </p>
             <span class="mode-badge" id="mode-badge-grammar">29 lessons</span>
+          </button>
+
+          <button class="mode-card" type="button" onclick="window.location.href='swt.html'">
+            <div class="mode-icon">✍️</div>
+            <h3>Summarize Written Text</h3>
+            <p>
+              Read a passage and write its main ideas clearly in one
+              sentence, with instant scoring across the PTE criteria.
+            </p>
+            <span class="mode-badge" id="mode-badge-swt">5 passages</span>
           </button>
 
           <button class="mode-card" type="button" onclick="window.location.href='quiz.html'">

@@ -16,6 +16,7 @@ import {
 
 const GRAMMAR_STATS_KEY = "pte.grammar.stats.v1";
 const QUIZ_STATS_KEY = "pte.quiz.stats.v1";
+const SWT_STATS_KEY = "pte.swt.stats.v1";
 
 const $ = (id) => document.getElementById(id);
 
@@ -74,6 +75,14 @@ function renderStats(vocabulary, grammar) {
     $("dash-quiz").textContent = acc == null ? "—" : `${acc}%`;
   }
 
+  const swtStats = loadKey(SWT_STATS_KEY);
+  if ($("dash-swt")) {
+    const acc = swtStats && swtStats.total
+      ? Math.round((swtStats.correct / swtStats.total) * 100)
+      : null;
+    $("dash-swt").textContent = acc == null ? "—" : `${acc}%`;
+  }
+
   const pron = Object.values(loadPronState());
   const pronAttempts = pron.reduce((sum, e) => sum + e.attempts, 0);
   const pronCorrect = pron.reduce((sum, e) => sum + e.correct, 0);
@@ -91,6 +100,21 @@ function renderStats(vocabulary, grammar) {
   }
   if ($("mode-badge-quiz")) {
     $("mode-badge-quiz").textContent = "8 quiz modes";
+  }
+  const swtBadge = document.getElementById("mode-badge-swt");
+  swtBadge.textContent = `${swtPassageCount} passages`;
+}
+
+let swtPassageCount = 0;
+
+async function loadSwtPassages() {
+  try {
+    const response = await fetch("./data/swt.json");
+    if (!response.ok) return [];
+    const data = await response.json();
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
   }
 }
 
@@ -132,7 +156,8 @@ function buildSeries() {
   const points = [];
   const grammarStats = loadKey(GRAMMAR_STATS_KEY);
   const quizStats = loadKey(QUIZ_STATS_KEY);
-  [grammarStats, quizStats].forEach((stats) => {
+  const swtStats = loadKey(SWT_STATS_KEY);
+  [grammarStats, quizStats, swtStats].forEach((stats) => {
     (stats && stats.history ? stats.history : []).forEach((h) => {
       points.push({ day: dayKey(h.t), percent: h.percent || 0 });
     });
@@ -151,7 +176,7 @@ function renderChart() {
   const byDay = buildSeries();
   if (!Object.keys(byDay).length) {
     holder.innerHTML =
-      `<div class="dash-empty">لا توجد بيانات بعد — أتمّ اختبار قواعد أو اختباراً لبناء الرسم.</div>`;
+      `<div class="dash-empty">لا توجد بيانات بعد — أتمّ اختبار قواعد أو اختباراً أو ملخصاً لبناء الرسم.</div>`;
     return;
   }
 
@@ -183,7 +208,7 @@ function renderChart() {
 
   holder.innerHTML =
     `<div class="bar-chart">${html}</div>` +
-    `<div class="chart-tip">متوسط الدقة اليومي (القواعد + الاختبارات) — مرّر فوق الأعمدة.</div>`;
+    `<div class="chart-tip">متوسط الدقة اليومي (القواعد + الاختبارات + الملخصات) — مرّر فوق الأعمدة.</div>`;
 
   holder.querySelectorAll(".bar").forEach((bar) => {
     bar.title = `دقة ${bar.dataset.percent}%`;
@@ -243,7 +268,12 @@ function renderWeak(grammar) {
 -------------------------------------- */
 
 async function initialize() {
-  const [vocabulary, grammar] = await Promise.all([loadVocabulary(), loadGrammar()]);
+  const [vocabulary, grammar, swt] = await Promise.all([
+    loadVocabulary(),
+    loadGrammar(),
+    loadSwtPassages()
+  ]);
+  swtPassageCount = swt.length;
   renderStats(vocabulary, grammar);
   renderSrs(vocabulary);
   renderChart();

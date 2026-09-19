@@ -32,9 +32,12 @@ function read(rel) {
 
 const html = {
   index: read("../../index.html"),
+  repeat: read("../../repeat.html"),
   vocabulary: read("../../vocabulary.html"),
   grammar: read("../../grammar.html"),
-  quiz: read("../../quiz.html")
+  quiz: read("../../quiz.html"),
+  "add-word": read("../../add-word.html"),
+  swt: read("../../swt.html")
 };
 
 /* ---------- vocabulary page wiring ---------- */
@@ -89,16 +92,107 @@ test("index page mode cards link to all four trainers", () => {
 
 /* ---------- CSS / JS references exist ---------- */
 
-test("every page references css/style.css", () => {
-  ["index", "vocabulary", "grammar", "quiz"].forEach((page) =>
-    assert(html[page].includes('./css/style.css'), `${page}.html missing stylesheet`)
-  );
+const CSS_BY_PAGE = {
+  index: ["base", "dash"],
+  repeat: ["base", "repeat"],
+  vocabulary: ["base", "vocab"],
+  grammar: ["base", "gram"],
+  quiz: ["base", "quiz"],
+  "add-word": ["base", "addw"],
+  swt: ["base", "swt"]
+};
+
+test("every page loads base.css first then its page css", () => {
+  Object.entries(CSS_BY_PAGE).forEach(([page, sheets]) => {
+    const linkTags = [...html[page].matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(
+      (m) => m[1]
+    );
+    assert(
+      linkTags.join(" ").startsWith("./css/base.css"),
+      `${page}.html must load base.css first`
+    );
+    sheets.slice(1).forEach((sheet) =>
+      assert(linkTags.includes(`./css/${sheet}.css`), `${page}.html missing ./css/${sheet}.css`)
+    );
+    assert(!linkTags.some((l) => l.endsWith("/style.css")), `${page}.html still loads style.css`);
+  });
+});
+
+test("the eight page stylesheets exist", () => {
+  const used = [...new Set(Object.values(CSS_BY_PAGE).flat())];
+  assert(used.length === 8, `expected 8 css files, got ${used.length}`);
+  used.forEach((sheet) => read(`../../css/${sheet}.css`));
+});
+
+test("css files have no broken comment headers (no swallowed rules)", () => {
+  const files = ["base", "dash", "repeat", "vocab", "gram", "quiz", "addw", "swt"];
+  const lineRe = /^\s*=+\s*\*?\s*$/;
+  const commentRe = /\/\*/;
+  files.forEach((sheet) => {
+    const lines = read(`../../css/${sheet}.css`).split("\n");
+    let inComment = false;
+    let orphan = false;
+    for (const line of lines) {
+      if (inComment) {
+        if (line.includes("*/")) inComment = false;
+        orphan = false;
+        continue;
+      }
+      if (line.includes("/*")) {
+        inComment = !line.split("/*")[1].includes("*/");
+        orphan = false;
+        continue;
+      }
+      const textOnly = /^\s*[A-Za-z\u0600-\u06FF\uff00-\uffef]/.test(line);
+      if (textOnly) orphan = true;
+      if (lineRe.test(line)) {
+        assert(!orphan, `${sheet}.css: orphan comment header at line beginning ${line.trim()}`);
+      }
+      if (line.includes("*/")) {
+        assert(false, `${sheet}.css: stray */ outside comment`);
+      }
+    }
+    assert(!inComment, `${sheet}.css: unterminated /* comment`);
+  });
 });
 
 test("quiz page has stats + history wiring elements", () => {
   ["quiz-stats", "quiz-setup", "quiz-view", "quiz-results"].forEach(
     (id) => assert(html.quiz.includes(`id="${id}"`), `missing #${id}`)
   );
+});
+
+test("swt page has full wiring and loads base+swt css + swt modules", () => {
+  [
+    "question-number",
+    "timer",
+    "passage",
+    "passage-word-count",
+    "response-input",
+    "word-count",
+    "sentence-count",
+    "sentence-status",
+    "response-hint",
+    "submit-button",
+    "clear-button",
+    "previous-button",
+    "next-button",
+    "swt-progress-fill",
+    "result-section",
+    "result-content"
+  ].forEach((id) => assert(html.swt.includes(`id="${id}"`), `swt: missing #${id}`));
+
+  assert(/css\/base\.css/.test(html.swt), "swt.html must load css/base.css first");
+  assert(/css\/swt\.css/.test(html.swt), "swt.html must load css/swt.css");
+  assert(/js\/swt\.js/.test(html.swt), "swt.html must load js/swt.js");
+  const swtJs = read("../../js/swt.js");
+  assert(/import \{ scoreSummary \} from "\.\/swt-score\.js"/.test(swtJs), "swt.js must import scoreSummary from swt-score.js");
+});
+
+test("every page sidebar links to swt.html", () => {
+  ["index", "repeat", "vocabulary", "grammar", "quiz", "add-word"].forEach((key) => {
+    assert(html[key].includes('href="swt.html"'), `${key}.html: missing sidebar link to swt.html`);
+  });
 });
 
 console.log(`RESULT: ${passed} passed, ${failed} failed`);

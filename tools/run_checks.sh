@@ -35,14 +35,15 @@ done
 [ "$fail" -eq 0 ] || exit 1
 note "all JS files parse cleanly"
 
-step "3/5  CSS brace balance"
-opens=$(grep -c '{' css/style.css)
-closes=$(grep -c '}' css/style.css)
-if [ "$opens" -eq "$closes" ]; then
-  note "CSS balanced: $opens { == $closes }"
-else
-  err "CSS unbalanced: $opens { vs $closes }"
-fi
+step "3/5  CSS brace balance (all css/*.css)"
+for f in css/*.css; do
+  opens=$(grep -c '{' "$f")
+  closes=$(grep -c '}' "$f")
+  if [ "$opens" -ne "$closes" ]; then
+    err "CSS unbalanced: $f ($opens { vs $closes })"
+  fi
+done
+[ "$fail" -eq 0 ] && note "CSS balanced across all page files"
 
 step "4/5  Harness: grammar data"
 if node tools/tests/test-grammar.mjs; then :; else err "grammar harness FAILED"; fi
@@ -51,6 +52,7 @@ step "5/5  Harness: vocabulary SRS + pronunciation + pages"
 if node tools/tests/test-storage.mjs; then :; else err "storage harness FAILED"; fi
 if node tools/tests/test-pronounce.mjs; then :; else err "pronounce harness FAILED"; fi
 if node tools/tests/test-html.mjs; then :; else err "html harness FAILED"; fi
+if node tools/tests/test-swt.mjs; then :; else err "swt harness FAILED"; fi
 
 if [ "$fail" -eq 0 ]; then
   note "ALL CHECKS PASSED"

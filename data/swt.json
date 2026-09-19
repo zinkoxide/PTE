@@ -1,0 +1,91 @@
+[
+  {
+    "id": "renewable-energy",
+    "title": "The Growth of Renewable Energy",
+    "passage": "Renewable energy has become an increasingly important source of electricity in many countries. Unlike fossil fuels, renewable sources such as solar and wind power can produce energy with much lower greenhouse gas emissions. They can also reduce dependence on imported fuels and contribute to long-term energy security. However, the expansion of renewable energy requires investment in infrastructure, improvements in electricity storage, and policies that support the transition to cleaner energy systems.",
+    "reference": "Renewable energy is growing in importance because it generates electricity with lower emissions than fossil fuels and improves energy security, although its expansion depends on investment in infrastructure, storage, and supportive policies.",
+    "keywords": [
+      "renewable energy",
+      "electricity",
+      "fossil fuels",
+      "lower emissions",
+      "energy security",
+      "investment in infrastructure",
+      "electricity storage",
+      "policies",
+      "transition",
+      "cleaner energy"
+    ]
+  },
+  {
+    "id": "remote-work",
+    "title": "The Rise of Remote Work",
+    "passage": "Remote work has expanded rapidly in recent years, changing how companies and employees organise their working lives. Many workers value the flexibility it offers, such as shorter commutes and a better balance between work and personal time. Employers, in turn, benefit from access to a wider talent pool and often report lower office costs. Nevertheless, remote work also creates challenges, including difficulties with team communication, feelings of isolation, and the need for new management methods.",
+    "reference": "Remote work has grown quickly and offers flexibility and cost benefits to workers and employers alike, but it also raises challenges around communication, isolation, and new forms of management.",
+    "keywords": [
+      "remote work",
+      "flexibility",
+      "commutes",
+      "work-life balance",
+      "talent pool",
+      "office costs",
+      "communication",
+      "isolation",
+      "management"
+    ]
+  },
+  {
+    "id": "urban-public-transport",
+    "title": "Investing in Public Transport",
+    "passage": "Cities across the world are investing in public transport to address congestion and air pollution. Efficient bus and rail networks move large numbers of people with fewer vehicles on the road, which reduces traffic and cuts emissions. Public transport also improves access to jobs and services for people who cannot afford a car. Yet building such systems is expensive, and poor planning can lead to services that are underused and difficult to maintain over time.",
+    "reference": "Investment in public transport helps cities ease congestion and pollution while improving access to jobs, although the high cost and risk of poor planning remain significant concerns.",
+    "keywords": [
+      "public transport",
+      "congestion",
+      "air pollution",
+      "bus",
+      "rail",
+      "emissions",
+      "access to jobs",
+      "expensive",
+      "planning",
+      "underused"
+    ]
+  },
+  {
+    "id": "sleep-and-learning",
+    "title": "The Role of Sleep in Learning",
+    "passage": "Sleep plays a central role in how people learn and remember information. During deep sleep, the brain consolidates what has been studied during the day, strengthening the connections between neurons that form new memories. Researchers have found that students who sleep well before an exam tend to perform better than those who stay up late revising. As a result, experts argue that good sleep habits should be treated as part of an effective study routine rather than as time that is wasted.",
+    "reference": "Sleep is essential for learning because it consolidates memories, which helps explain why well-rested students perform better, so experts consider good sleep a key part of effective study.",
+    "keywords": [
+      "sleep",
+      "learning",
+      "remember",
+      "consolidates",
+      "memories",
+      "neurons",
+      "students",
+      "perform better",
+      "study routine"
+    ]
+  },
+  {
+    "id": "plastic-waste",
+    "title": "Tackling Plastic Waste",
+    "passage": "Plastic waste is one of the most visible environmental problems of the modern age. Because most plastics take centuries to break down, discarded items accumulate in landfills and oceans, harming wildlife and entering the food chain. Governments have responded with measures such as bans on single-use plastics and improved recycling systems. However, experts point out that reducing waste also depends on changing consumer behaviour and on companies designing products that are easier to reuse and recycle.",
+    "reference": "Plastic waste harms the environment because plastics break down very slowly, and although governments have introduced bans and recycling, progress also requires changes in consumer behaviour and product design.",
+    "keywords": [
+      "plastic waste",
+      "break down",
+      "landfills",
+      "oceans",
+      "wildlife",
+      "food chain",
+      "bans",
+      "single-use plastics",
+      "recycling",
+      "consumer behaviour",
+      "product design"
+    ]
+  }
+]

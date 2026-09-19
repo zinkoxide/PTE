@@ -1,0 +1,138 @@
+/* ==========================================
+/* ==========================================
+   PTE Trainer — addword.css (add-word.html)
+   ========================================== */
+
+/* ==========================================
+   Add Word Modal + Toast
+   ========================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow-y: auto;
+  background: rgba(6, 10, 26, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+.modal {
+  width: 100%;
+  max-width: 720px;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+  padding: 22px;
+  color: var(--text);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.modal-title { font-size: 18px; }
+
+.modal-body { display: flex; flex-direction: column; gap: 14px; }
+
+.add-form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.add-form-row .double { grid-column: span 2; }
+
+.add-field { display: flex; flex-direction: column; gap: 6px; }
+
+.add-field.full { grid-column: 1 / -1; }
+
+.add-field > .input { width: 100%; }
+
+.add-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: none;
+}
+
+.add-textarea {
+  min-height: 64px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.add-status { font-size: 12px; font-weight: 600; min-height: 16px; }
+
+.add-status.duplicate { color: var(--red); }
+.add-status.available { color: var(--green); }
+.add-status.server-down { color: var(--amber); }
+
+.aw-errors {
+  background: rgba(251, 113, 133, 0.12);
+  border: 1px solid rgba(251, 113, 133, 0.4);
+  color: var(--red);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.aw-service-status {
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+  border: 1px solid;
+}
+
+.aw-service-off {
+  color: var(--amber);
+  border-color: rgba(251, 191, 36, 0.4);
+  background: rgba(251, 191, 36, 0.08);
+}
+
+.aw-service-on {
+  color: var(--green);
+  border-color: rgba(52, 211, 153, 0.4);
+  background: rgba(52, 211, 153, 0.08);
+}
+
+.aw-service-loading { color: var(--text-dim); border-color: var(--glass-border); background: var(--glass); }
+
+.aw-status-actions { display: flex; gap: 8px; margin-top: 8px; }
+
+.aw-hint {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 600;
+  min-height: 18px;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+@media (max-width: 640px) {
+  .add-form-row { grid-template-columns: 1fr; }
+  .add-form-row .double { grid-column: span 1; }
+}
+
+/* ==========================================
+   ========================================== */
+
+

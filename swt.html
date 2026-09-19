@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PTE Trainer — Summarize Written Text</title>
+
+  <!-- CSS: base (shared) then page-specific -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/swt.css">
+
+  <script src="./js/theme.js"></script>
+</head>
+
+<body>
+
+  <div class="shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="brand">
+        <div class="brand-mark">PTE</div>
+
+        <div>
+          <div class="brand-name">PTE Trainer</div>
+          <div class="brand-sub">Practice smarter</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+
+        <a class="nav-link" href="index.html">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-label">Dashboard</span>
+        </a>
+
+        <a class="nav-link" href="repeat.html">
+          <span class="nav-icon">🗣️</span>
+          <span class="nav-label">Repeat Sentence</span>
+        </a>
+
+        <a class="nav-link" href="vocabulary.html">
+          <span class="nav-icon">📚</span>
+          <span class="nav-label">Vocabulary</span>
+        </a>
+
+        <a class="nav-link" href="grammar.html">
+          <span class="nav-icon">📘</span>
+          <span class="nav-label">Grammar</span>
+        </a>
+
+        <a class="nav-link active" href="swt.html">
+          <span class="nav-icon">✍️</span>
+          <span class="nav-label">Summarize Written Text</span>
+        </a>
+
+        <a class="nav-link" href="quiz.html">
+          <span class="nav-icon">📝</span>
+          <span class="nav-label">اختبارات</span>
+        </a>
+
+        <a class="nav-link" href="add-word.html">
+          <span class="nav-icon">➕</span>
+          <span class="nav-label">إضافة كلمات</span>
+        </a>
+
+      </nav>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch theme"
+      >
+        <span class="theme-ico icon-day">☀️</span>
+        <span class="theme-ico icon-night">🌙</span>
+        <span class="theme-label">Dark</span>
+      </button>
+
+      <div class="sidebar-footer">
+        PTE Trainer · v3
+      </div>
+
+    </aside>
+
+
+    <!-- Main -->
+    <main class="main">
+
+      <div class="page swt-page">
+
+        <!-- Page Header -->
+        <header class="page-header">
+
+          <div class="swt-title-row">
+            <div>
+              <h1 class="page-title">
+                Summarize Written Text
+              </h1>
+
+              <p class="page-subtitle">
+                Read the passage and summarize its main ideas in one sentence.
+              </p>
+            </div>
+
+            <div class="swt-mode-pill">
+              Practice Mode
+            </div>
+          </div>
+
+        </header>
+
+
+        <!-- Question / Timer -->
+        <section class="card swt-status-card">
+
+          <div class="card-title">
+
+            <span>
+              Question
+              <strong id="question-number">1</strong>
+            </span>
+
+            <span
+              id="timer"
+              class="pill info swt-timer"
+            >
+              10:00
+            </span>
+
+          </div>
+
+          <div class="swt-progress">
+
+            <div class="swt-progress-track">
+              <div
+                id="swt-progress-fill"
+                class="swt-progress-fill"
+              ></div>
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- Passage -->
+        <section class="card">
+
+          <div class="card-title">
+
+            <span>
+              Read the passage
+            </span>
+
+            <span
+              id="passage-word-count"
+              class="pill"
+            >
+              0 words
+            </span>
+
+          </div>
+
+          <div
+            id="passage"
+            class="swt-passage"
+          >
+            The passage will appear here.
+          </div>
+
+        </section>
+
+
+        <!-- Response -->
+        <section class="card swt-response-card">
+
+          <div class="card-title">
+
+            <span>
+              Your response
+            </span>
+
+            <span
+              id="sentence-status"
+              class="pill"
+            >
+              One sentence required
+            </span>
+
+          </div>
+
+          <textarea
+            id="response-input"
+            class="swt-response-input"
+            placeholder="Write your summary in ONE sentence..."
+            maxlength="1000"
+            spellcheck="true"
+          ></textarea>
+
+          <div class="swt-response-footer">
+
+            <div class="swt-count-group">
+
+              <span id="word-count">
+                Words: 0 / 75
+              </span>
+
+              <span
+                id="sentence-count"
+                class="status-text"
+              >
+                Sentences: 0
+              </span>
+
+            </div>
+
+            <span
+              id="response-hint"
+              class="status-text"
+            >
+              Write between 5 and 75 words.
+            </span>
+
+          </div>
+
+        </section>
+
+
+        <!-- Actions -->
+        <section class="card swt-actions-card">
+
+          <div class="controls-row">
+
+            <button
+              id="submit-button"
+              class="btn"
+              type="button"
+            >
+              Submit Answer
+            </button>
+
+            <button
+              id="clear-button"
+              class="btn btn-secondary"
+              type="button"
+            >
+              Clear
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- Result placeholder -->
+        <section
+          id="result-section"
+          class="card swt-result-card"
+          hidden
+        >
+
+          <div class="card-title">
+            <span>Practice Result</span>
+          </div>
+
+          <div
+            id="result-content"
+            class="swt-result-content"
+          >
+            Your result will appear here.
+          </div>
+
+        </section>
+
+
+        <!-- Navigation -->
+        <section class="card pagination">
+
+          <button
+            id="previous-button"
+            class="btn btn-secondary"
+            type="button"
+            disabled
+          >
+            ← Previous
+          </button>
+
+          <span class="position-label">
+            Summarize Written Text
+          </span>
+
+          <button
+            id="next-button"
+            class="btn"
+            type="button"
+            disabled
+          >
+            Next →
+          </button>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <script
+    type="module"
+    src="./js/swt.js"
+  ></script>
+
+</body>
+</html>
