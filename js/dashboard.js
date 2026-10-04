@@ -13,6 +13,7 @@ import {
   loadPronState,
   getDueWords
 } from "./storage.js";
+import { getWeakItems } from "./task-stats.js";
 
 const GRAMMAR_STATS_KEY = "pte.grammar.stats.v1";
 const QUIZ_STATS_KEY = "pte.quiz.stats.v1";
@@ -300,6 +301,74 @@ function renderWeak(grammar) {
 }
 
 /* --------------------------------------
+   Weak task items (SWT / Describe Image)
+-------------------------------------- */
+
+const TASK_LINKS = {
+  "pte.swt.stats.v1": { label: "تلخيص", page: "swt.html" },
+  "pte.di.stats.v1": { label: "وصف صورة", page: "describe-image.html" }
+};
+
+function renderWeakItems() {
+  const holder = $("dash-task-weak");
+  if (!holder) return;
+
+  const rows = [];
+  Object.entries(TASK_LINKS).forEach(([key, meta]) => {
+    getWeakItems(loadKey(key)).forEach((item) => {
+      rows.push({ ...item, ...meta });
+    });
+  });
+
+  rows.sort((a, b) => a.best - b.best || b.count - a.count || a.id.localeCompare(b.id));
+
+  if (!rows.length) {
+    const answered = Object.keys(TASK_LINKS).reduce(
+      (sum, key) => sum + Number((loadKey(key) || {}).total || 0),
+      0
+    );
+    holder.innerHTML =
+      `<div class="dash-empty">` +
+      (answered
+        ? "🎉 لا توجد بنود ضعيفة — نتائجك في المهام جيدة."
+        : "حلّ نصوص التلخيص أو صفات الصور لتظهر البنود الضعيفة هنا.") +
+      `</div>`;
+    return;
+  }
+
+  holder.innerHTML = "";
+  rows.slice(0, 6).forEach((row) => {
+    const link = document.createElement("a");
+    link.className = "dash-weak-row dash-task-row";
+    link.href = `${row.page}?item=${encodeURIComponent(row.id)}`;
+    link.title = row.weak.length
+      ? `لم تُغطَّ: ${row.weak.join(" · ")}`
+      : "اضغط للتدريب على هذا البند";
+    link.innerHTML =
+      `<span class="dash-task-tag">${row.label}</span>` +
+      `<div class="dash-weak-main">` +
+      `<div class="dash-weak-title">${escapeHTML(row.title)}</div>` +
+      `<div class="dash-weak-bar"><div class="dash-weak-fill" style="width:${row.best}%"></div></div>` +
+      (row.weak.length
+        ? `<div class="dash-task-weak-terms">${row.weak
+            .slice(0, 3)
+            .map((term) => `<span>${escapeHTML(term)}</span>`)
+            .join("")}</div>`
+        : "") +
+      `</div>` +
+      `<span class="dash-weak-pct">${row.best}%</span>`;
+    holder.appendChild(link);
+  });
+
+  if (rows.length > 6) {
+    const more = document.createElement("div");
+    more.className = "dash-task-more";
+    more.textContent = `+${rows.length - 6} بند آخر`;
+    holder.appendChild(more);
+  }
+}
+
+/* --------------------------------------
    Initialize
 -------------------------------------- */
 
@@ -309,6 +378,7 @@ async function initialize() {
   renderSrs(vocabulary);
   renderChart();
   renderWeak(grammar);
+  renderWeakItems();
 }
 
 initialize();

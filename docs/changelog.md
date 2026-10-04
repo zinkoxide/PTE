@@ -1,5 +1,40 @@
 # Changelog
 
+## v3.16 — Weak-item tracking + a guide that matches the scorer
+
+### SWT training guide now teaches what is actually scored
+- `data/swt.json` already carried `mainIdea` and `keyPoints`, and
+  `js/swt-score.js` weighted Content as **Main Idea 40% + Key Points 60%** —
+  but the guide showed a flat keyword list. It now presents **the claim** and
+  **the numbered supporting points** for the passage on screen, states how much
+  each is worth, and keeps the keyword chips as a vocabulary hint. Passages
+  without those fields fall back to the old keyword panel.
+
+### Weak items are now tracked per passage and per image
+- New pure module `js/task-stats.js` records each graded attempt as
+  `{ count, best, last, lastT, title, weak }` per item, keeping the existing
+  `correct / total / history` fields the dashboard already reads.
+- `weak` records **what the answer left out**: uncovered key points for SWT,
+  missing keywords for Describe Image (both scorers now return this).
+- `getWeakItems()` lists anything never scored above **60%**, weakest first; an
+  item clears itself as soon as it is answered well.
+
+### Dashboard
+- New **🧩 بنود تحتاج تدريباً** panel: every weak passage/image with its best
+  score, the missed keywords as chips, and a link that opens that exact item
+  (`swt.html?item=<id>`, `describe-image.html?item=<id>` — both pages now
+  accept a deep link).
+- The 14-day activity chart spans the full width again now that the grid holds
+  three panels.
+- Empty states: a friendly message when nothing is weak yet.
+
+### Checks
+- New harness `tools/tests/test-stats.mjs` (9 tests) covering the stats shape,
+  history capping, term de-duplication, input immutability and weak-item
+  ordering; it caught a real bug where `normalizeTaskStats` shared the caller's
+  `history` array.
+- SWT and DI harnesses extended for the new scorer output and guide structure.
+
 ## v3.15 — New PTE tasks: Summarize Written Text & Describe Image
 
 ### Summarize Written Text (`swt.html`)

@@ -68,10 +68,21 @@ test("a complete spoken description scores high", () => {
   assert(result.criteria.Fluency === 2, `expected full fluency, got ${result.criteria.Fluency}`);
 });
 
+test("the scorer reports which keywords the answer left out", () => {
+  const keywords = images[0].keywords;
+  const text = `This bar chart shows one thing about ${keywords[0]} only.`;
+  const result = scoreDescription(images[0], text);
+  assert(result.missedKeywords.length === keywords.length - result.hits, "every missing keyword must be reported");
+  assert(result.hits >= 1, "the keyword that was used must not be reported as missed");
+  assert(
+    result.missedKeywords.every((word) => keywords.includes(word)),
+    "missed keywords must come from the item"
+  );
+});
+
 test("an empty response scores zero", () => {
   const result = scoreDescription(images[0], "");
-  assert(result.total === 0, `expected 0, got ${result.total}`);
-});
+  assert(result.total === 0, `expected 0, got ${result.total}`);});
 
 test("a short response is penalised on fluency", () => {
   const result = scoreDescription(images[2], "The pie chart shows electricity.");

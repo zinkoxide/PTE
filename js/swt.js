@@ -9,6 +9,11 @@ Summarize Written Text
 
 import { scoreSummary } from "./swt-score.js";
 import { buildSwtGuide, renderSwtGuideHTML } from "./swt-guide.js";
+import {
+  emptyTaskStats,
+  normalizeTaskStats,
+  recordTaskAttempt
+} from "./task-stats.js";
 
 const TIME_PER_QUESTION = 10 * 60;
 const SWT_STATS_KEY = "pte.swt.stats.v1";
@@ -98,29 +103,29 @@ function loadStats() {
   try {
     const raw = localStorage.getItem(SWT_STATS_KEY);
     const parsed = raw ? JSON.parse(raw) : null;
-    return (
-      parsed && typeof parsed === "object"
-        ? parsed
-        : { correct: 0, total: 0, history: [] }
-    );
+    return parsed ? normalizeTaskStats(parsed) : emptyTaskStats();
   } catch (error) {
     console.warn("Unable to load SWT stats:", error);
-    return { correct: 0, total: 0, history: [] };
+    return emptyTaskStats();
   }
 }
 
-function recordAttempt(percent) {
-  const stats = loadStats();
-  stats.correct = Number(stats.correct || 0) + percent / 100;
-  stats.total = Number(stats.total || 0) + 1;
-  stats.history = Array.isArray(stats.history) ? stats.history : [];
-  stats.history.push({ t: Date.now(), percent });
-  if (stats.history.length > 400) stats.history = stats.history.slice(-400);
+function saveStats(stats) {
   try {
     localStorage.setItem(SWT_STATS_KEY, JSON.stringify(stats));
   } catch (error) {
     console.warn("Unable to save SWT stats:", error);
   }
+}
+
+function recordAttempt(item, score) {
+  const next = recordTaskAttempt(loadStats(), {
+    itemId: item.id,
+    title: item.title,
+    percent: score.total,
+    missedTerms: score.missedPoints || []
+  });
+  saveStats(next);
 }
 
 /* ==========================================
@@ -265,6 +270,14 @@ function renderQuestion() {
   startTimer();
 }
 
+/* Allow deep links such as swt.html?item=swt-003 (used by the dashboard). */
+function applyRequestedItem() {
+  const requested = new URLSearchParams(location.search).get("item");
+  if (!requested) return;
+  const index = questions.findIndex((question) => question.id === requested);
+  if (index >= 0) currentIndex = index;
+}
+
 async function loadQuestions() {
   try {
     const response = await fetch("./data/swt.json");
@@ -274,6 +287,7 @@ async function loadQuestions() {
   } catch (error) {
     console.warn("Unable to load data/swt.json, using built-in passage:", error);
   }
+  applyRequestedItem();
   renderQuestion();
 }
 
@@ -294,7 +308,7 @@ function submitAnswer(autoSubmit) {
   submitButton.disabled = true;
   progressFill.style.width = "100%";
 
-  recordAttempt(score.total);
+  recordAttempt(item, score);
 
   const criteriaRows = Object.entries(score.criteria)
     .map(

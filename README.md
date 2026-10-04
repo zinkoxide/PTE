@@ -84,8 +84,10 @@ python3 tools/generate_vocabulary_audio.py
   including keyword coverage, grammar issues and the model answer.
 - **📖 Training mode** (default on a first visit) explains the PTE method:
   find the main idea → keep only the strongest supports → merge them into a
-  single sentence with linking words. It lists the ideas this passage should
-  cover, 6 linking frames, do/don't tips and an annotated model answer.
+  single sentence with linking words. It teaches the *exact* fields the scorer
+  reads — the claim (`mainIdea`, 40% of Content) and the supporting points
+  (`keyPoints`, 60%) — plus 6 linking frames, do/don't tips and an annotated
+  model answer.
 
 ## Interactive Tests (`quiz.html`)
 
@@ -132,8 +134,11 @@ review of every question.
 
 Live overview: vocabulary acquired, due reviews today, grammar/quiz/pron/SWT/
 Describe-Image accuracy, a **last-14-days activity chart** across every module,
-weak grammar lessons (best < 70%), and a daily SRS review banner linking into
-the review queue.
+weak grammar lessons (best < 70%), a daily SRS review banner linking into
+the review queue, and a **🧩 بنود تحتاج تدريباً** panel listing the SWT
+passages and chart images you have never scored above 60% — each row shows the
+keywords or key points you missed and links straight to that item
+(`?item=<id>`). An item leaves the list as soon as you answer it well.
 
 ## Grammar (`grammar.html`)
 

@@ -97,6 +97,22 @@ under `assets/audio/vocabulary/`).
 Stats share one shape so the dashboard can read them uniformly:
 `{ correct, total, history: [{ t, percent }] }`.
 
+The two timed tasks add per-item detail on top of that, managed by
+`js/task-stats.js` (pure functions, no storage access):
+
+```
+missed: {
+  [itemId]: { count, best, last, lastT, title, weak: [...] }
+}
+```
+
+`best` is the highest score ever reached for that item, so an item drops out of
+the weak list (`getWeakItems`, threshold 60) as soon as it is answered well.
+`weak` holds the parts the answer left out — uncovered key points for SWT,
+missing keywords for Describe Image. Both task pages accept a deep link
+(`?item=<id>`) which the dashboard uses to send the learner straight to the
+item that needs work.
+
 ## Notes
 
 - A local HTTP server is required (ES modules + `fetch` do not work from `file://`).

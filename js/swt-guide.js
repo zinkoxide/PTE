@@ -53,21 +53,45 @@ export const AVOID = [
 
 /* ---------- passage-specific guidance ---------- */
 
-function buildCoverIdeas(keywords) {
-  const core = keywords.slice(0, 5);
-  const rest = keywords.slice(5);
-  return { core, extra: rest };
+/*
+The scorer weights Content as Main Idea 40% + Key Points 60%, and a key point
+counts as covered at 45% idea overlap. The guide therefore teaches exactly
+those two things instead of a flat keyword list. Older passages without those
+fields fall back to their keyword list.
+*/
+
+function buildCover(item) {
+  const mainIdea = item.mainIdea || "";
+  const keyPoints = Array.isArray(item.keyPoints) ? item.keyPoints : [];
+
+  if (mainIdea || keyPoints.length) {
+    return {
+      mode: "points",
+      mainIdea,
+      keyPoints,
+      supportTarget: Math.min(keyPoints.length, 2),
+      keywords: (item.keywords || []).slice(0, 6)
+    };
+  }
+
+  const keywords = item.keywords || [];
+  return {
+    mode: "keywords",
+    mainIdea: "",
+    keyPoints: [],
+    supportTarget: 0,
+    keywords
+  };
 }
 
 export function buildSwtGuide(item) {
-  const cover = buildCoverIdeas(item.keywords || []);
   return {
     title: item.title || "this passage",
     threeSteps: THREE_STEPS,
     frames: FRAMES,
     tips: TIPS,
     avoid: AVOID,
-    cover
+    cover: buildCover(item)
   };
 }
 
@@ -94,8 +118,33 @@ export function renderSwtGuideHTML(item, guide) {
     )
     .join("");
 
-  const coreChips = guide.cover.core.map((c) => `<li>${esc(c)}</li>`).join("");
-  const extraChips = guide.cover.extra.map((c) => `<li>${esc(c)}</li>`).join("");
+  const cover = guide.cover;
+
+  const coverPanel =
+    cover.mode === "points"
+      ? `<div class="swt-panel swt-cover">` +
+        `<h4>1 · The claim you must state</h4>` +
+        `<p class="swt-claim">${esc(cover.mainIdea)}</p>` +
+        `<p class="swt-panel-note">This alone is 40% of your Content mark — paraphrase it, do not copy it.</p>` +
+        `<h4 class="swt-subhead">2 · The supporting points (60% of Content)</h4>` +
+        `<ol class="swt-supports">${cover.keyPoints
+          .map((p) => `<li>${esc(p)}</li>`)
+          .join("")}</ol>` +
+        `<p class="swt-panel-note">Each point counts once you have expressed about half of it. Cover at least ${cover.supportTarget} of them — there is no room for all ${cover.keyPoints.length} in one sentence.</p>` +
+        (cover.keywords.length
+          ? `<h4 class="swt-subhead">Words that earn the vocabulary mark</h4>` +
+            `<ul class="swt-frames">${cover.keywords
+              .map((k) => `<li>${esc(k)}</li>`)
+              .join("")}</ul>`
+          : "") +
+        `</div>`
+      : `<div class="swt-panel">` +
+        `<h4>Ideas this passage should cover</h4>` +
+        `<ul class="swt-frames">${cover.keywords
+          .map((k) => `<li>${esc(k)}</li>`)
+          .join("")}</ul>` +
+        `<p class="swt-panel-note">Pick the claim plus two or three of the strongest points above; you do not have to mention all of them.</p>` +
+        `</div>`;
 
   return (
     `<div class="swt-training-card">` +
@@ -107,11 +156,7 @@ export function renderSwtGuideHTML(item, guide) {
 
     `<div class="swt-steps">${steps}</div>` +
 
-    `<div class="swt-panel">` +
-    `<h4>Ideas this passage should cover</h4>` +
-    `<ul class="swt-frames">${coreChips}${extraChips}</ul>` +
-    `<p class="swt-panel-note">Pick the claim plus two or three of the strongest points above; you do not have to mention all of them.</p>` +
-    `</div>` +
+    coverPanel +
 
     `<div class="swt-panel">` +
     `<h4>Linking frames for one sentence</h4>` +

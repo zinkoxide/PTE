@@ -38,10 +38,11 @@ function hasKeyword(normalizedText, keyword) {
 }
 
 function scoreContent(normalizedText, keywords) {
-  if (!normalizedText) return { score: 0, coverage: 0, hits: 0 };
-  const hits = keywords.filter((k) => hasKeyword(normalizedText, k)).length;
+  if (!normalizedText) return { score: 0, coverage: 0, hits: 0, missed: keywords.slice() };
+  const missed = keywords.filter((k) => !hasKeyword(normalizedText, k));
+  const hits = keywords.length - missed.length;
   const coverage = keywords.length ? hits / keywords.length : 0;
-  return { score: Math.min(2, Number((coverage * 2).toFixed(2))), coverage, hits };
+  return { score: Math.min(2, Number((coverage * 2).toFixed(2))), coverage, hits, missed };
 }
 
 function scoreFluency(words) {
@@ -86,6 +87,7 @@ export function scoreDescription(image, text) {
     keywordCoverage: content.coverage,
     hits: content.hits,
     keywordTotal: (image.keywords || []).length,
+    missedKeywords: content.missed,
     fluencyReason: fluency.reason,
     vocabularyReason: vocabulary.reason
   };

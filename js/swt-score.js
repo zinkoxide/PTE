@@ -753,6 +753,20 @@ export function scoreSummary(
     keyPointsTotal:
       content.keyPointsTotal,
 
+    /*
+    What the answer left out — used by the
+    training guide and the weak-item tracker.
+    */
+
+    mainIdeaCovered:
+      (content.mainIdeaCoverage || 0) >= 0.45,
+
+    missedPoints: (
+      content.keyPointCoverage || []
+    )
+      .filter((point) => !point.covered)
+      .map((point) => point.text),
+
     contentReasons:
       content.reasons,
 

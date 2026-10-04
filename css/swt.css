@@ -460,6 +460,61 @@ body.swt-training-mode .swt-result-card {
   color: var(--text-faint);
 }
 
+.swt-subhead {
+  margin-top: 16px !important;
+  padding-top: 14px;
+  border-top: 1px solid var(--glass-border-soft);
+}
+
+.swt-claim {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--grad-primary);
+  background: var(--sentence-bg);
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.swt-supports {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: swt-support;
+}
+
+.swt-supports li {
+  counter-increment: swt-support;
+  position: relative;
+  padding: 10px 12px 10px 40px;
+  border-radius: var(--radius-sm);
+  background: var(--box-bg);
+  border: 1px solid var(--glass-border-soft);
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.swt-supports li::before {
+  content: counter(swt-support);
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
 .swt-frames {
   display: flex;
   flex-wrap: wrap;

@@ -14,6 +14,11 @@ import { renderImage, CATEGORY_LABELS } from "./di-render.js";
 import { scoreDescription } from "./di-score.js";
 import { buildGuide, renderGuideHTML } from "./di-guide.js";
 import { SpeechEngine } from "./speech.js";
+import {
+  emptyTaskStats,
+  normalizeTaskStats,
+  recordTaskAttempt
+} from "./task-stats.js";
 
 const PREPARE_SECONDS = 25;
 const SPEAK_SECONDS = 40;
@@ -124,23 +129,21 @@ function loadStats() {
   try {
     const raw = localStorage.getItem(DI_STATS_KEY);
     const parsed = raw ? JSON.parse(raw) : null;
-    return parsed && typeof parsed === "object"
-      ? parsed
-      : { correct: 0, total: 0, history: [] };
+    return parsed ? normalizeTaskStats(parsed) : emptyTaskStats();
   } catch {
-    return { correct: 0, total: 0, history: [] };
+    return emptyTaskStats();
   }
 }
 
-function recordAttempt(percent) {
-  const stats = loadStats();
-  stats.correct = Number(stats.correct || 0) + percent / 100;
-  stats.total = Number(stats.total || 0) + 1;
-  stats.history = Array.isArray(stats.history) ? stats.history : [];
-  stats.history.push({ t: Date.now(), percent });
-  if (stats.history.length > 400) stats.history = stats.history.slice(-400);
+function recordAttempt(item, score) {
+  const next = recordTaskAttempt(loadStats(), {
+    itemId: item.id,
+    title: item.title,
+    percent: score.total,
+    missedTerms: score.missedKeywords || []
+  });
   try {
-    localStorage.setItem(DI_STATS_KEY, JSON.stringify(stats));
+    localStorage.setItem(DI_STATS_KEY, JSON.stringify(next));
   } catch (error) {
     console.warn("Unable to save DI stats:", error);
   }
@@ -333,7 +336,7 @@ function scoreAndShow(text) {
   answered.add(currentIndex);
   stopSpeaking();
   clearScreenTimer();
-  recordAttempt(score.total);
+  recordAttempt(item, score);
 
   if ($("di-record-button")) recordButton.hidden = true;
   stopButton.hidden = true;
@@ -395,6 +398,14 @@ async function loadImages() {
   } catch (error) {
     console.warn("Unable to load data/describe-images.json:", error);
   }
+}
+
+/* Allow deep links such as describe-image.html?item=tourism-quarters. */
+function applyRequestedItem() {
+  const requested = new URLSearchParams(location.search).get("item");
+  if (!requested) return;
+  const index = images.findIndex((image) => image.id === requested);
+  if (index >= 0) currentIndex = index;
 }
 
 function renderQuestion() {
@@ -480,6 +491,7 @@ initialize();
 
 async function initialize() {
   await loadImages();
+  applyRequestedItem();
   applyModeVisuals();
   renderQuestion();
   console.log(`Describe Image ready — ${images.length} images loaded (mode: ${mode}).`);

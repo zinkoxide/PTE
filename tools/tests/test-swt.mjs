@@ -4,6 +4,7 @@
    ========================================== */
 
 import { scoreSummary } from "../../js/swt-score.js";
+import { readFileSync } from "node:fs";
 import {
   buildSwtGuide,
   renderSwtGuideHTML,
@@ -76,7 +77,37 @@ test("SWT training guide builds 3 steps with frames + passage cover ideas", () =
   guide.threeSteps.forEach((s) => assert(s.title && s.body && s.frame, "each step needs title/body/frame"));
   assert(guide.frames.length >= 6, "expected at least 6 linking frames");
   assert(guide.tips.length >= 4 && guide.avoid.length >= 4, "expected do & don't lists");
-  assert(guide.cover.core.length >= 3, "expected core cover ideas from keywords");
+  assert(guide.cover.keywords.length === 6, "expected the keyword list as cover ideas");
+  assert(guide.cover.mode === "keywords", "a passage without mainIdea/keyPoints must fall back to keywords");
+});
+
+test("SWT guide teaches the claim and the supporting points the scorer looks for", () => {
+  const item = {
+    title: "The Growth of Renewable Energy",
+    keywords: ["renewable energy", "electricity"],
+    mainIdea: "Renewable energy matters for cleaner electricity and security.",
+    keyPoints: ["It produces lower emissions.", "It improves energy security.", "It needs storage."]
+  };
+  const guide = buildSwtGuide(item);
+  assert(guide.cover.mode === "points", "mainIdea + keyPoints must switch the guide to the claim/supports layout");
+  assert(guide.cover.mainIdea === item.mainIdea, "the claim must reach the guide");
+  assert(guide.cover.keyPoints.length === 3, "all key points must reach the guide");
+  assert(guide.cover.supportTarget === 2, "the guide must tell the learner to aim for two supports");
+
+  const html = renderSwtGuideHTML(item, guide);
+  assert(html.includes("The claim you must state"), "claim panel must be rendered");
+  assert(html.includes(item.mainIdea), "claim text must be rendered");
+  assert(html.includes("supporting points"), "supports panel must be rendered");
+  assert(html.includes("It needs storage."), "every key point must be rendered");
+  assert((html.match(/<li>/g) || []).length >= guide.cover.keyPoints.length, "each support is a list item");
+});
+
+test("every SWT passage in data/swt.json carries a claim and key points", async () => {
+  const passages = JSON.parse(readFileSync(new URL("../../data/swt.json", import.meta.url), "utf8"));
+  passages.forEach((passage) => {
+    assert(typeof passage.mainIdea === "string" && passage.mainIdea.length > 10, `${passage.id}: missing mainIdea`);
+    assert(Array.isArray(passage.keyPoints) && passage.keyPoints.length >= 2, `${passage.id}: needs at least 2 keyPoints`);
+  });
 });
 
 test("SWT guide renders hero, keywords and model reference with balanced markup", () => {
