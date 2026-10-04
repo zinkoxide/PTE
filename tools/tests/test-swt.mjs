@@ -145,5 +145,20 @@ test("SWT training sentences do not repeat Describe Image training sentences", (
   assert(repeated.length === 0, `repeated sentences: ${repeated.join(" | ")}`);
 });
 
+test("every model answer scores at least 75 against its own rubric", () => {
+  const passages = JSON.parse(readFileSync(new URL("../../data/swt.json", import.meta.url), "utf8"));
+  const weak = passages
+    .map((passage) => ({ id: passage.id, total: scoreSummary(passage, passage.reference).total }))
+    .filter((entry) => entry.total < 75);
+  assert(weak.length === 0, `model answers scoring below 75: ${weak.map((w) => `${w.id}=${w.total}`).join(", ")}`);
+});
+
+test("the corpus is large enough to be worth practising", () => {
+  const passages = JSON.parse(readFileSync(new URL("../../data/swt.json", import.meta.url), "utf8"));
+  assert(passages.length >= 15, `expected at least 15 passages, got ${passages.length}`);
+  const ids = new Set(passages.map((p) => p.id));
+  assert(ids.size === passages.length, "passage ids must be unique");
+});
+
 console.log(`RESULT: ${passed} passed, ${failed} failed`);
 if (failed > 0) process.exit(1);

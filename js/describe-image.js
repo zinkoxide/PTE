@@ -19,6 +19,7 @@ import {
   normalizeTaskStats,
   recordTaskAttempt
 } from "./task-stats.js";
+import { toOfficialScore, describeBand } from "./pte-scale.js";
 
 const PREPARE_SECONDS = 25;
 const SPEAK_SECONDS = 40;
@@ -360,11 +361,15 @@ function scoreAndShow(text) {
     ? `<div class="di-result-empty">No response — produce a complete description and try again.</div>`
     : "";
 
+  const officialScore = toOfficialScore(score.total);
+  const official = { score: officialScore, band: describeBand(officialScore) };
+
   resultSection.hidden = false;
   resultContent.innerHTML =
     `<div class="di-result-total ${score.total >= 70 ? "is-good" : score.total >= 50 ? "is-mid" : "is-low"}">` +
     `<span class="di-result-score">${score.total}</span>` +
     `<span class="di-result-label">/ 100</span>` +
+    `<span class="pte-official is-${official.band.tone}">≈ ${official.score} / 90 · ${official.band.label}</span>` +
     `</div>` +
     `<div class="di-criteria">${criteriaRows}</div>` +
     `<div class="di-result-details">` +

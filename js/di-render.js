@@ -220,10 +220,10 @@ function renderPieChart(data) {
   });
 
   return svgBody(
-    text(30, 44, "Pie chart — Distribution", 17, "start", "700", "#1e293b") +
+    text(30, 44, data.title || "Pie chart — Distribution", 17, "start", "700", "#1e293b") +
     slices +
     legend +
-    text(30, 390, "Percentage share of total", 12, "start", "600", "#64748b")
+    text(30, 390, data.caption || "Percentage share of total", 12, "start", "600", "#64748b")
   );
 }
 
@@ -263,10 +263,10 @@ function renderTable(data) {
     [...Array(data.rows.length - 1).keys()]
       .map((ri) => `<line x1="${left}" y1="${top + headerH + (ri + 1) * cellH}" x2="${left + width}" y2="${top + headerH + (ri + 1) * cellH}" stroke="#e2e8f0" stroke-width="1"/>`)
       .join("");
-  grid += text(W - 30, 390, "Enrollment (number of students)", 11, "end", "600", "#64748b");
+  grid += text(W - 30, 390, data.caption || "Figures as shown in the table", 11, "end", "600", "#64748b");
 
   return svgBody(
-    text(30, 52, "Table — Enrollment by Department", 17, "start", "700", "#1e293b") +
+    text(30, 52, data.title || "Table — Comparison", 17, "start", "700", "#1e293b") +
     `<rect x="${left}" y="${top}" width="${width}" height="${headerH + cellH * data.rows.length}" fill="#f8fafc"/>` +
     grid
   );
@@ -290,11 +290,11 @@ function renderMap(data) {
     .join("");
 
   return svgBody(
-    text(30, 44, "Map — Production by Region", 17, "start", "700", "#1e293b") +
+    text(30, 44, data.title || "Map — Regional distribution", 17, "start", "700", "#1e293b") +
     `<rect x="36" y="56" width="528" height="280" rx="10" fill="#f1f5f9"/>` +
     regions +
     legend +
-    text(30, 392, "Value shown in tonnes (approximate)", 11, "start", "600", "#64748b")
+    text(30, 392, data.caption || "Values are approximate", 11, "start", "600", "#64748b")
   );
 }
 
@@ -342,6 +342,157 @@ function renderProcess(data) {
   );
 }
 
+/* ------------------ Decision flow ------------------ */
+
+function arrowHead(x, y, angleDeg, color, size) {
+  const a = (angleDeg * Math.PI) / 180;
+  const tip = `${x.toFixed(1)},${y.toFixed(1)}`;
+  const left = `${(x - size * Math.cos(a - 0.42)).toFixed(1)},${(y - size * Math.sin(a - 0.42)).toFixed(1)}`;
+  const right = `${(x - size * Math.cos(a + 0.42)).toFixed(1)},${(y - size * Math.sin(a + 0.42)).toFixed(1)}`;
+  return `<polygon points="${tip} ${left} ${right}" fill="${color}"/>`;
+}
+
+function nodeBox(x, y, w, h, node, headerColor) {
+  return (
+    `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="11" fill="#ffffff" stroke="${headerColor}" stroke-width="2"/>` +
+    `<rect x="${x}" y="${y}" width="${w}" height="34" rx="11" fill="${headerColor}"/>` +
+    text(x + w / 2, y + 23, node.label, 13.5, "middle", "700", "#ffffff") +
+    text(x + w / 2, y + 54, node.desc, 11.5, "middle", "500", "#475569")
+  );
+}
+
+function renderDecisionFlow(data) {
+  const yes = data.yes;
+  const no = data.no;
+  const cx = W / 2;
+  let inner = "";
+
+  inner += nodeBox(cx - 100, 72, 200, 62, data.start, "#334155");
+  inner += `<line x1="${cx}" y1="134" x2="${cx}" y2="152" stroke="#334155" stroke-width="2.5"/>`;
+  inner += arrowHead(cx, 156, 90, "#334155", 8);
+
+  inner +=
+    `<polygon points="${cx},152 ${cx + 104},196 ${cx},240 ${cx - 104},196" fill="#eef2ff" stroke="#6366f1" stroke-width="2.5"/>` +
+    text(cx, 192, data.decision.label, 13.5, "middle", "700", "#3730a3") +
+    text(cx, 210, data.decision.desc, 11, "middle", "500", "#4f46e5");
+
+  inner +=
+    `<polyline points="${cx - 104},196 150,196 150,262" fill="none" stroke="#10b981" stroke-width="2.5"/>` +
+    arrowHead(150, 266, 90, "#10b981", 8) +
+    text(184, 189, "Yes", 12.5, "start", "700", "#047857");
+
+  inner +=
+    `<polyline points="${cx + 104},196 450,196 450,262" fill="none" stroke="#f59e0b" stroke-width="2.5"/>` +
+    arrowHead(450, 266, 90, "#f59e0b", 8) +
+    text(416, 189, "No", 12.5, "end", "700", "#b45309");
+
+  inner += nodeBox(40, 270, 220, 62, yes, "#10b981");
+  inner += nodeBox(340, 270, 220, 62, no, "#f59e0b");
+
+  inner +=
+    `<polyline points="150,332 150,368 236,368" fill="none" stroke="#64748b" stroke-width="2"/>` +
+    arrowHead(240, 368, 0, "#64748b", 7) +
+    `<polyline points="450,332 450,368 364,368" fill="none" stroke="#64748b" stroke-width="2"/>` +
+    arrowHead(360, 368, 180, "#64748b", 7);
+
+  inner += nodeBox(cx - 110, 340, 220, 58, data.end, "#0ea5e9");
+
+  return svgBody(
+    text(30, 46, "Process diagram — Decision flow", 17, "start", "700", "#1e293b") +
+    `<rect x="16" y="58" width="${W - 32}" height="352" rx="10" fill="#f8fafc"/>` +
+    inner +
+    text(30, 400, "Two possible routes through the same starting and final stage", 11.5, "start", "600", "#64748b")
+  );
+}
+
+/* ------------------ Cycle ------------------ */
+
+function renderCycle(data) {
+  const stages = data.stages;
+  const n = stages.length;
+  const cx = 300;
+  const cy = 226;
+  const r = 138;
+  const boxW = 132;
+  const boxH = 56;
+
+  let inner = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="6 5"/>`;
+
+  const points = stages.map((_, i) => {
+    const a = (-90 + (360 / n) * i) * (Math.PI / 180);
+    return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) };
+  });
+
+  points.forEach((p, i) => {
+    const next = points[(i + 1) % n];
+    const mid = { x: (p.x + next.x) / 2, y: (p.y + next.y) / 2 };
+    const bulge = { x: cx + (mid.x - cx) * 1.16, y: cy + (mid.y - cy) * 1.16 };
+    inner +=
+      `<path d="M ${p.x.toFixed(1)} ${p.y.toFixed(1)} Q ${bulge.x.toFixed(1)} ${bulge.y.toFixed(1)} ${next.x.toFixed(1)} ${next.y.toFixed(1)}" fill="none" stroke="#6366f1" stroke-width="2.5"/>`;
+    const angle = (Math.atan2(next.y - bulge.y, next.x - bulge.x) * 180) / Math.PI;
+    inner += arrowHead(next.x, next.y, angle, "#6366f1", 9);
+  });
+
+  stages.forEach((stage, i) => {
+    const p = points[i];
+    const x = p.x - boxW / 2;
+    const y = p.y - boxH / 2;
+    inner +=
+      `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${boxW}" height="${boxH}" rx="11" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>` +
+      text(p.x, p.y - 4, stage.label, 13, "middle", "700", "#3730a3") +
+      text(p.x, p.y + 14, stage.desc, 10.5, "middle", "500", "#475569");
+  });
+
+  inner += text(cx, cy - 6, data.centerLabel || "repeats", 12.5, "middle", "700", "#b45309");
+  inner += text(cx, cy + 12, "no fixed start", 11, "middle", "600", "#64748b");
+
+  return svgBody(
+    text(30, 46, "Process diagram — Cycle", 17, "start", "700", "#1e293b") +
+    `<rect x="16" y="58" width="${W - 32}" height="352" rx="10" fill="#f8fafc"/>` +
+    inner +
+    text(30, 400, "A circular process with no fixed starting or ending point", 11.5, "start", "600", "#64748b")
+  );
+}
+
+/* ------------------ Timeline ------------------ */
+
+function renderTimeline(data) {
+  const events = data.events;
+  const n = events.length;
+  const axisY = 228;
+  const x0 = 62;
+  const x1 = W - 62;
+  const span = x1 - x0;
+
+  let inner =
+    `<line x1="${x0 - 18}" y1="${axisY}" x2="${x1 + 18}" y2="${axisY}" stroke="#334155" stroke-width="3"/>` +
+    arrowHead(x1 + 22, axisY, 0, "#334155", 9) +
+    text(W - 24, axisY - 14, data.axisLabel || "time", 11.5, "end", "600", "#64748b");
+
+  events.forEach((event, i) => {
+    const x = n === 1 ? (x0 + x1) / 2 : x0 + (span / (n - 1)) * i;
+    const above = i % 2 === 0;
+    const boxW = 118;
+    const boxH = 76;
+    const boxY = above ? axisY - 42 - boxH : axisY + 42;
+
+    inner +=
+      `<line x1="${x.toFixed(1)}" y1="${above ? boxY + boxH : axisY}" x2="${x.toFixed(1)}" y2="${above ? axisY - 8 : boxY}" stroke="#94a3b8" stroke-width="1.8"/>` +
+      `<circle cx="${x.toFixed(1)}" cy="${axisY}" r="7" fill="#ffffff" stroke="#6366f1" stroke-width="3"/>` +
+      `<rect x="${(x - boxW / 2).toFixed(1)}" y="${boxY}" width="${boxW}" height="${boxH}" rx="11" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>` +
+      text(x, boxY + 22, event.year, 13.5, "middle", "700", "#3730a3") +
+      text(x, boxY + 41, event.label, 11.5, "middle", "600", "#334155") +
+      text(x, boxY + 58, event.desc, 10.5, "middle", "500", "#64748b");
+  });
+
+  return svgBody(
+    text(30, 46, "Process diagram — Timeline", 17, "start", "700", "#1e293b") +
+    `<rect x="16" y="58" width="${W - 32}" height="352" rx="10" fill="#f8fafc"/>` +
+    inner +
+    text(30, 400, data.caption || "Stages shown in chronological order", 11.5, "start", "600", "#64748b")
+  );
+}
+
 /* ------------------ Dispatcher ------------------ */
 
 export function renderImage(item) {
@@ -352,6 +503,9 @@ export function renderImage(item) {
   if (kind === "table") return renderTable(item.data);
   if (kind === "map") return renderMap(item.data);
   if (kind === "process-diagram") return renderProcess(item.data);
+  if (kind === "decision-flow") return renderDecisionFlow(item.data);
+  if (kind === "cycle") return renderCycle(item.data);
+  if (kind === "timeline") return renderTimeline(item.data);
   return svgBody(text(30, 100, "Unknown image type", 20, "start", "700", "#b91c1c"));
 }
 
@@ -361,5 +515,8 @@ export const CATEGORY_LABELS = {
   "pie-chart": "Pie chart",
   table: "Table",
   map: "Map",
-  "process-diagram": "Process diagram"
+  "process-diagram": "Process diagram",
+  "decision-flow": "Decision flow",
+  cycle: "Cycle",
+  timeline: "Timeline"
 };

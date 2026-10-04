@@ -10,6 +10,7 @@ each, and a **Vocabulary** bank with search, filters, and pronunciation audio.
 - `index.html` — dashboard.
 - `repeat.html` — repeat-sentence trainer (audio, recording, scoring).
 - `describe-image.html` — Describe Image trainer (charts drawn as SVG, speech or typing).
+- `read-aloud.html` — Read Aloud trainer (read the text aloud in one breath).
 - `swt.html` — Summarize Written Text trainer (one-sentence summary, scored on 4 criteria).
 - `vocabulary.html` — searchable vocabulary trainer.
 - `grammar.html` — bilingual grammar reference + interactive grammar quizzes.
@@ -60,11 +61,27 @@ python3 tools/generate_audio.py
 python3 tools/generate_vocabulary_audio.py
 ```
 
+## Read Aloud (`read-aloud.html`)
+
+- 12 short texts in `data/read_aloud.json`, each with the pronunciation tip that
+  matters for that sentence (which phrase carries the stress, what must not be
+  split).
+- 🔊 **Hear it first** reads the text aloud with the browser's own speech
+  synthesis, so the page needs no audio files.
+- **📖 Training mode** teaches the three habits that raise the marks: read it
+  silently first, keep phrases together, one smooth breath at 2.2–3.6 words per
+  second.
+- Scored on **Content / Fluency / Pronunciation** (`js/read-aloud-score.js`),
+  reusing the Repeat Sentence comparison engine. Fluency combines pace *and*
+  long pauses, so a slow or hesitant reading loses marks even when every word is
+  right. The result lists skipped and mispronounced words.
+- 🎙️ record with the microphone, or type the sentence if no mic is available.
+
 ## Describe Image (`describe-image.html`)
 
-- **10 SVG chart types' worth of practice**: bar chart, line graph, pie chart,
-  table, map and process diagrams — 7 items in `data/describe-images.json`,
-  each with a model description and keywords.
+- **13 items across 9 chart types**, all drawn as SVG: bar chart, line graph,
+  pie chart, table, map, linear process, **decision flow**, **cycle** and
+  **timeline** — each with a model description and keywords.
 - **🎙️ speak or ⌨️ type**: record with the Web Speech API (`speech.js`), or fall
   back to a text box whenever the microphone is unavailable or permission is
   denied — the task stays fully usable.
@@ -80,6 +97,8 @@ python3 tools/generate_vocabulary_audio.py
 
 - 10 passages in `data/swt.json`; write **one** summary sentence of **5–75 words**
   inside a 10-minute timer, with live word/sentence validation.
+- Content is weighted the way the real task is: the passage's `mainIdea`
+  (40%) plus its `keyPoints` (60%).
 - Scored on **Content / Form / Grammar / Vocabulary** (`js/swt-score.js`),
   including keyword coverage, grammar issues and the model answer.
 - **📖 Training mode** (default on a first visit) explains the PTE method:
@@ -133,12 +152,15 @@ review of every question.
 ## Dashboard (`index.html`)
 
 Live overview: vocabulary acquired, due reviews today, grammar/quiz/pron/SWT/
-Describe-Image accuracy, a **last-14-days activity chart** across every module,
+Describe-Image/Read-Aloud accuracy, a **last-14-days activity chart** across every module,
 weak grammar lessons (best < 70%), a daily SRS review banner linking into
 the review queue, and a **🧩 بنود تحتاج تدريباً** panel listing the SWT
 passages and chart images you have never scored above 60% — each row shows the
 keywords or key points you missed and links straight to that item
 (`?item=<id>`). An item leaves the list as soon as you answer it well.
+- A **🎯 هدفك في الاختبار** card converts every task average to the official
+  **10–90** scale (`js/pte-scale.js`), averages them into one estimate, and
+  shows the gap to a target you can change (saved in `localStorage`).
 
 ## Grammar (`grammar.html`)
 
@@ -216,6 +238,20 @@ Nothing starts automatically and browsing is never blocked.
 - Add sentences to `data/repeat_sentences.json` (fields: `id`, `text`, `level`, `audio`).
 - Add words via the Flask "Add Word" form, or directly to `data/vocabulary.json` (any new field is rendered if present).
 - Edit grammar lessons/quizzes directly in the files under `data/grammar/` (lessons with `id`, `title`, `category`, `icon`, `description`, `explanation`, `rules`, `examples`, `commonMistakes`, `markers`, `quiz` — quiz items are `mcq`/`multiple_choice` with `options` (4) + `answer` (index or option text), or `tf`/`true_false` with `correct` boolean / `answer` "True"/"False"). The app normalizes both spellings in `js/grammar.js`. To add a new grammar file, append its name to `data/grammar/manifest.json`.
-- Add SWT passages to `data/swt.json` (`title`, `passage`, `reference`, `keywords`) — the training guide derives its steps and cover-ideas from these fields automatically.
-- Add Describe Image items to `data/describe-images.json` (`id`, `title`, `category`, `data`, `reference`, `keywords`); `category` must be one of the keys of `CATEGORY_LABELS` in `js/di-render.js`, and `data` must match that chart type's shape (the guide and renderer read the same fields).
+- Add SWT passages to `data/swt.json` (`id`, `title`, `passage`, `mainIdea`,
+  `keyPoints`, `keywords`, `reference`) — the guide and the Content score both
+  read `mainIdea` and `keyPoints`, so keep the reference sentence a learner could
+  actually write in 5–75 words.
+- Add Read Aloud texts to `data/read_aloud.json` (`id`, `text`, `level`, `tip`).
+- Add Describe Image items to `data/describe-images.json` (`id`, `title`, `category`, `data`, `reference`, `keywords`); `category` must be one of the keys of `CATEGORY_LABELS` in `js/di-render.js`, and `data` must match that chart type's shape:
+  `bar-chart` `{ yLabel, labels, groups:[{label, values}] }`,
+  `line-graph` `{ yLabel, labels, series:[…] }`,
+  `pie-chart` `{ values:[{label, value, color}] }`,
+  `table` `{ headers, rows, subject?, period?, title?, caption? }`,
+  `map` `{ regions:[{label, value, color, points, cx?, cy?}] }`,
+  `process-diagram` `{ steps:[{label, desc}], cycle? }`,
+  `decision-flow` `{ start, decision, yes, no, end }` (each `{label, desc}`),
+  `cycle` `{ stages:[{label, desc}], centerLabel? }`,
+  `timeline` `{ events:[{year, label, desc}], axisLabel?, caption? }`.
+  The guide builds its highlights from the same fields, so no extra work is needed.
 - Regenerate audio, then add new entries to the audio index files.

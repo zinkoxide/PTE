@@ -45,6 +45,10 @@ function tokenizeText(text) {
   if (!text) return [];
   return text
     .toLowerCase()
+    /* All apostrophe variants become one character before punctuation is
+       stripped, otherwise a typographic ’ in the text would never match the
+       plain ' that speech recognition returns. */
+    .replace(/[‘’ʼ´`]/g, "'")
     .replace(/[-]/g, " ")
     .replace(/[.,!?;,"'()[\]{}]/g, "")
     .replace(/\s+/g, " ")

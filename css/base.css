@@ -409,6 +409,31 @@ a:focus-visible,
 
 .btn-sm { padding: 8px 14px; font-size: 13px; border-radius: 10px; }
 
+/* Official PTE score estimate shown next to a practice total. */
+.pte-official {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-inline-start: auto;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.pte-official.is-low { color: var(--red); border-color: rgba(251, 113, 133, 0.4); }
+.pte-official.is-mid { color: var(--amber); border-color: rgba(251, 191, 36, 0.4); }
+.pte-official.is-good { color: var(--green); border-color: rgba(52, 211, 153, 0.4); }
+.pte-official.is-top {
+  color: #fff;
+  background: var(--grad-primary);
+  border-color: transparent;
+}
+
 /* ==========================================
    Status Pills / Selects / Inputs
    ========================================== */

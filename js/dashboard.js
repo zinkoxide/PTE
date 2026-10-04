@@ -14,6 +14,13 @@ import {
   getDueWords
 } from "./storage.js";
 import { getWeakItems } from "./task-stats.js";
+import {
+  MIN_SCORE,
+  MAX_SCORE,
+  DEFAULT_TARGET,
+  averageToOfficial,
+  gapToTarget
+} from "./pte-scale.js";
 
 const GRAMMAR_STATS_KEY = "pte.grammar.stats.v1";
 const QUIZ_STATS_KEY = "pte.quiz.stats.v1";
@@ -369,6 +376,95 @@ function renderWeakItems() {
 }
 
 /* --------------------------------------
+   Exam goal vs estimated score
+-------------------------------------- */
+
+const GOAL_KEY = "pte.goal.v1";
+
+const GOAL_SOURCES = [
+  { key: SWT_STATS_KEY, label: "تلخيص", page: "swt.html" },
+  { key: DI_STATS_KEY, label: "وصف صورة", page: "describe-image.html" },
+  { key: "pte.ra.stats.v1", label: "قراءة بصوت عالٍ", page: "read-aloud.html" }
+];
+
+function loadGoal() {
+  try {
+    const raw = localStorage.getItem(GOAL_KEY);
+    const value = Number(raw);
+    return Number.isFinite(value) && value >= MIN_SCORE && value <= MAX_SCORE
+      ? value
+      : DEFAULT_TARGET;
+  } catch {
+    return DEFAULT_TARGET;
+  }
+}
+
+function saveGoal(value) {
+  try {
+    localStorage.setItem(GOAL_KEY, String(value));
+  } catch {
+    /* storage may be unavailable; the input still works for this session */
+  }
+}
+
+function renderGoal() {
+  const holder = $("dash-goal");
+  const input = $("dash-goal-input");
+  if (!holder) return;
+
+  const target = loadGoal();
+  if (input) input.value = String(target);
+
+  const rows = GOAL_SOURCES.map((source) => {
+    const stats = loadKey(source.key) || {};
+    const score = averageToOfficial(stats.correct, stats.total);
+    const { gap, reached } = gapToTarget(score, target);
+    return { ...source, score, gap, reached };
+  });
+
+  const answered = rows.filter((row) => row.score != null);
+  const overall = answered.length
+    ? Math.round(answered.reduce((sum, row) => sum + row.score, 0) / answered.length)
+    : null;
+  const overallGap = gapToTarget(overall, target);
+
+  holder.innerHTML =
+    `<div class="dash-goal-top">` +
+    `<div class="dash-goal-score ${overallGap.reached ? "is-reached" : ""}">` +
+    `<span class="dash-goal-number">${overall == null ? "—" : overall}</span>` +
+    `<span class="dash-goal-of">/ 90</span>` +
+    `</div>` +
+    `<div class="dash-goal-caption">` +
+    (overall == null
+      ? "حلّ أي مهمة لتقدير درجتك"
+      : overallGap.reached
+        ? `🎉 بلغت هدفك (${overallGap.goal})`
+        : `باقي ${overallGap.gap} نقطة لهدف ${overallGap.goal}`) +
+    `</div>` +
+    `</div>` +
+    rows
+      .map(
+        (row) =>
+          `<div class="dash-goal-row">` +
+          `<a class="dash-goal-label" href="${row.page}">${row.label}</a>` +
+          `<div class="dash-goal-bar"><div class="dash-goal-fill ${row.reached ? "is-reached" : row.score == null ? "is-empty" : ""}" style="width:${row.score == null ? 0 : Math.min(100, (row.score / MAX_SCORE) * 100)}%"></div>` +
+          `<div class="dash-goal-target" style="left:${(target / MAX_SCORE) * 100}%"></div></div>` +
+          `<span class="dash-goal-value">${row.score == null ? "—" : row.score}</span>` +
+          `</div>`
+      )
+      .join("");
+
+  if (input && !input.dataset.bound) {
+    input.dataset.bound = "1";
+    input.addEventListener("change", () => {
+      const value = Math.min(MAX_SCORE, Math.max(MIN_SCORE, Number(input.value) || DEFAULT_TARGET));
+      saveGoal(value);
+      renderGoal();
+    });
+  }
+}
+
+/* --------------------------------------
    Initialize
 -------------------------------------- */
 
@@ -379,6 +475,7 @@ async function initialize() {
   renderChart();
   renderWeak(grammar);
   renderWeakItems();
+  renderGoal();
 }
 
 initialize();

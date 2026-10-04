@@ -1,5 +1,62 @@
 # Changelog
 
+## v3.17 — More content, official score scale, and Read Aloud
+
+### Content: 13 charts and 18 passages
+- Describe Image grew from 7 to **13 items** and from 6 to **9 categories**.
+  Three new SVG renderers were added to `js/di-render.js`:
+  - **`decision-flow`** — entry box, a decision diamond, labelled Yes/No
+    branches and a shared final stage.
+  - **`cycle`** — stages around a circle with curved arrows and a centre label,
+    for processes with no end point.
+  - **`timeline`** — a time axis with alternating milestone cards.
+- Six new items: a complaint decision flow, a bottle-recycling cycle, a library
+  timeline, a waste pie chart, a bus-fare table and a rainfall bar chart.
+- Table and map titles/captions are now **data-driven** instead of hardcoded to
+  the old enrollment example, and table highlights read `subject`/`period` so
+  they read correctly for any table.
+- SWT grew from 10 to **18 passages** covering different argument shapes
+  (problem–solution, claim–evidence, cause–effect, advantages, chronology).
+  A harness check now verifies that **every model answer scores at least 75**
+  when run through its own scorer, so no "model" can drift away from the rubric.
+
+### Official 10–90 scale + a target
+- New `js/pte-scale.js` converts a 0–100 practice total into an official-scale
+  estimate using a documented monotonic anchor table, with coarse band labels
+  ("Good", "Very good", …). It is an approximation for motivation, and the
+  module says so.
+- Every SWT, Describe Image and Read Aloud result now shows a **≈ NN / 90** chip
+  beside the practice total.
+- New dashboard card **🎯 هدفك في الاختبار**: an editable target (saved in
+  `pte.goal.v1`), one averaged estimate across the three speaking/writing tasks,
+  a per-task bar with a target marker, and the remaining gap.
+
+### New task: Read Aloud (`read-aloud.html`)
+- 12 short texts with the pronunciation tip that matters for each sentence.
+- **🔊 Hear it first** uses the browser's speech synthesis, so the page needs no
+  audio assets.
+- Training / Practice switch (Training by default) teaching: read silently
+  first, keep phrases together, one breath at 2.2–3.6 words per second.
+- `js/read-aloud-score.js` scores Content / Fluency / Pronunciation on top of the
+  existing comparison engine; fluency combines **pace and long pauses**, and the
+  result lists skipped and mispronounced words. Microphone or typing fallback.
+- Added to the sidebar of every page and to the dashboard goal card.
+
+### Bug fix that also affected Repeat Sentence
+- `compare.js` stripped only the ASCII apostrophe, so a typographic `’` in the
+  source text never matched the plain `'` that speech recognition returns — a
+  perfectly read sentence such as "o'clock" was marked wrong. All apostrophe
+  variants are now normalised to one character before tokenising.
+
+### Checks
+- New harness `tools/tests/test-read-aloud.mjs` (13 tests) covering the scorer,
+  pace and pause penalties, the data, and the monotonic 10–90 conversion.
+- `test-di.mjs` grew to 15 tests: every category must have a label, a renderer
+  and a guide; the three new process types must draw real shapes; and the guide
+  sentences must be grammatical English rather than raw labels.
+- `test-html.mjs` grew to 18 tests, now including the Read Aloud page wiring and
+  sidebar links, and prefix isolation for the new stylesheet.
+
 ## v3.16 — Weak-item tracking + a guide that matches the scorer
 
 ### SWT training guide now teaches what is actually scored

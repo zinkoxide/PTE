@@ -31,6 +31,11 @@
           <span class="nav-icon">🗣️</span><span class="nav-label">Repeat Sentence</span>
         </a>
 
+        <a class="nav-link" href="read-aloud.html">
+          <span class="nav-icon">📢</span>
+          <span class="nav-label">Read Aloud</span>
+        </a>
+
         <a class="nav-link" href="describe-image.html">
           <span class="nav-icon">🖼️</span><span class="nav-label">Describe Image</span>
         </a>
@@ -131,8 +136,26 @@
           </div>
         </section>
 
-        <!-- Activity + weak areas -->
+        <!-- Goal + activity -->
         <section class="dash-panels">
+
+          <section class="card dash-panel dash-goal-panel">
+            <div class="card-title"><span>🎯 هدفك في الاختبار</span>
+              <label class="dash-goal-input">
+                الهدف
+                <input
+                  id="dash-goal-input"
+                  type="number"
+                  min="10"
+                  max="90"
+                  step="1"
+                  value="60"
+                  inputmode="numeric"
+                >
+              </label>
+            </div>
+            <div id="dash-goal" class="dash-goal"></div>
+          </section>
 
           <section class="card dash-panel dash-chart-panel">
             <div class="card-title"><span>📈 النشاط — آخر 14 يوماً</span></div>

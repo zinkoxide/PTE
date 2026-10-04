@@ -11,6 +11,7 @@ optional Flask add-word server (`app.py`), needed **at save time only**.
 - `index.html` — dashboard (stats cards, 14-day activity chart, weak areas).
 - `repeat.html` — repeat-sentence trainer (audio, recording, scoring).
 - `describe-image.html` — Describe Image (SVG charts, speech or typing, training guide).
+- `read-aloud.html` — Read Aloud (record or type a reading, fluency + pronunciation).
 - `vocabulary.html` — vocabulary trainer (search, filters, SRS, pronunciation check).
 - `grammar.html` — bilingual grammar reference + quizzes.
 - `swt.html` — Summarize Written Text (one-sentence summary, training guide).
@@ -19,9 +20,10 @@ optional Flask add-word server (`app.py`), needed **at save time only**.
 
 ### Stylesheets (`css/`)
 
-`base.css` (shared shell, buttons, pills, inputs, theme tokens) plus one
-page-specific sheet each: `dash.css`, `repeat.css`, `di.css`, `vocab.css`,
-`gram.css`, `swt.css`, `quiz.css`, `addw.css`.
+`base.css` (shared shell, buttons, pills, inputs, theme tokens, the
+`.pte-official` score chip) plus one page-specific sheet each: `dash.css`,
+`repeat.css`, `read-aloud.css`, `di.css`, `vocab.css`, `gram.css`, `swt.css`,
+`quiz.css`, `addw.css`.
 
 Class names are page-scoped (`di-*`, `swt-*`, …) and a harness test enforces
 that no page, stylesheet or module borrows another page's prefix.
@@ -46,6 +48,10 @@ that no page, stylesheet or module borrows another page's prefix.
 | `swt.js` | Summarize Written Text flow (mode switch, timer, submit, result) |
 | `swt-score.js` | Content / Form / Grammar / Vocabulary scoring for summaries |
 | `swt-guide.js` | SWT training guide (3-step method, linking frames, tips) |
+| `read-aloud.js` | Read Aloud flow (prepare timer, recording, typing fallback, result) |
+| `read-aloud-score.js` | Content / Fluency / Pronunciation scoring for a reading |
+| `pte-scale.js` | converts a 0–100 practice total into an official 10–90 estimate |
+| `task-stats.js` | shared per-item attempt recording and weak-item selection |
 | `add-word.js` | add-word form logic (check + save via the Flask API) |
 
 ### Data (`data/`)
@@ -54,9 +60,12 @@ that no page, stylesheet or module borrows another page's prefix.
 - `vocabulary.json` — 1001 words; `vocabulary_audio_index.json` — word → MP3 path.
 - `grammar/` — 18 topic files listed in `manifest.json`; 29 lessons,
   450 quiz items, 12 categories.
-- `swt.json` — 10 passages (`title`, `passage`, `reference`, `keywords`).
-- `describe-images.json` — 7 items across 6 categories (`id`, `title`,
+- `swt.json` — 18 passages (`id`, `title`, `passage`, `mainIdea`, `keyPoints`,
+  `keywords`, `reference`).
+- `describe-images.json` — 13 items across 9 categories (`id`, `title`,
   `category`, `data` for the SVG, `reference`, `keywords`).
+- `read_aloud.json` — 12 short texts (`id`, `text`, `level`, `tip`); playback
+  uses the browser speech synthesis, so no audio files are needed.
 
 `assets/audio/` holds the generated MP3s (sentences in the root, vocabulary
 under `assets/audio/vocabulary/`).
@@ -68,7 +77,7 @@ under `assets/audio/vocabulary/`).
 - `generate_audio.py`, `generate_vocabulary_audio.py` — Edge TTS audio generation.
 - `start_add_word.sh` — starts the Flask add server.
 - `tests/test-*.mjs` — unit harnesses (html wiring, grammar, storage,
-  pronunciation, swt, di).
+  pronunciation, swt, di, task stats, read aloud + the official scale).
 
 ## Data flow (repeat)
 
@@ -78,7 +87,16 @@ under `assets/audio/vocabulary/`).
 4. `compare.js` tokenizes, normalizes numbers, and aligns both texts.
 5. `score.js` (the single source of truth) converts counts to accuracy/score/level.
 
-## Data flow (Describe Image / SWT)
+## Score reporting
+
+Practice totals are 0–100; the exam reports 10–90. `js/pte-scale.js` converts
+between them with a documented monotonic anchor table and adds a coarse band
+label. The estimate is shown next to every practice total and aggregated per
+task on the dashboard, where the learner can set a target (`pte.goal.v1`) and
+see the remaining gap. It is an approximation for motivation only — the real
+score comes from item-level difficulty scaling in the official test.
+
+## Data flow (Describe Image / SWT / Read Aloud)
 
 1. The page module loads its JSON data and calls the matching guide builder.
 2. **Training mode** renders the 3-step method built from the *current* item's
@@ -92,7 +110,7 @@ under `assets/audio/vocabulary/`).
 
 `pte.theme`, `pte.vocab.study.v1`, `pte.vocab.pron.v1`, `pte.grammar.stats.v1`,
 `pte.quiz.stats.v1`, `pte.swt.stats.v1`, `pte.swt.mode`, `pte.di.stats.v1`,
-`pte.di.mode`.
+`pte.di.mode`, `pte.ra.stats.v1`, `pte.ra.mode`, `pte.goal.v1`.
 
 Stats share one shape so the dashboard can read them uniformly:
 `{ correct, total, history: [{ t, percent }] }`.

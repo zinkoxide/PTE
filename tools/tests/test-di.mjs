@@ -120,6 +120,61 @@ test("every guide renders to html with its own data highlights", () => {
   });
 });
 
+test("every chart type has a label, a renderer and a training guide", () => {
+  const categories = [...new Set(images.map((image) => image.category))];
+  categories.forEach((category) => {
+    assert(CATEGORY_LABELS[category], `no label for category ${category}`);
+    const item = images.find((image) => image.category === category);
+    assert(item, `no data item for category ${category}`);
+    const guide = buildGuide(item);
+    assert(guide.type, `no guide entry for category ${category}`);
+    assert(guide.frames.length >= 4, `${category} needs at least 4 frames`);
+    assert(guide.highlights.length >= 1, `${category} produced no data highlights`);
+    assert(renderImage(item).includes("<svg"), `${category} produced no svg`);
+  });
+  assert(
+    Object.keys(CATEGORY_LABELS).every((category) => categories.includes(category)),
+    "every supported category must appear in the data so it can be practised"
+  );
+});
+
+test("the new process types render their own shapes", () => {
+  const flow = renderImage(images.find((i) => i.id === "complaint-decision"));
+  assert((flow.match(/<polygon/g) || []).length >= 2, "a decision flow needs a diamond and arrowheads");
+  assert(flow.includes("Yes") && flow.includes("No"), "both branches must be labelled");
+
+  const cycle = renderImage(images.find((i) => i.id === "water-bottle-cycle"));
+  assert(cycle.includes("<circle"), "a cycle is drawn around a circle");
+  assert((cycle.match(/<path d="M /g) || []).length >= 6, "a six-stage cycle needs six curved arrows");
+
+  const timeline = renderImage(images.find((i) => i.id === "library-timeline"));
+  assert((timeline.match(/<circle/g) || []).length >= 5, "each milestone needs a marker on the axis");
+  assert(timeline.includes("1857") && timeline.includes("2021"), "the timeline must show its years");
+});
+
+test("the timeline guide names the longest gap between milestones", () => {
+  const guide = buildGuide(images.find((i) => i.id === "library-timeline"));
+  assert(guide.highlights.some((line) => /longest interval/i.test(line)), "expected a longest-interval highlight");
+  assert(guide.highlights.some((line) => line.includes("1857") && line.includes("2021")), "expected the first and last milestone");
+});
+
+test("new process guides produce grammatical English, not raw labels", () => {
+  const flow = buildGuide(images.find((i) => i.id === "complaint-decision"));
+  assert(
+    !/\bwhether is\b/i.test(flow.highlights.join(" ")),
+    "the decision highlight must not read 'whether is ...'"
+  );
+  assert(!/^If is /i.test(flow.example), "the decision example must not start with 'If is ...'");
+  assert(/\?$/.test(flow.example.split(" — ")[1] || "") || flow.example.includes("?"), "the example keeps the question");
+
+  const cycle = buildGuide(images.find((i) => i.id === "water-bottle-cycle"));
+  assert(cycle.example.includes("no final stage"), "the cycle example must say the loop has no final stage");
+  assert(!cycle.example.includes("undefined"), "no label may leak as undefined");
+
+  const timeline = buildGuide(images.find((i) => i.id === "library-timeline"));
+  assert(timeline.example.includes("1857") && timeline.example.includes("2021"), "the timeline example must use real years");
+});
+
 test("first-time visitors default to training mode", () => {
   const diJs = readFileSync(
     new URL("../../js/describe-image.js", import.meta.url),

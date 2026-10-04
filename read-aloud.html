@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PTE Trainer — Summarize Written Text</title>
+  <title>PTE Trainer — Read Aloud</title>
 
   <!-- CSS: base (shared) then page-specific -->
   <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/swt.css">
+  <link rel="stylesheet" href="./css/read-aloud.css">
 
   <script src="./js/theme.js"></script>
 </head>
@@ -61,7 +61,7 @@
           <span class="nav-label">Grammar</span>
         </a>
 
-        <a class="nav-link active" href="swt.html">
+        <a class="nav-link" href="swt.html">
           <span class="nav-icon">✍️</span>
           <span class="nav-label">Summarize Written Text</span>
         </a>
@@ -99,38 +99,39 @@
     <!-- Main -->
     <main class="main">
 
-      <div class="page swt-page">
+      <div class="page ra-page">
 
         <!-- Page Header -->
         <header class="page-header">
 
-          <div class="swt-title-row">
+          <div class="ra-title-row">
             <div>
               <h1 class="page-title">
-                Summarize Written Text
+                Read Aloud
               </h1>
 
               <p class="page-subtitle">
-                Read the passage and summarize its main ideas in one sentence.
+                Read the text aloud in one breath — accuracy and a steady pace
+                both count.
               </p>
             </div>
 
-            <div class="swt-mode-switch">
+            <div class="ra-mode-switch">
 
               <button
-                id="swt-mode-train"
-                class="swt-mode-btn is-on"
+                id="ra-mode-train"
+                class="ra-mode-btn is-on"
                 type="button"
               >
                 📖 Training
               </button>
 
               <button
-                id="swt-mode-practice"
-                class="swt-mode-btn"
+                id="ra-mode-practice"
+                class="ra-mode-btn"
                 type="button"
               >
-                ✍️ Practice
+                🎙️ Practice
               </button>
 
             </div>
@@ -139,31 +140,31 @@
         </header>
 
 
-        <!-- Question / Timer -->
-        <section class="card swt-status-card">
+        <!-- Status / Timer -->
+        <section class="card ra-status-card">
 
           <div class="card-title">
 
             <span>
-              Question
-              <strong id="question-number">1</strong>
+              Text
+              <strong id="ra-question-number">1</strong>
             </span>
 
             <span
-              id="timer"
-              class="pill info swt-timer"
+              id="ra-timer"
+              class="pill info ra-timer"
             >
-              10:00
+              0:40
             </span>
 
           </div>
 
-          <div class="swt-progress">
+          <div class="ra-progress">
 
-            <div class="swt-progress-track">
+            <div class="ra-progress-track">
               <div
-                id="swt-progress-fill"
-                class="swt-progress-fill"
+                id="ra-progress-fill"
+                class="ra-progress-fill"
               ></div>
             </div>
 
@@ -172,17 +173,17 @@
         </section>
 
 
-        <!-- Passage -->
+        <!-- The text to read -->
         <section class="card">
 
           <div class="card-title">
 
             <span>
-              Read the passage
+              Read this text
             </span>
 
             <span
-              id="passage-word-count"
+              id="ra-word-count"
               class="pill"
             >
               0 words
@@ -190,11 +191,30 @@
 
           </div>
 
-          <div
-            id="passage"
-            class="swt-passage"
+          <p
+            id="ra-text"
+            class="ra-text"
           >
-            The passage will appear here.
+            The text will appear here.
+          </p>
+
+          <div class="ra-text-footer">
+
+            <button
+              id="ra-play-button"
+              class="btn btn-secondary"
+              type="button"
+            >
+              🔊 Hear it first
+            </button>
+
+            <span
+              id="ra-tip"
+              class="status-text"
+            >
+              Read it once silently, then record yourself.
+            </span>
+
           </div>
 
         </section>
@@ -202,28 +222,28 @@
 
         <!-- Training guide -->
         <section
-          id="swt-training"
-          class="card swt-training-card"
+          id="ra-training"
+          class="card ra-training-card"
           hidden
         >
 
           <div
-            id="swt-training-content"
-            class="swt-training-content"
+            id="ra-training-content"
+            class="ra-training-content"
           >
-            <p class="swt-training-placeholder">
+            <p class="ra-training-placeholder">
               The training guide will appear here.
             </p>
           </div>
 
-          <div class="swt-training-cta">
+          <div class="ra-training-cta">
 
             <button
-              id="swt-train-go-practice"
+              id="ra-train-go-practice"
               class="btn"
               type="button"
             >
-              Write it yourself → Practice mode
+              Read it yourself → Practice mode
             </button>
 
           </div>
@@ -232,80 +252,83 @@
 
 
         <!-- Response -->
-        <section class="card swt-response-card">
+        <section class="card ra-response-card">
 
           <div class="card-title">
 
             <span>
-              Your response
+              Your recording
             </span>
 
             <span
-              id="sentence-status"
-              class="pill"
+              id="ra-phase-pill"
+              class="pill ra-phase-pill"
             >
-              One sentence required
+              Prepare 0:40
             </span>
 
           </div>
 
-          <textarea
-            id="response-input"
-            class="swt-response-input"
-            placeholder="Write your summary in ONE sentence..."
-            maxlength="1000"
-            spellcheck="true"
-          ></textarea>
-
-          <div class="swt-response-footer">
-
-            <div class="swt-count-group">
-
-              <span id="word-count">
-                Words: 0 / 75
-              </span>
-
-              <span
-                id="sentence-count"
-                class="status-text"
-              >
-                Sentences: 0
-              </span>
-
-            </div>
-
-            <span
-              id="response-hint"
-              class="status-text"
-            >
-              Write between 5 and 75 words.
-            </span>
-
-          </div>
-
-        </section>
-
-
-        <!-- Actions -->
-        <section class="card swt-actions-card">
-
-          <div class="controls-row">
+          <div class="controls-row ra-controls">
 
             <button
-              id="submit-button"
+              id="ra-record-button"
               class="btn"
               type="button"
             >
-              Submit Answer
+              🎙️ Start recording
             </button>
 
             <button
-              id="clear-button"
+              id="ra-stop-button"
               class="btn btn-secondary"
               type="button"
+              hidden
             >
-              Clear
+              ⏹ Stop and score
             </button>
+
+          </div>
+
+          <div
+            id="ra-transcript"
+            class="ra-transcript"
+          >
+            Your transcript will appear here.
+          </div>
+
+          <div id="ra-fallback-wrap" class="ra-fallback" hidden>
+
+            <label class="ra-fallback-label" for="ra-fallback-input">
+              No microphone? Type what you would say:
+            </label>
+
+            <textarea
+              id="ra-fallback-input"
+              class="ra-fallback-input"
+              placeholder="Type the sentence exactly as you read it aloud..."
+              maxlength="600"
+              spellcheck="true"
+            ></textarea>
+
+            <div class="ra-fallback-footer">
+
+              <span
+                id="ra-fallback-count"
+                class="status-text"
+              >
+                Words: 0
+              </span>
+
+              <button
+                id="ra-submit-fallback"
+                class="btn"
+                type="button"
+              >
+                Score my reading
+              </button>
+
+            </div>
 
           </div>
 
@@ -314,8 +337,8 @@
 
         <!-- Result placeholder -->
         <section
-          id="result-section"
-          class="card swt-result-card"
+          id="ra-result-section"
+          class="card ra-result-card"
           hidden
         >
 
@@ -324,8 +347,8 @@
           </div>
 
           <div
-            id="result-content"
-            class="swt-result-content"
+            id="ra-result-content"
+            class="ra-result-content"
           >
             Your result will appear here.
           </div>
@@ -337,7 +360,7 @@
         <section class="card pagination">
 
           <button
-            id="previous-button"
+            id="ra-previous-button"
             class="btn btn-secondary"
             type="button"
             disabled
@@ -346,11 +369,11 @@
           </button>
 
           <span class="position-label">
-            Summarize Written Text
+            Read Aloud
           </span>
 
           <button
-            id="next-button"
+            id="ra-next-button"
             class="btn"
             type="button"
             disabled
@@ -369,7 +392,7 @@
 
   <script
     type="module"
-    src="./js/swt.js"
+    src="./js/read-aloud.js"
   ></script>
 
 </body>

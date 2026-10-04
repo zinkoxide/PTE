@@ -14,6 +14,7 @@ import {
   normalizeTaskStats,
   recordTaskAttempt
 } from "./task-stats.js";
+import { toOfficialScore, describeBand } from "./pte-scale.js";
 
 const TIME_PER_QUESTION = 10 * 60;
 const SWT_STATS_KEY = "pte.swt.stats.v1";
@@ -325,11 +326,15 @@ function submitAnswer(autoSubmit) {
     ? "<div class=\"swt-result-empty\">No response submitted — provide a summary before submitting.</div>"
     : "";
 
+  const officialScore = toOfficialScore(score.total);
+  const official = { score: officialScore, band: describeBand(officialScore) };
+
   resultSection.hidden = false;
   resultContent.innerHTML =
     `<div class="swt-result-total ${score.total >= 70 ? "is-good" : score.total >= 50 ? "is-mid" : "is-low"}">` +
     `<span class="swt-result-score">${score.total}</span>` +
     `<span class="swt-result-label">/ 100 ${autoSubmit ? "· time up" : ""}</span>` +
+    `<span class="pte-official is-${official.band.tone}">≈ ${official.score} / 90 · ${official.band.label}</span>` +
     `</div>` +
     `<div class="swt-criteria">${criteriaRows}</div>` +
     `<div class="swt-result-details">` +

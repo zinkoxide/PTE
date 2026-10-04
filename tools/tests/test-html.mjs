@@ -38,7 +38,8 @@ const html = {
   quiz: read("../../quiz.html"),
   "add-word": read("../../add-word.html"),
   swt: read("../../swt.html"),
-  di: read("../../describe-image.html")
+  di: read("../../describe-image.html"),
+  ra: read("../../read-aloud.html")
 };
 
 /* ---------- vocabulary page wiring ---------- */
@@ -101,7 +102,8 @@ const CSS_BY_PAGE = {
   quiz: ["base", "quiz"],
   "add-word": ["base", "addw"],
   swt: ["base", "swt"],
-  di: ["base", "di"]
+  di: ["base", "di"],
+  ra: ["base", "read-aloud"]
 };
 
 test("every page loads base.css first then its page css", () => {
@@ -120,14 +122,14 @@ test("every page loads base.css first then its page css", () => {
   });
 });
 
-test("the nine page stylesheets exist", () => {
+test("every page stylesheet exists and is shared css + one page sheet", () => {
   const used = [...new Set(Object.values(CSS_BY_PAGE).flat())];
-  assert(used.length === 9, `expected 9 css files, got ${used.length}`);
+  assert(used.length === 10, `expected 10 css files, got ${used.length}`);
   used.forEach((sheet) => read(`../../css/${sheet}.css`));
 });
 
 test("css files have no broken comment headers (no swallowed rules)", () => {
-  const files = ["base", "dash", "repeat", "vocab", "gram", "quiz", "addw", "swt", "di"];
+  const files = ["base", "dash", "repeat", "vocab", "gram", "quiz", "addw", "swt", "di", "read-aloud"];
   const lineRe = /^\s*=+\s*\*?\s*$/;
   const commentRe = /\/\*/;
   files.forEach((sheet) => {
@@ -235,8 +237,49 @@ test("describe-image page has full wiring and loads base+di css + di modules", (
   assert(/renderGuideHTML/.test(diJs), "describe-image.js must render the training guide");
 });
 
+test("read-aloud page has full wiring and loads base+read-aloud css", () => {
+  [
+    "ra-question-number",
+    "ra-timer",
+    "ra-progress-fill",
+    "ra-text",
+    "ra-word-count",
+    "ra-play-button",
+    "ra-tip",
+    "ra-phase-pill",
+    "ra-record-button",
+    "ra-stop-button",
+    "ra-transcript",
+    "ra-fallback-wrap",
+    "ra-fallback-input",
+    "ra-submit-fallback",
+    "ra-result-section",
+    "ra-result-content",
+    "ra-previous-button",
+    "ra-next-button",
+    "ra-mode-train",
+    "ra-mode-practice",
+    "ra-training",
+    "ra-training-content",
+    "ra-train-go-practice"
+  ].forEach((id) => assert(html.ra.includes(`id="${id}"`), `read-aloud: missing #${id}`));
+
+  assert(/css\/base\.css/.test(html.ra), "read-aloud.html must load css/base.css first");
+  assert(/css\/read-aloud\.css/.test(html.ra), "read-aloud.html must load css/read-aloud.css");
+  assert(/js\/read-aloud\.js/.test(html.ra), "read-aloud.html must load js/read-aloud.js");
+  const raJs = read("../../js/read-aloud.js");
+  assert(/scoreReadAloud/.test(raJs), "read-aloud.js must use the Read Aloud scorer");
+  assert(/speechSynthesis/.test(raJs), "read-aloud.js must offer text playback");
+});
+
+test("every page sidebar links to read-aloud.html", () => {
+  ["index", "repeat", "vocabulary", "grammar", "quiz", "add-word", "swt", "di", "ra"].forEach((key) => {
+    assert(html[key].includes('href="read-aloud.html"'), `${key}.html: missing sidebar link to read-aloud.html`);
+  });
+});
+
 test("every page sidebar links to swt.html and describe-image.html", () => {
-  ["index", "repeat", "vocabulary", "grammar", "quiz", "add-word"].forEach((key) => {
+  ["index", "repeat", "vocabulary", "grammar", "quiz", "add-word", "ra"].forEach((key) => {
     assert(html[key].includes('href="swt.html"'), `${key}.html: missing sidebar link to swt.html`);
     assert(html[key].includes('href="describe-image.html"'), `${key}.html: missing sidebar link to describe-image.html`);
   });
@@ -251,6 +294,10 @@ test("no page, stylesheet or module leaks another page's class prefix", () => {
   assert(!/class="[^"]*\bdi-/.test(html.swt), "swt.html must not use di- classes");
   assert(!/["'`]swt-/.test(read("../../js/describe-image.js")), "describe-image.js must not emit swt- classes");
   assert(!/["'`]di-/.test(read("../../js/swt.js")), "swt.js must not emit di- classes");
+  const raCss = read("../../css/read-aloud.css");
+  assert(!/\.di-/.test(raCss), "read-aloud.css must not contain .di- rules");
+  assert(!/\.swt-/.test(raCss), "read-aloud.css must not contain .swt- rules");
+  assert(!/class="[^"]*\b(di|swt)-/.test(html.ra), "read-aloud.html must not use di-/swt- classes");
 });
 
 console.log(`RESULT: ${passed} passed, ${failed} failed`);

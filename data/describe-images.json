@@ -5,14 +5,45 @@
     "category": "bar-chart",
     "data": {
       "yLabel": "Visitors (thousands)",
-      "labels": ["Q1", "Q2", "Q3", "Q4"],
+      "labels": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
       "groups": [
-        { "label": "2019", "values": [120, 150, 90, 160] },
-        { "label": "2023", "values": [180, 210, 140, 230] }
+        {
+          "label": "2019",
+          "values": [
+            120,
+            150,
+            90,
+            160
+          ]
+        },
+        {
+          "label": "2023",
+          "values": [
+            180,
+            210,
+            140,
+            230
+          ]
+        }
       ]
     },
     "reference": "The bar chart shows the average number of visitors to coastal resorts in thousands, comparing 2019 and 2023 across four quarters. In both years Q3 had the fewest visitors, while Q4 recorded the highest numbers. Overall, 2023 had substantially more visitors than 2019 in every quarter, with the largest gap visible in Q2.",
-    "keywords": ["bar chart", "comparison", "quarter", "visitors", "thousands", "2019", "2023", "highest", "increased"]
+    "keywords": [
+      "bar chart",
+      "comparison",
+      "quarter",
+      "visitors",
+      "thousands",
+      "2019",
+      "2023",
+      "highest",
+      "increased"
+    ]
   },
   {
     "id": "temperature-lines",
@@ -20,14 +51,51 @@
     "category": "line-graph",
     "data": {
       "yLabel": "Temperature (°C)",
-      "labels": ["Jan", "Mar", "May", "Jul", "Sep", "Nov"],
+      "labels": [
+        "Jan",
+        "Mar",
+        "May",
+        "Jul",
+        "Sep",
+        "Nov"
+      ],
       "series": [
-        { "label": "Melbourne", "values": [22, 20, 15, 10, 12, 18] },
-        { "label": "Sydney", "values": [26, 25, 21, 17, 19, 23] }
+        {
+          "label": "Melbourne",
+          "values": [
+            22,
+            20,
+            15,
+            10,
+            12,
+            18
+          ]
+        },
+        {
+          "label": "Sydney",
+          "values": [
+            26,
+            25,
+            21,
+            17,
+            19,
+            23
+          ]
+        }
       ]
     },
     "reference": "The line graph describes the monthly average temperature in degrees Celsius for two Australian cities. Both lines generally decline from January to July and then climb towards the end of the year. Sydney is consistently warmer than Melbourne every month, and the temperature difference between the two cities is greatest during the summer months.",
-    "keywords": ["line graph", "temperature", "celsius", "Melbourne", "Sydney", "decline", "summer", "warmer", "comparison"]
+    "keywords": [
+      "line graph",
+      "temperature",
+      "celsius",
+      "Melbourne",
+      "Sydney",
+      "decline",
+      "summer",
+      "warmer",
+      "comparison"
+    ]
   },
   {
     "id": "energy-pie",
@@ -35,31 +103,104 @@
     "category": "pie-chart",
     "data": {
       "values": [
-        { "label": "Electricity", "value": 42, "color": "#6366f1" },
-        { "label": "Heating", "value": 30, "color": "#f59e0b" },
-        { "label": "Water", "value": 14, "color": "#10b981" },
-        { "label": "Appliances", "value": 9, "color": "#ef4444" },
-        { "label": "Other", "value": 5, "color": "#8b5cf6" }
-      ]
+        {
+          "label": "Electricity",
+          "value": 42,
+          "color": "#6366f1"
+        },
+        {
+          "label": "Heating",
+          "value": 30,
+          "color": "#f59e0b"
+        },
+        {
+          "label": "Water",
+          "value": 14,
+          "color": "#10b981"
+        },
+        {
+          "label": "Appliances",
+          "value": 9,
+          "color": "#ef4444"
+        },
+        {
+          "label": "Other",
+          "value": 5,
+          "color": "#8b5cf6"
+        }
+      ],
+      "title": "Pie chart — Household energy use by source",
+      "caption": "Share of total household energy consumption"
     },
     "reference": "The pie chart illustrates how households use energy by source, expressed as percentages of total demand. Electricity is by far the largest category at 42 percent, followed by heating at 30 percent. Water heating accounts for 14 percent, while appliances and other sources make up the remaining 14 percent, so consumption is heavily concentrated in electricity and heating.",
-    "keywords": ["pie chart", "percentage", "electricity", "heating", "largest", "proportion", "source", "consumption"]
+    "keywords": [
+      "pie chart",
+      "percentage",
+      "electricity",
+      "heating",
+      "largest",
+      "proportion",
+      "source",
+      "consumption"
+    ]
   },
   {
     "id": "evening-classes",
     "title": "Enrollment in Evening Classes by Department",
     "category": "table",
     "data": {
-      "headers": ["Subject", "2021", "2022", "Growth"],
+      "headers": [
+        "Subject",
+        "2021",
+        "2022",
+        "Growth"
+      ],
       "rows": [
-        ["English", "180", "240", "+33%"],
-        ["IT", "150", "210", "+40%"],
-        ["Design", "90", "120", "+33%"],
-        ["Marketing", "60", "75", "+25%"]
-      ]
+        [
+          "English",
+          "180",
+          "240",
+          "+33%"
+        ],
+        [
+          "IT",
+          "150",
+          "210",
+          "+40%"
+        ],
+        [
+          "Design",
+          "90",
+          "120",
+          "+33%"
+        ],
+        [
+          "Marketing",
+          "60",
+          "75",
+          "+25%"
+        ]
+      ],
+      "title": "Table — Evening class enrollment by department",
+      "caption": "Number of students enrolled",
+      "subject": "departments",
+      "period": {
+        "from": "2021",
+        "to": "2022"
+      }
     },
     "reference": "The table compares enrollment in evening classes by department for 2021 and 2022. All four subjects increased over the year. Information technology grew the most, climbing from 150 to 210 students, an increase of 40 percent. English attracted the highest overall numbers in both years, while Marketing remained the smallest department despite its 25 percent rise.",
-    "keywords": ["table", "enrollment", "department", "2021", "2022", "increased", "English", "information technology", "growth"]
+    "keywords": [
+      "table",
+      "enrollment",
+      "department",
+      "2021",
+      "2022",
+      "increased",
+      "English",
+      "information technology",
+      "growth"
+    ]
   },
   {
     "id": "wheat-regions",
@@ -67,14 +208,50 @@
     "category": "map",
     "data": {
       "regions": [
-        { "id": "north", "color": "#15803d", "label": "North", "value": "25k", "points": "60,40 300,30 320,150 80,150" },
-        { "id": "east", "color": "#0e7490", "label": "East", "value": "40k", "points": "320,150 540,170 520,280 300,250" },
-        { "id": "south", "color": "#b45309", "label": "South", "value": "18k", "points": "150,300 300,250 440,320 220,420 90,380" },
-        { "id": "west", "color": "#7e22ce", "label": "West", "value": "12k", "points": "60,40 80,150 90,380 30,360" }
-      ]
+        {
+          "id": "north",
+          "color": "#15803d",
+          "label": "North",
+          "value": "25k",
+          "points": "60,40 300,30 320,150 80,150"
+        },
+        {
+          "id": "east",
+          "color": "#0e7490",
+          "label": "East",
+          "value": "40k",
+          "points": "320,150 540,170 520,280 300,250"
+        },
+        {
+          "id": "south",
+          "color": "#b45309",
+          "label": "South",
+          "value": "18k",
+          "points": "150,300 300,250 440,320 220,420 90,380"
+        },
+        {
+          "id": "west",
+          "color": "#7e22ce",
+          "label": "West",
+          "value": "12k",
+          "points": "60,40 80,150 90,380 30,360"
+        }
+      ],
+      "title": "Map — Wheat production by region",
+      "caption": "Tonnes produced (approximate)"
     },
     "reference": "The map shows wheat production across four regions of a country, measured in tonnes. The eastern region produces by far the most wheat at 40,000 tonnes, followed by the northern region with 25,000. The western region records the smallest harvest at 12,000 tonnes. Production is therefore concentrated in the east and north, while output declines towards the south and west.",
-    "keywords": ["map", "region", "production", "tonnes", "east", "north", "largest", "harvest", "concentrated"]
+    "keywords": [
+      "map",
+      "region",
+      "production",
+      "tonnes",
+      "east",
+      "north",
+      "largest",
+      "harvest",
+      "concentrated"
+    ]
   },
   {
     "id": "water-treatment",
@@ -82,14 +259,36 @@
     "category": "process-diagram",
     "data": {
       "steps": [
-        { "label": "Collection", "desc": "Rain falls on rooftops" },
-        { "label": "Filtration", "desc": "Removes leaves and grit" },
-        { "label": "Treatment", "desc": "Chlorine and UV rays" },
-        { "label": "Storage", "desc": "Clean tanks for supply" }
+        {
+          "label": "Collection",
+          "desc": "Rain falls on rooftops"
+        },
+        {
+          "label": "Filtration",
+          "desc": "Removes leaves and grit"
+        },
+        {
+          "label": "Treatment",
+          "desc": "Chlorine and UV rays"
+        },
+        {
+          "label": "Storage",
+          "desc": "Clean tanks for supply"
+        }
       ]
     },
     "reference": "The process diagram illustrates how rainwater is turned into drinking water through four main stages. First, rain is collected from rooftops. It then passes through filtration, which removes leaves and grit. Third, the water is treated with chlorine and ultraviolet rays to kill bacteria, and finally it is stored in clean tanks ready for the public supply.",
-    "keywords": ["process", "four stages", "collection", "filtration", "treatment", "storage", "then", "finally", "rainwater"]
+    "keywords": [
+      "process",
+      "four stages",
+      "collection",
+      "filtration",
+      "treatment",
+      "storage",
+      "then",
+      "finally",
+      "rainwater"
+    ]
   },
   {
     "id": "plant-cycle",
@@ -98,13 +297,361 @@
     "data": {
       "cycle": true,
       "steps": [
-        { "label": "Pollination", "desc": "Insects carry pollen" },
-        { "label": "Seed", "desc": "Forms inside the flower" },
-        { "label": "Growth", "desc": "Roots and stem appear" },
-        { "label": "Flowering", "desc": "New blooms open" }
+        {
+          "label": "Pollination",
+          "desc": "Insects carry pollen"
+        },
+        {
+          "label": "Seed",
+          "desc": "Forms inside the flower"
+        },
+        {
+          "label": "Growth",
+          "desc": "Roots and stem appear"
+        },
+        {
+          "label": "Flowering",
+          "desc": "New blooms open"
+        }
       ]
     },
     "reference": "The diagram shows the circular lifecycle of a flowering plant. It begins with pollination, when insects carry pollen between flowers. A seed then forms inside the flower, which grows into a new plant with roots and a stem. Finally the plant flowers again, so the sequence repeats continuously rather than coming to an end.",
-    "keywords": ["lifecycle", "circular", "pollination", "insects", "seed", "growth", "flowering", "repeats"]
+    "keywords": [
+      "lifecycle",
+      "circular",
+      "pollination",
+      "insects",
+      "seed",
+      "growth",
+      "flowering",
+      "repeats"
+    ]
+  },
+  {
+    "id": "complaint-decision",
+    "title": "How a Customer Complaint Is Resolved",
+    "category": "decision-flow",
+    "data": {
+      "start": {
+        "label": "Complaint received",
+        "desc": "Logged by support staff"
+      },
+      "decision": {
+        "label": "Is the claim valid?",
+        "desc": "Checked against the policy"
+      },
+      "yes": {
+        "label": "Refund or repair",
+        "desc": "Resolved within 5 days"
+      },
+      "no": {
+        "label": "Explained to customer",
+        "desc": "No compensation given"
+      },
+      "end": {
+        "label": "Case closed",
+        "desc": "Outcome recorded in the log"
+      }
+    },
+    "reference": "The flowchart shows how a customer complaint is dealt with from the moment it arrives to the point where the case is closed. It begins when a complaint is received and logged by support staff, who then check whether the claim is valid against the company policy. If the answer is yes, the case is resolved by issuing a refund or arranging a repair within five working days. If the answer is no, the decision is explained to the customer and no compensation is given. In both routes, the outcome is recorded in the log and the case is closed.",
+    "keywords": [
+      "complaint",
+      "logged",
+      "valid",
+      "policy",
+      "refund",
+      "repair",
+      "five days",
+      "explained",
+      "compensation",
+      "recorded",
+      "case closed"
+    ]
+  },
+  {
+    "id": "water-bottle-cycle",
+    "title": "The Recycling Cycle of a Plastic Bottle",
+    "category": "cycle",
+    "data": {
+      "centerLabel": "endless loop",
+      "stages": [
+        {
+          "label": "Collection",
+          "desc": "Used bottles gathered"
+        },
+        {
+          "label": "Sorting",
+          "desc": "By plastic type"
+        },
+        {
+          "label": "Washing",
+          "desc": "Labels and residue removed"
+        },
+        {
+          "label": "Shredding",
+          "desc": "Flakes produced"
+        },
+        {
+          "label": "Melting",
+          "desc": "At about 250 degrees"
+        },
+        {
+          "label": "Moulding",
+          "desc": "New bottles formed"
+        }
+      ]
+    },
+    "reference": "The diagram illustrates a recycling cycle consisting of six stages, which repeats continuously and has no final stage. It starts with the collection of used bottles, which are then sorted according to plastic type. Next the bottles are washed to remove labels and residue, and then shredded into flakes. Those flakes are melted at around 250 degrees, and finally new bottles are moulded from the molten plastic. The newly produced bottles are refilled and returned to consumers, at which point the whole loop starts again.",
+    "keywords": [
+      "cycle",
+      "six stages",
+      "repeats",
+      "no final stage",
+      "collection",
+      "sorted",
+      "plastic type",
+      "washed",
+      "labels",
+      "shredded",
+      "flakes",
+      "melted",
+      "250 degrees",
+      "moulded",
+      "new bottles",
+      "loop starts again"
+    ]
+  },
+  {
+    "id": "library-timeline",
+    "title": "The Development of Public Library Services",
+    "category": "timeline",
+    "data": {
+      "axisLabel": "year",
+      "caption": "Milestones in the move from printed books to digital lending",
+      "events": [
+        {
+          "year": "1857",
+          "label": "First free library",
+          "desc": "Opened to all residents"
+        },
+        {
+          "year": "1931",
+          "label": "Mobile branches",
+          "desc": "Serviced rural areas"
+        },
+        {
+          "year": "1997",
+          "label": "Internet access",
+          "desc": "Public terminals installed"
+        },
+        {
+          "year": "2012",
+          "label": "E-book lending",
+          "desc": "Digital loans introduced"
+        },
+        {
+          "year": "2021",
+          "label": "24-hour study rooms",
+          "desc": "Extended opening hours"
+        }
+      ]
+    },
+    "reference": "This diagram shows the development of public library services over more than a century and a half. It began in 1857 when the first free library opened to all residents, and by 1931 mobile branches were serving rural areas. The longest interval came in the following century, when internet access was installed in 1997, more than sixty years after the mobile branches appeared. E-book lending was introduced in 2012, and the most recent milestone, in 2021, extended opening hours with twenty-four-hour study rooms.",
+    "keywords": [
+      "timeline",
+      "chronological",
+      "began",
+      "1857",
+      "first free library",
+      "1931",
+      "mobile branches",
+      "rural areas",
+      "1997",
+      "internet access",
+      "2012",
+      "e-book lending",
+      "digital",
+      "2021",
+      "24-hour study rooms",
+      "extended opening hours"
+    ]
+  },
+  {
+    "id": "waste-pie",
+    "title": "Where a City's Household Waste Goes",
+    "category": "pie-chart",
+    "data": {
+      "values": [
+        {
+          "label": "Recycled",
+          "value": 34,
+          "color": "#10b981"
+        },
+        {
+          "label": "Composted",
+          "value": 18,
+          "color": "#84cc16"
+        },
+        {
+          "label": "Incinerated",
+          "value": 26,
+          "color": "#f59e0b"
+        },
+        {
+          "label": "Landfilled",
+          "value": 22,
+          "color": "#ef4444"
+        }
+      ],
+      "title": "Pie chart — Disposal routes for household waste",
+      "caption": "Share of total household waste"
+    },
+    "reference": "This pie chart shows how household waste in the city is divided between four disposal routes. Recycling accounts for the largest share at 34% of the total, followed by incineration at 26%. Landfill comes next with 22%, and composting represents the smallest proportion at 18%. Overall, just under two thirds of the waste is recovered or burned for energy, while the remaining fifth-plus is buried in landfill.",
+    "keywords": [
+      "pie chart",
+      "household waste",
+      "recycling",
+      "largest share",
+      "34%",
+      "incineration",
+      "26%",
+      "landfill",
+      "22%",
+      "composting",
+      "smallest",
+      "18%",
+      "disposal routes"
+    ]
+  },
+  {
+    "id": "bus-fares-table",
+    "title": "Monthly Pass Prices in Four Cities",
+    "category": "table",
+    "data": {
+      "headers": [
+        "City",
+        "2019 (AUD)",
+        "2024 (AUD)",
+        "Change (%)"
+      ],
+      "rows": [
+        [
+          "Melbourne",
+          "62",
+          "84",
+          "35"
+        ],
+        [
+          "Brisbane",
+          "58",
+          "79",
+          "36"
+        ],
+        [
+          "Perth",
+          "55",
+          "71",
+          "29"
+        ],
+        [
+          "Adelaide",
+          "51",
+          "66",
+          "29"
+        ]
+      ],
+      "title": "Table — Monthly pass prices by city",
+      "caption": "Australian dollars per month",
+      "subject": "cities",
+      "period": {
+        "from": "2019",
+        "to": "2024"
+      }
+    },
+    "reference": "This table compares the price of a monthly public transport pass in four Australian cities for the years 2019 and 2024, together with the percentage change. All four cities increased their fares, with Brisbane growing fastest at 36%. Melbourne followed closely, rising by 35% from 62 to 84 Australian dollars. Perth and Adelaide both recorded the smallest increase of 29%, and Adelaide remained the cheapest city in both years, ending at 66 dollars.",
+    "keywords": [
+      "table",
+      "monthly pass",
+      "four cities",
+      "2019",
+      "2024",
+      "percentage change",
+      "all increased",
+      "Brisbane",
+      "grew fastest",
+      "36%",
+      "Melbourne",
+      "35%",
+      "84",
+      "Perth",
+      "Adelaide",
+      "29%",
+      "cheapest",
+      "66"
+    ]
+  },
+  {
+    "id": "rainfall-bars",
+    "title": "Average Monthly Rainfall in Two Cities",
+    "category": "bar-chart",
+    "data": {
+      "yLabel": "Rainfall (mm)",
+      "labels": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "groups": [
+        {
+          "label": "2019",
+          "values": [
+            42,
+            38,
+            55,
+            61,
+            48,
+            30,
+            26,
+            34
+          ]
+        },
+        {
+          "label": "2024",
+          "values": [
+            51,
+            44,
+            72,
+            68,
+            57,
+            35,
+            29,
+            41
+          ]
+        }
+      ]
+    },
+    "reference": "This bar chart shows average monthly rainfall in millimetres for the first eight months of the year in two separate years. Rainfall was higher in 2024 in every single month shown. March recorded the highest figure, rising from 55 millimetres in 2019 to 72 millimetres in 2024. July was the driest month in both years, at 26 and 29 millimetres respectively. Overall, the wettest period in both years extended from March to May, while the totals for 2024 exceeded those of 2019 across the board.",
+    "keywords": [
+      "bar chart",
+      "rainfall",
+      "millimetres",
+      "two years",
+      "higher in 2024",
+      "every month",
+      "March",
+      "highest",
+      "72",
+      "July",
+      "driest",
+      "26",
+      "29",
+      "March to May",
+      "wettest"
+    ]
   }
 ]

@@ -85,14 +85,23 @@ function highlightsPie(data) {
 
 function highlightsTable(data) {
   const rows = data.rows;
-  const numsByRow = rows.map((row) => numeric(row));
-  const lastCol = numsByRow.map((nums) => nums[nums.length - 1]);
-  const growthIndex = lastCol.reduce((best, v, i) => (v > lastCol[best] ? i : best), 0);
-  const lowestIndex = lastCol.reduce((best, v, i) => (v < lastCol[best] ? i : best), 0);
+  const headers = data.headers;
+  const subject = data.subject || "departments";
+  const from = (data.period && data.period.from) || headers[1];
+  const to = (data.period && data.period.to) || headers[headers.length - 2];
+  const pctIndex = headers.findIndex((header) => /%|growth|change/i.test(header));
+  const valueIndex = pctIndex >= 0 ? headers.length - 2 : headers.length - 1;
+
+  const changes = rows.map((row) => numeric([row[pctIndex >= 0 ? pctIndex : valueIndex]])[0]);
+  const finals = rows.map((row) => numeric([row[valueIndex]])[0]);
+
+  const topChange = changes.reduce((b, v, i) => (v > changes[b] ? i : b), 0);
+  const lowFinal = finals.reduce((b, v, i) => (v < finals[b] ? i : b), 0);
+
   return [
-    `All ${rows.length} departments show growth between ${data.headers[1]} and ${data.headers[2]}.`,
-    `${rows[growthIndex][0]} grew fastest at +${lastCol[growthIndex]}% growth.`,
-    `${rows[lowestIndex][0]} remains the smallest at ${rows[lowestIndex][rows[lowestIndex].length - 2]} students in ${data.headers[2]}.`
+    `All ${rows.length} ${subject} increased between ${from} and ${to}.`,
+    `${rows[topChange][0]} recorded the largest increase at ${changes[topChange]}%.`,
+    `${rows[lowFinal][0]} had the lowest figure in ${to} at ${rows[lowFinal][valueIndex]}.`
   ];
 }
 
@@ -119,6 +128,48 @@ function highlightsProcess(data) {
     `The process is linear, moving from ${steps[0].label} to ${steps[steps.length - 1].label}.`,
     `${steps.length} stages appear in a fixed order with no branching or repeats.`
   ];
+}
+
+function highlightsDecisionFlow(data) {
+  return [
+    `The process begins with ${data.start.label} and ends at ${data.end.label}.`,
+    `Everything turns on one question — ${data.decision.label} If the answer is yes the route is ${data.yes.label}; if not, it is ${data.no.label}.`
+  ];
+}
+
+function highlightsCycle(data) {
+  const stages = data.stages;
+  return [
+    `The cycle starts with ${stages[0].label} and returns to it after ${stages.length} stages, so there is no final step.`,
+    `${stages[0].label} leads to ${stages[1].label}, and the last stage, ${stages[stages.length - 1].label}, feeds back into the beginning.`
+  ];
+}
+
+function highlightsTimeline(data) {
+  const events = data.events;
+  const first = events[0];
+  const last = events[events.length - 1];
+  const lines = [
+    `The timeline covers ${events.length} milestones, beginning with ${first.label} in ${first.year} and ending with ${last.label} in ${last.year}.`
+  ];
+
+  const years = events.map((event) => parseInt(String(event.year).replace(/[^0-9]/g, ""), 10));
+  if (years.every((year) => !Number.isNaN(year)) && years.length > 1) {
+    let gap = -1;
+    let gapIndex = 1;
+    for (let i = 1; i < years.length; i += 1) {
+      const size = years[i] - years[i - 1];
+      if (size > gap) {
+        gap = size;
+        gapIndex = i;
+      }
+    }
+    lines.push(
+      `The longest interval is between ${events[gapIndex - 1].label} (${events[gapIndex - 1].year}) and ${events[gapIndex].label} (${events[gapIndex].year}), a gap of ${gap} years.`
+    );
+  }
+
+  return lines;
 }
 
 const TYPE_GUIDES = {
@@ -175,6 +226,33 @@ const TYPE_GUIDES = {
       "It then passes through … before reaching ….",
       "Finally, … and the process begins again."
     ]
+  },
+  "decision-flow": {
+    howTo: "Say the entry point, name the question that is being asked, then describe each route separately and finish at the shared final stage. Both branches must be mentioned.",
+    frames: [
+      "The flowchart shows how … is handled from start to finish.",
+      "It begins when … arrives at the decision point.",
+      "If the answer is yes, it is …; if not, it is ….",
+      "In either case the process ends with …."
+    ]
+  },
+  cycle: {
+    howTo: "State clearly that the process is circular and has no end point, then walk through the stages in order using 'then' and 'finally', and finish by saying the cycle repeats.",
+    frames: [
+      "The diagram illustrates a cycle of … stages.",
+      "It starts with … and is then ….",
+      "After … the material returns to the beginning.",
+      "This loop repeats continuously with no final stage."
+    ]
+  },
+  timeline: {
+    howTo: "Announce that the diagram is a chronological sequence, then move from the earliest milestone to the latest one using dates as signposts, and finish with where the process stands today.",
+    frames: [
+      "The diagram shows the development of … over time.",
+      "It began in … when ….",
+      "By …, … had been introduced.",
+      "The most recent stage, in …, is …."
+    ]
   }
 };
 
@@ -193,6 +271,20 @@ export const AVOID = [
 
 /* ------------- build the lesson for one item ------------- */
 
+function exampleDecisionFlow(data) {
+  return `One question decides the route — ${data.decision.label} A yes answer means ${data.yes.label.toLowerCase()}; a no answer means ${data.no.label.toLowerCase()}, and both routes end at ${data.end.label.toLowerCase()}.`;
+}
+
+function exampleCycle(data) {
+  const stages = data.stages;
+  return `It starts with ${stages[0].label.toLowerCase()}, is then ${stages[1].label.toLowerCase()}, and after ${stages[stages.length - 1].label.toLowerCase()} it returns to the beginning, so the loop repeats with no final stage.`;
+}
+
+function exampleTimeline(data) {
+  const events = data.events;
+  return `It began in ${events[0].year} with ${events[0].label.toLowerCase()}, and the most recent stage, in ${events[events.length - 1].year}, is ${events[events.length - 1].label.toLowerCase()}.`;
+}
+
 export function buildGuide(item) {
   const category = item.category;
   const type = TYPE_GUIDES[category];
@@ -204,6 +296,9 @@ export function buildGuide(item) {
     : category === "table" ? highlightsTable(data)
     : category === "map" ? highlightsMap(data)
     : category === "process-diagram" ? highlightsProcess(data)
+    : category === "decision-flow" ? highlightsDecisionFlow(data)
+    : category === "cycle" ? highlightsCycle(data)
+    : category === "timeline" ? highlightsTimeline(data)
     : [];
 
   const example =
@@ -212,6 +307,9 @@ export function buildGuide(item) {
     : category === "pie-chart" ? "Electricity is the largest single category at 42% of household demand."
     : category === "table" ? "All four departments increased, with Information Technology growing fastest at +40%."
     : category === "map" ? "The eastern region produces the most wheat at 40,000 tonnes."
+    : category === "decision-flow" ? exampleDecisionFlow(data)
+    : category === "cycle" ? exampleCycle(data)
+    : category === "timeline" ? exampleTimeline(data)
     : "First the rain is collected, then filtered, treated, and finally stored for supply.";
 
   return {

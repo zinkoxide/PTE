@@ -242,5 +242,207 @@
       "Busy schedules, limited facilities, and lack of motivation can prevent regular exercise.",
       "Consistent moderate activities such as walking or cycling can still provide meaningful benefits."
     ]
+  },
+  {
+    "id": "swt-011",
+    "title": "Food Waste in Developed Cities",
+    "passage": "Around a third of the food produced in developed countries is never eaten. Much of this waste occurs in households, where shoppers buy more than they can consume, and in supermarkets, which routinely discard produce that is still perfectly edible. Several solutions have been proposed. Households can be given clearer information about storage and portion sizes, supermarkets can adjust their prices so that ripe produce is cheaper, and cities can make it easier for citizens to compost leftovers at home. Supporters of these measures argue that they would cut waste without asking households to change their diets.",
+    "mainIdea": "A large share of food in developed countries is wasted, and reducing it mainly requires better storage information, cheaper pricing for ripe produce and easier home composting.",
+    "keyPoints": [
+      "Roughly a third of the food produced in developed countries is never eaten.",
+      "Much of this waste happens in households and supermarkets, where produce is still edible when it is discarded.",
+      "Practical measures such as portion guidance, discounted ripe produce and home composting could reduce waste without changing diets."
+    ],
+    "keywords": [
+      "food waste",
+      "households",
+      "supermarkets",
+      "edible",
+      "storage",
+      "portion size",
+      "price",
+      "compost",
+      "home",
+      "reduce",
+      "diet"
+    ],
+    "reference": "A third of the food produced in developed countries is thrown away, largely because households buy too much and supermarkets discard edible produce, so clearer storage guidance, cheaper prices for ripe items and easy home composting could cut this waste without any change in diet."
+  },
+  {
+    "id": "swt-012",
+    "title": "Remote Work and City Life",
+    "passage": "Since the pandemic, many office workers have negotiated permanent hybrid arrangements, and city centres have felt the consequences. Buildings once busy every morning now stand empty for much of the day, while residential districts have seen demand for larger homes rise. Critics argue that this shift hollows out the commercial life of city centres and reduces the tax revenue that funds public transport. Supporters counter that fewer commuters mean cleaner air and that workers now value proximity to parks and schools far more than proximity to an office. Both sides agree that the balance will not return to what it was before 2020.",
+    "mainIdea": "Hybrid working is permanently changing city life, harming busy city centres while improving air quality and changing what workers value.",
+    "keyPoints": [
+      "Many office workers now have permanent hybrid arrangements and city-centre buildings are empty for much of the day.",
+      "Critics say this reduces the commercial life and tax revenue of city centres, which also funds public transport.",
+      "Supporters argue that fewer commuters mean cleaner air and that workers now prefer living near parks and schools."
+    ],
+    "keywords": [
+      "hybrid",
+      "remote work",
+      "city centre",
+      "empty buildings",
+      "tax revenue",
+      "public transport",
+      "cleaner air",
+      "commuters",
+      "parks",
+      "schools",
+      "balance"
+    ],
+    "reference": "Hybrid working is permanently reshaping city life, leaving city-centre offices empty, cutting the tax revenue that funds public transport, and rewarding workers who now choose to live near parks and schools because the resulting reduction in commuters also means cleaner air."
+  },
+  {
+    "id": "swt-013",
+    "title": "Why Public Transport Needs Subsidies",
+    "passage": "Buses and trains carry far more people per hour than private cars, yet in most cities the cheapest and most frequent option is still the one the driver pays for. Because fares usually cover only part of the real cost of running a service, operators rely on annual subsidies from city budgets. Cities that withdrew these subsidies rarely saved the money they expected, since the passengers who gave up their passes simply filled their cars and congested the roads instead. Transport economists therefore argue that public transport is not a service for those who ride it alone, but an infrastructure investment that benefits everyone who uses the street.",
+    "mainIdea": "Fares never cover the real cost of public transport, so subsidies are justified because the benefits spread to the whole city through lower congestion, not only to passengers.",
+    "keyPoints": [
+      "Fares normally cover only part of the real cost of running buses and trains, so operators depend on city subsidies.",
+      "Cities that cut subsidies rarely saved money because former passengers switched to cars and made congestion worse.",
+      "Economists therefore treat public transport as an infrastructure investment whose benefits reach everyone who uses the roads."
+    ],
+    "keywords": [
+      "subsidy",
+      "fare",
+      "cost",
+      "budget",
+      "passengers",
+      "car",
+      "congestion",
+      "economist",
+      "infrastructure",
+      "benefit",
+      "street"
+    ],
+    "reference": "Since fares cover only part of the real cost of running a service, public transport depends on subsidies, and withdrawing them rarely saves money because former passengers take to their cars, so economists treat the subsidy as an infrastructure investment whose lower congestion benefits the whole city."
+  },
+  {
+    "id": "swt-014",
+    "title": "The Rise of Online Health Advice",
+    "passage": "An increasing number of people now look up their symptoms on their phones before consulting a doctor. Some doctors see this as harmless preparation, arguing that informed patients describe their symptoms more accurately. Others are more cautious, because self-diagnosis can encourage people to treat minor complaints with strong medication and to delay genuine emergencies. The evidence is mixed: studies suggest that online tools improve awareness of common conditions but perform poorly on unusual ones. Most experts now agree that the internet is a useful starting point rather than a replacement for professional care, particularly for children and older patients.",
+    "mainIdea": "Online symptom checking is a useful first step that prepares patients and raises awareness, but it is unreliable for unusual conditions and must not replace professional care.",
+    "keyPoints": [
+      "Many people now search their symptoms online before seeing a doctor, and some doctors see this as useful preparation.",
+      "Others warn that self-diagnosis can lead to strong medication for minor complaints and to delayed emergencies.",
+      "Evidence suggests these tools help with common conditions but perform poorly on unusual ones, so they are a starting point rather than a replacement."
+    ],
+    "keywords": [
+      "online",
+      "symptoms",
+      "doctor",
+      "self-diagnosis",
+      "medication",
+      "emergency",
+      "evidence",
+      "common conditions",
+      "unusual",
+      "professional care",
+      "preparation"
+    ],
+    "reference": "Searching symptoms online is a useful first step that helps patients describe their problem and raises awareness of common conditions, but because such tools perform poorly on unusual conditions and may lead to strong medication for minor complaints or delayed emergencies, they must never replace professional care."
+  },
+  {
+    "id": "swt-015",
+    "title": "School Start Times",
+    "passage": "A growing number of secondary schools have moved their start time later, following research into adolescent sleep patterns. Pupils who begin at nine rather than eight are reported to be more attentive in morning lessons and perform better in examinations. Critics point out that such schedules complicate the lives of working parents, since older siblings may have to care for younger children before leaving home. Others argue that schools could solve this by adjusting the hours of clubs and transport instead. Despite the criticism, the evidence in favour of later starts continues to grow, and the trend is unlikely to reverse.",
+    "mainIdea": "Later secondary school start times improve pupils’ attention and results because of adolescent sleep patterns, and the criticism about working parents has not stopped the trend.",
+    "keyPoints": [
+      "Schools are moving later because research shows pupils who start at nine are more attentive and do better in examinations.",
+      "Critics argue that later starts complicate the lives of working parents who rely on older children for early childcare.",
+      "Defenders suggest clubs and transport could be rescheduled instead, and the trend is unlikely to reverse."
+    ],
+    "keywords": [
+      "school",
+      "start time",
+      "sleep",
+      "pupils",
+      "attention",
+      "examinations",
+      "working parents",
+      "childcare",
+      "transport",
+      "evidence",
+      "trend"
+    ],
+    "reference": "Because research shows that pupils who start at nine are more attentive and perform better in examinations, later start times are spreading, and although critics point out that this complicates matters for working parents who depend on older children for early childcare, defenders propose rescheduling clubs and transport, so the trend is unlikely to reverse."
+  },
+  {
+    "id": "swt-016",
+    "title": "Banning Single-Use Plastics",
+    "passage": "Several countries have banned the sale of plastic bags and disposable tableware, hoping to reduce the volume of waste that reaches the oceans. Environmental groups welcome these measures, pointing out that a single bag can persist for centuries and be eaten by marine animals. Retailers and packaging manufacturers have raised objections, arguing that alternatives are more expensive and that some replacements are made from materials that are just as damaging. Both sides agree that the waste problem is serious, but they disagree about whether a national ban is the most effective response to it.",
+    "mainIdea": "Bans on single-use plastics reduce long-lasting ocean waste, but manufacturers and retailers dispute whether the alternatives are effective or affordable.",
+    "keyPoints": [
+      "Several countries have banned plastic bags and disposable tableware to cut the waste reaching the oceans.",
+      "Environmental groups welcome this because a single bag can persist for centuries and be eaten by marine animals.",
+      "Manufacturers and retailers argue that alternatives cost more and are sometimes made from equally damaging materials."
+    ],
+    "keywords": [
+      "plastic",
+      "ban",
+      "single-use",
+      "waste",
+      "oceans",
+      "environmental",
+      "marine animals",
+      "retailers",
+      "manufacturers",
+      "alternatives",
+      "expensive",
+      "materials"
+    ],
+    "reference": "Although several countries have banned single-use plastics to reduce the long-lasting waste that reaches the oceans and harms marine animals, manufacturers and retailers dispute the measure, arguing that the alternatives are both costlier and sometimes equally damaging."
+  },
+  {
+    "id": "swt-017",
+    "title": "Learning a Language Online",
+    "passage": "Online language courses have grown enormously, and millions of learners now study a foreign language without ever attending a class. Supporters argue that online study is flexible, inexpensive and allows learners to pause and repeat a lesson as often as they need. Sceptics point out that fluency requires conversation with other speakers, and that most free courses stop at the intermediate level. Research on the subject suggests a middle position: online courses are excellent for grammar and vocabulary, yet learners still need regular spoken practice to reach an advanced level. The trend is therefore not the replacement of the classroom, but its extension.",
+    "mainIdea": "Online courses are excellent for grammar and vocabulary but cannot develop advanced fluency, so they extend rather than replace the classroom.",
+    "keyPoints": [
+      "Millions of learners now study languages online because such courses are flexible, inexpensive and allow unlimited repetition.",
+      "Sceptics note that fluency requires real conversation and that free courses usually stop at the intermediate level.",
+      "Research suggests online study is strong for grammar and vocabulary but must be combined with regular spoken practice."
+    ],
+    "keywords": [
+      "online",
+      "language",
+      "flexible",
+      "inexpensive",
+      "repeat",
+      "fluency",
+      "conversation",
+      "intermediate",
+      "grammar",
+      "vocabulary",
+      "classroom",
+      "advanced"
+    ],
+    "reference": "Online language courses are flexible, inexpensive and let learners pause and repeat, which is why millions study a language without ever attending a class, yet because fluency still requires regular conversation and free courses rarely exceed the intermediate level, they extend the classroom rather than replace it."
+  },
+  {
+    "id": "swt-018",
+    "title": "Cities That Removed Parking",
+    "passage": "A number of European cities have converted streets previously used for parking into wider pavements, cycle lanes or public squares. Retailers in these cities often report falling sales at first, and shop owners have mounted visible campaigns against the change. Independent studies have shown, however, that footfall in the affected streets frequently recovers within a year or two and that the new layouts are used by more people overall. The research also finds that the removal of parking frees space that would otherwise be occupied by stationary cars. Most transport planners now regard parking reduction as one of the cheapest ways to improve city streets.",
+    "mainIdea": "Removing parking frees street space and usually restores footfall within two years, so planners see it as one of the cheapest genuine improvements to city streets.",
+    "keyPoints": [
+      "Several cities have converted parking streets into wider pavements, cycle lanes and public squares.",
+      "Retailers reported falling sales first and campaigned against the change, but studies show footfall recovers within a year or two.",
+      "Planners note that the change frees space otherwise taken by stationary cars and is among the cheapest improvements available."
+    ],
+    "keywords": [
+      "parking",
+      "pavements",
+      "cycle lanes",
+      "public squares",
+      "retailers",
+      "sales",
+      "footfall",
+      "research",
+      "street space",
+      "planners",
+      "improve"
+    ],
+    "reference": "Although retailers initially reported falling sales after cities removed parking to build wider pavements, cycle lanes and public squares, independent research shows footfall recovers within two years and planners consider the freed street space one of the cheapest genuine improvements."
   }
 ]

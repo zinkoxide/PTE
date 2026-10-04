@@ -55,6 +55,7 @@ if node tools/tests/test-html.mjs; then :; else err "html harness FAILED"; fi
 if node tools/tests/test-swt.mjs; then :; else err "swt harness FAILED"; fi
 if node tools/tests/test-di.mjs; then :; else err "di harness FAILED"; fi
 if node tools/tests/test-stats.mjs; then :; else err "stats harness FAILED"; fi
+if node tools/tests/test-read-aloud.mjs; then :; else err "read-aloud harness FAILED"; fi
 
 if [ "$fail" -eq 0 ]; then
   note "ALL CHECKS PASSED"
