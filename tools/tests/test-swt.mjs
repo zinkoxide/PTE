@@ -4,6 +4,19 @@
    ========================================== */
 
 import { scoreSummary } from "../../js/swt-score.js";
+import {
+  buildSwtGuide,
+  renderSwtGuideHTML,
+  THREE_STEPS as SWT_STEPS,
+  FRAMES as SWT_FRAMES,
+  TIPS as SWT_TIPS,
+  AVOID as SWT_AVOID
+} from "../../js/swt-guide.js";
+import {
+  THREE_STEPS as DI_STEPS,
+  TIPS as DI_TIPS,
+  AVOID as DI_AVOID
+} from "../../js/di-guide.js";
 
 let passed = 0;
 let failed = 0;
@@ -55,6 +68,50 @@ test("keyword coverage is counted correctly", () => {
   const result = scoreSummary(passage, text);
   assert(result.keywordTotal === passage.keywords.length, "keywordTotal mismatch");
   assert(result.hits >= 4, `expected >=4 keyword hits, got ${result.hits}`);
+});
+
+test("SWT training guide builds 3 steps with frames + passage cover ideas", () => {
+  const guide = buildSwtGuide({ title: "Sample", keywords: ["a", "b", "c", "d", "e", "f"] });
+  assert(guide.threeSteps.length === 3, "guide must have exactly 3 steps");
+  guide.threeSteps.forEach((s) => assert(s.title && s.body && s.frame, "each step needs title/body/frame"));
+  assert(guide.frames.length >= 6, "expected at least 6 linking frames");
+  assert(guide.tips.length >= 4 && guide.avoid.length >= 4, "expected do & don't lists");
+  assert(guide.cover.core.length >= 3, "expected core cover ideas from keywords");
+});
+
+test("SWT guide renders hero, keywords and model reference with balanced markup", () => {
+  const item = {
+    title: "The Growth of Renewable Energy",
+    keywords: ["renewable energy", "electricity", "fossil fuels"],
+    reference: "Renewable energy is growing because it cuts emissions."
+  };
+  const html = renderSwtGuideHTML(item, buildSwtGuide(item));
+  assert(html.includes("How to summarise “The Growth of Renewable Energy”"), "hero must name the passage");
+  assert(html.includes("renewable energy") && html.includes("fossil fuels"), "keywords must render");
+  assert(html.includes(item.reference), "model reference must render");
+  assert(html.includes('class="swt-step"'), "guide must render steps");
+  const open = (html.match(/<div/g) || []).length;
+  const close = (html.match(/<\/div>/g) || []).length;
+  assert(open === close, `div tags unbalanced: ${open} vs ${close}`);
+});
+
+test("SWT training sentences do not repeat Describe Image training sentences", () => {
+  const normalize = (s) => s.toLowerCase().replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim();
+  const swtPool = [
+    ...SWT_STEPS.map((s) => s.body),
+    ...SWT_STEPS.map((s) => s.frame),
+    ...SWT_FRAMES,
+    ...SWT_TIPS,
+    ...SWT_AVOID
+  ].map(normalize);
+  const diPool = [
+    ...DI_STEPS.map((s) => s.body),
+    ...DI_STEPS.map((s) => s.frame),
+    ...DI_TIPS,
+    ...DI_AVOID
+  ].map(normalize);
+  const repeated = swtPool.filter((s) => diPool.includes(s));
+  assert(repeated.length === 0, `repeated sentences: ${repeated.join(" | ")}`);
 });
 
 console.log(`RESULT: ${passed} passed, ${failed} failed`);

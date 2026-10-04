@@ -30,6 +30,10 @@
         <a class="nav-link" href="repeat.html">
           <span class="nav-icon">🗣️</span><span class="nav-label">Repeat Sentence</span>
         </a>
+
+        <a class="nav-link" href="describe-image.html">
+          <span class="nav-icon">🖼️</span><span class="nav-label">Describe Image</span>
+        </a>
         <a class="nav-link" href="vocabulary.html">
           <span class="nav-icon">📚</span><span class="nav-label">Vocabulary</span>
         </a>
@@ -116,6 +120,11 @@
             <div class="dash-card-label">دقة الملخصات</div>
           </div>
           <div class="dash-card">
+            <div class="dash-card-icon">🖼️</div>
+            <div class="dash-card-value" id="dash-di">—</div>
+            <div class="dash-card-label">دقة وصف الصور</div>
+          </div>
+          <div class="dash-card">
             <div class="dash-card-icon">🎤</div>
             <div class="dash-card-value" id="dash-pron">—</div>
             <div class="dash-card-label">نطق صحيح</div>
@@ -180,6 +189,16 @@
               sentence, with instant scoring across the PTE criteria.
             </p>
             <span class="mode-badge" id="mode-badge-swt">5 passages</span>
+          </button>
+
+          <button class="mode-card" type="button" onclick="window.location.href='describe-image.html'">
+            <div class="mode-icon">🖼️</div>
+            <h3>Describe Image</h3>
+            <p>
+              Prepare for 25 seconds, then describe a chart, map, table
+              or diagram aloud and get instant feedback on your speech.
+            </p>
+            <span class="mode-badge" id="mode-badge-di">7 images</span>
           </button>
 
           <button class="mode-card" type="button" onclick="window.location.href='quiz.html'">

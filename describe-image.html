@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PTE Trainer — Summarize Written Text</title>
+  <title>PTE Trainer — Describe Image</title>
 
   <!-- CSS: base (shared) then page-specific -->
   <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/swt.css">
+  <link rel="stylesheet" href="./css/di.css">
 
   <script src="./js/theme.js"></script>
 </head>
@@ -41,7 +41,7 @@
           <span class="nav-label">Repeat Sentence</span>
         </a>
 
-        <a class="nav-link" href="describe-image.html">
+        <a class="nav-link active" href="describe-image.html">
           <span class="nav-icon">🖼️</span>
           <span class="nav-label">Describe Image</span>
         </a>
@@ -56,7 +56,7 @@
           <span class="nav-label">Grammar</span>
         </a>
 
-        <a class="nav-link active" href="swt.html">
+        <a class="nav-link" href="swt.html">
           <span class="nav-icon">✍️</span>
           <span class="nav-label">Summarize Written Text</span>
         </a>
@@ -94,40 +94,26 @@
     <!-- Main -->
     <main class="main">
 
-      <div class="page swt-page">
+      <div class="page">
 
         <!-- Page Header -->
         <header class="page-header">
 
-          <div class="swt-title-row">
+          <div class="di-title-row">
             <div>
               <h1 class="page-title">
-                Summarize Written Text
+                Describe Image
               </h1>
 
               <p class="page-subtitle">
-                Read the passage and summarize its main ideas in one sentence.
+                Look at the chart, map, table, or diagram — then describe
+                it aloud after a 25-second preparation.
               </p>
             </div>
 
-            <div class="swt-mode-switch">
-
-              <button
-                id="swt-mode-train"
-                class="swt-mode-btn is-on"
-                type="button"
-              >
-                📖 Training
-              </button>
-
-              <button
-                id="swt-mode-practice"
-                class="swt-mode-btn"
-                type="button"
-              >
-                ✍️ Practice
-              </button>
-
+            <div class="di-mode-switch" role="group" aria-label="Study or practice mode">
+              <button id="di-mode-train" class="di-mode-btn" type="button">📖 Training</button>
+              <button id="di-mode-practice" class="di-mode-btn is-on" type="button">🎙️ Practice</button>
             </div>
           </div>
 
@@ -135,172 +121,143 @@
 
 
         <!-- Question / Timer -->
-        <section class="card swt-status-card">
+        <section class="card di-status-card">
 
           <div class="card-title">
 
             <span>
-              Question
-              <strong id="question-number">1</strong>
+              Image
+              <strong id="di-question-number">1</strong>
             </span>
 
             <span
-              id="timer"
-              class="pill info swt-timer"
+              id="di-phase-pill"
+              class="di-phase-pill"
             >
-              10:00
+              Prepare
             </span>
 
           </div>
 
-          <div class="swt-progress">
+          <span
+            id="di-timer"
+            class="di-timer"
+          >
+            --
+          </span>
 
-            <div class="swt-progress-track">
-              <div
-                id="swt-progress-fill"
-                class="swt-progress-fill"
-              ></div>
-            </div>
-
+          <div class="di-progress">
+            <div
+              id="di-progress-fill"
+              class="di-progress-fill"
+            ></div>
           </div>
 
         </section>
 
 
-        <!-- Passage -->
+        <!-- Image -->
         <section class="card">
 
           <div class="card-title">
 
-            <span>
-              Read the passage
+            <span class="di-image-meta">
+              <span id="di-image-title">Loading image…</span>
             </span>
 
             <span
-              id="passage-word-count"
-              class="pill"
+              id="di-hint"
+              class="di-hint"
             >
-              0 words
+              Study the image.
             </span>
 
           </div>
 
-          <div
-            id="passage"
-            class="swt-passage"
-          >
-            The passage will appear here.
-          </div>
+          <div id="di-image-box" class="di-image-frame"></div>
 
         </section>
 
 
         <!-- Training guide -->
-        <section
-          id="swt-training"
-          class="card swt-training-card"
-          hidden
-        >
+        <section id="di-training" class="card" hidden>
 
-          <div
-            id="swt-training-content"
-            class="swt-training-content"
-          >
-            <p class="swt-training-placeholder">
-              The training guide will appear here.
-            </p>
+          <div class="card-title">
+            <span>Training — how to answer</span>
           </div>
 
-          <div class="swt-training-cta">
+          <div id="di-training-content"></div>
 
-            <button
-              id="swt-train-go-practice"
-              class="btn"
-              type="button"
-            >
-              Write it yourself → Practice mode
+          <div class="controls-row">
+            <button id="di-train-go-practice" class="btn di-train-cta" type="button">
+              Try it yourself → Practice mode
             </button>
-
           </div>
 
         </section>
 
 
-        <!-- Response -->
-        <section class="card swt-response-card">
+        <!-- Speaking -->
+        <section class="card">
 
           <div class="card-title">
-
-            <span>
-              Your response
-            </span>
-
-            <span
-              id="sentence-status"
-              class="pill"
-            >
-              One sentence required
-            </span>
-
+            <span>Your description</span>
+            <span id="di-word-count" class="pill">Words: 0 / 60</span>
           </div>
 
-          <textarea
-            id="response-input"
-            class="swt-response-input"
-            placeholder="Write your summary in ONE sentence..."
-            maxlength="1000"
-            spellcheck="true"
-          ></textarea>
+          <div class="di-speak-zone">
 
-          <div class="swt-response-footer">
+            <div
+              id="di-transcript"
+              class="di-transcript"
+              aria-live="polite"
+            >
+              …
+            </div>
 
-            <div class="swt-count-group">
+            <div class="controls-row">
 
-              <span id="word-count">
-                Words: 0 / 75
-              </span>
-
-              <span
-                id="sentence-count"
-                class="status-text"
+              <button
+                id="di-record-button"
+                class="btn di-mic is-pulse"
+                type="button"
+                hidden
               >
-                Sentences: 0
-              </span>
+                🎙️ Start Speaking
+              </button>
+
+              <button
+                id="di-stop-button"
+                class="btn btn-danger"
+                type="button"
+                hidden
+              >
+                Stop &amp; Score
+              </button>
 
             </div>
 
-            <span
-              id="response-hint"
-              class="status-text"
-            >
-              Write between 5 and 75 words.
-            </span>
-
           </div>
 
-        </section>
+          <!-- Fallback when the microphone is unavailable -->
+          <div id="di-fallback-wrap" hidden>
 
+            <textarea
+              id="di-fallback-input"
+              class="di-fallback-input"
+              placeholder="Microphone unavailable — write your description in 1–3 sentences (15–60 words):"
+              spellcheck="true"
+            ></textarea>
 
-        <!-- Actions -->
-        <section class="card swt-actions-card">
-
-          <div class="controls-row">
-
-            <button
-              id="submit-button"
-              class="btn"
-              type="button"
-            >
-              Submit Answer
-            </button>
-
-            <button
-              id="clear-button"
-              class="btn btn-secondary"
-              type="button"
-            >
-              Clear
-            </button>
+            <div class="controls-row">
+              <button
+                id="di-submit-fallback"
+                class="btn"
+                type="button"
+              >
+                Finish &amp; Score
+              </button>
+            </div>
 
           </div>
 
@@ -309,8 +266,8 @@
 
         <!-- Result placeholder -->
         <section
-          id="result-section"
-          class="card swt-result-card"
+          id="di-result-section"
+          class="card di-result-card"
           hidden
         >
 
@@ -319,8 +276,8 @@
           </div>
 
           <div
-            id="result-content"
-            class="swt-result-content"
+            id="di-result-content"
+            class="di-result-content"
           >
             Your result will appear here.
           </div>
@@ -332,7 +289,7 @@
         <section class="card pagination">
 
           <button
-            id="previous-button"
+            id="di-previous-button"
             class="btn btn-secondary"
             type="button"
             disabled
@@ -341,11 +298,11 @@
           </button>
 
           <span class="position-label">
-            Summarize Written Text
+            Describe Image
           </span>
 
           <button
-            id="next-button"
+            id="di-next-button"
             class="btn"
             type="button"
             disabled
@@ -364,7 +321,7 @@
 
   <script
     type="module"
-    src="./js/swt.js"
+    src="./js/describe-image.js"
   ></script>
 
 </body>

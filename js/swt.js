@@ -8,9 +8,11 @@ Summarize Written Text
 "use strict";
 
 import { scoreSummary } from "./swt-score.js";
+import { buildSwtGuide, renderSwtGuideHTML } from "./swt-guide.js";
 
 const TIME_PER_QUESTION = 10 * 60;
 const SWT_STATS_KEY = "pte.swt.stats.v1";
+const SWT_MODE_KEY = "pte.swt.mode";
 
 const fallbackPassages = [{
   id: "renewable-energy",
@@ -40,6 +42,11 @@ const nextButton = document.getElementById("next-button");
 const progressFill = document.getElementById("swt-progress-fill");
 const resultSection = document.getElementById("result-section");
 const resultContent = document.getElementById("result-content");
+const modeTrainButton = document.getElementById("swt-mode-train");
+const modePracticeButton = document.getElementById("swt-mode-practice");
+const trainingSection = document.getElementById("swt-training");
+const trainingContent = document.getElementById("swt-training-content");
+const goPracticeButton = document.getElementById("swt-train-go-practice");
 
 /* ==========================================
    State
@@ -50,6 +57,7 @@ let currentIndex = 0;
 let timeRemaining = TIME_PER_QUESTION;
 let timerInterval = null;
 let answered = new Set();
+let currentMode = localStorage.getItem(SWT_MODE_KEY) || "training";
 
 /* ==========================================
    Helpers
@@ -191,6 +199,34 @@ function updateResponseInfo() {
 }
 
 /* ==========================================
+   Mode (Training / Practice)
+   ========================================== */
+
+function applyModeVisuals() {
+  document.body.classList.toggle("swt-training-mode", currentMode === "training");
+  modeTrainButton.classList.toggle("is-on", currentMode === "training");
+  modePracticeButton.classList.toggle("is-on", currentMode === "practice");
+  trainingSection.hidden = currentMode !== "training";
+}
+
+function setMode(mode) {
+  currentMode = mode;
+  try {
+    localStorage.setItem(SWT_MODE_KEY, mode);
+  } catch (error) {
+    console.warn("Unable to save SWT mode:", error);
+  }
+  applyModeVisuals();
+  renderQuestion();
+}
+
+function showTraining() {
+  const item = questions[currentIndex];
+  const guide = buildSwtGuide(item);
+  trainingContent.innerHTML = renderSwtGuideHTML(item, guide);
+}
+
+/* ==========================================
    Question rendering
    ========================================== */
 
@@ -200,9 +236,6 @@ function renderQuestion() {
   passage.textContent = item.passage.trim();
   passageWordCount.textContent = `${countWords(item.passage)} words`;
 
-  responseInput.value = "";
-  updateResponseInfo();
-
   resultSection.hidden = true;
   resultContent.innerHTML = "";
 
@@ -211,6 +244,15 @@ function renderQuestion() {
 
   const filled = answered.has(currentIndex) ? 100 : Math.round(((currentIndex + 1) / questions.length) * 100);
   progressFill.style.width = `${filled}%`;
+
+  if (currentMode === "training") {
+    stopTimer();
+    showTraining();
+    return;
+  }
+
+  responseInput.value = "";
+  updateResponseInfo();
 
   if (answered.has(currentIndex)) {
     stopTimer();
@@ -332,6 +374,9 @@ submitButton.addEventListener("click", () => submitAnswer(false));
 clearButton.addEventListener("click", clearResponse);
 previousButton.addEventListener("click", goToPrevious);
 nextButton.addEventListener("click", goToNext);
+modeTrainButton.addEventListener("click", () => setMode("training"));
+modePracticeButton.addEventListener("click", () => setMode("practice"));
+goPracticeButton.addEventListener("click", () => setMode("practice"));
 
 /* ==========================================
    Initialize
@@ -341,6 +386,7 @@ initialize();
 
 async function initialize() {
   updateTimer();
+  applyModeVisuals();
   await loadQuestions();
-  console.log(`SWT ready — ${questions.length} passages loaded.`);
+  console.log(`SWT ready — ${questions.length} passages loaded (mode: ${currentMode}).`);
 }

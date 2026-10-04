@@ -2,22 +2,28 @@
 
 A lightweight browser-based trainer for PTE practice:
 **Repeat Sentence** exercises with real-time speech recognition,
-and a **Vocabulary** bank with search, filters, and pronunciation audio.
+**Describe Image** and **Summarize Written Text** with a training guide for
+each, and a **Vocabulary** bank with search, filters, and pronunciation audio.
 
 ## Structure
 
 - `index.html` — dashboard.
 - `repeat.html` — repeat-sentence trainer (audio, recording, scoring).
+- `describe-image.html` — Describe Image trainer (charts drawn as SVG, speech or typing).
+- `swt.html` — Summarize Written Text trainer (one-sentence summary, scored on 4 criteria).
 - `vocabulary.html` — searchable vocabulary trainer.
 - `grammar.html` — bilingual grammar reference + interactive grammar quizzes.
 - `quiz.html` — interactive tests (meaning→word, listening, cloze, spelling).
 - `add-word.html` — on-demand page for adding words (needs Flask only at save time).
-- `js/` — ES modules for audio, speech recognition, comparison, scoring, and data, plus a theme toggle (`theme.js`).
-- `data/` — sentence and vocabulary data (JSON); `data/grammar/` holds one file per grammar topic time/frequency expressions, prepositions, determiners, comparisons, and
-  much more — 29 lessons / 12 categories / 450 questions (`tenses.json`,
-  `modals.json`, `conditionals.json`, `relative-clauses.json`, …).
+- `js/` — ES modules for audio, speech recognition, comparison, scoring, task flows
+  (`swt.js`, `describe-image.js`), their guides (`swt-guide.js`, `di-guide.js`) and
+  data helpers, plus a theme toggle (`theme.js`).
+- `data/` — sentence, vocabulary, SWT and image data (JSON); `data/grammar/` holds one
+  file per grammar topic (time/frequency expressions, prepositions, determiners,
+  comparisons, and much more — 29 lessons / 12 categories / 450 questions,
+  `tenses.json`, `modals.json`, `conditionals.json`, `relative-clauses.json`, …).
 - `assets/audio/` — generated MP3 files.
-- `tools/` — helper scripts for media generation and JSON validation.
+- `tools/` — helper scripts for media generation, JSON validation and the test harnesses.
 - `docs/` — architecture and changelog.
 
 ## Run locally
@@ -53,6 +59,33 @@ python3 tools/generate_audio.py
 # Vocabulary audio (also refreshes data/vocabulary_audio_index.json)
 python3 tools/generate_vocabulary_audio.py
 ```
+
+## Describe Image (`describe-image.html`)
+
+- **10 SVG chart types' worth of practice**: bar chart, line graph, pie chart,
+  table, map and process diagrams — 7 items in `data/describe-images.json`,
+  each with a model description and keywords.
+- **🎙️ speak or ⌨️ type**: record with the Web Speech API (`speech.js`), or fall
+  back to a text box whenever the microphone is unavailable or permission is
+  denied — the task stays fully usable.
+- Scored on **Content / Fluency / Vocabulary** (`js/di-score.js`) with keyword
+  coverage, a word count and the model answer for comparison.
+- **📖 Training mode** (the default on a first visit) teaches a 3-step method
+  built from the *current* image's own data — the peak, the largest share, the
+  fastest growth — plus ready-made frames, do/don't tips and an annotated model
+  answer. Switch to **Practice mode** (remembered in `localStorage`) for the
+  real 25-second task.
+
+## Summarize Written Text (`swt.html`)
+
+- 10 passages in `data/swt.json`; write **one** summary sentence of **5–75 words**
+  inside a 10-minute timer, with live word/sentence validation.
+- Scored on **Content / Form / Grammar / Vocabulary** (`js/swt-score.js`),
+  including keyword coverage, grammar issues and the model answer.
+- **📖 Training mode** (default on a first visit) explains the PTE method:
+  find the main idea → keep only the strongest supports → merge them into a
+  single sentence with linking words. It lists the ideas this passage should
+  cover, 6 linking frames, do/don't tips and an annotated model answer.
 
 ## Interactive Tests (`quiz.html`)
 
@@ -97,9 +130,10 @@ review of every question.
 
 ## Dashboard (`index.html`)
 
-Live overview: vocabulary acquired, due reviews today, grammar/quiz/pron
-accuracy, a **last-14-days activity chart**, weak grammar lessons (best < 70%),
-and a daily SRS review banner linking into the review queue.
+Live overview: vocabulary acquired, due reviews today, grammar/quiz/pron/SWT/
+Describe-Image accuracy, a **last-14-days activity chart** across every module,
+weak grammar lessons (best < 70%), and a daily SRS review banner linking into
+the review queue.
 
 ## Grammar (`grammar.html`)
 
@@ -176,5 +210,7 @@ Nothing starts automatically and browsing is never blocked.
 
 - Add sentences to `data/repeat_sentences.json` (fields: `id`, `text`, `level`, `audio`).
 - Add words via the Flask "Add Word" form, or directly to `data/vocabulary.json` (any new field is rendered if present).
-- Edit grammar lessons/quizzes directly in the files under `data/grammar/` (lessons with `id`, `title`, `category`, `icon`, `description`, `explanation`, `rules`, `examples`, `commonMistakes`, `markers`, `quiz` — quiz items are `mcq`/`multiple_choice` with `options` (4) + `answer` (index or option text), or `tf`/`true_false` with `correct` boolean / `answer` "True"/"False"). The app normalizes both spellings in `js/grammar.js`. To add a new grammar file, append its name to `GRAMMAR_FILES` in `js/grammar.js`.
+- Edit grammar lessons/quizzes directly in the files under `data/grammar/` (lessons with `id`, `title`, `category`, `icon`, `description`, `explanation`, `rules`, `examples`, `commonMistakes`, `markers`, `quiz` — quiz items are `mcq`/`multiple_choice` with `options` (4) + `answer` (index or option text), or `tf`/`true_false` with `correct` boolean / `answer` "True"/"False"). The app normalizes both spellings in `js/grammar.js`. To add a new grammar file, append its name to `data/grammar/manifest.json`.
+- Add SWT passages to `data/swt.json` (`title`, `passage`, `reference`, `keywords`) — the training guide derives its steps and cover-ideas from these fields automatically.
+- Add Describe Image items to `data/describe-images.json` (`id`, `title`, `category`, `data`, `reference`, `keywords`); `category` must be one of the keys of `CATEGORY_LABELS` in `js/di-render.js`, and `data` must match that chart type's shape (the guide and renderer read the same fields).
 - Regenerate audio, then add new entries to the audio index files.

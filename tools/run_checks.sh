@@ -53,6 +53,7 @@ if node tools/tests/test-storage.mjs; then :; else err "storage harness FAILED";
 if node tools/tests/test-pronounce.mjs; then :; else err "pronounce harness FAILED"; fi
 if node tools/tests/test-html.mjs; then :; else err "html harness FAILED"; fi
 if node tools/tests/test-swt.mjs; then :; else err "swt harness FAILED"; fi
+if node tools/tests/test-di.mjs; then :; else err "di harness FAILED"; fi
 
 if [ "$fail" -eq 0 ]; then
   note "ALL CHECKS PASSED"

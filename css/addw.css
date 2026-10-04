@@ -1,24 +1,10 @@
 /* ==========================================
-/* ==========================================
    PTE Trainer — addword.css (add-word.html)
    ========================================== */
 
 /* ==========================================
    Add Word Modal + Toast
    ========================================== */
-
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 40px 20px;
-  overflow-y: auto;
-  background: rgba(6, 10, 26, 0.72);
-  backdrop-filter: blur(6px);
-}
 
 .modal {
   width: 100%;
@@ -30,16 +16,6 @@
   padding: 22px;
   color: var(--text);
 }
-
-.modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.modal-title { font-size: 18px; }
 
 .modal-body { display: flex; flex-direction: column; gap: 14px; }
 

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "tourism-quarters",
+    "title": "Average Visitors per Quarter (thousands)",
+    "category": "bar-chart",
+    "data": {
+      "yLabel": "Visitors (thousands)",
+      "labels": ["Q1", "Q2", "Q3", "Q4"],
+      "groups": [
+        { "label": "2019", "values": [120, 150, 90, 160] },
+        { "label": "2023", "values": [180, 210, 140, 230] }
+      ]
+    },
+    "reference": "The bar chart shows the average number of visitors to coastal resorts in thousands, comparing 2019 and 2023 across four quarters. In both years Q3 had the fewest visitors, while Q4 recorded the highest numbers. Overall, 2023 had substantially more visitors than 2019 in every quarter, with the largest gap visible in Q2.",
+    "keywords": ["bar chart", "comparison", "quarter", "visitors", "thousands", "2019", "2023", "highest", "increased"]
+  },
+  {
+    "id": "temperature-lines",
+    "title": "Monthly Average Temperature (°C)",
+    "category": "line-graph",
+    "data": {
+      "yLabel": "Temperature (°C)",
+      "labels": ["Jan", "Mar", "May", "Jul", "Sep", "Nov"],
+      "series": [
+        { "label": "Melbourne", "values": [22, 20, 15, 10, 12, 18] },
+        { "label": "Sydney", "values": [26, 25, 21, 17, 19, 23] }
+      ]
+    },
+    "reference": "The line graph describes the monthly average temperature in degrees Celsius for two Australian cities. Both lines generally decline from January to July and then climb towards the end of the year. Sydney is consistently warmer than Melbourne every month, and the temperature difference between the two cities is greatest during the summer months.",
+    "keywords": ["line graph", "temperature", "celsius", "Melbourne", "Sydney", "decline", "summer", "warmer", "comparison"]
+  },
+  {
+    "id": "energy-pie",
+    "title": "Household Energy Use by Source",
+    "category": "pie-chart",
+    "data": {
+      "values": [
+        { "label": "Electricity", "value": 42, "color": "#6366f1" },
+        { "label": "Heating", "value": 30, "color": "#f59e0b" },
+        { "label": "Water", "value": 14, "color": "#10b981" },
+        { "label": "Appliances", "value": 9, "color": "#ef4444" },
+        { "label": "Other", "value": 5, "color": "#8b5cf6" }
+      ]
+    },
+    "reference": "The pie chart illustrates how households use energy by source, expressed as percentages of total demand. Electricity is by far the largest category at 42 percent, followed by heating at 30 percent. Water heating accounts for 14 percent, while appliances and other sources make up the remaining 14 percent, so consumption is heavily concentrated in electricity and heating.",
+    "keywords": ["pie chart", "percentage", "electricity", "heating", "largest", "proportion", "source", "consumption"]
+  },
+  {
+    "id": "evening-classes",
+    "title": "Enrollment in Evening Classes by Department",
+    "category": "table",
+    "data": {
+      "headers": ["Subject", "2021", "2022", "Growth"],
+      "rows": [
+        ["English", "180", "240", "+33%"],
+        ["IT", "150", "210", "+40%"],
+        ["Design", "90", "120", "+33%"],
+        ["Marketing", "60", "75", "+25%"]
+      ]
+    },
+    "reference": "The table compares enrollment in evening classes by department for 2021 and 2022. All four subjects increased over the year. Information technology grew the most, climbing from 150 to 210 students, an increase of 40 percent. English attracted the highest overall numbers in both years, while Marketing remained the smallest department despite its 25 percent rise.",
+    "keywords": ["table", "enrollment", "department", "2021", "2022", "increased", "English", "information technology", "growth"]
+  },
+  {
+    "id": "wheat-regions",
+    "title": "Wheat Production by Region (tonnes)",
+    "category": "map",
+    "data": {
+      "regions": [
+        { "id": "north", "color": "#15803d", "label": "North", "value": "25k", "points": "60,40 300,30 320,150 80,150" },
+        { "id": "east", "color": "#0e7490", "label": "East", "value": "40k", "points": "320,150 540,170 520,280 300,250" },
+        { "id": "south", "color": "#b45309", "label": "South", "value": "18k", "points": "150,300 300,250 440,320 220,420 90,380" },
+        { "id": "west", "color": "#7e22ce", "label": "West", "value": "12k", "points": "60,40 80,150 90,380 30,360" }
+      ]
+    },
+    "reference": "The map shows wheat production across four regions of a country, measured in tonnes. The eastern region produces by far the most wheat at 40,000 tonnes, followed by the northern region with 25,000. The western region records the smallest harvest at 12,000 tonnes. Production is therefore concentrated in the east and north, while output declines towards the south and west.",
+    "keywords": ["map", "region", "production", "tonnes", "east", "north", "largest", "harvest", "concentrated"]
+  },
+  {
+    "id": "water-treatment",
+    "title": "How Rainwater Becomes Drinking Water",
+    "category": "process-diagram",
+    "data": {
+      "steps": [
+        { "label": "Collection", "desc": "Rain falls on rooftops" },
+        { "label": "Filtration", "desc": "Removes leaves and grit" },
+        { "label": "Treatment", "desc": "Chlorine and UV rays" },
+        { "label": "Storage", "desc": "Clean tanks for supply" }
+      ]
+    },
+    "reference": "The process diagram illustrates how rainwater is turned into drinking water through four main stages. First, rain is collected from rooftops. It then passes through filtration, which removes leaves and grit. Third, the water is treated with chlorine and ultraviolet rays to kill bacteria, and finally it is stored in clean tanks ready for the public supply.",
+    "keywords": ["process", "four stages", "collection", "filtration", "treatment", "storage", "then", "finally", "rainwater"]
+  },
+  {
+    "id": "plant-cycle",
+    "title": "The Lifecycle of a Flowering Plant",
+    "category": "process-diagram",
+    "data": {
+      "cycle": true,
+      "steps": [
+        { "label": "Pollination", "desc": "Insects carry pollen" },
+        { "label": "Seed", "desc": "Forms inside the flower" },
+        { "label": "Growth", "desc": "Roots and stem appear" },
+        { "label": "Flowering", "desc": "New blooms open" }
+      ]
+    },
+    "reference": "The diagram shows the circular lifecycle of a flowering plant. It begins with pollination, when insects carry pollen between flowers. A seed then forms inside the flower, which grows into a new plant with roots and a stem. Finally the plant flowers again, so the sequence repeats continuously rather than coming to an end.",
+    "keywords": ["lifecycle", "circular", "pollination", "insects", "seed", "growth", "flowering", "repeats"]
+  }
+]

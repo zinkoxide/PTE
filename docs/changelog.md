@@ -1,5 +1,55 @@
 # Changelog
 
+## v3.15 — New PTE tasks: Summarize Written Text & Describe Image
+
+### Summarize Written Text (`swt.html`)
+- New task page with **10 passages** (`data/swt.json`): read the passage and
+  write **one** sentence of **5–75 words** inside a 10-minute timer.
+- Live validation while typing: word count (5–75), sentence count, and a clear
+  "one sentence required" status.
+- Scored on the four PTE criteria — **Content / Form / Grammar / Vocabulary**
+  (`js/swt-score.js`) — with keyword coverage, detected grammar issues, a
+  model answer, and a `/100` total that is recorded to `pte.swt.stats.v1`.
+- Attempts feed the dashboard (`📝 Summarize Written Text` card + badge) and the
+  last-14-days activity chart.
+
+### Describe Image (`describe-image.html`)
+- 7 items across **6 categories** (bar chart, line graph, pie chart, table,
+  map, process diagram) drawn as **SVG** by `js/di-render.js` — no image
+  assets, so every chart is crisp and themeable.
+- **🎙️ speak or ⌨️ type**: `speech.js` records the answer; if the microphone is
+  missing or permission is denied, a typing fallback takes over automatically.
+- Scored on **Content / Fluency / Vocabulary** (`js/di-score.js`) against the
+  item's keywords, with word count, transcript and model answer.
+- Attempts feed the dashboard (`🖼️ Describe Image` card + badge).
+
+### Training modes (both new pages)
+- Each page has a **📖 Training / Practice** switch, defaulting to **Training**
+  on a first visit and remembered afterwards (`pte.swt.mode`, `pte.di.mode`).
+- The guide is generated from the **item currently on screen**, not generic
+  advice: chart highlights (peak, largest share, steepest growth, region
+  totals) and the ideas each passage should cover.
+- SWT teaches the PTE method — find the main idea → keep the strongest supports
+  → merge into one sentence with linking words — with 6 linking frames,
+  do/don't tips and an annotated model answer. DI teaches the per-type
+  sentence pattern (overview → key features → summary).
+- In training mode the timer and answer controls are hidden and the passage or
+  chart stays visible for reference; a CTA jumps straight into practice.
+
+### Fixes & cleanup
+- **Chart clipping fixed**: the bar-chart axis ceiling was computed with a broken
+  rounding expression (max 230 was scaled against 77), pushing bars above the
+  viewBox. A `niceMax()` helper now rounds to a sensible ceiling, and a
+  regression check confirms every image's content stays inside the viewBox.
+- **No more cross-page class leakage**: `describe-image.html` was using
+  `swt-*` classes that only existed inside `css/di.css`. All DI classes are now
+  `di-*`, and a harness test fails the build if any page, stylesheet or module
+  borrows another page's prefix.
+- Removed dead CSS (`.icon-btn`, `.tag-port`, `.muted`, `.modal-overlay`,
+  `.modal-header`, `.modal-title`) and 24 duplicated comment-opener lines.
+- `docs/architecture.md` rewritten to match the current 8 pages / 23 modules /
+  9 stylesheets, and the README now documents both new tasks.
+
 ## v3.14 — Smart learning: SRS, dashboard, targeted grammar
 
 ### Vocabulary — spaced repetition (SRS)

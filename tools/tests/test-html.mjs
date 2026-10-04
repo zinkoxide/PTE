@@ -37,7 +37,8 @@ const html = {
   grammar: read("../../grammar.html"),
   quiz: read("../../quiz.html"),
   "add-word": read("../../add-word.html"),
-  swt: read("../../swt.html")
+  swt: read("../../swt.html"),
+  di: read("../../describe-image.html")
 };
 
 /* ---------- vocabulary page wiring ---------- */
@@ -99,7 +100,8 @@ const CSS_BY_PAGE = {
   grammar: ["base", "gram"],
   quiz: ["base", "quiz"],
   "add-word": ["base", "addw"],
-  swt: ["base", "swt"]
+  swt: ["base", "swt"],
+  di: ["base", "di"]
 };
 
 test("every page loads base.css first then its page css", () => {
@@ -118,14 +120,14 @@ test("every page loads base.css first then its page css", () => {
   });
 });
 
-test("the eight page stylesheets exist", () => {
+test("the nine page stylesheets exist", () => {
   const used = [...new Set(Object.values(CSS_BY_PAGE).flat())];
-  assert(used.length === 8, `expected 8 css files, got ${used.length}`);
+  assert(used.length === 9, `expected 9 css files, got ${used.length}`);
   used.forEach((sheet) => read(`../../css/${sheet}.css`));
 });
 
 test("css files have no broken comment headers (no swallowed rules)", () => {
-  const files = ["base", "dash", "repeat", "vocab", "gram", "quiz", "addw", "swt"];
+  const files = ["base", "dash", "repeat", "vocab", "gram", "quiz", "addw", "swt", "di"];
   const lineRe = /^\s*=+\s*\*?\s*$/;
   const commentRe = /\/\*/;
   files.forEach((sheet) => {
@@ -179,7 +181,12 @@ test("swt page has full wiring and loads base+swt css + swt modules", () => {
     "next-button",
     "swt-progress-fill",
     "result-section",
-    "result-content"
+    "result-content",
+    "swt-mode-train",
+    "swt-mode-practice",
+    "swt-training",
+    "swt-training-content",
+    "swt-train-go-practice"
   ].forEach((id) => assert(html.swt.includes(`id="${id}"`), `swt: missing #${id}`));
 
   assert(/css\/base\.css/.test(html.swt), "swt.html must load css/base.css first");
@@ -187,12 +194,63 @@ test("swt page has full wiring and loads base+swt css + swt modules", () => {
   assert(/js\/swt\.js/.test(html.swt), "swt.html must load js/swt.js");
   const swtJs = read("../../js/swt.js");
   assert(/import \{ scoreSummary \} from "\.\/swt-score\.js"/.test(swtJs), "swt.js must import scoreSummary from swt-score.js");
+  assert(/import \{ buildSwtGuide, renderSwtGuideHTML \} from "\.\/swt-guide\.js"/.test(swtJs), "swt.js must import the training guide helpers");
 });
 
-test("every page sidebar links to swt.html", () => {
+test("describe-image page has full wiring and loads base+di css + di modules", () => {
+  [
+    "di-question-number",
+    "di-phase-pill",
+    "di-timer",
+    "di-progress-fill",
+    "di-image-title",
+    "di-image-box",
+    "di-hint",
+    "di-record-button",
+    "di-stop-button",
+    "di-transcript",
+    "di-word-count",
+    "di-fallback-wrap",
+    "di-fallback-input",
+    "di-submit-fallback",
+    "di-previous-button",
+    "di-next-button",
+    "di-result-section",
+    "di-result-content",
+    "di-mode-train",
+    "di-mode-practice",
+    "di-training",
+    "di-training-content",
+    "di-train-go-practice"
+  ].forEach((id) => assert(html.di.includes(`id="${id}"`), `describe-image: missing #${id}`));
+
+  assert(/css\/base\.css/.test(html.di), "describe-image.html must load css/base.css first");
+  assert(/css\/di\.css/.test(html.di), "describe-image.html must load css/di.css");
+  assert(/js\/describe-image\.js/.test(html.di), "describe-image.html must load js/describe-image.js");
+
+  const diJs = read("../../js/describe-image.js");
+  assert(/renderImage/.test(diJs), "describe-image.js must use the SVG renderer");
+  assert(/scoreDescription/.test(diJs), "describe-image.js must use the scorer");
+  assert(/buildGuide/.test(diJs), "describe-image.js must build the training guide");
+  assert(/renderGuideHTML/.test(diJs), "describe-image.js must render the training guide");
+});
+
+test("every page sidebar links to swt.html and describe-image.html", () => {
   ["index", "repeat", "vocabulary", "grammar", "quiz", "add-word"].forEach((key) => {
     assert(html[key].includes('href="swt.html"'), `${key}.html: missing sidebar link to swt.html`);
+    assert(html[key].includes('href="describe-image.html"'), `${key}.html: missing sidebar link to describe-image.html`);
   });
+});
+
+test("no page, stylesheet or module leaks another page's class prefix", () => {
+  const diCss = read("../../css/di.css");
+  const swtCss = read("../../css/swt.css");
+  assert(!/\.swt-/.test(diCss), "di.css must not contain .swt- rules");
+  assert(!/\.di-/.test(swtCss), "swt.css must not contain .di- rules");
+  assert(!/class="[^"]*\bswt-/.test(html.di), "describe-image.html must not use swt- classes");
+  assert(!/class="[^"]*\bdi-/.test(html.swt), "swt.html must not use di- classes");
+  assert(!/["'`]swt-/.test(read("../../js/describe-image.js")), "describe-image.js must not emit swt- classes");
+  assert(!/["'`]di-/.test(read("../../js/swt.js")), "swt.js must not emit di- classes");
 });
 
 console.log(`RESULT: ${passed} passed, ${failed} failed`);

@@ -1,5 +1,4 @@
 /* ==========================================
-/* ==========================================
    PTE Trainer — vocab.css (vocabulary.html)
    ========================================== */
 
@@ -104,9 +103,6 @@
   color: var(--text);
 }
 
-.tag-port { color: var(--cyan); border-color: rgba(34, 211, 238, 0.4); padding-left: 26px; position: relative; }
-.tag-port::before { content: "→"; position: absolute; left: 10px; color: var(--red); }
-
 .mistake-item {
   padding: 6px 0;
   border-bottom: 1px dashed var(--glass-border-soft);
@@ -123,7 +119,6 @@ mark.search-highlight {
   padding: 0 3px;
 }
 
-.muted { color: var(--text-faint); }
 .dim { color: var(--text-dim); }
 .hide { display: none !important; }
 
@@ -226,7 +221,6 @@ mark.search-highlight {
   box-shadow: 0 6px 18px -8px rgba(244, 63, 94, 0.6);
 }
 
-/* ==========================================
 /* ==========================================
    Vocabulary — floating next button
    ========================================== */
