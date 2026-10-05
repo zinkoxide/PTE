@@ -17,7 +17,8 @@ import { SpeechEngine } from "./speech.js";
 import {
   emptyTaskStats,
   normalizeTaskStats,
-  recordTaskAttempt
+  recordTaskAttempt,
+  describeDue
 } from "./task-stats.js";
 import { toOfficialScore, describeBand } from "./pte-scale.js";
 
@@ -148,6 +149,17 @@ function recordAttempt(item, score) {
   } catch (error) {
     console.warn("Unable to save DI stats:", error);
   }
+}
+
+/*
+The weak-item tracker schedules a failed item to come back (1, 3, 7 then 14
+days). Saying so immediately turns a low score into a plan.
+*/
+function scheduleNotice(item) {
+  const entry = (loadStats().missed || {})[item.id];
+  const schedule = describeDue(entry);
+  if (!schedule) return "";
+  return `<p class="di-schedule-note">🔁 ${escapeHTML(schedule.label)} — سيُعاد طرح هذا البند للمراجعة.</p>`;
 }
 
 /* ------------------ Timing helpers ------------------ */
@@ -372,6 +384,7 @@ function scoreAndShow(text) {
     `<span class="pte-official is-${official.band.tone}">≈ ${official.score} / 90 · ${official.band.label}</span>` +
     `</div>` +
     `<div class="di-criteria">${criteriaRows}</div>` +
+    scheduleNotice(item) +
     `<div class="di-result-details">` +
     `<p><strong>Words:</strong> ${score.words} · <strong>Keywords:</strong> ${score.hits}/${score.keywordTotal}</p>` +
     `<p>${escapeHTML(score.fluencyReason)}</p>` +

@@ -1,5 +1,75 @@
 # Changelog
 
+## v3.19 — Weak items come back on a schedule
+
+- Weak task items are now **rescheduled with the same Leitner idea as the
+  vocabulary SRS**: `REVIEW_INTERVALS = [1, 3, 7, 14]` days. A score below 60%
+  schedules the item, and each entry stores `streak` and `due`.
+- Answering an item well clears the schedule completely (`streak`/`due` back to
+  0) and it leaves the weak list. Retrying it **before** it is due and failing
+  restarts the ladder at one day instead of growing it — an early failure means
+  the item is not learned yet.
+- Dashboard **🧩 بنود تحتاج تدريباً** now sorts items whose date has arrived to
+  the top, gives each a 🔁 badge («مستحقة الآن», «متأخرة 3 يوم», «خلال 24 ساعة»,
+  «بعد 2 يوم»), and the panel header states how many are due today.
+- Each task result (SWT, Describe Image, Read Aloud) ends with a line saying
+  when the item will return, so a low score reads as a plan rather than a dead
+  end.
+- `getDueItems()` / `getUpcomingItems()` split the queue, and `describeDue()`
+  owns the wording so the dashboard and the result screens cannot drift apart.
+- The backup merge carries the schedule: `streak` takes the maximum and `due`
+  takes the **earlier** date, so an old backup can never postpone a review that
+  is already waiting.
+
+### Checks
+- `test-stats.mjs` grew to 16 tests covering the ladder, the early-retry reset,
+  clearing after a pass, the due/upcoming split, ordering and the Arabic wording.
+
+## v3.18 — Backup, merge and reset
+
+### Export / import progress
+- New **💾 نسخ احتياطي** card on the dashboard: one button exports every
+  statistic, the whole vocabulary study state, pronunciation history, the goal
+  and the mode settings into a single `pte-progress-YYYY-MM-DD.json` file.
+- **Import merges, it never replaces.** `js/progress-io.js` validates the file
+  first — a foreign app, a missing `data` block or a file with no known keys is
+  refused before anything is written, and unknown keys only produce a warning.
+- Merge rules per key family: new attempts only for statistics, best score and
+  newest verdict kept per item or word, the more advanced study entry wins but
+  the earlier due date is kept so overdue words still surface, and imported
+  settings win.
+
+### Idempotency (the important part)
+- A repeated import changes **nothing**. Two guards make that true:
+  1. attempts are identified by their history timestamp, so entries already
+     present are subtracted from the incoming totals;
+  2. each payload's shape is fingerprinted, which also covers a heavily used
+     module whose history is capped at 400 entries while `total` keeps
+     counting.
+- Importing two *different* devices still adds their attempts together.
+- Grammar's per-question miss counters are the one figure that can drift on a
+  repeated import, because a miss carries no timestamp; this is documented in
+  the module and in the architecture notes.
+
+### Two reset scopes, both confirmed
+- **🗑️ تصفير الإحصائيات** clears the five statistics keys and keeps the
+  vocabulary study work and the goal.
+- **⚠️ تصفير كل شيء** removes every key the app owns, behind a second,
+  stronger confirmation.
+
+### Bug found by the new tests
+- A single corrupt number in an imported file (e.g. `total: "x"`) produced
+  `NaN` totals, which would have silently destroyed every average on the
+  dashboard. All merges now go through a numeric guard.
+
+### Checks
+- New harness `tools/tests/test-progress-io.mjs` (23 tests) with an in-memory
+  `localStorage` double: round trips, refusal of bad files, warnings, the
+  truncated-history case, double imports, two-device merges, both reset scopes,
+  and the `NaN` guard.
+- `test-html.mjs` grew to 19 tests, now asserting the backup card is wired to the
+  progress module.
+
 ## v3.17 — More content, official score scale, and Read Aloud
 
 ### Content: 13 charts and 18 passages

@@ -158,6 +158,11 @@ the review queue, and a **🧩 بنود تحتاج تدريباً** panel listin
 passages and chart images you have never scored above 60% — each row shows the
 keywords or key points you missed and links straight to that item
 (`?item=<id>`). An item leaves the list as soon as you answer it well.
+- A **💾 نسخ احتياطي** card exports every statistic, your vocabulary study state
+  and your goal into **one JSON file**, and imports it back. Importing
+  **merges** instead of replacing, and is idempotent: the same file twice
+  changes nothing (see `js/progress-io.js`). Two reset scopes are offered —
+  statistics only, or absolutely everything.
 - A **🎯 هدفك في الاختبار** card converts every task average to the official
   **10–90** scale (`js/pte-scale.js`), averages them into one estimate, and
   shows the gap to a target you can change (saved in `localStorage`).
@@ -255,3 +260,6 @@ Nothing starts automatically and browsing is never blocked.
   `timeline` `{ events:[{year, label, desc}], axisLabel?, caption? }`.
   The guide builds its highlights from the same fields, so no extra work is needed.
 - Regenerate audio, then add new entries to the audio index files.
+- Take a backup now and then: **Dashboard → 💾 نسخ احتياطي → ⬇️ تصدير**. Keep the
+  file somewhere safe; `⬆️ استيراد` restores it in any browser, and merging two
+  devices adds their attempts together instead of overwriting them.

@@ -409,6 +409,20 @@ a:focus-visible,
 
 .btn-sm { padding: 8px 14px; font-size: 13px; border-radius: 10px; }
 
+/* Weak-item review schedule notice shown on a task result. */
+.swt-schedule-note,
+.di-schedule-note,
+.ra-schedule-note {
+  margin: 0 0 12px;
+  padding: 10px 13px;
+  border-radius: var(--radius-sm);
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
 /* Official PTE score estimate shown next to a practice total. */
 .pte-official {
   display: inline-flex;

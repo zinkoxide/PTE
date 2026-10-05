@@ -171,7 +171,7 @@
 
           <section class="card dash-panel">
             <div class="card-title"><span>🧩 بنود تحتاج تدريباً</span>
-              <span class="dash-panel-hint">اضغط البند للتدريب عليه</span>
+              <span id="dash-task-weak-summary" class="dash-panel-hint"></span>
             </div>
             <div id="dash-task-weak" class="dash-weak"></div>
           </section>
@@ -231,6 +231,16 @@
             <span class="mode-badge" id="mode-badge-di">7 images</span>
           </button>
 
+          <button class="mode-card" type="button" onclick="window.location.href='read-aloud.html'">
+            <div class="mode-icon">📢</div>
+            <h3>Read Aloud</h3>
+            <p>
+              Read the text aloud in one breath and get feedback on
+              fluency, pace and pronunciation.
+            </p>
+            <span class="mode-badge" id="mode-badge-ra">12 texts</span>
+          </button>
+
           <button class="mode-card" type="button" onclick="window.location.href='quiz.html'">
             <div class="mode-icon">📝</div>
             <h3>Interactive Tests</h3>
@@ -240,6 +250,72 @@
             </p>
             <span class="mode-badge" id="mode-badge-quiz">4 quiz modes</span>
           </button>
+
+        </section>
+
+
+        <!-- Backup -->
+        <section class="card dash-backup" id="dash-backup">
+
+          <div class="card-title">
+            <span>💾 نسخ احتياطي للتقدّم</span>
+            <span class="dash-panel-hint">بياناتك محفوظة في هذا المتصفح فقط</span>
+          </div>
+
+          <p class="dash-backup-note">
+            نزّل ملفاً واحداً يحتوي كل إحصائياتك وحالة مفرداتك وهدفك، ثم
+            استورده في أي متصفح آخر. الاستيراد <strong>يدمج</strong> ولا يمسح
+            ما هو موجود.
+          </p>
+
+          <div class="dash-backup-actions">
+
+            <button
+              id="dash-export"
+              class="btn"
+              type="button"
+            >
+              ⬇️ تصدير
+            </button>
+
+            <button
+              id="dash-import"
+              class="btn btn-secondary"
+              type="button"
+            >
+              ⬆️ استيراد
+            </button>
+
+            <input
+              id="dash-import-file"
+              type="file"
+              accept="application/json,.json"
+              hidden
+            >
+
+            <button
+              id="dash-reset-stats"
+              class="btn btn-warn"
+              type="button"
+            >
+              🗑️ تصفير الإحصائيات
+            </button>
+
+            <button
+              id="dash-reset-all"
+              class="btn btn-danger"
+              type="button"
+            >
+              ⚠️ تصفير كل شيء
+            </button>
+
+          </div>
+
+          <div
+            id="dash-backup-report"
+            class="dash-backup-report"
+            hidden
+          ></div>
 
         </section>
 

@@ -175,6 +175,78 @@ test("new process guides produce grammatical English, not raw labels", () => {
   assert(timeline.example.includes("1857") && timeline.example.includes("2021"), "the timeline example must use real years");
 });
 
+test("map labels are drawn inside their own region and inside the panel", () => {
+  const PANEL = { x0: 36, y0: 56, x1: 564, y1: 336 };
+  const parse = (points) =>
+    points.split(/\s+/).map((pair) => pair.split(",").map(Number));
+
+  function centroid(pts) {
+    let area = 0;
+    let cx = 0;
+    let cy = 0;
+    pts.forEach(([x1, y1], i) => {
+      const [x2, y2] = pts[(i + 1) % pts.length];
+      const cross = x1 * y2 - x2 * y1;
+      area += cross;
+      cx += (x1 + x2) * cross;
+      cy += (y1 + y2) * cross;
+    });
+    area /= 2;
+    return { x: cx / (6 * area), y: cy / (6 * area) };
+  }
+
+  function inside(point, poly) {
+    let result = false;
+    for (let i = 0, j = poly.length - 1; i < poly.length; j = i, i += 1) {
+      const [xi, yi] = poly[i];
+      const [xj, yj] = poly[j];
+      if ((yi > point.y) !== (yj > point.y) && point.x < ((xj - xi) * (point.y - yi)) / (yj - yi) + xi) {
+        result = !result;
+      }
+    }
+    return result;
+  }
+
+  const maps = images.filter((image) => image.category === "map");
+  assert(maps.length > 0, "the corpus needs a map item");
+
+  maps.forEach((image) => {
+    image.data.regions.forEach((region) => {
+      const pts = parse(region.points);
+      const xs = pts.map((p) => p[0]);
+      const ys = pts.map((p) => p[1]);
+
+      assert(
+        Math.min(...xs) >= PANEL.x0 && Math.min(...ys) >= PANEL.y0 &&
+          Math.max(...xs) <= PANEL.x1 && Math.max(...ys) <= PANEL.y1,
+        `${image.id}/${region.label}: polygon leaves the map panel`
+      );
+
+      const label = region.cx != null
+        ? { x: region.cx, y: region.cy }
+        : centroid(pts);
+      assert(
+        inside(label, pts),
+        `${image.id}/${region.label}: label at ${Math.round(label.x)},${Math.round(label.y)} falls outside its region`
+      );
+    });
+  });
+});
+
+test("every map label is placed individually, never stacked on one point", () => {
+  const map = images.find((image) => image.category === "map");
+  const svg = renderImage(map);
+  const labelPositions = [...svg.matchAll(/text-anchor="middle"[^>]*>([^<]+)</g)].map((m) => m[1]);
+  const regionNames = map.data.regions.map((region) => region.label);
+  regionNames.forEach((name) => {
+    assert(labelPositions.includes(name), `label ${name} must be rendered`);
+  });
+  const valueLabels = map.data.regions.map((region) => region.value);
+  valueLabels.forEach((value) => {
+    assert(labelPositions.includes(value), `value ${value} must be rendered inside its region`);
+  });
+});
+
 test("first-time visitors default to training mode", () => {
   const diJs = readFileSync(
     new URL("../../js/describe-image.js", import.meta.url),

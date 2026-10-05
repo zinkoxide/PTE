@@ -5,10 +5,15 @@
 
 import {
   WEAK_THRESHOLD,
+  REVIEW_INTERVALS,
   emptyTaskStats,
   normalizeTaskStats,
   recordTaskAttempt,
-  getWeakItems
+  getWeakItems,
+  getDueItems,
+  getUpcomingItems,
+  scheduleReview,
+  describeDue
 } from "../../js/task-stats.js";
 
 let passed = 0;
@@ -122,6 +127,103 @@ test("an item that later scores well drops out of the weak list", () => {
   assert(getWeakItems(stats).length === 1, "the item starts weak");
   stats = recordTaskAttempt(stats, { itemId: "recovered", percent: 82, now: 2 });
   assert(getWeakItems(stats).length === 0, "a high best score must clear the item");
+});
+
+/* ---------------- Review schedule ---------------- */
+
+const DAY = 86400000;
+
+test("a weak attempt schedules the item one day later", () => {
+  const stats = recordTaskAttempt(emptyTaskStats(), {
+    itemId: "a",
+    percent: 40,
+    now: 1000
+  });
+  const entry = stats.missed.a;
+  assert(entry.streak === 1, `expected streak 1, got ${entry.streak}`);
+  assert(entry.due === 1000 + REVIEW_INTERVALS[0] * DAY, `due must be +1 day, got ${entry.due - 1000}`);
+  assert(REVIEW_INTERVALS[0] === 1, "the first interval must be one day");
+});
+
+test("the ladder grows while the item stays weak", () => {
+  let stats = emptyTaskStats();
+  let now = 1000;
+  const seen = [];
+
+  for (let i = 0; i < REVIEW_INTERVALS.length + 2; i += 1) {
+    stats = recordTaskAttempt(stats, { itemId: "a", percent: 30, now });
+    const entry = stats.missed.a;
+    seen.push(entry.due - now);
+    /* jump past the due date so the next attempt counts as a real review */
+    now = entry.due + 1000;
+  }
+
+  assert(seen[0] === 1 * DAY, `first gap must be 1 day, got ${seen[0] / DAY}`);
+  assert(seen[1] === 3 * DAY, `second gap must be 3 days, got ${seen[1] / DAY}`);
+  assert(seen[2] === 7 * DAY, `third gap must be 7 days, got ${seen[2] / DAY}`);
+  assert(seen[3] === 14 * DAY, `fourth gap must be 14 days, got ${seen[3] / DAY}`);
+  assert(seen[seen.length - 1] === 14 * DAY, "the ladder must cap at the longest interval");
+});
+
+test("answering well clears the schedule and resets the streak", () => {
+  let stats = recordTaskAttempt(emptyTaskStats(), { itemId: "a", percent: 30, now: 1000 });
+  assert(stats.missed.a.due > 0, "the item must be scheduled after a weak attempt");
+
+  const good = recordTaskAttempt(stats, { itemId: "a", percent: 85, now: 2000 });
+  assert(good.missed.a.due === 0, "a good answer must clear the schedule");
+  assert(good.missed.a.streak === 0, "the streak must reset");
+  assert(good.missed.a.best === 85, "the best score must be kept");
+  assert(getWeakItems(good).length === 0, "the item must leave the weak list");
+});
+
+test("failing an early re-test restarts the ladder at one day", () => {
+  let stats = recordTaskAttempt(emptyTaskStats(), { itemId: "a", percent: 30, now: 1000 });
+
+  /* a genuine review, attempted after the due date, grows the ladder */
+  stats = recordTaskAttempt(stats, { itemId: "a", percent: 30, now: stats.missed.a.due + 1000 });
+  assert(stats.missed.a.streak === 2, `the ladder should have grown to 2, got ${stats.missed.a.streak}`);
+
+  /* retry long before the next review date and fail again */
+  const earlyAt = stats.missed.a.due - 5 * DAY;
+  const early = recordTaskAttempt(stats, { itemId: "a", percent: 30, now: earlyAt });
+  assert(early.missed.a.streak === 1, `an early failure must restart at 1, got ${early.missed.a.streak}`);
+  assert(early.missed.a.due === earlyAt + DAY, "an early failure must come back tomorrow");
+});
+
+test("due items and upcoming items split the queue correctly", () => {
+  let stats = emptyTaskStats();
+  stats = recordTaskAttempt(stats, { itemId: "overdue", percent: 30, now: 1000 });
+  stats = recordTaskAttempt(stats, { itemId: "soon", percent: 30, now: Date.now() - 12 * 3600 * 1000 });
+  stats = recordTaskAttempt(stats, { itemId: "later", percent: 30, now: Date.now() });
+
+  const now = Date.now();
+  const due = getDueItems(stats, now);
+  const upcoming = getUpcomingItems(stats, now);
+
+  assert(due.some((item) => item.id === "overdue"), "the 1000-timestamp item must be overdue");
+  assert(!due.some((item) => item.id === "later"), "a future item must not be due");
+  assert(upcoming.some((item) => item.id === "later"), "the freshly scheduled item must be upcoming");
+  assert(due.every((item) => item.due <= now), "due items must all be at or past their date");
+  assert(
+    due.every((item, i) => i === 0 || due[i - 1].due <= item.due),
+    "due items must be sorted soonest first"
+  );
+});
+
+test("describeDue words the schedule in Arabic", () => {
+  const now = 1000 * 1000;
+  assert(describeDue({ due: 0 }, now) === null, "an unscheduled item has no wording");
+  assert(describeDue({ due: now - 100 }, now).state === "overdue", "a past date is overdue");
+  assert(describeDue({ due: now - 3 * DAY }, now).label.includes("3"), "an old date states the days late");
+  assert(describeDue({ due: now + 5 * 3600 * 1000 }, now).state === "today", "within 24 hours reads as today");
+  assert(describeDue({ due: now + 3 * DAY }, now).label.includes("3"), "a future date states the days left");
+});
+
+test("scheduleReview is a pure decision that defaults to now", () => {
+  const weak = scheduleReview({}, 10, 5000);
+  assert(weak.streak === 1 && weak.due === 5000 + DAY, "a first failure schedules +1 day");
+  const passed = scheduleReview({ streak: 3, due: 9000 }, 90);
+  assert(passed.due === 0 && passed.streak === 0, "a pass must clear the schedule");
 });
 
 console.log(`RESULT: ${passed} passed, ${failed} failed`);

@@ -272,6 +272,18 @@ test("read-aloud page has full wiring and loads base+read-aloud css", () => {
   assert(/speechSynthesis/.test(raJs), "read-aloud.js must offer text playback");
 });
 
+test("dashboard has the backup card wired to the progress module", () => {
+  ["dash-backup", "dash-export", "dash-import", "dash-import-file",
+   "dash-reset-stats", "dash-reset-all", "dash-backup-report"].forEach((id) =>
+    assert(html.index.includes(`id="${id}"`), `index.html: missing #${id}`)
+  );
+  const dashJs = read("../../js/dashboard.js");
+  assert(/buildSnapshot/.test(dashJs), "dashboard must export the progress snapshot");
+  assert(/mergeSnapshot/.test(dashJs), "dashboard must merge an imported snapshot");
+  assert(/resetStats/.test(dashJs) && /resetEverything/.test(dashJs), "dashboard must offer both reset scopes");
+  assert(/css\/dash\.css/.test(html.index), "index.html must load css/dash.css");
+});
+
 test("every page sidebar links to read-aloud.html", () => {
   ["index", "repeat", "vocabulary", "grammar", "quiz", "add-word", "swt", "di", "ra"].forEach((key) => {
     assert(html[key].includes('href="read-aloud.html"'), `${key}.html: missing sidebar link to read-aloud.html`);

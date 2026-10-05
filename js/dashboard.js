@@ -13,7 +13,14 @@ import {
   loadPronState,
   getDueWords
 } from "./storage.js";
-import { getWeakItems } from "./task-stats.js";
+import { getWeakItems, getDueItems, describeDue } from "./task-stats.js";
+import {
+  buildSnapshot,
+  mergeSnapshot,
+  resetStats,
+  resetEverything,
+  describeKeys
+} from "./progress-io.js";
 import {
   MIN_SCORE,
   MAX_SCORE,
@@ -127,7 +134,10 @@ function renderStats(vocabulary, grammar) {
 let swtPassageCount = 0;
 let diImageCount = 0;
 
+let cachedAssets = null;
+
 async function loadAssets() {
+  if (cachedAssets) return cachedAssets;
   const [vocabulary, grammar, swt, di] = await Promise.all([
     loadVocabulary(),
     loadGrammar(),
@@ -136,7 +146,8 @@ async function loadAssets() {
   ]);
   swtPassageCount = swt.length;
   diImageCount = di.length;
-  return { vocabulary, grammar };
+  cachedAssets = { vocabulary, grammar };
+  return cachedAssets;
 }
 
 async function loadSwtPassages() {
@@ -320,14 +331,36 @@ function renderWeakItems() {
   const holder = $("dash-task-weak");
   if (!holder) return;
 
+  const now = Date.now();
   const rows = [];
+  let dueToday = 0;
+
   Object.entries(TASK_LINKS).forEach(([key, meta]) => {
     getWeakItems(loadKey(key)).forEach((item) => {
-      rows.push({ ...item, ...meta });
+      const schedule = describeDue(item, now);
+      const isDue = Boolean(item.due && item.due <= now);
+      if (isDue) dueToday += 1;
+      rows.push({ ...item, ...meta, schedule, isDue });
     });
   });
 
-  rows.sort((a, b) => a.best - b.best || b.count - a.count || a.id.localeCompare(b.id));
+  /* Items whose review date has arrived come first, then the weakest. */
+  rows.sort(
+    (a, b) =>
+      Number(b.isDue) - Number(a.isDue) ||
+      (a.due || Infinity) - (b.due || Infinity) ||
+      a.best - b.best ||
+      b.count - a.count ||
+      a.id.localeCompare(b.id)
+  );
+
+  const summary = $("dash-task-weak-summary");
+  if (summary) {
+    summary.textContent = dueToday
+      ? `${dueToday} بند مستحق للمراجعة اليوم`
+      : "لا يوجد بند مستحق اليوم";
+    summary.classList.toggle("is-due", dueToday > 0);
+  }
 
   if (!rows.length) {
     const answered = Object.keys(TASK_LINKS).reduce(
@@ -346,7 +379,7 @@ function renderWeakItems() {
   holder.innerHTML = "";
   rows.slice(0, 6).forEach((row) => {
     const link = document.createElement("a");
-    link.className = "dash-weak-row dash-task-row";
+    link.className = `dash-weak-row dash-task-row${row.isDue ? " is-due" : ""}`;
     link.href = `${row.page}?item=${encodeURIComponent(row.id)}`;
     link.title = row.weak.length
       ? `لم تُغطَّ: ${row.weak.join(" · ")}`
@@ -363,7 +396,9 @@ function renderWeakItems() {
             .join("")}</div>`
         : "") +
       `</div>` +
-      `<span class="dash-weak-pct">${row.best}%</span>`;
+      (row.schedule
+        ? `<span class="dash-task-due is-${row.schedule.tone}">🔁 ${escapeHTML(row.schedule.label)}</span>`
+        : `<span class="dash-weak-pct">${row.best}%</span>`);
     holder.appendChild(link);
   });
 
@@ -465,6 +500,140 @@ function renderGoal() {
 }
 
 /* --------------------------------------
+   Backup: export / import / reset
+-------------------------------------- */
+
+function reportBackup(kind, heading, lines) {
+  const box = $("dash-backup-report");
+  if (!box) return;
+  box.hidden = false;
+  box.className = `dash-backup-report is-${kind}`;
+  box.innerHTML =
+    `<strong>${escapeHTML(heading)}</strong>` +
+    (lines.length
+      ? `<ul>${lines.map((line) => `<li>${escapeHTML(line)}</li>`).join("")}</ul>`
+      : "");
+}
+
+function handleExport() {
+  const snapshot = buildSnapshot(localStorage);
+  const keys = describeKeys();
+  const payload = {
+    ...snapshot,
+    stats: keys.stats,
+    file: "pte-trainer-progress.json"
+  };
+
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {
+    type: "application/json"
+  });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  const stamp = new Date().toISOString().slice(0, 10);
+  link.href = url;
+  link.download = `pte-progress-${stamp}.json`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+  reportBackup("ok", "تم تصدير تقدّمك ✅", [
+    `${Object.keys(snapshot.data).length} عنصراً حُفظت في الملف.`,
+    "احتفظ بالملف في مكان آمن — استورده في أي متصفح آخر."
+  ]);
+}
+
+function handleImportFile(file) {
+  const reader = new FileReader();
+
+  reader.onload = () => {
+    let parsed = null;
+    try {
+      parsed = JSON.parse(String(reader.result || ""));
+    } catch {
+      reportBackup("error", "تعذّر قراءة الملف", [
+        "الملف ليس JSON صالح. تأكد أنه ملف التصدير من هذا التطبيق."
+      ]);
+      return;
+    }
+
+    const report = mergeSnapshot(localStorage, parsed);
+
+    if (!report.ok) {
+      reportBackup("error", "لم يتم الاستيراد ❌", report.errors);
+      return;
+    }
+
+    const lines = [
+      report.applied.length ? `حُدّث ${report.applied.length} مجموعة بيانات.` : "لا جديد في الملف.",
+      report.alreadyImported.length ? `${report.alreadyImported.length} مجموعة كانت مستوردة سابقاً وتُركت كما هي.` : "",
+      report.changedWords ? `${report.changedWords} كلمة في المفردات.` : "",
+      ...report.warnings
+    ].filter(Boolean);
+
+    reportBackup("ok", "تم استيراد التقدّم ✅", lines);
+    refreshDashboard();
+  };
+
+  reader.onerror = () => {
+    reportBackup("error", "تعذّر قراءة الملف", ["حدث خطأ أثناء القراءة."]);
+  };
+
+  reader.readAsText(file);
+}
+
+function confirmReset(scope) {
+  const statsOnly = scope === "stats";
+  const message = statsOnly
+    ? "سيُصفّر سجلّ كل المحاولات (قواعد، اختبارات، تلخيص، صور، قراءة).\nحالة المفردات وجدولة المراجعة ستبقى كما هي.\n\nهل تريد المتابعة؟"
+    : "سيُحذف كل شيء: الإحصائيات وحالة المفردات وأهدافك وإعدادات الوضع.\nلا يمكن التراجع.\n\nهل تريد المتابعة؟";
+
+  if (!window.confirm(message)) return;
+
+  const cleared = statsOnly ? resetStats(localStorage) : resetEverything(localStorage);
+  reportBackup("ok", statsOnly ? "تم تصفير الإحصائيات 🗑️" : "تم تصفير كل شيء ⚠️", [
+    `${cleared.length} مفتاحاً حُذف.`,
+    statsOnly ? "حالة المفردات محفوظة." : "ستبدأ من الصفر."
+  ]);
+  refreshDashboard();
+}
+
+function wireBackup() {
+  const exportButton = $("dash-export");
+  const importButton = $("dash-import");
+  const importFile = $("dash-import-file");
+  const resetStatsButton = $("dash-reset-stats");
+  const resetAllButton = $("dash-reset-all");
+
+  if (exportButton) exportButton.addEventListener("click", handleExport);
+  if (importButton && importFile) {
+    importButton.addEventListener("click", () => importFile.click());
+    importFile.addEventListener("change", () => {
+      const file = importFile.files && importFile.files[0];
+      if (file) handleImportFile(file);
+      importFile.value = "";
+    });
+  }
+  if (resetStatsButton) {
+    resetStatsButton.addEventListener("click", () => confirmReset("stats"));
+  }
+  if (resetAllButton) {
+    resetAllButton.addEventListener("click", () => confirmReset("all"));
+  }
+}
+
+/* Re-read storage and repaint every panel (assets are cached). */
+async function refreshDashboard() {
+  const { vocabulary, grammar } = await loadAssets();
+  renderStats(vocabulary, grammar);
+  renderSrs(vocabulary);
+  renderChart();
+  renderWeak(grammar);
+  renderWeakItems();
+  renderGoal();
+}
+
+/* --------------------------------------
    Initialize
 -------------------------------------- */
 
@@ -476,6 +645,7 @@ async function initialize() {
   renderWeak(grammar);
   renderWeakItems();
   renderGoal();
+  wireBackup();
 }
 
 initialize();

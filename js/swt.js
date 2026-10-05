@@ -12,7 +12,8 @@ import { buildSwtGuide, renderSwtGuideHTML } from "./swt-guide.js";
 import {
   emptyTaskStats,
   normalizeTaskStats,
-  recordTaskAttempt
+  recordTaskAttempt,
+  describeDue
 } from "./task-stats.js";
 import { toOfficialScore, describeBand } from "./pte-scale.js";
 
@@ -165,6 +166,17 @@ function startTimer() {
       }
     }
   }, 1000);
+}
+
+/*
+The weak-item tracker schedules a failed item to come back (1, 3, 7 then 14
+days). Saying so immediately turns a low score into a plan.
+*/
+function scheduleNotice(item) {
+  const entry = (loadStats().missed || {})[item.id];
+  const schedule = describeDue(entry);
+  if (!schedule) return "";
+  return `<p class="swt-schedule-note">🔁 ${escapeHTML(schedule.label)} — سيُعاد طرح هذا البند للمراجعة.</p>`;
 }
 
 /* ==========================================
@@ -337,6 +349,7 @@ function submitAnswer(autoSubmit) {
     `<span class="pte-official is-${official.band.tone}">≈ ${official.score} / 90 · ${official.band.label}</span>` +
     `</div>` +
     `<div class="swt-criteria">${criteriaRows}</div>` +
+    scheduleNotice(item) +
     `<div class="swt-result-details">` +
     `<p><strong>Words:</strong> ${score.words} · <strong>Sentences:</strong> ${score.sentences} · ` +
     `<strong>Keyword coverage:</strong> ${score.hits}/${score.keywordTotal}</p>` +

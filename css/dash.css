@@ -201,6 +201,31 @@
   white-space: nowrap;
 }
 
+.dash-panel-hint.is-due {
+  color: var(--amber);
+  font-weight: 800;
+}
+
+.dash-task-row.is-due {
+  border-color: rgba(251, 191, 36, 0.45);
+}
+
+.dash-task-due {
+  flex: none;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 800;
+  white-space: nowrap;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border-soft);
+  color: var(--text-dim);
+}
+
+.dash-task-due.is-high { color: var(--red); border-color: rgba(251, 113, 133, 0.45); }
+.dash-task-due.is-mid { color: var(--amber); border-color: rgba(251, 191, 36, 0.45); }
+.dash-task-due.is-low { color: var(--text-faint); }
+
 .dash-task-more {
   font-size: 12px;
   font-weight: 600;
@@ -209,7 +234,57 @@
   padding-top: 2px;
 }
 
-/* ---------------- Exam goal ---------------- */
+/* ---------------- Backup ---------------- */
+
+.dash-backup {
+  margin-top: 16px;
+}
+
+.dash-backup-note {
+  margin: 0 0 14px;
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--text-dim);
+  max-width: 780px;
+}
+
+.dash-backup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dash-backup-report {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: var(--box-bg);
+  border: 1px solid var(--glass-border-soft);
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text-dim);
+}
+
+.dash-backup-report.is-ok {
+  border-color: rgba(52, 211, 153, 0.4);
+  background: rgba(52, 211, 153, 0.08);
+}
+
+.dash-backup-report.is-error {
+  border-color: rgba(251, 113, 133, 0.45);
+  background: rgba(251, 113, 133, 0.08);
+}
+
+.dash-backup-report ul {
+  margin: 6px 0 0;
+  padding-inline-start: 20px;
+}
+
+.dash-backup-report strong { color: var(--text); }
+
+/* ==========================================
+   Exam goal
+   ========================================== */
 
 .dash-goal {
   display: flex;
@@ -330,6 +405,10 @@
 .dash-goal-input input:focus {
   border-color: rgba(139, 92, 246, 0.6);
   box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+@media (max-width: 700px) {
+  .dash-backup-actions .btn { width: 100%; }
 }
 
 .dash-chart {

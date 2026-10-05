@@ -274,12 +274,57 @@ function renderTable(data) {
 
 /* ------------------ Map ------------------ */
 
+/* Area-weighted centroid of a polygon, so a label sits inside its region. */
+function polygonCenter(points) {
+  const pts = String(points || "")
+    .trim()
+    .split(/\s+/)
+    .map((pair) => pair.split(",").map(Number))
+    .filter((pair) => pair.length === 2 && pair.every((n) => !Number.isNaN(n)));
+
+  if (!pts.length) return { x: 0, y: 0 };
+
+  if (pts.length < 3) {
+    const sum = pts.reduce((acc, p) => ({ x: acc.x + p[0], y: acc.y + p[1] }), { x: 0, y: 0 });
+    return { x: sum.x / pts.length, y: sum.y / pts.length };
+  }
+
+  let area = 0;
+  let cx = 0;
+  let cy = 0;
+  for (let i = 0; i < pts.length; i += 1) {
+    const [x1, y1] = pts[i];
+    const [x2, y2] = pts[(i + 1) % pts.length];
+    const cross = x1 * y2 - x2 * y1;
+    area += cross;
+    cx += (x1 + x2) * cross;
+    cy += (y1 + y2) * cross;
+  }
+  area /= 2;
+
+  /* Degenerate (zero-area) shapes fall back to the bounding-box middle. */
+  if (Math.abs(area) < 1e-9) {
+    const xs = pts.map((p) => p[0]);
+    const ys = pts.map((p) => p[1]);
+    return {
+      x: (Math.min(...xs) + Math.max(...xs)) / 2,
+      y: (Math.min(...ys) + Math.max(...ys)) / 2
+    };
+  }
+
+  return { x: cx / (6 * area), y: cy / (6 * area) };
+}
+
 function renderMap(data) {
   let regions = "";
   data.regions.forEach((region) => {
+    const center = polygonCenter(region.points);
+    const labelX = region.cx != null ? region.cx : center.x;
+    const labelY = region.cy != null ? region.cy : center.y;
     regions +=
       `<polygon points="${region.points}" fill="${region.color}" stroke="#ffffff" stroke-width="2.5"/>` +
-      text(region.cx || 200, region.cy || 240, region.label, 15, "middle", "700", "#ffffff");
+      text(labelX, labelY - 2, region.label, 15, "middle", "700", "#ffffff") +
+      text(labelX, labelY + 16, region.value, 12.5, "middle", "600", "rgba(255,255,255,0.92)");
   });
   const legend = data.regions
     .map(

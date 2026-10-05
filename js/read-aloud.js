@@ -12,7 +12,8 @@ import { scoreReadAloud, FLUENCY_LIMITS } from "./read-aloud-score.js";
 import {
   emptyTaskStats,
   normalizeTaskStats,
-  recordTaskAttempt
+  recordTaskAttempt,
+  describeDue
 } from "./task-stats.js";
 import { toOfficialScore, describeBand } from "./pte-scale.js";
 
@@ -216,6 +217,17 @@ function setMode(next) {
   renderQuestion();
 }
 
+/*
+The weak-item tracker schedules a failed item to come back (1, 3, 7 then 14
+days). Saying so immediately turns a low score into a plan.
+*/
+function scheduleNotice(item) {
+  const entry = (loadStats().missed || {})[item.id];
+  const schedule = describeDue(entry);
+  if (!schedule) return "";
+  return `<p class="ra-schedule-note">🔁 ${escapeHTML(schedule.label)} — سيُعاد طرح هذا البند للمراجعة.</p>`;
+}
+
 /* ------------------ Phases and timers ------------------ */
 
 function setPhase(next) {
@@ -385,6 +397,7 @@ function submitAnswer(text) {
     `<span class="pte-official is-${band.tone}">≈ ${officialScore} / 90 · ${band.label}</span>` +
     `</div>` +
     `<div class="ra-criteria">${criteriaRows}</div>` +
+    scheduleNotice(item) +
     `<div class="ra-result-details">` +
     `<p><strong>Pace:</strong> ${score.wordsPerSecond} words/second · <strong>Accuracy:</strong> ${score.accuracy}%</p>` +
     `<p>${escapeHTML(score.contentReason)}</p>` +
