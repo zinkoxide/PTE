@@ -297,6 +297,85 @@ test("every page sidebar links to swt.html and describe-image.html", () => {
   });
 });
 
+test("page stylesheets do not duplicate rules that base.css already owns", () => {
+  /*
+  Grouped selectors in base.css are the shared home for task components, so an
+  identical top-level rule appearing in two page sheets is duplication. Rules
+  inside @media are ignored on purpose: each page picks its own breakpoint for
+  responsive tweaks.
+  */
+  const bodiesOf = (file) => {
+    const css = read(`../../css/${file}`);
+    const bodies = new Map();
+    let index = 0;
+
+    while (index < css.length) {
+      const open = css.indexOf("{", index);
+      if (open < 0) break;
+      const selector = css.slice(index, open).trim();
+      let depth = 1;
+      let cursor = open + 1;
+      while (cursor < css.length && depth > 0) {
+        if (css[cursor] === "{") depth += 1;
+        else if (css[cursor] === "}") depth -= 1;
+        cursor += 1;
+      }
+      const body = css.slice(open + 1, cursor - 1);
+
+      if (selector.startsWith("@")) {
+        index = cursor;
+        continue;
+      }
+
+      if (selector.startsWith(".") && depth === 1) {
+        const key =
+          selector.replace(/^\.(di|swt|ra)-/, ".") + " ||| " + body.replace(/\s+/g, " ").trim();
+        if (!bodies.has(key)) bodies.set(key, selector);
+      }
+
+      index = cursor;
+    }
+
+    return bodies;
+  };
+
+  const pages = ["di", "swt", "read-aloud"];
+  const sheets = pages.map((name) => [name, bodiesOf(`${name}.css`)]);
+  const repeated = [];
+
+  for (let i = 0; i < sheets.length; i += 1) {
+    for (let j = i + 1; j < sheets.length; j += 1) {
+      sheets[i][1].forEach((_value, key) => {
+        if (sheets[j][1].has(key)) {
+          repeated.push(`${sheets[i][0]}.css / ${sheets[j][0]}.css: ${key.split(" ||| ")[0]}`);
+        }
+      });
+    }
+  }
+
+  assert(
+    repeated.length === 0,
+    `these rules are duplicated across page stylesheets and belong in base.css:\n${repeated.join("\n")}`
+  );
+});
+
+test("base.css owns the shared task components as grouped selectors", () => {
+  const base = read("../../css/base.css");
+  [
+    ".di-result-content",
+    ".swt-result-content",
+    ".ra-result-content",
+    ".swt-step",
+    ".ra-step",
+    ".swt-mode-btn.is-on",
+    ".ra-mode-btn.is-on"
+  ].forEach((selector) => {
+    assert(base.includes(selector), `base.css must own ${selector}`);
+  });
+  const grouped = /\.di-result-content,\s*\n?\.ra-result-content,\s*\n?\.swt-result-content/.test(base);
+  assert(grouped, "shared components must use one grouped selector, not three copies");
+});
+
 test("no page, stylesheet or module leaks another page's class prefix", () => {
   const diCss = read("../../css/di.css");
   const swtCss = read("../../css/swt.css");

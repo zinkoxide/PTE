@@ -11,7 +11,6 @@ for file_name in [
     'repeat_sentences.json',
     'random_sentences.json',
     'vocabulary.json',
-    'audio_index.json',
     'vocabulary_audio_index.json',
 ]:
     path = root / file_name

@@ -423,6 +423,326 @@ a:focus-visible,
   color: var(--text);
 }
 
+/* ==========================================
+   Shared task components
+   ========================================== */
+
+.di-result-content,
+.ra-result-content,
+.swt-result-content {
+  min-height: 100px;
+
+  padding: 20px;
+
+  border-radius: var(--radius-md);
+
+  background: var(--box-bg);
+  border: 1px solid var(--glass-border-soft);
+
+  color: var(--text-dim);
+
+  line-height: 1.7;
+}
+
+.di-result-empty,
+.swt-result-empty {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(251, 113, 133, 0.1);
+  border: 1px solid rgba(251, 113, 133, 0.35);
+  color: var(--text);
+}
+
+.di-result-score,
+.ra-result-score,
+.swt-result-score {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.di-result-label,
+.ra-result-label,
+.swt-result-label {
+  font-size: 13px;
+  color: var(--text-faint);
+  font-weight: 600;
+}
+
+.di-criteria,
+.ra-criteria,
+.swt-criteria {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 8px 0 16px;
+}
+
+.di-criterion-name,
+.ra-criterion-name,
+.swt-criterion-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.di-criterion-bar,
+.ra-criterion-bar,
+.swt-criterion-bar {
+  height: 8px;
+  border-radius: 99px;
+  background: var(--track-bg);
+  overflow: hidden;
+}
+
+.di-criterion-bar i,
+.ra-criterion-bar i,
+.swt-criterion-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--grad-primary);
+}
+
+.di-criterion-value,
+.ra-criterion-value,
+.swt-criterion-value {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: end;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.di-result-details p,
+.ra-result-details p,
+.swt-result-details p {
+ margin: 4px 0;
+}
+
+.di-mode-btn:hover,
+.ra-mode-btn:hover,
+.swt-mode-btn:hover {
+ color: var(--text);
+}
+
+.ra-timer,
+.swt-timer {
+  min-width: 72px;
+  justify-content: center;
+
+  font-variant-numeric: tabular-nums;
+}
+
+.ra-progress,
+.swt-progress {
+  margin-top: 4px;
+}
+
+.ra-progress-track,
+.swt-progress-track {
+  width: 100%;
+  height: 7px;
+
+  background: var(--track-bg);
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+.ra-progress-fill,
+.swt-progress-fill {
+  width: 0%;
+  height: 100%;
+
+  border-radius: inherit;
+  background: var(--grad-primary);
+
+  transition: width 0.25s ease;
+}
+
+.ra-result-total,
+.swt-result-total {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ra-criterion,
+.swt-criterion {
+  display: grid;
+  grid-template-columns: 112px 1fr 64px;
+  align-items: center;
+  gap: 12px;
+}
+
+.ra-result-details,
+.swt-result-details {
+ font-size: 13.5px;
+}
+
+.ra-mode-btn.is-on,
+.swt-mode-btn.is-on {
+  color: #fff;
+  background: var(--grad-primary);
+}
+
+.ra-mode-btn.is-on:hover,
+.swt-mode-btn.is-on:hover {
+  color: #fff;
+}
+
+.ra-training-content,
+.swt-training-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ra-training-placeholder,
+.swt-training-placeholder {
+  color: var(--text-faint);
+}
+
+.ra-training-hero,
+.swt-training-hero {
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  background: var(--grad-primary);
+  color: #fff;
+}
+
+.ra-training-title,
+.swt-training-title {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.ra-training-sub,
+.swt-training-sub {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+.ra-steps,
+.swt-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ra-step,
+.swt-step {
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: var(--box-bg);
+  border: 1px solid var(--glass-border-soft);
+}
+
+.ra-step-head,
+.swt-step-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.ra-step-tag,
+.swt-step-tag {
+  flex: none;
+  min-width: 34px;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--grad-primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.ra-step-head strong,
+.swt-step-head strong {
+  font-size: 15px;
+  color: var(--text);
+}
+
+.ra-step p,
+.swt-step p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--text-dim);
+}
+
+.ra-panel,
+.swt-panel {
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: var(--box-bg);
+  border: 1px solid var(--glass-border-soft);
+}
+
+.ra-panel h4,
+.swt-panel h4 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.ra-tips-label,
+.swt-tips-label {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--green);
+}
+
+.ra-tips-label.is-avoid,
+.swt-tips-label.is-avoid {
+  margin-top: 12px;
+  color: var(--red);
+}
+
+.ra-tips,
+.swt-tips {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ra-tips li::before,
+.swt-tips li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.ra-tips.is-avoid li::before,
+.swt-tips.is-avoid li::before {
+  background: var(--red);
+}
+
+.ra-training-cta,
+.swt-training-cta {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* Official PTE score estimate shown next to a practice total. */
 .pte-official {
   display: inline-flex;

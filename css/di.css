@@ -15,30 +15,6 @@
   animation: cardIn 0.35s ease both;
 }
 
-.di-result-content {
-  min-height: 100px;
-
-  padding: 20px;
-
-  border-radius: var(--radius-md);
-
-  background: var(--box-bg);
-  border: 1px solid var(--glass-border-soft);
-
-  color: var(--text-dim);
-
-  line-height: 1.7;
-}
-
-.di-result-empty {
-  margin-top: 10px;
-  padding: 12px 14px;
-  border-radius: var(--radius-sm);
-  background: rgba(251, 113, 133, 0.1);
-  border: 1px solid rgba(251, 113, 133, 0.35);
-  color: var(--text);
-}
-
 .btn-danger {
   background: rgba(239, 68, 68, 0.18);
   border-color: rgba(239, 68, 68, 0.4);
@@ -196,29 +172,9 @@
   margin-bottom: 16px;
 }
 
-.di-result-score {
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-
 .di-result-total.is-good .di-result-score { color: var(--green); }
 .di-result-total.is-mid .di-result-score { color: var(--amber); }
 .di-result-total.is-low .di-result-score { color: var(--red); }
-
-.di-result-label {
-  font-size: 13px;
-  color: var(--text-faint);
-  font-weight: 600;
-}
-
-.di-criteria {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 8px 0 16px;
-}
 
 .di-criterion {
   display: grid;
@@ -227,40 +183,10 @@
   gap: 12px;
 }
 
-.di-criterion-name {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.di-criterion-bar {
-  height: 8px;
-  border-radius: 99px;
-  background: var(--track-bg);
-  overflow: hidden;
-}
-
-.di-criterion-bar i {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--grad-primary);
-}
-
-.di-criterion-value {
-  font-size: 12px;
-  font-weight: 700;
-  text-align: end;
-  color: var(--text-dim);
-  font-variant-numeric: tabular-nums;
-}
-
 .di-result-details {
   font-size: 13.5px;
   color: var(--text-dim);
 }
-
-.di-result-details p { margin: 4px 0; }
 
 .di-reference {
   margin-top: 14px;
@@ -311,8 +237,6 @@
   background: transparent;
   transition: all 0.2s ease;
 }
-
-.di-mode-btn:hover { color: var(--text); }
 
 .di-mode-btn.is-on {
   color: var(--primary-light);

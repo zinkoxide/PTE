@@ -6,7 +6,6 @@
   max-width: 1080px;
 }
 
-
 /* ==========================================
    Header
    ========================================== */
@@ -18,7 +17,6 @@
   gap: 20px;
 }
 
-
 /* ==========================================
    Status / Timer
    ========================================== */
@@ -26,38 +24,6 @@
 .swt-status-card {
   padding-bottom: 18px;
 }
-
-.swt-timer {
-  min-width: 72px;
-  justify-content: center;
-
-  font-variant-numeric: tabular-nums;
-}
-
-.swt-progress {
-  margin-top: 4px;
-}
-
-.swt-progress-track {
-  width: 100%;
-  height: 7px;
-
-  background: var(--track-bg);
-  border-radius: 999px;
-
-  overflow: hidden;
-}
-
-.swt-progress-fill {
-  width: 0%;
-  height: 100%;
-
-  border-radius: inherit;
-  background: var(--grad-primary);
-
-  transition: width 0.25s ease;
-}
-
 
 /* ==========================================
    Passage
@@ -81,7 +47,6 @@
 
   overflow-wrap: break-word;
 }
-
 
 /* ==========================================
    Response
@@ -157,7 +122,6 @@
   color: var(--text-dim);
 }
 
-
 /* ==========================================
    Actions
    ========================================== */
@@ -171,7 +135,6 @@
   justify-content: flex-end;
 }
 
-
 /* ==========================================
    Result
    ========================================== */
@@ -180,101 +143,11 @@
   animation: cardIn 0.35s ease both;
 }
 
-.swt-result-content {
-  min-height: 100px;
-
-  padding: 20px;
-
-  border-radius: var(--radius-md);
-
-  background: var(--box-bg);
-  border: 1px solid var(--glass-border-soft);
-
-  color: var(--text-dim);
-
-  line-height: 1.7;
-}
-
-.swt-result-total {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.swt-result-score {
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-
 .swt-result-total.is-good .swt-result-score { color: var(--green); }
 .swt-result-total.is-mid .swt-result-score { color: var(--amber); }
 .swt-result-total.is-low .swt-result-score { color: var(--red); }
 
-.swt-result-label {
-  font-size: 13px;
-  color: var(--text-faint);
-  font-weight: 600;
-}
-
-.swt-criteria {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 8px 0 16px;
-}
-
-.swt-criterion {
-  display: grid;
-  grid-template-columns: 112px 1fr 64px;
-  align-items: center;
-  gap: 12px;
-}
-
-.swt-criterion-name {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.swt-criterion-bar {
-  height: 8px;
-  border-radius: 99px;
-  background: var(--track-bg);
-  overflow: hidden;
-}
-
-.swt-criterion-bar i {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--grad-primary);
-}
-
-.swt-criterion-value {
-  font-size: 12px;
-  font-weight: 700;
-  text-align: end;
-  color: var(--text-dim);
-  font-variant-numeric: tabular-nums;
-}
-
-.swt-result-details { font-size: 13.5px; }
-
-.swt-result-details p { margin: 4px 0; }
-
 .swt-warn { color: var(--amber); }
-
-.swt-result-empty {
-  margin-top: 10px;
-  padding: 12px 14px;
-  border-radius: var(--radius-sm);
-  background: rgba(251, 113, 133, 0.1);
-  border: 1px solid rgba(251, 113, 133, 0.35);
-  color: var(--text);
-}
 
 .swt-reference {
   margin-top: 14px;
@@ -295,7 +168,6 @@
   line-height: 1.8;
   color: var(--text);
 }
-
 
 /* ==========================================
    Mode switch (Training / Practice)
@@ -324,19 +196,6 @@
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-.swt-mode-btn:hover {
-  color: var(--text);
-}
-
-.swt-mode-btn.is-on {
-  color: #fff;
-  background: var(--grad-primary);
-}
-
-.swt-mode-btn.is-on:hover {
-  color: #fff;
-}
-
 /* Hide practice-only chrome while training */
 body.swt-training-mode .swt-timer,
 body.swt-training-mode .swt-progress,
@@ -346,87 +205,12 @@ body.swt-training-mode .swt-result-card {
   display: none;
 }
 
-
 /* ==========================================
    Training guide
    ========================================== */
 
 .swt-training-card {
   animation: cardIn 0.35s ease both;
-}
-
-.swt-training-content {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.swt-training-placeholder {
-  color: var(--text-faint);
-}
-
-.swt-training-hero {
-  padding: 18px 20px;
-  border-radius: var(--radius-md);
-  background: var(--grad-primary);
-  color: #fff;
-}
-
-.swt-training-title {
-  font-size: 20px;
-  font-weight: 900;
-  line-height: 1.3;
-}
-
-.swt-training-sub {
-  margin-top: 6px;
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: 0.92;
-}
-
-.swt-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.swt-step {
-  padding: 14px 16px;
-  border-radius: var(--radius-md);
-  background: var(--box-bg);
-  border: 1px solid var(--glass-border-soft);
-}
-
-.swt-step-head {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 6px;
-}
-
-.swt-step-tag {
-  flex: none;
-  min-width: 34px;
-  text-align: center;
-  padding: 4px 8px;
-  border-radius: 999px;
-  background: var(--grad-primary);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.swt-step-head strong {
-  font-size: 15px;
-  color: var(--text);
-}
-
-.swt-step p {
-  margin: 0;
-  font-size: 13.5px;
-  line-height: 1.75;
-  color: var(--text-dim);
 }
 
 .swt-step .swt-frame {
@@ -437,19 +221,6 @@ body.swt-training-mode .swt-result-card {
   border: 1px solid var(--sentence-border);
   font-style: italic;
   font-size: 13.5px;
-  color: var(--text);
-}
-
-.swt-panel {
-  padding: 14px 16px;
-  border-radius: var(--radius-md);
-  background: var(--box-bg);
-  border: 1px solid var(--glass-border-soft);
-}
-
-.swt-panel h4 {
-  margin: 0 0 8px;
-  font-size: 14px;
   color: var(--text);
 }
 
@@ -534,48 +305,12 @@ body.swt-training-mode .swt-result-card {
   color: var(--text);
 }
 
-.swt-tips-label {
-  margin: 0 0 6px;
-  font-size: 12px;
-  font-weight: 800;
-  color: var(--green);
-}
-
-.swt-tips-label.is-avoid {
-  margin-top: 12px;
-  color: var(--red);
-}
-
-.swt-tips {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .swt-tips li {
   padding-left: 14px;
   position: relative;
   font-size: 13.5px;
   line-height: 1.7;
   color: var(--text-dim);
-}
-
-.swt-tips li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.7em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--green);
-}
-
-.swt-tips.is-avoid li::before {
-  background: var(--red);
 }
 
 .swt-model-guide {
@@ -606,13 +341,6 @@ body.swt-training-mode .swt-result-card {
   color: var(--text-faint);
 }
 
-.swt-training-cta {
-  margin-top: 14px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-
 /* ==========================================
    Validation states
    ========================================== */
@@ -624,7 +352,6 @@ body.swt-training-mode .swt-result-card {
 .swt-response-input.is-invalid {
   border-color: rgba(251, 113, 133, 0.65);
 }
-
 
 /* ==========================================
    Responsive

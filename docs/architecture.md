@@ -21,12 +21,25 @@ optional Flask add-word server (`app.py`), needed **at save time only**.
 ### Stylesheets (`css/`)
 
 `base.css` (shared shell, buttons, pills, inputs, theme tokens, the
-`.pte-official` score chip) plus one page-specific sheet each: `dash.css`,
-`repeat.css`, `read-aloud.css`, `di.css`, `vocab.css`, `gram.css`, `swt.css`,
-`quiz.css`, `addw.css`.
+`.pte-official` score chip and the **shared task components**) plus one
+page-specific sheet each: `dash.css`, `repeat.css`, `read-aloud.css`, `di.css`,
+`vocab.css`, `gram.css`, `swt.css`, `quiz.css`, `addw.css`.
 
-Class names are page-scoped (`di-*`, `swt-*`, …) and a harness test enforces
-that no page, stylesheet or module borrows another page's prefix.
+Class names stay page-scoped (`di-*`, `swt-*`, `ra-*`) and a harness test
+enforces that no page, stylesheet or module borrows another page's prefix.
+Components that all three task pages use — the mode switch, the status/timer
+and progress bars, the training guide and the result card with its criteria
+bars — live **once** in `base.css` as a grouped selector:
+
+```css
+.swt-step, .ra-step { … }
+.di-result-content, .ra-result-content, .swt-result-content { … }
+```
+
+This keeps the three pages from drifting apart without renaming a single class
+in the HTML or the JS that generates the markup. A second harness test fails
+the build if an identical top-level rule body reappears in two page sheets.
+Rules inside `@media` are exempt, because each page picks its own breakpoint.
 
 ### Modules (`js/`)
 

@@ -1,5 +1,29 @@
 # Changelog
 
+## v3.20 — Maintenance: one home for the shared components
+
+- Deleted `data/audio_index.json`. It was a 65-byte leftover from an older
+  design (sentence id → mp3) that nothing read: sentences carry their own
+  `audio` field and `app.py` writes `vocabulary_audio_index.json`. The stale
+  entry was also removed from the validator's file list.
+- Moved the **39 rule blocks that were byte-identical across `di.css`,
+  `swt.css` and `read-aloud.css`** into `base.css` as grouped selectors — the
+  mode switch, the status/timer and progress bars, the whole training guide and
+  the result card with its criteria bars.
+- Result: `di.css` 540 → 445 lines, `swt.css` 585 → 422, `read-aloud.css` 391 →
+  228, with zero duplicated rule bodies left between the three sheets. The class
+  names were **not** renamed, so no HTML or generated markup changed.
+- Verified with a per-element CSS fingerprint: for every element on the four
+  task pages, the exact list of matching declarations (selector + body, with
+  the page prefix canonicalised) is **identical before and after** — 0 of 697
+  elements changed.
+- Rules inside `@media` were deliberately left alone: Describe Image uses a
+  760px breakpoint where the other two use 700px, so unifying them would change
+  the responsive behaviour of one page.
+- Two new harness tests: page stylesheets must not share an identical top-level
+  rule body, and `base.css` must own the shared components as one grouped
+  selector.
+
 ## v3.19 — Weak items come back on a schedule
 
 - Weak task items are now **rescheduled with the same Leitner idea as the
