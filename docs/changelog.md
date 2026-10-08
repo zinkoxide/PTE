@@ -1,5 +1,24 @@
 # Changelog
 
+## v3.25 — Editing and deleting words, and an audit that trusts nothing
+
+A word bank that can only grow was the last structural gap. Now:
+
+- **✏️ تعديل / 🗑️ حذف** on every word in `vocabulary.html`, backed by
+  `GET`, `PUT` and `DELETE` on `/api/word`. Renaming regenerates the audio
+  under the same file number so the MP3 never lags behind the word, and
+  deleting removes the file with the row.
+- **`tools/validate_json.py` became a real audit**: it resolves every audio path
+  through the index instead of trusting the entry's own `audio` field (which is
+  empty for most committed words), checks the file is really on disk, and
+  refuses duplicates, bad parts of speech and incomplete task items.
+- Three bugs the audit and the browser tests exposed, all fixed: the audio file
+  survived a rename/delete because only the empty `audio` field was consulted,
+  the edit form demanded three collocations even though older entries have
+  fewer, and **CORS did not list `PUT`/`DELETE`**, so the browser rejected every
+  edit with a silent "Failed to fetch" while the server happily answered 200.
+  That last one is now covered by a test.
+
 ## v3.24 — Fixing the CSV import for real use
 
 An import that silently did nothing was reported as "still 1001 words". Three

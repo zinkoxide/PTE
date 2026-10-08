@@ -15,6 +15,7 @@ Audio is generated with Microsoft Edge TTS
 
 import asyncio
 import json
+import re
 import sys
 import threading
 from pathlib import Path
@@ -37,7 +38,12 @@ AUDIO_DIRECTORY = PROJECT_ROOT / "assets" / "audio" / "vocabulary"
 
 ALLOWED_LEVELS = {"A1", "A2", "B1", "B2", "C1", "C2"}
 ALLOWED_FREQUENCIES = {"2", "3", "4", "5"}
-ALLOWED_PARTS = {"Noun", "Verb", "Adjective", "Adverb"}
+# The bank already contains Pronoun and Conjunction words, so the form and the
+# validator accept the whole set rather than the four the dropdown started with.
+ALLOWED_PARTS = {
+    "Noun", "Verb", "Adjective", "Adverb", "Pronoun",
+    "Conjunction", "Preposition", "Determiner",
+}
 
 FIELDS = [
     "word", "pronunciation", "audio", "partOfSpeech", "cefrLevel",
@@ -74,7 +80,9 @@ def add_cors_headers(response):
         response.headers["Access-Control-Allow-Origin"] = origin
         response.headers["Vary"] = "Origin"
         response.headers["Access-Control-Allow-Headers"] = "Content-Type"
-        response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+        # PUT and DELETE are not "simple" requests, so the browser sends a
+        # preflight OPTIONS before them and rejects the call without this.
+        response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
     return response
 
 
@@ -90,6 +98,15 @@ def save_json(path, data, indent=2):
 
 def existing_words_lower(vocabulary):
     return {str(item.get("word", "")).strip().lower() for item in vocabulary}
+
+
+def find_entry(vocabulary, word):
+    """Locate an entry by word, ignoring case and stray spaces."""
+    target = str(word or "").strip().lower()
+    for index, item in enumerate(vocabulary):
+        if str(item.get("word", "")).strip().lower() == target:
+            return index, item
+    return None, None
 
 
 async def generate_audio(text, output_file):
@@ -266,7 +283,8 @@ def add_word():
                 "error": f"الكلمة «{word}» موجودة مسبقاً — مكررة.",
             }), 409
 
-        number = len(vocabulary) + 1
+        audio_index_now = load_json(AUDIO_INDEX_FILE)
+        number = import_plan.next_free_number(vocabulary, audio_index_now)
         audio_name = f"{number:03d}.mp3"
         audio_path = AUDIO_DIRECTORY / audio_name
         audio_rel = f"assets/audio/vocabulary/{audio_name}"
@@ -282,7 +300,7 @@ def add_word():
         vocabulary.append(entry)
         save_json(DATA_FILE, vocabulary, indent=2)
 
-        audio_index = load_json(AUDIO_INDEX_FILE)
+        audio_index = audio_index_now
         audio_index[word] = audio_rel
         save_json(AUDIO_INDEX_FILE, audio_index, indent=4)
 
@@ -330,6 +348,7 @@ def import_words():
             payload.get("words"),
             lambda item: validate_entry(item, require_rich_lists=False),
             MAX_IMPORT_WORDS,
+            audio_index=load_json(AUDIO_INDEX_FILE),
         )
 
         if plan["errors"]:
@@ -388,6 +407,161 @@ def import_words():
         "rejected": rejected,
         "withoutAudio": without_audio,
         "total": len(vocabulary) if not dry_run else None,
+    }), 200
+
+
+@app.route("/api/word", methods=["GET"])
+def get_word():
+    """Read one entry so the edit form can be pre-filled."""
+    if not SERVICE_ENABLED:
+        return jsonify({"success": False, "error": "خدمة الإضافة متوقفة مؤقتاً — شغّلها أولاً."}), 503
+
+    word = request.args.get("word", "")
+    with _lock:
+        vocabulary = load_json(DATA_FILE)
+        _index, entry = find_entry(vocabulary, word)
+
+    if not entry:
+        return jsonify({"success": False, "error": f"الكلمة «{word}» غير موجودة."}), 404
+
+    return jsonify({"success": True, "word": entry, "index": _index + 1}), 200
+
+
+@app.route("/api/word", methods=["PUT"])
+def update_word():
+    """
+    Replace one entry.
+
+    The original word identifies the row. Renaming is allowed as long as the
+    new spelling is free, and the audio is regenerated because the file holds
+    the old pronunciation.
+    """
+    if not SERVICE_ENABLED:
+        return jsonify({"success": False, "error": "خدمة الإضافة متوقفة مؤقتاً — شغّلها أولاً."}), 503
+
+    payload = request.get_json(silent=True)
+    if not isinstance(payload, dict):
+        return jsonify({"success": False, "error": "بيانات غير صالحة."}), 400
+
+    original = str(payload.get("originalWord", "")).strip()
+    if not original:
+        return jsonify({"success": False, "error": "الكلمة الأصلية مطلوبة."}), 400
+
+    # The list minimums are relaxed here for the same reason as in an import:
+    # the form arrives pre-filled, and the learner only wants to fix the
+    # meaning or a typo — not be told to invent two more examples. The
+    # strict minimums still apply when adding a brand new word.
+    entry, errors = validate_entry(payload, require_rich_lists=False)
+    if errors:
+        return jsonify({"success": False, "errors": errors}), 400
+
+    with _lock:
+        vocabulary = load_json(DATA_FILE)
+        position, existing = find_entry(vocabulary, original)
+        if not existing:
+            return jsonify({"success": False, "error": f"الكلمة «{original}» غير موجودة."}), 404
+
+        new_word = entry["word"]
+        renamed = new_word.lower() != str(existing.get("word", "")).strip().lower()
+
+        if renamed:
+            taken, _other = find_entry(vocabulary, new_word)
+            if taken is not None:
+                return jsonify({
+                    "success": False,
+                    "error": f"الكلمة «{new_word}» موجودة مسبقاً — اختر اسماً آخر.",
+                }), 409
+
+        audio_index = load_json(AUDIO_INDEX_FILE)
+        old_word = str(existing.get("word", ""))
+
+        # The committed bank leaves `audio` empty and keeps the path in the
+        # index, so the number has to come from whichever one actually has it.
+        current_audio = str(existing.get("audio") or audio_index.get(old_word) or "")
+        stem = current_audio.rsplit("/", 1)[-1].rsplit(".", 1)[0]
+        digits = "".join(ch for ch in stem if ch.isdigit())
+        number_value = int(digits) if digits else None
+
+        # Keep whichever style the entry already used.
+        entry["audio"] = str(existing.get("audio", ""))
+
+        if renamed:
+            if number_value is None:
+                return jsonify({
+                    "success": False,
+                    "error": "لا يوجد ملف صوت لهذه الكلمة، فلا يمكن إعادة توليده. احذفها وأضفها من جديد.",
+                }), 409
+
+            # The stored audio still says the old word, so replace it.
+            try:
+                asyncio.run(generate_audio(new_word, AUDIO_DIRECTORY / f"{number_value:03d}.mp3"))
+            except Exception as error:  # noqa: BLE001
+                return jsonify({"success": False, "error": f"فشل توليد الصوت: {error}"}), 500
+
+            audio_index.pop(old_word, None)
+            if entry["audio"]:
+                entry["audio"] = f"assets/audio/vocabulary/{number_value:03d}.mp3"
+            audio_index[new_word] = f"assets/audio/vocabulary/{number_value:03d}.mp3"
+
+        vocabulary[position] = entry
+        save_json(DATA_FILE, vocabulary, indent=2)
+        if renamed:
+            save_json(AUDIO_INDEX_FILE, audio_index, indent=4)
+
+    return jsonify({
+        "success": True,
+        "word": entry,
+        "renamed": renamed,
+        "previousWord": original,
+    }), 200
+
+
+@app.route("/api/word", methods=["DELETE"])
+def delete_word():
+    """
+    Remove one entry, its audio index row and its audio file.
+
+    The remaining numbers are deliberately not renumbered: audio paths live in
+    the index, so a gap is harmless while renaming 1000 entries is not.
+    """
+    if not SERVICE_ENABLED:
+        return jsonify({"success": False, "error": "خدمة الإضافة متوقفة مؤقتاً — شغّلها أولاً."}), 503
+
+    word = request.args.get("word", "")
+    if not word.strip():
+        return jsonify({"success": False, "error": "اسم الكلمة مطلوب."}), 400
+
+    with _lock:
+        vocabulary = load_json(DATA_FILE)
+        position, existing = find_entry(vocabulary, word)
+        if not existing:
+            return jsonify({"success": False, "error": f"الكلمة «{word}» غير موجودة."}), 404
+
+        removed = str(existing.get("word", ""))
+        vocabulary.pop(position)
+        save_json(DATA_FILE, vocabulary, indent=2)
+
+        # Resolve the file from the index when the entry's own `audio` field is
+        # empty, which is how the committed bank stores it.
+        audio_index = load_json(AUDIO_INDEX_FILE)
+        audio_path = str(existing.get("audio") or audio_index.get(removed) or "")
+        audio_index.pop(removed, None)
+        save_json(AUDIO_INDEX_FILE, audio_index, indent=4)
+
+        if audio_path:
+            try:
+                (PROJECT_ROOT / audio_path).unlink()
+            except FileNotFoundError:
+                pass
+            except OSError:
+                # A missing permission must not fail a delete that already
+                # saved both data files.
+                pass
+
+    return jsonify({
+        "success": True,
+        "removed": removed,
+        "remaining": len(vocabulary),
     }), 200
 
 

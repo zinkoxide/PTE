@@ -180,6 +180,15 @@ review of every question.
   re-displays the last import report after a reload.
   `samples/import-sample.csv` is a ready-made file: one word that already exists
   and four new ones, numbered 1002–1005.
+- **✏️ Edit / 🗑️ Delete**: every word has an **✏️ تعديل** button that opens
+  `add-word.html?edit=Word` with the whole entry pre-filled (meanings, IPA,
+  lists, CEFR, study fields) — save with **حفظ التعديلات** and you are back on
+  the bank. Renaming a word regenerates its audio at the same file number, so
+  the MP3 never ends up under the old name, and the audio index follows the
+  rename. **🗑️ حذف** removes the entry, its audio index row and the MP3 file
+  itself, after a confirmation. Both need the add server, exactly like adding.
+  Entries that predate the three-item rule can be edited as they are: the
+  longer lists are only required when *adding* a word.
 - Mark words **✓ Learned** / **↻ Review**. **Spaced repetition (SRS)**:
   learned words are rescheduled (`+3d`, then ×1.5 per correct review, 1 day
   after a miss); a **⏰ مراجعة مستحقة** filter and due-count pill surface

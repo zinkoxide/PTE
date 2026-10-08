@@ -84,6 +84,44 @@ test("vocabulary page exposes the CSV export control", () => {
   assert(/confirmImport/.test(app), "the import must wait for a confirmation");
 });
 
+test("the vocabulary page can edit a word and the form supports edit mode", () => {
+  assert(html.vocabulary.includes('id="vocab-edit-word"'), "vocabulary.html: missing the edit button");
+  assert(html["add-word"].includes('id="edit-word-delete"'), "add-word.html: missing the delete button");
+
+  const app = read("../../js/vocab-app.js");
+  assert(/add-word\.html\?edit=/.test(app), "the edit button must open the form in edit mode");
+
+  const addWord = read("../../js/add-word.js");
+  assert(/enterEditMode/.test(addWord), "add-word.js must load the word for editing");
+  assert(/deleteCurrentWord/.test(addWord), "add-word.js must support deleting");
+  assert(/editing \? "PUT" : "POST"/.test(addWord), "editing must send PUT instead of POST");
+  assert(/originalWord/.test(addWord), "the original word must be sent so the row can be found");
+  assert(/apiUrl/.test(addWord), "add-word.js must resolve the add server address");
+});
+
+test("the add server exposes word read, update and delete endpoints", () => {
+  const server = read("../../app.py");
+  ['@app.route("/api/word", methods=["GET"])',
+   '@app.route("/api/word", methods=["PUT"])',
+   '@app.route("/api/word", methods=["DELETE"])'].forEach((route) => {
+    assert(server.includes(route), `app.py must expose ${route}`);
+  });
+  assert(/def find_entry/.test(server), "the server needs one word lookup used by all three");
+  assert(/next_free_number/.test(server) || /import_plan\.next_free_number/.test(server),
+    "numbering must survive deletions");
+  assert(/ALLOWED_PARTS/.test(server), "the server validates the part of speech");
+  assert(server.includes("Pronoun") && server.includes("Conjunction"),
+    "the validator must accept the parts the bank already contains");
+});
+
+test("the data validator audits content, not just syntax", () => {
+  const validator = read("../../tools/validate_json.py");
+  assert(/vocabulary problems/.test(validator), "the validator must report vocabulary problems");
+  ["no audio", "duplicate", "cefrLevel", "partOfSpeech", "frequency"]
+    .forEach((needle) => assert(validator.includes(needle), `the audit must check: ${needle}`));
+  assert(/audit_simple_list/.test(validator), "the task data files must be audited too");
+});
+
 test("the add server exposes a bulk import endpoint that re-checks everything", () => {
   const server = read("../../app.py");
   assert(/api\/import-words/.test(server), "app.py must expose /api/import-words");
@@ -447,6 +485,30 @@ test("no page, stylesheet or module leaks another page's class prefix", () => {
   assert(!/\.di-/.test(raCss), "read-aloud.css must not contain .di- rules");
   assert(!/\.swt-/.test(raCss), "read-aloud.css must not contain .swt- rules");
   assert(!/class="[^"]*\b(di|swt)-/.test(html.ra), "read-aloud.html must not use di-/swt- classes");
+});
+
+test("the editing verbs are allowed through CORS", () => {
+  // A page served from any other local port calls the API cross-origin, and
+  // PUT/DELETE are not simple requests, so the preflight must list them.
+  const app = read("../../app.py");
+  const methods = /Access-Control-Allow-Methods"\]\s*=\s*"([^"]+)"/.exec(app);
+  assert(methods, "app.py must set Access-Control-Allow-Methods");
+  for (const verb of ["GET", "POST", "PUT", "DELETE", "OPTIONS"]) {
+    assert(new RegExp(`\\b${verb}\\b`).test(methods[1]), `CORS must allow ${verb}`);
+  }
+});
+
+test("editing a word does not demand the three-item lists", () => {
+  // Entries imported before the rule have fewer, so both sides relax it.
+  const client = read("../../js/add-word.js");
+  assert(
+    /if \(!editingWord && !wordExists && word\)/.test(client),
+    "validateForm must skip the list minimums while editing",
+  );
+  assert(
+    /require_rich_lists=False/.test(read("../../app.py")),
+    "the update endpoint must accept the shorter lists on update",
+  );
 });
 
 console.log(`RESULT: ${passed} passed, ${failed} failed`);

@@ -90,12 +90,23 @@ under `assets/audio/vocabulary/`).
 ### Tools (`tools/`)
 
 - `run_checks.sh` — one command that runs everything below.
-- `validate_json.py` — data sanity checks.
+- `validate_json.py` — data sanity checks. The audit is deliberately strict:
+  it re-reads every vocabulary entry and the audio index, resolves each word's
+  MP3 through the index (the `audio` field alone is not trusted), verifies the
+  file exists on disk, refuses duplicate words or duplicate audio numbers,
+  checks CEFR/frequency/part of speech (including compound labels such as
+  *Noun/Verb*), and walks the SWT and Read Aloud item files for missing text
+  or answer keys.
+- `import_plan.py` — the numbering rules shared by the import and add paths:
+  `next_free_number()` picks the number after the highest one in use (it never
+  hands out a number whose audio file is taken, and it reads digits from the
+  file stem only, so `1005.mp3` never looks like number 5).
 - `generate_audio.py`, `generate_vocabulary_audio.py` — Edge TTS audio generation.
 - `start_add_word.sh` — starts the Flask add server.
 - `tests/test-*.mjs` — unit harnesses (html wiring, grammar, storage,
   pronunciation, swt, di, task stats, read aloud + the official scale,
-  progress backup/merge).
+  progress backup/merge, csv export/import), plus `tests/test_import_plan.py`
+  for the numbering rules.
 
 ## Data flow (repeat)
 
@@ -198,6 +209,22 @@ page served from another local port reach it; any other origin is refused.
    `speech.js` (or the typing fallback) captures the answer, the `*-score.js`
    module scores it, and the attempt is appended to the module's stats key.
 4. `dashboard.js` reads every stats key and updates cards, badges and the chart.
+
+## Data flow (edit / delete a word)
+
+1. `vocabulary.html` shows an **✏️ تعديل** button per word and links to
+   `add-word.html?edit=<word>`; the page can be opened directly too.
+2. The form loads the entry with `GET /api/word?word=<word>`, fills every field,
+   and switches its button to **حفظ التعديلات** (the duplicate check stops
+   mattering — the word is supposed to exist).
+3. Saving sends `PUT /api/word` with the original word as `originalWord`. The
+   server validates the entry, keeps the **same audio number** when the name is
+   unchanged, regenerates the MP3 under the new name when it is changed, and
+   rewrites the index row.
+4. **🗑️ حذف** sends `DELETE /api/word?word=<word>`, which drops the entry, the
+   index row and the MP3 file.
+5. Numbers are never reused: a later import simply continues after the highest
+   number still in use, so the deleted slot is left alone.
 
 ## localStorage keys
 

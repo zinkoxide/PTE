@@ -30,7 +30,40 @@ def existing_words_lower(vocabulary):
     return {normalize(item.get("word")) for item in vocabulary or []}
 
 
-def plan_import(vocabulary, words, validate_entry, max_words=MAX_IMPORT_WORDS):
+def number_from_path(path):
+    """
+    The sequence number inside an audio path such as
+    `assets/audio/vocabulary/1005.mp3`.
+
+    Only the stem is scanned: the "3" in ".mp3" is not a digit of the number,
+    which is exactly the trap that produced 10054 once.
+    """
+    stem = str(path or "").rsplit("/", 1)[-1].rsplit(".", 1)[0]
+    digits = "".join(char for char in stem if char.isdigit())
+    return int(digits) if digits else 0
+
+
+def next_free_number(vocabulary, audio_index=None):
+    """
+    The next sequential number for a new word.
+
+    `len(vocabulary) + 1` is not enough: deleting a word leaves a hole, and
+    the next addition would overwrite an existing audio file. The highest
+    number actually in use wins instead.
+    """
+    highest = len(vocabulary or [])
+
+    for path in (audio_index or {}).values():
+        highest = max(highest, number_from_path(path))
+
+    for item in vocabulary or []:
+        highest = max(highest, number_from_path(item.get("audio")))
+
+    return highest + 1
+
+
+def plan_import(vocabulary, words, validate_entry, max_words=MAX_IMPORT_WORDS,
+                audio_index=None):
     """
     Work out what an import would do, without touching anything.
 
@@ -60,7 +93,7 @@ def plan_import(vocabulary, words, validate_entry, max_words=MAX_IMPORT_WORDS):
 
     bank = existing_words_lower(vocabulary)
     known = set(bank)
-    next_number = len(vocabulary or []) + 1
+    next_number = next_free_number(vocabulary, audio_index)
 
     for item in words:
         entry, errors = validate_entry(item if isinstance(item, dict) else {})

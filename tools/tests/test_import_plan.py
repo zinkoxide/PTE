@@ -53,6 +53,41 @@ def good(word):
 BANK = [{"word": "Adopt"}, {"word": "Abandon"}, {"word": "Develop"}]
 
 
+def test_the_audio_extension_is_not_mistaken_for_digits():
+    # "1005.mp3" contains a 3 in the extension; counting it gave 10053 once.
+    assert import_plan.number_from_path("assets/audio/vocabulary/1005.mp3") == 1005, "the .mp3 must be ignored"
+    assert import_plan.number_from_path("assets/audio/vocabulary/001.mp3") == 1, "padding must not matter"
+    assert import_plan.number_from_path("") == 0, "an empty path has no number"
+    assert import_plan.number_from_path(None) == 0, "a missing path has no number"
+    assert import_plan.number_from_path("assets/audio/vocabulary/none.mp3") == 0, "a wordless name has no number"
+
+
+def test_numbering_survives_a_deleted_word():
+    bank = [{"word": "A", "audio": "assets/audio/vocabulary/001.mp3"},
+            {"word": "C", "audio": "assets/audio/vocabulary/003.mp3"}]
+    # Word 002 was deleted: len(bank) is 2, but 002 is taken.
+    assert import_plan.next_free_number(bank) == 4, "the next number must follow the highest in use"
+
+
+def test_a_freed_number_is_never_reused():
+    bank = [{"word": f"W{i}", "audio": f"assets/audio/vocabulary/{i:03d}.mp3"} for i in range(1, 1002)]
+    index = {entry["word"]: entry["audio"] for entry in bank}
+    # The last word is dropped from the bank while its index row survives, so
+    # len(bank) + 1 would be 1001 — a number that is already in use.
+    bank = bank[:-1]
+
+    in_use = {import_plan.number_from_path(entry["audio"]) for entry in bank}
+    in_use |= {import_plan.number_from_path(path) for path in index.values()}
+
+    nxt = import_plan.next_free_number(bank, index)
+    assert nxt not in in_use, f"{nxt} is already in use"
+    assert nxt == 1002, f"expected the number after the highest in use, got {nxt}"
+
+    plan = import_plan.plan_import(bank, [good("Newest")], validate_entry_strict, audio_index=index)
+    assert plan["added"][0]["number"] == nxt, "the plan must use the safe number"
+    assert plan["added"][0]["audio"].endswith(f"{nxt}.mp3"), "and the matching audio path"
+
+
 def test_empty_request_is_refused():
     plan = import_plan.plan_import(BANK, [], validate_entry_strict)
     assert plan["errors"], "an empty request must be refused"
@@ -139,6 +174,9 @@ def test_an_empty_bank_starts_numbering_at_one():
     assert plan["added"][0]["audio"].endswith("001.mp3"), "the first audio file must be padded"
 
 
+test("the audio extension is not mistaken for digits", test_the_audio_extension_is_not_mistaken_for_digits)
+test("numbering survives a deleted word", test_numbering_survives_a_deleted_word)
+test("a freed number is never reused", test_a_freed_number_is_never_reused)
 test("empty request is refused", test_empty_request_is_refused)
 test("a non-list is refused", test_a_non_list_is_refused)
 test("the batch size is capped", test_the_batch_size_is_capped)

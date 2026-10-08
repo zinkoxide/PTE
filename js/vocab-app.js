@@ -80,6 +80,7 @@ const studyStatus = $("study-status");
 const studyFilter = $("study-filter");
 const exportButton = $("vocab-export-csv");
 const importButton = $("vocab-import-csv");
+const editWordButton = $("vocab-edit-word");
 const importFileInput = $("vocab-import-file");
 const importPanel = $("vocab-import-panel");
 const importSummary = $("vocab-import-summary");
@@ -1109,6 +1110,13 @@ if (importButton && importFileInput) {
 }
 if (importConfirmButton) importConfirmButton.addEventListener("click", confirmImport);
 if (importCancelButton) importCancelButton.addEventListener("click", closeImportPanel);
+if (editWordButton) {
+  editWordButton.addEventListener("click", () => {
+    const item = filteredVocabulary[currentIndex];
+    if (!item) return;
+    window.location.href = `./add-word.html?edit=${encodeURIComponent(item.word)}`;
+  });
+}
 showRememberedReport();
 
 initializeVocabulary();

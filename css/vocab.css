@@ -126,6 +126,11 @@ mark.search-highlight {
    Vocabulary — CSV export
    ========================================== */
 
+/* The edit button lives in the word-stage card title. */
+#vocab-edit-word {
+  margin-inline-start: auto;
+}
+
 .vocab-export-note {
   margin: 12px 0 0;
   padding: 10px 13px;

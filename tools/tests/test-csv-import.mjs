@@ -212,7 +212,11 @@ test("a preview mixing known and unknown words plans the right additions", () =>
   assert(preview.totals.add === 1, `expected 1 new word, got ${preview.totals.add}`);
   assert(preview.totals.skip === 2, `expected 2 skipped, got ${preview.totals.skip}`);
   assert(preview.totals.invalid === 1, `expected 1 invalid row, got ${preview.totals.invalid}`);
-  assert(preview.fresh[0].number === 1002, "the new word must be numbered 1002");
+  const expectedNumber = bank.length + 1;
+  assert(
+    preview.fresh[0].number === expectedNumber,
+    `the new word must continue the numbering at ${expectedNumber}, got ${preview.fresh[0].number}`
+  );
   assert(preview.fresh[0].meaningAR === "كلمة جديدة", "the Arabic meaning must survive the round trip");
   assert(preview.fresh[0].synonyms.length === 2, "the synonyms must be split again");
 });

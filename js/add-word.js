@@ -10,6 +10,7 @@ const $ = (id) => document.getElementById(id);
 
 const form = $("add-word-form");
 const submitButton = $("add-word-submit");
+const deleteButton = $("edit-word-delete");
 const shutdownButton = $("add-server-shutdown");
 const retryButton = $("retry-service");
 const errorsBox = $("add-form-errors");
@@ -78,7 +79,7 @@ async function refreshServiceStatus() {
   setServiceStatus("aw-service-loading", "التحقق من حالة خدمة الإضافة…");
 
   try {
-    const response = await fetch("/api/status", { cache: "no-store" });
+    const response = await fetch(apiUrl("/api/status"), { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
 
@@ -117,7 +118,7 @@ shutdownButton.addEventListener("click", async () => {
     return;
   }
   try {
-    const response = await fetch("/api/shutdown", {
+    const response = await fetch(apiUrl("/api/shutdown"), {
       method: "POST",
       cache: "no-store",
     });
@@ -137,6 +138,97 @@ shutdownButton.addEventListener("click", async () => {
    Live duplicate check (debounced)
 -------------------------------------- */
 
+/*
+Editing an existing word reuses this whole form: add-word.html?edit=Adopt
+pre-fills it, the button turns into "save changes" and the submit switches
+from POST /api/add-word to PUT /api/word.
+*/
+const ADD_SERVER_ORIGIN = "http://127.0.0.1:5000";
+
+function apiUrl(path) {
+  return location.port === "5000" ? path : `${ADD_SERVER_ORIGIN}${path}`;
+}
+
+let editingWord = "";
+
+function setListField(id, values) {
+  const field = $(id);
+  if (field) field.value = Array.isArray(values) ? values.join("\n") : "";
+}
+
+function fillForm(entry) {
+  $("aw-word").value = entry.word || "";
+  $("aw-pos").value = entry.partOfSpeech || "";
+  $("aw-cefr").value = entry.cefrLevel || "";
+  $("aw-frequency").value = entry.frequency || "";
+  $("aw-pronunciation").value = entry.pronunciation || "";
+  $("aw-meaning-en").value = entry.meaningEN || "";
+  $("aw-meaning-ar").value = entry.meaningAR || "";
+  setListField("aw-collocations", entry.collocations);
+  setListField("aw-synonyms", entry.synonyms);
+  setListField("aw-examples", entry.examples);
+  setListField("aw-mistakes", entry.commonMistakes);
+  setListField("aw-family", entry.wordFamily);
+}
+
+async function enterEditMode(word) {
+  try {
+    const response = await fetch(apiUrl(`/api/word?word=${encodeURIComponent(word)}`), { cache: "no-store" });
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      showToast(data.error || "تعذّر تحميل الكلمة.", "error");
+      setServiceStatus("aw-service-off", data.error || "");
+      return;
+    }
+
+    editingWord = data.word.word;
+    fillForm(data.word);
+
+    document.title = `PTE Trainer — تحرير ${data.word.word}`;
+    const heading = document.querySelector("h1.page-title");
+    if (heading) heading.textContent = `تحرير: ${data.word.word}`;
+    if (submitButton) submitButton.textContent = "حفظ التعديلات";
+    if (deleteButton) deleteButton.hidden = false;
+
+    const hint = $("submit-hint");
+    if (hint) {
+      hint.textContent = `الرقم ${data.index} — لن يتغير رقم الكلمة ما لم تغيّر اسمها.`;
+    }
+
+    wordStatus.textContent = "";
+    wordStatus.className = "aw-status add-status";
+    wordExists = false;
+    updateSubmitState();
+    showToast(`تم تحميل «${data.word.word}» للتعديل.`, "ok");
+  } catch (error) {
+    setServiceStatus("aw-service-off", "خادم الإضافة غير متاح.");
+  }
+}
+
+async function deleteCurrentWord() {
+  if (!editingWord) return;
+  if (!window.confirm(`سيُحذف سجل الكلمة «${editingWord}» وصوتها نهائياً.\nهل تريد المتابعة؟`)) return;
+
+  try {
+    const response = await fetch(apiUrl(`/api/word?word=${encodeURIComponent(editingWord)}`), {
+      method: "DELETE",
+      cache: "no-store",
+    });
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      showToast(data.error || "تعذّر الحذف.", "error");
+      return;
+    }
+
+    showToast(`تم حذف «${data.removed}» — المتبقي ${data.remaining} كلمة.`, "ok");
+    window.location.href = "./vocabulary.html";
+  } catch (error) {
+    showToast("تعذّر الاتصال بخادم الإضافة.", "error");
+  }
+}
+
 function parseList(value) {
   return value
     .split("\n")
@@ -146,8 +238,9 @@ function parseList(value) {
 }
 
 async function checkWord(word) {
+  /* While editing, the word already exists — that is the whole point. */
   try {
-    const response = await fetch(`/api/check-word?word=${encodeURIComponent(word)}`, { cache: "no-store" });
+    const response = await fetch(apiUrl(`/api/check-word?word=${encodeURIComponent(word)}`), { cache: "no-store" });
     serverUp = response.ok;
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
@@ -221,7 +314,10 @@ function validateForm() {
   const meaningAr = getFieldValue("aw-meaning-ar");
 
   if (!word) errors.word = "أدخل اسم الكلمة.";
-  if (!wordExists && word) {
+  /* While editing, the word already exists — that is the whole point. The
+     server also accepts the shorter lists here, because entries imported
+     before the three-item rule have fewer. */
+  if (!editingWord && !wordExists && word) {
     const parts = parseList($("aw-collocations").value);
     const synonyms = parseList($("aw-synonyms").value);
     const examples = parseList($("aw-examples").value);
@@ -240,6 +336,13 @@ function validateForm() {
 /* --------------------------------------
    Submit (the ONLY thing that saves)
 -------------------------------------- */
+
+const requestedEdit = new URLSearchParams(window.location.search).get("edit");
+if (requestedEdit) {
+  enterEditMode(requestedEdit);
+}
+
+if (deleteButton) deleteButton.addEventListener("click", deleteCurrentWord);
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -269,8 +372,11 @@ form.addEventListener("submit", async (event) => {
   };
 
   try {
-    const response = await fetch("/api/add-word", {
-      method: "POST",
+    const editing = Boolean(editingWord);
+    if (editing) payload.originalWord = editingWord;
+
+    const response = await fetch(apiUrl(editing ? "/api/word" : "/api/add-word"), {
+      method: editing ? "PUT" : "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
@@ -279,6 +385,12 @@ form.addEventListener("submit", async (event) => {
 
     if (!response.ok) {
       const fields = data.errors || {};
+      if (editing && data.renamed) {
+        editingWord = data.word.word;
+        showToast(`تم حفظ التعديلات وتُحدّث الكلمة إلى «${data.word.word}».`, "ok");
+        window.location.href = "./vocabulary.html";
+        return;
+      }
       if (data.duplicate) {
         wordStatus.textContent = "⚠️ كلمة مكررة — موجودة مسبقاً";
         wordStatus.className = "aw-status add-status duplicate";
@@ -293,13 +405,21 @@ form.addEventListener("submit", async (event) => {
       return;
     }
 
+    if (editing) {
+      // Saving an edit should not leave an empty "add" form behind.
+      showToast(`✅ حُفظت تعديلات «${data.word.word}».`, "success");
+      window.location.href = "./vocabulary.html";
+      return;
+    }
+
     form.reset();
     wordStatus.textContent = "";
     wordStatus.className = "aw-status add-status";
     errorsBox.hidden = true;
     wordExists = false;
     showToast(`✅ أُضيفت «${data.word}» برقم #${data.number} مع الصوت`, "success");
-  } catch {
+  } catch (error) {
+    console.error("[add-word] save failed", error);
     showToast("فشل الاتصال بخادم الإضافة — شغّل app.py", "error");
   }
 

@@ -20,6 +20,171 @@ for file_name in [
         json.load(handle)
     print(f'Validated {path}')
 
+
+# ==========================================
+# Vocabulary bank audit
+#
+# The files above only had to parse. This checks the content itself, because a
+# hand-edited or imported word can be structurally valid and still be wrong:
+# no audio on disk, a level outside the allowed set, a duplicate spelling, or
+# a row the audio index knows about but the bank does not.
+# ==========================================
+
+ALLOWED_LEVELS = {'A1', 'A2', 'B1', 'B2', 'C1', 'C2'}
+ALLOWED_FREQUENCIES = {'2', '3', '4', '5'}
+ALLOWED_PARTS = {
+    'Noun', 'Verb', 'Adjective', 'Adverb', 'Pronoun',
+    'Conjunction', 'Preposition', 'Determiner',
+}
+REQUIRED_TEXT = ('pronunciation', 'meaningEN', 'meaningAR')
+REQUIRED_LISTS = ('synonyms', 'collocations', 'examples')
+
+project = root.parent
+vocabulary_path = root / 'vocabulary.json'
+audio_index_path = root / 'vocabulary_audio_index.json'
+
+if vocabulary_path.exists():
+    problems = []
+    with vocabulary_path.open('r', encoding='utf-8') as handle:
+        bank = json.load(handle)
+
+    audio_index = {}
+    if audio_index_path.exists():
+        with audio_index_path.open('r', encoding='utf-8') as handle:
+            audio_index = json.load(handle)
+
+    seen = {}
+    with_audio = 0
+
+    for position, entry in enumerate(bank):
+        word = str(entry.get('word', '')).strip()
+        label = word or f'#{position + 1}'
+
+        if not word:
+            problems.append(f"entry #{position + 1}: no word")
+            continue
+
+        key = word.lower()
+        if key in seen:
+            problems.append(f"'{word}': duplicate of entry #{seen[key] + 1}")
+        else:
+            seen[key] = position
+
+        for field in REQUIRED_TEXT:
+            if not str(entry.get(field, '')).strip():
+                problems.append(f"'{word}': missing {field}")
+
+        # The bank stores compound labels such as "Noun; Verb", so each part
+        # is checked on its own.
+        parts = [p.strip() for p in str(entry.get('partOfSpeech', '')).replace(',', ';').split(';')]
+        parts = [p for p in parts if p]
+        if not parts:
+            problems.append(f"'{word}': no part of speech")
+        for part in parts:
+            if part not in ALLOWED_PARTS:
+                problems.append(f"'{word}': partOfSpeech '{part}' is not allowed")
+        if entry.get('cefrLevel') not in ALLOWED_LEVELS:
+            problems.append(f"'{word}': cefrLevel '{entry.get('cefrLevel')}' is not allowed")
+        if str(entry.get('frequency', '')) not in ALLOWED_FREQUENCIES:
+            problems.append(f"'{word}': frequency '{entry.get('frequency')}' is not allowed")
+
+        for field in REQUIRED_LISTS:
+            values = entry.get(field)
+            if not isinstance(values, list) or not any(str(v).strip() for v in values):
+                problems.append(f"'{word}': {field} is empty")
+
+        # The committed bank leaves the entry's own `audio` field empty and
+        # relies on the index, while freshly added words carry both. Either is
+        # fine as long as exactly one of them resolves to a file on disk.
+        own_audio = str(entry.get('audio', '')).strip()
+        indexed_audio = str(audio_index.get(word, '')).strip()
+
+        if own_audio and indexed_audio and own_audio != indexed_audio:
+            problems.append(
+                f"'{word}': index says {indexed_audio} but the entry says {own_audio}"
+            )
+
+        resolved = own_audio or indexed_audio
+        if not resolved:
+            problems.append(f"'{word}': no audio in the entry or the index")
+        elif not (project / resolved).exists():
+            problems.append(f"'{word}': audio file missing ({resolved})")
+        else:
+            with_audio += 1
+
+    for word, path in audio_index.items():
+        if word.lower() not in seen:
+            problems.append(f"audio index has '{word}' but the bank does not")
+
+    numbers = set()
+    for entry in bank:
+        word = entry.get('word', '')
+        # Use the resolved path: the entry's own field is empty for the
+        # committed bank, which keeps its paths in the index.
+        audio = str(entry.get('audio') or audio_index.get(word, ''))
+        stem = audio.rsplit('/', 1)[-1].rsplit('.', 1)[0]
+        digits = ''.join(ch for ch in stem if ch.isdigit())
+        if digits:
+            if digits in numbers:
+                problems.append(f"audio number {int(digits)} is used twice")
+            numbers.add(digits)
+
+    print(
+        f'vocabulary: {len(bank)} words, {with_audio} with audio on disk, '
+        f'{len(audio_index)} index rows, {len(numbers)} distinct audio numbers'
+    )
+
+    if problems:
+        ok = False
+        print(f'vocabulary problems: {len(problems)}')
+        for message in problems[:40]:
+            print(f'  - {message}')
+        if len(problems) > 40:
+            print(f'  ... and {len(problems) - 40} more')
+    else:
+        print('vocabulary: every entry is complete and consistent.')
+
+
+# ==========================================
+# Task data audit
+# ==========================================
+
+def audit_simple_list(path, required_fields, label):
+    global ok
+    if not path.exists():
+        return
+    with path.open('r', encoding='utf-8') as handle:
+        items = json.load(handle)
+
+    found = []
+    identifiers = set()
+    for position, item in enumerate(items):
+        name = item.get('id') or f'#{position + 1}'
+        for field in required_fields:
+            if not item.get(field):
+                found.append(f"{label} '{name}': missing {field}")
+        if item.get('id') in identifiers:
+            found.append(f"{label}: duplicate id '{item['id']}'")
+        identifiers.add(item.get('id'))
+
+    print(f'{label}: {len(items)} items')
+    if found:
+        ok = False
+        for message in found[:20]:
+            print(f'  - {message}')
+
+
+audit_simple_list(
+    root / 'read_aloud.json',
+    ('text',),
+    'read_aloud',
+)
+audit_simple_list(
+    root / 'swt.json',
+    ('title', 'passage', 'mainIdea', 'keyPoints', 'reference'),
+    'swt',
+)
+
 grammar_dir = root / 'grammar'
 grammar_files = (
     sorted(p for p in grammar_dir.glob('*.json') if p.name != 'manifest.json')
