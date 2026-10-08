@@ -35975,5 +35975,128 @@
       "resilient (adj.)",
       "resiliently (adv.)"
     ]
+  },
+  {
+    "word": "Candid",
+    "pronunciation": "/ˈkændɪd/",
+    "audio": "assets/audio/vocabulary/1002.mp3",
+    "partOfSpeech": "Adjective",
+    "cefrLevel": "C1",
+    "frequency": "3",
+    "meaningEN": "Truthful and straightforward even when it is uncomfortable.",
+    "meaningAR": "صريح الطبع — صريح في رأيه",
+    "collocations": [
+      "a candid answer",
+      "a candid discussion",
+      "be candid about"
+    ],
+    "commonMistakes": [
+      "❌ candid to say → ✅ candid in saying (بدون to)."
+    ],
+    "synonyms": [
+      "candid",
+      "frank",
+      "outspoken"
+    ],
+    "examples": [
+      "She gave a candid account of the failures.",
+      "He was candid about the risks."
+    ],
+    "wordFamily": [
+      "candidly (adv.)",
+      "candour (n.)"
+    ]
+  },
+  {
+    "word": "Dwindle",
+    "pronunciation": "/ˈdwɪndl/",
+    "audio": "assets/audio/vocabulary/1003.mp3",
+    "partOfSpeech": "Verb",
+    "cefrLevel": "C1",
+    "frequency": "3",
+    "meaningEN": "To become gradually smaller or weaker.",
+    "meaningAR": "يتقلص — يخبو",
+    "collocations": [
+      "dwindle away",
+      "dwindle rapidly",
+      "numbers dwindle"
+    ],
+    "commonMistakes": [
+      "❌ dwindle decrease → ✅ dwindle (الفعل وحده)."
+    ],
+    "synonyms": [
+      "shrink",
+      "diminish",
+      "decline"
+    ],
+    "examples": [
+      "Supplies dwindled after the drought.",
+      "Their savings slowly dwindled to nothing."
+    ],
+    "wordFamily": [
+      "dwindling (adj.)",
+      "dwindling (n.)"
+    ]
+  },
+  {
+    "word": "Pragmatic",
+    "pronunciation": "/præɡˈmætɪk/",
+    "audio": "assets/audio/vocabulary/1004.mp3",
+    "partOfSpeech": "Adjective",
+    "cefrLevel": "B2",
+    "frequency": "4",
+    "meaningEN": "Dealing with things in a practical way rather than an ideal one.",
+    "meaningAR": "عملي واقعي",
+    "collocations": [
+      "a pragmatic approach",
+      "a pragmatic solution",
+      "be pragmatic about"
+    ],
+    "commonMistakes": [
+      "❌ pragmatic of → ✅ pragmatic about أو pragmatic approach."
+    ],
+    "synonyms": [
+      "pragmatic",
+      "realistic",
+      "sensible"
+    ],
+    "examples": [
+      "They took a pragmatic approach to the problem.",
+      "A pragmatic solution was cheaper and faster."
+    ],
+    "wordFamily": [
+      "pragmatism (n.)",
+      "pragmatically (adv.)"
+    ]
+  },
+  {
+    "word": "Viable",
+    "pronunciation": "/ˈvaɪəbəl/",
+    "audio": "assets/audio/vocabulary/1005.mp3",
+    "partOfSpeech": "Adjective",
+    "cefrLevel": "B2",
+    "frequency": "4",
+    "meaningEN": "Able to work successfully or to continue.",
+    "meaningAR": "قابل للاستمرار — قابل للتطبيق",
+    "collocations": [
+      "a viable option",
+      "a viable plan",
+      "commercially viable"
+    ],
+    "commonMistakes": [
+      "❌ viable to do → ✅ viable option أو viable for (بـ for)."
+    ],
+    "synonyms": [
+      "feasible",
+      "workable",
+      "sustainable"
+    ],
+    "examples": [
+      "The committee rejected the proposal as not viable.",
+      "Solar power is now a viable alternative."
+    ],
+    "wordFamily": [
+      "viability (n.)"
+    ]
   }
 ]
