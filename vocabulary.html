@@ -127,9 +127,42 @@
 
           <div class="toolbar">
             <span id="search-results-count" class="pill info">0 / 0 words</span>
+            <button id="vocab-export-csv" class="btn btn-sm" type="button"
+                    title="Export the words currently shown, with all their content, to a CSV file">
+              ⬇️ Export CSV
+            </button>
+            <button id="vocab-import-csv" class="btn btn-sm btn-secondary" type="button"
+                    title="Add new words from a CSV file — words that already exist are skipped">
+              ⬆️ Import CSV
+            </button>
+            <input id="vocab-import-file" type="file" accept=".csv,text/csv" hidden>
             <span id="study-count" class="pill">✓ 0 learned · ↻ 0 review</span>
             <span id="pron-summary" class="pill" hidden></span>
             <span id="search-match-info" class="pill"></span>
+          </div>
+
+          <p id="vocab-export-note" class="vocab-export-note" hidden></p>
+
+          <!-- CSV import confirmation -->
+          <div id="vocab-import-panel" class="vocab-import-panel" hidden>
+
+            <span id="vocab-import-server" class="vocab-import-server"></span>
+
+            <p id="vocab-import-summary" class="vocab-import-summary"></p>
+
+            <ul id="vocab-import-list" class="vocab-import-list"></ul>
+
+            <div class="vocab-import-actions">
+              <button id="vocab-import-confirm" class="btn" type="button">
+                ✅ Add the new words
+              </button>
+              <button id="vocab-import-cancel" class="btn btn-secondary" type="button">
+                Cancel
+              </button>
+            </div>
+
+            <p id="vocab-import-result" class="vocab-export-note" hidden></p>
+
           </div>
         </section>
 

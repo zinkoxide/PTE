@@ -16,6 +16,12 @@ import {
   describeDue
 } from "./task-stats.js";
 import { toOfficialScore, describeBand } from "./pte-scale.js";
+import {
+  isExamMode,
+  setExamMode,
+  shouldWarn,
+  detailTermsFor
+} from "./exam-mode.js";
 
 const PREPARE_SECONDS = 40;
 const RA_MAX_SECONDS = 45;
@@ -84,6 +90,7 @@ const modePracticeButton = $("ra-mode-practice");
 const trainingSection = $("ra-training");
 const trainingContent = $("ra-training-content");
 const goPracticeButton = $("ra-train-go-practice");
+const examButton = $("ra-exam-toggle");
 
 /* ------------------ State ------------------ */
 
@@ -149,7 +156,7 @@ function recordAttempt(item, score) {
     itemId: item.id,
     title: item.text,
     percent: score.total,
-    missedTerms: score.missedKeywords || []
+    missedTerms: detailTermsFor(score, isExamMode())
   });
   try {
     localStorage.setItem(RA_STATS_KEY, JSON.stringify(next));
@@ -201,9 +208,23 @@ function renderTraining() {
 
 function applyModeVisuals() {
   document.body.classList.toggle("ra-training-mode", mode === "training");
+  document.body.classList.toggle("exam-mode", isExamMode());
+  if (examButton) examButton.classList.toggle("is-on", isExamMode());
   modeTrainButton.classList.toggle("is-on", mode === "training");
   modePracticeButton.classList.toggle("is-on", mode === "practice");
   trainingSection.hidden = mode !== "training";
+}
+
+function toggleExamMode() {
+  setExamMode(!isExamMode());
+  applyModeVisuals();
+}
+
+/* The exam warning only appears under exam conditions. */
+function markTimer(secondsLeft) {
+  const warn = isExamMode() && shouldWarn(secondsLeft);
+  timerEl.classList.toggle("is-warning", warn);
+  timerEl.classList.toggle("is-out", secondsLeft <= 0);
 }
 
 function setMode(next) {
@@ -253,6 +274,7 @@ function startPrepare() {
   clearScreenTimer();
   prepareRemaining = PREPARE_SECONDS;
   timerEl.textContent = formatTime(prepareRemaining);
+  markTimer(prepareRemaining);
   setPhase("prepare");
   lastTick = null;
   longPauses = 0;
@@ -260,6 +282,7 @@ function startPrepare() {
   screenTimer = setInterval(() => {
     prepareRemaining -= 1;
     timerEl.textContent = formatTime(Math.max(0, prepareRemaining));
+    markTimer(prepareRemaining);
     if (prepareRemaining <= 0) {
       clearScreenTimer();
       setPhase("idle");
@@ -279,6 +302,7 @@ function beginRecording() {
   lastTick = null;
   setPhase("recording");
   timerEl.textContent = "0:00";
+  markTimer(0);
   recordButton.hidden = true;
   stopButton.hidden = false;
 
@@ -300,6 +324,7 @@ function beginRecording() {
   screenTimer = setInterval(() => {
     recordSeconds += 1;
     timerEl.textContent = formatTime(recordSeconds);
+    markTimer(RA_MAX_SECONDS - recordSeconds);
     const now = Date.now();
     if (lastTick !== null && now - lastTick > FLUENCY_LIMITS.longPauseSeconds * 1000) {
       longPauses += 1;
@@ -382,6 +407,8 @@ function submitAnswer(text) {
     )
     .join("");
 
+  const exam = isExamMode();
+
   const missed = score.missingWords.length
     ? `<p><strong>Skipped words:</strong> ${escapeHTML(score.missingWords.join(", "))}</p>`
     : "";
@@ -397,16 +424,16 @@ function submitAnswer(text) {
     `<span class="pte-official is-${band.tone}">≈ ${officialScore} / 90 · ${band.label}</span>` +
     `</div>` +
     `<div class="ra-criteria">${criteriaRows}</div>` +
-    scheduleNotice(item) +
-    `<div class="ra-result-details">` +
+    (exam ? "" : scheduleNotice(item)) +
+    (exam ? "" : `<div class="ra-result-details">` +
     `<p><strong>Pace:</strong> ${score.wordsPerSecond} words/second · <strong>Accuracy:</strong> ${score.accuracy}%</p>` +
     `<p>${escapeHTML(score.contentReason)}</p>` +
     `<p>${escapeHTML(score.fluencyReason)}</p>` +
     `<p>${escapeHTML(score.pronunciationReason)}</p>` +
     missed +
-    wrong +
+    wrong) +
     `</div>` +
-    `<div class="ra-reference"><strong>The text</strong><p>${escapeHTML(item.text)}</p></div>`;
+    (exam ? "" : `<div class="ra-reference"><strong>The text</strong><p>${escapeHTML(item.text)}</p></div>`);
 
   resultContent.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
@@ -513,6 +540,7 @@ submitFallbackButton.addEventListener("click", () => {
 modeTrainButton.addEventListener("click", () => setMode("training"));
 modePracticeButton.addEventListener("click", () => setMode("practice"));
 goPracticeButton.addEventListener("click", () => setMode("practice"));
+if (examButton) examButton.addEventListener("click", toggleExamMode);
 
 /* ------------------ Init ------------------ */
 

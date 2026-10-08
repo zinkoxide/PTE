@@ -743,6 +743,78 @@ a:focus-visible,
   justify-content: flex-end;
 }
 
+/* ==========================================
+   Exam conditions
+   ========================================== */
+
+/* Header: mode switch + exam toggle sit side by side. */
+.swt-header-actions,
+.di-header-actions,
+.ra-header-actions {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.exam-toggle {
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+
+  font-family: var(--font);
+  font-size: 12.5px;
+  font-weight: 700;
+
+  color: var(--text-dim);
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.exam-toggle:hover { color: var(--text); }
+
+.exam-toggle.is-on {
+  color: var(--amber);
+  border-color: rgba(251, 191, 36, 0.5);
+  background: rgba(251, 191, 36, 0.12);
+}
+
+/* Everything an examinee never gets to see. */
+body.exam-mode .swt-count-group,
+body.exam-mode .swt-response-footer .status-text,
+body.exam-mode #clear-button,
+body.exam-mode #di-hint,
+body.exam-mode #ra-tip,
+body.exam-mode #ra-play-button,
+body.exam-mode .swt-result-details,
+body.exam-mode .di-result-details,
+body.exam-mode .ra-result-details,
+body.exam-mode .swt-reference,
+body.exam-mode .di-reference,
+body.exam-mode .ra-reference,
+body.exam-mode .swt-schedule-note,
+body.exam-mode .di-schedule-note,
+body.exam-mode .ra-schedule-note,
+body.exam-mode .di-result-empty,
+body.exam-mode .swt-result-empty {
+  display: none !important;
+}
+
+/* Last-seconds warning on the timer pill. */
+.is-warning {
+  color: #fff !important;
+  background: var(--red) !important;
+  border-color: transparent !important;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.is-out {
+  opacity: 0.55;
+}
+
 /* Official PTE score estimate shown next to a practice total. */
 .pte-official {
   display: inline-flex;

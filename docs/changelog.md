@@ -1,5 +1,137 @@
 # Changelog
 
+## v3.24 — Fixing the CSV import for real use
+
+An import that silently did nothing was reported as "still 1001 words". Three
+causes, all fixed:
+
+1. **The API address was assumed.** The page was served from a local static
+   server while the add server runs on port 5000, so the relative `/api/...`
+   request never reached it — the preview looked perfect and the save did
+   nothing. The client now resolves the API address itself (relative when the
+   add server serves the page, `http://127.0.0.1:5000` otherwise) and the local
+   API answers loopback origins with CORS headers. Importing now works from any
+   local server.
+2. **Failures were invisible.** The panel now shows a server badge before you
+   commit, names the real cause when a save cannot happen, and re-displays the
+   last import report after a reload instead of losing it.
+3. **A missing audio file could lose the word.** If Edge TTS is offline the
+   server rejected the entry, so the count stayed unchanged with no explanation.
+   The word is now added with an empty `audio` field and reported separately as
+   "added without audio", which `tools/generate_vocabulary_audio.py` can fill in
+   later.
+
+Also: after a successful save the word bank is re-read, so the header count and
+any search update immediately instead of waiting for a manual reload.
+
+`samples/import-sample.csv` is provided for testing: one existing word and four
+new ones that become 1002–1005.
+
+## v3.23 — Vocabulary CSV import
+
+- **⬆️ Import CSV** in the vocabulary toolbar, mirroring the export: pick a file
+  and the browser previews the outcome before anything is written.
+- Import **never overwrites**. A word already in the bank is skipped, the same
+  word twice inside one file is collapsed, and a row missing a required field is
+  reported rather than promised a number. The preview shows the counts and the
+  exact number each new word will get — with 1001 words in the bank the
+  additions become 1002, 1003, 1004.
+- New endpoint `POST /api/import-words` on the add server: it re-checks for
+  duplicates, validates each word with the same rules as the single-word form,
+  generates the audio and updates `vocabulary.json` plus the audio index. It
+  supports `dryRun` and caps a batch at 200 words.
+- `tools/import_plan.py` holds the planning rules with **no dependencies**, so
+  they are unit-tested without Flask or Edge TTS installed.
+
+### Two problems found and fixed while building it
+- The import reused `validate_entry` unchanged, which demands at least three
+  synonyms, collocations **and** examples per word. A hand-written CSV would
+  therefore have been rejected row by row. The list minimums now apply only to
+  the single-word form; an import accepts what the file provides as long as the
+  required fields are there.
+- The browser preview was optimistic: it offered a number for a row the server
+  would later refuse (a word with no IPA). The preview now applies the same
+  required-field checks and lists what is missing, so the numbers shown before
+  saving match the numbers reported after it. This also surfaced a
+  client/server mismatch: repeats inside one file were called "skipped" by the
+  server and "repeated" by the preview, so both now report them separately.
+
+### Checks
+- `tools/tests/test_import_plan.py` (13 tests) for the planner: request
+  refusals, the batch cap, case-insensitive duplicates, in-file repeats,
+  numbering up to 1002, rejection reasons, and that the bank is never mutated.
+- `tools/tests/test-csv-import.mjs` (22 tests) for the browser half: quoted
+  cells, CRLF, BOM, header aliases, list splitting, the four buckets, the
+  numbering, an import of our own export adding nothing, and every required
+  field being checked.
+- `test-html.mjs` grew to 24 tests, including that the server exposes the
+  endpoint and that the UI previews before saving.
+
+## v3.22 — Vocabulary CSV export
+
+- **⬇️ Export CSV** in the vocabulary toolbar writes the words **currently
+  shown** to `pte-vocabulary-YYYY-MM-DD.csv`, so a search or any filter acts as
+  the selection.
+- 15 columns per word: pronunciation, part of speech, CEFR, frequency, both
+  meanings, synonyms, collocations, examples, word family, common mistakes and
+  audio — plus **Study status** and **Due**, computed from `localStorage` so the
+  learner's SRS progress travels with the file instead of being left behind.
+- Cells follow RFC 4180: quoted when they contain a comma, a quote, a newline
+  or a tab, with internal quotes doubled. The file starts with a UTF-8 BOM so
+  Excel opens the Arabic meaning column correctly rather than as mojibake.
+
+### Behaviour fixed while building it
+- The first version fell back to the entire 1001-word bank whenever the filter
+  matched nothing. A learner who typed a search with no results and clicked
+  export would have received every word instead of an explanation; it now
+  refuses with a clear message.
+
+### Checks
+- New harness `tools/tests/test-csv-export.mjs` (15 tests) with its own RFC 4180
+  parser: commas and quotes cannot shift a column, newlines and tabs stay in
+  one cell, a custom delimiter is honoured, list fields join readably, the
+  header width matches every row, the whole 1001-word bank parses without losing
+  a single cell, the Arabic meaning round-trips, an empty selection still yields
+  a valid header-only file, and a non-array input cannot throw.
+- `test-html.mjs` grew to 23 tests, asserting the export control is wired to the
+  CSV builder and that the study status is included.
+
+## v3.21 — Exam conditions
+
+- A **🎯 Exam Conditions** toggle on Summarize Written Text, Describe Image and
+  Read Aloud, driven by one shared flag (`pte.exam.v1`) so switching it on once
+  applies it to all three pages.
+- Under exam conditions the aids disappear: word and sentence counters, status
+  hints, the Clear button, and the "Hear it first" playback on Read Aloud. The
+  answer box itself stays, because in the test you do write or speak.
+- The timer turns red and pulses in the **last 10 seconds** of any phase
+  (preparation, speaking or recording).
+- The result keeps the score, the criteria bars and the official-scale estimate
+  but drops every hint: no model answer, no per-criterion explanation, no
+  missed keywords, no review-schedule note.
+- An exam attempt is still recorded, and a weak item is still scheduled for
+  review, but `detailTermsFor()` returns nothing in this mode so the
+  diagnostics are never written to storage — practice in exam conditions cannot
+  pollute the review queue with "which word did I miss" data from an attempt
+  where those aids were hidden.
+
+### Bug caught while building this
+- The first patch looked correct but silently did nothing on `swt.js` (the mode
+  variable there is `currentMode`, not `mode`), which left `toggleExamMode`
+  undefined: the module threw a ReferenceError at load, the toggle was never
+  wired, and the page still looked fine because `initialize()` had already been
+  called. Found by the browser pass, fixed, and the shared-state naming is now
+  covered by the harness wiring test.
+
+### Checks
+- New harness `tools/tests/test-exam-mode.mjs` (6 tests): the flag is off by
+  default, only the exact stored value enables it, unavailable storage never
+  throws, the warning window is exactly the last ten seconds (and never fires
+  at zero or on nonsense), and exam attempts never return diagnostics.
+- `test-html.mjs` grew to 22 tests, asserting all three pages expose the toggle,
+  that `base.css` owns the hidden aids and the warning, and that each module
+  reads the shared flag, wires its button, drops diagnostics and warns.
+
 ## v3.20 — Maintenance: one home for the shared components
 
 - Deleted `data/audio_index.json`. It was a 65-byte leftover from an older

@@ -108,6 +108,23 @@ python3 tools/generate_vocabulary_audio.py
   (`keyPoints`, 60%) — plus 6 linking frames, do/don't tips and an annotated
   model answer.
 
+## Exam conditions
+
+All three timed tasks share a **🎯 Exam Conditions** toggle that removes
+everything the real test never gives you: the word and sentence counters, the
+status hints, the Clear button, and after submitting — the model answer, the
+per-criterion explanations, the missed-keyword list and the review-schedule
+note. You still get the score, the criteria bars and the official-scale
+estimate, because those are the result rather than a hint.
+
+- The timer turns red and pulses in the **last 10 seconds** of any phase.
+- The flag lives in one shared key (`pte.exam.v1`), so switching it on for
+  Summarize Written Text keeps it on for Describe Image and Read Aloud.
+- An exam attempt still counts towards your statistics and a weak item is still
+  scheduled for review, but the diagnostic detail (missed keywords, uncovered
+  key points) is **not stored** — the flag does not silently pollute your
+  review queue.
+
 ## Interactive Tests (`quiz.html`)
 
 Runs fully in the browser with no server. Pick one or more question modes,
@@ -137,6 +154,32 @@ review of every question.
   supported), filters (CEFR A1–C2, part of speech, study status), IPA,
   details (meanings, collocations, synonyms, examples, word family, mistakes),
   and MP3 playback (▶ Play).
+- **⬇️ Export CSV** (`vocabulary.html`) writes the words **currently shown** —
+  so a search or any filter becomes the selection — to
+  `pte-vocabulary-YYYY-MM-DD.csv` with 15 columns: word, pronunciation, part of
+  speech, CEFR, frequency, both meanings, synonyms, collocations, examples, word
+  family, common mistakes, audio, plus **your own study status and review due
+  date** so progress travels with the list. Cells are escaped per RFC 4180
+  (the Arabic mistakes contain commas, arrows and quotes) and the file starts
+  with a UTF-8 BOM so Excel opens the Arabic correctly. A search that matches
+  nothing refuses politely instead of quietly exporting all 1001 words.
+- **⬆️ Import CSV** is the mirror of the export: pick a file and the browser
+  previews exactly what would happen — *X* new, *Y* already in the bank,
+  *Z* incomplete — with the number each new word would get. Nothing is written
+  until you confirm, and a search that matches nothing never turns into a
+  silent full export.
+- Import **never overwrites**: words already in the bank are skipped, the same
+  word twice inside the file is collapsed, and rows missing a required field
+  (IPA, part of speech, CEFR, frequency or either meaning) are reported instead
+  of promised a number. New words continue the numbering, so with 1001 words in
+  the bank the additions become 1002, 1003, 1004 and get matching audio files.
+  Saving needs the add server (`bash tools/start_add_word.sh`), exactly like
+  adding a word by hand. The import panel shows a badge with the server state,
+  works from any local server (the request goes straight to port 5000), tells
+  you the moment it cannot save, refreshes the word count by itself, and
+  re-displays the last import report after a reload.
+  `samples/import-sample.csv` is a ready-made file: one word that already exists
+  and four new ones, numbered 1002–1005.
 - Mark words **✓ Learned** / **↻ Review**. **Spaced repetition (SRS)**:
   learned words are rescheduled (`+3d`, then ×1.5 per correct review, 1 day
   after a miss); a **⏰ مراجعة مستحقة** filter and due-count pill surface

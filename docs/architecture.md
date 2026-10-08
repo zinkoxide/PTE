@@ -64,6 +64,9 @@ Rules inside `@media` are exempt, because each page picks its own breakpoint.
 | `read-aloud.js` | Read Aloud flow (prepare timer, recording, typing fallback, result) |
 | `read-aloud-score.js` | Content / Fluency / Pronunciation scoring for a reading |
 | `pte-scale.js` | converts a 0–100 practice total into an official 10–90 estimate |
+| `exam-mode.js` | one shared flag for exam conditions: hides the aids, owns the last-10-seconds warning, and suppresses stored diagnostics |
+| `csv-export.js` | RFC 4180 escaping, the vocabulary column set, and the browser download |
+| `csv-import.js` | the CSV reader, the preview/diff that decides what is new, and the numbering preview |
 | `task-stats.js` | shared per-item attempt recording and weak-item selection |
 | `progress-io.js` | builds a portable backup file, validates and merges it, resets scopes |
 | `add-word.js` | add-word form logic (check + save via the Flask API) |
@@ -136,6 +139,56 @@ task on the dashboard, where the learner can set a target (`pte.goal.v1`) and
 see the remaining gap. It is an approximation for motivation only — the real
 score comes from item-level difficulty scaling in the official test.
 
+## CSV export
+
+`js/csv-export.js` turns the vocabulary bank into a spreadsheet file. Two
+details are easy to get wrong and are covered by tests:
+
+- **Escaping** — meanings, examples and `commonMistakes` contain commas, quotes
+  and arrows, so every cell is quoted when needed and internal quotes are
+  doubled (RFC 4180). Tabs are quoted too, because several importers treat
+  them as delimiters.
+- **Encoding** — the file begins with a UTF-8 BOM; without it Excel renders the
+  Arabic column as mojibake.
+
+`vocabulary.html` exports `filteredVocabulary`, so the current search and
+filters act as the selection. Two columns are computed from `localStorage`
+rather than `vocabulary.json` — the learner's own **Study status** and review
+**Due** date — so a backup of the file keeps the SRS state with the words.
+A selection that matches nothing refuses instead of falling back to the whole
+bank.
+
+### Import
+
+The mirror image, in three steps so nothing is written by surprise:
+
+1. **Preview (browser, `js/csv-import.js`)** — the file is parsed with the
+   same RFC 4180 reader, then every row is sorted into one of four buckets:
+   already in the bank, repeated inside the file, incomplete (missing one of the
+   fields the server insists on), or genuinely new. Only the new ones get a
+   preview number, continuing from the end of the bank.
+2. **Confirmation** — the learner sees the counts and the words, and can cancel.
+3. **Save** — `js/vocab-app.js` resolves the API address itself: a relative
+   path when the page is served by the add server, otherwise
+   `http://127.0.0.1:5000`, so importing works from any local server the learner
+   happens to browse on. A failed audio generation keeps the word with an empty
+   `audio` field instead of dropping it, and the word count is re-read from the
+   data file so the header updates without a manual reload.
+4. **`POST /api/import-words` on the server** — re-checks
+   everything; `tools/import_plan.py` holds those rules with no dependencies, so
+   they are testable without Flask or Edge TTS. The server skips duplicates,
+   validates each entry with the same `validate_entry` used by the single-word
+   form (with the "at least three examples" rule relaxed, because a bulk file
+   may legitimately carry one), numbers the words, generates their audio and
+   updates both `vocabulary.json` and the audio index. `dryRun` reports the plan
+   without writing, and a batch is capped at 200 words.
+
+The local API answers loopback origins with CORS headers, which is what lets a
+page served from another local port reach it; any other origin is refused.
+
+`tools/tests/test_import_plan.py` covers the planner (13 tests) and
+`tools/tests/test-csv-import.mjs` covers the browser half (22 tests).
+
 ## Data flow (Describe Image / SWT / Read Aloud)
 
 1. The page module loads its JSON data and calls the matching guide builder.
@@ -150,7 +203,15 @@ score comes from item-level difficulty scaling in the official test.
 
 `pte.theme`, `pte.vocab.study.v1`, `pte.vocab.pron.v1`, `pte.grammar.stats.v1`,
 `pte.quiz.stats.v1`, `pte.swt.stats.v1`, `pte.swt.mode`, `pte.di.stats.v1`,
-`pte.di.mode`, `pte.ra.stats.v1`, `pte.ra.mode`, `pte.goal.v1`.
+`pte.di.mode`, `pte.ra.stats.v1`, `pte.ra.mode`, `pte.goal.v1`, `pte.exam.v1`.
+
+`pte.exam.v1` is shared by the three task pages on purpose: exam conditions are a
+way of answering, not a per-page preference. When it is on, each page adds
+`exam-mode` to `<body>`, `base.css` hides the aids, the timer gains
+`is-warning` inside the final ten seconds, and the result keeps only the score,
+the criteria bars and the official estimate. `detailTermsFor()` returns an
+empty list in that mode, so the attempt is recorded while the diagnostics
+(missed keywords, uncovered key points) are never written to storage.
 
 Stats share one shape so the dashboard can read them uniformly:
 `{ correct, total, history: [{ t, percent }] }`.

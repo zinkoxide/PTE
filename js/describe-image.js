@@ -21,6 +21,12 @@ import {
   describeDue
 } from "./task-stats.js";
 import { toOfficialScore, describeBand } from "./pte-scale.js";
+import {
+  isExamMode,
+  setExamMode,
+  shouldWarn,
+  detailTermsFor
+} from "./exam-mode.js";
 
 const PREPARE_SECONDS = 25;
 const SPEAK_SECONDS = 40;
@@ -37,6 +43,7 @@ const qNumber = $("di-question-number");
 const phasePill = $("di-phase-pill");
 const timerEl = $("di-timer");
 const progressFill = $("di-progress-fill");
+const examButton = $("di-exam-toggle");
 const imageTitle = $("di-image-title");
 const imageBox = $("di-image-box");
 const hint = $("di-hint");
@@ -80,6 +87,13 @@ function applyModeVisuals() {
   trainBtn.classList.toggle("is-on", training);
   practiceBtn.classList.toggle("is-on", !training);
   document.body.classList.toggle("di-training-mode", training);
+  document.body.classList.toggle("exam-mode", isExamMode());
+  if (examButton) examButton.classList.toggle("is-on", isExamMode());
+}
+
+function toggleExamMode() {
+  setExamMode(!isExamMode());
+  applyModeVisuals();
 }
 
 function showTraining() {
@@ -142,7 +156,7 @@ function recordAttempt(item, score) {
     itemId: item.id,
     title: item.title,
     percent: score.total,
-    missedTerms: score.missedKeywords || []
+    missedTerms: detailTermsFor(score, isExamMode())
   });
   try {
     localStorage.setItem(DI_STATS_KEY, JSON.stringify(next));
@@ -258,16 +272,25 @@ function currentText() {
 
 /* ------------------ Phases ------------------ */
 
+/* The exam warning only appears under exam conditions. */
+function markTimer(secondsLeft) {
+  const warn = isExamMode() && shouldWarn(secondsLeft);
+  timerEl.classList.toggle("is-warning", warn);
+  timerEl.classList.toggle("is-out", secondsLeft <= 0);
+}
+
 function beginPrepare() {
   setPhase("prepare");
   prepRemaining = PREPARE_SECONDS;
   timerEl.textContent = formatTime(prepRemaining);
+  markTimer(prepRemaining);
   hint.textContent = "Study the image. The microphone will be ready after the countdown.";
   updateProgress();
   clearScreenTimer();
   screenTimer = setInterval(() => {
     prepRemaining -= 1;
     timerEl.textContent = formatTime(prepRemaining);
+    markTimer(prepRemaining);
     setPhase("prepare");
     updateProgress();
     if (prepRemaining <= 0) endPrepare();
@@ -281,6 +304,7 @@ function endPrepare() {
     setPhase("speakready");
     phasePill.className = "di-phase-pill is-ready";
     timerEl.textContent = formatTime(speakRemaining);
+    markTimer(speakRemaining);
     recordButton.hidden = false;
     hint.textContent = "Press Start Speaking and describe the image out loud.";
   } else {
@@ -307,6 +331,7 @@ function beginSpeaking() {
   screenTimer = setInterval(() => {
     speakRemaining -= 1;
     timerEl.textContent = formatTime(speakRemaining);
+    markTimer(speakRemaining);
     setPhase("speak");
     updateProgress();
     if (speakRemaining <= 0) finishAttempt();
@@ -369,7 +394,9 @@ function scoreAndShow(text) {
     )
     .join("");
 
-  const emptyNote = text.trim() === ""
+  const exam = isExamMode();
+
+  const emptyNote = !exam && text.trim() === ""
     ? `<div class="di-result-empty">No response — produce a complete description and try again.</div>`
     : "";
 
@@ -384,13 +411,15 @@ function scoreAndShow(text) {
     `<span class="pte-official is-${official.band.tone}">≈ ${official.score} / 90 · ${official.band.label}</span>` +
     `</div>` +
     `<div class="di-criteria">${criteriaRows}</div>` +
-    scheduleNotice(item) +
-    `<div class="di-result-details">` +
-    `<p><strong>Words:</strong> ${score.words} · <strong>Keywords:</strong> ${score.hits}/${score.keywordTotal}</p>` +
-    `<p>${escapeHTML(score.fluencyReason)}</p>` +
-    `<p>${escapeHTML(score.vocabularyReason)}</p>` +
-    `</div>` +
-    `<div class="di-reference"><strong>Model answer</strong><p>${escapeHTML(item.reference)}</p></div>` +
+    (exam ? "" : scheduleNotice(item)) +
+    (exam
+      ? ""
+      : `<div class="di-result-details">` +
+        `<p><strong>Words:</strong> ${score.words} · <strong>Keywords:</strong> ${score.hits}/${score.keywordTotal}</p>` +
+        `<p>${escapeHTML(score.fluencyReason)}</p>` +
+        `<p>${escapeHTML(score.vocabularyReason)}</p>` +
+        `</div>` +
+        `<div class="di-reference"><strong>Model answer</strong><p>${escapeHTML(item.reference)}</p></div>`) +
     emptyNote;
 
   resultContent.scrollIntoView({ behavior: "smooth", block: "nearest" });

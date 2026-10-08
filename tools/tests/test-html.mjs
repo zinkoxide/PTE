@@ -58,6 +58,41 @@ test("vocabulary study filter includes due and needs-pron", () => {
   assert(html.vocabulary.includes('value="needs-pron"'), "missing needs-pron option");
 });
 
+test("vocabulary page exposes the CSV export control", () => {
+  [
+    "vocab-export-csv",
+    "vocab-export-note",
+    "vocab-import-csv",
+    "vocab-import-file",
+    "vocab-import-panel",
+    "vocab-import-summary",
+    "vocab-import-list",
+    "vocab-import-confirm",
+    "vocab-import-cancel",
+    "vocab-import-result"
+  ].forEach((id) =>
+    assert(html.vocabulary.includes(`id="${id}"`), `vocabulary.html: missing #${id}`)
+  );
+  const app = read("../../js/vocab-app.js");
+  assert(/buildVocabularyCsv/.test(app), "vocab-app.js must build the CSV");
+  assert(/downloadCsv/.test(app), "vocab-app.js must hand the file to the user");
+  assert(/csvFilename/.test(app), "vocab-app.js must name the file with a date");
+  assert(/Study status/.test(app), "the export must include the learner's own study status");
+
+  assert(/buildImportPreview/.test(app), "vocab-app.js must preview the file before saving");
+  assert(/api\/import-words/.test(app), "vocab-app.js must send the new words to the add server");
+  assert(/confirmImport/.test(app), "the import must wait for a confirmation");
+});
+
+test("the add server exposes a bulk import endpoint that re-checks everything", () => {
+  const server = read("../../app.py");
+  assert(/api\/import-words/.test(server), "app.py must expose /api/import-words");
+  assert(/existing_words_lower/.test(server), "the import must re-check for duplicates server-side");
+  assert(/validate_entry/.test(server), "the import must reuse the single-word validation");
+  assert(/MAX_IMPORT_WORDS/.test(server), "the import must cap the batch size");
+  assert(/dryRun/.test(server), "the import must support a dry run");
+});
+
 test("vocabulary page loads stats via vocab-app.js and speech.js", () => {
   assert(html.vocabulary.includes('src="./js/vocab-app.js"'), "missing vocab-app.js module");
 });
@@ -295,6 +330,29 @@ test("every page sidebar links to swt.html and describe-image.html", () => {
     assert(html[key].includes('href="swt.html"'), `${key}.html: missing sidebar link to swt.html`);
     assert(html[key].includes('href="describe-image.html"'), `${key}.html: missing sidebar link to describe-image.html`);
   });
+});
+
+test("all three task pages expose the shared exam-conditions toggle", () => {
+  ["swt", "di", "ra"].forEach((prefix) => {
+    assert(html[prefix].includes(`id="${prefix}-exam-toggle"`), `${prefix}: missing the exam toggle`);
+    assert(html[prefix].includes(`${prefix}-header-actions`), `${prefix}: header controls must be grouped`);
+  });
+
+  const base = read("../../css/base.css");
+  assert(/\.exam-toggle/.test(base), "base.css must style the exam toggle");
+  assert(/body\.exam-mode/.test(base), "base.css must hide the aids under exam mode");
+  assert(/\.is-warning/.test(base), "base.css must style the timer warning");
+
+  ["swt", "describe-image", "read-aloud"].forEach((name) => {
+    const module = read(`../../js/${name}.js`);
+    assert(/isExamMode/.test(module), `${name}.js must read the shared exam flag`);
+    assert(/exam-toggle/.test(module), `${name}.js must wire its toggle button`);
+    assert(/detailTermsFor/.test(module), `${name}.js must drop diagnostics in exam mode`);
+    assert(/shouldWarn/.test(module), `${name}.js must warn in the final seconds`);
+  });
+
+  const exam = read("../../js/exam-mode.js");
+  assert(/EXAM_KEY = "pte\.exam\.v1"/.test(exam), "exam mode must use one shared key");
 });
 
 test("page stylesheets do not duplicate rules that base.css already owns", () => {

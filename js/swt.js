@@ -16,6 +16,12 @@ import {
   describeDue
 } from "./task-stats.js";
 import { toOfficialScore, describeBand } from "./pte-scale.js";
+import {
+  isExamMode,
+  setExamMode,
+  shouldWarn,
+  detailTermsFor
+} from "./exam-mode.js";
 
 const TIME_PER_QUESTION = 10 * 60;
 const SWT_STATS_KEY = "pte.swt.stats.v1";
@@ -54,6 +60,7 @@ const modePracticeButton = document.getElementById("swt-mode-practice");
 const trainingSection = document.getElementById("swt-training");
 const trainingContent = document.getElementById("swt-training-content");
 const goPracticeButton = document.getElementById("swt-train-go-practice");
+const examButton = document.getElementById("swt-exam-toggle");
 
 /* ==========================================
    State
@@ -125,7 +132,7 @@ function recordAttempt(item, score) {
     itemId: item.id,
     title: item.title,
     percent: score.total,
-    missedTerms: score.missedPoints || []
+    missedTerms: detailTermsFor(score, isExamMode())
   });
   saveStats(next);
 }
@@ -136,6 +143,9 @@ function recordAttempt(item, score) {
 
 function updateTimer() {
   timerElement.textContent = formatTime(timeRemaining);
+  const warning = isExamMode() && shouldWarn(timeRemaining);
+  timerElement.classList.toggle("is-warning", warning);
+  timerElement.classList.toggle("is-out", timeRemaining <= 0);
 }
 
 function stopTimer() {
@@ -222,9 +232,17 @@ function updateResponseInfo() {
 
 function applyModeVisuals() {
   document.body.classList.toggle("swt-training-mode", currentMode === "training");
+  document.body.classList.toggle("exam-mode", isExamMode());
+  if (examButton) examButton.classList.toggle("is-on", isExamMode());
   modeTrainButton.classList.toggle("is-on", currentMode === "training");
   modePracticeButton.classList.toggle("is-on", currentMode === "practice");
   trainingSection.hidden = currentMode !== "training";
+}
+
+function toggleExamMode() {
+  setExamMode(!isExamMode());
+  applyModeVisuals();
+  updateTimer();
 }
 
 function setMode(mode) {
@@ -342,6 +360,8 @@ function submitAnswer(autoSubmit) {
   const official = { score: officialScore, band: describeBand(officialScore) };
 
   resultSection.hidden = false;
+  const exam = isExamMode();
+
   resultContent.innerHTML =
     `<div class="swt-result-total ${score.total >= 70 ? "is-good" : score.total >= 50 ? "is-mid" : "is-low"}">` +
     `<span class="swt-result-score">${score.total}</span>` +
@@ -349,20 +369,22 @@ function submitAnswer(autoSubmit) {
     `<span class="pte-official is-${official.band.tone}">≈ ${official.score} / 90 · ${official.band.label}</span>` +
     `</div>` +
     `<div class="swt-criteria">${criteriaRows}</div>` +
-    scheduleNotice(item) +
-    `<div class="swt-result-details">` +
-    `<p><strong>Words:</strong> ${score.words} · <strong>Sentences:</strong> ${score.sentences} · ` +
-    `<strong>Keyword coverage:</strong> ${score.hits}/${score.keywordTotal}</p>` +
-    `<p>${escapeHTML(score.formReason)}</p>` +
-    (score.grammarIssues.length
-      ? `<p class="swt-warn">${escapeHTML(score.grammarIssues.join(" · "))}</p>`
-      : "") +
-    `</div>` +
-    `<details class="swt-reference">` +
-    `<summary>Model answer</summary>` +
-    `<p class="swt-reference-text">${escapeHTML(item.reference)}</p>` +
-    `</details>` +
-    leftover;
+    (exam ? "" : scheduleNotice(item)) +
+    (exam
+      ? ""
+      : `<div class="swt-result-details">` +
+        `<p><strong>Words:</strong> ${score.words} · <strong>Sentences:</strong> ${score.sentences} · ` +
+        `<strong>Keyword coverage:</strong> ${score.hits}/${score.keywordTotal}</p>` +
+        `<p>${escapeHTML(score.formReason)}</p>` +
+        (score.grammarIssues.length
+          ? `<p class="swt-warn">${escapeHTML(score.grammarIssues.join(" · "))}</p>`
+          : "") +
+        `</div>` +
+        `<details class="swt-reference">` +
+        `<summary>Model answer</summary>` +
+        `<p class="swt-reference-text">${escapeHTML(item.reference)}</p>` +
+        `</details>`) +
+    (exam ? "" : leftover);
 
   resultContent.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
@@ -409,6 +431,7 @@ nextButton.addEventListener("click", goToNext);
 modeTrainButton.addEventListener("click", () => setMode("training"));
 modePracticeButton.addEventListener("click", () => setMode("practice"));
 goPracticeButton.addEventListener("click", () => setMode("practice"));
+if (examButton) examButton.addEventListener("click", toggleExamMode);
 
 /* ==========================================
    Initialize

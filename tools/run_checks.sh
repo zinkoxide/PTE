@@ -57,6 +57,10 @@ if node tools/tests/test-di.mjs; then :; else err "di harness FAILED"; fi
 if node tools/tests/test-stats.mjs; then :; else err "stats harness FAILED"; fi
 if node tools/tests/test-read-aloud.mjs; then :; else err "read-aloud harness FAILED"; fi
 if node tools/tests/test-progress-io.mjs; then :; else err "progress-io harness FAILED"; fi
+if node tools/tests/test-exam-mode.mjs; then :; else err "exam-mode harness FAILED"; fi
+if node tools/tests/test-csv-export.mjs; then :; else err "csv-export harness FAILED"; fi
+if node tools/tests/test-csv-import.mjs; then :; else err "csv-import harness FAILED"; fi
+if python3 tools/tests/test_import_plan.py >/dev/null; then :; else err "import-plan harness FAILED"; fi
 
 if [ "$fail" -eq 0 ]; then
   note "ALL CHECKS PASSED"

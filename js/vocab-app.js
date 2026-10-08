@@ -24,6 +24,17 @@ import {
 } from "./storage.js";
 import { SpeechEngine } from "./speech.js";
 import { wordMatches } from "./pronounce.js";
+import {
+  VOCAB_COLUMNS,
+  buildVocabularyCsv,
+  csvFilename,
+  downloadCsv
+} from "./csv-export.js";
+import {
+  buildImportPreview,
+  describePreview,
+  toImportPayload
+} from "./csv-import.js";
 
 /* --------------------------------------
    State
@@ -67,6 +78,15 @@ const learnedButton = $("learned-button");
 const reviewButton = $("review-button");
 const studyStatus = $("study-status");
 const studyFilter = $("study-filter");
+const exportButton = $("vocab-export-csv");
+const importButton = $("vocab-import-csv");
+const importFileInput = $("vocab-import-file");
+const importPanel = $("vocab-import-panel");
+const importSummary = $("vocab-import-summary");
+const importList = $("vocab-import-list");
+const importConfirmButton = $("vocab-import-confirm");
+const importCancelButton = $("vocab-import-cancel");
+const importResult = $("vocab-import-result");
 const searchInput = $("vocabulary-search");
 const clearSearchButton = $("clear-search");
 const searchResultsCount = $("search-results-count");
@@ -705,6 +725,354 @@ backButton.addEventListener("click", () => {
    Initialize
 -------------------------------------- */
 
+/* --------------------------------------
+   CSV export
+
+   Exports exactly what the learner is
+   looking at, so a search or filter acts as
+   the selection. The study status column
+   comes from localStorage because it is not
+   part of vocabulary.json.
+-------------------------------------- */
+
+function exportColumns() {
+  return [
+    ...VOCAB_COLUMNS,
+    {
+      key: "studyStatus",
+      label: "Study status",
+      value: (entry) => getStudyStatus(entry.word) || "—"
+    },
+    {
+      key: "dueLabel",
+      label: "Due",
+      value: (entry) => {
+        const study = getStudyEntry(entry.word);
+        if (!study || !study.due) return "";
+        const days = Math.round((study.due - Date.now()) / 86400000);
+        if (days < 0) return `overdue ${Math.abs(days)}d`;
+        if (days === 0) return "today";
+        return `in ${days}d`;
+      }
+    }
+  ];
+}
+
+function showExportNote(message, tone) {
+  const note = $("vocab-export-note");
+  if (!note) return;
+  note.hidden = false;
+  note.textContent = message;
+  note.className = `vocab-export-note${tone ? ` is-${tone}` : ""}`;
+}
+
+/* True when the learner narrowed the list in any way. */
+function hasActiveFilter() {
+  return Boolean(
+    searchQuery ||
+      selectedCEFR !== "all" ||
+      selectedPartOfSpeech !== "all" ||
+      selectedStudyFilter !== "all"
+  );
+}
+
+function handleExportCsv() {
+  const scoped = hasActiveFilter();
+
+  /*
+  A search that matches nothing must not silently fall back to the whole
+  bank — exporting 1001 rows when the learner asked for 3 would be a
+  nasty surprise.
+  */
+  if (!filteredVocabulary.length) {
+    showExportNote(
+      vocabulary.length
+        ? "Nothing matches the current search and filters — clear them to export the full list."
+        : "There is nothing to export yet.",
+      "warn"
+    );
+    return;
+  }
+
+  const words = filteredVocabulary;
+  const csv = buildVocabularyCsv(words, exportColumns());
+  const filename = downloadCsv(csvFilename(), csv);
+
+  showExportNote(
+    `Exported ${words.length} word${words.length === 1 ? "" : "s"}` +
+      `${scoped ? " matching the current search and filters" : ""} to ${filename}.`,
+    "ok"
+  );
+}
+
+/* --------------------------------------
+   CSV import
+
+   The file is parsed and previewed in the
+   browser first: words already in the bank
+   are dropped, and only the survivors are
+   sent to the add server, which re-checks,
+   numbers them from the end of the bank and
+   generates their audio.
+-------------------------------------- */
+
+const LAST_IMPORT_KEY = "pte.vocab.lastImport.v1";
+
+let pendingImport = null;
+
+const ADD_SERVER_ORIGIN = "http://127.0.0.1:5000";
+
+/*
+Where the add API lives. Normally the app is opened through the add server
+itself, in which case a relative path is enough. When the learner keeps some
+other static server for reading, the request goes straight to the add server
+on port 5000 — the server allows loopback origins for exactly this case.
+*/
+function apiUrl(path) {
+  return isAddServerOrigin() ? path : `${ADD_SERVER_ORIGIN}${path}`;
+}
+
+function isAddServerOrigin() {
+  return location.port === "5000" || location.protocol === "http:" && location.hostname === "127.0.0.1" && location.port === "5000";
+}
+
+async function probeStatus(url) {
+  const response = await fetch(url);
+  if (!response.ok) return null;
+  return response.json();
+}
+
+/*
+The add server is a separate process on port 5000, and the app must be opened
+through it for saving to work. When the page is served by some other static
+server the relative /api call can never succeed, so that case is detected and
+named instead of failing silently.
+*/
+async function checkAddServer() {
+  const reachable = async (url) => {
+    try {
+      return await probeStatus(url);
+    } catch (error) {
+      return null;
+    }
+  };
+
+  const data = await reachable(apiUrl("/api/status"));
+
+  if (data && data.running) {
+    if (data.serviceEnabled === false) {
+      return { ok: false, text: "Add server: the service is stopped", elsewhere: false };
+    }
+    return {
+      ok: true,
+      elsewhere: !isAddServerOrigin(),
+      text: isAddServerOrigin()
+        ? "Add server: running"
+        : "Add server: running on port 5000 — saving from here works"
+    };
+  }
+
+  return {
+    ok: false,
+    elsewhere: false,
+    text: "Add server: not running — start it with bash tools/start_add_word.sh"
+  };
+}
+
+function renderServerBadge(status) {
+  const badge = $("vocab-import-server");
+  if (!badge) return;
+  badge.textContent = status.text;
+  badge.classList.toggle("is-ok", status.ok);
+}
+
+function rememberReport(report) {
+  try {
+    localStorage.setItem(LAST_IMPORT_KEY, JSON.stringify(report));
+  } catch {
+    /* storage may be unavailable */
+  }
+}
+
+function showRememberedReport() {
+  let report = null;
+  try {
+    const raw = localStorage.getItem(LAST_IMPORT_KEY);
+    report = raw ? JSON.parse(raw) : null;
+  } catch {
+    report = null;
+  }
+  if (!report || !report.text) return;
+
+  openImportPanel();
+  showImportResult(report.text, report.tone === "ok" ? "ok" : "warn");
+}
+
+/* Re-read the word bank so the counts update without a manual reload. */
+async function refreshVocabulary() {
+  vocabulary = await loadVocabulary();
+  filterVocabulary();
+  updateStudyCount();
+}
+
+function openImportPanel() {
+  if (importPanel) importPanel.hidden = false;
+}
+
+function showImportResult(message, tone) {
+  if (!importResult) return;
+  importResult.hidden = false;
+  importResult.textContent = message;
+  importResult.className = `vocab-export-note${tone ? ` is-${tone}` : ""}`;
+}
+
+function closeImportPanel() {
+  pendingImport = null;
+  if (importPanel) importPanel.hidden = true;
+  if (importConfirmButton) importConfirmButton.disabled = false;
+  if (importResult) importResult.hidden = true;
+}
+
+function renderImportPreview(csvText) {
+  const existingWords = vocabulary.map((entry) => entry.word);
+  const preview = buildImportPreview(csvText, existingWords);
+
+  if (!importPanel) return;
+
+  if (!preview.ok) {
+    importPanel.hidden = false;
+    importSummary.textContent = describePreview(preview);
+    importList.innerHTML = "";
+    if (importConfirmButton) importConfirmButton.disabled = true;
+    showImportResult(
+      "شغّل «تصدير CSV» من هذه الصفحة أولاً لتحصل على ملف بالشكل الصحيح.",
+      "warn"
+    );
+    return;
+  }
+
+  pendingImport = preview;
+
+  const incompleteNote = preview.incomplete && preview.incomplete.length
+    ? ` Missing or incomplete: ${preview.incomplete
+        .slice(0, 5)
+        .map((entry) => `${entry.word || "(no word)"} [${entry.missing.join(", ")}]`)
+        .join(" · ")}${preview.incomplete.length > 5 ? ` … +${preview.incomplete.length - 5}` : ""}`
+    : "";
+
+  importSummary.textContent =
+    `${describePreview(preview)} — ` +
+    (preview.totals.add
+      ? `the new words will be numbered from ${preview.fresh[0].number}.`
+      : "nothing will be added.") +
+    incompleteNote;
+
+  importList.innerHTML = preview.fresh
+    .slice(0, 40)
+    .map(
+      (entry) =>
+        `<li>${escapeForCsv(entry.word)} <b>#${entry.number}</b></li>`
+    )
+    .join("");
+
+  if (preview.fresh.length > 40) {
+    importList.innerHTML += `<li>… +${preview.fresh.length - 40} more</li>`;
+  }
+
+  if (importConfirmButton) importConfirmButton.disabled = preview.totals.add === 0;
+
+  showImportResult(
+    preview.totals.add
+      ? "Words that already exist are skipped automatically. Saving needs the add server."
+      : "Nothing new in this file.",
+    preview.totals.add ? "ok" : "warn"
+  );
+
+  importPanel.hidden = false;
+}
+
+function escapeForCsv(value) {
+  return String(value == null ? "" : value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+async function confirmImport() {
+  if (!pendingImport || !pendingImport.totals.add) return;
+
+  if (importConfirmButton) {
+    importConfirmButton.disabled = true;
+    importResult.textContent = "Saving…";
+  }
+
+  try {
+    const response = await fetch(apiUrl("/api/import-words"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(toImportPayload(pendingImport))
+    });
+
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok || !data.success) {
+      let text = data.error || "";
+      if (response.status === 404 || !text) {
+        const status = await checkAddServer();
+        text = status.elsewhere
+          ? `الصفحة مفتوحة من خادم آخر. ${status.text}`
+          : text || "تعذّر الحفظ — تأكد أن خادم الإضافة يعمل.";
+      }
+      showImportResult(text, "warn");
+      rememberReport({ text, tone: "warn", at: Date.now() });
+      if (importConfirmButton) importConfirmButton.disabled = false;
+      return;
+    }
+
+    const parts = [`تمت إضافة ${data.added.length} كلمة.`];
+    if (data.withoutAudio && data.withoutAudio.length) {
+      parts.push(
+        `${data.withoutAudio.length} كلمة بدون صوت (${data.withoutAudio
+          .map((entry) => entry.word)
+          .join(", ")}) — يمكنك توليد الصوت لاحقاً.`
+      );
+    }
+    if (data.skipped && data.skipped.length) {
+      parts.push(`${data.skipped.length} مكررة تم تخطّيها.`);
+    }
+    if (data.repeated && data.repeated.length) {
+      parts.push(`${data.repeated.length} مكررة داخل الملف نفسه تم تخطّيها.`);
+    }
+    if (data.rejected && data.rejected.length) {
+      parts.push(
+        `${data.rejected.length} مرفوضة: ${data.rejected
+          .map((entry) => `${entry.word} (${entry.errors[0]})`)
+          .join(" · ")}`
+      );
+    }
+    const text = parts.join(" ");
+    showImportResult(text, "ok");
+    rememberReport({ text, tone: "ok", at: Date.now() });
+
+    importSummary.textContent = `Added: ${data.added
+      .map((entry) => `${entry.word} #${entry.number}`)
+      .join(" · ")}`;
+    importList.innerHTML = "";
+    pendingImport = null;
+
+    /* Pull the new bank in so the header count is right immediately. */
+    if (data.added.length) await refreshVocabulary();
+  } catch (error) {
+    const status = await checkAddServer();
+    const text = status.elsewhere
+      ? `الصفحة مفتوحة من خادم آخر. ${status.text} ثم أعد الاستيراد.`
+      : "تعذّر الاتصال بخادم الإضافة — شغّل: bash tools/start_add_word.sh ثم أعد المحاولة.";
+    showImportResult(text, "warn");
+    rememberReport({ text, tone: "warn", at: Date.now() });
+    if (importConfirmButton) importConfirmButton.disabled = false;
+  }
+}
+
 async function initializeVocabulary() {
   vocabulary = await loadVocabulary();
   if (!vocabulary.length) {
@@ -726,5 +1094,21 @@ async function initializeVocabulary() {
   }
   console.log("Vocabulary application ready.");
 }
+
+if (exportButton) exportButton.addEventListener("click", handleExportCsv);
+if (importButton && importFileInput) {
+  importButton.addEventListener("click", () => importFileInput.click());
+  importFileInput.addEventListener("change", async () => {
+    const file = importFileInput.files && importFileInput.files[0];
+    if (!file) return;
+    openImportPanel();
+    const status = await checkAddServer();
+    renderServerBadge(status);
+    renderImportPreview(await file.text());
+  });
+}
+if (importConfirmButton) importConfirmButton.addEventListener("click", confirmImport);
+if (importCancelButton) importCancelButton.addEventListener("click", closeImportPanel);
+showRememberedReport();
 
 initializeVocabulary();
