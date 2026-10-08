@@ -174,11 +174,39 @@ def audit_simple_list(path, required_fields, label):
             print(f'  - {message}')
 
 
-audit_simple_list(
-    root / 'read_aloud.json',
-    ('text',),
-    'read_aloud',
-)
+def audit_read_aloud(path):
+    """
+    Read Aloud needs its audio as much as its text: the page plays the
+    recorded model voice before every attempt. A missing MP3 still works
+    (the browser voice takes over), so it is reported as a warning rather
+    than a failure -- but it should never be a surprise.
+    """
+    global ok
+    if not path.exists():
+        return
+
+    audio_dir = root.parent / 'assets' / 'audio' / 'read-aloud'
+    with path.open('r', encoding='utf-8') as handle:
+        items = json.load(handle)
+
+    missing = []
+    for position, item in enumerate(items):
+        name = item.get('id') or f'#{position + 1}'
+        if not item.get('text'):
+            ok = False
+            print(f"  - read_aloud '{name}': missing text")
+        file_name = f"{item.get('id', position + 1)}.mp3"
+        if not (audio_dir / file_name).exists():
+            missing.append(file_name)
+
+    print(f'read_aloud: {len(items)} items, {len(items) - len(missing)} with audio on disk')
+    if missing:
+        print('  ! missing audio (run: python3 tools/generate_audio.py --only read-aloud)')
+        for file_name in missing[:10]:
+            print(f'    - assets/audio/read-aloud/{file_name}')
+
+
+audit_read_aloud(root / 'read_aloud.json')
 audit_simple_list(
     root / 'swt.json',
     ('title', 'passage', 'mainIdea', 'keyPoints', 'reference'),

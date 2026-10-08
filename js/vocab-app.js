@@ -25,7 +25,11 @@ import {
 import { SpeechEngine } from "./speech.js";
 import { wordMatches } from "./pronounce.js";
 import {
-  VOCAB_COLUMNS,
+  ALL_COLUMNS,
+  DEFAULT_COLUMN_KEYS,
+  columnsForKeys,
+  loadColumnKeys,
+  saveColumnKeys,
   buildVocabularyCsv,
   csvFilename,
   downloadCsv
@@ -736,27 +740,114 @@ backButton.addEventListener("click", () => {
    part of vocabulary.json.
 -------------------------------------- */
 
+/* The two study columns read localStorage, not vocabulary.json, so they fill
+   their cells here rather than in the column definition. */
+const STUDY_VALUES = {
+  studyStatus: (entry) => getStudyStatus(entry.word) || "—",
+  dueLabel: (entry) => {
+    const study = getStudyEntry(entry.word);
+    if (!study || !study.due) return "";
+    const days = Math.round((study.due - Date.now()) / 86400000);
+    if (days < 0) return `overdue ${Math.abs(days)}d`;
+    if (days === 0) return "today";
+    return `in ${days}d`;
+  }
+};
+
+let chosenColumnKeys = loadColumnKeys();
+
 function exportColumns() {
-  return [
-    ...VOCAB_COLUMNS,
-    {
-      key: "studyStatus",
-      label: "Study status",
-      value: (entry) => getStudyStatus(entry.word) || "—"
-    },
-    {
-      key: "dueLabel",
-      label: "Due",
-      value: (entry) => {
-        const study = getStudyEntry(entry.word);
-        if (!study || !study.due) return "";
-        const days = Math.round((study.due - Date.now()) / 86400000);
-        if (days < 0) return `overdue ${Math.abs(days)}d`;
-        if (days === 0) return "today";
-        return `in ${days}d`;
+  return columnsForKeys(chosenColumnKeys).map((column) => {
+    const value = STUDY_VALUES[column.key];
+    return value ? { ...column, value: (entry) => value(entry) } : column;
+  });
+}
+
+/* --------------------------------------
+   Column picker
+-------------------------------------- */
+
+const exportPanel = $("vocab-export-panel");
+const exportColumnsToggle = $("vocab-export-columns-toggle");
+const exportColumnsBox = $("vocab-export-columns");
+const exportColumnCount = $("vocab-export-column-count");
+const exportColumnsState = $("vocab-export-columns-state");
+
+/* A word with no study record still says so, rather than leaving a hole. */
+const ESSENTIAL_KEYS = ["word", "pronunciation", "meaningEN", "meaningAR"];
+
+function renderColumnPicker() {
+  if (!exportColumnsBox) return;
+  const chosen = new Set(chosenColumnKeys);
+
+  exportColumnsBox.innerHTML = "";
+  ALL_COLUMNS.forEach((column) => {
+    const label = document.createElement("label");
+    label.className = "vocab-column-item";
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.value = column.key;
+    input.checked = chosen.has(column.key);
+    input.addEventListener("change", () => {
+      if (input.checked) {
+        chosen.add(column.key);
+        applyColumnChoice([...chosen]);
+        return;
       }
-    }
-  ];
+      if (chosen.size <= 1) {
+        /* A file with no columns is not a file. */
+        input.checked = true;
+        showExportNote("Keep at least one column in the export.", "warn");
+        return;
+      }
+      chosen.delete(column.key);
+      applyColumnChoice([...chosen]);
+    });
+
+    const text = document.createElement("span");
+    text.textContent = column.label;
+
+    label.appendChild(input);
+    label.appendChild(text);
+    exportColumnsBox.appendChild(label);
+  });
+
+  updateColumnCounters();
+}
+
+function updateColumnCounters() {
+  const count = chosenColumnKeys.length;
+  if (exportColumnCount) exportColumnCount.textContent = String(count);
+  if (exportColumnsState) exportColumnsState.textContent = `${count} / ${ALL_COLUMNS.length}`;
+}
+
+function applyColumnChoice(keys) {
+  chosenColumnKeys = saveColumnKeys(keys);
+  renderColumnPicker();
+}
+
+function toggleExportPanel(force) {
+  if (!exportPanel) return;
+  const open = force === undefined ? exportPanel.hidden : force;
+  exportPanel.hidden = !open;
+  if (exportColumnsToggle) exportColumnsToggle.setAttribute("aria-expanded", String(open));
+}
+
+if (exportColumnsToggle) {
+  exportColumnsToggle.addEventListener("click", () => toggleExportPanel());
+}
+const closeExportPanel = $("vocab-export-columns-close");
+if (closeExportPanel) closeExportPanel.addEventListener("click", () => toggleExportPanel(false));
+
+const selectAllColumns = $("vocab-export-columns-all");
+if (selectAllColumns) {
+  selectAllColumns.addEventListener("click", () => applyColumnChoice([...DEFAULT_COLUMN_KEYS]));
+}
+
+const selectEssentialColumns = $("vocab-export-columns-min");
+if (selectEssentialColumns) {
+  selectEssentialColumns.addEventListener("click", () => applyColumnChoice([...ESSENTIAL_KEYS]));
 }
 
 function showExportNote(message, tone) {
@@ -795,13 +886,15 @@ function handleExportCsv() {
     return;
   }
 
+  const columns = exportColumns();
   const words = filteredVocabulary;
-  const csv = buildVocabularyCsv(words, exportColumns());
+  const csv = buildVocabularyCsv(words, columns);
   const filename = downloadCsv(csvFilename(), csv);
 
   showExportNote(
     `Exported ${words.length} word${words.length === 1 ? "" : "s"}` +
-      `${scoped ? " matching the current search and filters" : ""} to ${filename}.`,
+      `${scoped ? " matching the current search and filters" : ""}` +
+      ` with ${columns.length} of ${ALL_COLUMNS.length} columns to ${filename}.`,
     "ok"
   );
 }
@@ -1075,6 +1168,8 @@ async function confirmImport() {
 }
 
 async function initializeVocabulary() {
+  renderColumnPicker();
+
   vocabulary = await loadVocabulary();
   if (!vocabulary.length) {
     console.error("Vocabulary is empty.");
@@ -1089,9 +1184,21 @@ async function initializeVocabulary() {
     if (studyFilter) studyFilter.value = "due";
     filterVocabulary();
   } else {
-    updateStudyCount();
-    updateSearchResultsCount();
-    updateWord();
+    /*
+    The search box accepts text before this module has even attached its
+    listener, and an export reads whatever the list holds. Reading the box
+    itself keeps the two in step: whatever it says is what the list shows.
+    */
+    if (searchInput.value && searchInput.value !== searchQuery) {
+      searchQuery = searchInput.value;
+    }
+    if (hasActiveFilter()) {
+      filterVocabulary();
+    } else {
+      updateStudyCount();
+      updateSearchResultsCount();
+      updateWord();
+    }
   }
   console.log("Vocabulary application ready.");
 }

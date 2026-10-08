@@ -1,5 +1,36 @@
 # Changelog
 
+## v3.26 — The missing task, a consistent voice, and an export you direct
+
+**Fill in the Blanks** (`fill-in-the-blanks.html`) is the gap that mattered
+most, and it needs no data file: every gap is built from your own word bank, so
+the items never run out and cannot go stale. Two real exam variants — hear the
+word and choose it, or choose between four *forms* of the same word — both taken
+from the bank's own `examples`, scored one mark per blank with no partial
+credit, in training, practice and exam modes.
+
+**Read Aloud now speaks with the same voice as everything else.** The page plays
+the recorded Edge TTS file (`assets/audio/read-aloud/`) instead of whatever
+voice the browser happens to ship, and keeps the browser voice only as the
+fallback. `tools/generate_audio.py` grew the dataset switch (`--only`,
+`--force`) that makes that a one-command job.
+
+**The CSV export is yours to direct.** A column picker next to the export button
+offers all 15 columns, has "select all" and an "essentials only" shortcut,
+refuses to untick the last one, and remembers the choice.
+
+Bugs found and fixed along the way:
+
+- **Nonsense distractor forms.** Word forms ignored the part of speech, so a
+  noun offered `potentialed`. They follow it now, and only real forms are
+  matched — "art" can no longer blank the wrong letters inside "article".
+- **A search typed before the bank loaded was thrown away**, leaving all 1005
+  words behind a filter the learner could see — and an export that quietly
+  included every one of them. The search box is now the source of truth when
+  the bank lands.
+- Read Aloud and Repeat Sentence audio could collide on the same number; the
+  datasets get their own folders.
+
 ## v3.25 — Editing and deleting words, and an audit that trusts nothing
 
 A word bank that can only grow was the last structural gap. Now:

@@ -56,6 +56,8 @@ if node tools/tests/test-swt.mjs; then :; else err "swt harness FAILED"; fi
 if node tools/tests/test-di.mjs; then :; else err "di harness FAILED"; fi
 if node tools/tests/test-stats.mjs; then :; else err "stats harness FAILED"; fi
 if node tools/tests/test-read-aloud.mjs; then :; else err "read-aloud harness FAILED"; fi
+if node tools/tests/test-audio.mjs; then :; else err "audio harness FAILED"; fi
+if node tools/tests/test-fib.mjs; then :; else err "fib harness FAILED"; fi
 if node tools/tests/test-progress-io.mjs; then :; else err "progress-io harness FAILED"; fi
 if node tools/tests/test-exam-mode.mjs; then :; else err "exam-mode harness FAILED"; fi
 if node tools/tests/test-csv-export.mjs; then :; else err "csv-export harness FAILED"; fi

@@ -7,6 +7,12 @@ import {
   UTF8_BOM,
   LIST_SEPARATOR,
   VOCAB_COLUMNS,
+  ALL_COLUMNS,
+  DEFAULT_COLUMN_KEYS,
+  COLUMN_KEYS_STORAGE,
+  columnsForKeys,
+  loadColumnKeys,
+  saveColumnKeys,
   escapeCsvValue,
   readField,
   buildVocabularyCsv,
@@ -187,6 +193,74 @@ test("the filename carries the date", () => {
   const name = csvFilename("pte-vocabulary", new Date("2026-10-05T12:00:00Z"));
   assert(name === "pte-vocabulary-2026-10-05.csv", `unexpected filename: ${name}`);
   assert(csvFilename(undefined, new Date("2026-01-02T00:00:00Z")).endsWith(".csv"), "the extension must stay");
+});
+
+/* ---------- the column picker ---------- */
+
+/* A storage stand-in, so the tests never touch the real localStorage. */
+function fakeStorage(initial = {}) {
+  const map = new Map(Object.entries(initial));
+  return {
+    getItem: (key) => (map.has(key) ? map.get(key) : null),
+    setItem: (key, value) => map.set(key, String(value)),
+    removeItem: (key) => map.delete(key),
+    get size() { return map.size; }
+  };
+}
+
+test("the picker offers the file columns and the study columns", () => {
+  assert(ALL_COLUMNS.length === VOCAB_COLUMNS.length + 2, "two study columns are added");
+  assert(DEFAULT_COLUMN_KEYS.length === ALL_COLUMNS.length, "the default is every column");
+  assert(DEFAULT_COLUMN_KEYS.includes("studyStatus"), "the study status is offered");
+  assert(DEFAULT_COLUMN_KEYS.includes("dueLabel"), "the review date is offered");
+});
+
+test("a chosen set keeps the file order, whatever order it was saved in", () => {
+  const keys = columnsForKeys(["meaningAR", "word", "audio"]).map((c) => c.key);
+  assert(keys.join(",") === "word,meaningAR,audio", `got ${keys.join(",")}`);
+});
+
+test("unknown keys are dropped and duplicates collapse", () => {
+  const keys = columnsForKeys(["word", "word", "nonsense"]).map((c) => c.key);
+  assert(keys.join(",") === "word", `got ${keys.join(",")}`);
+});
+
+test("an empty or broken pick falls back to every column", () => {
+  assert(columnsForKeys([]).length === ALL_COLUMNS.length, "an empty list");
+  assert(columnsForKeys(["nope"]).length === ALL_COLUMNS.length, "nothing known");
+  assert(columnsForKeys(null).length === ALL_COLUMNS.length, "not a list");
+  /* A file with no columns would be a header line and nothing else. */
+  assert(columnsForKeys([]).length > 0, "an export always has columns");
+});
+
+test("the pick survives a reload", () => {
+  const storage = fakeStorage();
+  const saved = saveColumnKeys(["word", "meaningAR"], storage);
+  assert(saved.join(",") === "word,meaningAR", "saved in file order");
+  assert(loadColumnKeys(storage).join(",") === "word,meaningAR", "read back the same");
+  assert(storage.getItem(COLUMN_KEYS_STORAGE).includes("word"), "written under one key");
+});
+
+test("junk in storage does not break the export", () => {
+  assert(loadColumnKeys(fakeStorage({ [COLUMN_KEYS_STORAGE]: "not json" })).length === ALL_COLUMNS.length,
+    "unparseable value");
+  assert(loadColumnKeys(fakeStorage({ [COLUMN_KEYS_STORAGE]: '{"a":1}' })).length === ALL_COLUMNS.length,
+    "an object instead of a list");
+  assert(loadColumnKeys(fakeStorage({ [COLUMN_KEYS_STORAGE]: "[]" })).length === ALL_COLUMNS.length,
+    "an empty list");
+  assert(loadColumnKeys(fakeStorage()).length === ALL_COLUMNS.length, "nothing stored yet");
+});
+
+test("a storage that refuses to write still returns a usable pick", () => {
+  const broken = { getItem: () => null, setItem: () => { throw new Error("no"); } };
+  assert(saveColumnKeys(["word"], broken).length === 1, "the session keeps its choice");
+});
+
+test("a two-column file really contains two columns", () => {
+  const csv = buildVocabularyCsv([{ word: "Benefit", meaningAR: "فائدة" }], columnsForKeys(["word", "meaningAR"]));
+  const [header, row] = csv.replace(UTF8_BOM, "").trim().split("\r\n");
+  assert(header === "Word,Meaning (AR)", `header was ${header}`);
+  assert(row === "Benefit,فائدة", `row was ${row}`);
 });
 
 console.log(`RESULT: ${passed} passed, ${failed} failed`);

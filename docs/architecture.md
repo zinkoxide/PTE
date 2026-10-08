@@ -46,7 +46,7 @@ Rules inside `@media` are exempt, because each page picks its own breakpoint.
 | Module | Role |
 | --- | --- |
 | `theme.js` | dark/light toggle persisted in `localStorage` (classic script, runs in `<head>`) |
-| `audio.js` | loads/plays audio, dispatches `audioEnded` / `audioError` |
+| `audio.js` | loads/plays audio, dispatches `audioEnded` / `audioError`; also builds task paths (`taskAudioPath`, `audioFileName`) and probes a file with `audioFileExists` |
 | `speech.js` | Web Speech API wrapper (`SpeechEngine`, optional continuous mode) |
 | `compare.js`, `pronounce.js`, `score.js` | repeat-sentence alignment, word matching, scoring |
 | `app.js` | repeat-sentence practice flow |
@@ -61,11 +61,13 @@ Rules inside `@media` are exempt, because each page picks its own breakpoint.
 | `swt.js` | Summarize Written Text flow (mode switch, timer, submit, result) |
 | `swt-score.js` | Content / Form / Grammar / Vocabulary scoring for summaries |
 | `swt-guide.js` | SWT training guide (3-step method, linking frames, tips) |
-| `read-aloud.js` | Read Aloud flow (prepare timer, recording, typing fallback, result) |
+| `read-aloud.js` | Read Aloud flow (prepare timer, recording, typing fallback, result); plays the recorded model voice and falls back to the browser one |
+| `fib.js` | pure Fill in the Blanks item builder: word forms, gap detection, option sets, per-blank scoring |
+| `fib-app.js` | Fill in the Blanks flow (setup, timer, training guide, results, stats) |
 | `read-aloud-score.js` | Content / Fluency / Pronunciation scoring for a reading |
 | `pte-scale.js` | converts a 0–100 practice total into an official 10–90 estimate |
 | `exam-mode.js` | one shared flag for exam conditions: hides the aids, owns the last-10-seconds warning, and suppresses stored diagnostics |
-| `csv-export.js` | RFC 4180 escaping, the vocabulary column set, and the browser download |
+| `csv-export.js` | RFC 4180 escaping, the vocabulary column set, the saved column pick (`columnsForKeys` / `loadColumnKeys` / `saveColumnKeys`) and the browser download |
 | `csv-import.js` | the CSV reader, the preview/diff that decides what is new, and the numbering preview |
 | `task-stats.js` | shared per-item attempt recording and weak-item selection |
 | `progress-io.js` | builds a portable backup file, validates and merges it, resets scopes |
@@ -101,12 +103,23 @@ under `assets/audio/vocabulary/`).
   `next_free_number()` picks the number after the highest one in use (it never
   hands out a number whose audio file is taken, and it reads digits from the
   file stem only, so `1005.mp3` never looks like number 5).
-- `generate_audio.py`, `generate_vocabulary_audio.py` — Edge TTS audio generation.
+- `generate_audio.py` — Edge TTS audio for the spoken tasks, one folder per
+  dataset (`repeat` → `assets/audio/`, `read-aloud` → `assets/audio/read-aloud/`).
+  `--only <dataset>` picks one, `--force` rebuilds what already exists.
+- `generate_vocabulary_audio.py` — Edge TTS audio for the 1005 bank words.
 - `start_add_word.sh` — starts the Flask add server.
 - `tests/test-*.mjs` — unit harnesses (html wiring, grammar, storage,
   pronunciation, swt, di, task stats, read aloud + the official scale,
   progress backup/merge, csv export/import), plus `tests/test_import_plan.py`
   for the numbering rules.
+
+## Data flow (spoken task audio)
+
+`tools/generate_audio.py` speaks every item of a dataset with Edge TTS into its
+own folder. The page never reads a path from the JSON: it rebuilds it from the
+item id (`taskAudioPath(dataset, audioFileName(id))`), checks the file with a
+HEAD request, plays it, and falls back to the browser voice if it is missing —
+so a text without audio still works, and `tools/validate_json.py` reports it.
 
 ## Data flow (repeat)
 
@@ -209,6 +222,24 @@ page served from another local port reach it; any other origin is refused.
    `speech.js` (or the typing fallback) captures the answer, the `*-score.js`
    module scores it, and the attempt is appended to the module's stats key.
 4. `dashboard.js` reads every stats key and updates cards, badges and the chart.
+
+## Data flow (Fill in the Blanks)
+
+There is no data file. `js/fib.js` builds the items from `vocabulary.json` so
+the task can never run out of material:
+
+1. Pick a word and one of its `examples` that really contains it (long enough to
+   be fair). Only forms the word can take are matched, so "art" cannot swallow
+   "article".
+2. Blank it with `____`. The form the sentence uses — "benefited", not
+   "benefit" — is the answer, because the sentence already proves it.
+3. `form` items offer three other forms of the same word, built from the part of
+   speech the bank records; `audio` items offer three other words from the bank
+   plus the word's MP3 from the audio index.
+4. Anything that cannot make an honest item returns `null` and is skipped: no
+   sentence, too short, no audio, or not enough distinct distractors.
+5. The page scores one mark per blank (`scoreFibSet`) and records each blank on
+   its own, so the dashboard's weak panel lists words rather than sets.
 
 ## Data flow (edit / delete a word)
 

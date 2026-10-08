@@ -36,6 +36,11 @@
           <span class="nav-label">Read Aloud</span>
         </a>
 
+        <a class="nav-link" href="fill-in-the-blanks.html">
+          <span class="nav-icon">🧩</span>
+          <span class="nav-label">Fill in the Blanks</span>
+        </a>
+
         <a class="nav-link" href="describe-image.html">
           <span class="nav-icon">🖼️</span><span class="nav-label">Describe Image</span>
         </a>
@@ -129,8 +134,13 @@
 
           <div class="toolbar">
             <span id="search-results-count" class="pill info">0 / 0 words</span>
+            <button id="vocab-export-columns-toggle" class="btn btn-sm btn-secondary" type="button"
+                    aria-expanded="false"
+                    title="Choose which columns the CSV should contain">
+              ⚙️ الأعمدة <span id="vocab-export-column-count" class="pill info">15</span>
+            </button>
             <button id="vocab-export-csv" class="btn btn-sm" type="button"
-                    title="Export the words currently shown, with all their content, to a CSV file">
+                    title="Export the words currently shown, with the columns you chose, to a CSV file">
               ⬇️ Export CSV
             </button>
             <button id="vocab-import-csv" class="btn btn-sm btn-secondary" type="button"
@@ -141,6 +151,35 @@
             <span id="study-count" class="pill">✓ 0 learned · ↻ 0 review</span>
             <span id="pron-summary" class="pill" hidden></span>
             <span id="search-match-info" class="pill"></span>
+          </div>
+
+          <!-- CSV export column picker -->
+          <div id="vocab-export-panel" class="vocab-import-panel" hidden>
+
+            <div class="card-title">
+              <span>اختر أعمدة ملف CSV</span>
+              <span id="vocab-export-columns-state" class="pill info">15 / 15</span>
+            </div>
+
+            <p class="vocab-import-summary">
+              التحديد يُحفظ في هذا المتصفح، ويشمل الملف ما تعرضه الشاشة الآن —
+              بحثاً كان أو تصفية.
+            </p>
+
+            <div id="vocab-export-columns" class="vocab-column-grid"></div>
+
+            <div class="vocab-import-actions">
+              <button id="vocab-export-columns-all" class="btn btn-secondary" type="button">
+                تحديد الكل
+              </button>
+              <button id="vocab-export-columns-min" class="btn btn-secondary" type="button">
+                essentials فقط
+              </button>
+              <button id="vocab-export-columns-close" class="btn btn-secondary" type="button">
+                إغلاق
+              </button>
+            </div>
+
           </div>
 
           <p id="vocab-export-note" class="vocab-export-note" hidden></p>

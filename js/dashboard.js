@@ -33,6 +33,7 @@ const GRAMMAR_STATS_KEY = "pte.grammar.stats.v1";
 const QUIZ_STATS_KEY = "pte.quiz.stats.v1";
 const SWT_STATS_KEY = "pte.swt.stats.v1";
 const DI_STATS_KEY = "pte.di.stats.v1";
+const FIB_STATS_KEY = "pte.fib.stats.v1";
 
 const $ = (id) => document.getElementById(id);
 
@@ -107,6 +108,14 @@ function renderStats(vocabulary, grammar) {
     $("dash-di").textContent = acc == null ? "—" : `${acc}%`;
   }
 
+  const fibStats = loadKey(FIB_STATS_KEY);
+  if ($("dash-fib")) {
+    const acc = fibStats && fibStats.total
+      ? Math.round((fibStats.correct / fibStats.total) * 100)
+      : null;
+    $("dash-fib").textContent = acc == null ? "—" : `${acc}%`;
+  }
+
   const pron = Object.values(loadPronState());
   const pronAttempts = pron.reduce((sum, e) => sum + e.attempts, 0);
   const pronCorrect = pron.reduce((sum, e) => sum + e.correct, 0);
@@ -129,23 +138,30 @@ function renderStats(vocabulary, grammar) {
   swtBadge.textContent = `${swtPassageCount} passages`;
   const diBadge = document.getElementById("mode-badge-di");
   diBadge.textContent = `${diImageCount} images`;
+  const raBadge = document.getElementById("mode-badge-ra");
+  if (raBadge) raBadge.textContent = `${readAloudCount} texts`;
+  const fibBadge = document.getElementById("mode-badge-fib");
+  if (fibBadge) fibBadge.textContent = "من بنكك";
 }
 
 let swtPassageCount = 0;
 let diImageCount = 0;
+let readAloudCount = 0;
 
 let cachedAssets = null;
 
 async function loadAssets() {
   if (cachedAssets) return cachedAssets;
-  const [vocabulary, grammar, swt, di] = await Promise.all([
+  const [vocabulary, grammar, swt, di, readAloud] = await Promise.all([
     loadVocabulary(),
     loadGrammar(),
     loadSwtPassages(),
-    loadDiImages()
+    loadDiImages(),
+    loadReadAloudTexts()
   ]);
   swtPassageCount = swt.length;
   diImageCount = di.length;
+  readAloudCount = readAloud.length;
   cachedAssets = { vocabulary, grammar };
   return cachedAssets;
 }
@@ -153,6 +169,17 @@ async function loadAssets() {
 async function loadSwtPassages() {
   try {
     const response = await fetch("./data/swt.json");
+    if (!response.ok) return [];
+    const data = await response.json();
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+}
+
+async function loadReadAloudTexts() {
+  try {
+    const response = await fetch("./data/read_aloud.json");
     if (!response.ok) return [];
     const data = await response.json();
     return Array.isArray(data) ? data : [];
@@ -212,7 +239,8 @@ function buildSeries() {
   const quizStats = loadKey(QUIZ_STATS_KEY);
   const swtStats = loadKey(SWT_STATS_KEY);
   const diStats = loadKey(DI_STATS_KEY);
-  [grammarStats, quizStats, swtStats, diStats].forEach((stats) => {
+  const fibStats = loadKey(FIB_STATS_KEY);
+  [grammarStats, quizStats, swtStats, diStats, fibStats].forEach((stats) => {
     (stats && stats.history ? stats.history : []).forEach((h) => {
       points.push({ day: dayKey(h.t), percent: h.percent || 0 });
     });
@@ -324,7 +352,8 @@ function renderWeak(grammar) {
 
 const TASK_LINKS = {
   "pte.swt.stats.v1": { label: "تلخيص", page: "swt.html" },
-  "pte.di.stats.v1": { label: "وصف صورة", page: "describe-image.html" }
+  "pte.di.stats.v1": { label: "وصف صورة", page: "describe-image.html" },
+  "pte.fib.stats.v1": { label: "املأ الفراغ", page: "fill-in-the-blanks.html" }
 };
 
 function renderWeakItems() {
@@ -419,7 +448,8 @@ const GOAL_KEY = "pte.goal.v1";
 const GOAL_SOURCES = [
   { key: SWT_STATS_KEY, label: "تلخيص", page: "swt.html" },
   { key: DI_STATS_KEY, label: "وصف صورة", page: "describe-image.html" },
-  { key: "pte.ra.stats.v1", label: "قراءة بصوت عالٍ", page: "read-aloud.html" }
+  { key: "pte.ra.stats.v1", label: "قراءة بصوت عالٍ", page: "read-aloud.html" },
+  { key: FIB_STATS_KEY, label: "املأ الفراغ", page: "fill-in-the-blanks.html" }
 ];
 
 function loadGoal() {

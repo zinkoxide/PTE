@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PTE Trainer — Fill in the Blanks</title>
+
+  <!-- CSS: base (shared) then page-specific -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/fib.css">
+
+  <script src="./js/theme.js"></script>
+</head>
+
+<body>
+
+<div class="shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="brand">
+        <div class="brand-mark">PTE</div>
+
+        <div>
+          <div class="brand-name">PTE Trainer</div>
+          <div class="brand-sub">Practice smarter</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+
+        <a class="nav-link" href="index.html">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-label">Dashboard</span>
+        </a>
+
+        <a class="nav-link" href="repeat.html">
+          <span class="nav-icon">🗣️</span>
+          <span class="nav-label">Repeat Sentence</span>
+        </a>
+
+        <a class="nav-link" href="read-aloud.html">
+          <span class="nav-icon">📢</span>
+          <span class="nav-label">Read Aloud</span>
+        </a>
+
+        <a class="nav-link active" href="fill-in-the-blanks.html">
+          <span class="nav-icon">🧩</span>
+          <span class="nav-label">Fill in the Blanks</span>
+        </a>
+
+        <a class="nav-link" href="describe-image.html">
+          <span class="nav-icon">🖼️</span>
+          <span class="nav-label">Describe Image</span>
+        </a>
+
+        <a class="nav-link" href="vocabulary.html">
+          <span class="nav-icon">📚</span>
+          <span class="nav-label">Vocabulary</span>
+        </a>
+
+        <a class="nav-link" href="grammar.html">
+          <span class="nav-icon">📘</span>
+          <span class="nav-label">Grammar</span>
+        </a>
+
+        <a class="nav-link" href="swt.html">
+          <span class="nav-icon">✍️</span>
+          <span class="nav-label">Summarize Written Text</span>
+        </a>
+
+        <a class="nav-link" href="quiz.html">
+          <span class="nav-icon">📝</span>
+          <span class="nav-label">اختبارات</span>
+        </a>
+
+        <a class="nav-link" href="add-word.html">
+          <span class="nav-icon">➕</span>
+          <span class="nav-label">إضافة كلمات</span>
+        </a>
+
+      </nav>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch theme"
+      >
+        <span class="theme-ico icon-day">☀️</span>
+        <span class="theme-ico icon-night">🌙</span>
+        <span class="theme-label">Dark</span>
+      </button>
+
+      <div class="sidebar-footer">
+        PTE Trainer · v3
+      </div>
+
+    </aside>
+
+
+    <!-- Main -->
+    <main class="main">
+
+      <div class="page fib-page">
+
+        <!-- Page Header -->
+        <header class="page-header">
+
+          <div class="fib-title-row">
+            <div>
+              <h1 class="page-title">
+                Fill in the Blanks
+              </h1>
+
+              <p class="page-subtitle">
+                Complete the gap from your own word bank — hear the word, or
+                choose the form that fits the sentence. One mark per blank, no
+                partial credit.
+              </p>
+            </div>
+
+            <div class="fib-header-actions">
+
+              <div class="fib-mode-switch">
+
+                <button
+                  id="fib-mode-train"
+                  class="fib-mode-btn is-on"
+                  type="button"
+                >
+                  📖 Training
+                </button>
+
+                <button
+                  id="fib-mode-practice"
+                  class="fib-mode-btn"
+                  type="button"
+                >
+                  🎯 Practice
+                </button>
+
+              </div>
+
+              <button
+                id="fib-exam-toggle"
+                class="exam-toggle"
+                type="button"
+                title="Hide the answer, the explanation and all feedback — answer as if it were the exam"
+              >
+                🎯 Exam Conditions
+              </button>
+
+            </div>
+          </div>
+
+        </header>
+
+
+        <!-- Setup -->
+        <section class="card" id="fib-setup-card">
+
+          <div class="card-title">
+            <span>إعداد المجموعة</span>
+            <span id="fib-bank-pill" class="pill">— words</span>
+          </div>
+
+          <div class="fib-setup">
+
+            <div class="fib-setup-row">
+
+              <label class="fib-field" for="fib-mode-select">
+                <span class="fib-field-label">نوع المهمة</span>
+                <select id="fib-mode-select" class="select">
+                  <option value="audio">🔊 استماع — اختر الكلمة التي سمعتها</option>
+                  <option value="form">🧩 اختيار الصيغة — forms of the same word</option>
+                </select>
+              </label>
+
+              <label class="fib-field" for="fib-count-select">
+                <span class="fib-field-label">عدد الفراغات</span>
+                <select id="fib-count-select" class="select">
+                  <option value="5">5</option>
+                  <option value="10" selected>10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                </select>
+              </label>
+
+              <label class="fib-field" for="fib-choices-select">
+                <span class="fib-field-label">الخيارات لكل فراغ</span>
+                <select id="fib-choices-select" class="select">
+                  <option value="3">3</option>
+                  <option value="4" selected>4</option>
+                </select>
+              </label>
+
+              <label class="fib-field" for="fib-cefr-select">
+                <span class="fib-field-label">المستوى</span>
+                <select id="fib-cefr-select" class="select">
+                  <option value="" selected>كل المستويات</option>
+                  <option value="A2">A2</option>
+                  <option value="B1">B1</option>
+                  <option value="B2">B2</option>
+                  <option value="C1">C1</option>
+                </select>
+              </label>
+
+            </div>
+
+            <p class="fib-setup-note" id="fib-setup-note">
+              تُبنى الفراغات من بنك مفرداتك: جملة حقيقية من <em>examples</em> تُخفى
+              الكلمة، والخيارات من بنكك نفسه. لا يُبنى بند إن لم تكن الجملة تحوي
+              الكلمة أو لم تكفِ الخيارات المشتّتة.
+            </p>
+
+            <div class="fib-setup-actions">
+              <button id="fib-start" class="btn" type="button">ابدأ المجموعة →</button>
+              <span id="fib-setup-status" class="status-text">جاهز.</span>
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- Status / Timer -->
+        <section class="card fib-status-card" id="fib-status-card" hidden>
+
+          <div class="card-title">
+
+            <span>
+              Blank <strong id="fib-question-number">1</strong>
+              <span id="fib-question-total">/ 10</span>
+            </span>
+
+            <span
+              id="fib-timer"
+              class="pill info fib-timer"
+            >
+              0:15
+            </span>
+
+          </div>
+
+          <div class="fib-progress">
+
+            <div class="fib-progress-track">
+              <div
+                id="fib-progress-fill"
+                class="fib-progress-fill"
+              ></div>
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- The gapped sentence -->
+        <section class="card fib-sentence-card" id="fib-sentence-card" hidden>
+
+          <div class="card-title">
+
+            <span>
+              أكمل الفراغ
+            </span>
+
+            <span
+              id="fib-word-pill"
+              class="pill"
+            >
+              —
+            </span>
+
+          </div>
+
+          <p
+            id="fib-sentence"
+            class="fib-sentence"
+          >
+            The sentence will appear here.
+          </p>
+
+          <div class="fib-sentence-footer">
+
+            <button
+              id="fib-play-button"
+              class="btn btn-secondary"
+              type="button"
+              hidden
+            >
+              🔊 استمع للكلمة
+            </button>
+
+            <span
+              id="fib-sentence-hint"
+              class="fib-sentence-hint"
+            >
+              اختر الكلمة المناسبة للفراغ.
+            </span>
+
+          </div>
+
+          <div
+            id="fib-options"
+            class="fib-options"
+          ></div>
+
+          <div class="fib-sentence-footer">
+            <button
+              id="fib-next"
+              class="btn btn-secondary"
+              type="button"
+              hidden
+            >
+              التالي →
+            </button>
+          </div>
+
+        </section>
+
+
+        <!-- Training guide -->
+        <section
+          id="fib-training"
+          class="card"
+          hidden
+        >
+
+          <div
+            id="fib-training-content"
+            class="fib-training-content"
+          >
+            <p class="fib-training-placeholder">
+              The training guide will appear here.
+            </p>
+          </div>
+
+          <div class="fib-training-cta">
+
+            <button
+              id="fib-train-go-practice"
+              class="btn"
+              type="button"
+            >
+              جاهز —Practice mode
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- Result placeholder -->
+        <section
+          id="fib-result-section"
+          class="card"
+          hidden
+        >
+
+          <div class="card-title">
+            <span>نتيجة المجموعة</span>
+          </div>
+
+          <div
+            id="fib-result-content"
+            class="fib-result-content"
+          >
+            Your result will appear here.
+          </div>
+
+          <div class="fib-result-actions">
+
+            <button id="fib-again" class="btn" type="button">مجموعة جديدة ↻</button>
+            <button id="fib-same-again" class="btn btn-secondary" type="button">نفس الكلمات</button>
+            <button id="fib-to-setup" class="btn btn-secondary" type="button">تغيير الإعدادات</button>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script
+    type="module"
+    src="./js/fib-app.js"
+  ></script>
+
+</body>
+
+</html>

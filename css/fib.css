@@ -1,0 +1,291 @@
+/* ==========================================
+   PTE Trainer — Fill in the Blanks page
+   Only what base.css cannot own: the gapped
+   sentence, the choice buttons and the setup
+   panel. Everything else (cards, criteria,
+   training blocks) is shared with the other
+   task pages on purpose.
+   ========================================== */
+
+.fib-page {
+  max-width: 1080px;
+}
+
+/* ==========================================
+   Header
+   ========================================== */
+
+.fib-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.fib-mode-switch {
+  flex: none;
+  display: inline-flex;
+  padding: 4px;
+  gap: 4px;
+  border-radius: 999px;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+}
+
+.fib-mode-btn {
+  padding: 7px 16px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dim);
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.fib-status-card {
+  padding-bottom: 18px;
+}
+
+.fib-training-card {
+  animation: cardIn 0.35s ease both;
+}
+
+/* ==========================================
+   Setup
+   ========================================== */
+
+.fib-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fib-setup-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.fib-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+}
+
+.fib-field-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+
+.fib-field .select {
+  min-width: 160px;
+}
+
+.fib-setup-note {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--text-dim);
+}
+
+.fib-setup-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ==========================================
+   The gapped sentence
+   ========================================== */
+
+.fib-sentence-card {
+  padding-bottom: 22px;
+}
+
+.fib-sentence {
+  margin: 0;
+  padding: 26px 28px;
+
+  border-radius: var(--radius-md);
+  background: var(--sentence-bg);
+  border: 1px solid var(--glass-border-soft);
+
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.fib-blank {
+  display: inline-block;
+  min-width: 92px;
+  padding: 0 12px;
+  margin: 0 2px;
+
+  text-align: center;
+  border-bottom: 2px solid var(--grad-primary);
+  color: var(--text-faint);
+  font-weight: 800;
+  vertical-align: baseline;
+}
+
+.fib-sentence-footer {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fib-sentence-hint {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+/* ==========================================
+   Choices
+   ========================================== */
+
+.fib-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.fib-option {
+  padding: 14px 16px;
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+  background: var(--box-bg);
+  color: var(--text);
+
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: start;
+
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+}
+
+.fib-option:hover:not(:disabled) {
+  border-color: var(--grad-primary);
+  transform: translateY(-1px);
+}
+
+.fib-option:disabled {
+  cursor: default;
+}
+
+.fib-option.is-chosen {
+  border-color: var(--grad-primary);
+  background: rgba(99, 102, 241, 0.14);
+}
+
+.fib-option.is-correct {
+  border-color: rgba(52, 211, 153, 0.6);
+  background: rgba(52, 211, 153, 0.14);
+}
+
+.fib-option.is-wrong {
+  border-color: rgba(251, 113, 133, 0.6);
+  background: rgba(251, 113, 133, 0.14);
+}
+
+.fib-option-tag {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-faint);
+}
+
+/* ==========================================
+   Per-blank review (results)
+   ========================================== */
+
+.fib-review {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.fib-review-row {
+  display: grid;
+  grid-template-columns: 26px 1fr auto;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--box-bg);
+  border: 1px solid var(--glass-border-soft);
+}
+
+.fib-review-row.is-good {
+  border-color: rgba(52, 211, 153, 0.4);
+}
+
+.fib-review-row.is-bad {
+  border-color: rgba(251, 113, 133, 0.4);
+}
+
+.fib-review-mark {
+  font-size: 16px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.fib-review-main {
+  min-width: 0;
+}
+
+.fib-review-sentence {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.fib-review-detail {
+  margin-top: 3px;
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+
+.fib-review-answer {
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.fib-review-answer.is-good {
+  color: var(--green);
+}
+
+.fib-review-answer.is-bad {
+  color: var(--red);
+}
+
+/* ==========================================
+   Results
+   ========================================== */
+
+.fib-result-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.fib-hidden {
+  display: none;
+}

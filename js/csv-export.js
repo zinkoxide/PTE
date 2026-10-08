@@ -47,6 +47,72 @@ export const VOCAB_COLUMNS = [
 ];
 
 /*
+The two columns that live in localStorage rather
+than in vocabulary.json. They are defined here,
+next to the file columns, because the picker has
+to offer them in the same list and the export
+cannot be rebuilt without them.
+*/
+export const STUDY_COLUMNS = [
+  {
+    key: "studyStatus",
+    label: "Study status",
+    value: (entry) => entry.studyStatus || ""
+  },
+  {
+    key: "dueLabel",
+    label: "Due",
+    value: (entry) => entry.dueLabel || ""
+  }
+];
+
+export const ALL_COLUMNS = [...VOCAB_COLUMNS, ...STUDY_COLUMNS];
+
+export const DEFAULT_COLUMN_KEYS = ALL_COLUMNS.map((column) => column.key);
+
+/*
+Turn a saved list of keys back into columns.
+
+Order always follows ALL_COLUMNS, so a file that
+was written with the columns in a different order
+still reads predictably. Unknown keys are dropped,
+duplicates collapse, and an empty or unusable list
+falls back to everything rather than exporting a
+file with no columns at all.
+*/
+export function columnsForKeys(keys) {
+  if (!Array.isArray(keys)) return [...ALL_COLUMNS];
+  const wanted = new Set(keys.map(String));
+  const picked = ALL_COLUMNS.filter((column) => wanted.has(column.key));
+  return picked.length ? picked : [...ALL_COLUMNS];
+}
+
+export const COLUMN_KEYS_STORAGE = "pte.vocab.export.columns.v1";
+
+/* Reading the pick, with a storage that may be unavailable or hold junk. */
+export function loadColumnKeys(storage = localStorage) {
+  try {
+    const raw = storage.getItem(COLUMN_KEYS_STORAGE);
+    if (!raw) return [...DEFAULT_COLUMN_KEYS];
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed) || !parsed.length) return [...DEFAULT_COLUMN_KEYS];
+    return columnsForKeys(parsed).map((column) => column.key);
+  } catch {
+    return [...DEFAULT_COLUMN_KEYS];
+  }
+}
+
+export function saveColumnKeys(keys, storage = localStorage) {
+  const clean = columnsForKeys(keys).map((column) => column.key);
+  try {
+    storage.setItem(COLUMN_KEYS_STORAGE, JSON.stringify(clean));
+  } catch {
+    /* a private window may refuse; the pick still applies to this session */
+  }
+  return clean;
+}
+
+/*
 Quote a single cell. Anything containing a
 delimiter, a quote or a line break is wrapped,
 and quotes inside are doubled — the RFC 4180

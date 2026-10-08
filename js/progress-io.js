@@ -46,7 +46,8 @@ export const STATS_KEYS = [
   "pte.quiz.stats.v1",
   "pte.swt.stats.v1",
   "pte.di.stats.v1",
-  "pte.ra.stats.v1"
+  "pte.ra.stats.v1",
+  "pte.fib.stats.v1"
 ];
 
 /* Vocabulary study status (SRS) — merged per word. */
@@ -56,7 +57,14 @@ export const STUDY_KEY = "pte.vocab.study.v1";
 export const PRON_KEY = "pte.vocab.pron.v1";
 
 /* Preferences: the imported file wins. */
-export const SETTING_KEYS = ["pte.theme", "pte.goal.v1", "pte.swt.mode", "pte.di.mode", "pte.ra.mode"];
+export const SETTING_KEYS = [
+  "pte.theme",
+  "pte.goal.v1",
+  "pte.swt.mode",
+  "pte.di.mode",
+  "pte.ra.mode",
+  "pte.fib.mode"
+];
 
 export const HISTORY_LIMIT = 400;
 

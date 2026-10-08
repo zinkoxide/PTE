@@ -39,8 +39,32 @@ const html = {
   "add-word": read("../../add-word.html"),
   swt: read("../../swt.html"),
   di: read("../../describe-image.html"),
-  ra: read("../../read-aloud.html")
+  ra: read("../../read-aloud.html"),
+  fib: read("../../fill-in-the-blanks.html")
 };
+
+/* Every page that carries the sidebar must list every task, or the new one
+   becomes unreachable from the pages people actually sit on. */
+const TASK_PAGES = {
+  index: "index.html",
+  repeat: "repeat.html",
+  vocabulary: "vocabulary.html",
+  grammar: "grammar.html",
+  quiz: "quiz.html",
+  "add-word": "add-word.html",
+  swt: "swt.html",
+  di: "describe-image.html",
+  ra: "read-aloud.html",
+  fib: "fill-in-the-blanks.html"
+};
+
+test("every page links to every task", () => {
+  Object.entries(TASK_PAGES).forEach(([key, page]) => {
+    Object.values(TASK_PAGES).forEach((target) => {
+      assert(html[key].includes(`href="${target}"`), `${page} must link to ${target}`);
+    });
+  });
+});
 
 /* ---------- vocabulary page wiring ---------- */
 
@@ -509,6 +533,85 @@ test("editing a word does not demand the three-item lists", () => {
     /require_rich_lists=False/.test(read("../../app.py")),
     "the update endpoint must accept the shorter lists on update",
   );
+});
+
+/* ---------- fill in the blanks page wiring ---------- */
+
+test("the Fill in the Blanks page has the widgets its module drives", () => {
+  const ids = [
+    "fib-mode-select", "fib-count-select", "fib-choices-select", "fib-cefr-select",
+    "fib-start", "fib-sentence", "fib-options", "fib-play-button", "fib-timer",
+    "fib-progress-fill", "fib-question-number", "fib-result-section",
+    "fib-mode-train", "fib-mode-practice", "fib-exam-toggle", "fib-next"
+  ];
+  ids.forEach((id) => assert(html.fib.includes(`id="${id}"`), `missing #${id}`));
+  assert(html.fib.includes('src="./js/fib-app.js"'), "missing fib-app.js module");
+  assert(html.fib.includes('href="./css/fib.css"'), "missing fib.css");
+  /* base.css first, then the page sheet — the house order. */
+  assert(html.fib.indexOf("base.css") < html.fib.indexOf("fib.css"),
+    "base.css must load before fib.css");
+});
+
+test("the Fill in the Blanks page loads its stylesheet in one place", () => {
+  assert(!/class="[^"]*\bra-/.test(html.fib), "the new page must not use ra- classes");
+  assert(!/class="[^"]*\b(di|swt)-/.test(html.fib), "the new page must not use di-/swt- classes");
+  const fibCss = read("../../css/fib.css");
+  assert(!/\.ra-|\.swt-|\.di-/.test(fibCss), "fib.css must not style another page");
+});
+
+test("the Fill in the Blanks module emits only its own classes", () => {
+  const module = read("../../js/fib-app.js");
+  assert(!/["'`]ra-/.test(module), "fib-app.js must not emit ra- classes");
+  assert(!/["'`](swt|di)-/.test(module), "fib-app.js must not emit swt-/di- classes");
+  /* The shared components live in base.css as grouped selectors, so the new
+     page has to be part of that group rather than copying the rules. */
+  const base = read("../../css/base.css");
+  [".fib-result-score", ".fib-result-label", ".fib-steps", ".fib-panel", ".fib-tips"]
+    .forEach((selector) => assert(base.includes(selector), `base.css must own ${selector}`));
+});
+
+test("the Fill in the Blanks items come from the bank, not a data file", () => {
+  const module = read("../../js/fib.js");
+  assert(/buildFibSet/.test(module), "the module must build the items");
+  assert(/wordForms/.test(module), "the form mode needs real word forms");
+  assert(/examples/.test(module), "the sentences come from the bank's examples");
+  /* The score is per blank: the exam gives no partial credit. */
+  const app = read("../../js/fib-app.js");
+  assert(/recordTaskAttempt/.test(app), "each blank must be recorded for the weak panel");
+  assert(/isExamMode/.test(app), "exam conditions must be honoured");
+});
+
+test("the Fill in the Blanks stats travel with the backup", () => {
+  const io = read("../../js/progress-io.js");
+  assert(io.includes("pte.fib.stats.v1"), "the stats key must be backed up");
+  const dashboard = read("../../js/dashboard.js");
+  assert(dashboard.includes("pte.fib.stats.v1"), "the dashboard must read the key");
+  assert(dashboard.includes("fill-in-the-blanks.html"), "weak items must link to the page");
+});
+
+test("the vocabulary page can choose its export columns", () => {
+  ["vocab-export-columns-toggle", "vocab-export-columns", "vocab-export-panel",
+   "vocab-export-columns-all", "vocab-export-columns-min", "vocab-export-column-count"]
+    .forEach((id) => assert(html.vocabulary.includes(`id="${id}"`), `missing #${id}`));
+
+  const app = read("../../js/vocab-app.js");
+  assert(/loadColumnKeys/.test(app), "the pick must be remembered");
+  assert(/saveColumnKeys/.test(app), "the pick must be saved");
+  /* A file with no columns is not a file, so the last box must not be
+     unticked and the export must never be built from an empty list. */
+  assert(/at least one column/i.test(app), "the last column must be protected");
+  const lib = read("../../js/csv-export.js");
+  assert(/columnsForKeys/.test(lib), "the column resolution must be testable, not in the page");
+});
+
+test("a filter typed while the bank loads is not thrown away", () => {
+  const app = read("../../js/vocab-app.js");
+  const body = app.slice(app.indexOf("async function initializeVocabulary"));
+  /* The search box takes text before this module has attached its listener,
+     and an export reads the list, so the box has to win once the bank lands. */
+  assert(/searchInput\.value/.test(body), "the box is read after loading the bank");
+  assert(/searchQuery = searchInput\.value/.test(body), "and it becomes the active query");
+  assert(/hasActiveFilter\(\)/.test(body), "then the filters are re-applied");
 });
 
 console.log(`RESULT: ${passed} passed, ${failed} failed`);

@@ -11,6 +11,7 @@ each, and a **Vocabulary** bank with search, filters, and pronunciation audio.
 - `repeat.html` — repeat-sentence trainer (audio, recording, scoring).
 - `describe-image.html` — Describe Image trainer (charts drawn as SVG, speech or typing).
 - `read-aloud.html` — Read Aloud trainer (read the text aloud in one breath).
+- `fill-in-the-blanks.html` — Fill in the Blanks trainer, built from your own word bank.
 - `swt.html` — Summarize Written Text trainer (one-sentence summary, scored on 4 criteria).
 - `vocabulary.html` — searchable vocabulary trainer.
 - `grammar.html` — bilingual grammar reference + interactive grammar quizzes.
@@ -54,8 +55,12 @@ new entries to the JSON data:
 ```bash
 pip install -r tools/requirements.txt
 
-# Sentence audio
+# Sentence audio + Read Aloud audio
 python3 tools/generate_audio.py
+
+# One dataset only, or rebuild files that already exist
+python3 tools/generate_audio.py --only read-aloud
+python3 tools/generate_audio.py --force
 
 # Vocabulary audio (also refreshes data/vocabulary_audio_index.json)
 python3 tools/generate_vocabulary_audio.py
@@ -66,8 +71,11 @@ python3 tools/generate_vocabulary_audio.py
 - 12 short texts in `data/read_aloud.json`, each with the pronunciation tip that
   matters for that sentence (which phrase carries the stress, what must not be
   split).
-- 🔊 **Hear it first** reads the text aloud with the browser's own speech
-  synthesis, so the page needs no audio files.
+- 🔊 **Hear the model voice** plays the recorded Edge TTS file
+  (`assets/audio/read-aloud/ra-01.mp3` …), the same voice as Repeat Sentence, so
+  the rhythm you copy does not change from visit to visit. The browser's own
+  voice is still used when the file is missing, and `tools/validate_json.py`
+  reports any text without audio.
 - **📖 Training mode** teaches the three habits that raise the marks: read it
   silently first, keep phrases together, one smooth breath at 2.2–3.6 words per
   second.
@@ -76,6 +84,34 @@ python3 tools/generate_vocabulary_audio.py
   long pauses, so a slow or hesitant reading loses marks even when every word is
   right. The result lists skipped and mispronounced words.
 - 🎙️ record with the microphone, or type the sentence if no mic is available.
+
+## Fill in the Blanks (`fill-in-the-blanks.html`)
+
+The task that was missing, and the one that never runs out of items: every
+blank is built from **your own word bank**, so there is no item list to go
+stale and the same gap never comes back twice in a row.
+
+- **Two types, both real exam tasks:**
+  - 🔊 **استماع** — hear the word, then choose it for the gap. The recording
+    is the word's own MP3 from the audio index.
+  - 🧩 **اختيار الصيغة** — the four options are four forms of the *same* word
+    (`benefit / benefits / benefited / benefiting`), so only the grammar of the
+    sentence decides the answer. Forms follow the part of speech the bank
+    records, which is why you are never offered `potentialed`.
+- A gap is a **real sentence from the bank's own `examples`**, with the word
+  hidden. If the sentence does not contain the word, is too short to be fair,
+  or there are not enough honest distractors, the item is **skipped, never
+  faked** — and the page says so instead of serving a bad question.
+- Scored **one mark per blank, no partial credit**, like the exam: an empty
+  blank counts as wrong and a guess costs nothing. Options and blank count are
+  yours to choose (3 or 4 options, 5–20 blanks), and a CEFR filter narrows the
+  pool.
+- **📖 Training mode** answers immediately, marks the right option and explains
+  the form; **🎯 Practice mode** keeps quiet until the end, with a 15-second
+  clock per blank that does not wait for you. 🎯 **Exam Conditions** hides the
+  answer and the explanation as well.
+- Every blank is recorded separately, so the dashboard's weak panel lists the
+  **words** you keep missing and clicking one queues it back here.
 
 ## Describe Image (`describe-image.html`)
 
@@ -154,6 +190,13 @@ review of every question.
   supported), filters (CEFR A1–C2, part of speech, study status), IPA,
   details (meanings, collocations, synonyms, examples, word family, mistakes),
   and MP3 playback (▶ Play).
+- **⚙️ الأعمدة**: the export writes the columns **you** tick, not a fixed 15.
+  The picker sits next to the export button, offers all 15 columns including
+  your study status and review date, has "select all" and an "essentials only"
+  shortcut (word, pronunciation, both meanings), refuses to untick the last
+  column, and remembers the choice in this browser
+  (`pte.vocab.export.columns.v1`). The note under the toolbar says how many
+  columns the last file really had.
 - **⬇️ Export CSV** (`vocabulary.html`) writes the words **currently shown** —
   so a search or any filter becomes the selection — to
   `pte-vocabulary-YYYY-MM-DD.csv` with 15 columns: word, pronunciation, part of
@@ -299,7 +342,11 @@ Nothing starts automatically and browsing is never blocked.
   `keyPoints`, `keywords`, `reference`) — the guide and the Content score both
   read `mainIdea` and `keyPoints`, so keep the reference sentence a learner could
   actually write in 5–75 words.
-- Add Read Aloud texts to `data/read_aloud.json` (`id`, `text`, `level`, `tip`).
+- Add Read Aloud texts to `data/read_aloud.json` (`id`, `text`, `level`, `tip`);
+  run `python3 tools/generate_audio.py --only read-aloud` afterwards to speak
+  the new ones.
+- Fill in the Blanks has **no data file**: it reads `data/vocabulary.json`, so a
+  word with a usable `examples` sentence becomes an item the moment you add it.
 - Add Describe Image items to `data/describe-images.json` (`id`, `title`, `category`, `data`, `reference`, `keywords`); `category` must be one of the keys of `CATEGORY_LABELS` in `js/di-render.js`, and `data` must match that chart type's shape:
   `bar-chart` `{ yLabel, labels, groups:[{label, values}] }`,
   `line-graph` `{ yLabel, labels, series:[…] }`,

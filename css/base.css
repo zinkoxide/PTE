@@ -412,7 +412,8 @@ a:focus-visible,
 /* Weak-item review schedule notice shown on a task result. */
 .swt-schedule-note,
 .di-schedule-note,
-.ra-schedule-note {
+.ra-schedule-note,
+.fib-schedule-note {
   margin: 0 0 12px;
   padding: 10px 13px;
   border-radius: var(--radius-sm);
@@ -429,7 +430,8 @@ a:focus-visible,
 
 .di-result-content,
 .ra-result-content,
-.swt-result-content {
+.swt-result-content,
+.fib-result-content {
   min-height: 100px;
 
   padding: 20px;
@@ -445,7 +447,8 @@ a:focus-visible,
 }
 
 .di-result-empty,
-.swt-result-empty {
+.swt-result-empty,
+.fib-result-empty {
   margin-top: 10px;
   padding: 12px 14px;
   border-radius: var(--radius-sm);
@@ -456,7 +459,8 @@ a:focus-visible,
 
 .di-result-score,
 .ra-result-score,
-.swt-result-score {
+.swt-result-score,
+.fib-result-score {
   font-size: 40px;
   font-weight: 900;
   line-height: 1;
@@ -465,7 +469,8 @@ a:focus-visible,
 
 .di-result-label,
 .ra-result-label,
-.swt-result-label {
+.swt-result-label,
+.fib-result-label {
   font-size: 13px;
   color: var(--text-faint);
   font-weight: 600;
@@ -473,7 +478,8 @@ a:focus-visible,
 
 .di-criteria,
 .ra-criteria,
-.swt-criteria {
+.swt-criteria,
+.fib-criteria {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -482,7 +488,8 @@ a:focus-visible,
 
 .di-criterion-name,
 .ra-criterion-name,
-.swt-criterion-name {
+.swt-criterion-name,
+.fib-criterion-name {
   font-size: 13px;
   font-weight: 700;
   color: var(--text);
@@ -490,7 +497,8 @@ a:focus-visible,
 
 .di-criterion-bar,
 .ra-criterion-bar,
-.swt-criterion-bar {
+.swt-criterion-bar,
+.fib-criterion-bar {
   height: 8px;
   border-radius: 99px;
   background: var(--track-bg);
@@ -499,7 +507,8 @@ a:focus-visible,
 
 .di-criterion-bar i,
 .ra-criterion-bar i,
-.swt-criterion-bar i {
+.swt-criterion-bar i,
+.fib-criterion-bar i {
   display: block;
   height: 100%;
   border-radius: inherit;
@@ -508,7 +517,8 @@ a:focus-visible,
 
 .di-criterion-value,
 .ra-criterion-value,
-.swt-criterion-value {
+.swt-criterion-value,
+.fib-criterion-value {
   font-size: 12px;
   font-weight: 700;
   text-align: end;
@@ -518,18 +528,21 @@ a:focus-visible,
 
 .di-result-details p,
 .ra-result-details p,
-.swt-result-details p {
+.swt-result-details p,
+.fib-result-details p {
  margin: 4px 0;
 }
 
 .di-mode-btn:hover,
 .ra-mode-btn:hover,
-.swt-mode-btn:hover {
+.swt-mode-btn:hover,
+.fib-mode-btn:hover {
  color: var(--text);
 }
 
 .ra-timer,
-.swt-timer {
+.swt-timer,
+.fib-timer {
   min-width: 72px;
   justify-content: center;
 
@@ -537,12 +550,14 @@ a:focus-visible,
 }
 
 .ra-progress,
-.swt-progress {
+.swt-progress,
+.fib-progress {
   margin-top: 4px;
 }
 
 .ra-progress-track,
-.swt-progress-track {
+.swt-progress-track,
+.fib-progress-track {
   width: 100%;
   height: 7px;
 
@@ -553,7 +568,8 @@ a:focus-visible,
 }
 
 .ra-progress-fill,
-.swt-progress-fill {
+.swt-progress-fill,
+.fib-progress-fill {
   width: 0%;
   height: 100%;
 
@@ -564,7 +580,8 @@ a:focus-visible,
 }
 
 .ra-result-total,
-.swt-result-total {
+.swt-result-total,
+.fib-result-total {
   display: flex;
   align-items: baseline;
   gap: 8px;
@@ -572,7 +589,8 @@ a:focus-visible,
 }
 
 .ra-criterion,
-.swt-criterion {
+.swt-criterion,
+.fib-criterion {
   display: grid;
   grid-template-columns: 112px 1fr 64px;
   align-items: center;
@@ -580,35 +598,41 @@ a:focus-visible,
 }
 
 .ra-result-details,
-.swt-result-details {
+.swt-result-details,
+.fib-result-details {
  font-size: 13.5px;
 }
 
 .ra-mode-btn.is-on,
-.swt-mode-btn.is-on {
+.swt-mode-btn.is-on,
+.fib-mode-btn.is-on {
   color: #fff;
   background: var(--grad-primary);
 }
 
 .ra-mode-btn.is-on:hover,
-.swt-mode-btn.is-on:hover {
+.swt-mode-btn.is-on:hover,
+.fib-mode-btn.is-on:hover {
   color: #fff;
 }
 
 .ra-training-content,
-.swt-training-content {
+.swt-training-content,
+.fib-training-content {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
 .ra-training-placeholder,
-.swt-training-placeholder {
+.swt-training-placeholder,
+.fib-training-placeholder {
   color: var(--text-faint);
 }
 
 .ra-training-hero,
-.swt-training-hero {
+.swt-training-hero,
+.fib-training-hero {
   padding: 18px 20px;
   border-radius: var(--radius-md);
   background: var(--grad-primary);
@@ -616,14 +640,16 @@ a:focus-visible,
 }
 
 .ra-training-title,
-.swt-training-title {
+.swt-training-title,
+.fib-training-title {
   font-size: 20px;
   font-weight: 900;
   line-height: 1.3;
 }
 
 .ra-training-sub,
-.swt-training-sub {
+.swt-training-sub,
+.fib-training-sub {
   margin-top: 6px;
   font-size: 14px;
   line-height: 1.6;
@@ -631,14 +657,16 @@ a:focus-visible,
 }
 
 .ra-steps,
-.swt-steps {
+.swt-steps,
+.fib-steps {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
 .ra-step,
-.swt-step {
+.swt-step,
+.fib-step {
   padding: 14px 16px;
   border-radius: var(--radius-md);
   background: var(--box-bg);
@@ -646,7 +674,8 @@ a:focus-visible,
 }
 
 .ra-step-head,
-.swt-step-head {
+.swt-step-head,
+.fib-step-head {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -654,7 +683,8 @@ a:focus-visible,
 }
 
 .ra-step-tag,
-.swt-step-tag {
+.swt-step-tag,
+.fib-step-tag {
   flex: none;
   min-width: 34px;
   text-align: center;
@@ -667,13 +697,15 @@ a:focus-visible,
 }
 
 .ra-step-head strong,
-.swt-step-head strong {
+.swt-step-head strong,
+.fib-step-head strong {
   font-size: 15px;
   color: var(--text);
 }
 
 .ra-step p,
-.swt-step p {
+.swt-step p,
+.fib-step p {
   margin: 0;
   font-size: 13.5px;
   line-height: 1.75;
@@ -681,7 +713,8 @@ a:focus-visible,
 }
 
 .ra-panel,
-.swt-panel {
+.swt-panel,
+.fib-panel {
   padding: 14px 16px;
   border-radius: var(--radius-md);
   background: var(--box-bg);
@@ -689,14 +722,16 @@ a:focus-visible,
 }
 
 .ra-panel h4,
-.swt-panel h4 {
+.swt-panel h4,
+.fib-panel h4 {
   margin: 0 0 8px;
   font-size: 14px;
   color: var(--text);
 }
 
 .ra-tips-label,
-.swt-tips-label {
+.swt-tips-label,
+.fib-tips-label {
   margin: 0 0 6px;
   font-size: 12px;
   font-weight: 800;
@@ -704,13 +739,15 @@ a:focus-visible,
 }
 
 .ra-tips-label.is-avoid,
-.swt-tips-label.is-avoid {
+.swt-tips-label.is-avoid,
+.fib-tips-label.is-avoid {
   margin-top: 12px;
   color: var(--red);
 }
 
 .ra-tips,
-.swt-tips {
+.swt-tips,
+.fib-tips {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -720,7 +757,8 @@ a:focus-visible,
 }
 
 .ra-tips li::before,
-.swt-tips li::before {
+.swt-tips li::before,
+.fib-tips li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -732,12 +770,14 @@ a:focus-visible,
 }
 
 .ra-tips.is-avoid li::before,
-.swt-tips.is-avoid li::before {
+.swt-tips.is-avoid li::before,
+.fib-tips.is-avoid li::before {
   background: var(--red);
 }
 
 .ra-training-cta,
-.swt-training-cta {
+.swt-training-cta,
+.fib-training-cta {
   margin-top: 14px;
   display: flex;
   justify-content: flex-end;
@@ -750,7 +790,8 @@ a:focus-visible,
 /* Header: mode switch + exam toggle sit side by side. */
 .swt-header-actions,
 .di-header-actions,
-.ra-header-actions {
+.ra-header-actions,
+.fib-header-actions {
   flex: none;
   display: flex;
   align-items: center;

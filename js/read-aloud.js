@@ -8,6 +8,13 @@ Read Aloud
 "use strict";
 
 import { SpeechEngine } from "./speech.js";
+import {
+  playAudio,
+  stopAudio,
+  taskAudioPath,
+  audioFileName,
+  audioFileExists
+} from "./audio.js";
 import { scoreReadAloud, FLUENCY_LIMITS } from "./read-aloud-score.js";
 import {
   emptyTaskStats,
@@ -361,12 +368,23 @@ function finishRecording() {
   stopRecording();
 }
 
-/* ------------------ Playback (browser TTS) ------------------ */
+/* ------------------ Playback ------------------ */
 
-function playText() {
+/*
+Play the recorded Edge TTS voice when the file
+is there, and the browser voice when it is not.
+The model answer is what the learner imitates,
+so it should sound the same every time — a
+different system voice each visit makes the
+rhythm they are copying unpredictable. The
+browser voice stays as the fallback so a fresh
+checkout without the generated audio still
+works.
+*/
+function playBrowserVoice() {
   if (typeof speechSynthesis === "undefined") {
     tipEl.textContent = "This browser cannot play the text — read it yourself.";
-    return;
+    return false;
   }
   speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(items[currentIndex].text);
@@ -377,6 +395,39 @@ function playText() {
   window.setTimeout(() => {
     tipEl.textContent = items[currentIndex].tip || "Now read it yourself in one breath.";
   }, Math.max(1500, items[currentIndex].text.length * 70));
+  return true;
+}
+
+function playText() {
+  const item = items[currentIndex];
+  const path = taskAudioPath("read-aloud", audioFileName(item.id));
+
+  stopAudio();
+  audioFileExists(path).then((exists) => {
+    if (!exists) {
+      playBrowserVoice();
+      return;
+    }
+
+    tipEl.textContent = "Listening…";
+    playButton.disabled = true;
+    playAudio(path);
+
+    const finish = () => {
+      playButton.disabled = false;
+      tipEl.textContent = item.tip || "Now read it yourself in one breath.";
+      document.removeEventListener("audioEnded", finish);
+      document.removeEventListener("audioError", failed);
+    };
+    const failed = () => {
+      playButton.disabled = false;
+      document.removeEventListener("audioEnded", finish);
+      document.removeEventListener("audioError", failed);
+      playBrowserVoice();
+    };
+    document.addEventListener("audioEnded", finish, { once: true });
+    document.addEventListener("audioError", failed, { once: true });
+  });
 }
 
 /* ------------------ Scoring ------------------ */
@@ -447,6 +498,8 @@ function updateFallbackCounters() {
 
 function renderQuestion() {
   const item = items[currentIndex];
+  stopAudio();
+  playButton.disabled = false;
   questionNumber.textContent = String(currentIndex + 1);
   textEl.textContent = item.text;
   wordCountEl.textContent = `${countWords(item.text)} words`;
